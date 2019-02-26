@@ -1,7 +1,7 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path('../../../discourse_api/lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'discourse_api/version'
+require '/Users/kimardenmiller/Dropbox/l_Spiritual/Momentum/discourse_api/lib/discourse_api/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "discourse_api"

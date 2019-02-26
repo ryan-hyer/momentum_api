@@ -29,7 +29,7 @@ def member_notifications(client, user)
       puts "Group ID:#{@user_group_id} #{@group_name}    Notification Level: #{@notification_level}    Default: #{@default_level}"
       response = client.set_group_user_note_lev(@group_name, user['id'], @default_level)
       puts response
-      @users_group_users_after_update = client.user(@users_username)['group_users']
+      @users_categories_after_update = client.user(@users_username)['group_users']
 
       # uncomment to print each update just made to terminal
       # @users_group_users_after_update.each do |users_group_second_pass|

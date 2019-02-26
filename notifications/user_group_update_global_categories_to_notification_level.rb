@@ -11,14 +11,13 @@ client.api_username = admin_client
 
 # update to what notification_level?
 @target_notification_level = 3
-@do_live_updates = true
+@do_live_updates = false
 
 # testing variables
-# @target_username = 'John_Oberstar'
-@target_username = nil
+@target_username = 'John_Oberstar'
+# @target_username = nil
 
 @issue_users = %w()
-# @issue_users = %w(Robbie_Bow David_Nickerson Rich_Worthington Bo_Zhou Marton_Toth)
 
 @user_count = 0
 @matching_categories_count = 0

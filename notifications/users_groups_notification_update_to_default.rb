@@ -10,7 +10,7 @@ client.api_username = 'KM_Admin'
 # testing variables
 # @target_username = 'Kim_test_Staged'
 @target_username = nil
-@do_live_updates = true
+@do_live_updates = false
 
 @user_count = 0
 @matching_categories_count = 0
@@ -32,13 +32,13 @@ def member_notifications(client, user)
       end
     end
     if @notification_level != @default_level  # and if @group_name == @target_group_name    # uncomment for just one group
-      printf "%-16s %-20s %-15s %-15s\n", @users_username, @group_name, @notification_level.to_s.center(15), @default_level.to_s.center(15)
+      printf "%-18s %-20s %-15s %-15s\n", @users_username, @group_name, @notification_level.to_s.center(15), @default_level.to_s.center(15)
       @matching_categories_count += 1
       if @do_live_updates
-        response = client.group_set_user_notification_level(@group_name, user['id'], @default_level) # @default_level when final
+        response = client.group_set_user_notification_level(@group_name, user['id'], @default_level)
         puts response
-        @users_group_users_after_update = client.user(@users_username)['group_users']
-        @users_group_users_after_update.each do |users_group_second_pass| # uncomment to check for the update
+        @users_categories_after_update = client.user(@users_username)['group_users']
+        @users_categories_after_update.each do |users_group_second_pass| # uncomment to check for the update
           sleep(2)
           if users_group_second_pass['group_id'] == @user_group_id
             puts "Updated Group: #{@group_name}    Notification Level: #{users_group_second_pass['notification_level']}    Default: #{@default_level}"
@@ -52,7 +52,7 @@ def member_notifications(client, user)
 end
 
 
-printf "%-16s %-18s %-15s %-15s\n", 'UserName', 'Group', "User's_Level", "Group's_Default"
+printf "%-18s %-18s %-15s %-15s\n", 'UserName', 'Group', "User's_Level", "Group's_Default"
 
 retrieve_next = 1
 while retrieve_next > 0
