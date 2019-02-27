@@ -4,35 +4,34 @@ require File.expand_path('../../../discourse_api/lib/discourse_api', __FILE__)
 admin_client = 'KM_Admin'
 starting_page_of_users = 1
 client = DiscourseApi::Client.new('https://discourse.gomomentum.org/')
-# client = DiscourseApi::Client.new('http://localhost:3000')
 client.api_key = ENV['REMOTE_DISCOURSE_API']
+# client = DiscourseApi::Client.new('http://localhost:3000')
 # client.api_key = ENV['LOCAL_DISCOURSE_API']
 client.api_username = admin_client
 
 # update to what notification_level?
 @target_notification_level = 3
-@do_live_updates = true
+@do_live_updates = false 
 
 # testing variables
 # @target_username = 'John_Oberstar'
 @target_username = nil
+@exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin)
 
 @issue_users = %w()
-# @issue_users = %w(Robbie_Bow David_Nickerson Rich_Worthington Bo_Zhou Marton_Toth)
 
 @user_count = 0
 @matching_categories_count = 0
 @users_updated = 0
-@categories_updated = 0
+@users_updated = 0
 
 
 def member_notifications(client, user)
-  @starting_categories_updated = @categories_updated
+  @starting_categories_updated = @users_updated
   @users_username = user['username']
   @users_groups = client.user(@users_username)['groups']
 
-  # Feb 21, 2019 Question pending
-  # @users_categories = client.categories(api_username=@users_username)
+  # @users_categories = client.categories(api_username=@users_username)     # Feb 21, 2019 Question pending
   client.api_username = @users_username
   @users_categories = client.categories
 
@@ -56,12 +55,12 @@ def member_notifications(client, user)
           if @do_live_updates
             update_response = client.category_set_user_notification_level(@category_id, @target_notification_level)
             puts update_response
-            @categories_updated += 1
+            @users_updated += 1
 
             # check if update happened
-            @users_categories_after_update = client.categories
+            @user_details_after_update = client.categories
             sleep(1)
-            @users_categories_after_update.each do |users_category_second_pass| # uncomment to check for the update
+            @user_details_after_update.each do |users_category_second_pass| # uncomment to check for the update
               # puts "\nAll Category: #{users_category_second_pass['slug']}    Notification Level: #{users_category_second_pass['notification_level']}\n"
               if users_category_second_pass['slug'] == @group_name
                 puts "Updated Category: #{@group_name}    Notification Level: #{users_category_second_pass['notification_level']}\n"
@@ -79,7 +78,7 @@ def member_notifications(client, user)
       end
     end
   end
-  if @categories_updated > @starting_categories_updated
+  if @users_updated > @starting_categories_updated
     @users_updated += 1
   end
 end
@@ -101,7 +100,7 @@ while starting_page_of_users > 0
           @user_count += 1
           member_notifications(client, user)
         end
-      elsif not %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin).include?(user['username']) and user['active'] == true
+      elsif not @exclude_user_names.include?(user['username']) and user['active'] == true
         @user_count += 1
         # puts user['username']
         member_notifications(client, user)
@@ -113,4 +112,4 @@ while starting_page_of_users > 0
 end
 
 puts "\n#{@matching_categories_count} matching Categories for #{@user_count} User found."
-puts "\n#{@categories_updated} Category notification_levels updated for #{@users_updated} Users."
+puts "\n#{@users_updated} Category notification_levels updated for #{@users_updated} Users."

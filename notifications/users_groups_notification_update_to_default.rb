@@ -37,8 +37,8 @@ def member_notifications(client, user)
       if @do_live_updates
         response = client.group_set_user_notification_level(@group_name, user['id'], @default_level)
         puts response
-        @users_categories_after_update = client.user(@users_username)['group_users']
-        @users_categories_after_update.each do |users_group_second_pass| # uncomment to check for the update
+        @user_details_after_update = client.user(@users_username)['group_users']
+        @user_details_after_update.each do |users_group_second_pass| # uncomment to check for the update
           sleep(2)
           if users_group_second_pass['group_id'] == @user_group_id
             puts "Updated Group: #{@group_name}    Notification Level: #{users_group_second_pass['notification_level']}    Default: #{@default_level}"
