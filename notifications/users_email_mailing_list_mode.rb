@@ -35,7 +35,7 @@ def print_user_options(user_details)
 end
 
 # standardize_email_settings
-def apply_function(client, user)  # TODO 1. Run mailing list mode update, Eric_Nitzberg, 2. push to mother
+def apply_function(client, user)  # TODO 1. Run mailing list mode update
   @users_username = user['username']
   @user_count += 1
   user_details = client.user(@users_username)

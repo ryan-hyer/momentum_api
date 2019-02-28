@@ -1,40 +1,29 @@
-$LOAD_PATH.unshift File.expand_path('../../../discourse_api/lib', __FILE__)
-require File.expand_path('../../../discourse_api/lib/discourse_api', __FILE__)
+require '../utility/momentum_api'
 
-admin_client = 'KM_Admin'
-starting_page_of_users = 1
-client = DiscourseApi::Client.new('https://discourse.gomomentum.org/')
-client.api_key = ENV['REMOTE_DISCOURSE_API']
-# client = DiscourseApi::Client.new('http://localhost:3000')
-# client.api_key = ENV['LOCAL_DISCOURSE_API']
-client.api_username = admin_client
+@do_live_updates = false
+client = connect_to_instance('live') # 'live' or 'local'
 
 # update to what notification_level?
 @target_notification_level = 3
-@do_live_updates = false 
 
 # testing variables
-# @target_username = 'John_Oberstar'
-@target_username = nil
+# @target_username = 'Ryan_Hyer'
 @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin)
-
 @issue_users = %w()
 
-@user_count = 0
-@matching_categories_count = 0
-@users_updated = 0
-@users_updated = 0
+@user_count, @matching_categories_count, @users_updated, @user_targets = 0, 0, 0, 0
 
-
-def member_notifications(client, user)
+# find and update member_notifications
+def apply_function(client, user)
+  @user_count += 1
   @starting_categories_updated = @users_updated
   @users_username = user['username']
   @users_groups = client.user(@users_username)['groups']
 
-  # @users_categories = client.categories(api_username=@users_username)     # Feb 21, 2019 Question pending
-  client.api_username = @users_username
+  client.api_username = @users_username # Feb 21, 2019 Question pending about setting api user
   @users_categories = client.categories
-
+  sleep(1)
+  
   @users_groups.each do |group|
     @group_name = group['name']
     if @issue_users.include?(@users_username)
@@ -47,11 +36,12 @@ def member_notifications(client, user)
       end
       if @category_slug == @group_name
         @users_category_notify_level = category['notification_level']
+        # printf "%-18s %-20s %-20s %-8s %-15s\n", @users_username, @group_name, @category_slug, @users_category_notify_level.to_s.center(6), 'test_print'
         if @users_category_notify_level != 3
           @category_id = category['id']
-          # puts @category_id
-          printf "%-18s %-20s %-20s %-8s %-15s\n", @users_username, @group_name, @category_slug, @users_category_notify_level.to_s.center(15), 'NOT_Watching'
+          printf "%-18s %-20s %-20s %-8s %-15s\n", @users_username, @group_name, @category_slug, @users_category_notify_level.to_s.center(6), 'NOT_Watching'
 
+          @user_targets += 1
           if @do_live_updates
             update_response = client.category_set_user_notification_level(@category_id, @target_notification_level)
             puts update_response
@@ -61,7 +51,6 @@ def member_notifications(client, user)
             @user_details_after_update = client.categories
             sleep(1)
             @user_details_after_update.each do |users_category_second_pass| # uncomment to check for the update
-              # puts "\nAll Category: #{users_category_second_pass['slug']}    Notification Level: #{users_category_second_pass['notification_level']}\n"
               if users_category_second_pass['slug'] == @group_name
                 puts "Updated Category: #{@group_name}    Notification Level: #{users_category_second_pass['notification_level']}\n"
               end
@@ -85,31 +74,13 @@ end
 
 printf "%-18s %-20s %-20s %-5s\n", 'UserName', 'Group', 'Category', 'Level'
 
-while starting_page_of_users > 0
-  # puts 'Top While'
-  client.api_username = admin_client
-  # puts "client.api_username: #{client.api_username}\n"
-  @users = client.list_users('active', page: starting_page_of_users)
-  if @users.empty?
-    starting_page_of_users = 0
-  else
-    # puts "Page .................. #{starting_page_of_users}"
-    @users.each do |user|
-      if @target_username
-        if user['username'] == @target_username
-          @user_count += 1
-          member_notifications(client, user)
-        end
-      elsif not @exclude_user_names.include?(user['username']) and user['active'] == true
-        @user_count += 1
-        # puts user['username']
-        member_notifications(client, user)
-        sleep(2)  # really needs to be 3?
-      end
-    end
-    starting_page_of_users += 1
-  end
-end
+apply_to_all_users(client)
 
-puts "\n#{@matching_categories_count} matching Categories for #{@user_count} User found."
-puts "\n#{@users_updated} Category notification_levels updated for #{@users_updated} Users."
+puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets out of #{@user_count} total users with #{@matching_categories_count} matching Categories."
+
+# Feb 28, 2019
+# UserName           Group                Category             Level
+# Steve_Scott        Foundry              Foundry                1      NOT_Watching
+# Ryan_Hyer          ExpeditionProduction ExpeditionProduction   1      NOT_Watching
+# Ryan_Hyer          InboundInquiry       InboundInquiry         1      NOT_Watching
+#
