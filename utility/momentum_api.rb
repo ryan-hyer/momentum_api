@@ -40,7 +40,7 @@ def apply_to_all_users(client)
           # @user_count += 1
           # puts user['username']
           apply_function(client, user)
-          sleep(2) # really needs to be 3?
+          sleep(1) # needs to be 2 in some cases
         end
       end
       starting_page_of_users += 1

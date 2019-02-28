@@ -1,11 +1,11 @@
 require '../utility/momentum_api'
 
-@do_live_updates = true
+@do_live_updates = false 
 client = connect_to_instance('live')   # 'live' or 'local'
 
 # testing variables
-# @target_username = 'Howard_Bailey' # Jim_Charley, Randy_Horton
-@issue_users = %w() # past in debug issue user_names
+@target_username = 'Eric_Nitzberg'
+@issue_users = %w() # debug issue user_names
 
 @user_option_targets = {
     'email_private_messages': true, # Send me an email when someone messages me
@@ -28,7 +28,7 @@ def print_user_options(user_option)
 end
 
 # standardize_email_settings
-def apply_function(client, user)         # TODO run for all users, test mailing list mode, non-visitors, push to mother
+def apply_function(client, user)         # TODO test mailing list mode, 1. last seen, Eric_Nitzberg, push to mother
   @users_username = user['username']
   @user_count += 1
   user_details = client.user(@users_username)
