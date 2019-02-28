@@ -1,73 +1,63 @@
-$LOAD_PATH.unshift File.expand_path('../../../discourse_api/lib', __FILE__)
-require File.expand_path('../../../discourse_api/lib/discourse_api', __FILE__)
+require '../utility/momentum_api'
 
-@admin_client = 'KM_Admin'
-starting_page_of_users = 1
-client = DiscourseApi::Client.new('https://discourse.gomomentum.org/')
-# client = DiscourseApi::Client.new('http://localhost:3000')
-client.api_key = ENV['REMOTE_DISCOURSE_API']
-# client.api_key = ENV['LOCAL_DISCOURSE_API']
-client.api_username = @admin_client
+@do_live_updates = true
+client = connect_to_instance('live')   # 'live' or 'local'
 
-# update to what email setting?
-@target_email_always = true
-@target_email_direct = true
-@target_email_private_messages = true
-@target_email_digests = true
+# testing variables
+# @target_username = 'Howard_Bailey' # Jim_Charley, Randy_Horton
+@issue_users = %w() # past in debug issue user_names
+
+@user_option_targets = {
+    'email_private_messages': true, # Send me an email when someone messages me
+    'email_direct': true,           # Send me an email when someone quotes me, replies to my post, mentions my @username, or invites me to a topic
+    'email_always': true,           # Send me email notifications even when I am active on the site
+    # 'email_digests': true         # When I don’t visit here, send me an email summary of popular topics and replies
+}
 
 @target_groups = %w(trust_level_0)
 @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin)
-@do_live_updates = true
+@field_settings = "%-18s %-24s %-14s %-14s %-14s %-14s\n"
 
-# testing variables
-@target_username = 'Eric_Nitzberg' # John_Oberstar Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
-# @target_username = nil
-@issue_users = %w() # past in debug issue user_names
+@user_count, @matching_categories_count, @users_updated = 0, 0, 0, 0
 
-@user_count = 0
-@matching_categories_count = 0
-@users_updated = 0
-@users_updated = 0
+def print_user_options(user_option)
+  printf @field_settings, @users_username,
+         user_option[@user_option_targets.keys[0].to_s], user_option[@user_option_targets.keys[1].to_s],
+         user_option[@user_option_targets.keys[2].to_s], user_option[@user_option_targets.keys[3].to_s],
+         user_option['mailing_list_mode']
+end
 
-
-def member_notifications(client, user)         # TODO run for all users, test mailing list mode
+# standardize_email_settings
+def apply_function(client, user)         # TODO run for all users, test mailing list mode, non-visitors, push to mother
   @users_username = user['username']
-  client.api_username = @admin_client
+  @user_count += 1
   user_details = client.user(@users_username)
+  user_groups = user_details['groups']
+  user_option = user_details['user_option']
 
-  @users_groups = user_details['groups']
-  @email_always = user_details['user_option']['email_always']
-  @email_direct = user_details['user_option']['email_direct']
-  @email_digests = user_details['user_option']['email_digests']
-  @email_private_messages = user_details['user_option']['email_private_messages']
-  @email_settings = [@email_always, @email_direct, @email_digests, @email_private_messages]
-
-  @users_groups.each do |group|
+  user_groups.each do |group|
     @group_name = group['name']
     if @issue_users.include?(@users_username)
       puts "\n#{@users_username}  Group: #{@group_name}\n"
     end
 
     if @target_groups.include?(@group_name)
-      if @email_settings.all?
+      all_settings_true = [user_option[@user_option_targets.keys[0].to_s], user_option[@user_option_targets.keys[1].to_s],
+              user_option[@user_option_targets.keys[2].to_s]].all?
+      if all_settings_true
         # puts 'All settings are correct'
       else
-        printf "%-18s %-20s %-6s %-6s %-6s %-6s\n", @users_username, @group_name, @email_always, @email_direct, @email_digests, @email_private_messages
+        print_user_options(user_option)
 
         if @do_live_updates
-          update_response = client.update_user(@users_username, email_always: true, email_direct: true, email_digests: true, email_private_messages: true)
+          update_response = client.update_user(@users_username, @user_option_targets)
           puts update_response[:body]['success']
           @users_updated += 1
 
           # check if update happened
-          @user_details_after_update = client.user(@users_username)
+          user_option_after_update = client.user(@users_username)['user_option']
+          print_user_options(user_option_after_update)
           sleep(1)
-          @email_always_after = @user_details_after_update['user_option']['email_always']
-          @email_direct_after = @user_details_after_update['user_option']['email_direct']
-          @email_digests_after = @user_details_after_update['user_option']['email_digests']
-          @email_private_messages_after = @user_details_after_update['user_option']['email_private_messages']
-
-          printf "Updated %-18s %-20s %-6s %-6s %-6s %-6s\n", @users_username, @group_name, @email_always_after, @email_direct_after, @email_digests_after, @email_private_messages_after
         end
       end
     end
@@ -75,32 +65,169 @@ def member_notifications(client, user)         # TODO run for all users, test ma
   end
 end
 
-printf "%-18s %-20s %-20s %-7s\n", 'UserName', 'Group', 'Category', 'Level'
+printf @field_settings, 'UserName',
+       @user_option_targets.keys[0], @user_option_targets.keys[1],
+       @user_option_targets.keys[2], @user_option_targets.keys[3], 'mailing_list_mode'
 
-while starting_page_of_users > 0
-  # puts 'Top While'
-  client.api_username = @admin_client
-  # puts "client.api_username: #{client.api_username}\n"
-  @users = client.list_users('active', page: starting_page_of_users)
-  if @users.empty?
-    starting_page_of_users = 0
-  else
-    # puts "Page .................. #{starting_page_of_users}"
-    @users.each do |user|
-      if @target_username
-        if user['username'] == @target_username
-          @user_count += 1
-          member_notifications(client, user)
-        end
-      elsif not @exclude_user_names.include?(user['username']) and user['active'] == true
-        @user_count += 1
-        # puts user['username']
-        member_notifications(client, user)
-        sleep(2)  # really needs to be 3?
-      end
-    end
-    starting_page_of_users += 1
-  end
-end
+apply_to_all_users(client)
 
 puts "\n#{@users_updated} users updated out of #{@user_count} users found."
+
+
+# Feb 27, 2019
+#
+# UserName           email_private_messages   email_direct   email_always                  mailing_list_mode
+# Joe_Sabolefski     false                    false          false                         false
+# OK
+# Joe_Sabolefski     true                     true           true                          false
+# John_Mansperger    true                     true           false                         false
+# OK
+# John_Mansperger    true                     true           true                          false
+# Mark_Thorpe        true                     false          false                         false
+# OK
+# Mark_Thorpe        true                     true           true                          false
+# Curt_Weil          true                     true           false                         true
+# OK
+# Curt_Weil          true                     true           true                          true
+# Stefan_Schmitz     true                     true           false                         true
+# OK
+# Stefan_Schmitz     true                     true           true                          true
+# John_Lasersohn     true                     true           false                         false
+# OK
+# John_Lasersohn     true                     true           true                          false
+# Rich_Worthington   true                     true           false                         true
+# OK
+# Rich_Worthington   true                     true           true                          true
+# Chris_Steck        true                     false          false                         false
+# OK
+# Chris_Steck        true                     true           true                          false
+# Benjamin_Berman    true                     false          false                         false
+# OK
+# Benjamin_Berman    true                     true           true                          false
+# Jeff_Cintas        true                     true           false                         true
+# OK
+# Jeff_Cintas        true                     true           true                          true
+# Edmond_Cote        true                     true           false                         true
+# OK
+# Edmond_Cote        true                     true           true                          true
+# Jack_McInerney     true                     false          false                         false
+# OK
+# Jack_McInerney     true                     true           true                          false
+# Tom_Feasby         true                     true           false                         true
+# OK
+# Tom_Feasby         true                     true           true                          true
+# Mitch_Slomiak      true                     true           false                         true
+# OK
+# Mitch_Slomiak      true                     true           true                          true
+# Dan_Ollendorff     false                    false          false                         false
+# OK
+# Dan_Ollendorff     true                     true           true                          false
+# Matthew_Lewsadder  true                     true           false                         false
+# OK
+# Matthew_Lewsadder  true                     true           true                          false
+# Robbie_Bow         false                    false          false                         false
+# OK
+# Robbie_Bow         true                     true           true                          false
+# Tony_Christopher   true                     true           false                         false
+# OK
+# Tony_Christopher   true                     true           true                          false
+# Scott_StGermain    true                     true           false                         false
+# OK
+# Scott_StGermain    true                     true           true                          false
+# Art_Muir           true                     true           false                         false
+# OK
+# Art_Muir           true                     true           true                          false
+# EO_Rojas           true                     true           false                         false
+# OK
+# EO_Rojas           true                     true           true                          false
+# Barry_Finkelstein  true                     false          false                         false
+# OK
+# Barry_Finkelstein  true                     true           true                          false
+# John_Jeffs         true                     false          true                          false
+# OK
+# John_Jeffs         true                     true           true                          false
+# Chris_Reed         true                     true           false                         false
+# OK
+# Chris_Reed         true                     true           true                          false
+# Don_Morgan         true                     true           false                         false
+# OK
+# Don_Morgan         true                     true           true                          false
+# Geoff_Wright       true                     true           false                         false
+# OK
+# Geoff_Wright       true                     true           true                          false
+# Brad_Peppard       true                     true           false                         true
+# OK
+# Brad_Peppard       true                     true           true                          true
+# Tonio_Schutze      false                    false          false                         false
+# OK
+# Tonio_Schutze      true                     true           true                          false
+# Ken_Krantz         true                     false          false                         false
+# OK
+# Ken_Krantz         true                     true           true                          false
+# Michael_Hayes      false                    false          false                         false
+# OK
+# Michael_Hayes      true                     true           true                          false
+# Dave_Mussoff       true                     true           false                         false
+# OK
+# Dave_Mussoff       true                     true           true                          false
+# Narjit_Chadha      false                    false          false                         false
+# OK
+# Narjit_Chadha      true                     true           true                          false
+# Barry_Dobyns       true                     true           false                         false
+# OK
+# Barry_Dobyns       true                     true           true                          false
+# Peter_Montana      false                    false          false                         false
+# OK
+# Peter_Montana      true                     true           true                          false
+# Kevin_Shutta       false                    false          false                         false
+# OK
+# Kevin_Shutta       true                     true           true                          false
+# Alan_Schoen        false                    false          false                         false
+# OK
+# Alan_Schoen        true                     true           true                          false
+# Jim_LoConte        false                    false          false                         false
+# OK
+# Jim_LoConte        true                     true           true                          false
+# Aaron_Jenkins      false                    false          false                         false
+# OK
+# Aaron_Jenkins      true                     true           true                          false
+# Ravi_Narra         true                     true           false                         true
+# OK
+# Ravi_Narra         true                     true           true                          true
+# Lars_Rider         true                     true           false                         true
+# OK
+# Lars_Rider         true                     true           true                          true
+# Greg_Thayer        false                    false          false                         false
+# OK
+# Greg_Thayer        true                     true           true                          false
+# John_Piggott       true                     true           false                         false
+# OK
+# John_Piggott       true                     true           true                          false
+# Ken_Hartman        false                    false          false                         false
+# OK
+# Ken_Hartman        true                     true           true                          false
+# Toby_Ward          false                    false          false                         false
+# OK
+# Toby_Ward          true                     true           true                          false
+# Johnny_Alexander   false                    false          false                         false
+# OK
+# Johnny_Alexander   true                     true           true                          false
+# Praveen_Rangu      true                     true           false                         false
+# OK
+# Praveen_Rangu      true                     true           true                          false
+# Jason_Heimann      false                    false          false                         false
+# OK
+# Jason_Heimann      true                     true           true                          false
+# Nicolas_Ardelean   false                    false          false                         false
+# OK
+# Nicolas_Ardelean   true                     true           true                          false
+# Sanford_Dietrich   false                    false          false                         false
+# OK
+# Sanford_Dietrich   true                     true           true                          false
+# Matt_Hill          false                    false          false                         false
+# OK
+# Matt_Hill          true                     true           true                          false
+# Mike_Wilkins       true                     true           false                         false
+# OK
+# Mike_Wilkins       true                     true           true                          false
+# 
