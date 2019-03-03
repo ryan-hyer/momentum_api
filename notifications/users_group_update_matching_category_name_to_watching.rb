@@ -7,8 +7,8 @@ client = connect_to_instance('live') # 'live' or 'local'
 @target_notification_level = 3
 
 # testing variables
-# @target_username = 'Ryan_Hyer'
-@exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin)
+# @target_username = 'Brad_Peppard'
+@exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin Steve_Scott Ryan_Hyer)
 @issue_users = %w()
 
 @user_count, @matching_categories_count, @users_updated, @user_targets = 0, 0, 0, 0

@@ -49,6 +49,7 @@ def apply_function(client, user)  # TODO 1. Run mailing list mode update
     end
 
     if @target_groups.include?(@group_name)
+      # what to update
       all_settings_true = [user_option[@user_option_targets.keys[0].to_s]].all?
       if not all_settings_true
         # puts 'All settings are correct'
@@ -66,8 +67,9 @@ def apply_function(client, user)  # TODO 1. Run mailing list mode update
           sleep(1)
         end
       end
+      break  # breaks after first qualifying group
     end
-    break
+    # break
   end
 end
 
@@ -79,28 +81,29 @@ apply_to_all_users(client)
 
 puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets out of #{@user_count} total users."
 
-# Feb 28, 2019`
+# Mar 2, 2019
 # UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  mailing_list_mode
-# Curt_Weil          2019-02-28     2019-02-26       96           9189         145               true
+# Stefan_Schmitz     2019-03-03     2019-03-03       69           79467        19265             true
+# Jeff_Cintas        2019-03-02     2019-01-31       37           39790        176               true
+# Jerry_Strebig      2019-03-02     2019-03-02       160          6163         360               true
+# Marty_Fauth        2019-03-02     2019-02-25       295          100570       10907             true
+# Steve_Cross        2019-03-02     2019-02-26       50           4746         763               true
+# John_Oberstar      2019-03-02     2019-03-01       25           8468         2192              true
+# Curt_Weil          2019-03-01     2019-02-26       96           9189         145               true
+# Rich_Worthington   2019-03-01     2019-02-28       93           40942        6623              true
+# Miles_Bradley      2019-03-01     2019-02-25       232          48054        1371              true
 # Randy_Horton       2019-02-28     2019-02-27       255          14484        5739              true
-# Paul_Tyner         2019-02-28     2019-01-14       34           35763        4961              true
-# Rich_Worthington   2019-02-28     2019-02-28       93           40939        6620              true
-# Marty_Fauth        2019-02-28     2019-02-25       295          100485       10822             true
+# Paul_Tyner         2019-02-28     2019-01-14       34           35763        4557              true
 # Anshu_Sanghi       2019-02-28     2019-01-23       72           45285        154               true
 # Charlie_Bedard     2019-02-27     2019-02-21       67           10257        741               true
-# Stefan_Schmitz     2019-02-27     2019-02-27       68           78925        19018             true
-# Jerry_Strebig      2019-02-27     2019-02-27       159          6139         336               true
-# Jeff_Cintas        2019-02-27     2019-01-31       37           39790        386               true
-# John_Oberstar      2019-02-26     2019-02-26       24           8005         1729              true
 # Russ_Towne         2019-02-26     2019-02-26       124          11003        3794              true
 # Bob_Richards       2019-02-26     2018-10-14       8            386          72                true
 # Edmond_Cote        2019-02-26     2019-02-25       194          78772        7996              true
-# Mike_Weston        2019-02-26     2019-02-18       25           22840        4428              true
+# Mike_Weston        2019-02-26     2019-02-18       25           22840        3330              true
 # Mike_Ehlers        2019-02-26     2019-01-09       13           12431        349               true
 # Tom_Feasby         2019-02-26     2019-02-28       157          19902        1485              true
 # Mitch_Slomiak      2019-02-26     2019-02-27       141          4637         0                 true
 # Jim_Knapp          2019-02-21     2019-02-21       150          3996         185               true
-# Steve_Cross        2019-02-20     2019-02-26       50           4746         936               true
 # Laurence_Kuhn      2019-02-18     2019-02-18       108          11734        418               true
 # Rick_Kananen       2019-02-16     2019-02-16       24           534          168               true
 # Jim_Leney          2019-02-16     2018-04-13       24           6219         71                true
@@ -109,9 +112,7 @@ puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets
 # Marco_Milletti     2019-02-11     2018-10-11       0            11372        309               true
 # Juergen_Weltz      2019-02-10     2018-12-05       5            5186         199               true
 # Roger_Chapman      2019-02-10     2019-02-10       11           1864         353               true
-# Miles_Bradley      2019-02-10     2019-02-25       232          48054        1371              true
 # Garry_Cheney       2019-02-05     2019-02-11       75           1472         324               true
-# Brad_Peppard       2019-01-15     2019-02-05       17           8675         752               true
 # Vern_Mcgeorge      2019-01-13     2018-11-14       11           1898         0                 true
 # Flint_Thorne       2019-01-11     2019-01-09       13           3242         21                true
 # Mark_Habberley     2019-01-10     2018-04-25       3            1021         0                 true
@@ -133,4 +134,4 @@ puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets
 # Udy_Gold           2017-01-13     2017-01-20       12           1023         0                 true
 # Bill_Strahm        2016-11-24     2018-10-10       6            1562         0                 true
 #
-# 0 users updated out of 51 possible targets and 203 users total.
+# 0 users updated out of 50 possible targets out of 203 total users.

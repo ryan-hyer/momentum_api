@@ -4,7 +4,7 @@ require '../utility/momentum_api'
 client = connect_to_instance('live')   # 'live' or 'local'
 
 # testing variables
-@target_username = 'Eric_Nitzberg'
+# @target_username = 'Eric_Nitzberg'
 @issue_users = %w() # debug issue user_names
 
 @user_option_targets = {
@@ -42,6 +42,7 @@ def apply_function(client, user)         # TODO test mailing list mode, 1. last 
     end
 
     if @target_groups.include?(@group_name)
+      # what to update
       all_settings_true = [user_option[@user_option_targets.keys[0].to_s], user_option[@user_option_targets.keys[1].to_s],
               user_option[@user_option_targets.keys[2].to_s]].all?
       if all_settings_true

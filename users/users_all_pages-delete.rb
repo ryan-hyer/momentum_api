@@ -1,13 +1,9 @@
-$LOAD_PATH.unshift File.expand_path('../../../discourse_api/lib', __FILE__)
-require File.expand_path('../../../discourse_api/lib/discourse_api', __FILE__)
+require '../utility/momentum_api'
 
-@admin_client = 'KM_Admin'
+@do_live_updates = false
+client = connect_to_instance('live') # 'live' or 'local'
+
 starting_page_of_users = 1
-client = DiscourseApi::Client.new('https://discourse.gomomentum.org/')
-# client = DiscourseApi::Client.new('http://localhost:3000')
-client.api_key = ENV['REMOTE_DISCOURSE_API']
-# client.api_key = ENV['LOCAL_DISCOURSE_API']
-client.api_username = @admin_client
 
 # update to what notification_level?
 # @target_category_slugs = %w(Essential)
@@ -20,8 +16,7 @@ client.api_username = @admin_client
 @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin)
 
 # testing variables
-# @target_username = 'Matthew_Lewsadder' # John_Oberstar Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
-@target_username = nil
+@target_username = 'Marty_Fauth' # John_Oberstar Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
 @issue_users = %w() # past in debug issue user_names
 
 @user_count = 0
