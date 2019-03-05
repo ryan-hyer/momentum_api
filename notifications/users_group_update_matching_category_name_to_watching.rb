@@ -1,13 +1,13 @@
 require '../utility/momentum_api'
 
-@do_live_updates = false
+@do_live_updates = true
 client = connect_to_instance('live') # 'live' or 'local'
 
 # update to what notification_level?
-@target_notification_level = 3
+@acceptable_notification_levels = 3
 
 # testing variables
-# @target_username = 'Brad_Peppard'
+@target_username = 'Brad_Peppard'
 @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin Steve_Scott Ryan_Hyer)
 @issue_users = %w()
 
@@ -43,7 +43,7 @@ def apply_function(client, user)
 
           @user_targets += 1
           if @do_live_updates
-            update_response = client.category_set_user_notification_level(@category_id, @target_notification_level)
+            update_response = client.category_set_user_notification(id: @category_id, notification_level: @acceptable_notification_levels)
             puts update_response
             @users_updated += 1
 
