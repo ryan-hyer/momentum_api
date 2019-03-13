@@ -47,3 +47,20 @@ def apply_to_all_users(client)
     end
   end
 end
+
+def apply_to_group_users(client, group_plug)
+  members = client.group_members(group_plug)
+  members.each do |user|
+    if @target_username
+      if user['username'] == @target_username
+        # @user_count += 1
+        apply_function(client, user)
+      end
+    elsif not @exclude_user_names.include?(user['username'])
+      # @user_count += 1
+      # puts user['username']
+      apply_function(client, user)
+      sleep(1) # needs to be 2 in some cases
+    end
+  end
+end

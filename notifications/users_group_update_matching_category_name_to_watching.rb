@@ -1,14 +1,15 @@
 require '../utility/momentum_api'
 
-@do_live_updates = true
+@do_live_updates = false
 client = connect_to_instance('live') # 'live' or 'local'
 
 # update to what notification_level?
 @acceptable_notification_levels = 3
 
 # testing variables
-@target_username = 'Brad_Peppard'
-@exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin Steve_Scott Ryan_Hyer)
+# @target_username = 'Brad_Peppard'
+@exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin Steve_Scott Ryan_Hyer
+                           Kim_Miller David_Kirk)
 @issue_users = %w()
 
 @user_count, @matching_categories_count, @users_updated, @user_targets = 0, 0, 0, 0
