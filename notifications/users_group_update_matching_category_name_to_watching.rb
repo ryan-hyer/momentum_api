@@ -1,70 +1,86 @@
 require '../utility/momentum_api'
 
-@do_live_updates = false
+@do_live_updates = false 
 client = connect_to_instance('live') # 'live' or 'local'
 
 # update to what notification_level?
 @acceptable_notification_levels = 3
 
 # testing variables
-# @target_username = 'Brad_Peppard'
-@exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin Steve_Scott Ryan_Hyer
-                           Kim_Miller David_Kirk)
+# @target_username = 'Bill_Zabor'
+@target_group = 'Council25'
+@exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin)
+                          # Steve_Scott Ryan_Hyer Kim_Miller David_Kirk)
 @issue_users = %w()
 
 @user_count, @matching_categories_count, @users_updated, @user_targets = 0, 0, 0, 0
+
+def process_category(category, client)
+  @category_slug = category['slug']
+  if @issue_users.include?(@users_username)
+    puts "\n#{@users_username}  Category: #{@category_slug}\n"
+  end
+  if @category_slug == @group_name
+    @users_category_notify_level = category['notification_level']
+    # printf "%-18s %-20s %-20s %-8s %-15s\n", @users_username, @group_name, @category_slug, @users_category_notify_level.to_s.center(6), 'test_print'
+    if @users_category_notify_level != 3
+      @category_id = category['id']
+      printf "%-18s %-20s %-20s %-8s %-15s\n", @users_username, @group_name, @category_slug, @users_category_notify_level.to_s.center(6), 'NOT_Watching'
+
+      @user_targets += 1
+      if @do_live_updates
+        update_response = client.category_set_user_notification(id: @category_id, notification_level: @acceptable_notification_levels)
+        puts update_response
+        @users_updated += 1
+
+        # check if update happened
+        @user_details_after_update = client.categories
+        sleep(1)
+        @user_details_after_update.each do |users_category_second_pass| # uncomment to check for the update
+          if users_category_second_pass['slug'] == @group_name
+            puts "Updated Category: #{@group_name}    Notification Level: #{users_category_second_pass['notification_level']}\n"
+          end
+        end
+      end
+    else
+      if @issue_users.include?(@users_username)
+        printf "%-18s %-20s %-20s %-5s\n", @users_username, @group_name, @category_slug, @users_category_notify_level.to_s.center(15)
+      end
+    end
+    @matching_categories_count += 1
+    sleep(1)
+  end
+end
 
 # find and update member_notifications
 def apply_function(client, user)
   @user_count += 1
   @starting_categories_updated = @users_updated
   @users_username = user['username']
-  @users_groups = client.user(@users_username)['groups']
+  users_groups = client.user(@users_username)['groups']
 
   client.api_username = @users_username # Feb 21, 2019 Question pending about setting api user
-  @users_categories = client.categories
+  users_categories = client.categories
   sleep(1)
   
-  @users_groups.each do |group|
+  users_groups.each do |group|
     @group_name = group['name']
+    next if @target_group and @group_name != @target_group
     if @issue_users.include?(@users_username)
       puts "\n#{@users_username}  Group: #{@group_name}\n"
     end
-    @users_categories.each do |category|
-      @category_slug = category['slug']
-      if @issue_users.include?(@users_username)
-        puts "\n#{@users_username}  Category: #{@category_slug}\n"
-      end
-      if @category_slug == @group_name
-        @users_category_notify_level = category['notification_level']
-        # printf "%-18s %-20s %-20s %-8s %-15s\n", @users_username, @group_name, @category_slug, @users_category_notify_level.to_s.center(6), 'test_print'
-        if @users_category_notify_level != 3
-          @category_id = category['id']
-          printf "%-18s %-20s %-20s %-8s %-15s\n", @users_username, @group_name, @category_slug, @users_category_notify_level.to_s.center(6), 'NOT_Watching'
-
-          @user_targets += 1
-          if @do_live_updates
-            update_response = client.category_set_user_notification(id: @category_id, notification_level: @acceptable_notification_levels)
-            puts update_response
-            @users_updated += 1
-
-            # check if update happened
-            @user_details_after_update = client.categories
-            sleep(1)
-            @user_details_after_update.each do |users_category_second_pass| # uncomment to check for the update
-              if users_category_second_pass['slug'] == @group_name
-                puts "Updated Category: #{@group_name}    Notification Level: #{users_category_second_pass['notification_level']}\n"
-              end
-            end
-          end
-        else
-          if @issue_users.include?(@users_username)
-            printf "%-18s %-20s %-20s %-5s\n", @users_username, @group_name, @category_slug, @users_category_notify_level.to_s.center(15)
-          end
-        end
-        @matching_categories_count += 1
+    users_categories.each do |category|
+      process_category(category, client)
+      if category['subcategory_ids']
+        # puts category['slug']
+        # puts category['subcategory_ids']
+        users_subcategories = client.categories(parent_category_id: category['id'])
         sleep(1)
-        break
+        users_subcategories.each do |subcategory|
+          process_category(subcategory, client)
+        end
+      else
+        # puts 'No subcategory_ids'
       end
     end
   end
