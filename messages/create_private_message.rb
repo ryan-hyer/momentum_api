@@ -1,12 +1,13 @@
 require '../utility/momentum_api'
 
-@do_live_updates = true
+@do_live_updates = false 
+@from_username = 'Moe_Rubenzahl'
 client = connect_to_instance('live')   # 'live' or 'local'
 
 # message from user name
-client.api_username = 'Moe_Rubenzahl'
+client.api_username = @from_username
 # message to group
-group_plug = 'Tech'
+group_plug = 'OwnerExpired'
 # message
 @message_subject = "Are you leaving Momentum?"
 @message_body = "I noticed you did not renew your Momentum membership.
@@ -25,14 +26,14 @@ Momentum Chief"
 @issue_users = %w() # debug issue user_names
 @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin)
 @user_count, @sent_messages = 0, 0
-@field_settings = "%-20s %-20s %-35s %-25s\n"
+@field_settings = "%-20s %-20s %-35s %-25s %-25s\n"
 
 # standardize_email_settings
 def apply_function(client, user)
   users_username = user['username']
   @user_count += 1
-  # puts users_username
-
+  printf @field_settings, @from_username, users_username, @message_subject, @message_body[0..20], 'Pending'
+  
   if @do_live_updates
     response = client.create_private_message(
         title: @message_subject,
@@ -43,14 +44,14 @@ def apply_function(client, user)
     # check if update happened
     created_message = client.get_post(response['id'])
     printf @field_settings, created_message['username'], users_username, created_message['topic_slug'],
-           created_message['raw'][0..20]
+           created_message['raw'][0..20], 'Sent'
 
     @sent_messages += 1
     sleep(1)
   end
 end
 
-printf @field_settings, 'Message From', 'Message To', 'Slug', 'Starting Text'
+printf @field_settings, 'Message From', 'Message To', 'Slug', 'Starting Text', 'Status'
 
 apply_to_group_users(client, group_plug)
 
