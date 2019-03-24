@@ -1,15 +1,15 @@
 require '../utility/momentum_api'
 
 @do_live_updates = false
+
 client = connect_to_instance('live') # 'live' or 'local'
 
 # testing variables
-# @target_username = 'KM_Admin'
+# @target_username = 'David_Ashby'
 @issue_users = %w() # debug issue user_names
 
 @user_option_targets = {
-    'homepage_id': 2, #
-    # 'email_direct': true,       # Send me an email when someone quotes me, replies to my post, mentions my @username, or invites me to a topic
+    'theme_ids': [10]
 }
 
 @user_option_print = %w(
@@ -18,10 +18,10 @@ client = connect_to_instance('live') # 'live' or 'local'
     post_count
     time_read
     recent_time_read
-    homepage_id
+    theme_ids
 )
 
-@target_groups = %w(trust_level_0)
+@target_groups = %w(LaunchpadV)
 @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin )
 @field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
 
@@ -35,7 +35,7 @@ def print_user_options(user_details)
 end
 
 # standardize_email_settings
-def apply_function(client, user)  # TODO 1. update homepage_id
+def apply_function(client, user)
   @users_username = user['username']
   @user_count += 1
   user_details = client.user(@users_username)
@@ -50,13 +50,18 @@ def apply_function(client, user)  # TODO 1. update homepage_id
 
     if @target_groups.include?(@group_name)
       # what to update
-      value_setting_true = user_option[@user_option_targets.keys[0].to_s] == nil
-      all_settings_true = [user_option[@user_option_targets.keys[0].to_s]].all?
-      if not value_setting_true
-        # puts 'All settings are correct'
+      existing_value = user_option[@user_option_targets.keys[0].to_s]
+      # printf "Existing value: %-20s \n", existing_value
+      target_value = @user_option_targets.values[0]
+      # printf "Target value: %-20s \n",  target_value
+      value_already_correct = existing_value == target_value
+      # all_settings_true = [user_option[@user_option_targets.keys[0].to_s]].all?
+      if value_already_correct
+        puts 'User already correct'
         print_user_options(user_details)
       else
-        # print_user_options(user_details)
+        puts 'User to be updated'
+        print_user_options(user_details)
         @user_targets += 1
         if @do_live_updates
           update_response = client.update_user(@users_username, @user_option_targets)
