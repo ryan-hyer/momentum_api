@@ -1,22 +1,27 @@
 require '../utility/momentum_api'
 
-@do_live_updates = false 
+@do_live_updates = false
 @from_username = 'Moe_Rubenzahl'
-client = connect_to_instance('live')   # 'live' or 'local'
+@instance = 'live'
+client = connect_to_instance('KM_Admin')   # 'live' or 'local'
 
 # message from user name
 client.api_username = @from_username
 # message to group
 group_plug = 'OwnerExpired'
 # message
-@message_subject = "Are you leaving Momentum?"
-@message_body = "I noticed you did not renew your Momentum membership.
+@message_subject = "We are sorry to see you go"
+@message_body = "I sent you a message last month about your expired Momentum membership asking you to either:
 
-- If this was unintentional, you can [renew online](http://www.gomomentum.org/join). Do you need any help? Note that if the dues are a financial hardship, Momentum will assist. Contact me privately at moe1@rubenzahl.com to make arrangements.
+- [Re-join online here.](http://www.gomomentum.org/join)
 
-- If you do intend to leave Momentum, it would be helpful for us to know why. Please answer [this brief survey](https://goo.gl/forms/10AslBf1jpR5X6aP2). lt will help us meet the needs of Momentum men.
+   or
 
-Thank you for spending time with Momentum—I hope that you found some value in the experience. Let me know if I can be of assistance to you.
+- Take [Momentum's exit survey here](https://goo.gl/forms/10AslBf1jpR5X6aP2) to help us learn more about your choice to leave Momentum.
+
+If money is an issue, remember that Momentum provides scholarships where needed. Contact me privately at moe1@rubenzahl.com to make arrangements.
+
+Thank you for spending time with Momentum, and thank you for going the final mile so we may have a proper completion if that is your intention.
 
 Moe Rubenzahl
 Momentum Chief"

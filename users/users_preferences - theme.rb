@@ -2,10 +2,10 @@ require '../utility/momentum_api'
 
 @do_live_updates = false
 
-client = connect_to_instance('live') # 'live' or 'local'
+@instance = 'live' # 'live' or 'local'
 
 # testing variables
-# @target_username = 'David_Ashby'
+@target_username = 'Moe_Rubenzahl'  # David_Ashby, Ryan_Hyer,
 @issue_users = %w() # debug issue user_names
 
 @user_option_targets = {
@@ -21,7 +21,7 @@ client = connect_to_instance('live') # 'live' or 'local'
     theme_ids
 )
 
-@target_groups = %w(LaunchpadV)
+@target_groups = %w(trust_level_0)  # LaunchpadV
 @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin )
 @field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
 
@@ -83,6 +83,6 @@ printf @field_settings, 'UserName',
        @user_option_print[0], @user_option_print[1], @user_option_print[2],
        @user_option_print[3], @user_option_print[4], @user_option_print[5]
 
-apply_to_all_users(client)
+apply_to_all_users
 
 puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets out of #{@user_count} total users."
