@@ -1,10 +1,10 @@
 require '../utility/momentum_api'
 
-@do_live_updates = false
+@do_live_updates = true
 @instance = 'live' # 'live' or 'local'
 
 # testing variables
-# @target_username = 'Rich_Worthington'
+# @target_username = 'Miles_Bradley'
 @issue_users = %w() # debug issue user_names
 
 @user_option_targets = {
@@ -81,52 +81,50 @@ apply_to_all_users
 
 puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets out of #{@user_count} total users."
 
-# Mar 2, 2019
+# Apr 12, 2019
 # UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  mailing_list_mode
-# Stefan_Schmitz     2019-03-03     2019-03-03       69           79467        19265             true
-# Jeff_Cintas        2019-03-02     2019-01-31       37           39790        176               true
-# Jerry_Strebig      2019-03-02     2019-03-02       160          6163         360               true
-# Marty_Fauth        2019-03-02     2019-02-25       295          100570       10907             true
-# Steve_Cross        2019-03-02     2019-02-26       50           4746         763               true
-# John_Oberstar      2019-03-02     2019-03-01       25           8468         2192              true
-# Curt_Weil          2019-03-01     2019-02-26       96           9189         145               true
-# Rich_Worthington   2019-03-01     2019-02-28       93           40942        6623              true
-# Miles_Bradley      2019-03-01     2019-02-25       232          48054        1371              true
-# Randy_Horton       2019-02-28     2019-02-27       255          14484        5739              true
-# Paul_Tyner         2019-02-28     2019-01-14       34           35763        4557              true
-# Anshu_Sanghi       2019-02-28     2019-01-23       72           45285        154               true
-# Charlie_Bedard     2019-02-27     2019-02-21       67           10257        741               true
-# Russ_Towne         2019-02-26     2019-02-26       124          11003        3794              true
-# Bob_Richards       2019-02-26     2018-10-14       8            386          72                true
-# Edmond_Cote        2019-02-26     2019-02-25       194          78772        7996              true
-# Mike_Weston        2019-02-26     2019-02-18       25           22840        3330              true
-# Mike_Ehlers        2019-02-26     2019-01-09       13           12431        349               true
-# Tom_Feasby         2019-02-26     2019-02-28       157          19902        1485              true
-# Mitch_Slomiak      2019-02-26     2019-02-27       141          4637         0                 true
-# Jim_Knapp          2019-02-21     2019-02-21       150          3996         185               true
-# Laurence_Kuhn      2019-02-18     2019-02-18       108          11734        418               true
-# Rick_Kananen       2019-02-16     2019-02-16       24           534          168               true
+# Laurence_Kuhn      2019-04-12     2019-04-02       108          11734        60                true
+# Stefan_Schmitz     2019-04-12     2019-04-11       73           92565        20703             true
+# Rich_Worthington   2019-04-12     2019-04-10       95           44418        4942              true
+# Marty_Fauth        2019-04-12     2019-04-12       320          116572       20998             true
+# Paul_Tyner         2019-04-12     2019-03-11       37           39091        3969              true
+# Jeff_Cintas        2019-04-11     2019-01-31       37           40372        582               true
+# Edmond_Cote        2019-04-11     2019-04-08       209          86034        11491             true
+# John_Oberstar      2019-04-11     2019-04-03       27           12488        5385              true
+# Mitch_Slomiak      2019-04-10     2019-04-08       148          5027         390               true
+# Jim_Knapp          2019-04-10     2019-04-08       157          4037         41                true
+# Miles_Bradley      2019-04-09     2019-04-12       242          49065        1011              true
+# Mike_Weston        2019-04-08     2019-04-08       28           26522        5932              true
+# Russ_Towne         2019-04-08     2019-04-09       132          11947        1434              true
+# Marco_Milletti     2019-04-04     2018-10-11       0            12703        1425              true
+# Joseph_Kuo         2019-04-03     2019-03-11       3            2979         568               true
+# Randy_Horton       2019-04-02     2019-04-08       285          18461        5870              true
+# Anshu_Sanghi       2019-03-29     2019-01-23       72           45285        100               true
+# Curt_Weil          2019-03-26     2019-04-03       106          10687        1544              true
+# Tom_Feasby         2019-03-25     2019-04-09       176          22118        2265              true
+# Garry_Cheney       2019-03-23     2019-04-08       79           1574         102               true
+# Charlie_Bedard     2019-03-22     2019-03-28       67           10794        1278              true
+# Ron_Tugender       2019-03-22     2018-12-09       68           37760        0                 true
+# Jerry_Strebig      2019-03-21     2019-03-31       173          6490         504               true
+# Vern_Mcgeorge      2019-03-21     2018-11-14       11           2032         134               true
+# Mike_Ehlers        2019-03-15     2019-01-09       13           12431        0                 true
+# Flint_Thorne       2019-03-12     2019-03-31       19           4046         804               true
+# Juergen_Weltz      2019-03-11     2018-12-05       5            5258         72                true
+# Doug_Greig         2019-03-09     2019-03-09       30           10121        237               true
+# Roger_Chapman      2019-03-08     2019-02-10       11           1864         0                 true
+# Bob_Richards       2019-02-26     2018-10-14       8            386          25                true
+# Rick_Kananen       2019-02-16     2019-03-22       28           534          125               true
 # Jim_Leney          2019-02-16     2018-04-13       24           6219         71                true
-# Steve_Fitzsimons   2019-02-15     2019-02-25       123          2679         73                true
-# Joseph_Kuo         2019-02-14     2019-01-02       3            2595         885               true
-# Marco_Milletti     2019-02-11     2018-10-11       0            11372        309               true
-# Juergen_Weltz      2019-02-10     2018-12-05       5            5186         199               true
-# Roger_Chapman      2019-02-10     2019-02-10       11           1864         353               true
-# Garry_Cheney       2019-02-05     2019-02-11       75           1472         324               true
-# Vern_Mcgeorge      2019-01-13     2018-11-14       11           1898         0                 true
-# Flint_Thorne       2019-01-11     2019-01-09       13           3242         21                true
 # Mark_Habberley     2019-01-10     2018-04-25       3            1021         0                 true
-# Doug_Greig         2019-01-10     2019-01-10       29           9884         494               true
-# Ron_Tugender       2018-12-20     2018-12-09       68           37760        0                 true
 # Gene_Sussli        2018-12-14     2019-02-09       28           13261        0                 true
 # Tesh_Tesfaye       2018-09-13     2016-12-21       1            567          0                 true
 # Butch_Dority       2018-08-13                      0            1196         0                 true
 # Curt_Haynes        2018-05-16     2018-05-02       17           3750         0                 true
-# Dennis_Sorensen    2018-04-13     2018-08-23       6            1644         0                 true
+# Dennis_Sorensen    2018-04-13     2019-04-08       7            1644         0                 true
 # Jack_Shannon       2018-02-18     2018-01-03       1            42           0                 true
 # Ravi_Narra         2018-01-09     2017-12-31       11           7130         0                 true
 # Maarten_Korringa   2018-01-06     2017-01-20       1            3712         0                 true
-# Lars_Rider         2018-01-05     2019-01-18       154          7014         0                 true
+# Lars_Rider         2018-01-05     2019-04-08       156          7014         0                 true
 # Bill_Heller        2017-12-28     2019-02-07       9            1529         0                 true
 # Steve_Benjamin     2017-11-16     2016-11-26       0            857          0                 true
 # Al_Dorji           2017-08-09                      0            10           0                 true
@@ -134,4 +132,6 @@ puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets
 # Udy_Gold           2017-01-13     2017-01-20       12           1023         0                 true
 # Bill_Strahm        2016-11-24     2018-10-10       6            1562         0                 true
 #
-# 0 users updated out of 50 possible targets out of 203 total users.
+# 0 users updated out of 48 possible targets out of 201 total users.
+#
+# Process finished with exit code 0

@@ -20,3 +20,4 @@ bin/
 .ruby-version
 .env
 .idea
+*.iml
