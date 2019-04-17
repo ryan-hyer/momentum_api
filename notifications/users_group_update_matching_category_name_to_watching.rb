@@ -7,7 +7,7 @@ require '../utility/momentum_api'
 @acceptable_notification_levels = 3
 
 # testing variables
-# @target_username = 'Kim_Miller'
+@target_username = 'Kim_Miller'
 # @target_group = 'LaunchpadV'
 @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin MD_Admin  
                           Steve_Scott Ryan_Hyer Kim_Miller David_Kirk)
@@ -89,7 +89,7 @@ end
 
 printf "%-18s %-20s %-20s %-5s\n", 'UserName', 'Group', 'Category', 'Level'
 
-apply_to_all_users
+apply_to_all_users(needs_user_client=true)
 
 puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets out of #{@user_count} total users with #{@matching_categories_count} matching Categories."
 

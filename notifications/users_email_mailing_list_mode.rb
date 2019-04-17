@@ -1,6 +1,6 @@
 require '../utility/momentum_api'
 
-@do_live_updates = true
+@do_live_updates = false
 @instance = 'live' # 'live' or 'local'
 
 # testing variables
@@ -64,7 +64,7 @@ def apply_function(client, user)  # TODO 1. Run mailing list mode update
           # check if update happened
           user_details_after_update = client.user(@users_username)
           print_user_options(user_details_after_update)
-          sleep(1)
+          sleep(2)
         end
       end
       break  # breaks after first qualifying group

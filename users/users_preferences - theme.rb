@@ -5,7 +5,7 @@ require '../utility/momentum_api'
 @instance = 'live' # 'live' or 'local'
 
 # testing variables
-@target_username = 'Moe_Rubenzahl'  # David_Ashby, Ryan_Hyer,
+# @target_username = 'Moe_Rubenzahl'  # David_Ashby, Ryan_Hyer,
 @issue_users = %w() # debug issue user_names
 
 @user_option_targets = {
@@ -60,8 +60,8 @@ def apply_function(client, user)
         puts 'User already correct'
         print_user_options(user_details)
       else
-        puts 'User to be updated'
-        print_user_options(user_details)
+        # puts 'User to be updated'
+        # print_user_options(user_details)
         @user_targets += 1
         if @do_live_updates
           update_response = client.update_user(@users_username, @user_option_targets)
