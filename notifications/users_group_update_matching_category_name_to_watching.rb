@@ -1,16 +1,17 @@
 require '../utility/momentum_api'
 
-@do_live_updates = false 
+@do_live_updates = true
 @instance = 'live' # 'live' or 'local'
 
 # update to what notification_level?
 @acceptable_notification_levels = 3
 
 # testing variables
-@target_username = 'Kim_Miller'
+# @target_username = 'Kim_Miller'
 # @target_group = 'LaunchpadV'
-@exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin MD_Admin  
-                          Steve_Scott Ryan_Hyer Kim_Miller David_Kirk)
+@exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin MD_Admin
+                          Steve_Scott Kim_Miller)
+                          # Ryan_Hyer David_Kirk)
 @issue_users = %w()
 @user_count, @matching_categories_count, @users_updated, @user_targets = 0, 0, 0, 0
 
@@ -92,6 +93,9 @@ printf "%-18s %-20s %-20s %-5s\n", 'UserName', 'Group', 'Category', 'Level'
 apply_to_all_users(needs_user_client=true)
 
 puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets out of #{@user_count} total users with #{@matching_categories_count} matching Categories."
+
+# Apr 17, 2019 all done but @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin MD_Admin
+#                           Steve_Scott Kim_Miller)
 
 # Feb 28, 2019
 # UserName           Group                Category             Level
