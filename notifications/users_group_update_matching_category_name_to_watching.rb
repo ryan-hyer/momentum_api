@@ -1,6 +1,6 @@
 require '../utility/momentum_api'
 
-@do_live_updates = true
+@do_live_updates = false
 @instance = 'live' # 'live' or 'local'
 
 # update to what notification_level?

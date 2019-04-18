@@ -53,19 +53,47 @@ def apply_to_all_users(needs_user_client=false)
   end
 end
 
-def apply_to_group_users(client, group_plug)
-  members = client.group_members(group_plug)
+def apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=false)
+  admin_client = connect_to_instance('KM_Admin')
+  members = admin_client.group_members(group_plug)
   members.each do |user|
-    if @target_username
-      if user['username'] == @target_username
-        # @user_count += 1
-        apply_function(client, user)
+    staged = false
+    if skip_staged_user
+      if user['last_seen_at']
+        staged = false
+      else
+        # admin_client = connect_to_instance('KM_Admin')
+        full_user = admin_client.user(user['username'])
+        # puts full_user['staged']
+        staged = full_user['staged']
       end
-    elsif not @exclude_user_names.include?(user['username'])
-      # @user_count += 1
-      # puts user['username']
-      apply_function(client, user)
-      sleep(1) # needs to be 2 in some cases
+    end
+    if staged
+      puts 'Skipping staged user'
+    else
+      if @target_username
+        if user['username'] == @target_username
+          # @user_count += 1
+          if needs_user_client
+            # client = connect_to_instance(user['username'])
+            apply_function(connect_to_instance(user['username']), user)
+          else
+            apply_function(admin_client, user)
+          end
+          # apply_function(client, user)
+        end
+      elsif not @exclude_user_names.include?(user['username'])
+        # @user_count += 1
+        # puts user['username']
+        if needs_user_client
+          # client = connect_to_instance(user['username'])
+          apply_function(connect_to_instance(user['username']), user)
+        else
+          apply_function(admin_client, user)
+        end
+        # apply_function(client, user)
+        sleep(1) # needs to be 2 in some cases
+      end
     end
   end
 end
