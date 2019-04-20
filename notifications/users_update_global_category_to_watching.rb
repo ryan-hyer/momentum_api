@@ -16,13 +16,14 @@ require '../utility/momentum_api'
 @issue_users = %w() # past in debug issue user_names
 
 @user_count = 0
+@matching_user_count = 0
 @matching_categories_count = 0
 @users_updated = 0
-@users_updated = 0
+@categories_updated = 0
 
 
 def apply_function(client, user)
-  @starting_categories_updated = @users_updated
+  @starting_categories_updated = @categories_updated
   users_username = user['username']
   puts users_username
   # @users_groups = client.user(users_username)['groups']
@@ -47,7 +48,7 @@ def apply_function(client, user)
         if @do_live_updates
           update_response = client.category_set_user_notification(id: @category_id, notification_level: @set_notification_level)
           puts update_response
-          @users_updated += 1
+          @categories_updated += 1
 
           # check if update happened
           @user_details_after_update = client.categories
@@ -60,6 +61,7 @@ def apply_function(client, user)
             end
           end
         end
+        @matching_user_count += 1
       else
         if @issue_users.include?(users_username)
           printf "%-18s %-20s %-20s %-5s\n", users_username, group_name, @category_slug, @users_category_notify_level.to_s.center(5)
@@ -72,7 +74,7 @@ def apply_function(client, user)
     end
   end
   @user_count += 1
-  if @users_updated > @starting_categories_updated
+  if @categories_updated > @starting_categories_updated
     @users_updated += 1
   end
 end
@@ -87,8 +89,8 @@ else
   apply_to_all_users(needs_user_client=true)
 end
 
-puts "\n#{@matching_categories_count} matching Categories for #{@user_count} User found."
-puts "\n#{@users_updated} Category notification_levels updated for #{@users_updated} Users."
+puts "\n#{@matching_categories_count} matching Categories for #{@matching_user_count} Users found out of #{@user_count} total."
+puts "\n#{@categories_updated} Category notification_levels updated for #{@users_updated} Users."
 
 # Apr 18, 2019   Users reset
 #

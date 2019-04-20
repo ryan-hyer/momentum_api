@@ -33,14 +33,14 @@ def apply_to_all_users(needs_user_client=false)
       @users.each do |user|
         if @target_username
           if user['username'] == @target_username
-            # @user_count += 1
+            @user_count += 1
             if needs_user_client
               client = connect_to_instance(user['username'])
             end
             apply_function(client, user)
           end
         elsif not @exclude_user_names.include?(user['username']) and user['active'] == true
-          # @user_count += 1
+          @user_count += 1
           if needs_user_client
             client = connect_to_instance(user['username'])
           end
