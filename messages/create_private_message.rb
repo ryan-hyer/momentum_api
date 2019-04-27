@@ -34,7 +34,7 @@ Momentum Chief"
 @field_settings = "%-20s %-20s %-35s %-25s %-25s\n"
 
 # standardize_email_settings
-def apply_function(client, user)
+def apply_function(client, user, group_plug='All')
   users_username = user['username']
   @user_count += 1
   printf @field_settings, @from_username, users_username, @message_subject, @message_body[0..20], 'Pending'

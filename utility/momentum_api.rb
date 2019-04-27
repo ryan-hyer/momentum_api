@@ -76,9 +76,9 @@ def apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=f
           # @user_count += 1
           if needs_user_client
             # client = connect_to_instance(user['username'])
-            apply_function(connect_to_instance(user['username']), user)
+            apply_function(connect_to_instance(user['username']), user, group_plug=group_plug)
           else
-            apply_function(admin_client, user)
+            apply_function(admin_client, user, group_plug=group_plug)
           end
           # apply_function(client, user)
         end

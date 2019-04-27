@@ -7,7 +7,7 @@ require '../utility/momentum_api'
 @target_category_slugs = %w(Essential)
 @acceptable_notification_levels = [3]
 @set_notification_level = 3   # 4 = Watching first post, 3 = Watching
-@target_groups = %w(LaunchpadV)  # must be a group the user can see. Most now cannot see trust_level_0
+@target_groups = %w(BraveHearts)  # must be a group the user can see. Most now cannot see trust_level_0
 @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin
                           Joe_Sabolefski Steve_Scott)
 
@@ -22,7 +22,7 @@ require '../utility/momentum_api'
 @categories_updated = 0
 
 
-def apply_function(client, user)
+def apply_function(client, user, group_plug='All')
   @starting_categories_updated = @categories_updated
   users_username = user['username']
   puts users_username
@@ -43,7 +43,7 @@ def apply_function(client, user)
       @users_category_notify_level = category['notification_level']
       if not @acceptable_notification_levels.include?(@users_category_notify_level)
         @category_id = category['id']
-        printf "%-18s %-20s %-20s %-5s %-15s\n", users_username, group_name, @category_slug, @users_category_notify_level.to_s.center(5), 'NOT_Watching'
+        printf "%-18s %-20s %-20s %-5s %-15s\n", users_username, group_plug, @category_slug, @users_category_notify_level.to_s.center(5), 'NOT_Watching'
 
         if @do_live_updates
           update_response = client.category_set_user_notification(id: @category_id, notification_level: @set_notification_level)
@@ -64,9 +64,9 @@ def apply_function(client, user)
         @matching_user_count += 1
       else
         if @issue_users.include?(users_username)
-          printf "%-18s %-20s %-20s %-5s\n", users_username, group_name, @category_slug, @users_category_notify_level.to_s.center(5)
+          printf "%-18s %-20s %-20s %-5s\n", users_username, group_plug, @category_slug, @users_category_notify_level.to_s.center(5)
         end
-        # printf "%-18s %-20s %-20s %-5s\n", users_username, group_name, @category_slug, @users_category_notify_level.to_s.center(5)
+        # printf "%-18s %-20s %-20s %-5s\n", users_username, group_plug, @category_slug, @users_category_notify_level.to_s.center(5)
       end
       @matching_categories_count += 1
       # puts 'sleep 4'

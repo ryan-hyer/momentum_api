@@ -21,7 +21,7 @@ require '../utility/momentum_api'
     theme_ids
 )
 
-@target_groups = %w(MidPen)  # LaunchpadV, trust_level_0
+@target_groups = %w(DaVinci)  # MidPen, LaunchpadV, trust_level_0
 @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin )
 @field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
 
