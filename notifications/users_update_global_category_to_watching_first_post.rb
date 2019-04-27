@@ -4,8 +4,7 @@ require '../utility/momentum_api'
 @instance = 'live' # 'live' or 'local'
 
 # update to what notification_level?
-@target_category_slugs = %w(Meta)
-# @target_category_slugs = %w(Growth Routine Meta)
+@target_category_slugs = %w(Meta)  # Growth Routine Meta
 @acceptable_notification_levels = [3, 4]
 @set_notification_level = 4   # 4 = Watching first post, 3 = Watching
 # @target_groups = %w()  # must be a group the user can see. Most now cannot see trust_level_0
@@ -16,7 +15,7 @@ require '../utility/momentum_api'
 # @target_username = 'Dennis_Adsit' # John_Oberstar Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
 @issue_users = %w() # past in debug issue user_names
 
-@user_count = 0
+# @user_count = 0
 @matching_user_count = 0
 @matching_categories_count = 0
 @users_updated = 0
@@ -80,13 +79,13 @@ def apply_function(client, user)
             end
           end
           @matching_categories_count += 1
-          sleep(2)
+          sleep(3)
         end
       end
       break 
     end
   end
-  @user_count += 1
+  # @user_count += 1
   if @categories_updated > @starting_categories_updated
     @users_updated += 1
   end
@@ -96,7 +95,7 @@ printf "%-18s %-20s %-20s %-7s\n", 'UserName', 'Group', 'Category', 'Level'
 
 apply_to_all_users(needs_user_client=true)
 
-puts "\n#{@matching_categories_count} matching Categories for #{@matching_user_count} Users found out of #{@user_count} total."
+puts "\n#{@matching_categories_count} matching Categories for #{@matching_user_count} Users found out of #{@user_count} processed and #{@skipped_users} skipped."
 puts "\n#{@categories_updated} Category notification_levels updated for #{@users_updated} Users."
 
 # Apr 18, 2019

@@ -21,6 +21,8 @@ def connect_to_instance(api_username, instance=@instance)
 end
 
 def apply_to_all_users(needs_user_client=false)
+  @skipped_users = 0
+  @user_count = 0
   starting_page_of_users = 1
   while starting_page_of_users > 0
     # puts 'Top While'
@@ -46,6 +48,8 @@ def apply_to_all_users(needs_user_client=false)
           end
           apply_function(client, user)
           sleep(1) # needs to be 2 in some cases
+        else
+          @skipped_users += 1
         end
       end
       starting_page_of_users += 1
