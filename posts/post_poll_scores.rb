@@ -23,7 +23,8 @@ require '../utility/momentum_api'
 
 @target_polls = %w(basic)  #
 @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin )
-@field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
+@field_settings = "%-18s %-10s %-10s %-10s\n"
+# @field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
 
 @user_count, @user_targets, @users_updated = 0, 0, 0, 0
 
@@ -47,15 +48,56 @@ def apply_function(client)
 
   polls.each do |poll|
     poll_name = poll['name']
-    poll_options = poll['options']
-    # if @issue_users.include?(users_username)
-    #   puts "\n#{users_username}  Poll: #{poll_name}\n"
-    # end
-
     if @target_polls.include?(poll_name)
-      poll_options.each do |poll_option|
-        puts poll_option['html']
-        # what to update
+      poll_options = poll['options']
+      poll_option_votes = poll['preloaded_voters']
+      # if @issue_users.include?(users_username)
+      #   puts "\n#{users_username}  Poll: #{poll_name}\n"
+      # end
+
+      # current_voter = nil
+      tallied_voters = %w()
+      poll_options.each do |all_poll_option|
+        if poll_option_votes[all_poll_option['id']]
+          all_option_votes = poll_option_votes[all_poll_option['id']]
+          # puts all_option_votes
+          all_option_votes.each do |all_vote|
+            if tallied_voters.include?(all_vote['username'])
+              next
+            else
+              current_voter = all_vote['username']
+              current_voter_odd = 0.0
+              current_voter_even = 0.0
+              odd_option = true
+              odd_options = 0.0
+              poll_options.each do |poll_option|
+                odd_options += 1 if odd_option
+                if poll_option_votes[poll_option['id']]
+                  option_votes = poll_option_votes[poll_option['id']]
+                  option_votes.each do |vote|
+                    if vote['username'] == current_voter
+                      # puts vote['username'], poll_option['html']
+                      if odd_option
+                        current_voter_odd += 1
+                      else
+                        current_voter_even += 1
+                      end
+                    end
+                  end
+                end
+                odd_option = !odd_option
+              end
+              # puts current_voter_odd
+              # puts odd_options
+              current_voter_odd_percent = (current_voter_odd / odd_options) * 100
+              # puts current_voter_odd_percent
+              printf @field_settings, current_voter, current_voter_odd.to_int, current_voter_even.to_int, current_voter_odd_percent.to_int
+              tallied_voters << current_voter
+            end
+          end
+        end
+      end  
+      # what to update
         # existing_value = user_option[@user_option_targets.keys[0].to_s]
         # printf "Existing value: %-20s \n", existing_value
         # target_value = @user_option_targets.values[0]
@@ -81,14 +123,11 @@ def apply_function(client)
           end
         # end
         # break
-      end
     end
   end
 end
 
-printf @field_settings, 'UserName',
-       @user_option_print[0], @user_option_print[1], @user_option_print[2],
-       @user_option_print[3], @user_option_print[4], @user_option_print[5]
+printf @field_settings, 'UserName', 'Does', 'Wants', '%'
 
 
 client = connect_to_instance('KM_Admin')
