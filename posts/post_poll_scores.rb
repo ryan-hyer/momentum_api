@@ -8,6 +8,7 @@ require '../utility/momentum_api'
 # @target_username = 'Moe_Rubenzahl'  # David_Ashby, Ryan_Hyer,
 @issue_users = %w() # debug issue user_names
 
+
 @user_option_targets = {
     'theme_ids': [10]
 }
@@ -21,9 +22,10 @@ require '../utility/momentum_api'
     theme_ids
 )
 
-@target_polls = %w(basic)  #
-@exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin )
-@field_settings = "%-18s %-10s %-10s %-10s\n"
+@target_post = 28707
+@target_polls = %w(version_two)  # basic new
+# @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin )
+@field_settings = "%-18s %-10s %-10s %-10s %-10s\n"
 # @field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
 
 @user_count, @user_targets, @users_updated = 0, 0, 0, 0
@@ -37,7 +39,7 @@ end
 
 # standardize_email_settings
 def apply_function(client)
-  post = client.get_post(28500)
+  post = client.get_post(@target_post)  # 28649
   polls = post['polls']
   # users_username = user['username']
   # puts users_username, client.api_username
@@ -91,7 +93,7 @@ def apply_function(client)
               # puts odd_options
               current_voter_odd_percent = (current_voter_odd / odd_options) * 100
               # puts current_voter_odd_percent
-              printf @field_settings, current_voter, current_voter_odd.to_int, current_voter_even.to_int, current_voter_odd_percent.to_int
+              printf @field_settings, current_voter, poll_name, current_voter_odd.to_int, current_voter_even.to_int, current_voter_odd_percent.to_int
               tallied_voters << current_voter
             end
           end
@@ -127,7 +129,7 @@ def apply_function(client)
   end
 end
 
-printf @field_settings, 'UserName', 'Does', 'Wants', '%'
+printf @field_settings, 'User', 'Poll', 'Does', 'Wants', '%'
 
 
 client = connect_to_instance('KM_Admin')
