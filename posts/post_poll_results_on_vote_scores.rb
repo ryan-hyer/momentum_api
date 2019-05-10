@@ -22,9 +22,10 @@ require '../utility/momentum_api'
     theme_ids
 )
 
-@target_post = 28707
+@target_post = 28707     # 28649
 @target_polls = %w(version_two)  # basic new
 # @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin )
+@target_groups = %w(Mods)
 @field_settings = "%-18s %-10s %-10s %-10s %-10s\n"
 # @field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
 
@@ -39,7 +40,7 @@ end
 
 # standardize_email_settings
 def apply_function(client)
-  post = client.get_post(@target_post)  # 28649
+  post = client.get_post(@target_post)
   polls = post['polls']
   # users_username = user['username']
   # puts users_username, client.api_username
@@ -132,15 +133,15 @@ end
 printf @field_settings, 'User', 'Poll', 'Does', 'Wants', '%'
 
 
-client = connect_to_instance('KM_Admin')
-apply_function(client)
+# client = connect_to_instance('KM_Admin')
+# apply_function(client)
 
-# if @target_groups
-#   @target_groups.each do |group_plug|
-#     apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=true)
-#   end
-# else
-#   apply_to_all_users
-# end
+if @target_groups
+  @target_groups.each do |group_plug|
+    apply_to_group_users(group_plug, needs_user_client=true, skip_staged_user=true)
+  end
+else
+  apply_to_all_users
+end
 
 puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets out of #{@user_count} total users."
