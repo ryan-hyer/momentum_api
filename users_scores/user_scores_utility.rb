@@ -58,15 +58,17 @@ end
 
 def update_user_profile_badges(client, current_voter_points, user_details, users_username)
   @new_user_badge_targets += 1
+  user_badge_level = nil
   puts 'User Badges to be updated'
   print_user_options(user_details)
 
   # calculate badges
   case current_voter_points
   when 0
-    "You ran out of gas."
+    puts "You ran out of gas."
   when 1..8
     puts "Beginner"
+    user_badge_level = 'D1'
   when 9..35
     puts "Intermediate"
   when 36..377
@@ -87,4 +89,7 @@ def update_user_profile_badges(client, current_voter_points, user_details, users
     print_user_options(user_details_after_update)
     sleep(1)
   end
+
+  user_badge_level
+  
 end

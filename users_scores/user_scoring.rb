@@ -1,7 +1,7 @@
 require '../utility/momentum_api'
 require '../users_scores/user_scores_utility'
 
-@do_live_updates = false
+@do_live_updates = true
 @instance = 'live' # 'live' or 'local'
 
 # testing variables
@@ -65,14 +65,14 @@ def apply_function(client, voting_user)
           else
             update_user_profile_score(client, current_voter_points, user_details, users_username)
 
-            update_user_profile_badges(client, current_voter_points, user_details, users_username)
+            user_badge_level = update_user_profile_badges(client, current_voter_points, user_details, users_username)
 
             # send voter message
             from_username = 'Kim_Miller'  # KM_Admin
             message_subject = "Thank You for Taking Momentum's Discourse User Poll"
             message_body = "Congratulations! Your Momentum Discourse User Score is #{current_voter_points.to_int} out of a maximum possible score of #{max_points_possible.to_int}.
 
-In addition to your Discourse User Score of #{current_voter_points.to_int}, you have been assigned the Momentum Discourse Bronze and Silver User badges.
+In addition to your Discourse User Score of #{current_voter_points.to_int}, you have been assigned the Momentum Discourse #{user_badge_level} User Badge Level.
 
 You can [retake the poll and receive a new score at anytime here](#{@poll_url}).
 
