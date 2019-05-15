@@ -57,8 +57,8 @@ def apply_to_all_users(needs_user_client=false)
   end
 end
 
-def apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=false)
-  admin_client = connect_to_instance('KM_Admin')
+def apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=false, admin_username='KM_Admin')
+  admin_client = connect_to_instance(admin_username)
   members = admin_client.group_members(group_plug)
   members.each do |user|
     staged = false
@@ -80,9 +80,11 @@ def apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=f
           # @user_count += 1
           if needs_user_client
             # client = connect_to_instance(user['username'])
-            apply_function(connect_to_instance(user['username']), user, group_plug=group_plug)
+            apply_function(connect_to_instance(user['username']), user)
+            # apply_function(connect_to_instance(user['username']), user, group_plug=group_plug)
           else
-            apply_function(admin_client, user, group_plug=group_plug)
+            apply_function(admin_client, user)
+            # apply_function(admin_client, user, group_plug=group_plug)
           end
           # apply_function(client, user)
         end
@@ -99,5 +101,30 @@ def apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=f
         sleep(1) # needs to be 2 in some cases
       end
     end
+  end
+end
+
+
+def send_private_message(from_username, to_username, message_subject, message_body)
+  from_client = connect_to_instance(from_username)
+  # users_username = to_user['username']
+  field_settings = "%-20s %-20s %-45s %-25s %-25s\n"
+  printf field_settings, 'Message From', 'Message To', 'Slug', 'Starting Text', 'Status'
+  printf field_settings, from_client.api_username, to_username, message_subject, message_body[0..20], 'Pending'
+
+  if @do_live_updates
+    response = from_client.create_private_message(
+        title: message_subject,
+        raw: message_body,
+        target_usernames: to_username
+    )
+
+    # check if update happened
+    created_message = from_client.get_post(response['id'])
+    printf field_settings, created_message['username'], to_username, created_message['topic_slug'],
+           created_message['raw'][0..20], 'Sent'
+
+    @sent_messages += 1
+    sleep(1)
   end
 end
