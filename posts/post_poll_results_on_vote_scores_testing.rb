@@ -1,6 +1,7 @@
 require '../utility/momentum_api'
+require '../users_scores/user_scores_utility'
 
-@do_live_updates = true
+@do_live_updates = false
 @instance = 'live' # 'live' or 'local'
 
 # testing variables
@@ -8,12 +9,26 @@ require '../utility/momentum_api'
 @issue_users = %w() # debug issue user_names
 
 # poll parameters
+@target_post = 28707     # 28649
+@target_polls = %w(version_two)  # basic new
 @update_type = 'have_voted'  # have_voted, not_voted, both
 @points_multiplier = 1.13
 @users_score = 0
 @max_points_possible = 0
 @poll_url = 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
 
+# user score saving
+@user_preferences = 'user_fields'
+@user_score_field = '5'
+# @user_fields_targets = {'5':'801'}    # user_fields[5] = Discourse User Score
+@user_option_print = %w(
+    last_seen_at
+    last_posted_at
+    post_count
+    time_read
+    recent_time_read
+    5
+)
 # messages
 @sent_messages = 0
 
@@ -30,22 +45,12 @@ require '../utility/momentum_api'
 #     theme_ids
 # )
 
-@target_post = 28707     # 28649
-@target_polls = %w(version_two)  # basic new
 @exclude_user_names = %w()  # js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin
 @target_groups = %w(Mods)
 @field_settings = "%-18s %-20s %-10s %-10s %-5s %-2s %-7s\n"
 
-@user_count, @user_targets, @users_updated = 0, 0, 0, 0
+@user_count, @user_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets = 0, 0, 0, 0, 0, 0
 
-# def print_user_options(user_details)
-#   printf @field_settings, user_details['username'],
-#          user_details[@user_option_print[0].to_s].to_s[0..9], user_details[@user_option_print[1].to_s].to_s[0..9],
-#          user_details[@user_option_print[2].to_s], user_details[@user_option_print[3].to_s],
-#          user_details[@user_option_print[4].to_s], user_details['user_option'][@user_option_print[5].to_s]
-# end
-
-# standardize_email_settings
 def apply_function(client, voting_user)
   post = client.get_post(@target_post)
   polls = post['polls']
@@ -59,11 +64,12 @@ def apply_function(client, voting_user)
 
       begin
         poll_option_votes = client.voters(post_id: @target_post, poll_name: poll_name, api_username: users_username)['voters']
-
+        # user has voted
         if @update_type == 'have_voted' or @update_type == 'both'
+          # score voter
           @user_targets += 1
           current_voter_votes = 0.0
-          current_voter_points = 0.0
+          current_voter_points_float = 0.0
           current_question_point_value = 1.0
           max_points_possible = 0.0
           poll_options.each do |poll_option|
@@ -73,39 +79,68 @@ def apply_function(client, voting_user)
                 if vote['username'] == users_username
                   # puts vote['username'], poll_option['html']
                   current_voter_votes += 1
-                  current_voter_points = current_voter_points + current_question_point_value
+                  current_voter_points_float = current_voter_points_float + current_question_point_value
                 end
               end
             end
             max_points_possible = max_points_possible + current_question_point_value
             current_question_point_value = current_question_point_value * @points_multiplier
           end
+          current_voter_points = current_voter_points_float.to_int
           current_voter_odd_percent = (current_voter_votes / poll['max']) * 100
 
-          # @users_score = current_voter_points
           printf @field_settings, users_username, poll_name, current_voter_votes.to_int, current_voter_odd_percent.to_int,
-                 current_voter_points.to_int, '/', max_points_possible.to_int
+                 current_voter_points, '/', max_points_possible.to_int
 
-          # voter message details
-          from_username = 'Kim_Miller'  # KM_Admin
-          message_subject = "Thank You for Taking Momentum's Discourse User Poll"
-          message_body = "Congratulations! Your Momentum Discourse User Score is #{current_voter_points.to_int} out of a maximum possible score of #{max_points_possible.to_int}.
+          # is this vote new?
+          user_details = client.user(users_username)
+          user_fields = user_details[@user_preferences]
 
-In addition to your Discourse User Score of #{current_voter_points.to_int}, you have been assigned the Momentum Discourse Bronze and Silver User badges.
+          existing_value = user_fields[@user_score_field]
+          printf "Existing value: %-20s \n", existing_value
+          # target_value = @user_fields_targets.values[0]
+          printf "current_voter_points: %-20s \n",  current_voter_points
+          # value_already_correct = existing_value == current_voter_points
+          if existing_value == current_voter_points
+            print_user_options(user_details)
+            puts 'User already correct'
+          else
+            @new_user_score_targets += 1
+            print_user_options(user_details)
+            puts 'User to be updated'
+            if @do_live_updates
+              update_response = client.update_user(users_username, {"#{@user_preferences}":{"#{@user_score_field}":current_voter_points}})
+              puts update_response[:body]['success']
+              @users_updated += 1
 
-You can [retake the poll and receive a new score at anytime here](#{@poll_url}).
+              # check if update happened
+              user_details_after_update = client.user(users_username)
+              print_user_options(user_details_after_update)
+              sleep(1)
+            end
 
-You can [see all the Discourse Badges you have earned here](https://discourse.gomomentum.org/u/#{users_username}/badges) and [all possible Momentum Badges that you can earn here](https://discourse.gomomentum.org/badges).
+            # send voter message
+            from_username = 'Kim_Miller'  # KM_Admin
+            message_subject = "Thank You for Taking Momentum's Discourse User Poll"
+            message_body = "Congratulations! Your Momentum Discourse User Score is #{current_voter_points.to_int} out of a maximum possible score of #{max_points_possible.to_int}.
 
--- Your Momentum Moderators"
+  In addition to your Discourse User Score of #{current_voter_points.to_int}, you have been assigned the Momentum Discourse Bronze and Silver User badges.
 
-          send_private_message(from_username, voting_user['username'], message_subject, message_body)
+  You can [retake the poll and receive a new score at anytime here](#{@poll_url}).
+
+  You can [see all the Discourse Badges you have earned here](https://discourse.gomomentum.org/u/#{users_username}/badges) and [all possible Momentum Badges that you can earn here](https://discourse.gomomentum.org/badges).
+
+  -- Your Momentum Moderators"
+
+            send_private_message(from_username, voting_user['username'], message_subject, message_body)
+          end
 
         end
 
       rescue
         if @update_type == 'not_voted' or @update_type == 'both'
-          @user_targets += 1
+          # voter has not voted
+          @user_not_voted_targets += 1
           printf @field_settings, users_username, 'has not voted yet', '', '', '', '', '', ''
           # not yet voted message details
           from_username = 'KM_Admin'  # KM_Admin Kim_Miller
@@ -141,4 +176,4 @@ else
   apply_to_all_users
 end
 
-puts "\n#{@sent_messages} user messages sent out of #{@user_targets} possible targets out of #{@user_count} total users."
+puts "\n#{@sent_messages} user messages sent, #{@new_user_score_targets} new User Scores, and #{@user_not_voted_targets} Users Not yet voted out of #{@user_targets} possible targets out of #{@user_count} total users."

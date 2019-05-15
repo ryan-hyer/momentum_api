@@ -108,7 +108,7 @@ end
 def send_private_message(from_username, to_username, message_subject, message_body)
   from_client = connect_to_instance(from_username)
   # users_username = to_user['username']
-  field_settings = "%-20s %-20s %-45s %-25s %-25s\n"
+  field_settings = "%-20s %-20s %-55s %-25s %-25s\n"
   printf field_settings, 'Message From', 'Message To', 'Slug', 'Starting Text', 'Status'
   printf field_settings, from_client.api_username, to_username, message_subject, message_body[0..20], 'Pending'
 

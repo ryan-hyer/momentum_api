@@ -39,8 +39,8 @@ def apply_function(client, user)
   # puts users_username, client.api_username
   @user_count += 1
   user_details = client.user(users_username)
-  user_groups = user_details['groups']
   user_fields = user_details[@user_preferences]
+  user_groups = user_details['groups']
 
   user_groups.each do |group|
     group_name = group['name']
