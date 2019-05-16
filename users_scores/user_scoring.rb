@@ -1,7 +1,7 @@
 require '../utility/momentum_api'
 require '../users_scores/user_scores_utility'
 
-@do_live_updates = true
+@do_live_updates = false
 @instance = 'live' # 'live' or 'local'
 
 # testing variables

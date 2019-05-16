@@ -58,7 +58,7 @@ end
 
 def update_user_profile_badges(client, current_voter_points, user_details, users_username)
   @new_user_badge_targets += 1
-  user_badge_level = nil
+  target_badge_name = nil
   puts 'User Badges to be updated'
   print_user_options(user_details)
 
@@ -68,13 +68,25 @@ def update_user_profile_badges(client, current_voter_points, user_details, users
     puts "You ran out of gas."
   when 1..8
     puts "Beginner"
-    user_badge_level = 'D1'
+    target_badge_name = 'Beginner'
+    current_badges = client.user_badges(users_username)
+    has_target_badge = false
+    current_badges.each do |current_badge|
+      if current_badge['name'] == target_badge_name
+        has_target_badge = true
+      end
+    end
+    if has_target_badge
+      puts 'User already has badge'
+    else
+      puts 'User needs badge'
+    end
   when 9..35
     puts "Intermediate"
   when 36..377
     puts "Advanced"
   when 426..10000
-    puts "Power User"
+    puts "PowerUser"
   else
     puts "Error: current_voter_points has an invalid value (#{current_voter_points})"
   end
@@ -90,6 +102,6 @@ def update_user_profile_badges(client, current_voter_points, user_details, users
     sleep(1)
   end
 
-  user_badge_level
+  target_badge_name
   
 end
