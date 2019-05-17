@@ -13,7 +13,7 @@ end
 def score_voter(poll, poll_option_votes, users_username)
   @user_targets += 1
   current_voter_votes = 0.0
-  current_voter_points_float = 0.0
+  current_voter_points = 0.0
   current_question_point_value = 1.0
   max_points_possible = 0.0
   poll['options'].each do |poll_option|
@@ -23,20 +23,20 @@ def score_voter(poll, poll_option_votes, users_username)
         if vote['username'] == users_username
           # puts vote['username'], poll_option['html']
           current_voter_votes += 1
-          current_voter_points_float = current_voter_points_float + current_question_point_value
+          current_voter_points = current_voter_points + current_question_point_value
         end
       end
     end
     max_points_possible = max_points_possible + current_question_point_value
     current_question_point_value = current_question_point_value * @points_multiplier
   end
-  current_voter_points = current_voter_points_float.to_int
+  # current_voter_points = current_voter_points_float.to_int
   current_voter_odd_percent = (current_voter_votes / poll['max']) * 100
 
   printf @field_settings, users_username, poll['name'], current_voter_votes.to_int, current_voter_odd_percent.to_int,
-         current_voter_points, '/', max_points_possible.to_int
+         current_voter_points.to_int, '/', max_points_possible.to_int
 
-  return current_voter_points, max_points_possible
+  return current_voter_points.to_int, max_points_possible.to_int
 end
 
 
@@ -56,19 +56,8 @@ def update_user_profile_score(client, current_voter_points, user_details, users_
   end
 end
 
-def update_user_profile_badges(client, current_voter_points, user_details, users_username)
-  @new_user_badge_targets += 1
-  target_badge_name = nil
-  puts 'User Badges to be updated'
-  print_user_options(user_details)
-
-  # calculate badges
-  case current_voter_points
-  when 0
-    puts "You ran out of gas."
-  when 1..8
-    puts "Beginner"
-    target_badge_name = 'Beginner'
+def update_badge(client, target_badge_name, badge_id, users_username)
+  if @do_live_updates
     current_badges = client.user_badges(users_username)
     has_target_badge = false
     current_badges.each do |current_badge|
@@ -79,27 +68,46 @@ def update_user_profile_badges(client, current_voter_points, user_details, users
     if has_target_badge
       puts 'User already has badge'
     else
-      puts 'User needs badge'
+      puts 'about to post'
+      post_response = client.grant_user_badge(username: users_username, badge_id: badge_id, reason: 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20')
+      puts "User badges granted:"
+      post_response.each do |badge|
+        puts badge['name']
+      end
     end
-  when 9..35
-    puts "Intermediate"
-  when 36..377
-    puts "Advanced"
-  when 426..10000
-    puts "PowerUser"
+  end
+end
+
+def update_user_profile_badges(client, current_voter_points, user_details, users_username)
+  @new_user_badge_targets += 1
+  target_badge_name = nil
+  # puts 'User Badges to be updated'
+  # print_user_options(user_details)
+
+  # calculate badges
+  case current_voter_points
+  when 0
+    puts "You ran out of gas."
+  when 1..7
+    puts "Keep trying!"
+  when 8..39
+    target_badge_name = 'Beginner'
+    puts target_badge_name
+    update_badge(client, target_badge_name, 111, users_username)
+  when 40..375
+    target_badge_name = 'Intermediate'
+    puts target_badge_name
+    update_badge(client, target_badge_name, 110, users_username)
+  when 376..1012
+    target_badge_name = 'Advanced'
+    puts target_badge_name
+    update_badge(client, target_badge_name, 112, users_username)
+  when  1013..10000
+    target_badge_name = 'PowerUser'
+    puts target_badge_name
+    update_badge(client, target_badge_name, 113, users_username)
   else
     puts "Error: current_voter_points has an invalid value (#{current_voter_points})"
-  end
-
-  if @do_live_updates
-    update_response = client.update_user(users_username, {"#{@user_preferences}": {"#{@user_score_field}": current_voter_points}})
-    puts update_response[:body]['success']
-    @users_updated += 1
-
-    # check if update happened
-    user_details_after_update = client.user(users_username)
-    print_user_options(user_details_after_update)
-    sleep(1)
   end
 
   target_badge_name
