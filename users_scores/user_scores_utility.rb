@@ -11,7 +11,6 @@ end
 
 
 def score_voter(poll, poll_option_votes, users_username)
-  @user_targets += 1
   current_voter_votes = 0.0
   current_voter_points = 0.0
   current_question_point_value = 1.0
@@ -33,8 +32,8 @@ def score_voter(poll, poll_option_votes, users_username)
   # current_voter_points = current_voter_points_float.to_int
   current_voter_odd_percent = (current_voter_votes / poll['max']) * 100
 
-  printf @field_settings, users_username, poll['name'], current_voter_votes.to_int, current_voter_odd_percent.to_int,
-         current_voter_points.to_int, '/', max_points_possible.to_int
+  # printf @field_settings, users_username, poll['name'], current_voter_votes.to_int, current_voter_odd_percent.to_int,
+  #        current_voter_points.to_int, '/', max_points_possible.to_int
 
   return current_voter_points.to_int, max_points_possible.to_int
 end
@@ -42,7 +41,7 @@ end
 
 def update_user_profile_score(client, current_voter_points, user_details, users_username)
   @new_user_score_targets += 1
-  puts 'User Score to be updated'
+  # puts 'User Score to be updated'
   print_user_options(user_details)
   if @do_live_updates
     update_response = client.update_user(users_username, {"#{@user_preferences}": {"#{@user_score_field}": current_voter_points}})
@@ -68,11 +67,12 @@ def update_badge(client, target_badge_name, badge_id, users_username)
     if has_target_badge
       puts 'User already has badge'
     else
-      puts 'about to post'
+      # puts 'about to post'
       post_response = client.grant_user_badge(username: users_username, badge_id: badge_id, reason: 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20')
-      puts "User badges granted:"
+      # puts "User badges granted:"
       post_response.each do |badge|
-        puts badge['name']
+        printf "%-35s %-20s \n", 'User badge granted: ', badge['name']
+        # puts badge['name']
       end
     end
   end

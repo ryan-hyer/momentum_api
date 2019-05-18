@@ -108,9 +108,9 @@ end
 def send_private_message(from_username, to_username, message_subject, message_body)
   from_client = connect_to_instance(from_username)
   # users_username = to_user['username']
-  field_settings = "%-20s %-20s %-55s %-25s %-25s\n"
-  printf field_settings, 'Message From', 'Message To', 'Slug', 'Starting Text', 'Status'
-  printf field_settings, from_client.api_username, to_username, message_subject, message_body[0..20], 'Pending'
+  field_settings = "%-18s %-20s %-20s %-55s %-25s %-25s\n"
+  # printf field_settings, 'Message From', 'Message To', 'Slug', 'Starting Text', 'Status'
+  printf field_settings, '  Message From:', from_client.api_username, to_username, message_subject, message_body[0..20], 'Pending'
 
   if @do_live_updates
     response = from_client.create_private_message(
@@ -121,8 +121,7 @@ def send_private_message(from_username, to_username, message_subject, message_bo
 
     # check if update happened
     created_message = from_client.get_post(response['id'])
-    printf field_settings, created_message['username'], to_username, created_message['topic_slug'],
-           created_message['raw'][0..20], 'Sent'
+    printf field_settings, created_message['username'], to_username, created_message['topic_slug'], created_message['raw'][0..20], 'Sent'
 
     @sent_messages += 1
     sleep(1)
