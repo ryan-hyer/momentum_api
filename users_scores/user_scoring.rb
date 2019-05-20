@@ -11,7 +11,7 @@ require '../users_scores/user_scores_utility'
 @from_username = 'Kim_Miller'  # KM_Admin Kim_Miller
 
 # poll parameters
-@update_type = 'have_voted'  # have_voted, not_voted, both, newly_voted
+@update_type = 'newly_voted'  # have_voted, not_voted, both, newly_voted
 @target_post = 28707     # 28649
 @target_polls = %w(version_two)  # basic new
 @points_multiplier = 1.13
@@ -58,10 +58,8 @@ end
 
 def print_scored_user(current_voter_points, existing_value, max_points_possible, poll, users_username)
   field_settings = "%-18s %-20s %-35s %-5s %-2s %-7s\n"
-  printf field_settings, 'User', 'Current Profile Score', 'Poll', 'Score', '/', 'Max'
-  printf field_settings, users_username, existing_value, poll['name'], current_voter_points, '/', max_points_possible
-  # printf "%-35s %-20s \n", 'Voter Points in Discourse: ', existing_value
-  # printf "%-35s %-20s \n", 'Voter Points Recalculated: ', current_voter_points
+  printf field_settings, 'User', 'Poll', 'Last Saved Score', 'Score', '/', 'Max'
+  printf field_settings, users_username, poll['name'], existing_value, current_voter_points, '/', max_points_possible
 end
 
 def apply_function(client, voting_user)
