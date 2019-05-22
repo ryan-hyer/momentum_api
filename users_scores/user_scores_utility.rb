@@ -34,11 +34,11 @@ def score_voter(poll, poll_option_votes, users_username)
 end
 
 
-def update_user_profile_score(client, current_voter_points, user_details, users_username)
+def update_user_profile_score(client, current_voter_points, user_details, users_username, do_live_updates=false)
   @new_user_score_targets += 1
   # puts 'User Score to be updated'
   print_user_options(user_details)
-  if @do_live_updates
+  if do_live_updates
     update_response = client.update_user(users_username, {"#{@user_preferences}": {"#{@user_score_field}": current_voter_points}})
     puts update_response[:body]['success']
     @users_updated += 1
@@ -50,8 +50,8 @@ def update_user_profile_score(client, current_voter_points, user_details, users_
   end
 end
 
-def update_badge(client, target_badge_name, badge_id, users_username)
-  if @do_live_updates
+def update_badge(client, target_badge_name, badge_id, users_username, do_live_updates=false)
+  if do_live_updates
     current_badges = client.user_badges(users_username)
     has_target_badge = false
     current_badges.each do |current_badge|
@@ -73,7 +73,7 @@ def update_badge(client, target_badge_name, badge_id, users_username)
   end
 end
 
-def update_user_profile_badges(client, current_voter_points, user_details, users_username)
+def update_user_profile_badges(client, current_voter_points, user_details, users_username, do_live_updates=false)
   @new_user_badge_targets += 1
   target_badge_name = nil
   # puts 'User Badges to be updated'
@@ -88,19 +88,19 @@ def update_user_profile_badges(client, current_voter_points, user_details, users
   when 8..39
     target_badge_name = 'Beginner'
     puts target_badge_name
-    update_badge(client, target_badge_name, 111, users_username)
+    update_badge(client, target_badge_name, 111, users_username, do_live_updates=do_live_updates)
   when 40..375
     target_badge_name = 'Intermediate'
     puts target_badge_name
-    update_badge(client, target_badge_name, 110, users_username)
+    update_badge(client, target_badge_name, 110, users_username, do_live_updates=do_live_updates)
   when 376..1012
     target_badge_name = 'Advanced'
     puts target_badge_name
-    update_badge(client, target_badge_name, 112, users_username)
+    update_badge(client, target_badge_name, 112, users_username, do_live_updates=do_live_updates)
   when  1013..10000
     target_badge_name = 'PowerUser'
     puts target_badge_name
-    update_badge(client, target_badge_name, 113, users_username)
+    update_badge(client, target_badge_name, 113, users_username, do_live_updates=do_live_updates)
   else
     puts "Error: current_voter_points has an invalid value (#{current_voter_points})"
   end

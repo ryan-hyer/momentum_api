@@ -2,23 +2,20 @@ require '../utility/momentum_api'
 require '../users/trust_level'
 require '../notifications/users_update_global_category_watching'
 
-@do_live_updates = false
-@instance = 'live' # 'live' or 'local'
-
-@exclude_user_names = %w(system discobot js_admin sl_admin JP_Admin admin_sscott RH_admin KM_Admin Winston_Churchill
-                            Joe_Sabolefski Steve_Scott Howard_Bailey)
-
-# testing variables
-@target_username = 'Brad_Fino' # John_Oberstar Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
-# @target_groups = %w(BraveHearts)  # BraveHearts trust_level_1 trust_level_0 hit 100 record limit.
-@issue_users = %w() # past in debug issue user_names Brad_Fino
-
-@user_count, @user_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
-    @sent_messages = 0, 0, 0, 0, 0, 0, 0
-# @user_count = 0
-@matching_user_count = 0
-@matching_categories_count = 0
-@categories_updated = 0
+# @do_live_updates = false
+# @instance = 'live' # 'live' or 'local'
+#
+# @exclude_user_names = %w(system discobot js_admin sl_admin JP_Admin admin_sscott RH_admin KM_Admin Winston_Churchill
+#                             Joe_Sabolefski Steve_Scott Howard_Bailey)
+#
+# # testing variables
+# # @target_username = 'Brad_Fino' # John_Oberstar Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
+# # @target_groups = %w(BraveHearts)  # BraveHearts trust_level_1 trust_level_0 hit 100 record limit.
+# @issue_users = %w() # past in debug issue user_names Brad_Fino
+#
+# @user_count, @user_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
+#     @sent_messages = 0, 0, 0, 0, 0, 0, 0
+# @matching_user_count, @matching_categories_count, @categories_updated = 0, 0, 0
 
 def print_user(user, category, group_name, notify_level)
   field_settings = "%-18s %-20s %-20s %-10s %-15s\n"
@@ -26,9 +23,9 @@ def print_user(user, category, group_name, notify_level)
   printf field_settings, user['username'], group_name, category['slug'], notify_level.to_s.center(5), 'NOT_Watching'
 end
 
-def print_user_options(user_details, user_option_print)
+def print_user_options(user_details, user_option_print, user_label='UserName')
   field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
-  printf field_settings, 'UserName',
+  printf field_settings, user_label,
          user_option_print[0], user_option_print[1], user_option_print[2],
          user_option_print[3], user_option_print[4], user_option_print[5]
 
@@ -46,7 +43,7 @@ def category_cases(client, user, users_categories, group_name)
     end
 
     case
-    when category['slug'] == 'Essential'
+    when category['slug'] == 'Essential'    # Task #2
       case_excludes = %w()
       if case_excludes.include?(user['username'])
         puts "#{user['username']} specifically excluded from Essential Watching"
@@ -54,7 +51,7 @@ def category_cases(client, user, users_categories, group_name)
         set_category_notification(user, category, client, group_name, [3], 3)
       end
 
-    when category['slug'] == 'Growth'
+    when category['slug'] == 'Growth'       # Task #3
       case_excludes = %w(Bill_Herndon Michael_Wilson)
       if case_excludes.include?(user['username'])
         # puts "#{user['username']} specifically excluded from Watching Growth"
@@ -62,7 +59,7 @@ def category_cases(client, user, users_categories, group_name)
         set_category_notification(user, category, client, group_name, [3, 4], 4)
       end
 
-    when category['slug'] == 'Meta'
+    when category['slug'] == 'Meta'         # Task #4
       case_excludes = %w(Bill_Herndon Michael_Wilson)
       if case_excludes.include?(user['username'])
         # puts "#{user['username']} specifically excluded from Watching Meta"
@@ -118,12 +115,17 @@ def apply_function(client, user)
     category_cases(client, user, users_categories, 'Any')
   end
 
-  # Update Trust Level
+  # Update Trust Level           # Task #1
   update_trust_level(client, is_owner, 0, user, user_details)
 
   if @categories_updated > @starting_categories_updated
     @users_updated += 1
   end
+end
+
+def run_tasks_for_all_users(do_live_updates=false)
+  @do_live_updates = do_live_updates
+  apply_to_all_users(needs_user_client=true)
 end
 
 if __FILE__ == $0

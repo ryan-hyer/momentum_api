@@ -24,7 +24,7 @@ def update_trust_level(client, is_owner, trust_level_target, user, user_details)
       trust_level
     )
 
-      print_user_options(user_details, user_option_print)
+      print_user_options(user_details, user_option_print, 'Non Owner')
       # puts 'User to be updated'
       @user_targets += 1
       if @do_live_updates
@@ -34,7 +34,7 @@ def update_trust_level(client, is_owner, trust_level_target, user, user_details)
 
         # check if update happened
         user_details_after_update = client.user(user['username'])
-        print_user_options(user_details_after_update, user_option_print)
+        print_user_options(user_details_after_update, user_option_print, 'Non Owner')
         sleep(1)
       end
     end
