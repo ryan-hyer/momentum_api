@@ -125,7 +125,17 @@ end
 
 def run_tasks_for_all_users(do_live_updates=false)
   @do_live_updates = do_live_updates
-  apply_to_all_users(needs_user_client=true)
+  # apply_to_all_users(needs_user_client=true)
+
+
+  if @target_groups
+    @target_groups.each do |group_plug|
+      apply_to_group_users(group_plug, needs_user_client=true, skip_staged_user=true)
+    end
+  else
+    apply_to_all_users(needs_user_client=true)
+  end
+
 end
 
 if __FILE__ == $0

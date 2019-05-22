@@ -1,12 +1,25 @@
 $LOAD_PATH.unshift File.expand_path('../../../discourse_api/lib', __FILE__)
 require File.expand_path('../../../discourse_api/lib/discourse_api', __FILE__)
 
+# user score saving
+@user_fields = 'user_fields'
+@user_score_field = '5'
 
 def print_user_options(user_details)
-  printf @field_settings, user_details['username'],
+  @user_option_print = %w(
+      last_seen_at
+      last_posted_at
+      post_count
+      time_read
+      recent_time_read
+      5
+  )
+
+  field_settings = "%-18s %-20s %-10s %-10s %-5s %-2s %-7s\n"
+  printf field_settings, user_details['username'],
          user_details[@user_option_print[0].to_s].to_s[0..9], user_details[@user_option_print[1].to_s].to_s[0..9],
          user_details[@user_option_print[2].to_s], user_details[@user_option_print[3].to_s],
-         user_details[@user_option_print[4].to_s], user_details[@user_preferences][@user_option_print[5].to_s]
+         user_details[@user_option_print[4].to_s], user_details[@user_fields][@user_option_print[5].to_s]
 end
 
 
@@ -39,7 +52,7 @@ def update_user_profile_score(client, current_voter_points, user_details, users_
   # puts 'User Score to be updated'
   print_user_options(user_details)
   if do_live_updates
-    update_response = client.update_user(users_username, {"#{@user_preferences}": {"#{@user_score_field}": current_voter_points}})
+    update_response = client.update_user(users_username, {"#{@user_fields}": {"#{@user_score_field}": current_voter_points}})
     puts update_response[:body]['success']
     @users_updated += 1
 
@@ -87,19 +100,19 @@ def update_user_profile_badges(client, current_voter_points, user_details, users
     puts "Keep trying!"
   when 8..39
     target_badge_name = 'Beginner'
-    puts target_badge_name
+    # puts target_badge_name
     update_badge(client, target_badge_name, 111, users_username, do_live_updates=do_live_updates)
   when 40..375
     target_badge_name = 'Intermediate'
-    puts target_badge_name
+    # puts target_badge_name
     update_badge(client, target_badge_name, 110, users_username, do_live_updates=do_live_updates)
   when 376..1012
     target_badge_name = 'Advanced'
-    puts target_badge_name
+    # puts target_badge_name
     update_badge(client, target_badge_name, 112, users_username, do_live_updates=do_live_updates)
   when  1013..10000
     target_badge_name = 'PowerUser'
-    puts target_badge_name
+    # puts target_badge_name
     update_badge(client, target_badge_name, 113, users_username, do_live_updates=do_live_updates)
   else
     puts "Error: current_voter_points has an invalid value (#{current_voter_points})"

@@ -2,6 +2,9 @@ require '../utility/momentum_api'
 require '../users_scores/user_scores_utility'
 
 def scan_users_score(client, voting_user, target_post, target_polls, poll_url, update_type='have_voted', do_live_updates=false)
+  # poll settings
+  @points_multiplier = 1.13
+
   post = client.get_post(target_post)
   polls = post['polls']
   users_username = client.api_username
@@ -18,10 +21,10 @@ def scan_users_score(client, voting_user, target_post, target_polls, poll_url, u
 
       # if user has voted
       if poll_option_votes
-        if update_type == 'have_voted' or update_type == 'newly_voted' or update_type == 'both'
+        if update_type == 'have_voted' or update_type == 'newly_voted' or update_type == 'all'
           # pull user details
           user_details = client.user(users_username)
-          user_fields = user_details[@user_preferences]
+          user_fields = user_details[@user_fields]
           existing_value = user_fields[@user_score_field].to_i
 
           # score voter
@@ -41,7 +44,7 @@ def scan_users_score(client, voting_user, target_post, target_polls, poll_url, u
             printf "\n"
           end
 
-          if update_type == 'have_voted'
+          if update_type == 'have_voted' or update_type == 'all'
             print_scored_user(current_voter_points, existing_value, max_points_possible, poll, users_username, user_badge_level)
             send_voted_message(current_voter_points, max_points_possible, user_badge_level, users_username, voting_user, poll_url)
             printf "\n"
@@ -51,10 +54,10 @@ def scan_users_score(client, voting_user, target_post, target_polls, poll_url, u
 
       # if voter not voted
       else
-        if update_type == 'not_voted' or update_type == 'both'
+        if update_type == 'not_voted' or update_type == 'all'
           @user_targets += 1
           @user_not_voted_targets += 1
-          printf @field_settings, users_username, 'has not voted yet', '', '', '', '', '', ''
+          printf "%-18s %-20s\n", users_username, 'has not voted yet'
           send_not_voted_message(users_username, voting_user, poll_url)
           printf "\n"
         end
@@ -101,52 +104,12 @@ end
 
 
 # all methods below are for stand-alone run
-def scan_user_scores(post, polls, poll_url, from_username='Kim_Miller', update_type='have_voted', do_live_updates=false)
-
-  @do_live_updates = do_live_updates
-  @instance = 'live' # 'live' or 'local'
-
-  # which users
-  @target_groups = %w(Mods)
-
-  # messages
-  @from_username = from_username  # KM_Admin Kim_Miller
-
-  # poll parameters
-  @target_post = post      # 28649
-  @target_polls = polls           # basic new version_two
-  @poll_url = poll_url            #'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
-  @update_type = update_type      # have_voted, not_voted, both, newly_voted
-
-  # poll settings
-  @points_multiplier = 1.13
-  @users_score, @max_points_possible = 0, 0
-
-  # user score saving
-  @user_preferences = 'user_fields'
-  @user_score_field = '5'
-  @user_option_print = %w(
-      last_seen_at
-      last_posted_at
-      post_count
-      time_read
-      recent_time_read
-      5
-  )
-
-  # testing variables
-  # @target_username = 'KM_Admin'  # David_Ashby, Ryan_Hyer,Stefan_Schmitz KM_Admin Kim_Miller
-  @issue_users = %w() # debug issue user_names
-
-  @exclude_user_names = %w()  # js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin
-  @field_settings = "%-18s %-20s %-10s %-10s %-5s %-2s %-7s\n"
-
-  @user_count, @user_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
-      @sent_messages = 0, 0, 0, 0, 0, 0, 0
+def scan_user_scores
 
   def apply_function(client, voting_user)
     @user_count += 1
-    scan_users_score(client, voting_user, @target_post, @target_polls, @poll_url, update_type=@update_type, do_live_updates=@do_live_updates)
+    scan_users_score(client, voting_user, @target_post, @target_polls, @poll_url, update_type=@update_type,
+                     do_live_updates=@do_live_updates)
   end
 
   if @target_groups
@@ -161,8 +124,30 @@ end
 
 if __FILE__ == $0
 
-  test_poll_url = 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
-  scan_user_scores(28707, %w(version_two), test_poll_url, from_username='Kim_Miller', update_type='have_voted', do_live_updates=false)
+  @do_live_updates = false
+  @instance = 'live' # 'live' or 'local'
+
+  # which users
+  @target_groups = %w(Mods)
+
+  # messages
+  @from_username = 'Kim_Miller'
+
+  # poll parameters
+  @update_type = 'all'      # have_voted, not_voted, newly_voted, all
+  @target_post = 28707             # 28649
+  @target_polls = %w(version_two)  # basic new version_two
+  @poll_url = 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
+
+  # testing variables
+  # @target_username = 'KM_Admin' # David_Ashby, Ryan_Hyer,Stefan_Schmitz KM_Admin Kim_Miller
+  @issue_users = %w()             # debug issue user_names
+  @exclude_user_names = %w()      # js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin
+
+  @user_count, @user_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
+      @sent_messages, @users_score, @max_points_possible = 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+  scan_user_scores
 
   printf "%-30s %-20s \n", 'Qualifying targets: ', @user_targets
   printf "%-30s %-20s \n", 'New User Scores: ', @new_user_score_targets
