@@ -1,102 +1,121 @@
 require '../utility/momentum_api'
 
-@do_live_updates = false
-@instance = 'live' # 'live' or 'local'
+def global_category_to_watching(do_live_updates=false, target_category_slugs=nil, acceptable_notification_levels=[3, 4],
+                                set_notification_level=4, exclude_user_names=%w() )
 
-# update to what notification_level?
-@target_category_slugs = %w(Meta)  # Growth Routine Meta
-@acceptable_notification_levels = [3, 4]
-@set_notification_level = 4   # 4 = Watching first post, 3 = Watching
-# @target_groups = %w()  # must be a group the user can see. Most now cannot see trust_level_0
-@exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin
-                          Joe_Sabolefski Steve_Scott Howard_Bailey)
+  @do_live_updates = do_live_updates
+  @instance = 'live' # 'live' or 'local'
 
-# testing variables
-# @target_username = 'Dennis_Adsit' # John_Oberstar Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
-@issue_users = %w() # past in debug issue user_names
-
-# @user_count = 0
-@matching_user_count = 0
-@matching_categories_count = 0
-@users_updated = 0
-@categories_updated = 0
-
-
-def apply_function(client, user)
-  @starting_categories_updated = @categories_updated
-  @users_username = user['username']
-  @users_groups = client.user(@users_username)['groups']
-  if @issue_users.include?(@users_username)
-    puts @users_groups
+  # update to what notification_level?
+  @target_category_slugs = target_category_slugs  # Growth Routine Meta
+  @acceptable_notification_levels = acceptable_notification_levels
+  @set_notification_level = 4   # 4 = Watching first post, 3 = Watching, 1 = blank or ...?
+  @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin
+                            Joe_Sabolefski Steve_Scott Howard_Bailey)
+  exclude_user_names.each do |exclude_user_name|
+    @exclude_user_names << exclude_user_name
   end
 
-  # client.api_username = @users_username                                   # Feb 21, 2019 Question pending
-  @users_categories = client.categories
+  # testing variables
+  # @target_username = 'Dennis_Adsit' # John_Oberstar Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
+  # @target_groups = %w(BraveHearts)  # BraveHearts trust_level_1 trust_level_0 hit 100 record limit.
+  @issue_users = %w() # past in debug issue user_names
 
-  @users_groups.each do |group|
-    if @target_groups
-      group_name = group['name']
-      puts group_name
-    else
-      group_name = 'Any'
-    end
+  @user_count = 0
+  @matching_user_count = 0
+  @matching_categories_count = 0
+  @users_updated = 0
+  @categories_updated = 0
+
+  def print_user(group_name)
+    field_settings = "%-18s %-20s %-20s %-10s %-15s\n"
+    printf field_settings, 'UserName', 'Group', 'Category', 'Level', 'Status'
+    printf field_settings, @users_username, group_name, @category_slug, @users_category_notify_level.to_s.center(5), 'NOT_Watching'
+  end
+
+  def apply_function(client, user)
+    @starting_categories_updated = @categories_updated
+    @users_username = user['username']
+    @users_groups = client.user(@users_username)['groups']
+    @users_categories = client.categories
+    sleep(2)
+
     if @issue_users.include?(@users_username)
-      puts "\n#{@users_username}  Group: #{group_name}\n"
+      puts @users_username
     end
 
-    if not @target_groups or @target_groups.include?(group_name)
-      @users_categories.each do |category|
-        @category_slug = category['slug']
-        if @issue_users.include?(@users_username)
-          puts "\n#{@users_username}  Category: #{@category_slug}\n"
-        end
-        if @target_category_slugs.include?(@category_slug)
-          @users_category_notify_level = category['notification_level']
-          if not @acceptable_notification_levels.include?(@users_category_notify_level)
-            @category_id = category['id']
-            printf "%-18s %-20s %-20s %-5s %-15s\n", @users_username, group_name, @category_slug, @users_category_notify_level.to_s.center(5), 'NOT_Watching'
+    @users_groups.each do |group|
+      if @target_groups
+        group_name = group['name']
+        # puts group_name
+      else
+        group_name = 'Any'
+      end
 
-            if @do_live_updates
-              update_response = client.category_set_user_notification(id: @category_id, notification_level: @set_notification_level)
-              puts update_response
-              @categories_updated += 1
+      if @issue_users.include?(@users_username)
+        puts "\n#{@users_username}  Group: #{group_name}\n"
+      end
 
-              # check if update happened
-              @user_details_after_update = client.categories
-              sleep(1)
-              @user_details_after_update.each do |users_category_second_pass| # uncomment to check for the update
-                # puts "\nAll Category: #{users_category_second_pass['slug']}    Notification Level: #{users_category_second_pass['notification_level']}\n"
-                @new_category_slug = users_category_second_pass['slug']
-                if @target_category_slugs.include?(@new_category_slug)
-                  puts "Updated Category: #{@new_category_slug}    Notification Level: #{users_category_second_pass['notification_level']}\n"
+      if not @target_groups or @target_groups.include?(group_name)
+        @users_categories.each do |category|
+          @category_slug = category['slug']
+
+          if @issue_users.include?(@users_username)
+            puts "\n#{@users_username}  Category: #{@category_slug}\n"
+          end
+
+          if @target_category_slugs.include?(@category_slug)
+            @users_category_notify_level = category['notification_level']
+            if not @acceptable_notification_levels.include?(@users_category_notify_level)
+              @category_id = category['id']
+              print_user(group_name)
+
+              if @do_live_updates
+                update_response = client.category_set_user_notification(id: @category_id, notification_level: @set_notification_level)
+                puts update_response
+                @categories_updated += 1
+
+                # check if update happened
+                @user_details_after_update = client.categories
+                sleep(1)
+                @user_details_after_update.each do |users_category_second_pass| # uncomment to check for the update
+                  @new_category_slug = users_category_second_pass['slug']
+                  if @target_category_slugs.include?(@new_category_slug)
+                    puts "Updated Category: #{@new_category_slug}    Notification Level: #{users_category_second_pass['notification_level']}\n"
+                  end
                 end
               end
+              @matching_user_count += 1
+            else
+              if @issue_users.include?(@users_username)
+                print_user(group_name)
+              end
             end
-            @matching_user_count += 1
-          else
-            if @issue_users.include?(@users_username)
-              printf "%-18s %-20s %-20s %-5s\n", @users_username, group_name, @category_slug, @users_category_notify_level.to_s.center(5)
-            end
+            @matching_categories_count += 1
           end
-          @matching_categories_count += 1
-          sleep(3)
         end
+        break
       end
-      break 
+    end
+    @user_count += 1
+    if @categories_updated > @starting_categories_updated
+      @users_updated += 1
     end
   end
-  # @user_count += 1
-  if @categories_updated > @starting_categories_updated
-    @users_updated += 1
-  end
+
+  apply_to_all_users(needs_user_client = true)
+
 end
 
-printf "%-18s %-20s %-20s %-7s\n", 'UserName', 'Group', 'Category', 'Level'
+if __FILE__ == $0
 
-apply_to_all_users(needs_user_client=true)
+  global_category_to_watching(do_live_updates=false, target_category_slugs=%w(Meta), acceptable_notification_levels=[3, 4],
+                              set_notification_level=4, exclude_user_names=%w(Bill_Herndon Michael_Wilson))
+  
+  puts "\n#{@matching_categories_count} matching Categories for #{@matching_user_count} Users found out of #{@user_count} processed and #{@skipped_users} skipped."
+  puts "\n#{@categories_updated} Category notification_levels updated for #{@users_updated} Users."
 
-puts "\n#{@matching_categories_count} matching Categories for #{@matching_user_count} Users found out of #{@user_count} processed and #{@skipped_users} skipped."
-puts "\n#{@categories_updated} Category notification_levels updated for #{@users_updated} Users."
+end
 
 # Apr 18, 2019
 

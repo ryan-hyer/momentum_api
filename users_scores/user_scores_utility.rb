@@ -29,11 +29,6 @@ def score_voter(poll, poll_option_votes, users_username)
     max_points_possible = max_points_possible + current_question_point_value
     current_question_point_value = current_question_point_value * @points_multiplier
   end
-  # current_voter_points = current_voter_points_float.to_int
-  current_voter_odd_percent = (current_voter_votes / poll['max']) * 100
-
-  # printf @field_settings, users_username, poll['name'], current_voter_votes.to_int, current_voter_odd_percent.to_int,
-  #        current_voter_points.to_int, '/', max_points_possible.to_int
 
   return current_voter_points.to_int, max_points_possible.to_int
 end

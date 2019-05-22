@@ -42,7 +42,6 @@ def apply_to_all_users(needs_user_client=false)
             apply_function(client, user)
           end
         elsif not @exclude_user_names.include?(user['username']) and user['active'] == true
-          # @user_count += 1
           if needs_user_client
             client = connect_to_instance(user['username'])
           end
@@ -73,7 +72,7 @@ def apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=f
       end
     end
     if staged
-      puts 'Skipping staged user'
+      puts "Skipping staged user #{user['username']}"
     else
       if @target_username
         if user['username'] == @target_username
@@ -89,7 +88,9 @@ def apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=f
           # apply_function(client, user)
         end
       elsif not @exclude_user_names.include?(user['username'])
-        # @user_count += 1
+        if @issue_users.include?(user['username'])
+          puts "apply_to_group_users non excluded user: #{user['username']}"
+        end# @user_count += 1
         # puts user['username']
         if needs_user_client
           # client = connect_to_instance(user['username'])
