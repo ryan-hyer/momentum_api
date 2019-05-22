@@ -2,60 +2,34 @@ require '../utility/momentum_api'
 
 
 def set_category_notification(user, category, client, group_name, allowed_levels, set_level)
-    if not allowed_levels.include?(category['notification_level'])
-      print_user(user, category, group_name, category['notification_level'])
+  if not allowed_levels.include?(category['notification_level'])
+    print_user(user, category, group_name, category['notification_level'])
 
-      if @do_live_updates
-        update_response = client.category_set_user_notification(id: category['id'], notification_level: set_level)
-        puts update_response
-        @categories_updated += 1
+    if @do_live_updates
+      update_response = client.category_set_user_notification(id: category['id'], notification_level: set_level)
+      puts update_response
+      @categories_updated += 1
 
-        # check if update happened
-        user_details_after_update = client.categories
-        sleep(1)
-        user_details_after_update.each do |users_category_second_pass| # uncomment to check for the update
-          new_category_slug = users_category_second_pass['slug']
-          if category['slug'] == new_category_slug
-            puts "Updated Category: #{new_category_slug}    Notification Level: #{users_category_second_pass['notification_level']}\n"
-          end
+      # check if update happened
+      user_details_after_update = client.categories
+      sleep(1)
+      user_details_after_update.each do |users_category_second_pass| # uncomment to check for the update
+        new_category_slug = users_category_second_pass['slug']
+        if category['slug'] == new_category_slug
+          puts "Updated Category: #{new_category_slug}    Notification Level: #{users_category_second_pass['notification_level']}\n"
         end
       end
-      @matching_user_count += 1
-    else
-      if @issue_users.include?(user['username'])
-        print_user(user, category, group_name, category['notification_level'])
-      end
     end
-    @matching_categories_count += 1
-  # end
+    @matching_user_count += 1
+  else
+    if @issue_users.include?(user['username'])
+      print_user(user, category, group_name, category['notification_level'])
+    end
+  end
+  @matching_categories_count += 1
 end
 
-def global_category_to_watching(do_live_updates=false, target_category_slugs=nil, acceptable_notification_levels=[3, 4],
-                                set_notification_level=4, exclude_user_names=%w() )
-
-  @do_live_updates = do_live_updates
-  @instance = 'live' # 'live' or 'local'
-
-  # update to what notification_level?
-  @target_category_slugs = target_category_slugs  # Growth Routine Meta
-  @acceptable_notification_levels = acceptable_notification_levels
-  @set_notification_level = 4   # 4 = Watching first post, 3 = Watching, 1 = blank or ...?
-  @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin
-                            Joe_Sabolefski Steve_Scott Howard_Bailey)
-  exclude_user_names.each do |exclude_user_name|
-    @exclude_user_names << exclude_user_name
-  end
-
-  # testing variables
-  # @target_username = 'Dennis_Adsit' # John_Oberstar Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
-  # @target_groups = %w(BraveHearts)  # BraveHearts trust_level_1 trust_level_0 hit 100 record limit.
-  @issue_users = %w() # past in debug issue user_names
-
-  @user_count = 0
-  @matching_user_count = 0
-  @matching_categories_count = 0
-  @users_updated = 0
-  @categories_updated = 0
+def global_category_to_watching
 
   def apply_function(client, user)
     @starting_categories_updated = @categories_updated
@@ -89,8 +63,9 @@ def global_category_to_watching(do_live_updates=false, target_category_slugs=nil
             puts "\n#{@users_username}  Category: #{@category_slug}\n"
           end
 
-          set_category_notification(category, client, group_name)
-
+          if @target_category_slugs.include?(@category_slug)
+            set_category_notification(user, category, client, group_name, @acceptable_notification_levels, @set_notification_level)
+          end
         end
         break
       end
@@ -101,16 +76,53 @@ def global_category_to_watching(do_live_updates=false, target_category_slugs=nil
     end
   end
 
-  apply_to_all_users(needs_user_client=true)
+  # apply_to_all_users(needs_user_client=true)
+  if @target_groups
+    @target_groups.each do |group_plug|
+      apply_to_group_users(group_plug, needs_user_client=true, skip_staged_user=true)
+    end
+  else
+    apply_to_all_users(needs_user_client=true)
+  end
 
 end
 
 if __FILE__ == $0
 
-  global_category_to_watching(do_live_updates=false , target_category_slugs=%w(Essential), acceptable_notification_levels=[3],
-                              set_notification_level=3, exclude_user_names=%w())
+  def print_user(user, category, group_name, notify_level)
+    field_settings = "%-18s %-20s %-20s %-10s %-15s\n"
+    printf field_settings, 'UserName', 'Group', 'Category', 'Level', 'Status'
+    printf field_settings, user['username'], group_name, category['slug'], notify_level.to_s.center(5), 'NOT_Watching'
+  end
+
+  @do_live_updates = false
+  @instance = 'live' # 'live' or 'local'
+
+  # update to what notification_level?
+  @target_category_slugs = %w(Essential)          # Growth Routine Meta
+  @acceptable_notification_levels = [3]           # [3] or [3 4]
+  @set_notification_level = 3                     # 4 = Watching first post, 3 = Watching, 1 = blank or ...?
+  @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin
+                            Joe_Sabolefski Steve_Scott Howard_Bailey)
+
+  # testing variables
+  # @target_username = 'Dennis_Adsit' # John_Oberstar Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
+  # @target_groups = %w(BraveHearts)  # BraveHearts trust_level_1 trust_level_0 hit 100 record limit.
+  @issue_users = %w() # past in debug issue user_names
+
+  @user_count, @matching_user_count, @matching_categories_count, @users_updated, @categories_updated,
+      @skipped_users = 0, 0, 0, 0, 0, 0
+
+  global_category_to_watching
   
-  puts "\n#{@matching_categories_count} matching Categories for #{@matching_user_count} Users found out of #{@user_count} processed and #{@skipped_users} skipped."
-  puts "\n#{@categories_updated} Category notification_levels updated for #{@users_updated} Users."
+  field_settings = "%-35s %-20s \n"
+  printf "\n"
+  printf field_settings, 'Categories', ''
+  printf field_settings, 'Categories Visible to Users: ', @matching_categories_count
+  printf field_settings, 'Users Needing Update: ', @matching_user_count
+  printf field_settings, 'Users Skipped: ', @skipped_users
+  printf field_settings, 'Updated Categories: ', @categories_updated
+  printf field_settings, 'Updated Users: ', @users_updated
+  printf field_settings, 'Total Users: ', @user_count
 
 end

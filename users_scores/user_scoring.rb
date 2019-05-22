@@ -134,9 +134,9 @@ if __FILE__ == $0
   @from_username = 'Kim_Miller'
 
   # poll parameters
-  @update_type = 'all'      # have_voted, not_voted, newly_voted, all
-  @target_post = 28707             # 28649
-  @target_polls = %w(version_two)  # basic new version_two
+  @update_type = 'all'            # have_voted, not_voted, newly_voted, all
+  @target_post = 28707            # 28649
+  @target_polls = %w(version_two) # basic new version_two
   @poll_url = 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
 
   # testing variables

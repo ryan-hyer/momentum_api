@@ -2,20 +2,6 @@ require '../utility/momentum_api'
 require '../users/trust_level'
 require '../notifications/users_update_global_category_watching'
 
-# @do_live_updates = false
-# @instance = 'live' # 'live' or 'local'
-#
-# @exclude_user_names = %w(system discobot js_admin sl_admin JP_Admin admin_sscott RH_admin KM_Admin Winston_Churchill
-#                             Joe_Sabolefski Steve_Scott Howard_Bailey)
-#
-# # testing variables
-# # @target_username = 'Brad_Fino' # John_Oberstar Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
-# # @target_groups = %w(BraveHearts)  # BraveHearts trust_level_1 trust_level_0 hit 100 record limit.
-# @issue_users = %w() # past in debug issue user_names Brad_Fino
-#
-# @user_count, @user_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
-#     @sent_messages = 0, 0, 0, 0, 0, 0, 0
-# @matching_user_count, @matching_categories_count, @categories_updated = 0, 0, 0
 
 def print_user(user, category, group_name, notify_level)
   field_settings = "%-18s %-20s %-20s %-10s %-15s\n"
@@ -52,7 +38,7 @@ def category_cases(client, user, users_categories, group_name)
       end
 
     when category['slug'] == 'Growth'       # Task #3
-      case_excludes = %w(Bill_Herndon Michael_Wilson)
+      case_excludes = %w(Bill_Herndon Michael_Wilson Howard_Bailey)
       if case_excludes.include?(user['username'])
         # puts "#{user['username']} specifically excluded from Watching Growth"
       else
@@ -60,7 +46,7 @@ def category_cases(client, user, users_categories, group_name)
       end
 
     when category['slug'] == 'Meta'         # Task #4
-      case_excludes = %w(Bill_Herndon Michael_Wilson)
+      case_excludes = %w(Bill_Herndon Michael_Wilson Howard_Bailey)
       if case_excludes.include?(user['username'])
         # puts "#{user['username']} specifically excluded from Watching Meta"
       else
@@ -94,7 +80,7 @@ def apply_function(client, user)
       puts "\n#{user['username']}  with group: #{group_name}\n"
     end
 
-    # Group Filtered Category Cas
+    # Group Filtered Category Case
     if @target_groups and @target_groups.include?(group_name)
         category_cases(client, user, users_categories, group_name)
     end
@@ -109,7 +95,7 @@ def apply_function(client, user)
   end
 
   # Unfiltered category case
-  if  @target_groups
+  if @target_groups
     # puts 'Not group filter'
   else
     category_cases(client, user, users_categories, 'Any')
@@ -125,8 +111,6 @@ end
 
 def run_tasks_for_all_users(do_live_updates=false)
   @do_live_updates = do_live_updates
-  # apply_to_all_users(needs_user_client=true)
-
 
   if @target_groups
     @target_groups.each do |group_plug|
@@ -140,9 +124,40 @@ end
 
 if __FILE__ == $0
 
-  apply_to_all_users(needs_user_client=true)
+  @do_live_updates = false
+  @instance = 'live' # 'live' or 'local'
 
-  puts "\n#{@matching_categories_count} matching Categories for #{@matching_user_count} Users found out of #{@user_count} processed and #{@skipped_users} skipped."
-  puts "\n#{@categories_updated} Category notification_levels updated for #{@users_updated} Users."
+  @exclude_user_names = %w(system discobot js_admin sl_admin JP_Admin admin_sscott RH_admin KM_Admin Winston_Churchill
+                            Joe_Sabolefski Steve_Scott)
+
+  # testing variables
+  # @target_username = 'Brad_Fino' # John_Oberstar Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
+  @target_groups = %w(BraveHearts)  # GreatX BraveHearts trust_level_1 trust_level_0 hit 100 record limit.
+  @issue_users = %w() # past in debug issue user_names Brad_Fino
+
+  @user_count, @user_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
+      @sent_messages, @skipped_users = 0, 0, 0, 0, 0, 0, 0, 0
+  @matching_user_count, @matching_categories_count, @categories_updated = 0, 0, 0
+
+  run_tasks_for_all_users(do_live_updates=false)
+
+  # puts "\n#{@matching_categories_count} matching Categories for #{@matching_user_count} Users found out of #{@user_count} processed and #{@skipped_users} skipped."
+  # puts "\n#{@categories_updated} Category notification_levels updated for #{@users_updated} Users."
+
+  field_settings = "%-35s %-20s \n"
+  printf "\n"
+  printf field_settings, 'Categories', ''
+  printf field_settings, 'Categories Visible to Users: ', @matching_categories_count
+  printf field_settings, 'Users Needing Update: ', @matching_user_count
+  printf field_settings, 'Users Skipped: ', @skipped_users
+  printf field_settings, 'Updated Categories: ', @categories_updated
+  printf field_settings, 'Updated Users: ', @users_updated
+  printf "\n"
+  printf field_settings, 'User Scores', ''
+  printf field_settings, 'Qualifying targets: ', @user_targets
+  printf field_settings, 'New User Scores: ', @new_user_score_targets
+  printf field_settings, 'Users Not yet voted:', @user_not_voted_targets
+  printf field_settings, 'User messages sent: ', @sent_messages
+  printf field_settings, 'Total Users: ', @user_count
 
 end

@@ -72,7 +72,7 @@ def apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=f
       end
     end
     if staged
-      puts "Skipping staged user #{user['username']}"
+      # puts "Skipping staged user #{user['username']}"
     else
       if @target_username
         if user['username'] == @target_username
