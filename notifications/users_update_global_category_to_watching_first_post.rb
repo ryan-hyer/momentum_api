@@ -22,7 +22,7 @@ def global_category_to_watching(do_live_updates=false, target_category_slugs=nil
   @issue_users = %w() # past in debug issue user_names
 
   @user_count = 0
-  @matching_user_count = 0
+  @matching_category_notify_users = 0
   @matching_categories_count = 0
   @users_updated = 0
   @categories_updated = 0
@@ -33,11 +33,11 @@ def global_category_to_watching(do_live_updates=false, target_category_slugs=nil
     printf field_settings, @users_username, group_name, @category_slug, @users_category_notify_level.to_s.center(5), 'NOT_Watching'
   end
 
-  def apply_function(client, user)
+  def apply_function(user, admin_client, user_client='')
     @starting_categories_updated = @categories_updated
     @users_username = user['username']
-    @users_groups = client.user(@users_username)['groups']
-    @users_categories = client.categories
+    @users_groups = user_client.user(@users_username)['groups']
+    @users_categories = user_client.categories
     sleep(2)
 
     if @issue_users.include?(@users_username)
@@ -71,12 +71,12 @@ def global_category_to_watching(do_live_updates=false, target_category_slugs=nil
               print_user(group_name)
 
               if @do_live_updates
-                update_response = client.category_set_user_notification(id: @category_id, notification_level: @set_notification_level)
+                update_response = user_client.category_set_user_notification(id: @category_id, notification_level: @set_notification_level)
                 puts update_response
                 @categories_updated += 1
 
                 # check if update happened
-                @user_details_after_update = client.categories
+                @user_details_after_update = user_client.categories
                 sleep(1)
                 @user_details_after_update.each do |users_category_second_pass| # uncomment to check for the update
                   @new_category_slug = users_category_second_pass['slug']
@@ -85,7 +85,7 @@ def global_category_to_watching(do_live_updates=false, target_category_slugs=nil
                   end
                 end
               end
-              @matching_user_count += 1
+              @matching_category_notify_users += 1
             else
               if @issue_users.include?(@users_username)
                 print_user(group_name)
@@ -112,7 +112,7 @@ if __FILE__ == $0
   global_category_to_watching(do_live_updates=false, target_category_slugs=%w(Meta), acceptable_notification_levels=[3, 4],
                               set_notification_level=4, exclude_user_names=%w(Bill_Herndon Michael_Wilson))
   
-  puts "\n#{@matching_categories_count} matching Categories for #{@matching_user_count} Users found out of #{@user_count} processed and #{@skipped_users} skipped."
+  puts "\n#{@matching_categories_count} matching Categories for #{@matching_category_notify_users} Users found out of #{@user_count} processed and #{@skipped_users} skipped."
   puts "\n#{@categories_updated} Category notification_levels updated for #{@users_updated} Users."
 
 end

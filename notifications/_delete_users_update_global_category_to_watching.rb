@@ -16,13 +16,13 @@ require '../utility/momentum_api'
 @issue_users = %w() # past in debug issue user_names
 
 @user_count = 0
-@matching_user_count = 0
+@matching_category_notify_users = 0
 @matching_categories_count = 0
 @users_updated = 0
 @categories_updated = 0
 
 
-def apply_function(client, user, group_plug='All')
+def apply_function(user, admin_client, user_client='', group_plug='All')
   @starting_categories_updated = @categories_updated
   users_username = user['username']
   puts users_username
@@ -31,7 +31,7 @@ def apply_function(client, user, group_plug='All')
     puts @users_groups
   end
 
-  @users_categories = client.categories
+  @users_categories = user_client.categories
 
   @users_categories.each do |category|
     @category_slug = category['slug']
@@ -46,12 +46,12 @@ def apply_function(client, user, group_plug='All')
         printf "%-18s %-20s %-20s %-5s %-15s\n", users_username, group_plug, @category_slug, @users_category_notify_level.to_s.center(5), 'NOT_Watching'
 
         if @do_live_updates
-          update_response = client.category_set_user_notification(id: @category_id, notification_level: @set_notification_level)
+          update_response = user_client.category_set_user_notification(id: @category_id, notification_level: @set_notification_level)
           puts update_response
           @categories_updated += 1
 
           # check if update happened
-          @user_details_after_update = client.categories
+          @user_details_after_update = user_client.categories
           sleep(1)
           @user_details_after_update.each do |users_category_second_pass| # uncomment to check for the update
             # puts "\nAll Category: #{users_category_second_pass['slug']}    Notification Level: #{users_category_second_pass['notification_level']}\n"
@@ -61,7 +61,7 @@ def apply_function(client, user, group_plug='All')
             end
           end
         end
-        @matching_user_count += 1
+        @matching_category_notify_users += 1
       else
         if @issue_users.include?(users_username)
           printf "%-18s %-20s %-20s %-5s\n", users_username, group_plug, @category_slug, @users_category_notify_level.to_s.center(5)
@@ -89,7 +89,7 @@ else
   apply_to_all_users(needs_user_client=true)
 end
 
-puts "\n#{@matching_categories_count} matching Categories for #{@matching_user_count} Users found out of #{@user_count} total."
+puts "\n#{@matching_categories_count} matching Categories for #{@matching_category_notify_users} Users found out of #{@user_count} total."
 puts "\n#{@categories_updated} Category notification_levels updated for #{@users_updated} Users."
 
 # Apr 18, 2019   Users reset

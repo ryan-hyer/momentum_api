@@ -1,11 +1,11 @@
 require '../utility/momentum_api'
 
 
-def set_category_notification(user, category, client, group_name, allowed_levels, set_level)
+def set_category_notification(user, category, client, group_name, allowed_levels, set_level, do_live_updates=false)
   if not allowed_levels.include?(category['notification_level'])
     print_user(user, category, group_name, category['notification_level'])
 
-    if @do_live_updates
+    if do_live_updates
       update_response = client.category_set_user_notification(id: category['id'], notification_level: set_level)
       puts update_response
       @categories_updated += 1
@@ -20,7 +20,7 @@ def set_category_notification(user, category, client, group_name, allowed_levels
         end
       end
     end
-    @matching_user_count += 1
+    @matching_category_notify_users += 1
   else
     if @issue_users.include?(user['username'])
       print_user(user, category, group_name, category['notification_level'])
@@ -31,11 +31,11 @@ end
 
 def global_category_to_watching
 
-  def apply_function(client, user)
+  def apply_function(user, admin_client, user_client=nil)
     @starting_categories_updated = @categories_updated
     @users_username = user['username']
-    @users_groups = client.user(@users_username)['groups']
-    @users_categories = client.categories
+    @users_groups = user_client.user(@users_username)['groups']
+    @users_categories = user_client.categories
     sleep(2)
 
     if @issue_users.include?(@users_username)
@@ -64,7 +64,8 @@ def global_category_to_watching
           end
 
           if @target_category_slugs.include?(@category_slug)
-            set_category_notification(user, category, client, group_name, @acceptable_notification_levels, @set_notification_level)
+            set_category_notification(user, category, user_client, group_name, @acceptable_notification_levels,
+                                      @set_notification_level, do_live_updates=@do_live_updates)
           end
         end
         break
@@ -107,10 +108,10 @@ if __FILE__ == $0
 
   # testing variables
   # @target_username = 'Dennis_Adsit' # John_Oberstar Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
-  # @target_groups = %w(BraveHearts)  # BraveHearts trust_level_1 trust_level_0 hit 100 record limit.
+  @target_groups = %w(BraveHearts)  # BraveHearts trust_level_1 trust_level_0 hit 100 record limit.
   @issue_users = %w() # past in debug issue user_names
 
-  @user_count, @matching_user_count, @matching_categories_count, @users_updated, @categories_updated,
+  @user_count, @matching_category_notify_users, @matching_categories_count, @users_updated, @categories_updated,
       @skipped_users = 0, 0, 0, 0, 0, 0
 
   global_category_to_watching
@@ -119,7 +120,7 @@ if __FILE__ == $0
   printf "\n"
   printf field_settings, 'Categories', ''
   printf field_settings, 'Categories Visible to Users: ', @matching_categories_count
-  printf field_settings, 'Users Needing Update: ', @matching_user_count
+  printf field_settings, 'Users Needing Update: ', @matching_category_notify_users
   printf field_settings, 'Users Skipped: ', @skipped_users
   printf field_settings, 'Updated Categories: ', @categories_updated
   printf field_settings, 'Updated Users: ', @users_updated

@@ -2,10 +2,10 @@ require '../utility/momentum_api'
 
 @do_live_updates = false
 @instance = 'live'
-@from_username = 'Kim_Miller'  # 'Moe_Rubenzahl'
+@emails_from_username = 'Kim_Miller'  # 'Moe_Rubenzahl'
 # client = connect_to_instance('KM_Admin')   # 'live' or 'local'
 # message from user name
-# client.api_username = @from_username
+# client.api_username = @emails_from_username
 
 # message to group
 group_plug = 'Mods'  # OwnerExpired
@@ -35,12 +35,12 @@ Momentum Chief"
 
 
 # standardize_email_settings
-def apply_function(client, to_user, group_plug='All')
-  send_private_message(@from_username, to_user['username'], @message_subject, @message_body)
+def apply_function(user, admin_client, user_client='', group_plug='All')
+  send_private_message(@emails_from_username, to_user['username'], @message_subject, @message_body, do_live_updates=false)
 end
 
 printf @field_settings, 'Message From', 'Message To', 'Slug', 'Starting Text', 'Status'
 
-apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=false, admin_user=@from_username)
+apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=false, admin_user=@emails_from_username)
 
 puts "\n#{@sent_messages} messages sent for #{@user_count} users found."

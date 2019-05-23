@@ -51,10 +51,10 @@ require '../users_scores/user_scores_utility'
 
 @user_count, @user_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets = 0, 0, 0, 0, 0, 0
 
-def apply_function(client, voting_user)
-  post = client.get_post(@target_post)
+def apply_function(voting_user, admin_client, user_client='')
+  post = user_client.get_post(@target_post)
   polls = post['polls']
-  users_username = client.api_username
+  users_username = user_client.api_username
   @user_count += 1
 
   polls.each do |poll|
@@ -63,7 +63,7 @@ def apply_function(client, voting_user)
       poll_options = poll['options']
 
       begin
-        poll_option_votes = client.voters(post_id: @target_post, poll_name: poll_name, api_username: users_username)['voters']
+        poll_option_votes = user_client.voters(post_id: @target_post, poll_name: poll_name, api_username: users_username)['voters']
         # user has voted
         if @update_type == 'have_voted' or @update_type == 'both'
           # score voter
@@ -93,7 +93,7 @@ def apply_function(client, voting_user)
                  current_voter_points, '/', max_points_possible.to_int
 
           # is this vote new?
-          user_details = client.user(users_username)
+          user_details = user_client.user(users_username)
           user_fields = user_details[@user_preferences]
 
           existing_value = user_fields[@user_score_field]
@@ -109,12 +109,12 @@ def apply_function(client, voting_user)
             print_user_options(user_details)
             puts 'User to be updated'
             if @do_live_updates
-              update_response = client.update_user(users_username, {"#{@user_preferences}":{"#{@user_score_field}":current_voter_points}})
+              update_response = user_client.update_user(users_username, {"#{@user_preferences}":{"#{@user_score_field}":current_voter_points}})
               puts update_response[:body]['success']
               @users_updated += 1
 
               # check if update happened
-              user_details_after_update = client.user(users_username)
+              user_details_after_update = user_client.user(users_username)
               print_user_options(user_details_after_update)
               sleep(1)
             end

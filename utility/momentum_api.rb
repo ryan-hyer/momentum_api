@@ -20,14 +20,20 @@ def connect_to_instance(api_username, instance=@instance)
   client
 end
 
-def apply_to_all_users(needs_user_client=false)
-  @skipped_users = 0
-  # @user_count = 0
+def apply_call(admin_client, needs_user_client, user)
+  if needs_user_client
+    user_client = connect_to_instance(user['username'])
+    apply_function(user, admin_client, user_client)
+  else
+    apply_function(user, admin_client)
+  end
+end
+
+def apply_to_all_users(needs_user_client=false, admin_username='KM_Admin')
   starting_page_of_users = 1
   while starting_page_of_users > 0
-    # puts 'Top While'
-    client = connect_to_instance('KM_Admin')
-    @users = client.list_users('active', page: starting_page_of_users)
+    admin_client = connect_to_instance(admin_username)
+    @users = admin_client.list_users('active', page: starting_page_of_users)
     if @users.empty?
       starting_page_of_users = 0
     else
@@ -35,18 +41,12 @@ def apply_to_all_users(needs_user_client=false)
       @users.each do |user|
         if @target_username
           if user['username'] == @target_username
-            # @user_count += 1
-            if needs_user_client
-              client = connect_to_instance(user['username'])
-            end
-            apply_function(client, user)
+            apply_call(admin_client, needs_user_client, user)
           end
         elsif not @exclude_user_names.include?(user['username']) and user['active'] == true
-          if needs_user_client
-            client = connect_to_instance(user['username'])
-          end
-          apply_function(client, user)
-          sleep(1) # needs to be 2 in some cases
+          printf "%-15s %s \r", 'Scanning User: ', @user_count
+          apply_call(admin_client, needs_user_client, user)
+          sleep 1 # needs to be 2 in some cases
         else
           @skipped_users += 1
         end
@@ -65,9 +65,7 @@ def apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=f
       if user['last_seen_at']
         staged = false
       else
-        # admin_client = connect_to_instance('KM_Admin')
         full_user = admin_client.user(user['username'])
-        # puts full_user['staged']
         staged = full_user['staged']
       end
     end
@@ -76,44 +74,31 @@ def apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=f
     else
       if @target_username
         if user['username'] == @target_username
-          # @user_count += 1
-          if needs_user_client
-            # client = connect_to_instance(user['username'])
-            apply_function(connect_to_instance(user['username']), user)
-            # apply_function(connect_to_instance(user['username']), user, group_plug=group_plug)
-          else
-            apply_function(admin_client, user)
-            # apply_function(admin_client, user, group_plug=group_plug)
-          end
-          # apply_function(client, user)
+          apply_call(admin_client, needs_user_client, user)
         end
       elsif not @exclude_user_names.include?(user['username'])
         if @issue_users.include?(user['username'])
           puts "apply_to_group_users non excluded user: #{user['username']}"
-        end# @user_count += 1
-        # puts user['username']
-        if needs_user_client
-          # client = connect_to_instance(user['username'])
-          apply_function(connect_to_instance(user['username']), user)
-        else
-          apply_function(admin_client, user)
         end
-        # apply_function(client, user)
-        sleep(1) # needs to be 2 in some cases
+        printf "%-15s %s \r", 'Scanning User: ', @user_count
+        apply_call(admin_client, needs_user_client, user)
+        sleep 1 # needs to be 2 in some cases
       end
     end
   end
 end
 
 
-def send_private_message(from_username, to_username, message_subject, message_body)
+def send_private_message(from_username, to_username, message_subject, message_body, do_live_updates)
+  if from_username == to_username and from_username != 'KM_Admin'
+    from_username = 'KM_Admin'
+  end
   from_client = connect_to_instance(from_username)
-  # users_username = to_user['username']
+
   field_settings = "%-18s %-20s %-20s %-55s %-25s %-25s\n"
-  # printf field_settings, 'Message From', 'Message To', 'Slug', 'Starting Text', 'Status'
   printf field_settings, '  Message From:', from_client.api_username, to_username, message_subject, message_body[0..20], 'Pending'
 
-  if @do_live_updates
+  if do_live_updates
     response = from_client.create_private_message(
         title: message_subject,
         raw: message_body,
@@ -122,9 +107,62 @@ def send_private_message(from_username, to_username, message_subject, message_bo
 
     # check if update happened
     created_message = from_client.get_post(response['id'])
-    printf field_settings, created_message['username'], to_username, created_message['topic_slug'], created_message['raw'][0..20], 'Sent'
+    printf field_settings, '  Message From:', created_message['username'], to_username, created_message['topic_slug'], created_message['raw'][0..20], 'Sent'
 
     @sent_messages += 1
     sleep(1)
   end
+end
+
+
+def print_user_options(user_details, user_option_print, user_label='UserName', pos_5=user_details[user_option_print[5].to_s])
+
+  field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
+
+  printf field_settings, user_label,
+         user_option_print[0], user_option_print[1], user_option_print[2],
+         user_option_print[3], user_option_print[4], user_option_print[5]
+
+  printf field_settings, user_details['username'],
+         user_details[user_option_print[0].to_s].to_s[0..9], user_details[user_option_print[1].to_s].to_s[0..9],
+         user_details[user_option_print[2].to_s], user_details[user_option_print[3].to_s],
+         user_details[user_option_print[4].to_s], pos_5
+end
+
+
+def scan_summary
+  field_settings = "%-35s %-20s \n"
+
+  if @matching_category_notify_users > 0
+    printf "\n"
+    printf field_settings, 'Categories', ''
+    printf field_settings, 'Categories Visible to Users: ', @matching_categories_count
+    printf field_settings, 'Users Needing Update: ', @matching_category_notify_users
+    printf field_settings, 'Updated Categories: ', @categories_updated
+    printf field_settings, 'Updated Users: ', @users_updated
+  end
+
+  if @voter_targets > 0
+    printf "\n"
+    printf field_settings, 'User Scores', ''
+    printf field_settings, 'Voter Targets: ', @voter_targets
+    printf field_settings, 'New User Scores: ', @new_user_score_targets
+    printf field_settings, 'New User Badges: ', @new_user_badge_targets
+    printf field_settings, 'Users Not yet voted:', @user_not_voted_targets
+    printf field_settings, 'User messages sent: ', @sent_messages
+  end
+
+
+  printf "\n"
+  printf field_settings, 'Generalized targets: ', @user_targets #todo needs custom on each task
+  printf "\n"
+  printf field_settings, 'Skipped Users: ', @skipped_users
+  printf field_settings, 'Total Users: ', @user_count
+end
+
+
+def zero_counters
+  @user_count, @user_targets, @voter_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
+      @sent_messages, @skipped_users, @matching_category_notify_users, @matching_categories_count,
+      @categories_updated = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 end

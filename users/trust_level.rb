@@ -1,6 +1,6 @@
 require '../utility/momentum_api'
 
-def update_trust_level(client, is_owner, trust_level_target, user, user_details)
+def update_trust_level(admin_client, is_owner, trust_level_target, user, user_details, do_live_updates=false)
   # puts 'update_trust_level'
   if @issue_users.include?(user['username'])
     puts "#{user['username']}  is_owner: #{is_owner}\n"
@@ -27,13 +27,14 @@ def update_trust_level(client, is_owner, trust_level_target, user, user_details)
       print_user_options(user_details, user_option_print, 'Non Owner')
       # puts 'User to be updated'
       @user_targets += 1
-      if @do_live_updates
-        update_response = client.update_trust_level(user_id: user['id'], level: trust_level_target)
+      if do_live_updates
+
+        update_response = admin_client.update_trust_level(user_id: user['id'], level: trust_level_target)
         puts "#{update_response['admin_user']['username']} Updated"
         @users_updated += 1
 
         # check if update happened
-        user_details_after_update = client.user(user['username'])
+        user_details_after_update = admin_client.user(user['username'])
         print_user_options(user_details_after_update, user_option_print, 'Non Owner')
         sleep(1)
       end
@@ -63,29 +64,22 @@ def scan_trust_levels(do_live_updates=false)
   )
 
   # @target_groups = %w(trust_level_1)  # LaunchpadV, trust_level_0 trust_level_1 ... needs apply_to_all_users
+  @target_username = 'Brad_Fino' # John_Oberstar Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
   @exclude_groups = %w(Owner)  # MidPen, LaunchpadV, trust_level_0 DaVinci
   @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin Kim_Miller system discobot)
   @field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
 
   @user_count, @user_targets, @users_updated = 0, 0, 0, 0
-  #
-  # def print_user_options(user_details)
-  #   printf @field_settings, 'UserName',
-  #          @user_option_print[0], @user_option_print[1], @user_option_print[2],
-  #          @user_option_print[3], @user_option_print[4], @user_option_print[5]
-  #
-  #   printf @field_settings, user_details['username'],
-  #          user_details[@user_option_print[0].to_s].to_s[0..9], user_details[@user_option_print[1].to_s].to_s[0..9],
-  #          user_details[@user_option_print[2].to_s], user_details[@user_option_print[3].to_s],
-  #          user_details[@user_option_print[4].to_s], user_details[@user_option_print[5].to_s]
-  # end
+
 
   # standardize_email_settings
-  def apply_function(client, user)
+  def apply_function(user, admin_client, user_client='')
     # users_username = user['username']
     # puts user['username'], client.api_username
     @user_count += 1
-    user_details = client.user(user['username'])
+    # puts user
+    # puts user['username']
+    user_details = admin_client.user(user['username'])
     # existing_trust_level = user_details[@user_preferences]
     user_groups = user_details['groups']
     is_owner = false
@@ -105,7 +99,7 @@ def scan_trust_levels(do_live_updates=false)
       end
     end
 
-    update_trust_level(client, is_owner, 0, user, user_details)
+    update_trust_level(admin_client, is_owner, 0, user, user_details, do_live_updates=@do_live_updates)
 
   end
 
@@ -118,6 +112,11 @@ def scan_trust_levels(do_live_updates=false)
   end
 
 end
+
+if __FILE__ == $0
+  scan_trust_levels(do_live_updates=false)
+end
+
 
 # scan_trust_levels(do_live_updates=false)
 # puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets out of #{@user_count} total users."

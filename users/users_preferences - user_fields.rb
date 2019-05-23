@@ -34,11 +34,11 @@ def print_user_options(user_details)
 end
 
 # standardize_email_settings
-def apply_function(client, user)
+def apply_function(user, admin_client, user_client='')
   users_username = user['username']
   # puts users_username, client.api_username
   @user_count += 1
-  user_details = client.user(users_username)
+  user_details = user_client.user(users_username)
   user_fields = user_details[@user_preferences]
   user_groups = user_details['groups']
 
@@ -64,12 +64,12 @@ def apply_function(client, user)
         puts 'User to be updated'
         @user_targets += 1
         if @do_live_updates
-          update_response = client.update_user(users_username, {"#{@user_preferences}":@user_fields_targets})
+          update_response = user_client.update_user(users_username, {"#{@user_preferences}":@user_fields_targets})
           puts update_response[:body]['success']
           @users_updated += 1
 
           # check if update happened
-          user_details_after_update = client.user(users_username)
+          user_details_after_update = user_client.user(users_username)
           print_user_options(user_details_after_update)
           sleep(1)
         end

@@ -53,12 +53,12 @@ def process_category(category, group_name, client, users_username)
 end
 
 # find and update member_notifications
-def apply_function(client, user)
+def apply_function(user, admin_client, user_client='')
   @user_count += 1
   @starting_categories_updated = @users_updated
   users_username = user['username']
-  users_groups = client.user(users_username)['groups']
-  users_categories = client.categories
+  users_groups = user_client.user(users_username)['groups']
+  users_categories = user_client.categories
   sleep(1)
   
   users_groups.each do |group|
@@ -69,14 +69,14 @@ def apply_function(client, user)
     end
     # puts users_categories
     users_categories.each do |category|
-      process_category(category, group_name, client, users_username)
+      process_category(category, group_name, user_client, users_username)
       if category['subcategory_ids']
         # puts category['slug']
         # puts category['subcategory_ids']
-        users_subcategories = client.categories(parent_category_id: category['id'])
+        users_subcategories = user_client.categories(parent_category_id: category['id'])
         sleep(1)
         users_subcategories.each do |subcategory|
-          process_category(subcategory, group_name, client, users_username)
+          process_category(subcategory, group_name, user_client, users_username)
         end
       else
         # puts 'No subcategory_ids'

@@ -5,22 +5,19 @@ require File.expand_path('../../../discourse_api/lib/discourse_api', __FILE__)
 @user_fields = 'user_fields'
 @user_score_field = '5'
 
-def print_user_options(user_details)
-  @user_option_print = %w(
-      last_seen_at
-      last_posted_at
-      post_count
-      time_read
-      recent_time_read
-      5
-  )
-
-  field_settings = "%-18s %-20s %-10s %-10s %-5s %-2s %-7s\n"
-  printf field_settings, user_details['username'],
-         user_details[@user_option_print[0].to_s].to_s[0..9], user_details[@user_option_print[1].to_s].to_s[0..9],
-         user_details[@user_option_print[2].to_s], user_details[@user_option_print[3].to_s],
-         user_details[@user_option_print[4].to_s], user_details[@user_fields][@user_option_print[5].to_s]
-end
+# def print_user_options(user_details, user_option_print, user_label='UserName')
+#
+#   field_settings = "%-18s %-20s %-10s %-10s %-5s %-2s %-7s\n"
+#
+#   printf field_settings, user_label,
+#          user_option_print[0], user_option_print[1], user_option_print[2],
+#          user_option_print[3], user_option_print[4], user_option_print[5]
+#
+#   printf field_settings, user_details['username'],
+#          user_details[user_option_print[0].to_s].to_s[0..9], user_details[user_option_print[1].to_s].to_s[0..9],
+#          user_details[user_option_print[2].to_s], user_details[user_option_print[3].to_s],
+#          user_details[user_option_print[4].to_s], user_details[@user_fields][user_option_print[5].to_s]
+# end
 
 
 def score_voter(poll, poll_option_votes, users_username)
@@ -50,7 +47,16 @@ end
 def update_user_profile_score(client, current_voter_points, user_details, users_username, do_live_updates=false)
   @new_user_score_targets += 1
   # puts 'User Score to be updated'
-  print_user_options(user_details)
+  user_option_print = %w(
+      last_seen_at
+      last_posted_at
+      post_count
+      time_read
+      recent_time_read
+      user_field_score
+  )
+  print_user_options(user_details, user_option_print, user_label='UserName', pos_5=user_details[@user_fields][@user_score_field])
+
   if do_live_updates
     update_response = client.update_user(users_username, {"#{@user_fields}": {"#{@user_score_field}": current_voter_points}})
     puts update_response[:body]['success']
@@ -58,7 +64,8 @@ def update_user_profile_score(client, current_voter_points, user_details, users_
 
     # check if update happened
     user_details_after_update = client.user(users_username)
-    print_user_options(user_details_after_update)
+    print_user_options(user_details_after_update, user_option_print, user_label='UserName',
+                       pos_5=user_details_after_update[@user_fields][@user_score_field])
     sleep(1)
   end
 end
@@ -73,7 +80,7 @@ def update_badge(client, target_badge_name, badge_id, users_username, do_live_up
       end
     end
     if has_target_badge
-      puts 'User already has badge'
+      # puts 'User already has badge'
     else
       # puts 'about to post'
       post_response = client.grant_user_badge(username: users_username, badge_id: badge_id, reason: 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20')
@@ -90,7 +97,7 @@ def update_user_profile_badges(client, current_voter_points, user_details, users
   @new_user_badge_targets += 1
   target_badge_name = nil
   # puts 'User Badges to be updated'
-  # print_user_options(user_details)
+  # print_user_options(user_details, user_option_print)
 
   # calculate badges
   case current_voter_points

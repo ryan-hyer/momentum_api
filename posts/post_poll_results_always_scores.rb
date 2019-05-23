@@ -38,8 +38,8 @@ def print_user_options(user_details)
 end
 
 # standardize_email_settings
-def apply_function(client)
-  post = client.get_post(@target_post)
+def apply_function(user, admin_client, user_client='')
+  post = user_client.get_post(@target_post)
   polls = post['polls']
   # users_username = user['username']
   # puts users_username, client.api_username
@@ -114,12 +114,12 @@ def apply_function(client)
         #   print_user_options(user_details)
           @user_targets += 1
           if @do_live_updates
-            update_response = client.update_user(users_username, @user_option_targets)
+            update_response = user_client.update_user(users_username, @user_option_targets)
             puts update_response[:body]['success']
             @users_updated += 1
 
             # check if update happened
-            user_details_after_update = client.user(users_username)
+            user_details_after_update = user_client.user(users_username)
             print_user_options(user_details_after_update)
             sleep(1)
           end

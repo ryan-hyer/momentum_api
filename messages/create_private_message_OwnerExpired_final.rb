@@ -1,12 +1,12 @@
 require '../utility/momentum_api'
 
 @do_live_updates = false
-@from_username = 'Winston_Churchill'  # 'Moe_Rubenzahl'
+@emails_from_username = 'Winston_Churchill'  # 'Moe_Rubenzahl'
 @instance = 'live'
 client = connect_to_instance('KM_Admin')   # 'live' or 'local'
 
 # message from user name
-client.api_username = @from_username
+client.api_username = @emails_from_username
 # message to group
 group_plug = 'OwnerExpired'
 # message
@@ -34,20 +34,20 @@ Momentum Chief"
 @field_settings = "%-20s %-20s %-35s %-25s %-25s\n"
 
 # standardize_email_settings
-def apply_function(client, user, group_plug='All')
+def apply_function(user, admin_client, user_client='', group_plug='All')
   users_username = user['username']
   @user_count += 1
-  printf @field_settings, @from_username, users_username, @message_subject, @message_body[0..20], 'Pending'
+  printf @field_settings, @emails_from_username, users_username, @message_subject, @message_body[0..20], 'Pending'
   
   if @do_live_updates
-    response = client.create_private_message(
+    response = user_client.create_private_message(
         title: @message_subject,
         raw: @message_body,
         target_usernames: users_username
     )
 
     # check if update happened
-    created_message = client.get_post(response['id'])
+    created_message = user_client.get_post(response['id'])
     printf @field_settings, created_message['username'], users_username, created_message['topic_slug'],
            created_message['raw'][0..20], 'Sent'
 
@@ -58,7 +58,7 @@ end
 
 printf @field_settings, 'Message From', 'Message To', 'Slug', 'Starting Text', 'Status'
 
-apply_to_group_users(group_plug, admin_client=@from_username)
+apply_to_group_users(group_plug, admin_client=@emails_from_username)
 # apply_to_group_users(client, group_plug)
 
 puts "\n#{@sent_messages} messages sent for #{@user_count} users found."
