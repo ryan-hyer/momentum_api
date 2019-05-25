@@ -154,10 +154,10 @@ def scan_summary
 
 
   printf "\n"
-  printf field_settings, 'Generalized targets: ', @user_targets #todo needs custom on each task
   printf "\n"
+  printf field_settings, 'Generalized targets: ', @user_targets #todo needs custom on each task
+  printf field_settings, 'Processed Users: ', @user_count
   printf field_settings, 'Skipped Users: ', @skipped_users
-  printf field_settings, 'Total Users: ', @user_count
 end
 
 
