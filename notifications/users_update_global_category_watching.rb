@@ -31,7 +31,7 @@ end
 
 def global_category_to_watching
 
-  def apply_function(user, admin_client, user_client=nil)
+  def apply_function(user, admin_client, user_client='')
     @starting_categories_updated = @categories_updated
     @users_username = user['username']
     @users_groups = user_client.user(@users_username)['groups']
@@ -77,7 +77,6 @@ def global_category_to_watching
     end
   end
 
-  # apply_to_all_users(needs_user_client=true)
   if @target_groups
     @target_groups.each do |group_plug|
       apply_to_group_users(group_plug, needs_user_client=true, skip_staged_user=true)

@@ -37,5 +37,6 @@ scan_hourly
 
 scan_summary
 
+# todo add user_group_notify_to_default
 # todo save log to disk
 # todo tests
