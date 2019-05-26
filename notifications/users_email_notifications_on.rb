@@ -18,7 +18,7 @@ client = connect_to_instance('live')   # 'live' or 'local'
 @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin)
 @field_settings = "%-18s %-24s %-14s %-14s %-14s %-14s\n"
 
-@user_count, @matching_categories_count, @users_updated = 0, 0, 0, 0
+zero_counters
 
 def print_user_options(user_option)
   printf @field_settings, @users_username,
@@ -30,7 +30,7 @@ end
 # standardize_email_settings
 def apply_function(user, admin_client, user_client='')
   @users_username = user['username']
-  @user_count += 1
+  # @user_count += 1
   user_details = user_client.user(@users_username)
   user_groups = user_details['groups']
   user_option = user_details['user_option']
@@ -72,7 +72,8 @@ printf @field_settings, 'UserName',
 
 apply_to_all_users(client)
 
-puts "\n#{@users_updated} users updated out of #{@user_count} users found."
+# puts "\n#{@users_updated} users updated out of #{@user_count} users found."
+scan_summary
 
 
 # Feb 27, 2019

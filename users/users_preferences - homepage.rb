@@ -25,7 +25,7 @@ client = connect_to_instance('live') # 'live' or 'local'
 @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin )
 @field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
 
-@user_count, @user_targets, @users_updated = 0, 0, 0, 0
+zero_counters
 
 def print_user_options(user_details)
   printf @field_settings, @users_username,
@@ -37,7 +37,7 @@ end
 # standardize_email_settings
 def apply_function(user, admin_client, user_client='')  # TODO 1. update homepage_id
   @users_username = user['username']
-  @user_count += 1
+  # @user_count += 1
   user_details = user_client.user(@users_username)
   user_groups = user_details['groups']
   user_option = user_details['user_option']
@@ -80,4 +80,5 @@ printf @field_settings, 'UserName',
 
 apply_to_all_users(client)
 
-puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets out of #{@user_count} total users."
+# puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets out of #{@user_count} total users."
+scan_summary

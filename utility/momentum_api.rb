@@ -21,6 +21,7 @@ def connect_to_instance(api_username, instance=@instance)
 end
 
 def apply_call(admin_client, needs_user_client, user)
+  @user_count += 1
   if needs_user_client
     user_client = connect_to_instance(user['username'])
     apply_function(user, admin_client, user_client)
@@ -46,7 +47,7 @@ def apply_to_all_users(needs_user_client=false, admin_username='KM_Admin')
         elsif not @exclude_user_names.include?(user['username']) and user['active'] == true
           printf "%-15s %s \r", 'Scanning User: ', @user_count
           apply_call(admin_client, needs_user_client, user)
-          sleep 1 # needs to be 2 in some cases
+          # sleep 1 # needs to be 2 in some cases
         else
           @skipped_users += 1
         end
@@ -78,11 +79,10 @@ def apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=f
         end
       elsif not @exclude_user_names.include?(user['username'])
         if @issue_users.include?(user['username'])
-          puts "apply_to_group_users non excluded user: #{user['username']}"
+          puts "#{user['username']} in apply_to_group_users method"
         end
         printf "%-15s %s \r", 'Scanning User: ', @user_count
         apply_call(admin_client, needs_user_client, user)
-        sleep 1 # needs to be 2 in some cases
       end
     end
   end
@@ -164,5 +164,5 @@ end
 def zero_counters
   @user_count, @user_targets, @voter_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
       @sent_messages, @skipped_users, @matching_category_notify_users, @matching_categories_count,
-      @categories_updated = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      @categories_updated, @scan_passes = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 end

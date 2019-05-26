@@ -21,11 +21,12 @@ def global_category_to_watching(do_live_updates=false, target_category_slugs=nil
   # @target_groups = %w(BraveHearts)  # BraveHearts trust_level_1 trust_level_0 hit 100 record limit.
   @issue_users = %w() # past in debug issue user_names
 
-  @user_count = 0
-  @matching_category_notify_users = 0
-  @matching_categories_count = 0
-  @users_updated = 0
-  @categories_updated = 0
+  zero_counters
+  # @user_count = 0
+  # @matching_category_notify_users = 0
+  # @matching_categories_count = 0
+  # @users_updated = 0
+  # @categories_updated = 0
 
   def print_user(group_name)
     field_settings = "%-18s %-20s %-20s %-10s %-15s\n"

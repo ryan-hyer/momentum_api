@@ -30,7 +30,7 @@ Momentum Chief"
 # @target_username = 'KM_Admin'
 @issue_users = %w() # debug issue user_names
 @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin)
-@user_count, @sent_messages = 0, 0
+zero_counters
 @field_settings = "%-20s %-20s %-35s %-25s %-25s\n"
 
 
@@ -43,4 +43,5 @@ printf @field_settings, 'Message From', 'Message To', 'Slug', 'Starting Text', '
 
 apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=false, admin_user=@emails_from_username)
 
-puts "\n#{@sent_messages} messages sent for #{@user_count} users found."
+# puts "\n#{@sent_messages} messages sent for #{@user_count} users found."
+scan_summary

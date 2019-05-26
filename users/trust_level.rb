@@ -69,14 +69,13 @@ def scan_trust_levels(do_live_updates=false)
   @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin Kim_Miller system discobot)
   @field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
 
-  @user_count, @user_targets, @users_updated = 0, 0, 0, 0
-
+  zero_counters
 
   # standardize_email_settings
   def apply_function(user, admin_client, user_client='')
     # users_username = user['username']
     # puts user['username'], client.api_username
-    @user_count += 1
+    # @user_count += 1
     # puts user
     # puts user['username']
     user_details = admin_client.user(user['username'])

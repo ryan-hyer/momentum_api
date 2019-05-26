@@ -59,13 +59,15 @@ if __FILE__ == $0
   @target_username = 'Kim_Miller' # Kim_test_Staged Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
   @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin
                             Joe_Sabolefski Steve_Scott Howard_Bailey)
-  @user_count, @matching_category_notify_users, @matching_categories_count, @users_updated, @categories_updated,
-      @skipped_users = 0, 0, 0, 0, 0, 0
+  zero_counters
+  # @user_count, @matching_category_notify_users, @matching_categories_count, @users_updated, @categories_updated,
+  #     @skipped_users = 0, 0, 0, 0, 0, 0
 
   printf "%-18s %-18s %-15s %-15s\n", 'UserName', 'Group', "User's_Level", "Group's_Default"
 
   single_pass
 
-  puts "#{@matching_categories_count} Notification Settings updated for #{@user_count} Users."
+  # puts "#{@matching_categories_count} Notification Settings updated for #{@user_count} Users."
+  scan_summary
 
 end

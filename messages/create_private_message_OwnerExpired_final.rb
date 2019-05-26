@@ -30,13 +30,13 @@ Momentum Chief"
 # @target_username = 'Kim_Miller'
 @issue_users = %w() # debug issue user_names
 @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin)
-@user_count, @sent_messages = 0, 0
+zero_counters
 @field_settings = "%-20s %-20s %-35s %-25s %-25s\n"
 
 # standardize_email_settings
 def apply_function(user, admin_client, user_client='', group_plug='All')
   users_username = user['username']
-  @user_count += 1
+  # @user_count += 1
   printf @field_settings, @emails_from_username, users_username, @message_subject, @message_body[0..20], 'Pending'
   
   if @do_live_updates
@@ -61,4 +61,5 @@ printf @field_settings, 'Message From', 'Message To', 'Slug', 'Starting Text', '
 apply_to_group_users(group_plug, admin_client=@emails_from_username)
 # apply_to_group_users(client, group_plug)
 
-puts "\n#{@sent_messages} messages sent for #{@user_count} users found."
+scan_summary
+# puts "\n#{@sent_messages} messages sent for #{@user_count} users found."

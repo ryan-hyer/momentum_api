@@ -1,6 +1,6 @@
 require '../utility/momentum_api'
 require '../users/trust_level'
-require '../notifications/users_update_global_category_watching'
+require '../notifications/user_update_category_notification_level'
 require '../users_scores/user_scoring'
 
 
@@ -9,18 +9,6 @@ def print_user(user, category, group_name, notify_level)
   printf field_settings, 'UserName', 'Group', 'Category', 'Level', 'Status'
   printf field_settings, user['username'], group_name, category['slug'], notify_level.to_s.center(5), 'NOT_Watching'
 end
-
-# def print_user_options(user_details, user_option_print, user_label='UserName')
-#   field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
-#   printf field_settings, user_label,
-#          user_option_print[0], user_option_print[1], user_option_print[2],
-#          user_option_print[3], user_option_print[4], user_option_print[5]
-#
-#   printf field_settings, user_details['username'],
-#          user_details[user_option_print[0].to_s].to_s[0..9], user_details[user_option_print[1].to_s].to_s[0..9],
-#          user_details[user_option_print[2].to_s], user_details[user_option_print[3].to_s],
-#          user_details[user_option_print[4].to_s], user_details[user_option_print[5].to_s]
-# end
 
 def category_cases(client, user, users_categories, group_name)
   @starting_categories_updated = @categories_updated
@@ -32,28 +20,51 @@ def category_cases(client, user, users_categories, group_name)
     end
 
     case
-    when category['slug'] == 'Essential'    # Task #2
+    when category['slug'] == group_name
+      case_excludes = %w(Steve_Scott)
+      if case_excludes.include?(user['username'])
+        # puts "#{user['username']} specifically excluded from Watching Meta"
+      else
+        if @team_category_watching
+          # puts user['username']
+          # puts category['slug']
+          # puts category['notification_level']
+          set_category_notification(user, category, client, group_name, [3], 3,
+                                    do_live_updates = @do_live_updates)
+        end
+      end
+
+    when (category['slug'] == 'Essential' and group_name == 'Owner')
       case_excludes = %w(Steve_Scott)
       if case_excludes.include?(user['username'])
         # puts "#{user['username']} specifically excluded from Essential Watching"
       else                            # 4 = Watching first post, 3 = Watching, 1 = blank or ...?
-        set_category_notification(user, category, client, group_name, [3], 3, do_live_updates=@do_live_updates)
+        if @essential_watching
+          set_category_notification(user, category, client, group_name, [3], 3,
+                                    do_live_updates = @do_live_updates)
+        end
       end
 
-    when category['slug'] == 'Growth'       # Task #3
+    when (category['slug'] == 'Growth' and group_name == 'Owner')
       case_excludes = %w(Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
       if case_excludes.include?(user['username'])
         # puts "#{user['username']} specifically excluded from Watching Growth"
       else
-        set_category_notification(user, category, client, group_name, [3, 4], 4, do_live_updates=@do_live_updates)
+        if @growth_first_post
+          set_category_notification(user, category, client, group_name, [3, 4], 4,
+                                    do_live_updates = @do_live_updates)
+        end
       end
 
-    when category['slug'] == 'Meta'         # Task #4
+    when (category['slug'] == 'Meta' and group_name == 'Owner')
       case_excludes = %w(Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
       if case_excludes.include?(user['username'])
         # puts "#{user['username']} specifically excluded from Watching Meta"
       else
-        set_category_notification(user, category, client, group_name, [3, 4], 4, do_live_updates=@do_live_updates)
+        if @meta_first_post
+          set_category_notification(user, category, client, group_name, [3, 4], 4,
+                                    do_live_updates = @do_live_updates)
+        end
       end
 
     else
@@ -66,7 +77,7 @@ def category_cases(client, user, users_categories, group_name)
 end
 
 def apply_function(user, admin_client, user_client='')
-  @user_count += 1
+  # @user_count += 1
   # printf "%s\n", user['username']
   user_details = user_client.user(user['username'])
   sleep(2)
@@ -87,10 +98,12 @@ def apply_function(user, admin_client, user_client='')
       puts "\n#{user['username']}  with group: #{group_name}\n"
     end
 
+    category_cases(user_client, user, users_categories, group_name)
+
     # Group Filtered Category Case
-    if @target_groups and @target_groups.include?(group_name)
-        category_cases(user_client, user, users_categories, group_name)
-    end
+    # if @target_groups and @target_groups.include?(group_name)
+    #     category_cases(user_client, user, users_categories, group_name)
+    # end
 
     # Group Cases (make a method)
     case
@@ -102,21 +115,25 @@ def apply_function(user, admin_client, user_client='')
   end
 
   # Unfiltered category case
-  if @target_groups
-    # puts 'Not group filter'
-  else
-    category_cases(user_client, user, users_categories, 'Any')
-  end
+  # if @target_groups
+  #   # puts 'Not group filter'
+  # else
+  #   category_cases(user_client, user, users_categories, 'Any')
+  # end
 
   # Update Trust Level           # Task #1
-  update_trust_level(admin_client, is_owner, 0, user, user_details, do_live_updates=@do_live_updates)
+  if @trust_level_updates
+    update_trust_level(admin_client, is_owner, 0, user, user_details, do_live_updates = @do_live_updates)
+  end
 
   # User Scoring                 # Task #5
-  update_type = 'newly_voted'      # have_voted, not_voted, newly_voted, all
-  target_post = 28707            # 28649
-  target_polls = %w(version_two) # basic new version_two
-  poll_url = 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
-  scan_users_score(user_client, user, target_post, target_polls, poll_url, update_type=update_type, do_live_updates=@do_live_updates)
+  if @score_user_levels
+    update_type = 'newly_voted' # have_voted, not_voted, newly_voted, all
+    target_post = 28707 # 28649
+    target_polls = %w(version_two) # basic new version_two
+    poll_url = 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
+    scan_users_score(user_client, user, target_post, target_polls, poll_url, update_type = update_type, do_live_updates = @do_live_updates)
+  end
 
 end
 
@@ -149,9 +166,10 @@ if __FILE__ == $0
   @target_groups = %w(Mods)  # GreatX BraveHearts trust_level_1 trust_level_0 hit 100 record limit.
   @issue_users = %w() # past in debug issue user_names Brad_Fino
 
-  @user_count, @user_targets, @voter_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
-      @sent_messages, @skipped_users, @matching_category_notify_users, @matching_categories_count,
-      @categories_updated = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  # @user_count, @user_targets, @voter_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
+  #     @sent_messages, @skipped_users, @matching_category_notify_users, @matching_categories_count,
+  #     @categories_updated = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+  scan_summary
 
   run_tasks_for_all_users(do_live_updates=do_live_updates)
 

@@ -24,7 +24,7 @@ require '../utility/momentum_api'
 @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin )
 @field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
 
-@user_count, @user_targets, @users_updated = 0, 0, 0, 0
+zero_counters
 
 def print_user_options(user_details)
   printf @field_settings, user_details['username'],
@@ -37,7 +37,7 @@ end
 def apply_function(user, admin_client, user_client='')
   users_username = user['username']
   # puts users_username, client.api_username
-  @user_count += 1
+  # @user_count += 1
   user_details = user_client.user(users_username)
   user_fields = user_details[@user_preferences]
   user_groups = user_details['groups']
@@ -91,4 +91,5 @@ else
   apply_to_all_users
 end
 
-puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets out of #{@user_count} total users."
+# puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets out of #{@user_count} total users."
+scan_summary

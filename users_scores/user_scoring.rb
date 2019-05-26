@@ -114,7 +114,7 @@ end
 def scan_user_scores
 
   def apply_function(voting_user, admin_client, user_client='')
-    @user_count += 1
+    # @user_count += 1
     scan_users_score(user_client, voting_user, @target_post, @target_polls, @poll_url, update_type=@update_type,
                      do_live_updates=@do_live_updates)
   end
@@ -151,15 +151,18 @@ if __FILE__ == $0
   @issue_users = %w()             # debug issue user_names
   @exclude_user_names = %w()      # js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin
 
-  @user_count, @voter_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
-      @sent_messages, @users_score, @max_points_possible = 0, 0, 0, 0, 0, 0, 0, 0, 0
+  # @user_count, @voter_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
+  #     @sent_messages, @users_score, @max_points_possible = 0, 0, 0, 0, 0, 0, 0, 0, 0
+  zero_counters
 
   scan_user_scores
 
-  printf "%-30s %-20s \n", 'Qualifying targets: ', @voter_targets
-  printf "%-30s %-20s \n", 'New User Scores: ', @new_user_score_targets
-  printf "%-30s %-20s \n", 'Users Not yet voted:', @user_not_voted_targets
-  printf "%-30s %-20s \n", 'User messages sent: ', @sent_messages
-  printf "%-30s %-20s \n", 'Total Users: ', @user_count
+  scan_summary
+
+  # printf "%-30s %-20s \n", 'Qualifying targets: ', @voter_targets
+  # printf "%-30s %-20s \n", 'New User Scores: ', @new_user_score_targets
+  # printf "%-30s %-20s \n", 'Users Not yet voted:', @user_not_voted_targets
+  # printf "%-30s %-20s \n", 'User messages sent: ', @sent_messages
+  # printf "%-30s %-20s \n", 'Total Users: ', @user_count
 
 end

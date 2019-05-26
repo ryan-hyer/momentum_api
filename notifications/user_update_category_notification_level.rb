@@ -7,13 +7,14 @@ def set_category_notification(user, category, client, group_name, allowed_levels
 
     if do_live_updates
       update_response = client.category_set_user_notification(id: category['id'], notification_level: set_level)
+      sleep 1
       puts update_response
       @categories_updated += 1
 
-      # check if update happened
+      # check if update happened ... or ... comment out for no check after update
       user_details_after_update = client.categories
-      sleep(1)
-      user_details_after_update.each do |users_category_second_pass| # uncomment to check for the update
+      sleep 1
+      user_details_after_update.each do |users_category_second_pass|
         new_category_slug = users_category_second_pass['slug']
         if category['slug'] == new_category_slug
           puts "Updated Category: #{new_category_slug}    Notification Level: #{users_category_second_pass['notification_level']}\n"
@@ -35,8 +36,9 @@ def global_category_to_watching
     @starting_categories_updated = @categories_updated
     @users_username = user['username']
     @users_groups = user_client.user(@users_username)['groups']
+    sleep 1
     @users_categories = user_client.categories
-    sleep(2)
+    sleep 1
 
     if @issue_users.include?(@users_username)
       puts @users_username
@@ -71,7 +73,7 @@ def global_category_to_watching
         break
       end
     end
-    @user_count += 1
+    # @user_count += 1
     if @categories_updated > @starting_categories_updated
       @users_updated += 1
     end
@@ -110,19 +112,22 @@ if __FILE__ == $0
   @target_groups = %w(BraveHearts)  # BraveHearts trust_level_1 trust_level_0 hit 100 record limit.
   @issue_users = %w() # past in debug issue user_names
 
-  @user_count, @matching_category_notify_users, @matching_categories_count, @users_updated, @categories_updated,
-      @skipped_users = 0, 0, 0, 0, 0, 0
+  zero_counters
+  # @user_count, @matching_category_notify_users, @matching_categories_count, @users_updated, @categories_updated,
+  #     @skipped_users = 0, 0, 0, 0, 0, 0
 
   global_category_to_watching
-  
-  field_settings = "%-35s %-20s \n"
-  printf "\n"
-  printf field_settings, 'Categories', ''
-  printf field_settings, 'Categories Visible to Users: ', @matching_categories_count
-  printf field_settings, 'Users Needing Update: ', @matching_category_notify_users
-  printf field_settings, 'Users Skipped: ', @skipped_users
-  printf field_settings, 'Updated Categories: ', @categories_updated
-  printf field_settings, 'Updated Users: ', @users_updated
-  printf field_settings, 'Total Users: ', @user_count
+
+  scan_summary
+
+  # field_settings = "%-35s %-20s \n"
+  # printf "\n"
+  # printf field_settings, 'Categories', ''
+  # printf field_settings, 'Categories Visible to Users: ', @matching_categories_count
+  # printf field_settings, 'Users Needing Update: ', @matching_category_notify_users
+  # printf field_settings, 'Users Skipped: ', @skipped_users
+  # printf field_settings, 'Updated Categories: ', @categories_updated
+  # printf field_settings, 'Updated Users: ', @users_updated
+  # printf field_settings, 'Total Users: ', @user_count
 
 end

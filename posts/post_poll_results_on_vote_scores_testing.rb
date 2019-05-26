@@ -49,13 +49,14 @@ require '../users_scores/user_scores_utility'
 @target_groups = %w(Mods)
 @field_settings = "%-18s %-20s %-10s %-10s %-5s %-2s %-7s\n"
 
-@user_count, @user_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets = 0, 0, 0, 0, 0, 0
+# @user_count, @user_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets = 0, 0, 0, 0, 0, 0
+zero_counters
 
 def apply_function(voting_user, admin_client, user_client='')
   post = user_client.get_post(@target_post)
   polls = post['polls']
   users_username = user_client.api_username
-  @user_count += 1
+  # @user_count += 1
 
   polls.each do |poll|
     poll_name = poll['name']
@@ -176,4 +177,5 @@ else
   apply_to_all_users
 end
 
-puts "\n#{@sent_messages} user messages sent, #{@new_user_score_targets} new User Scores, and #{@user_not_voted_targets} Users Not yet voted out of #{@user_targets} possible targets out of #{@user_count} total users."
+# puts "\n#{@sent_messages} user messages sent, #{@new_user_score_targets} new User Scores, and #{@user_not_voted_targets} Users Not yet voted out of #{@user_targets} possible targets out of #{@user_count} total users."
+scan_summary

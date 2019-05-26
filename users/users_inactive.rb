@@ -8,7 +8,8 @@ client.api_key = ENV['REMOTE_DISCOURSE_API']
 client.api_username = 'KM_Admin'
 
 # find users
-@user_count = 0
+zero_counters
+# @user_count = 0
 @admin_count = 0
 @user_list = []
 @admin_list = []
@@ -36,7 +37,7 @@ puts @users_whole_sorted.length
   @user = "#{user['username']}   Created: #{@created}   Last Seen: #{@last_seen}"
   if not user['admin']
     @user_list << @user
-    @user_count += 1
+    # @user_count += 1
   else
     @admin_list << @user
     @admin_count += 1
@@ -44,6 +45,7 @@ puts @users_whole_sorted.length
 end
 
 puts @user_list
-puts "#{@user_count} Users"
+# puts "#{@user_count} Users"
 puts @admin_list
 puts "#{@admin_count} Admins"
+scan_summary

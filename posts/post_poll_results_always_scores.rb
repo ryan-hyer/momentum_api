@@ -28,7 +28,7 @@ require '../utility/momentum_api'
 @field_settings = "%-18s %-10s %-10s %-10s %-10s\n"
 # @field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
 
-@user_count, @user_targets, @users_updated = 0, 0, 0, 0
+zero_counters
 
 def print_user_options(user_details)
   printf @field_settings, user_details['username'],
@@ -43,7 +43,7 @@ def apply_function(user, admin_client, user_client='')
   polls = post['polls']
   # users_username = user['username']
   # puts users_username, client.api_username
-  @user_count += 1
+  # @user_count += 1
   # user_details = client.user(users_username)
   # user_groups = user_details['groups']
   # user_option = user_details['user_option']
@@ -132,8 +132,8 @@ end
 printf @field_settings, 'User', 'Poll', 'Does', 'Wants', '%'
 
 
-client = connect_to_instance('KM_Admin')
-apply_function(client)
+# client = connect_to_instance('KM_Admin')
+# apply_function(client)
 
 # if @target_groups
 #   @target_groups.each do |group_plug|
@@ -143,4 +143,5 @@ apply_function(client)
 #   apply_to_all_users
 # end
 
-puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets out of #{@user_count} total users."
+# puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets out of #{@user_count} total users."
+scan_summary
