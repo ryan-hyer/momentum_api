@@ -100,11 +100,6 @@ def apply_function(user, admin_client, user_client='')
 
     category_cases(user_client, user, users_categories, group_name)
 
-    # Group Filtered Category Case
-    # if @target_groups and @target_groups.include?(group_name)
-    #     category_cases(user_client, user, users_categories, group_name)
-    # end
-
     # Group Cases (make a method)
     case
     when group_name == 'Owner'
@@ -114,25 +109,19 @@ def apply_function(user, admin_client, user_client='')
     end
   end
 
-  # Unfiltered category case
-  # if @target_groups
-  #   # puts 'Not group filter'
-  # else
-  #   category_cases(user_client, user, users_categories, 'Any')
-  # end
-
-  # Update Trust Level           # Task #1
+  # Update Trust Level
   if @trust_level_updates
     update_trust_level(admin_client, is_owner, 0, user, user_details, do_live_updates = @do_live_updates)
   end
 
-  # User Scoring                 # Task #5
+  # User Scoring
   if @score_user_levels
     update_type = 'newly_voted' # have_voted, not_voted, newly_voted, all
-    target_post = 28707 # 28649
+    target_post = 28707    # 28649
     target_polls = %w(version_two) # basic new version_two
     poll_url = 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
-    scan_users_score(user_client, user, target_post, target_polls, poll_url, update_type = update_type, do_live_updates = @do_live_updates)
+    scan_users_score(user_client, user, target_post, target_polls, poll_url, update_type = update_type,
+                     do_live_updates = @do_live_updates)
   end
 
 end

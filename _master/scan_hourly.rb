@@ -1,13 +1,13 @@
 require '../_master/apply_to_users'
 
-@live_scan_updates      =   true
+@live_scan_updates      =   false
 
 @team_category_watching =   true
-@essential_watching     =   false
-@growth_first_post      =   false
-@meta_first_post        =   false
-@trust_level_updates    =   false
-@score_user_levels      =   false
+@essential_watching     =   true
+@growth_first_post      =   true
+@meta_first_post        =   true
+@trust_level_updates    =   true
+@score_user_levels      =   true
 
 @instance = 'live' # 'live' or 'local'
 @emails_from_username = 'Kim_Miller'
@@ -17,7 +17,7 @@ require '../_master/apply_to_users'
 
 # testing variables
 # @target_username = 'Michael_Skowronek' # Kim_Miller Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
-@target_groups = %w(expedition02)  # Mods GreatX BraveHearts (trust_level_1 trust_level_0 hits 100 record limit)
+# @target_groups = %w(expedition02)  # Mods GreatX BraveHearts (trust_level_1 trust_level_0 hits 100 record limit)
 @issue_users = %w() # past in debug issue user_names Brad_Fino Michael_Skowronek
 @scan_passes_end = 1
 

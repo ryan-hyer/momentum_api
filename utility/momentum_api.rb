@@ -21,6 +21,7 @@ def connect_to_instance(api_username, instance=@instance)
 end
 
 def apply_call(admin_client, needs_user_client, user)
+  # puts user['username']
   @user_count += 1
   if needs_user_client
     user_client = connect_to_instance(user['username'])
@@ -38,7 +39,6 @@ def apply_to_all_users(needs_user_client=false, admin_username='KM_Admin')
     if @users.empty?
       starting_page_of_users = 0
     else
-      # puts "Page .................. #{starting_page_of_users}"
       @users.each do |user|
         if @target_username
           if user['username'] == @target_username
@@ -47,7 +47,6 @@ def apply_to_all_users(needs_user_client=false, admin_username='KM_Admin')
         elsif not @exclude_user_names.include?(user['username']) and user['active'] == true
           printf "%-15s %s \r", 'Scanning User: ', @user_count
           apply_call(admin_client, needs_user_client, user)
-          # sleep 1 # needs to be 2 in some cases
         else
           @skipped_users += 1
         end
@@ -130,6 +129,12 @@ def print_user_options(user_details, user_option_print, user_label='UserName', p
 end
 
 
+def zero_counters
+  @user_count, @user_targets, @voter_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
+      @sent_messages, @skipped_users, @matching_category_notify_users, @matching_categories_count,
+      @categories_updated, @scan_passes = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+end
+
 def scan_summary
   field_settings = "%-35s %-20s \n"
 
@@ -161,8 +166,3 @@ def scan_summary
 end
 
 
-def zero_counters
-  @user_count, @user_targets, @voter_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
-      @sent_messages, @skipped_users, @matching_category_notify_users, @matching_categories_count,
-      @categories_updated, @scan_passes = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-end

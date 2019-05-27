@@ -17,7 +17,7 @@ def scan_users_score(client, voting_user, target_post, target_polls, poll_url, u
     if target_polls.include?(poll['name'])
 
       begin
-        poll_option_votes = client.voters(post_id: target_post, poll_name: poll['name'], api_username: users_username)['voters']
+        poll_option_votes = client.poll_voters(post_id: target_post, poll_name: poll['name'], api_username: users_username)['voters']
       rescue
         # voter has not voted
         poll_option_votes = nil
@@ -141,13 +141,13 @@ if __FILE__ == $0
   @emails_from_username = 'Kim_Miller'
 
   # poll parameters
-  @update_type = 'have_voted'            # have_voted, not_voted, newly_voted, all
+  @update_type = 'not_voted'            # have_voted, not_voted, newly_voted, all
   @target_post = 28707            # 28649
   @target_polls = %w(version_two) # basic new version_two
   @poll_url = 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
 
   # testing variables
-  @target_username = 'David_Kirk' # David_Ashby, Ryan_Hyer,Stefan_Schmitz KM_Admin Kim_Miller
+  # @target_username = 'KM_Admin' # David_Ashby, Ryan_Hyer,Stefan_Schmitz KM_Admin Kim_Miller
   @issue_users = %w()             # debug issue user_names
   @exclude_user_names = %w()      # js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin
 
