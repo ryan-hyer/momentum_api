@@ -1,6 +1,7 @@
 require '../_master/apply_to_users'
 
-@live_scan_updates      =   false
+@live_scan_updates      =   true
+@scan_passes_end        =   5
 
 @team_category_watching =   true
 @essential_watching     =   true
@@ -19,7 +20,6 @@ require '../_master/apply_to_users'
 # @target_username = 'Michael_Skowronek' # Kim_Miller Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
 # @target_groups = %w(expedition02)  # Mods GreatX BraveHearts (trust_level_1 trust_level_0 hits 100 record limit)
 @issue_users = %w() # past in debug issue user_names Brad_Fino Michael_Skowronek
-@scan_passes_end = 1
 
 def scan_hourly
 
@@ -28,7 +28,9 @@ def scan_hourly
   @scan_passes += 1
   printf "%s\n", "\nPass #{@scan_passes} complete \n"
 
-  # sleep(5 * 60)
+  printf "%s\n", "\nWaiting 1 hour ... \n"
+  sleep(60 * 60)
+
   if @scan_passes < @scan_passes_end
     printf "%s\n", 'Repeating Scan'
     scan_hourly
