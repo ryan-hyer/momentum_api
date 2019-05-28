@@ -16,7 +16,7 @@ def scan_users_score(client, voting_user, target_post, target_polls, poll_url, u
   polls.each do |poll|
     if target_polls.include?(poll['name'])
 
-      begin
+      begin  # todo find and trap only specific DiscourseApi:: ... error
         poll_option_votes = client.poll_voters(post_id: target_post, poll_name: poll['name'], api_username: users_username)['voters']
       rescue
         # voter has not voted

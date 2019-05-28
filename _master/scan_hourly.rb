@@ -1,7 +1,7 @@
 require '../_master/apply_to_users'
 
-@live_scan_updates      =   true
 @scan_passes_end        =   5
+@live_scan_updates      =   true
 
 @team_category_watching =   true
 @essential_watching     =   true
