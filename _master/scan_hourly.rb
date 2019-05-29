@@ -1,4 +1,4 @@
-require '../_master/apply_to_users'
+require '../_master/apply_to_users_v1'
 
 @scan_passes_end        =   5
 @live_scan_updates      =   true

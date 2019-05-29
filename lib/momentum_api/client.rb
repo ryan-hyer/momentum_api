@@ -1,27 +1,29 @@
-# $LOAD_PATH.unshift File.expand_path('../../../../discourse_api/lib', __FILE__)
-# require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__)
+$LOAD_PATH.unshift File.expand_path('../../../../discourse_api/lib', __FILE__)
+require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__)
 require_relative '../momentum_api/notification'
-# require_relative 'momentum_api/notification'
-# require 'discourse_api/api/site_settings'
 
 module MomentumApi
   class Client
-    # attr_accessor :api_key
-    attr_reader :instance, :api_username
+    attr_accessor :do_live_updates, :users_updated, :categories_updated
+    # attr_reader :instance, :api_username
 
     include MomentumApi::Notification
 
-    def initialize(api_username, instance, do_live_updates=false, target_username=[])
+    def initialize(api_username, instance, do_live_updates=false, target_groups=[], target_username=nil)
       raise ArgumentError, 'api_username needs to be defined' if api_username.nil? || api_username.empty?
-      @api_username = api_username
-      @instance = instance
-      @admin_client = connect_to_instance(api_username, instance)
 
+      @do_live_updates    = do_live_updates
+      @target_groups      = target_groups
+      @api_username       = api_username
+      @instance           = instance
+      @admin_client       = connect_to_instance(api_username, instance)
+
+      @target_username    = target_username
       @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin
                             Joe_Sabolefski Steve_Scott Howard_Bailey)
-      @do_live_updates    = do_live_updates
-      @target_username    = target_username
+      @issue_users        = %w()
       zero_counters
+
     end
 
 
@@ -32,8 +34,6 @@ module MomentumApi
       when 'live'
         client = DiscourseApi::Client.new('https://discourse.gomomentum.org/')
         client.api_key = ENV['REMOTE_DISCOURSE_API']
-        # puts 'Live'
-        # puts ENV['REMOTE_DISCOURSE_API']
       when 'local'
         client = DiscourseApi::Client.new('http://localhost:3000')
         client.api_key = ENV['LOCAL_DISCOURSE_API']
@@ -44,99 +44,60 @@ module MomentumApi
       client
     end
 
-    def apply_call(master_client, needs_user_client, user)
-      # puts user['username']
+    def apply_call(apply_fun, user)
+      user_details = @admin_client.user(user['username'])    # todo trap DiscourseApi::TooManyRequests
+      sleep 1
       @user_count += 1
-      if needs_user_client
-        user_client = connect_to_instance(user['username'])
-        apply_function(master_client, user, user_client)
+      user_client = connect_to_instance(user['username'])
+      apply_fun.call(self, user_details, user_client)
+    end
+
+    def apply_to_users(apply_function, skip_staged_user=true)
+      if @target_groups
+        @target_groups.each do |group_name| # todo move to head
+          apply_to_group_users(apply_function, group_name, skip_staged_user)
+        end
       else
-        apply_function(master_client, user)
+        apply_to_group_users('trust_level_1', skip_staged_user)
       end
     end
 
-    def apply_to_all_users(master_client, needs_user_client=false, admin_username='KM_Admin')
-      starting_page_of_users = 1
-      while starting_page_of_users > 0
-        # admin_client = connect_to_instance(admin_username)
-        # admin_client = connect_to_instance(admin_username)
-        @users = @admin_client.list_users('active', page: starting_page_of_users)
-        if @users.empty?
-          starting_page_of_users = 0
-        else
-          @users.each do |user|
-            if @target_username
-              if user['username'] == @target_username
-                apply_call(master_client, needs_user_client, user)
-              end
-            elsif not @exclude_user_names.include?(user['username']) and user['active'] == true
-              printf "%-15s %s \r", 'Scanning User: ', @user_count
-              apply_call(master_client, needs_user_client, user)
-            else
-              @skipped_users += 1
-            end
-          end
-          starting_page_of_users += 1
-        end
-      end
-    end
-
-    def apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=false, admin_username='KM_Admin')
-      admin_client = connect_to_instance(admin_username)
-      members = admin_client.group_members(group_plug)
-      members.each do |user|
-        staged = false
-        if skip_staged_user
-          if user['last_seen_at']
-            staged = false
-          else
-            full_user = admin_client.user(user['username'])
-            staged = full_user['staged']
-          end
-        end
+    def apply_to_group_users(apply_function, group_name, skip_staged_user=false)
+      users = @admin_client.group_members(group_name, limit: 10000)
+      users.each do |user|
+        staged = staged_skip?(@admin_client, skip_staged_user, user)
         if staged
           # puts "Skipping staged user #{user['username']}"
         else
           if @target_username
             if user['username'] == @target_username
-              apply_call(admin_client, needs_user_client, user)
+              apply_call(apply_function, user)
             end
           elsif not @exclude_user_names.include?(user['username'])
             if @issue_users.include?(user['username'])
               puts "#{user['username']} in apply_to_group_users method"
             end
             printf "%-15s %s \r", 'Scanning User: ', @user_count
-            apply_call(admin_client, needs_user_client, user)
+            apply_call(apply_function, user)
+          else
+            @skipped_users += 1
           end
         end
       end
     end
 
-    # def send_private_message(from_username, to_username, message_subject, message_body, do_live_updates)
-    #   if from_username == to_username and from_username != 'KM_Admin'
-    #     from_username = 'KM_Admin'
-    #   end
-    #   from_client = connect_to_instance(from_username)
-    #
-    #   field_settings = "%-18s %-20s %-20s %-55s %-25s %-25s\n"
-    #   printf field_settings, '  Message From:', from_client.api_username, to_username, message_subject, message_body[0..20], 'Pending'
-    #
-    #   if do_live_updates
-    #     response = from_client.create_private_message(
-    #         title: message_subject,
-    #         raw: message_body,
-    #         target_usernames: to_username
-    #     )
-    #
-    #     # check if update happened
-    #     created_message = from_client.get_post(response['id'])
-    #     printf field_settings, '  Message From:', created_message['username'], to_username, created_message['topic_slug'], created_message['raw'][0..20], 'Sent'
-    #
-    #     @sent_messages += 1
-    #     sleep(1)
-    #   end
-    # end
-
+    def staged_skip?(admin_client, skip_staged_user, user)
+      staged = false
+      if skip_staged_user
+        if user['last_seen_at']
+          staged = false
+        else
+          full_user = admin_client.user(user['username'])
+          staged = full_user['staged']
+        end
+      end
+      staged
+    end
 
     def print_user_options(user_details, user_option_print, user_label='UserName', pos_5=user_details[user_option_print[5].to_s])
 
@@ -208,8 +169,5 @@ module MomentumApi
       end
     end
 
-    # def check_subdirectory(host)
-    #   URI(host).request_uri != '/'
-    # end
   end
 end
