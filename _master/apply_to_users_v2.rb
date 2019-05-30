@@ -1,22 +1,13 @@
 require '../lib/momentum_api'
-# require '../utility/momentum_api'
-require '../users/trust_level'
-# require '../notifications/user_update_category_notification_level'
 require '../users_scores/user_scoring'
 
-
-def print_user(user_details, category, group_name, notify_level)
-  field_settings = "%-18s %-20s %-20s %-10s %-15s\n"
-  printf field_settings, 'UserName', 'Group', 'Category', 'Level', 'Status'
-  printf field_settings, user_details['username'], group_name, category['slug'], notify_level.to_s.center(5), 'NOT_Watching'
-end
 
 def category_cases(master_client, user_details, users_categories, group_name, user_client)
   starting_categories_updated = master_client.categories_updated
 
   users_categories.each do |category|
 
-    if @issue_users.include?(user_details['username'])
+    if master_client.issue_users.include?(user_details['username'])
       puts "\n#{user_details['username']}  Category case on category: #{category['slug']}\n"
     end
 
@@ -76,7 +67,7 @@ def apply_function(master_client, user_details, user_client)
   sleep 1
 
   is_owner = false
-  if @issue_users.include?(user_details['username'])
+  if master_client.issue_users.include?(user_details['username'])
     puts "#{user_details['username']} in apply_function"
   end
 
@@ -84,7 +75,7 @@ def apply_function(master_client, user_details, user_client)
   users_groups.each do |group|
     group_name = group['name']
 
-    if @issue_users.include?(user_details['username'])
+    if master_client.issue_users.include?(user_details['username'])
       puts "\n#{user_details['username']}  with group: #{group_name}\n"
     end
 
@@ -101,7 +92,7 @@ def apply_function(master_client, user_details, user_client)
 
   # Update Trust Level
   if @trust_level_updates
-    update_trust_level(@admin_client, is_owner, 0, user_details, user_details, do_live_updates = @do_live_updates)
+    master_client.update_user_trust_level(is_owner, 0, user_details)
   end
 
   # Update User Group Alias Notification
@@ -121,20 +112,20 @@ def apply_function(master_client, user_details, user_client)
 
 end
 
-def run_tasks_for_all_users(do_live_updates=false)
-  @do_live_updates = do_live_updates
-
-  zero_counters
-
-  if @target_groups
-    @target_groups.each do |group_plug|
-      apply_to_group_users(group_plug, needs_user_client=true, skip_staged_user=true)
-    end
-  else
-    apply_to_all_users(needs_user_client=true)
-  end
-
-end
+# def run_tasks_for_all_users(do_live_updates=false)
+#   @do_live_updates = do_live_updates
+#
+#   zero_counters
+#
+#   if @target_groups
+#     @target_groups.each do |group_plug|
+#       apply_to_group_users(group_plug, needs_user_client=true, skip_staged_user=true)
+#     end
+#   else
+#     apply_to_all_users(needs_user_client=true)
+#   end
+#
+# end
 
 if __FILE__ == $0
 
@@ -142,22 +133,18 @@ if __FILE__ == $0
   @essential_watching       =   true
   @growth_first_post        =   false
   @meta_first_post          =   false
-  @trust_level_updates      =   false
+  @trust_level_updates      =   true
   @score_user_levels        =   false
   @user_group_alias_notify  =   false
 
-  @emails_from_username   =   'Kim_Miller'
+  @emails_from_username     =   'Kim_Miller'
 
-  @issue_users            =   %w()
-  # @exclude_user_names     =   %w(system discobot js_admin sl_admin JP_Admin admin_sscott RH_admin KM_Admin Winston_Churchill
-  #                               Joe_Sabolefski)
-
-  do_live_updates = true
-  instance = 'live' # 'live' or 'local'
+  do_live_updates           =   false
+  instance                  =   'live' # 'live' or 'local'
 
   # testing variables
   target_username = nil # Kim_test_Staged Randy_Horton Steve_Scott Marty_Fauth Kim_Miller Don_Morgan
-  target_groups = %w(Mods)  # Mods GreatX BraveHearts (trust_level_1 trust_level_0 hits 100 record limit)
+  target_groups = %w(OwnerExpired)  # Mods GreatX BraveHearts (trust_level_1 trust_level_0 hits 100 record limit)
 
   master_client = MomentumApi::Client.new('KM_Admin', instance, do_live_updates=do_live_updates,
                                           target_groups=target_groups, target_username=target_username)

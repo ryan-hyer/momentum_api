@@ -1,124 +1,41 @@
-require '../utility/momentum_api'
+require '../lib/momentum_api'
+# require '../utility/momentum_api'
 
-def update_trust_level(admin_client, is_owner, trust_level_target, user, user_details, do_live_updates=false)
-  # puts 'update_trust_level'
-  if @issue_users.include?(user['username'])
-    puts "#{user['username']}  is_owner: #{is_owner}\n"
-  end
-  
-  if is_owner
-    # puts 'Is owner 2nd check true'
-  else
-    # what to update
-    if user_details['trust_level'] == trust_level_target
-      # print_user_options(user_details)
-      # puts 'User already correct'
-    else
+# set trust levels
+def apply_function(master_client, user_details, user_client)
+   @exclude_groups = %w(Owner)  # MidPen, LaunchpadV, trust_level_0 DaVinci
+  user_groups = user_details['groups']
+  is_owner = false
 
-      user_option_print = %w(
-      last_seen_at
-      last_posted_at
-      post_count
-      time_read
-      recent_time_read
-      trust_level
-    )
-
-      print_user_options(user_details, user_option_print, 'Non Owner')
-      # puts 'User to be updated'
-      @user_targets += 1
-      if do_live_updates
-
-        update_response = admin_client.update_trust_level(user_id: user['id'], level: trust_level_target)
-        puts "#{update_response['admin_user']['username']} Updated"
-        @users_updated += 1
-
-        # check if update happened
-        user_details_after_update = admin_client.user(user['username'])
-        print_user_options(user_details_after_update, user_option_print, 'Non Owner')
-        sleep(1)
-      end
-    end
-  end
-end
-
-def scan_trust_levels(do_live_updates=false)
-
-  @do_live_updates = do_live_updates
-  @instance = 'live' # 'live' or 'local'
-
-  # testing variables
-  # @target_username = 'John_Thompson'  # David_Ashby Ryan_Hyer Kim_Miller
-  @issue_users = %w() # debug issue user_names
-
-  @user_preferences = 'trust_level'
-  @user_preferences_targets = 0
-
-  @user_option_print = %w(
-      last_seen_at
-      last_posted_at
-      post_count
-      time_read
-      recent_time_read
-      trust_level
-  )
-
-  # @target_groups = %w(trust_level_1)  # LaunchpadV, trust_level_0 trust_level_1 ... needs apply_to_all_users
-  @target_username = 'Brad_Fino' # John_Oberstar Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
-  @exclude_groups = %w(Owner)  # MidPen, LaunchpadV, trust_level_0 DaVinci
-  @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin Kim_Miller system discobot)
-  @field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
-
-  zero_counters
-
-  # standardize_email_settings
-  def apply_function(user, admin_client, user_client='')
-    # users_username = user['username']
-    # puts user['username'], client.api_username
-    # @user_count += 1
-    # puts user
-    # puts user['username']
-    user_details = admin_client.user(user['username'])
-    # existing_trust_level = user_details[@user_preferences]
-    user_groups = user_details['groups']
-    is_owner = false
-
-    user_groups.each do |group|
-      group_name = group['name']
-      if @issue_users.include?(user['username'])
-        puts "\n#{user['username']}  Group: #{group_name}\n"
-      end
-
-      if @exclude_groups.include?(group_name)
-        # puts "#{user['username']} is in the #{group_name} group."
-        is_owner = true
-        break
-      else
-        is_owner = false
-      end
+  user_groups.each do |group|
+    group_name = group['name']
+    if master_client.issue_users.include?(user_details['username'])
+      puts "\n#{user_details['username']}  Group: #{group_name}\n"
     end
 
-    update_trust_level(admin_client, is_owner, 0, user, user_details, do_live_updates=@do_live_updates)
-
-  end
-
-  if @target_groups
-    @target_groups.each do |group_plug|
-      apply_to_group_users(group_plug, needs_user_client=false, skip_staged_user=false)
+    if group_name == 'Owner'
+      is_owner = true
+      break
     end
-  else
-    apply_to_all_users
   end
+
+   master_client.update_user_trust_level(is_owner, 0, user_details)
 
 end
 
-if __FILE__ == $0
-  scan_trust_levels(do_live_updates=false)
-end
+do_live_updates = false
+instance = 'live' # 'live' or 'local'
 
+# testing variables
+target_username = 'Brad_Fino' # Kim_test_Staged Brad_Fino Steve_Scott Marty_Fauth Kim_Miller Don_Morgan
+target_groups = %w(OwnerExpired)  # trust_level_0 Mods GreatX BraveHearts trust_level_1
 
-# scan_trust_levels(do_live_updates=false)
-# puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets out of #{@user_count} total users."
+master_client = MomentumApi::Client.new('KM_Admin', instance, do_live_updates=do_live_updates,
+                                        target_groups=target_groups, target_username=target_username)
+
+master_client.apply_to_users(method(:apply_function))
+master_client.scan_summary
+
 
 # Updated May 20, 2019
 # UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level

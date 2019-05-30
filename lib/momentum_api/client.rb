@@ -1,13 +1,15 @@
 $LOAD_PATH.unshift File.expand_path('../../../../discourse_api/lib', __FILE__)
 require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__)
 require_relative '../momentum_api/notification'
+require_relative '../momentum_api/user'
 
 module MomentumApi
   class Client
-    attr_accessor :do_live_updates, :users_updated, :categories_updated
+    attr_accessor :do_live_updates, :issue_users, :users_updated, :categories_updated
     # attr_reader :instance, :api_username
 
     include MomentumApi::Notification
+    include MomentumApi::User
 
     def initialize(api_username, instance, do_live_updates=false, target_groups=[], target_username=nil)
       raise ArgumentError, 'api_username needs to be defined' if api_username.nil? || api_username.empty?
@@ -54,7 +56,7 @@ module MomentumApi
 
     def apply_to_users(apply_function, skip_staged_user=true)
       if @target_groups
-        @target_groups.each do |group_name| # todo move to head
+        @target_groups.each do |group_name|
           apply_to_group_users(apply_function, group_name, skip_staged_user)
         end
       else
@@ -93,6 +95,7 @@ module MomentumApi
           staged = false
         else
           full_user = admin_client.user(user['username'])
+          sleep 1
           staged = full_user['staged']
         end
       end
