@@ -2,6 +2,7 @@ $LOAD_PATH.unshift File.expand_path('../../../../discourse_api/lib', __FILE__)
 require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__)
 require_relative '../momentum_api/notification'
 require_relative '../momentum_api/user'
+require_relative '../momentum_api/messages'
 
 module MomentumApi
   class Client
@@ -10,20 +11,28 @@ module MomentumApi
 
     include MomentumApi::Notification
     include MomentumApi::User
+    include MomentumApi::Messages
 
     def initialize(api_username, instance, do_live_updates=false, target_groups=[], target_username=nil)
       raise ArgumentError, 'api_username needs to be defined' if api_username.nil? || api_username.empty?
 
-      @do_live_updates    = do_live_updates
+      # messages
+      @emails_from_username = 'Kim_Miller'
+
+      # parameter setting
+      @target_username    = target_username
       @target_groups      = target_groups
-      @api_username       = api_username
+      @do_live_updates    = do_live_updates
       @instance           = instance
+      @api_username       = api_username
       @admin_client       = connect_to_instance(api_username, instance)
 
-      @target_username    = target_username
+      # testing variables
       @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin
                             Joe_Sabolefski Steve_Scott Howard_Bailey)
       @issue_users        = %w()
+
+      # zero out counters
       zero_counters
 
     end
@@ -79,6 +88,7 @@ module MomentumApi
             if @issue_users.include?(user['username'])
               puts "#{user['username']} in apply_to_group_users method"
             end
+            puts user['username']
             printf "%-15s %s \r", 'Scanning User: ', @user_count
             apply_call(apply_function, user)
           else
@@ -118,10 +128,23 @@ module MomentumApi
 
 
     def zero_counters
-      @user_count, @user_targets, @voter_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
-          @sent_messages, @skipped_users, @matching_category_notify_users, @matching_categories_count,
-          @categories_updated, @scan_passes = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      @user_count                       = 0
+      @user_targets                     = 0
+      @users_updated                    = 0
+      @new_user_badge_targets           = 0
+      @sent_messages                    = 0
+      @skipped_users                    = 0
+      @matching_category_notify_users   = 0
+      @matching_categories_count        = 0
+      @categories_updated               = 0
+      @scan_passes                      = 0
     end
+
+    # def zero_counters
+    #   @user_count, @user_targets, @voter_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
+    #       @sent_messages, @skipped_users, @matching_category_notify_users, @matching_categories_count,
+    #       @categories_updated, @scan_passes = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    # end
 
     def scan_summary
       field_settings = "%-35s %-20s \n"
@@ -135,20 +158,20 @@ module MomentumApi
         printf field_settings, 'Updated Users: ', @users_updated
       end
 
-      if @voter_targets > 0
-        printf "\n"
-        printf field_settings, 'User Scores', ''
-        printf field_settings, 'Voter Targets: ', @voter_targets
-        printf field_settings, 'New User Scores: ', @new_user_score_targets
-        printf field_settings, 'New User Badges: ', @new_user_badge_targets
-        printf field_settings, 'Users Not yet voted:', @user_not_voted_targets
-        printf field_settings, 'User messages sent: ', @sent_messages
-      end
+      # if @voter_targets > 0           # todo needs to be passed from polls
+      #   printf "\n"
+      #   printf field_settings, 'User Scores', ''
+      #   printf field_settings, 'Voter Targets: ', @voter_targets
+      #   printf field_settings, 'New User Scores: ', @new_user_score_targets
+      #   printf field_settings, 'New User Badges: ', @new_user_badge_targets
+      #   printf field_settings, 'Users Not yet voted:', @user_not_voted_targets
+      #   printf field_settings, 'User messages sent: ', @sent_messages
+      # end
 
 
       printf "\n"
       printf "\n"
-      printf field_settings, 'Generalized targets: ', @user_targets #todo needs custom on each task
+      printf field_settings, 'Generalized targets: ', @user_targets # todo needs custom on each task
       printf field_settings, 'Processed Users: ', @user_count
       printf field_settings, 'Skipped Users: ', @skipped_users
     end

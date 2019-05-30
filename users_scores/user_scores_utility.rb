@@ -5,21 +5,6 @@ require File.expand_path('../../../discourse_api/lib/discourse_api', __FILE__)
 @user_fields = 'user_fields'
 @user_score_field = '5'
 
-# def print_user_options(user_details, user_option_print, user_label='UserName')
-#
-#   field_settings = "%-18s %-20s %-10s %-10s %-5s %-2s %-7s\n"
-#
-#   printf field_settings, user_label,
-#          user_option_print[0], user_option_print[1], user_option_print[2],
-#          user_option_print[3], user_option_print[4], user_option_print[5]
-#
-#   printf field_settings, user_details['username'],
-#          user_details[user_option_print[0].to_s].to_s[0..9], user_details[user_option_print[1].to_s].to_s[0..9],
-#          user_details[user_option_print[2].to_s], user_details[user_option_print[3].to_s],
-#          user_details[user_option_print[4].to_s], user_details[@user_fields][user_option_print[5].to_s]
-# end
-
-
 def score_voter(poll, poll_option_votes, users_username)
   current_voter_votes = 0.0
   current_voter_points = 0.0

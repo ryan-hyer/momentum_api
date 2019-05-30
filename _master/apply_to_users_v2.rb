@@ -1,5 +1,5 @@
 require '../lib/momentum_api'
-require '../users_scores/user_scoring'
+# require '../users_scores/user_scoring'
 
 
 def category_cases(master_client, user_details, users_categories, group_name, user_client)
@@ -63,7 +63,12 @@ end
 
 def apply_function(master_client, user_details, user_client)
   users_groups = user_details['groups']
-  users_categories = user_client.categories
+  begin
+    users_categories = user_client.categories
+  rescue DiscourseApi::UnauthenticatedError
+    users_categories = nil
+    puts "\n#{user_details['username']} : DiscourseApi::UnauthenticatedError - You are not permitted to view the requested resource.\n"
+  end
   sleep 1
 
   is_owner = false
@@ -79,7 +84,11 @@ def apply_function(master_client, user_details, user_client)
       puts "\n#{user_details['username']}  with group: #{group_name}\n"
     end
 
-    category_cases(master_client, user_details, users_categories, group_name, user_client)
+    if users_categories
+      category_cases(master_client, user_details, users_categories, group_name, user_client)
+    else
+      puts "\nSkipping Category Cases for #{user_details['username']}.\n"
+    end
 
     # Group Cases (make a method)
     case
@@ -129,13 +138,13 @@ end
 
 if __FILE__ == $0
 
-  @team_category_watching   =   false
+  @team_category_watching   =   true
   @essential_watching       =   true
-  @growth_first_post        =   false
-  @meta_first_post          =   false
+  @growth_first_post        =   true
+  @meta_first_post          =   true
   @trust_level_updates      =   true
   @score_user_levels        =   false
-  @user_group_alias_notify  =   false
+  @user_group_alias_notify  =   true
 
   @emails_from_username     =   'Kim_Miller'
 
@@ -143,8 +152,8 @@ if __FILE__ == $0
   instance                  =   'live' # 'live' or 'local'
 
   # testing variables
-  target_username = nil # Kim_test_Staged Randy_Horton Steve_Scott Marty_Fauth Kim_Miller Don_Morgan
-  target_groups = %w(OwnerExpired)  # Mods GreatX BraveHearts (trust_level_1 trust_level_0 hits 100 record limit)
+  target_username = nil # Steven_Lang_Test Kim_test_Staged Randy_Horton Steve_Scott Marty_Fauth Kim_Miller Don_Morgan
+  target_groups = %w(trust_level_1)  # OwnerExpired Mods GreatX BraveHearts trust_level_1 trust_level_0
 
   master_client = MomentumApi::Client.new('KM_Admin', instance, do_live_updates=do_live_updates,
                                           target_groups=target_groups, target_username=target_username)
