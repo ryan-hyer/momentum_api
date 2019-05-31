@@ -155,9 +155,6 @@ if __FILE__ == $0
   @target_groups = %w(Mods)  # GreatX BraveHearts trust_level_1 trust_level_0 hit 100 record limit.
   @issue_users = %w() # past in debug issue user_names Brad_Fino
 
-  # @user_count, @user_targets, @voter_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
-  #     @sent_messages, @skipped_users, @matching_category_notify_users, @matching_categories_count,
-  #     @categories_updated = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
   scan_summary
 
   run_tasks_for_all_users(do_live_updates=do_live_updates)

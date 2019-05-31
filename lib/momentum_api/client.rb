@@ -1,12 +1,12 @@
 $LOAD_PATH.unshift File.expand_path('../../../../discourse_api/lib', __FILE__)
 require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__)
-require_relative '../momentum_api/notification'
-require_relative '../momentum_api/user'
-require_relative '../momentum_api/messages'
+require_relative '../momentum_api/api/notification'
+require_relative '../momentum_api/api/user'
+require_relative '../momentum_api/api/messages'
 
 module MomentumApi
   class Client
-    attr_accessor :do_live_updates, :issue_users, :users_updated, :categories_updated
+    attr_accessor :do_live_updates, :issue_users, :users_updated, :categories_updated, :user_poll, :all_scores
     # attr_reader :instance, :api_username
 
     include MomentumApi::Notification
@@ -27,6 +27,8 @@ module MomentumApi
       @api_username       = api_username
       @admin_client       = connect_to_instance(api_username, instance)
 
+      @all_scores         = []
+
       # testing variables
       @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin
                             Joe_Sabolefski Steve_Scott Howard_Bailey)
@@ -37,6 +39,9 @@ module MomentumApi
 
     end
 
+    def add_task(task_instance)
+      @user_poll = task_instance
+    end
 
     def connect_to_instance(api_username, instance=@instance)
       # @admin_client = 'KM_Admin'
@@ -131,7 +136,6 @@ module MomentumApi
       @user_count                       = 0
       @user_targets                     = 0
       @users_updated                    = 0
-      @new_user_badge_targets           = 0
       @sent_messages                    = 0
       @skipped_users                    = 0
       @matching_category_notify_users   = 0
@@ -139,12 +143,6 @@ module MomentumApi
       @categories_updated               = 0
       @scan_passes                      = 0
     end
-
-    # def zero_counters
-    #   @user_count, @user_targets, @voter_targets, @new_user_score_targets, @users_updated, @user_not_voted_targets, @new_user_badge_targets,
-    #       @sent_messages, @skipped_users, @matching_category_notify_users, @matching_categories_count,
-    #       @categories_updated, @scan_passes = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    # end
 
     def scan_summary
       field_settings = "%-35s %-20s \n"
@@ -158,22 +156,23 @@ module MomentumApi
         printf field_settings, 'Updated Users: ', @users_updated
       end
 
-      # if @voter_targets > 0           # todo needs to be passed from polls
-      #   printf "\n"
-      #   printf field_settings, 'User Scores', ''
-      #   printf field_settings, 'Voter Targets: ', @voter_targets
-      #   printf field_settings, 'New User Scores: ', @new_user_score_targets
-      #   printf field_settings, 'New User Badges: ', @new_user_badge_targets
-      #   printf field_settings, 'Users Not yet voted:', @user_not_voted_targets
-      #   printf field_settings, 'User messages sent: ', @sent_messages
-      # end
-
+      if @all_scores.empty?
+        puts 'No scores ...'
+      else
+        @all_scores.each do |score|
+          printf "\n\n"
+          score.each do |key, value|
+            printf field_settings, key.to_s, value
+          end
+        end
+      end
 
       printf "\n"
-      printf "\n"
+      # printf "\n"
       printf field_settings, 'Generalized targets: ', @user_targets # todo needs custom on each task
       printf field_settings, 'Processed Users: ', @user_count
       printf field_settings, 'Skipped Users: ', @skipped_users
+      printf field_settings, 'User messages sent: ', @sent_messages
     end
 
 

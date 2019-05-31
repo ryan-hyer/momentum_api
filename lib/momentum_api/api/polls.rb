@@ -1,6 +1,6 @@
 module MomentumApi
   class Poll
-    # attr_accessor :do_live_updates
+    attr_accessor :user_scores
     # attr_reader :instance
 
 
@@ -16,6 +16,8 @@ module MomentumApi
       @poll_url             = poll_url
       @poll_names           = poll_names
       @update_type          = update_type
+
+      @user_scores          = {'User Scores': ''}
 
       # user score saving
       @user_fields = 'user_fields'
@@ -66,7 +68,8 @@ module MomentumApi
                 # print_scored_user(current_voter_points, existing_value, max_points_possible, poll, users_username)
                 # printf "%-30s \n", 'User Score is not new.'
               else
-                @voter_targets += 1
+                @user_scores[:'Voter Targets'] += 1
+                # @voter_targets += 1
                 update_user_profile_score(user_client, current_voter_points, user_details, users_username, master_client.do_live_updates)
                 # user_badge_level = update_user_profile_badges(client, current_voter_points, user_details, users_username, master_client.do_live_updates)
                 print_scored_user(current_voter_points, existing_value, max_points_possible, poll, users_username, user_badge_level)
@@ -87,8 +90,10 @@ module MomentumApi
             # if voter not voted
           else
             if @update_type == 'not_voted' or @update_type == 'all'
-              @voter_targets += 1
-              @user_not_voted_targets += 1
+              @user_scores[:'Voter Targets'] += 1
+              # @voter_targets += 1
+              @user_scores[:'Users Not yet voted'] += 1
+              # @user_not_voted_targets += 1
               printf "%-18s %-20s\n", users_username, 'has not voted yet'
               send_not_voted_message(users_username, user_details, @poll_url, master_client.do_live_updates)
               printf "\n"
@@ -153,7 +158,8 @@ module MomentumApi
 
 
     def update_user_profile_score(client, current_voter_points, user_details, users_username, do_live_updates=false)
-      @new_user_score_targets += 1
+      @user_scores[:'New User Scores'] += 1
+      # @new_user_score_targets += 1
       # puts 'User Score to be updated'
       user_option_print = %w(
       last_seen_at
@@ -202,7 +208,8 @@ module MomentumApi
     end
 
     def update_user_profile_badges(client, current_voter_points, user_details, users_username, do_live_updates=false)
-      @new_user_badge_targets += 1
+      @user_scores[:'New User Badges'] += 1
+      # @new_user_badge_targets += 1
       target_badge_name = nil
       # puts 'User Badges to be updated'
       # print_user_options(user_details, user_option_print)
@@ -245,9 +252,10 @@ module MomentumApi
     end
 
     def zero_poll_counters
-      @voter_targets                = 0
-      @new_user_score_targets       = 0
-      @user_not_voted_targets       = 0
+      @user_scores[:'Voter Targets']        =   0
+      @user_scores[:'New User Scores']      =   0
+      @user_scores[:'Users Not yet voted']  =   0
+      @user_scores[:'New User Badges']      =   0
     end
 
   end

@@ -79,7 +79,8 @@ def update_badge(client, target_badge_name, badge_id, users_username, do_live_up
 end
 
 def update_user_profile_badges(client, current_voter_points, user_details, users_username, do_live_updates=false)
-  @new_user_badge_targets += 1
+  @user_scores[:'New User Badges'] += 1
+  # @new_user_badge_targets += 1
   target_badge_name = nil
   # puts 'User Badges to be updated'
   # print_user_options(user_details, user_option_print)
