@@ -25,7 +25,11 @@ if __FILE__ == $0
   user_score_poll   = MomentumApi::Poll.new(master_client, target_post, poll_url=poll_url, poll_names=target_polls, update_type=update_type)
   master_client.add_task(user_score_poll)
 
-  master_client.apply_to_users(method(:apply_function))
+  scan_options = {
+      score_user_levels: true
+  }
+
+  master_client.apply_to_users(scan_options)
 
   master_client.all_scores << user_score_poll.user_scores
   master_client.scan_summary

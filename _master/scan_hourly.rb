@@ -1,13 +1,13 @@
 require '../_master/apply_to_users_v1'
 
-@scan_passes_end        =   5
-@live_scan_updates      =   true
+@scan_passes_end        =   1
+@live_scan_updates      =   false
 
-@team_category_watching =   true
-@essential_watching     =   true
-@growth_first_post      =   true
-@meta_first_post        =   true
-@trust_level_updates    =   true
+@team_category_watching =   false
+@essential_watching     =   false
+@growth_first_post      =   false
+@meta_first_post        =   false
+@trust_level_updates    =   false
 @score_user_levels      =   true
 
 @instance = 'live' # 'live' or 'local'

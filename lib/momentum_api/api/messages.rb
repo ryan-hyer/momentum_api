@@ -1,10 +1,8 @@
 module MomentumApi
   module Messages
-    # attr_accessor :do_live_updates, :issue_users, :users_updated, :categories_updated
-    # attr_reader :instance, :api_username
+    # attr_accessor :do_live_updates
+    # attr_reader :instance
 
-    # include MomentumApi::Notification
-    # include MomentumApi::User
 
     def initialize(post_id)
       raise ArgumentError, 'post_id needs to be defined' if post_id.nil?

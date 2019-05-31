@@ -1,7 +1,8 @@
 $LOAD_PATH.unshift File.expand_path('../../../../discourse_api/lib', __FILE__)
 require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__)
-require_relative '../momentum_api/api/notification'
-require_relative '../momentum_api/api/user'
+# require_relative '../momentum_api/api/notification'
+# require_relative '../momentum_api/api/user'
+require_relative '../momentum_api/man'
 require_relative '../momentum_api/api/messages'
 
 module MomentumApi
@@ -9,8 +10,9 @@ module MomentumApi
     attr_accessor :do_live_updates, :issue_users, :users_updated, :categories_updated, :user_poll, :all_scores
     # attr_reader :instance, :api_username
 
-    include MomentumApi::Notification
-    include MomentumApi::User
+    # include MomentumApi::Notification
+    # include MomentumApi::User
+    # include MomentumApi::Man
     include MomentumApi::Messages
 
     def initialize(api_username, instance, do_live_updates=false, target_groups=[], target_username=nil)
@@ -60,25 +62,35 @@ module MomentumApi
       client
     end
 
-    def apply_call(apply_fun, user)
+    def apply_call(user, scan_options)
       user_details = @admin_client.user(user['username'])    # todo trap DiscourseApi::TooManyRequests
       sleep 1
-      @user_count += 1
+
       user_client = connect_to_instance(user['username'])
-      apply_fun.call(self, user_details, user_client)
+      begin
+        users_categories = user_client.categories
+        sleep 1
+      rescue DiscourseApi::UnauthenticatedError
+        users_categories = nil
+        puts "\n#{user_details['username']} : DiscourseApi::UnauthenticatedError - Not permitted to view resource.\n"
+      end
+
+      @user_count += 1
+      man = MomentumApi::Man.new(user_client, user_details, users_categories=users_categories)
+      man.run_scans(self, scan_options)
     end
 
-    def apply_to_users(apply_function, skip_staged_user=true)
+    def apply_to_users(scan_options, skip_staged_user=true)
       if @target_groups
         @target_groups.each do |group_name|
-          apply_to_group_users(apply_function, group_name, skip_staged_user)
+          apply_to_group_users(group_name, scan_options, skip_staged_user)
         end
       else
-        apply_to_group_users('trust_level_1', skip_staged_user)
+        apply_to_group_users('trust_level_1', scan_options, skip_staged_user)
       end
     end
 
-    def apply_to_group_users(apply_function, group_name, skip_staged_user=false)
+    def apply_to_group_users(group_name, scan_options, skip_staged_user=false)
       users = @admin_client.group_members(group_name, limit: 10000)
       users.each do |user|
         staged = staged_skip?(@admin_client, skip_staged_user, user)
@@ -87,7 +99,7 @@ module MomentumApi
         else
           if @target_username
             if user['username'] == @target_username
-              apply_call(apply_function, user)
+              apply_call(user, scan_options)
             end
           elsif not @exclude_user_names.include?(user['username'])
             if @issue_users.include?(user['username'])
@@ -95,7 +107,7 @@ module MomentumApi
             end
             puts user['username']
             printf "%-15s %s \r", 'Scanning User: ', @user_count
-            apply_call(apply_function, user)
+            apply_call(user, scan_options)
           else
             @skipped_users += 1
           end

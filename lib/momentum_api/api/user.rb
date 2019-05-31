@@ -17,13 +17,13 @@ module MomentumApi
         else
 
           user_option_print = %w(
-      last_seen_at
-      last_posted_at
-      post_count
-      time_read
-      recent_time_read
-      trust_level
-    )
+            last_seen_at
+            last_posted_at
+            post_count
+            time_read
+            recent_time_read
+            trust_level
+          )
 
           print_user_options(user_details, user_option_print, 'Non Owner')
           # puts 'User to be updated'
