@@ -89,6 +89,8 @@ module MomentumApi
         poll_url          = 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
 
         @user_score_poll   = MomentumApi::Poll.new(self, target_post, poll_url=poll_url, poll_names=target_polls, update_type=update_type)
+        @all_scores << @user_score_poll.user_scores
+
       else
         puts 'No scan_options found.'
       end
