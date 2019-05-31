@@ -7,7 +7,7 @@ require_relative '../momentum_api/api/messages'
 
 module MomentumApi
   class Client
-    attr_accessor :do_live_updates, :issue_users, :users_updated, :categories_updated, :user_poll, :all_scores
+    attr_accessor :do_live_updates, :issue_users, :users_updated, :categories_updated, :user_score_poll, :all_scores
     # attr_reader :instance, :api_username
 
     # include MomentumApi::Notification
@@ -41,9 +41,9 @@ module MomentumApi
 
     end
 
-    def add_task(task_instance)
-      @user_poll = task_instance
-    end
+    # def add_task(task_instance)
+    #   @user_score_poll = task_instance
+    # end
 
     def connect_to_instance(api_username, instance=@instance)
       # @admin_client = 'KM_Admin'
@@ -81,6 +81,18 @@ module MomentumApi
     end
 
     def apply_to_users(scan_options, skip_staged_user=true)
+      case
+      when scan_options['score_user_levels'.to_sym]
+        update_type       = 'not_voted'      # have_voted, not_voted, newly_voted, all
+        target_post       = 28707            # 28649
+        target_polls      = %w(version_two) # basic new version_two
+        poll_url          = 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
+
+        @user_score_poll   = MomentumApi::Poll.new(self, target_post, poll_url=poll_url, poll_names=target_polls, update_type=update_type)
+      else
+        puts 'No scan_options found.'
+      end
+
       if @target_groups
         @target_groups.each do |group_name|
           apply_to_group_users(group_name, scan_options, skip_staged_user)

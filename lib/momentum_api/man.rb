@@ -73,12 +73,12 @@ module MomentumApi
       # User Scoring
       if scan_options['score_user_levels'.to_sym]
         puts scan_options['score_user_levels']
-        update_type = 'newly_voted' # have_voted, not_voted, newly_voted, all
-        target_post = 28707    # 28649
-        target_polls = %w(version_two) # basic new version_two
-        poll_url = 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
+        # update_type = 'newly_voted' # have_voted, not_voted, newly_voted, all
+        # target_post = 28707    # 28649
+        # target_polls = %w(version_two) # basic new version_two
+        # poll_url = 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
         # scan_users_score(@user_client, @user_details, target_post, target_polls, poll_url, update_type = update_type, do_live_updates = @do_live_updates)
-        master_client.user_poll.scan_users_score(master_client, @user_client, @user_details)
+        master_client.user_score_poll.scan_users_score(master_client, @user_client, @user_details)
       end
     end
 

@@ -124,14 +124,6 @@ require '../lib/momentum_api'
 
 if __FILE__ == $0
 
-  # @team_category_watching   =   false
-  # @essential_watching       =   false
-  # @growth_first_post        =   false
-  # @meta_first_post          =   false
-  # @trust_level_updates      =   false
-  # @score_user_levels        =   true
-  # @user_group_alias_notify  =   false
-
   scan_options = {
       team_category_watching: false,
       essential_watching: false,
@@ -155,7 +147,6 @@ if __FILE__ == $0
                                           target_groups=target_groups, target_username=target_username)
 
   master_client.apply_to_users(scan_options)
-  # master_client.apply_to_users(method(:apply_function))
 
   master_client.scan_summary
 
