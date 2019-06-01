@@ -3,14 +3,14 @@ module MomentumApi
 
     def set_category_notification(user, category, client, group_name, allowed_levels, set_level)
 
-      def print_user(user_details, category, group_name, notify_level)
+      def print_user(user_details, category, group_name, notify_level, status='')
         field_settings = "%-18s %-20s %-20s %-10s %-15s\n"
         printf field_settings, 'UserName', 'Group', 'Category', 'Level', 'Status'
-        printf field_settings, user_details['username'], group_name, category['slug'], notify_level.to_s.center(5), 'NOT_Watching'
+        printf field_settings, user_details['username'], group_name, category['slug'], notify_level.to_s.center(5), status
       end
 
       if not allowed_levels.include?(category['notification_level'])
-        print_user(user, category, group_name, category['notification_level'])
+        print_user(user, category, group_name, category['notification_level'], status='NOT Watching')
 
         if self.do_live_updates
           update_response = client.category_set_user_notification(id: category['id'], notification_level: set_level)
@@ -31,7 +31,7 @@ module MomentumApi
         @matching_category_notify_users += 1
       else
         if @issue_users.include?(user['username'])
-          print_user(user, category, group_name, category['notification_level'])
+          print_user(user, category, group_name, category['notification_level'], status='Watching')
         end
       end
       @matching_categories_count += 1

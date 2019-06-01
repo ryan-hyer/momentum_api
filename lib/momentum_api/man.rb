@@ -29,7 +29,7 @@ module MomentumApi
 
     end
 
-    def run_scans(master_client, scan_options)
+    def run_scans(master_client)
       users_groups = @user_details['groups']
 
       is_owner = false
@@ -71,8 +71,8 @@ module MomentumApi
       end
 
       # User Scoring
-      if scan_options['score_user_levels'.to_sym]
-        puts scan_options['score_user_levels']
+      if master_client.scan_options['score_user_levels'.to_sym]
+        puts master_client.scan_options['score_user_levels']
         master_client.user_score_poll.scan_users_score(master_client, @user_client, @user_details)
       end
     end
@@ -92,7 +92,7 @@ module MomentumApi
           if case_excludes.include?(@user_details['username'])
             # puts "#{@user_details['username']} specifically excluded from Watching Meta"
           else
-            if @team_category_watching
+            if master_client.scan_options['team_category_watching'.to_sym]    # todo simplify signature
               master_client.set_category_notification(@user_details, category, user_client, group_name, [3], 3)
             end
           end

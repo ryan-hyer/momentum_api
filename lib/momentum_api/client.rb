@@ -7,10 +7,10 @@ require_relative '../momentum_api/api/messages'
 
 module MomentumApi
   class Client
-    attr_accessor :do_live_updates, :issue_users, :users_updated, :categories_updated, :user_score_poll, :all_scores
+    attr_accessor :do_live_updates, :issue_users, :users_updated, :categories_updated, :user_score_poll, :all_scores, :scan_options
     # attr_reader :instance, :api_username
 
-    # include MomentumApi::Notification
+    include MomentumApi::Notification
     # include MomentumApi::User
     # include MomentumApi::Man
     include MomentumApi::Messages
@@ -41,10 +41,6 @@ module MomentumApi
 
     end
 
-    # def add_task(task_instance)
-    #   @user_score_poll = task_instance
-    # end
-
     def connect_to_instance(api_username, instance=@instance)
       # @admin_client = 'KM_Admin'
       client = ''
@@ -62,7 +58,7 @@ module MomentumApi
       client
     end
 
-    def apply_call(user, scan_options)
+    def apply_call(user)
       user_details = @admin_client.user(user['username'])    # todo trap DiscourseApi::TooManyRequests
       sleep 1
 
@@ -77,12 +73,17 @@ module MomentumApi
 
       @user_count += 1
       man = MomentumApi::Man.new(user_client, user_details, users_categories=users_categories)
-      man.run_scans(self, scan_options)
+      man.run_scans(self)
     end
 
     def apply_to_users(scan_options, skip_staged_user=true)
+      @scan_options = scan_options
+
       case
-      when scan_options['score_user_levels'.to_sym]
+      when @scan_options['team_category_watching'.to_sym]
+        # @all_scores << @user_score_poll.user_scores   # todo setup has totals
+
+      when @scan_options['score_user_levels'.to_sym]
         update_type       = 'not_voted'      # have_voted, not_voted, newly_voted, all
         target_post       = 28707            # 28649
         target_polls      = %w(version_two) # basic new version_two
@@ -97,14 +98,14 @@ module MomentumApi
 
       if @target_groups
         @target_groups.each do |group_name|
-          apply_to_group_users(group_name, scan_options, skip_staged_user)
+          apply_to_group_users(group_name, skip_staged_user)
         end
       else
-        apply_to_group_users('trust_level_1', scan_options, skip_staged_user)
+        apply_to_group_users('trust_level_1', skip_staged_user)
       end
     end
 
-    def apply_to_group_users(group_name, scan_options, skip_staged_user=false)
+    def apply_to_group_users(group_name, skip_staged_user=false)
       users = @admin_client.group_members(group_name, limit: 10000)
       users.each do |user|
         staged = staged_skip?(@admin_client, skip_staged_user, user)
@@ -113,7 +114,7 @@ module MomentumApi
         else
           if @target_username
             if user['username'] == @target_username
-              apply_call(user, scan_options)
+              apply_call(user)
             end
           elsif not @exclude_user_names.include?(user['username'])
             if @issue_users.include?(user['username'])
@@ -121,7 +122,7 @@ module MomentumApi
             end
             puts user['username']
             printf "%-15s %s \r", 'Scanning User: ', @user_count
-            apply_call(user, scan_options)
+            apply_call(user)
           else
             @skipped_users += 1
           end
@@ -183,7 +184,7 @@ module MomentumApi
       end
 
       if @all_scores.empty?
-        puts 'No scores ...'
+        puts 'No score totals ...'
       else
         @all_scores.each do |score|
           printf "\n\n"

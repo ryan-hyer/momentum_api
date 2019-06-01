@@ -1,7 +1,7 @@
 require '../../lib/momentum_api'
 
 def apply_function(master_client, user_details, user_client)
-  master_client.user_poll.scan_users_score(master_client, user_client, user_details)
+  master_client.user_score_poll.scan_users_score(master_client, user_client, user_details)
 end
 
 if __FILE__ == $0
