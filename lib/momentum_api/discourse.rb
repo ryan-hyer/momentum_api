@@ -5,7 +5,7 @@ require_relative '../momentum_api/man'
 require_relative '../momentum_api/api/messages'
 
 module MomentumApi
-  class Client
+  class Discourse
     attr_accessor :do_live_updates, :issue_users, :user_targets, :users_updated, :categories_updated, :user_score_poll, :all_scan_totals,
                   :scan_options, :matching_categories_count, :categories_updated, :matching_category_notify_users, :admin_client
     # attr_reader :instance, :api_username
@@ -79,11 +79,11 @@ module MomentumApi
     def apply_to_users(scan_options, skip_staged_user=true)
       @scan_options = scan_options
 
-      case
-      when @scan_options['team_category_watching'.to_sym]   # todo convert Notification to a Class
+      if @scan_options['team_category_watching'.to_sym]   # todo convert Notification to a Class
         # @all_scores << @user_score_poll.user_scores       # todo setup hash totals
+      end
 
-      when @scan_options['score_user_levels'.to_sym]
+      if @scan_options['score_user_levels'.to_sym]
         update_type       = 'not_voted'      # have_voted, not_voted, newly_voted, all
         target_post       = 28707            # 28649
         target_polls      = %w(version_two) # basic new version_two
@@ -91,9 +91,6 @@ module MomentumApi
 
         @user_score_poll   = MomentumApi::Poll.new(self, target_post, poll_url=poll_url, poll_names=target_polls, update_type=update_type)
         @all_scan_totals << @user_score_poll.user_scores
-
-      else
-        puts 'No scan_options found.'
       end
 
       if @target_groups
