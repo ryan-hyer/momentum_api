@@ -18,7 +18,7 @@ module MomentumApi
       end
 
       if is_owner
-        print_user_options(user_details, user_option_print, 'Is Owner')
+        # print_user_options(user_details, user_option_print, 'Is Owner')
       else
         # what to update
         if user_details['trust_level'] == trust_level_target

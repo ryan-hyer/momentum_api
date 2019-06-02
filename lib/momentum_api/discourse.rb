@@ -13,7 +13,7 @@ module MomentumApi
     # include MomentumApi::Notification
     # include MomentumApi::User
     # include MomentumApi::Man
-    include MomentumApi::Messages
+    # include MomentumApi::Messages
 
     def initialize(api_username, instance, do_live_updates=false, target_groups=[], target_username=nil)
       raise ArgumentError, 'api_username needs to be defined' if api_username.nil? || api_username.empty?

@@ -37,7 +37,7 @@ module MomentumApi
       master_client.matching_categories_count += 1
     end
 
-    def user_group_notify_to_default(user_details)
+    def user_group_notify_to_default(master_client, user_details)
       users_groups = user_details['groups']
       users_groups.each do |group|
         users_group_users = user_details['group_users']
@@ -48,12 +48,12 @@ module MomentumApi
               printf field_settings, 'UserName', 'Group', "User's_Level", "Group's_Default"
               printf field_settings, user_details['username'], group['name'],
                      users_group['notification_level'].to_s.center(15), group['default_notification_level'].to_s.center(15)
-              @matching_categories_count += 1
-              if self.do_live_updates
-                response = @admin_client.group_set_user_notify_level(group['name'], user_details['id'], group['default_notification_level'])
+              master_client.matching_categories_count += 1
+              if master_client.do_live_updates
+                response = master_client.admin_client.group_set_user_notify_level(group['name'], user_details['id'], group['default_notification_level'])
                 sleep 1
                 puts response
-                @user_details_after_update = @admin_client.user(user_details['username'])['group_users']
+                @user_details_after_update = master_client.admin_client.user(user_details['username'])['group_users']
                 sleep 1
                 @user_details_after_update.each do |users_group_second_pass| # uncomment to check for the update
                   if users_group_second_pass['group_id'] == users_group['group_id']

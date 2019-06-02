@@ -27,9 +27,7 @@ module MomentumApi
 
       # testing parameters
       @issue_users        =     %w()
-
-      # zero_counters
-
+      
     end
 
     def run_scans(master_client)
@@ -69,8 +67,8 @@ module MomentumApi
       end
 
       # Update User Group Alias Notification
-      if @user_group_alias_notify
-        master_client.user_group_notify_to_default(@user_details)
+      if master_client.scan_options['user_group_alias_notify'.to_sym]
+        self.user_group_notify_to_default(master_client, @user_details)
       end
 
       # User Scoring
