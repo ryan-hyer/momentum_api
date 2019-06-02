@@ -6,8 +6,8 @@ require_relative '../momentum_api/api/messages'
 
 module MomentumApi
   class Client
-    attr_accessor :do_live_updates, :issue_users, :users_updated, :categories_updated, :user_score_poll, :all_scan_totals,
-                  :scan_options, :matching_categories_count, :categories_updated, :matching_category_notify_users
+    attr_accessor :do_live_updates, :issue_users, :user_targets, :users_updated, :categories_updated, :user_score_poll, :all_scan_totals,
+                  :scan_options, :matching_categories_count, :categories_updated, :matching_category_notify_users, :admin_client
     # attr_reader :instance, :api_username
 
     # include MomentumApi::Notification

@@ -27,15 +27,15 @@ module MomentumApi
 
           print_user_options(user_details, user_option_print, 'Non Owner')
           # puts 'User to be updated'
-          @user_targets += 1
-          if self.do_live_updates
+          master_client.user_targets += 1
+          if master_client.do_live_updates
 
-            update_response = @admin_client.update_trust_level(user_id: user_details['id'], level: trust_level_target)
+            update_response = master_client.admin_client.update_trust_level(user_id: user_details['id'], level: trust_level_target)
             puts "#{update_response['admin_user']['username']} Updated"
-            @users_updated += 1
+            master_client.users_updated += 1
 
             # check if update happened
-            user_details_after_update = @admin_client.user(user_details['username'])
+            user_details_after_update = master_client.admin_client.user(user_details['username'])
             print_user_options(user_details_after_update, user_option_print, 'Non Owner')
             sleep(1)
           end
