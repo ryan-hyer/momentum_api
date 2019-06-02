@@ -1,22 +1,9 @@
 module MomentumApi
   module User
 
-    def update_user_trust_level(is_owner, trust_level_target, user_details)
+    def update_user_trust_level(master_client, is_owner, trust_level_target, user_details)
 
-      # puts 'update_trust_level'
-      if @issue_users.include?(user_details['username'])
-        puts "#{user_details['username']}  is_owner: #{is_owner}\n"
-      end
-
-      if is_owner
-        # puts 'Is owner 2nd check true'
-      else
-        # what to update
-        if user_details['trust_level'] == trust_level_target
-          # puts 'User already correct'
-        else
-
-          user_option_print = %w(
+      user_option_print = %w(
             last_seen_at
             last_posted_at
             post_count
@@ -24,6 +11,19 @@ module MomentumApi
             recent_time_read
             trust_level
           )
+
+      # puts 'update_trust_level'
+      if master_client.issue_users.include?(user_details['username'])
+        puts "#{user_details['username']}  is_owner: #{is_owner}\n"
+      end
+
+      if is_owner
+        print_user_options(user_details, user_option_print, 'Is Owner')
+      else
+        # what to update
+        if user_details['trust_level'] == trust_level_target
+          # print_user_options(user_details, user_option_print, 'Correct Trust')
+        else
 
           print_user_options(user_details, user_option_print, 'Non Owner')
           # puts 'User to be updated'

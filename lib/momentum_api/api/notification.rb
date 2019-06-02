@@ -1,7 +1,7 @@
 module MomentumApi
   module Notification
 
-    def set_category_notification(user, category, client, group_name, allowed_levels, set_level)
+    def set_category_notification(master_client, user, category, client, group_name, allowed_levels, set_level)
 
       def print_user(user_details, category, group_name, notify_level, status='')
         field_settings = "%-18s %-20s %-20s %-10s %-15s\n"
@@ -12,11 +12,11 @@ module MomentumApi
       if not allowed_levels.include?(category['notification_level'])
         print_user(user, category, group_name, category['notification_level'], status='NOT Watching')
 
-        if self.do_live_updates
+        if master_client.do_live_updates
           update_response = client.category_set_user_notification(id: category['id'], notification_level: set_level)
           sleep 1
           puts update_response
-          @categories_updated += 1
+          master_client.categories_updated += 1
 
           # check if update happened ... or ... comment out for no check after update
           user_details_after_update = client.categories
@@ -28,13 +28,13 @@ module MomentumApi
             end
           end
         end
-        @matching_category_notify_users += 1
+        master_client.matching_category_notify_users += 1
       else
         if @issue_users.include?(user['username'])
           print_user(user, category, group_name, category['notification_level'], status='Watching')
         end
       end
-      @matching_categories_count += 1
+      master_client.matching_categories_count += 1
     end
 
     def user_group_notify_to_default(user_details)

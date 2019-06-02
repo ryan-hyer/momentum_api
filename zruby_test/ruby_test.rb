@@ -15,6 +15,8 @@ require 'pry'
 # months.name = 'month'
 # puts months
 
+# puts Dir.pwd
+
 user_scores = {'User Scores': ''}
 user_scores[:'email_always'] = true
 

@@ -1,16 +1,16 @@
 $LOAD_PATH.unshift File.expand_path('../../../../discourse_api/lib', __FILE__)
 require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__)
-# require_relative '../momentum_api/api/notification'
 # require_relative '../momentum_api/api/user'
 require_relative '../momentum_api/man'
 require_relative '../momentum_api/api/messages'
 
 module MomentumApi
   class Client
-    attr_accessor :do_live_updates, :issue_users, :users_updated, :categories_updated, :user_score_poll, :all_scores, :scan_options
+    attr_accessor :do_live_updates, :issue_users, :users_updated, :categories_updated, :user_score_poll, :all_scan_totals,
+                  :scan_options, :matching_categories_count, :categories_updated, :matching_category_notify_users
     # attr_reader :instance, :api_username
 
-    include MomentumApi::Notification
+    # include MomentumApi::Notification
     # include MomentumApi::User
     # include MomentumApi::Man
     include MomentumApi::Messages
@@ -29,7 +29,7 @@ module MomentumApi
       @api_username       = api_username
       @admin_client       = connect_to_instance(api_username, instance)
 
-      @all_scores         = []
+      @all_scan_totals    = []
 
       # testing variables
       @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin
@@ -80,8 +80,8 @@ module MomentumApi
       @scan_options = scan_options
 
       case
-      when @scan_options['team_category_watching'.to_sym]
-        # @all_scores << @user_score_poll.user_scores   # todo setup has totals
+      when @scan_options['team_category_watching'.to_sym]   # todo convert Notification to a Class
+        # @all_scores << @user_score_poll.user_scores       # todo setup hash totals
 
       when @scan_options['score_user_levels'.to_sym]
         update_type       = 'not_voted'      # have_voted, not_voted, newly_voted, all
@@ -90,7 +90,7 @@ module MomentumApi
         poll_url          = 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
 
         @user_score_poll   = MomentumApi::Poll.new(self, target_post, poll_url=poll_url, poll_names=target_polls, update_type=update_type)
-        @all_scores << @user_score_poll.user_scores
+        @all_scan_totals << @user_score_poll.user_scores
 
       else
         puts 'No scan_options found.'
@@ -120,7 +120,7 @@ module MomentumApi
             if @issue_users.include?(user['username'])
               puts "#{user['username']} in apply_to_group_users method"
             end
-            puts user['username']
+            # puts user['username']
             printf "%-15s %s \r", 'Scanning User: ', @user_count
             apply_call(user)
           else
@@ -144,19 +144,19 @@ module MomentumApi
       staged
     end
 
-    def print_user_options(user_details, user_option_print, user_label='UserName', pos_5=user_details[user_option_print[5].to_s])
-
-      field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
-
-      printf field_settings, user_label,
-             user_option_print[0], user_option_print[1], user_option_print[2],
-             user_option_print[3], user_option_print[4], user_option_print[5]
-
-      printf field_settings, user_details['username'],
-             user_details[user_option_print[0].to_s].to_s[0..9], user_details[user_option_print[1].to_s].to_s[0..9],
-             user_details[user_option_print[2].to_s], user_details[user_option_print[3].to_s],
-             user_details[user_option_print[4].to_s], pos_5
-    end
+    # def print_user_options(user_details, user_option_print, user_label='UserName', pos_5=user_details[user_option_print[5].to_s])
+    #
+    #   field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
+    #
+    #   printf field_settings, user_label,
+    #          user_option_print[0], user_option_print[1], user_option_print[2],
+    #          user_option_print[3], user_option_print[4], user_option_print[5]
+    #
+    #   printf field_settings, user_details['username'],
+    #          user_details[user_option_print[0].to_s].to_s[0..9], user_details[user_option_print[1].to_s].to_s[0..9],
+    #          user_details[user_option_print[2].to_s], user_details[user_option_print[3].to_s],
+    #          user_details[user_option_print[4].to_s], pos_5
+    # end
 
 
     def zero_counters
@@ -176,17 +176,17 @@ module MomentumApi
 
       if @matching_category_notify_users > 0
         printf "\n"
-        printf field_settings, 'Categories', ''
+        printf field_settings, 'Category Notification Totals', ''
         printf field_settings, 'Categories Visible to Users: ', @matching_categories_count
         printf field_settings, 'Users Needing Update: ', @matching_category_notify_users
         printf field_settings, 'Updated Categories: ', @categories_updated
         printf field_settings, 'Updated Users: ', @users_updated
       end
 
-      if @all_scores.empty?
-        puts 'No score totals ...'
+      if @all_scan_totals.empty?
+        puts 'No Scan totals ...'
       else
-        @all_scores.each do |score|
+        @all_scan_totals.each do |score|
           printf "\n\n"
           score.each do |key, value|
             printf field_settings, key.to_s, value
@@ -218,6 +218,8 @@ module MomentumApi
         raise DiscourseApi::TooManyRequests.new(response.env[:body], response.env)
       when 500...600
         raise DiscourseApi::Error.new(response.env[:body])
+      else
+        puts 'Error not found'
       end
     end
 
