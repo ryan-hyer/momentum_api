@@ -118,7 +118,7 @@ module MomentumApi
             if @issue_users.include?(user['username'])
               puts "#{user['username']} in apply_to_group_users method"
             end
-            puts user['username']
+            # puts user['username']
             printf "%-15s %s \r", 'Scanning User: ', @user_count
             apply_call(user)
           else
