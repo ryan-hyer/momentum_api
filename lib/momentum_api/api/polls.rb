@@ -4,14 +4,13 @@ module MomentumApi
     # attr_reader :instance
 
 
-    def initialize(master_client, post_id, poll_url='https://discourse.gomomentum.org', poll_names=%w(poll), update_type=nil)
+    def initialize(post_id, update_type, poll_url='https://discourse.gomomentum.org', poll_names=%w(poll))
       raise ArgumentError, 'post_id needs to be defined' if post_id.nil?
 
       # messages
       @emails_from_username = 'Kim_Miller'
 
       # parameter setting
-      # @master_client        = master_client
       @post_id              = post_id
       @poll_url             = poll_url
       @poll_names           = poll_names
@@ -45,19 +44,17 @@ module MomentumApi
       polls.each do |poll|
         if @poll_names.include?(poll['name'])
 
-          begin  # todo find and trap only specific DiscourseApi:: ... error
-            poll_option_votes = @man.user_client.poll_voters(post_id: @post_id, poll_name: poll['name'], api_username: users_username)['voters']
-          rescue
-            # voter has not voted
+          begin
+            poll_option_votes = @man.user_client.poll_voters(post_id: @post_id, poll_name: poll['name'],
+                                                             api_username: users_username)['voters']
+          rescue DiscourseApi::UnprocessableEntity   # voter has not voted
             poll_option_votes = nil
           end
+          sleep 1
 
           # if user has voted
           if poll_option_votes
             if @update_type == 'have_voted' or @update_type == 'newly_voted' or @update_type == 'all'
-              # pull user details
-              # user_details = @man.user_client.user(users_username)
-              # sleep 1
               user_fields = @man.user_details[@user_fields]
               existing_value = user_fields[@user_score_field].to_i
 
@@ -100,7 +97,7 @@ module MomentumApi
               send_not_voted_message(users_username, @man.user_details, @poll_url, @man.discourse.do_live_updates)
               printf "\n"
             end
-            next
+            # next
           end
         end
       end

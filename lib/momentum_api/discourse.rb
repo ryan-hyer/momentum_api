@@ -86,12 +86,12 @@ module MomentumApi
       end
 
       if @scan_options['score_user_levels'.to_sym]
-        update_type       = 'not_voted'      # have_voted, not_voted, newly_voted, all
-        target_post       = 28707            # 28649
-        target_polls      = %w(version_two) # basic new version_two
-        poll_url          = 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
+        update_type       = @scan_options['score_user_levels'.to_sym]['update_type'.to_sym]
+        target_post       = @scan_options['score_user_levels'.to_sym]['target_post'.to_sym]
+        target_polls      = @scan_options['score_user_levels'.to_sym]['target_polls'.to_sym]
+        poll_url          = @scan_options['score_user_levels'.to_sym]['poll_url'.to_sym]
 
-        @user_score_poll   = MomentumApi::Poll.new(self, target_post, poll_url=poll_url, poll_names=target_polls, update_type=update_type)
+        @user_score_poll   = MomentumApi::Poll.new(target_post, update_type, poll_url=poll_url, poll_names=target_polls)
         @all_scan_totals << @user_score_poll.user_scores
       end
 

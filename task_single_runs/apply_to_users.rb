@@ -8,7 +8,7 @@ scan_options = {
     growth_first_post:        true,
     meta_first_post:          true,
     trust_level_updates:      true,
-    score_user_levels:        true,
+    score_user_levels:        'not_voted',   # have_voted, not_voted, newly_voted, all
     user_group_alias_notify:  true
 }
 

@@ -72,7 +72,7 @@ module MomentumApi
 
       # User Scoring
       if @discourse.scan_options['score_user_levels'.to_sym]
-        puts @discourse.scan_options['score_user_levels']
+        # puts @discourse.scan_options['score_user_levels'.to_sym]
         @discourse.user_score_poll.run_scans(self)
       end
     end
