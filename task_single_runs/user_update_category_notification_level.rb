@@ -4,7 +4,7 @@ do_live_updates   = false
 instance          = 'live' # 'live' or 'local'
 
 # testing variables
-target_username   = nil # Kim_test_Staged Randy_Horton Steve_Scott Marty_Fauth Kim_Miller Don_Morgan
+target_username   = 'James_McKeefery' # Kim_test_Staged Randy_Horton Steve_Scott Marty_Fauth Kim_Miller Don_Morgan
 target_groups     = %w(trust_level_1)  # trust_level_1 Mods GreatX BraveHearts Alignment
 
 master_client     = MomentumApi::Discourse.new('KM_Admin', instance, do_live_updates=do_live_updates,
@@ -12,9 +12,9 @@ master_client     = MomentumApi::Discourse.new('KM_Admin', instance, do_live_upd
 
 scan_options = {
     team_category_watching:   true,
-    essential_watching:       false,
-    growth_first_post:        false,
-    meta_first_post:          false,
+    essential_watching:       true,
+    growth_first_post:        true,
+    meta_first_post:          true,
 }
 
 master_client.apply_to_users(scan_options)

@@ -6,7 +6,7 @@ require_relative '../momentum_api/api/user'
 module MomentumApi
   class Man
     # attr_accessor :do_live_updates
-    # attr_reader :instance, :api_username
+    attr_reader :user_client, :user_details, :discourse
 
     include MomentumApi::Notification
     include MomentumApi::User
@@ -28,11 +28,12 @@ module MomentumApi
       
     end
 
-    def run_scans(master_client)
+    def run_scans(discourse)
+      @discourse = discourse
       users_groups = @user_details['groups']
 
       is_owner = false
-      if master_client.issue_users.include?(@user_details['username'])
+      if @discourse.issue_users.include?(@user_details['username'])
         puts "#{@user_details['username']} in apply_function"
       end
 
@@ -40,12 +41,12 @@ module MomentumApi
       users_groups.each do |group|
         group_name = group['name']
 
-        if master_client.issue_users.include?(@user_details['username'])
+        if @discourse.issue_users.include?(@user_details['username'])
           puts "\n#{@user_details['username']}  with group: #{group_name}\n"
         end
 
         if @users_categories
-          category_cases(master_client, @user_details, @users_categories, group_name, @user_client)
+          category_cases(group_name)
         else
           puts "\nSkipping Category Cases for #{@user_details['username']}.\n"
         end
@@ -60,28 +61,28 @@ module MomentumApi
       end
 
       # Update Trust Level
-      if master_client.scan_options['trust_level_updates'.to_sym]
-        self.update_user_trust_level(master_client, is_owner, 0, @user_details)
+      if @discourse.scan_options['trust_level_updates'.to_sym]
+        self.update_user_trust_level(discourse, is_owner, 0, @user_details)
       end
 
       # Update User Group Alias Notification
-      if master_client.scan_options['user_group_alias_notify'.to_sym]
-        self.user_group_notify_to_default(master_client, @user_details)
+      if @discourse.scan_options['user_group_alias_notify'.to_sym]
+        self.user_group_notify_to_default
       end
 
       # User Scoring
-      if master_client.scan_options['score_user_levels'.to_sym]
-        puts master_client.scan_options['score_user_levels']
-        master_client.user_score_poll.scan_users_score(master_client, @user_client, @user_details)
+      if @discourse.scan_options['score_user_levels'.to_sym]
+        puts @discourse.scan_options['score_user_levels']
+        @discourse.user_score_poll.run_scans(self)
       end
     end
 
-    def category_cases(master_client, user_details, users_categories, group_name, user_client)
-      starting_categories_updated = master_client.categories_updated
+    def category_cases(group_name)
+      starting_categories_updated = @discourse.categories_updated
 
-      users_categories.each do |category|
+      @users_categories.each do |category|
 
-        if master_client.issue_users.include?(@user_details['username'])
+        if @discourse.issue_users.include?(@user_details['username'])
           puts "\n#{@user_details['username']}  Category case on category: #{category['slug']}\n"
         end
 
@@ -91,8 +92,8 @@ module MomentumApi
           if case_excludes.include?(@user_details['username'])
             # puts "#{@user_details['username']} specifically excluded from Watching Meta"
           else
-            if master_client.scan_options['team_category_watching'.to_sym]    # todo simplify signature
-              self.set_category_notification(master_client, @user_details, category, user_client, group_name, [3], 3)
+            if @discourse.scan_options['team_category_watching'.to_sym]    # todo simplify signature
+              self.set_category_notification(category, group_name, [3], 3)
             end
           end
 
@@ -101,8 +102,8 @@ module MomentumApi
           if case_excludes.include?(@user_details['username'])
             # puts "#{@user_details['username']} specifically excluded from Essential Watching"
           else                            # 4 = Watching first post, 3 = Watching, 1 = blank or ...?
-            if master_client.scan_options['essential_watching'.to_sym]
-              self.set_category_notification(master_client, @user_details, category, user_client, group_name, [3], 3)
+            if @discourse.scan_options['essential_watching'.to_sym]
+              self.set_category_notification(category, group_name, [3], 3)
             end
           end
 
@@ -111,8 +112,8 @@ module MomentumApi
           if case_excludes.include?(@user_details['username'])
             # puts "#{@user_details['username']} specifically excluded from Watching Growth"
           else
-            if master_client.scan_options['growth_first_post'.to_sym]
-              self.set_category_notification(master_client, @user_details, category, user_client, group_name, [3, 4], 4)
+            if @discourse.scan_options['growth_first_post'.to_sym]
+              self.set_category_notification(category, group_name, [3, 4], 4)
             end
           end
 
@@ -121,8 +122,8 @@ module MomentumApi
           if case_excludes.include?(@user_details['username'])
             # puts "#{@user_details['username']} specifically excluded from Watching Meta"
           else
-            if master_client.scan_options['meta_first_post'.to_sym]
-              self.set_category_notification(master_client, @user_details, category, user_client, group_name, [3, 4], 4)
+            if @discourse.scan_options['meta_first_post'.to_sym]
+              self.set_category_notification(category, group_name, [3, 4], 4)
             end
           end
 
@@ -130,8 +131,8 @@ module MomentumApi
           # puts 'Category not a target'
         end
       end
-      if master_client.categories_updated > starting_categories_updated
-        master_client.users_updated += 1
+      if @discourse.categories_updated > starting_categories_updated
+        @discourse.users_updated += 1
       end
     end
 

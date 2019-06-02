@@ -11,7 +11,7 @@ module MomentumApi
       @emails_from_username = 'Kim_Miller'
 
       # parameter setting
-      @master_client        = master_client
+      # @master_client        = master_client
       @post_id              = post_id
       @poll_url             = poll_url
       @poll_names           = poll_names
@@ -28,23 +28,25 @@ module MomentumApi
     end
 
 
-    def scan_users_score(master_client, user_client, user_details)
+    def run_scans(man)
+      @man = man
+
       # poll settings
       @points_multiplier = 1.13
 
       begin
-        post = user_client.get_post(@post_id)
+        post = @man.user_client.get_post(@post_id)
       rescue DiscourseApi::UnauthenticatedError
         return
       end
       polls = post['polls']
-      users_username = user_client.api_username
+      users_username = @man.user_client.api_username
 
       polls.each do |poll|
         if @poll_names.include?(poll['name'])
 
           begin  # todo find and trap only specific DiscourseApi:: ... error
-            poll_option_votes = user_client.poll_voters(post_id: @post_id, poll_name: poll['name'], api_username: users_username)['voters']
+            poll_option_votes = @man.user_client.poll_voters(post_id: @post_id, poll_name: poll['name'], api_username: users_username)['voters']
           rescue
             # voter has not voted
             poll_option_votes = nil
@@ -54,14 +56,14 @@ module MomentumApi
           if poll_option_votes
             if @update_type == 'have_voted' or @update_type == 'newly_voted' or @update_type == 'all'
               # pull user details
-              user_details = user_client.user(users_username)
-              sleep 1
-              user_fields = user_details[@user_fields]
+              # user_details = @man.user_client.user(users_username)
+              # sleep 1
+              user_fields = @man.user_details[@user_fields]
               existing_value = user_fields[@user_score_field].to_i
 
               # score voter
               current_voter_points, max_points_possible = score_voter(poll, poll_option_votes, users_username)
-              user_badge_level = update_user_profile_badges(user_client, current_voter_points, user_details, users_username, master_client.do_live_updates)
+              user_badge_level = update_user_profile_badges(@man.user_client, current_voter_points, @man.user_details, users_username, @man.discourse.do_live_updates)
 
               # is this vote new?
               if existing_value == current_voter_points
@@ -70,18 +72,18 @@ module MomentumApi
               else
                 @user_scores[:'Voter Targets'] += 1
                 # @voter_targets += 1
-                update_user_profile_score(user_client, current_voter_points, user_details, users_username, master_client.do_live_updates)
-                # user_badge_level = update_user_profile_badges(client, current_voter_points, user_details, users_username, master_client.do_live_updates)
+                update_user_profile_score(@man.user_client, current_voter_points, @man.user_details, users_username, @man.discourse.do_live_updates)
+                # user_badge_level = update_user_profile_badges(client, current_voter_points, @man.user_details, users_username, @man.discourse.do_live_updates)
                 print_scored_user(current_voter_points, existing_value, max_points_possible, poll, users_username, user_badge_level)
                 send_voted_message(current_voter_points, max_points_possible, user_badge_level, users_username,
-                                   user_details, @poll_url, master_client.do_live_updates)
+                                   @man.user_details, @poll_url, @man.discourse.do_live_updates)
                 printf "\n"
               end
 
               if @update_type == 'have_voted' or @update_type == 'all'
                 print_scored_user(current_voter_points, existing_value, max_points_possible, poll, users_username, user_badge_level)
                 send_voted_message(current_voter_points, max_points_possible, user_badge_level, users_username,
-                                   user_details, @poll_url, master_client.do_live_updates)
+                                   @man.user_details, @poll_url, @man.discourse.do_live_updates)
                 printf "\n"
               end
               # printf "\n"
@@ -95,7 +97,7 @@ module MomentumApi
               @user_scores[:'Users Not yet voted'] += 1
               # @user_not_voted_targets += 1
               printf "%-18s %-20s\n", users_username, 'has not voted yet'
-              send_not_voted_message(users_username, user_details, @poll_url, master_client.do_live_updates)
+              send_not_voted_message(users_username, @man.user_details, @poll_url, @man.discourse.do_live_updates)
               printf "\n"
             end
             next
@@ -117,7 +119,7 @@ module MomentumApi
 
   -- Your Momentum Moderators"
 
-      @master_client.send_private_message(@emails_from_username, voting_user['username'], message_subject, message_body, do_live_updates)
+      @man.discourse.send_private_message(@emails_from_username, voting_user['username'], message_subject, message_body, do_live_updates)
     end
 
     def send_not_voted_message(users_username, voting_user, poll_url, do_live_updates)
@@ -130,7 +132,7 @@ module MomentumApi
 
   -- Your Momentum Moderators"
 
-      @master_client.send_private_message(@emails_from_username, voting_user['username'], message_subject, message_body, do_live_updates)
+      @man.discourse.send_private_message(@emails_from_username, voting_user['username'], message_subject, message_body, do_live_updates)
     end
 
     def score_voter(poll, poll_option_votes, users_username)
@@ -169,7 +171,7 @@ module MomentumApi
       recent_time_read
       user_field_score
   )
-      print_user_options(user_details, user_option_print, user_label='UserName', pos_5=user_details[@user_fields][@user_score_field])
+      print_user_options(@man.user_details, user_option_print, user_label='UserName', pos_5=@man.user_details[@user_fields][@user_score_field])
 
       if do_live_updates
         update_response = client.update_user(users_username, {"#{@user_fields}": {"#{@user_score_field}": current_voter_points}})
@@ -212,7 +214,7 @@ module MomentumApi
       # @new_user_badge_targets += 1
       target_badge_name = nil
       # puts 'User Badges to be updated'
-      # print_user_options(user_details, user_option_print)
+      # print_user_options(@man.user_details, user_option_print)
 
       # calculate badges
       case current_voter_points

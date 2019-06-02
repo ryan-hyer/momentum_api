@@ -55,8 +55,14 @@ module MomentumApi
     end
 
     def apply_call(user)
-      user_details = @admin_client.user(user['username'])    # todo trap DiscourseApi::TooManyRequests
-      sleep 1
+      begin
+        user_details = @admin_client.user(user['username']) # todo trap DiscourseApi::TooManyRequests
+        sleep 2
+      rescue DiscourseApi::TooManyRequests
+        puts 'Sleeping for 20 ....'
+        sleep 20
+        user_details = @admin_client.user(user['username'])
+      end
 
       user_client = connect_to_instance(user['username'])
       begin
@@ -113,7 +119,7 @@ module MomentumApi
             if @issue_users.include?(user['username'])
               puts "#{user['username']} in apply_to_group_users method"
             end
-            # puts user['username']
+            puts user['username']
             printf "%-15s %s \r", 'Scanning User: ', @user_count
             apply_call(user)
           else
