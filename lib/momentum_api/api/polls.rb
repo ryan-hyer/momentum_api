@@ -60,7 +60,7 @@ module MomentumApi
 
               # score voter
               current_voter_points, max_points_possible = score_voter(poll, poll_option_votes, users_username)
-              user_badge_level = update_user_profile_badges(@man.user_client, current_voter_points, @man.user_details, users_username, @man.discourse.do_live_updates)
+              user_badge_level = update_user_profile_badges(current_voter_points, users_username)
 
               # is this vote new?
               if existing_value == current_voter_points
@@ -69,18 +69,17 @@ module MomentumApi
               else
                 @user_scores[:'Voter Targets'] += 1
                 # @voter_targets += 1
-                update_user_profile_score(@man.user_client, current_voter_points, @man.user_details, users_username, @man.discourse.do_live_updates)
-                # user_badge_level = update_user_profile_badges(client, current_voter_points, @man.user_details, users_username, @man.discourse.do_live_updates)
+                update_user_profile_score(current_voter_points, users_username)
                 print_scored_user(current_voter_points, existing_value, max_points_possible, poll, users_username, user_badge_level)
                 send_voted_message(current_voter_points, max_points_possible, user_badge_level, users_username,
-                                   @man.user_details, @poll_url, @man.discourse.do_live_updates)
+                                   @poll_url)
                 printf "\n"
               end
 
               if @update_type == 'have_voted' or @update_type == 'all'
                 print_scored_user(current_voter_points, existing_value, max_points_possible, poll, users_username, user_badge_level)
                 send_voted_message(current_voter_points, max_points_possible, user_badge_level, users_username,
-                                   @man.user_details, @poll_url, @man.discourse.do_live_updates)
+                                   @poll_url)
                 printf "\n"
               end
               # printf "\n"
@@ -94,7 +93,7 @@ module MomentumApi
               @user_scores[:'Users Not yet voted'] += 1
               # @user_not_voted_targets += 1
               printf "%-18s %-20s\n", users_username, 'has not voted yet'
-              send_not_voted_message(users_username, @man.user_details, @poll_url, @man.discourse.do_live_updates)
+              send_not_voted_message(users_username, @poll_url, @man.discourse.do_live_updates)
               printf "\n"
             end
             # next
@@ -104,7 +103,7 @@ module MomentumApi
     end
 
 
-    def send_voted_message(current_voter_points, max_points_possible, user_badge_level, users_username, voting_user, poll_url, do_live_updates)
+    def send_voted_message(current_voter_points, max_points_possible, user_badge_level, users_username, poll_url)
       message_subject = "Thank You for Taking Momentum's Discourse User Poll"
       message_body = "Congratulations! Your Momentum Discourse User Score is #{current_voter_points.to_int} out of a maximum possible score of #{max_points_possible.to_int}.
 
@@ -116,10 +115,10 @@ module MomentumApi
 
   -- Your Momentum Moderators"
 
-      @man.discourse.send_private_message(@emails_from_username, voting_user['username'], message_subject, message_body, do_live_updates)
+      @man.discourse.send_private_message(@emails_from_username, @man.user_details['username'], message_subject, message_body, @man.discourse.do_live_updates)
     end
 
-    def send_not_voted_message(users_username, voting_user, poll_url, do_live_updates)
+    def send_not_voted_message(users_username, poll_url)
       message_subject = "Momentum's Discourse User Poll is Waiting for Your Input!"
       message_body = "Your input is very important to help Momentum better understand men's Discourse experience. Please take a moment to give your input!
 
@@ -129,7 +128,7 @@ module MomentumApi
 
   -- Your Momentum Moderators"
 
-      @man.discourse.send_private_message(@emails_from_username, voting_user['username'], message_subject, message_body, do_live_updates)
+      @man.discourse.send_private_message(@emails_from_username, @man.user_details['username'], message_subject, message_body, @man.discourse.do_live_updates)
     end
 
     def score_voter(poll, poll_option_votes, users_username)
@@ -156,7 +155,7 @@ module MomentumApi
     end
 
 
-    def update_user_profile_score(client, current_voter_points, user_details, users_username, do_live_updates=false)
+    def update_user_profile_score(current_voter_points, users_username)
       @user_scores[:'New User Scores'] += 1
       # @new_user_score_targets += 1
       # puts 'User Score to be updated'
@@ -170,22 +169,22 @@ module MomentumApi
   )
       print_user_options(@man.user_details, user_option_print, user_label='UserName', pos_5=@man.user_details[@user_fields][@user_score_field])
 
-      if do_live_updates
-        update_response = client.update_user(users_username, {"#{@user_fields}": {"#{@user_score_field}": current_voter_points}})
+      if @man.discourse.do_live_updates
+        update_response = @man.user_client.update_user(users_username, {"#{@user_fields}": {"#{@user_score_field}": current_voter_points}})
         puts update_response[:body]['success']
         @users_updated += 1
 
         # check if update happened
-        user_details_after_update = client.user(users_username)
+        user_details_after_update = @man.user_client.user(users_username)
         print_user_options(user_details_after_update, user_option_print, user_label='UserName',
                            pos_5=user_details_after_update[@user_fields][@user_score_field])
         sleep(1)
       end
     end
 
-    def update_badge(client, target_badge_name, badge_id, users_username, do_live_updates=false)
-      if do_live_updates
-        current_badges = client.user_badges(users_username)
+    def update_badge(target_badge_name, badge_id, users_username)
+      if @man.discourse.do_live_updates
+        current_badges = @man.user_client.user_badges(users_username)
         has_target_badge = false
         current_badges.each do |current_badge|
           if current_badge['name'] == target_badge_name
@@ -196,7 +195,7 @@ module MomentumApi
           # puts 'User already has badge'
         else
           # puts 'about to post'
-          post_response = client.grant_user_badge(username: users_username, badge_id: badge_id, reason: 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20')
+          post_response = @man.user_client.grant_user_badge(username: users_username, badge_id: badge_id, reason: 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20')
           # puts "User badges granted:"
           post_response.each do |badge|
             printf "%-35s %-20s \n", 'User badge granted: ', badge['name']
@@ -206,7 +205,7 @@ module MomentumApi
       end
     end
 
-    def update_user_profile_badges(client, current_voter_points, user_details, users_username, do_live_updates=false)
+    def update_user_profile_badges(current_voter_points, users_username)
       @user_scores[:'New User Badges'] += 1
       # @new_user_badge_targets += 1
       target_badge_name = nil
@@ -222,19 +221,19 @@ module MomentumApi
       when 8..39
         target_badge_name = 'Beginner'
         # puts target_badge_name
-        update_badge(client, target_badge_name, 111, users_username, do_live_updates=do_live_updates)
+        update_badge(target_badge_name, 111, users_username)
       when 40..375
         target_badge_name = 'Intermediate'
         # puts target_badge_name
-        update_badge(client, target_badge_name, 110, users_username, do_live_updates=do_live_updates)
+        update_badge(target_badge_name, 110, users_username)
       when 376..1012
         target_badge_name = 'Advanced'
         # puts target_badge_name
-        update_badge(client, target_badge_name, 112, users_username, do_live_updates=do_live_updates)
+        update_badge(target_badge_name, 112, users_username)
       when  1013..10000
         target_badge_name = 'PowerUser'
         # puts target_badge_name
-        update_badge(client, target_badge_name, 113, users_username, do_live_updates=do_live_updates)
+        update_badge(target_badge_name, 113, users_username)
       else
         puts "Error: current_voter_points has an invalid value (#{current_voter_points})"
       end
