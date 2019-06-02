@@ -98,7 +98,7 @@ module MomentumApi
           end
 
         when (category['slug'] == 'Essential' and group_name == 'Owner')
-          case_excludes = %w(Steve_Scott)
+          case_excludes = %w(Steve_Scott Joe_Sabolefski)
           if case_excludes.include?(@user_details['username'])
             # puts "#{@user_details['username']} specifically excluded from Essential Watching"
           else                            # 4 = Watching first post, 3 = Watching, 1 = blank or ...?
@@ -108,7 +108,7 @@ module MomentumApi
           end
 
         when (category['slug'] == 'Growth' and group_name == 'Owner')
-          case_excludes = %w(Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
+          case_excludes = %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
           if case_excludes.include?(@user_details['username'])
             # puts "#{@user_details['username']} specifically excluded from Watching Growth"
           else
@@ -118,7 +118,7 @@ module MomentumApi
           end
 
         when (category['slug'] == 'Meta' and group_name == 'Owner')
-          case_excludes = %w(Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
+          case_excludes = %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
           if case_excludes.include?(@user_details['username'])
             # puts "#{@user_details['username']} specifically excluded from Watching Meta"
           else

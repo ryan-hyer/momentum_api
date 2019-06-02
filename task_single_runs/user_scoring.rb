@@ -3,7 +3,7 @@ require '../../lib/momentum_api'
 do_live_updates   = false
 
 # testing variables
-target_username   = 'David_Kirk' # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Don_Morgan
+target_username   = nil # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Don_Morgan
 target_groups     = %w(Mods)  # Mods GreatX BraveHearts (trust_level_1 trust_level_0 hits 100 record limit)
 
 master_client = MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates=do_live_updates,

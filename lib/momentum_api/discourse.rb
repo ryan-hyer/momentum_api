@@ -28,8 +28,7 @@ module MomentumApi
       @all_scan_totals    = []
 
       # testing variables
-      @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin
-                            Joe_Sabolefski Steve_Scott Howard_Bailey)
+      @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin)
       @issue_users        = %w()
 
       # zero out counters
