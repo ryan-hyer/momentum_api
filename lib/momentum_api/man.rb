@@ -2,7 +2,6 @@ $LOAD_PATH.unshift File.expand_path('../../../../discourse_api/lib', __FILE__)
 require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__)
 require_relative '../momentum_api/api/notification'
 require_relative '../momentum_api/api/user'
-require_relative '../momentum_api/api/messages'
 
 module MomentumApi
   class Man
@@ -11,7 +10,6 @@ module MomentumApi
 
     include MomentumApi::Notification
     include MomentumApi::User
-    include MomentumApi::Messages
 
     def initialize(user_client, user_details, users_categories=nil)
       raise ArgumentError, 'user_client needs to be defined' if user_client.nil?

@@ -1,6 +1,5 @@
 $LOAD_PATH.unshift File.expand_path('../../../../discourse_api/lib', __FILE__)
 require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__)
-# require_relative '../momentum_api/api/user'
 require_relative '../momentum_api/man'
 require_relative '../momentum_api/api/messages'
 
@@ -10,10 +9,7 @@ module MomentumApi
                   :scan_options, :matching_categories_count, :categories_updated, :matching_category_notify_users, :admin_client
     # attr_reader :instance, :api_username
 
-    # include MomentumApi::Notification
-    # include MomentumApi::User
-    # include MomentumApi::Man
-    # include MomentumApi::Messages
+    include MomentumApi::Messages
 
     def initialize(api_username, instance, do_live_updates=false, target_groups=[], target_username=nil)
       raise ArgumentError, 'api_username needs to be defined' if api_username.nil? || api_username.empty?

@@ -6,21 +6,6 @@ module MomentumApi
 
     def initialize(post_id)
       raise ArgumentError, 'post_id needs to be defined' if post_id.nil?
-
-      # # messages
-      # @emails_from_username = 'Kim_Miller'
-      #
-      # # parameter setting
-      # @post_id              = post_id
-      # @poll_url             = poll_url
-      # @poll_names           = poll_names
-      #
-      # # user score saving
-      # @user_fields = 'user_fields'
-      # @user_score_field = '5'
-      #
-      # zero_poll_counters
-
     end
 
     def send_private_message(from_username, to_username, message_subject, message_body, do_live_updates)
