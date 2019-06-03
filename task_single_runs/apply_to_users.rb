@@ -31,19 +31,26 @@ master_client.apply_to_users(scan_options)
 master_client.scan_summary
 
 # Jun 2, 2019
-# UserName           Group              User's_Level    Group's_Default
-# Tim_Tannatt        BraveHearts               2               3
-#
+# GroupUser          Group                Category             Level      Status
+# David_Ashby        moderators           na                     2        NOT Group Default of 3
+# GroupUser          Group                Category             Level      Status
+# David_Ashby        staff                na                     2        NOT Group Default of 3
+# CategoryUser       Group                Category             Level      Status
+# David_Kirk         Expedition01         Expedition01           1        NOT Watching
+# CategoryUser       Group                Category             Level      Status
+# James_McKeefery    Fusion               Fusion                 1        NOT Watching
+# CategoryUser       Group                Category             Level      Status
+# John_Nadler        Committed            Committed              1        NOT Watching
 # Kim_Miller         has not voted yet
 #   Message From:    KM_Admin             Kim_Miller           Momentum's Discourse User Poll is Waiting for Your Input! Your input is very im     Pending
 #
-# UserName           Group                Category             Level      Status
-# James_McKeefery    Fusion               Fusion                 1        NOT Watching
-#
-# UserName           Group                Category             Level      Status
-# David_Kirk         Expedition01         Expedition01           1        NOT Watching
-#
-# UserName           Group              User's_Level    Group's_Default
-# David_Ashby        moderators                2               3
-# UserName           Group              User's_Level    Group's_Default
-# David_Ashby        staff                     2               3
+# GroupUser          Group                Category             Level      Status
+# Tim_Tannatt        BraveHearts          na                     2        NOT Group Default of 3
+# CategoryUser       Group                Category             Level      Status
+# Tony_Christopher   Committed            Committed              1        NOT Watching
+# Scanning User:  162
+# Category Notification Totals
+# Categories Visible to Users:        680
+# Users Needing Update:               4
+# Updated Categories:                 0
+# Updated Users:                      0
