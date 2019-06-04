@@ -1,5 +1,6 @@
 $LOAD_PATH.unshift File.expand_path('../../../../discourse_api/lib', __FILE__)
 require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__)
+require_relative '../momentum_api/error'
 require_relative '../momentum_api/man'
 require_relative '../momentum_api/api/messages'
 
@@ -47,7 +48,8 @@ module MomentumApi
         client = DiscourseApi::Client.new('http://localhost:3000')
         client.api_key = ENV['LOCAL_DISCOURSE_API']
       else
-        puts 'Host unknown'
+        raise 'Host unknown error has occured'
+        # raise MomentumError::NotFoundError 'Host unknown error has occured'
       end
       client.api_username = api_username
       client
@@ -179,22 +181,22 @@ module MomentumApi
     private
 
 
-    def handle_error(response)
-      case response.status
-      when 403
-        raise DiscourseApi::UnauthenticatedError.new(response.env[:body], response.env)
-      when 404, 410
-        raise DiscourseApi::NotFoundError.new(response.env[:body], response.env)
-      when 422
-        raise DiscourseApi::UnprocessableEntity.new(response.env[:body], response.env)
-      when 429
-        raise DiscourseApi::TooManyRequests.new(response.env[:body], response.env)
-      when 500...600
-        raise DiscourseApi::Error.new(response.env[:body])
-      else
-        puts 'Error not found'
-      end
-    end
+    # def handle_error(response)
+    #   case response.status
+    #   when 403
+    #     raise DiscourseApi::UnauthenticatedError.new(response.env[:body], response.env)
+    #   when 404, 410
+    #     raise DiscourseApi::NotFoundError.new(response.env[:body], response.env)
+    #   when 422
+    #     raise DiscourseApi::UnprocessableEntity.new(response.env[:body], response.env)
+    #   when 429
+    #     raise DiscourseApi::TooManyRequests.new(response.env[:body], response.env)
+    #   when 500...600
+    #     raise DiscourseApi::Error.new(response.env[:body])
+    #   else
+    #     puts 'Error not found'
+    #   end
+    # end
 
   end
 end
