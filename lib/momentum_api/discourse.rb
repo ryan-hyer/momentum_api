@@ -11,7 +11,7 @@ module MomentumApi
 
     include MomentumApi::Messages
 
-    def initialize(api_username, instance, do_live_updates=false, target_groups=[], target_username=nil, admin_client: nil)
+    def initialize(api_username, instance, do_live_updates=false, target_groups=[], target_username=nil, mock: nil)
       raise ArgumentError, 'api_username needs to be defined' if api_username.nil? || api_username.empty?
 
       # messages
@@ -23,7 +23,8 @@ module MomentumApi
       @do_live_updates    = do_live_updates
       @instance           = instance
       @api_username       = api_username
-      @admin_client       = admin_client || connect_to_instance(api_username, instance)
+      @mock               = mock
+      @admin_client       = mock || connect_to_instance(api_username, instance)
 
       @all_scan_totals    = []
 
@@ -53,28 +54,23 @@ module MomentumApi
       client
     end
 
-    def apply_call(user)
-      begin
-        user_details = @admin_client.user(user['username'])
-        sleep 2
-      rescue DiscourseApi::TooManyRequests
-        puts 'Sleeping for 20 ....'
-        sleep 20
-        user_details = @admin_client.user(user['username'])
-      end
-
-      user_client = connect_to_instance(user['username'])
+    def apply_call(user_details)
+      user_client = @mock || connect_to_instance(user_details['username'], @instance)
       begin
         users_categories = user_client.categories
         sleep 1
       rescue DiscourseApi::UnauthenticatedError
         users_categories = nil
         puts "\n#{user_details['username']} : DiscourseApi::UnauthenticatedError - Not permitted to view resource.\n"
+      rescue DiscourseApi::TooManyRequests
+        puts 'Sleeping for 20 seconds ....'
+        sleep 20
+        users_categories = user_client.categories
       end
 
       @user_count += 1
       man = MomentumApi::Man.new(user_client, user_details, users_categories=users_categories)
-      man.run_scans(self)
+      @mock ? @mock.run_scans(self) : man.run_scans(self)
     end
 
     def apply_to_users(scan_options, skip_staged_user=true)
@@ -104,23 +100,31 @@ module MomentumApi
     end
 
     def apply_to_group_users(group_name, skip_staged_user=false)
-      users = @admin_client.group_members(group_name, limit: 10000)
-      users.each do |user|
-        staged = staged_skip?(skip_staged_user, user)
+      group_members = @admin_client.group_members(group_name, limit: 10000)
+      group_members.each do |group_member|
+        begin
+          user_details = @admin_client.user(group_member['username'])
+          sleep 2
+        rescue DiscourseApi::TooManyRequests
+          puts 'Sleeping for 20 seconds ....'
+          sleep 20
+          user_details = @admin_client.user(group_member['username'])
+        end
+        staged = user_details['staged']
         if staged
           # puts "Skipping staged user #{user['username']}"
         else
           if @target_username
-            if user['username'] == @target_username
-              apply_call(user)
+            if group_member['username'] == @target_username
+              apply_call(user_details)
             end
-          elsif not @exclude_user_names.include?(user['username'])
-            if @issue_users.include?(user['username'])
-              puts "#{user['username']} in apply_to_group_users method"
+          elsif not @exclude_user_names.include?(group_member['username'])
+            if @issue_users.include?(group_member['username'])
+              puts "#{group_member['username']} in apply_to_group_users method"
             end
             # puts user['username']
             printf "%-15s %s \r", 'Scanning User: ', @user_count
-            apply_call(user)
+            apply_call(user_details)
           else
             @skipped_users += 1
           end
@@ -128,20 +132,7 @@ module MomentumApi
       end
     end
 
-    def staged_skip?(skip_staged_user, user)
-      staged = false
-      if skip_staged_user
-        if user['last_seen_at']
-          staged = false
-        else
-          user_details = @admin_client.user(user['username'])
-          sleep 1
-          staged = user_details['staged']
-        end
-      end
-      staged
-    end
-
+    
     def zero_counters                             # todo move to hash
       @user_count                       = 0
       @user_targets                     = 0

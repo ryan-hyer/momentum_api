@@ -1,0 +1,38 @@
+[
+  {
+    "id": 117,
+    "username": "John_Nadler",
+    "name": "John Nadler",
+    "avatar_template": "/user_avatar/discourse.gomomentum.org/john_nadler/{size}/715_2.png",
+    "primary_group_name": "Committed",
+    "primary_group_flair_url": "http://clipart-library.com/img/2038606.png",
+    "title": "Committed",
+    "last_posted_at": "2019-05-15T16:48:43.306Z",
+    "last_seen_at": "2019-05-15T16:43:54.918Z",
+    "added_at": "2019-06-02T14:53:23.910Z"
+  },
+  {
+    "id": 8,
+    "username": "Tony_Christopher",
+    "name": "Tony Christopher",
+    "avatar_template": "/user_avatar/discourse.gomomentum.org/tony_christopher/{size}/51_2.png",
+    "primary_group_name": "Committed",
+    "primary_group_flair_url": "http://clipart-library.com/img/2038606.png",
+    "title": "Committed",
+    "last_posted_at": "2019-05-30T04:17:48.066Z",
+    "last_seen_at": "2019-05-30T05:49:32.834Z",
+    "added_at": "2019-06-02T14:53:23.903Z"
+  },
+  {
+    "id": 76,
+    "username": "Udy_Gold",
+    "name": "Udy Gold",
+    "avatar_template": "https://discourse.gomomentum.org/uploads/default/original/2X/0/00de85d246464900619a869d3238dadf21be81ed.png",
+    "primary_group_name": "Committed",
+    "primary_group_flair_url": "http://clipart-library.com/img/2038606.png",
+    "title": "Committed",
+    "last_posted_at": null,
+    "last_seen_at": null,
+    "added_at": "2019-06-02T14:53:23.908Z"
+  }
+]
