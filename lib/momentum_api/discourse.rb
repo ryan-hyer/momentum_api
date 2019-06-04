@@ -38,7 +38,6 @@ module MomentumApi
     end
 
     def connect_to_instance(api_username, instance=@instance)
-      # @admin_client = 'KM_Admin'
       client = ''
       case instance
       when 'live'

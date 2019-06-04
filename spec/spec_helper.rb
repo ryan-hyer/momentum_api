@@ -1,5 +1,13 @@
-$LOAD_PATH.unshift File.expand_path('../../../discourse_api/lib', __FILE__)
-require File.expand_path('../../../discourse_api/lib/discourse_api', __FILE__)
+# $LOAD_PATH.unshift File.expand_path('../../../discourse_api/lib', __FILE__)
+# require File.expand_path('../../../discourse_api/lib/discourse_api', __FILE__)
+require 'simplecov'
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([SimpleCov::Formatter::HTMLFormatter])
+
+SimpleCov.start do
+  add_filter "/spec/"
+end
+
 require 'momentum_api'
 require 'rspec'
 require 'json'

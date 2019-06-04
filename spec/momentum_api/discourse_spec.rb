@@ -2,16 +2,18 @@ require_relative '../spec_helper'
 
 describe MomentumApi::Discourse do
 
-  let(:group_members) { json_fixture("groups_members.json")[0..1]}
+  let(:group_member_list) { json_fixture("groups_members.json")[0..1]}
 
   let(:user_details) { json_fixture("user.json") }
 
+  let(:category_list) { json_fixture("categories.json") }
+
   let(:mock_dependencies) do
     mock_dependencies = instance_double('mock_dependencies')
-    expect(mock_dependencies).to receive(:group_members).and_return(group_members)
-    expect(mock_dependencies).to receive(:user).and_return(user_details).exactly(group_members.length).times
-    expect(mock_dependencies).to receive(:categories).and_return(user_details).exactly(group_members.length).times
-    expect(mock_dependencies).to receive(:run_scans).exactly(group_members.length).times
+    expect(mock_dependencies).to receive(:group_members).and_return(group_member_list)
+    expect(mock_dependencies).to receive(:user).and_return(user_details).exactly(group_member_list.length).times
+    expect(mock_dependencies).to receive(:categories).and_return(category_list).exactly(group_member_list.length).times
+    expect(mock_dependencies).to receive(:run_scans).exactly(group_member_list.length).times
     mock_dependencies
   end
 
@@ -36,12 +38,17 @@ describe MomentumApi::Discourse do
 
   subject { MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates = do_live_updates,
                                        target_groups=target_groups, target_username=target_username, mock: mock_dependencies) }
-    # before :each do
-    #   @discourse = MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates = do_live_updates,
-    #                                           target_groups=target_groups, target_username=target_username, admin_client=mock_dependencies)
-    # end
-    # connect_to_instance = double("connect_to_instance")
-  
+  # before(:example) do
+  #   @subject = MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates = do_live_updates,
+  #                                       target_groups=target_groups, target_username=target_username, mock: mock_dependencies)
+  # end
+
+  it ".apply_to_users" do
+    subject.apply_to_users(scan_options)
+    expect(subject).to respond_to(:apply_to_users)
+    # expect(subject).to respond_to(:group_members)
+  end
+
   it ".apply_to_users" do
     subject.apply_to_users(scan_options)
     expect(subject).to respond_to(:apply_to_users)
@@ -50,8 +57,14 @@ describe MomentumApi::Discourse do
 
   # it ".apply_to_users" do
   #   subject.apply_to_users(scan_options)
-  #   expect(subject).to respond_to(:apply_to_group_users)
+  #   expect(subject).to respond_to(:apply_to_users)
+  #   # expect(subject).to respond_to(:group_members)
   # end
+
+  it ".connect_to_instance" do
+    # subject.connect_to_instance('KM_Admin')
+    # expect(subject).to respond_to(:connect_to_instance)
+  end
 
 
 
@@ -65,8 +78,9 @@ describe MomentumApi::Discourse do
     # end
     #
     # subject { @discourse }
-    #
-    # it "#connect_to_instance" do
+
+    # it ".connect_to_instance" do
+    #   subject.connect_to_instance('KM_Admin')
     #   expect(subject).to respond_to(:connect_to_instance)
     # end
 
