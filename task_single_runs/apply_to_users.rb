@@ -1,6 +1,6 @@
 require '../lib/momentum_api'
 
-do_live_updates           =   false
+do_live_updates           =   true
 
 scan_options = {                        # todo move to using the Class from this point forward.
     team_category_watching:   true,
@@ -21,7 +21,7 @@ scan_options = {                        # todo move to using the Class from this
 
 # testing variables
 target_username   = nil # Steven_Lang_Test Kim_test_Staged Randy_Horton Steve_Scott Marty_Fauth Kim_Miller Don_Morgan David_Kirk Brad_Fino
-target_groups     = %w(trust_level_1)  # OwnerExpired Mods GreatX BraveHearts trust_level_1 trust_level_0
+target_groups     = %w(Committed)  # OwnerExpired Mods GreatX BraveHearts trust_level_1 trust_level_0
 
 master_client = MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates=do_live_updates,
                                            target_groups=target_groups, target_username=target_username)

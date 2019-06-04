@@ -11,7 +11,7 @@ module MomentumApi
 
     include MomentumApi::Messages
 
-    def initialize(api_username, instance, do_live_updates=false, target_groups=[], target_username=nil)
+    def initialize(api_username, instance, do_live_updates=false, target_groups=[], target_username=nil, admin_client: nil)
       raise ArgumentError, 'api_username needs to be defined' if api_username.nil? || api_username.empty?
 
       # messages
@@ -23,7 +23,7 @@ module MomentumApi
       @do_live_updates    = do_live_updates
       @instance           = instance
       @api_username       = api_username
-      @admin_client       = connect_to_instance(api_username, instance)
+      @admin_client       = admin_client || connect_to_instance(api_username, instance)
 
       @all_scan_totals    = []
 
@@ -55,7 +55,7 @@ module MomentumApi
 
     def apply_call(user)
       begin
-        user_details = @admin_client.user(user['username']) # todo trap DiscourseApi::TooManyRequests
+        user_details = @admin_client.user(user['username'])
         sleep 2
       rescue DiscourseApi::TooManyRequests
         puts 'Sleeping for 20 ....'
@@ -106,7 +106,7 @@ module MomentumApi
     def apply_to_group_users(group_name, skip_staged_user=false)
       users = @admin_client.group_members(group_name, limit: 10000)
       users.each do |user|
-        staged = staged_skip?(@admin_client, skip_staged_user, user)
+        staged = staged_skip?(skip_staged_user, user)
         if staged
           # puts "Skipping staged user #{user['username']}"
         else
@@ -128,15 +128,15 @@ module MomentumApi
       end
     end
 
-    def staged_skip?(admin_client, skip_staged_user, user)
+    def staged_skip?(skip_staged_user, user)
       staged = false
       if skip_staged_user
         if user['last_seen_at']
           staged = false
         else
-          full_user = admin_client.user(user['username'])
+          user_details = @admin_client.user(user['username'])
           sleep 1
-          staged = full_user['staged']
+          staged = user_details['staged']
         end
       end
       staged
