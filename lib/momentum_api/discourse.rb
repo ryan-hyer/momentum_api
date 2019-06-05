@@ -64,23 +64,27 @@ module MomentumApi
         @mock ? sleep(0) : sleep(20)
         user_details = @admin_client.user(group_member['username'])
       end
-      
-      user_client = @mock || connect_to_instance(user_details['username'], @instance)
-      begin
-        users_categories = user_client.categories
-        @mock ? sleep(0) : sleep(1)
-      rescue DiscourseApi::UnauthenticatedError
-        users_categories = nil
-        puts "\n#{user_details['username']} : DiscourseApi::UnauthenticatedError - Not permitted to view resource.\n"
-      rescue DiscourseApi::TooManyRequests
-        puts 'Sleeping for 20 seconds ....'
-        @mock ? sleep(0) : sleep(20)
-        users_categories = user_client.categories
-      end
 
-      @user_count += 1
-      man = MomentumApi::Man.new(user_client, user_details, users_categories=users_categories)
-      @mock ? @mock.run_scans(self) : man.run_scans(self)
+      if user_details['staged']
+        @skipped_users += 1
+      else
+        user_client = @mock || connect_to_instance(user_details['username'], @instance)
+        begin
+          users_categories = user_client.categories
+          @mock ? sleep(0) : sleep(1)
+        rescue DiscourseApi::UnauthenticatedError
+          users_categories = nil
+          puts "\n#{user_details['username']} : DiscourseApi::UnauthenticatedError - Not permitted to view resource.\n"
+        rescue DiscourseApi::TooManyRequests
+          puts 'Sleeping for 20 seconds ....'
+          @mock ? sleep(0) : sleep(20)
+          users_categories = user_client.categories
+        end
+
+        @user_count += 1
+        man = MomentumApi::Man.new(user_client, user_details, users_categories = users_categories)
+        @mock ? @mock.run_scans(self) : man.run_scans(self)
+      end
     end
 
     def apply_to_users(scan_options, skip_staged_user=true)
@@ -121,7 +125,7 @@ module MomentumApi
         #   user_details = @admin_client.user(group_member['username'])
         # end
         # staged = user_details['staged']
-        if group_member['last_seen_at']
+        # if group_member['last_seen_at']
           if @target_username
             if group_member['username'] == @target_username
               apply_call(group_member)
@@ -134,9 +138,8 @@ module MomentumApi
             printf "%-15s %s \r", 'Scanning User: ', @user_count
             apply_call(group_member)
           else
-            @skipped_users += 1
           end
-        end
+        # end
       end
     end
 

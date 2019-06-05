@@ -24,7 +24,7 @@ describe MomentumApi::Discourse do
   let(:category_list) { json_fixture("categories.json") }
 
   
-  describe '.apply_to_users - all' do
+  describe '.apply_to_users all' do
 
     let(:mock_dependencies) do
       mock_dependencies = instance_double('mock_dependencies')
@@ -77,13 +77,35 @@ describe MomentumApi::Discourse do
       mock_dependencies
     end
 
-    # target_username =   'test_user'
     subject { MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates = do_live_updates,
                                          target_groups=%w(trust_level_1), target_username='Tony_Christopher', mock: mock_dependencies) }
 
-    it 'responds to apply_to_users and runs thru single user' do
+    it 'runs single user and responds to apply_to_users' do
       subject.apply_to_users(scan_options)
       expect(subject).to respond_to(:apply_to_users)
+    end
+  end
+
+
+  describe '.apply_to_users skips staged user' do
+
+    let(:group_member_list) { json_fixture("groups_members.json")}
+    let(:staged_user_details) { json_fixture("user_staged.json") }
+
+    let(:mock_dependencies) do
+      mock_dependencies = instance_double('mock_dependencies')
+      expect(mock_dependencies).to receive(:group_members).and_return(group_member_list)
+      expect(mock_dependencies).to receive(:user).and_return(staged_user_details).once
+      mock_dependencies
+    end
+
+    subject { MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates = do_live_updates,
+                                         target_groups=nil, target_username='Noah_Salzman', mock: mock_dependencies) }
+
+    it 'skips staged users and responds to apply_to_users' do
+      subject.apply_to_users(scan_options)
+      expect(subject).to respond_to(:apply_to_users)
+      expect(subject.instance_variable_get(:@skipped_users)).to eql(1)
     end
   end
 
@@ -193,7 +215,6 @@ describe MomentumApi::Discourse do
       expect { subject.connect_to_instance('KM_Admin', 'some_unknown') }
           .to raise_error('Host unknown error has occured')
     end
-
   end
 
 end
