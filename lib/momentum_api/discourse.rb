@@ -6,7 +6,7 @@ require_relative '../momentum_api/api/messages'
 
 module MomentumApi
   class Discourse
-    attr_accessor :do_live_updates, :issue_users, :user_targets, :users_updated, :categories_updated, :user_score_poll, :all_scan_totals,
+    attr_accessor :do_live_updates, :issue_users, :user_targets, :users_updated, :categories_updated, :user_score_poll, :scan_pass_counters,
                   :scan_options, :matching_categories_count, :categories_updated, :matching_category_notify_users, :admin_client
     # attr_reader :instance, :api_username
 
@@ -27,13 +27,16 @@ module MomentumApi
       @mock               = mock
       @admin_client       = mock || connect_to_instance(api_username, instance)
 
-      @all_scan_totals    = []
+      @discourse_counters = {'Discourse Men': ''}
+      @scan_pass_counters = []
+      @scan_pass_counters << @discourse_counters
 
       # testing variables
       @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin)
       @issue_users        = %w()
 
       # zero out counters
+      zero_discourse_counters
       zero_counters
 
     end
@@ -66,7 +69,7 @@ module MomentumApi
       end
 
       if user_details['staged']
-        @skipped_users += 1
+        @discourse_counters[:'Skipped Users'] += 1
       else
         user_client = @mock || connect_to_instance(user_details['username'], @instance)
         begin
@@ -81,7 +84,7 @@ module MomentumApi
           users_categories = user_client.categories
         end
 
-        @user_count += 1
+        @discourse_counters[:'Processed Users'] += 1
         man = MomentumApi::Man.new(user_client, user_details, users_categories = users_categories)
         @mock ? @mock.run_scans(self) : man.run_scans(self)
       end
@@ -101,7 +104,7 @@ module MomentumApi
         poll_url          = @scan_options['score_user_levels'.to_sym]['poll_url'.to_sym]
 
         @user_score_poll   = MomentumApi::Poll.new(target_post, update_type, poll_url=poll_url, poll_names=target_polls)
-        @all_scan_totals << @user_score_poll.user_scores
+        @scan_pass_counters << @user_score_poll.user_scores
       end
 
       if @target_groups
@@ -116,44 +119,39 @@ module MomentumApi
     def apply_to_group_users(group_name, skip_staged_user=false)
       group_members = @admin_client.group_members(group_name, limit: 10000)
       group_members.each do |group_member|
-        # begin
-        #   user_details = @admin_client.user(group_member['username'])
-        #   @mock ? sleep(0) : sleep(2)
-        # rescue DiscourseApi::TooManyRequests
-        #   puts 'Sleeping for 20 seconds ....'
-        #   @mock ? sleep(0) : sleep(20)
-        #   user_details = @admin_client.user(group_member['username'])
-        # end
-        # staged = user_details['staged']
-        # if group_member['last_seen_at']
-          if @target_username
-            if group_member['username'] == @target_username
-              apply_call(group_member)
-            end
-          elsif not @exclude_user_names.include?(group_member['username'])
-            if @issue_users.include?(group_member['username'])
-              puts "#{group_member['username']} in apply_to_group_users method"
-            end
-            # puts user['username']
-            printf "%-15s %s \r", 'Scanning User: ', @user_count
+        if @target_username
+          if group_member['username'] == @target_username
             apply_call(group_member)
-          else
           end
-        # end
+        elsif not @exclude_user_names.include?(group_member['username'])
+          if @issue_users.include?(group_member['username'])
+            puts "#{group_member['username']} in apply_to_group_users method"
+          end
+          # puts user['username']
+          printf "%-15s %s \r", 'Scanning User: ', @discourse_counters[:'Processed Users']
+          apply_call(group_member)
+        else
+        end
       end
     end
 
+
+
+    def zero_discourse_counters
+      @discourse_counters[:'Processed Users']    =   0      # @user_count
+      @discourse_counters[:'Skipped Users']      =   0      # @skipped_users
+    end
     
     def zero_counters                             # todo move to hash
-      @user_count                       = 0
+      @scan_passes                      = 0
+
       @user_targets                     = 0
       @users_updated                    = 0
       @sent_messages                    = 0
-      @skipped_users                    = 0
+
       @matching_category_notify_users   = 0
       @matching_categories_count        = 0
       @categories_updated               = 0
-      @scan_passes                      = 0
     end
 
     def scan_summary
@@ -168,10 +166,10 @@ module MomentumApi
         printf field_settings, 'Updated Users: ', @users_updated
       end
 
-      if @all_scan_totals.empty?
+      if @scan_pass_counters.empty?
         puts 'No Scan totals ...'
       else
-        @all_scan_totals.each do |score|
+        @scan_pass_counters.each do |score|
           printf "\n\n"
           score.each do |key, value|
             printf field_settings, key.to_s, value
@@ -181,9 +179,9 @@ module MomentumApi
 
       printf "\n"
       # printf "\n"
+      printf field_settings, 'Processed Users: ', @discourse_counters[:'Processed Users']
+      printf field_settings, 'Skipped Users: ', @discourse_counters[:'Skipped Users']
       printf field_settings, 'Generalized targets: ', @user_targets # todo needs custom on each task
-      printf field_settings, 'Processed Users: ', @user_count
-      printf field_settings, 'Skipped Users: ', @skipped_users
       printf field_settings, 'User messages sent: ', @sent_messages
     end
 

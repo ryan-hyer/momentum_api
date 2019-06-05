@@ -32,7 +32,7 @@ module MomentumApi
       @discourse.matching_categories_count += 1
     end
 
-    def user_group_notify_to_default
+    def user_group_notify_to_default                 # todo refactor inside discourse group
       users_groups = @user_details['groups']
       users_groups.each do |group|
         users_group_users = @user_details['group_users']
