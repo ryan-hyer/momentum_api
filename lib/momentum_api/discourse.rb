@@ -1,6 +1,6 @@
 $LOAD_PATH.unshift File.expand_path('../../../../discourse_api/lib', __FILE__)
 require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__)
-require_relative '../momentum_api/error'
+# require_relative '../momentum_api/error'
 require_relative '../momentum_api/man'
 require_relative '../momentum_api/api/messages'
 
@@ -55,17 +55,26 @@ module MomentumApi
       client
     end
 
-    def apply_call(user_details)
+    def apply_call(group_member)
+      begin
+        user_details = @admin_client.user(group_member['username'])
+        @mock ? sleep(0) : sleep(2)
+      rescue DiscourseApi::TooManyRequests
+        puts 'Sleeping for 20 seconds ....'
+        @mock ? sleep(0) : sleep(20)
+        user_details = @admin_client.user(group_member['username'])
+      end
+      
       user_client = @mock || connect_to_instance(user_details['username'], @instance)
       begin
         users_categories = user_client.categories
-        sleep 1
+        @mock ? sleep(0) : sleep(1)
       rescue DiscourseApi::UnauthenticatedError
         users_categories = nil
         puts "\n#{user_details['username']} : DiscourseApi::UnauthenticatedError - Not permitted to view resource.\n"
       rescue DiscourseApi::TooManyRequests
         puts 'Sleeping for 20 seconds ....'
-        sleep 20
+        @mock ? sleep(0) : sleep(20)
         users_categories = user_client.categories
       end
 
@@ -103,21 +112,19 @@ module MomentumApi
     def apply_to_group_users(group_name, skip_staged_user=false)
       group_members = @admin_client.group_members(group_name, limit: 10000)
       group_members.each do |group_member|
-        begin
-          user_details = @admin_client.user(group_member['username'])
-          sleep 2
-        rescue DiscourseApi::TooManyRequests
-          puts 'Sleeping for 20 seconds ....'
-          sleep 20
-          user_details = @admin_client.user(group_member['username'])
-        end
-        staged = user_details['staged']
-        if staged
-          # puts "Skipping staged user #{user['username']}"
-        else
+        # begin
+        #   user_details = @admin_client.user(group_member['username'])
+        #   @mock ? sleep(0) : sleep(2)
+        # rescue DiscourseApi::TooManyRequests
+        #   puts 'Sleeping for 20 seconds ....'
+        #   @mock ? sleep(0) : sleep(20)
+        #   user_details = @admin_client.user(group_member['username'])
+        # end
+        # staged = user_details['staged']
+        if group_member['last_seen_at']
           if @target_username
             if group_member['username'] == @target_username
-              apply_call(user_details)
+              apply_call(group_member)
             end
           elsif not @exclude_user_names.include?(group_member['username'])
             if @issue_users.include?(group_member['username'])
@@ -125,7 +132,7 @@ module MomentumApi
             end
             # puts user['username']
             printf "%-15s %s \r", 'Scanning User: ', @user_count
-            apply_call(user_details)
+            apply_call(group_member)
           else
             @skipped_users += 1
           end
