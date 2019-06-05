@@ -36,7 +36,7 @@ module MomentumApi
 
       # testing variables
       @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin)
-      @issue_users        = %w()
+      @issue_users        = mock || %w()
 
       # zero out counters
       zero_discourse_counters
@@ -143,30 +143,11 @@ module MomentumApi
       @discourse_counters[:'Skipped Users']      =   0      # @skipped_users
       @discourse_counters[:'Messages Sent']      =   0      # @skipped_users
     end
-    
-    # def zero_counters
-      # @scan_passes                      = 0
 
-      # @user_targets                     = 0
-      # @users_updated                    = 0
-      # @sent_messages                    = 0
-
-      # @matching_category_notify_users   = 0
-      # @matching_categories_count        = 0
-      # @categories_updated               = 0
-    # end
 
     def scan_summary
-      field_settings = "%-35s %-20s \n"
 
-      # if @matching_category_notify_users > 0
-      #   printf "\n"
-      #   printf field_settings, 'Category Notification Totals', ''
-        # printf field_settings, 'User Visible Categories: ', @matching_categories_count
-        # printf field_settings, 'Users Needing Update: ', @matching_category_notify_users
-        # printf field_settings, 'Updated Categories: ', @categories_updated
-        # printf field_settings, 'Updated Users: ', @users_updated
-      # end
+      field_settings = "%-35s %-20s \n"
 
       if @scan_pass_counters.empty?
         puts 'No Scan totals ...'
@@ -179,12 +160,6 @@ module MomentumApi
         end
       end
 
-      printf "\n"
-      # printf "\n"
-      printf field_settings, 'Processed Users: ', @discourse_counters[:'Processed Users']
-      printf field_settings, 'Skipped Users: ', @discourse_counters[:'Skipped Users']
-      # printf field_settings, 'Qualifying Targets: ', @user_targets # todo needs custom on each task
-      # printf field_settings, 'User messages sent: ', @sent_messages
     end
 
 

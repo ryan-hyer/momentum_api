@@ -79,7 +79,7 @@ end
 def apply_function(user, admin_client, user_client='')
   # @user_count += 1
   # printf "%s\n", user['username']
-  user_details = user_client.user(user['username'])       # todo move to apply_to_all_users and trap DiscourseApi::TooManyRequests
+  user_details = user_client.user(user['username'])
   sleep(2)
   users_groups = user_details['groups']
   users_categories = user_client.categories
