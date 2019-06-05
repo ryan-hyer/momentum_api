@@ -4,32 +4,39 @@ require_relative '../momentum_api/api/notification'
 require_relative '../momentum_api/api/user'
 
 module MomentumApi
-  class Man
+  class Schedule
     # attr_accessor :do_live_updates
     attr_reader :user_client, :user_details, :discourse
 
     include MomentumApi::Notification
     include MomentumApi::User
 
-    def initialize(user_client, user_details, users_categories=nil)
-      raise ArgumentError, 'user_client needs to be defined' if user_client.nil?
-      raise ArgumentError, 'user_details needs to be defined' if user_details.nil? || user_details.empty?
+    def initialize(discourse)
+      raise ArgumentError, 'user_client needs to be defined' if discourse.nil?
 
       # messages
-      @emails_from_username =   'Kim_Miller'
+      @emails_from_username   =   'Kim_Miller'
 
       # parameter setting
-      @user_client          =   user_client
-      @user_details         =   user_details
-      @users_categories     =   users_categories
+      @discourse = discourse
+
+      # counter init
+      @notifications_counters = {'Notifications': ''}
+      @discourse.scan_pass_counters << @notifications_counters
 
       # testing parameters
-      @issue_users        =     %w()
+      @issue_users            =     %w()
+
+      zero_notifications_counters
       
     end
 
-    def run_scans(discourse)
-      @discourse = discourse
+    def run_scans(user_client, user_details, users_categories=nil)
+      # parameter setting
+      @user_client            =   user_client
+      @user_details           =   user_details
+      @users_categories       =   users_categories
+
       users_groups = @user_details['groups']
 
       is_owner = false
@@ -77,8 +84,8 @@ module MomentumApi
       end
     end
 
-    def category_cases(group_name)
-      starting_categories_updated = @discourse.categories_updated
+    def category_cases(group_name)       # todo refactor to Class
+      starting_categories_updated = @notifications_counters[:'Category Notify Updated']
 
       @users_categories.each do |category|
 
@@ -131,8 +138,8 @@ module MomentumApi
           # puts 'Category not a target'
         end
       end
-      if @discourse.categories_updated > starting_categories_updated
-        @discourse.users_updated += 1
+      if @notifications_counters[:'Category Notify Updated'] > starting_categories_updated
+        @notifications_counters[:'Category Notify Updated'] += 1
       end
     end
 
@@ -149,6 +156,15 @@ module MomentumApi
              user_details[user_option_print[2].to_s], user_details[user_option_print[3].to_s],
              user_details[user_option_print[4].to_s], pos_5
     end
-    
+
+    def zero_notifications_counters
+      @notifications_counters[:'User Categories']         =   0
+      @notifications_counters[:'User Groups']          =   0
+      @notifications_counters[:'Category Update Targets']      =   0
+      @notifications_counters[:'Group Update Targets']      =   0
+      @notifications_counters[:'Category Notify Updated']      =   0
+      @notifications_counters[:'Group Notify Updated']      =   0
+    end
+
   end
 end

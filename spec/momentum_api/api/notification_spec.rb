@@ -1,7 +1,7 @@
 require_relative '../../spec_helper'
 
 describe MomentumApi::Notification do
-  subject { MomentumApi::Man.new('user_client', 'user_details', users_categories='users_categories' )}
+  subject { MomentumApi::Schedule.new('user_client', 'user_details', users_categories='users_categories' )}
 
   describe "#set_category_notification" do
     # before do

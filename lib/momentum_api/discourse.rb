@@ -1,13 +1,12 @@
 $LOAD_PATH.unshift File.expand_path('../../../../discourse_api/lib', __FILE__)
 require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__)
 # require_relative '../momentum_api/error'
-require_relative '../momentum_api/man'
+require_relative '../momentum_api/schedule'
 require_relative '../momentum_api/api/messages'
 
 module MomentumApi
   class Discourse
-    attr_accessor :do_live_updates, :issue_users, :user_targets, :users_updated, :categories_updated, :user_score_poll, :scan_pass_counters,
-                  :scan_options, :matching_categories_count, :categories_updated, :matching_category_notify_users, :admin_client
+    attr_accessor :do_live_updates, :issue_users, :user_score_poll, :scan_pass_counters, :scan_options, :admin_client
     # attr_reader :instance, :api_username
 
     include MomentumApi::Messages
@@ -27,9 +26,13 @@ module MomentumApi
       @mock               = mock
       @admin_client       = mock || connect_to_instance(api_username, instance)
 
+      # counter init
       @discourse_counters = {'Discourse Men': ''}
       @scan_pass_counters = []
       @scan_pass_counters << @discourse_counters
+
+      # create schedule Class
+      @schedule = MomentumApi::Schedule.new(self)
 
       # testing variables
       @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin)
@@ -37,7 +40,6 @@ module MomentumApi
 
       # zero out counters
       zero_discourse_counters
-      zero_counters
 
     end
 
@@ -85,8 +87,8 @@ module MomentumApi
         end
 
         @discourse_counters[:'Processed Users'] += 1
-        man = MomentumApi::Man.new(user_client, user_details, users_categories = users_categories)
-        @mock ? @mock.run_scans(self) : man.run_scans(self)
+        # schedule = MomentumApi::Schedule.new(self)
+        @mock ? @mock.run_scans(self) : @schedule.run_scans(user_client, user_details, users_categories = users_categories)
       end
     end
 
@@ -94,7 +96,6 @@ module MomentumApi
       @scan_options = scan_options
 
       if @scan_options['team_category_watching'.to_sym]   # todo convert Notification to a Class
-        # @all_scores << @user_score_poll.user_scores       # todo setup hash totals
       end
 
       if @scan_options['score_user_levels'.to_sym]
@@ -104,7 +105,7 @@ module MomentumApi
         poll_url          = @scan_options['score_user_levels'.to_sym]['poll_url'.to_sym]
 
         @user_score_poll   = MomentumApi::Poll.new(target_post, update_type, poll_url=poll_url, poll_names=target_polls)
-        @scan_pass_counters << @user_score_poll.user_scores
+        @scan_pass_counters << @user_score_poll.user_scores_counters
       end
 
       if @target_groups
@@ -140,31 +141,32 @@ module MomentumApi
     def zero_discourse_counters
       @discourse_counters[:'Processed Users']    =   0      # @user_count
       @discourse_counters[:'Skipped Users']      =   0      # @skipped_users
+      @discourse_counters[:'Messages Sent']      =   0      # @skipped_users
     end
     
-    def zero_counters                             # todo move to hash
-      @scan_passes                      = 0
+    # def zero_counters
+      # @scan_passes                      = 0
 
-      @user_targets                     = 0
-      @users_updated                    = 0
-      @sent_messages                    = 0
+      # @user_targets                     = 0
+      # @users_updated                    = 0
+      # @sent_messages                    = 0
 
-      @matching_category_notify_users   = 0
-      @matching_categories_count        = 0
-      @categories_updated               = 0
-    end
+      # @matching_category_notify_users   = 0
+      # @matching_categories_count        = 0
+      # @categories_updated               = 0
+    # end
 
     def scan_summary
       field_settings = "%-35s %-20s \n"
 
-      if @matching_category_notify_users > 0
-        printf "\n"
-        printf field_settings, 'Category Notification Totals', ''
-        printf field_settings, 'Categories Visible to Users: ', @matching_categories_count
-        printf field_settings, 'Users Needing Update: ', @matching_category_notify_users
-        printf field_settings, 'Updated Categories: ', @categories_updated
-        printf field_settings, 'Updated Users: ', @users_updated
-      end
+      # if @matching_category_notify_users > 0
+      #   printf "\n"
+      #   printf field_settings, 'Category Notification Totals', ''
+        # printf field_settings, 'User Visible Categories: ', @matching_categories_count
+        # printf field_settings, 'Users Needing Update: ', @matching_category_notify_users
+        # printf field_settings, 'Updated Categories: ', @categories_updated
+        # printf field_settings, 'Updated Users: ', @users_updated
+      # end
 
       if @scan_pass_counters.empty?
         puts 'No Scan totals ...'
@@ -181,8 +183,8 @@ module MomentumApi
       # printf "\n"
       printf field_settings, 'Processed Users: ', @discourse_counters[:'Processed Users']
       printf field_settings, 'Skipped Users: ', @discourse_counters[:'Skipped Users']
-      printf field_settings, 'Generalized targets: ', @user_targets # todo needs custom on each task
-      printf field_settings, 'User messages sent: ', @sent_messages
+      # printf field_settings, 'Qualifying Targets: ', @user_targets # todo needs custom on each task
+      # printf field_settings, 'User messages sent: ', @sent_messages
     end
 
 

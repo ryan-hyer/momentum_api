@@ -28,7 +28,7 @@ module MomentumApi
         created_message = from_client.get_post(response['id'])
         printf field_settings, '  Message From:', created_message['username'], to_username, created_message['topic_slug'], created_message['raw'][0..20], 'Sent'
 
-        @sent_messages += 1
+        @discourse_counters[:'Messages Sent'] += 1
         sleep(1)
       end
     end

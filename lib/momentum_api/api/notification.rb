@@ -6,11 +6,12 @@ module MomentumApi
         print_user(@user_details, category['slug'], group_name, category['notification_level'],
                    status='NOT Watching', type='CategoryUser')
 
+        @notifications_counters[:'Category Update Targets'] += 1
         if @discourse.do_live_updates
           update_response = @user_client.category_set_user_notification(id: category['id'], notification_level: set_level)
           sleep 1
           puts update_response
-          @discourse.categories_updated += 1
+          @notifications_counters[:'Category Notify Updated'] += 1
 
           # check if update happened ... or ... comment out for no check after update
           user_details_after_update = @user_client.categories
@@ -22,14 +23,13 @@ module MomentumApi
             end
           end
         end
-        @discourse.matching_category_notify_users += 1
       else
         if @issue_users.include?(@user_details['username'])
           print_user(@user_details, category['slug'], group_name, category['notification_level'],
                      status='Watching', type='CategoryUser')
         end
       end
-      @discourse.matching_categories_count += 1
+      @notifications_counters[:'User Categories'] += 1
     end
 
     def user_group_notify_to_default                 # todo refactor inside discourse group
@@ -38,14 +38,18 @@ module MomentumApi
         users_group_users = @user_details['group_users']
         users_group_users.each do |users_group|
           if group['id'] == users_group['group_id']
+            @notifications_counters[:'User Groups'] += 1
             if users_group['notification_level'] != group['default_notification_level'] # and if group['name'] == @target_group_name    # uncomment for just one group
               print_user(@user_details, 'na', group['name'], users_group['notification_level'],
                          status="NOT Group Default of #{group['default_notification_level']}", type='GroupUser')
-              @discourse.matching_categories_count += 1
+              @notifications_counters[:'Group Update Targets'] += 1
               if @discourse.do_live_updates
                 response = @discourse.admin_client.group_set_user_notify_level(group['name'], @user_details['id'], group['default_notification_level'])
                 sleep 1
                 puts response
+                @notifications_counters[:'Group Notify Updated'] += 1
+
+                # check if update happened ... or ... comment out for no check after update
                 @user_details_after_update = @discourse.admin_client.user(@user_details['username'])['group_users']
                 sleep 1
                 @user_details_after_update.each do |users_group_second_pass| # uncomment to check for the update
