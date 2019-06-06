@@ -36,7 +36,7 @@ module MomentumApi
 
       # testing variables
       @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin)
-      @issue_users        = mock || %w()
+      @issue_users        = %w()
 
       # zero out counters
       zero_discourse_counters
@@ -146,20 +146,14 @@ module MomentumApi
 
 
     def scan_summary
-
       field_settings = "%-35s %-20s \n"
 
-      if @scan_pass_counters.empty?
-        puts 'No Scan totals ...'
-      else
-        @scan_pass_counters.each do |score|
-          printf "\n\n"
-          score.each do |key, value|
-            printf field_settings, key.to_s, value
-          end
+      @scan_pass_counters.each do |score|
+        printf "\n\n"
+        score.each do |key, value|
+          printf field_settings, key.to_s, value
         end
       end
-
     end
 
 

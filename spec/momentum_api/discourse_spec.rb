@@ -74,11 +74,8 @@ describe MomentumApi::Discourse do
 
   describe '.apply_to_users in group to see issue user' do        # todo finish test
 
-    let(:issue_users) { %w{Tony_Christopher} }
-
     let(:mock_dependencies) do
       mock_dependencies = instance_double('mock_dependencies')
-      expect(mock_dependencies).to receive(:issue_users).and_return(issue_users)
       expect(mock_dependencies).to receive(:group_members).and_return(group_member_list)
       expect(mock_dependencies).to receive(:user).and_return(user_details).exactly(group_member_list.length).times
       expect(mock_dependencies).to receive(:categories).and_return(category_list).exactly(group_member_list.length).times
@@ -90,9 +87,9 @@ describe MomentumApi::Discourse do
                                          target_groups=%w(trust_level_1), target_username=nil, mock: mock_dependencies) }
 
     it 'responds to apply_to_users and runs thru group of users' do
-      subject.apply_to_users(scan_options)
-      expect(subject).to respond_to(:apply_to_users)
-      expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(group_member_list.length)
+      subject.instance_variable_set(:@issue_users, %w(Tony_Christopher))
+      expect { subject.apply_to_users(scan_options) }
+          .to output(/Tony_Christopher in apply_to_group_users method/).to_stdout
     end
   end
 
