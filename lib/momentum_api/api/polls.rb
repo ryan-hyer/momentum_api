@@ -1,14 +1,17 @@
 module MomentumApi
   class Poll
-    attr_accessor :user_scores_counters
+
+    attr_accessor :user_scores_counters    # todo can be deleted?
     # attr_reader :instance
 
 
     def initialize(post_id, update_type, poll_url='https://discourse.gomomentum.org', poll_names=%w(poll))
       raise ArgumentError, 'post_id needs to be defined' if post_id.nil?
 
-      # messages
-      @emails_from_username = 'Kim_Miller'
+
+      # poll settings
+      @points_multiplier      = 1.13
+      @emails_from_username   = 'Kim_Miller'
 
       # parameter setting
       @post_id                = post_id
@@ -29,9 +32,6 @@ module MomentumApi
 
     def run_scans(man)
       @man = man
-
-      # poll settings
-      @points_multiplier = 1.13
 
       begin
         post = @man.user_client.get_post(@post_id)

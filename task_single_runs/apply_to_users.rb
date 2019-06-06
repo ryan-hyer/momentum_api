@@ -2,7 +2,7 @@ require '../lib/momentum_api'
 
 do_live_updates           =   false
 
-scan_options = {                        # todo move to using the Class from this point forward.
+scan_options = {                     
     team_category_watching:   true,
     essential_watching:       true,
     growth_first_post:        true,

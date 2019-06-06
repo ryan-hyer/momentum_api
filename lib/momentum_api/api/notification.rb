@@ -8,13 +8,13 @@ module MomentumApi
 
         @notifications_counters[:'Category Update Targets'] += 1
         if @discourse.do_live_updates
-          update_response = @user_client.category_set_user_notification(id: category['id'], notification_level: set_level)
+          update_response = @man.user_client.category_set_user_notification(id: category['id'], notification_level: set_level)
           sleep 1
           puts update_response
           @notifications_counters[:'Category Notify Updated'] += 1
 
           # check if update happened ... or ... comment out for no check after update
-          user_details_after_update = @user_client.categories
+          user_details_after_update = @man.user_client.categories
           sleep 1
           user_details_after_update.each do |users_category_second_pass|
             new_category_slug = users_category_second_pass['slug']

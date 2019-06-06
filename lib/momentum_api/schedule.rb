@@ -31,11 +31,12 @@ module MomentumApi
       
     end
 
-    def run_scans(user_client, user_details, users_categories=nil)
+    def run_scans(man)
       # parameter setting
-      @user_client            =   user_client
-      @user_details           =   user_details
-      @users_categories       =   users_categories
+      @man                    =   man
+      # @user_client            =   user_client
+      @user_details           =   @man.user_details
+      @users_categories       =   @man.users_categories
 
       users_groups = @user_details['groups']
 

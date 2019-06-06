@@ -2,12 +2,13 @@ $LOAD_PATH.unshift File.expand_path('../../../../discourse_api/lib', __FILE__)
 require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__)
 # require_relative '../momentum_api/error'
 require_relative '../momentum_api/schedule'
+require_relative '../momentum_api/man'
 require_relative '../momentum_api/api/messages'
 
 module MomentumApi
   class Discourse
-    attr_accessor :do_live_updates, :issue_users, :user_score_poll, :scan_pass_counters, :scan_options, :admin_client
-    # attr_reader :instance, :api_username
+    # attr_accessor :do_live_updates, :issue_users, :user_score_poll, :scan_pass_counters, :scan_options, :admin_client
+    attr_reader :do_live_updates, :issue_users, :user_score_poll, :scan_pass_counters, :scan_options, :admin_client
 
     include MomentumApi::Messages
 
@@ -87,8 +88,8 @@ module MomentumApi
         end
 
         @discourse_counters[:'Processed Users'] += 1
-        # schedule = MomentumApi::Schedule.new(self)
-        @mock ? @mock.run_scans(self) : @schedule.run_scans(user_client, user_details, users_categories = users_categories)
+        man = MomentumApi::Man.new(user_client, user_details, users_categories=users_categories)
+        @mock ? @mock.run_scans(self) : @schedule.run_scans(man)
       end
     end
 

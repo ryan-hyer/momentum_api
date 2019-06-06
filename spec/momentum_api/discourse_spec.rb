@@ -72,7 +72,7 @@ describe MomentumApi::Discourse do
   end
 
 
-  describe '.apply_to_users in group to see issue user' do        # todo finish test
+  describe '.apply_to_users in group to see issue user' do
 
     let(:mock_dependencies) do
       mock_dependencies = instance_double('mock_dependencies')
