@@ -5,8 +5,9 @@ module MomentumApi
     # attr_reader :instance
 
 
-    def initialize(post_id, update_type, poll_url='https://discourse.gomomentum.org', poll_names=%w(poll))
-      raise ArgumentError, 'post_id needs to be defined' if post_id.nil?
+    def initialize(schedule, score_user_levels)
+      raise ArgumentError, 'schedule needs to be defined' if schedule.nil?
+      raise ArgumentError, 'score_user_levels needs to be defined' if score_user_levels.nil? || score_user_levels.empty?
 
 
       # poll settings
@@ -14,12 +15,13 @@ module MomentumApi
       @emails_from_username   = 'Kim_Miller'
 
       # parameter setting
-      @post_id                = post_id
-      @poll_url               = poll_url
-      @poll_names             = poll_names
-      @update_type            = update_type
+      @update_type        = score_user_levels['update_type'.to_sym]
+      @post_id            = score_user_levels['target_post'.to_sym]
+      @poll_names         = score_user_levels['target_polls'.to_sym]
+      @poll_url           = score_user_levels['poll_url'.to_sym]
 
       @user_scores_counters   = {'User Scores': ''}
+      schedule.discourse.scan_pass_counters << @user_scores_counters
 
       # user score saving
       @user_fields            = 'user_fields'

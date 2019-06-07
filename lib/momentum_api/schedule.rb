@@ -11,7 +11,7 @@ module MomentumApi
     include MomentumApi::Notification
     include MomentumApi::User
 
-    def initialize(discourse)
+    def initialize(discourse, scan_options, mock=nil)
       raise ArgumentError, 'user_client needs to be defined' if discourse.nil?
 
       # messages
@@ -19,6 +19,13 @@ module MomentumApi
 
       # parameter setting
       @discourse = discourse
+      @scan_options   =   scan_options
+      # if @scan_options['team_category_watching'.to_sym]   # todo convert Notification to a Class
+      # end
+
+      if @scan_options['score_user_levels'.to_sym]
+        @user_score_poll   = mock || MomentumApi::Poll.new(self, @scan_options['score_user_levels'.to_sym])
+      end
 
       # counter init
       @notifications_counters = {'Notifications': ''}
@@ -69,19 +76,19 @@ module MomentumApi
       end
 
       # Update Trust Level
-      if @discourse.scan_options['trust_level_updates'.to_sym]
+      if @scan_options['trust_level_updates'.to_sym]
         self.update_user_trust_level(discourse, is_owner, 0, @user_details)
       end
 
       # Update User Group Alias Notification
-      if @discourse.scan_options['user_group_alias_notify'.to_sym]
+      if @scan_options['user_group_alias_notify'.to_sym]
         self.user_group_notify_to_default
       end
 
       # User Scoring
-      if @discourse.scan_options['score_user_levels'.to_sym]
-        # puts @discourse.scan_options['score_user_levels'.to_sym]
-        @discourse.user_score_poll.run_scans(self)
+      if @scan_options['score_user_levels'.to_sym]
+        # puts @scan_options['score_user_levels'.to_sym]
+        @user_score_poll.run_scans(self)
       end
     end
 
@@ -100,7 +107,7 @@ module MomentumApi
           if case_excludes.include?(@user_details['username'])
             # puts "#{@user_details['username']} specifically excluded from Watching Meta"
           else
-            if @discourse.scan_options['team_category_watching'.to_sym]    # todo simplify signature
+            if @scan_options['team_category_watching'.to_sym]    # todo simplify signature
               self.set_category_notification(category, group_name, [3], 3)
             end
           end
@@ -110,7 +117,7 @@ module MomentumApi
           if case_excludes.include?(@user_details['username'])
             # puts "#{@user_details['username']} specifically excluded from Essential Watching"
           else                            # 4 = Watching first post, 3 = Watching, 1 = blank or ...?
-            if @discourse.scan_options['essential_watching'.to_sym]
+            if @scan_options['essential_watching'.to_sym]
               self.set_category_notification(category, group_name, [3], 3)
             end
           end
@@ -120,7 +127,7 @@ module MomentumApi
           if case_excludes.include?(@user_details['username'])
             # puts "#{@user_details['username']} specifically excluded from Watching Growth"
           else
-            if @discourse.scan_options['growth_first_post'.to_sym]
+            if @scan_options['growth_first_post'.to_sym]
               self.set_category_notification(category, group_name, [3, 4], 4)
             end
           end
@@ -130,7 +137,7 @@ module MomentumApi
           if case_excludes.include?(@user_details['username'])
             # puts "#{@user_details['username']} specifically excluded from Watching Meta"
           else
-            if @discourse.scan_options['meta_first_post'.to_sym]
+            if @scan_options['meta_first_post'.to_sym]
               self.set_category_notification(category, group_name, [3, 4], 4)
             end
           end

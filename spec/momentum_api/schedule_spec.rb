@@ -19,8 +19,8 @@ describe MomentumApi::Schedule do
       user_group_alias_notify:  true
   }
 
-  let(:group_member_list) { json_fixture("groups_members.json")[0..1]}
-  let(:user_details) { json_fixture("user.json") }
+  # let(:group_member_list) { json_fixture("groups_members.json")[0..1]}
+  let(:user_details) { json_fixture("user_details.json") }
   let(:category_list) { json_fixture("categories.json") }
 
   let(:mock_dependencies) do
@@ -32,26 +32,26 @@ describe MomentumApi::Schedule do
 
     let(:mock_dependencies) do
       mock_dependencies = instance_double('mock_dependencies')
-      expect(mock_dependencies).to receive(:group_members).and_return(group_member_list)
-      expect(mock_dependencies).to receive(:user).and_return(user_details).exactly(group_member_list.length).times
-      expect(mock_dependencies).to receive(:categories).and_return(category_list).exactly(group_member_list.length).times
-      expect(mock_dependencies).to receive(:run_scans).exactly(group_member_list.length).times
+      expect(mock_dependencies).to receive(:run_scans)
+      expect(mock_dependencies).to receive(:user_details).and_return(user_details).once
+      expect(mock_dependencies).to receive(:users_categories).and_return(category_list).once
+      # expect(mock_dependencies).to receive(:run_scans).exactly(group_member_list.length).times
       mock_dependencies
     end
 
 
-    discourse = MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates = do_live_updates,
+    discourse = MomentumApi::Discourse.new('KM_Admin', 'live', scan_options, do_live_updates = do_live_updates,
                                          target_groups=nil, target_username=nil, mock: nil)
 
-    user_details = json_fixture("user_details.json")
-    category_list = json_fixture("categories.json")
+    # user_details = json_fixture("user_details.json")
+    # category_list = json_fixture("categories.json")
 
-    man = MomentumApi::Man.new('user_client', user_details, users_categories=category_list)
+    # man = MomentumApi::Man.new('user_client', user_details, users_categories=category_list)
 
-    subject { MomentumApi::Schedule.new(discourse) }
+    subject { MomentumApi::Schedule.new(discourse, scan_options, mock_dependencies) }
 
     it 'responds to apply_to_users and runs thru default group of users' do
-      subject.run_scans(man)
+      subject.run_scans(mock_dependencies)
       # expect(subject).to respond_to(:apply_to_users)
       # expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(group_member_list.length)
     end

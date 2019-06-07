@@ -12,7 +12,7 @@ module MomentumApi
 
     include MomentumApi::Messages
 
-    def initialize(api_username, instance, do_live_updates=false, target_groups=[], target_username=nil, mock: nil)
+    def initialize(api_username, instance, scan_options, do_live_updates=false, target_groups=[], target_username=nil, mock: nil)
       raise ArgumentError, 'api_username needs to be defined' if api_username.nil? || api_username.empty?
 
       # messages
@@ -33,7 +33,7 @@ module MomentumApi
       @scan_pass_counters << @discourse_counters
 
       # create schedule Class
-      @schedule = MomentumApi::Schedule.new(self)
+      @schedule = MomentumApi::Schedule.new(self, scan_options)
 
       # testing variables
       @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin)
@@ -94,20 +94,20 @@ module MomentumApi
     end
 
     def apply_to_users(scan_options, skip_staged_user=true)
-      @scan_options = scan_options
+      # @scan_options = scan_options
 
-      if @scan_options['team_category_watching'.to_sym]   # todo convert Notification to a Class
-      end
-
-      if @scan_options['score_user_levels'.to_sym]
-        update_type       = @scan_options['score_user_levels'.to_sym]['update_type'.to_sym]
-        target_post       = @scan_options['score_user_levels'.to_sym]['target_post'.to_sym]
-        target_polls      = @scan_options['score_user_levels'.to_sym]['target_polls'.to_sym]
-        poll_url          = @scan_options['score_user_levels'.to_sym]['poll_url'.to_sym]
-
-        @user_score_poll   = MomentumApi::Poll.new(target_post, update_type, poll_url=poll_url, poll_names=target_polls)
-        @scan_pass_counters << @user_score_poll.user_scores_counters
-      end
+      # if @scan_options['team_category_watching'.to_sym]   # todo convert Notification to a Class
+      # end
+      #
+      # if @scan_options['score_user_levels'.to_sym]
+      #   update_type       = @scan_options['score_user_levels'.to_sym]['update_type'.to_sym]
+      #   target_post       = @scan_options['score_user_levels'.to_sym]['target_post'.to_sym]
+      #   target_polls      = @scan_options['score_user_levels'.to_sym]['target_polls'.to_sym]
+      #   poll_url          = @scan_options['score_user_levels'.to_sym]['poll_url'.to_sym]
+      #
+      #   @user_score_poll   = MomentumApi::Poll.new(target_post, update_type, poll_url=poll_url, poll_names=target_polls)
+      #   @scan_pass_counters << @user_score_poll.user_scores_counters
+      # end
 
       if @target_groups
         @target_groups.each do |group_name|

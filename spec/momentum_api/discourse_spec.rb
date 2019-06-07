@@ -39,7 +39,7 @@ describe MomentumApi::Discourse do
       mock_dependencies
     end
 
-    subject { MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates = do_live_updates,
+    subject { MomentumApi::Discourse.new('KM_Admin', 'live', scan_options, do_live_updates = do_live_updates,
                                          target_groups=nil, target_username=nil, mock: mock_dependencies) }
 
     it 'responds to apply_to_users and runs thru default group of users' do
@@ -61,7 +61,7 @@ describe MomentumApi::Discourse do
       mock_dependencies
     end
 
-    subject { MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates = do_live_updates,
+    subject { MomentumApi::Discourse.new('KM_Admin', 'live', scan_options, do_live_updates = do_live_updates,
                                          target_groups=%w(trust_level_1), target_username=nil, mock: mock_dependencies) }
 
     it 'responds to apply_to_users and runs thru group of users' do
@@ -83,7 +83,7 @@ describe MomentumApi::Discourse do
       mock_dependencies
     end
 
-    subject { MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates = do_live_updates,
+    subject { MomentumApi::Discourse.new('KM_Admin', 'live', scan_options, do_live_updates = do_live_updates,
                                          target_groups=%w(trust_level_1), target_username=nil, mock: mock_dependencies) }
 
     it 'responds to apply_to_users and runs thru group of users' do
@@ -105,7 +105,7 @@ describe MomentumApi::Discourse do
       mock_dependencies
     end
 
-    subject { MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates = do_live_updates,
+    subject { MomentumApi::Discourse.new('KM_Admin', 'live', scan_options, do_live_updates = do_live_updates,
                                          target_groups=%w(trust_level_1), target_username='Tony_Christopher', mock: mock_dependencies) }
 
     it 'runs single user and responds to apply_to_users' do
@@ -128,7 +128,7 @@ describe MomentumApi::Discourse do
       mock_dependencies
     end
 
-    subject { MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates = do_live_updates,
+    subject { MomentumApi::Discourse.new('KM_Admin', 'live', scan_options, do_live_updates = do_live_updates,
                                          target_groups=nil, target_username='Noah_Salzman', mock: mock_dependencies) }
 
     it 'skips staged users and responds to apply_to_users' do
@@ -147,7 +147,7 @@ describe MomentumApi::Discourse do
       mock_dependencies
     end
 
-    subject { MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates = do_live_updates,
+    subject { MomentumApi::Discourse.new('KM_Admin', 'live', scan_options, do_live_updates = do_live_updates,
                                          target_groups=%w(trust_level_1), target_username=nil, mock: mock_dependencies) }
 
     it "responds to unknown .connect_to_instance" do
@@ -167,7 +167,7 @@ describe MomentumApi::Discourse do
       mock_dependencies
     end
 
-    subject { MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates = do_live_updates,
+    subject { MomentumApi::Discourse.new('KM_Admin', 'live', scan_options, do_live_updates = do_live_updates,
                                          target_groups=%w(trust_level_1), target_username=nil, mock: mock_dependencies) }
     
     it ". apply_to_users TooManyRequests x2 raises error" do
@@ -189,7 +189,7 @@ describe MomentumApi::Discourse do
       mock_dependencies
     end
 
-    subject { MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates = do_live_updates,
+    subject { MomentumApi::Discourse.new('KM_Admin', 'live', scan_options, do_live_updates = do_live_updates,
                                          target_groups=%w(trust_level_1), target_username=nil, mock: mock_dependencies) }
 
     it "responds to unknown .connect_to_instance" do
@@ -212,7 +212,7 @@ describe MomentumApi::Discourse do
       mock_dependencies
     end
 
-    subject { MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates = do_live_updates,
+    subject { MomentumApi::Discourse.new('KM_Admin', 'live', scan_options, do_live_updates = do_live_updates,
                                          target_groups=%w(trust_level_1), target_username=nil, mock: mock_dependencies) }
 
     it "responds to unknown .connect_to_instance" do
@@ -225,7 +225,7 @@ describe MomentumApi::Discourse do
 
   describe ".connect_to_instance" do
 
-    subject { MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates = do_live_updates,
+    subject { MomentumApi::Discourse.new('KM_Admin', 'live', scan_options, do_live_updates = do_live_updates,
                                          target_groups=%w(trust_level_1), target_username=nil, mock: mock_dependencies) }
 
     it "responds to live .connect_to_instance" do
@@ -247,7 +247,7 @@ describe MomentumApi::Discourse do
 
   describe ".scan_summary should tally counter totals" do
 
-    subject { MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates = do_live_updates,
+    subject { MomentumApi::Discourse.new('KM_Admin', 'live', scan_options, do_live_updates = do_live_updates,
                                          target_groups=%w(trust_level_1), target_username=nil, mock: mock_dependencies) }
 
     it "responds to .scan_summary and find 0 init" do
