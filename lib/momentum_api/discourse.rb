@@ -7,25 +7,26 @@ require_relative '../momentum_api/api/messages'
 
 module MomentumApi
   class Discourse
-    # attr_accessor :do_live_updates, :issue_users, :user_score_poll, :scan_pass_counters, :scan_options, :admin_client
-    attr_reader :do_live_updates, :issue_users, :user_score_poll, :scan_pass_counters, :scan_options, :admin_client
+    attr_reader :do_live_updates, :issue_users, :user_score_poll, :scan_pass_counters, :admin_client
 
     include MomentumApi::Messages
 
-    def initialize(api_username, instance, scan_options, do_live_updates=false, target_groups=[], target_username=nil, mock: nil)
-      raise ArgumentError, 'api_username needs to be defined' if api_username.nil? || api_username.empty?
+    def initialize(discourse_options, schedule_options, mock: nil)
+      raise ArgumentError, 'api_username needs to be defined' if discourse_options.nil? || discourse_options.empty?
 
       # messages
       @emails_from_username = 'Kim_Miller'
 
       # parameter setting
-      @target_username    = target_username
-      @target_groups      = target_groups
-      @do_live_updates    = do_live_updates
-      @instance           = instance
-      @api_username       = api_username
+      @options              = discourse_options
+      # @target_username    = discourse_options[:target_username]
+      # @target_groups      = discourse_options[:target_groups]
+      # @do_live_updates    = discourse_options[:do_live_updates]
+      # @instance           = discourse_options[:instance]
+      # @api_username       = discourse_options[:api_username]
+
       @mock               = mock
-      @admin_client       = mock || connect_to_instance(api_username, instance)
+      @admin_client       = mock || connect_to_instance(discourse_options[:api_username], discourse_options[:instance])
 
       # counter init
       @discourse_counters = {'Discourse Men': ''}
@@ -33,18 +34,17 @@ module MomentumApi
       @scan_pass_counters << @discourse_counters
 
       # create schedule Class
-      @schedule = MomentumApi::Schedule.new(self, scan_options)
+      @schedule = MomentumApi::Schedule.new(self, schedule_options)
 
       # testing variables
       @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin)
       @issue_users        = %w()
 
-      # zero out counters
       zero_discourse_counters
 
     end
 
-    def connect_to_instance(api_username, instance=@instance)
+    def connect_to_instance(api_username, instance=@options[:instance])
       client = ''
       case instance
       when 'live'
@@ -74,43 +74,28 @@ module MomentumApi
       if user_details['staged']
         @discourse_counters[:'Skipped Users'] += 1
       else
-        user_client = @mock || connect_to_instance(user_details['username'], @instance)
-        begin
-          users_categories = user_client.categories
-          @mock ? sleep(0) : sleep(1)
-        rescue DiscourseApi::UnauthenticatedError
-          users_categories = nil
-          puts "\n#{user_details['username']} : DiscourseApi::UnauthenticatedError - Not permitted to view resource.\n"
-        rescue DiscourseApi::TooManyRequests
-          puts 'Sleeping for 20 seconds ....'
-          @mock ? sleep(0) : sleep(20)
-          users_categories = user_client.categories
-        end
+        user_client = @mock || connect_to_instance(user_details['username'], @options[:instance])
+        # begin
+        #   users_categories = user_client.categories
+        #   @mock ? sleep(0) : sleep(1)
+        # rescue DiscourseApi::UnauthenticatedError
+        #   users_categories = nil
+        #   puts "\n#{user_details['username']} : DiscourseApi::UnauthenticatedError - Not permitted to view resource.\n"
+        # rescue DiscourseApi::TooManyRequests
+        #   puts 'Sleeping for 20 seconds ....'
+        #   @mock ? sleep(0) : sleep(20)
+        #   users_categories = user_client.categories
+        # end
 
         @discourse_counters[:'Processed Users'] += 1
-        man = MomentumApi::Man.new(user_client, user_details, users_categories=users_categories)
-        @mock ? @mock.run_scans(self) : @schedule.run_scans(man)
+        @mock ? man = nil : man = MomentumApi::Man.new(self, user_client, user_details)
+        @mock ? @mock.membership_scan(self) : man.membership_scan
       end
     end
 
-    def apply_to_users(scan_options, skip_staged_user=true)
-      # @scan_options = scan_options
-
-      # if @scan_options['team_category_watching'.to_sym]   # todo convert Notification to a Class
-      # end
-      #
-      # if @scan_options['score_user_levels'.to_sym]
-      #   update_type       = @scan_options['score_user_levels'.to_sym]['update_type'.to_sym]
-      #   target_post       = @scan_options['score_user_levels'.to_sym]['target_post'.to_sym]
-      #   target_polls      = @scan_options['score_user_levels'.to_sym]['target_polls'.to_sym]
-      #   poll_url          = @scan_options['score_user_levels'.to_sym]['poll_url'.to_sym]
-      #
-      #   @user_score_poll   = MomentumApi::Poll.new(target_post, update_type, poll_url=poll_url, poll_names=target_polls)
-      #   @scan_pass_counters << @user_score_poll.user_scores_counters
-      # end
-
-      if @target_groups
-        @target_groups.each do |group_name|
+    def apply_to_users(schedule_options, skip_staged_user=true)      # move to schedule_options
+      if @options[:target_groups]
+        @options[:target_groups].each do |group_name|
           apply_to_group_users(group_name, skip_staged_user)
         end
       else
@@ -121,8 +106,8 @@ module MomentumApi
     def apply_to_group_users(group_name, skip_staged_user=false)
       group_members = @admin_client.group_members(group_name, limit: 10000)
       group_members.each do |group_member|
-        if @target_username
-          if group_member['username'] == @target_username
+        if @options[:target_username]
+          if group_member['username'] == @options[:target_username]
             apply_call(group_member)
           end
         elsif not @exclude_user_names.include?(group_member['username'])

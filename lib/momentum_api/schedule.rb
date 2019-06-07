@@ -11,15 +11,15 @@ module MomentumApi
     include MomentumApi::Notification
     include MomentumApi::User
 
-    def initialize(discourse, scan_options, mock=nil)
+    def initialize(discourse, schedule_options, mock=nil)
       raise ArgumentError, 'user_client needs to be defined' if discourse.nil?
 
       # messages
       @emails_from_username   =   'Kim_Miller'
 
       # parameter setting
-      @discourse = discourse
-      @scan_options   =   scan_options
+      @discourse              = discourse
+      @scan_options           =   schedule_options
       # if @scan_options['team_category_watching'.to_sym]   # todo convert Notification to a Class
       # end
 
