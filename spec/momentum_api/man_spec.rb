@@ -36,12 +36,6 @@ describe MomentumApi::Man do
         mock_discourse
       end
 
-      # let(:mock_dependencies) do
-      #   mock_dependencies = instance_double('mock_dependencies')
-      #   expect(mock_dependencies).to receive(:categories).and_return(category_list).once
-      #   mock_dependencies
-      # end
-
       # discourse = MomentumApi::Discourse.new(discourse_options, mock: nil)
       subject { MomentumApi::Man.new(mock_discourse, mock_dependencies, user_details, mock: mock_dependencies) }
 
@@ -54,27 +48,8 @@ describe MomentumApi::Man do
   end
 
 
-  # context 'regular group of users' do
-  #
-  #   let(:mock_dependencies) do
-  #     mock_dependencies = instance_double('mock_dependencies')
-  #     expect(mock_dependencies).to receive(:group_members).and_return(group_member_list)
-  #     expect(mock_dependencies).to receive(:user).and_return(user_details).exactly(group_member_list.length).times
-  #     expect(mock_dependencies).to receive(:membership_scan).exactly(group_member_list.length).times
-  #     mock_dependencies
-  #   end
-  #
-  #   describe '.apply_to_users in group' do
-  #
-  #     subject {MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies)}
-  #
-  #     it 'responds to apply_to_users and runs thru group of users' do
-  #       subject.apply_to_users(schedule_options)
-  #       expect(subject).to respond_to(:apply_to_users)
-  #       expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(group_member_list.length)
-  #     end
-  #   end
-  #
+  context 'regular group of users' do
+
   #   describe '.apply_to_users in group to see issue user' do
   #
   #     subject {MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies)}
@@ -261,6 +236,6 @@ describe MomentumApi::Man do
   #       expect { subject.scan_summary }.to output(/Discourse Men/).to_stdout
   #     end
   #   end
-  # end
+  end
 end
 
