@@ -7,12 +7,11 @@ module MomentumApi
       raise ArgumentError, 'user_client needs to be defined' if user_client.nil?
       raise ArgumentError, 'user_details needs to be defined' if user_details.nil? || user_details.empty?
 
-      @discourse          = discourse
+      @discourse          =   discourse
       @mock               =   mock
 
       # @user_client        =   user_client
       @user_details       =   user_details
-      # @users_categories   =   users_categories
 
       begin
         @users_categories = user_client.categories
@@ -49,7 +48,7 @@ module MomentumApi
         end
 
         if @users_categories
-          # category_cases(group_name)
+          @discourse.schedule.category_cases(group_name)
         else
           puts "\nSkipping Category Cases for #{@user_details['username']}.\n"
         end

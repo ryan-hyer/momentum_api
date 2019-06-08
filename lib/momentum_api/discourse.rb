@@ -7,7 +7,7 @@ require_relative '../momentum_api/api/messages'
 
 module MomentumApi
   class Discourse
-    attr_reader :do_live_updates, :issue_users, :user_score_poll, :scan_pass_counters, :admin_client
+    attr_reader :do_live_updates, :issue_users, :user_score_poll, :scan_pass_counters, :admin_client, :schedule
 
     include MomentumApi::Messages
 
