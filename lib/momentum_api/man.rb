@@ -36,7 +36,7 @@ module MomentumApi
 
       is_owner = false
       if @discourse.issue_users.include?(@user_details['username'])
-        puts "#{@user_details['username']} in apply_function"
+        puts "#{@user_details['username']} in membership_scan"
       end
 
       # Examine Users Groups

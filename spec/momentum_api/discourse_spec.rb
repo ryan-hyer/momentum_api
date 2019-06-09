@@ -114,47 +114,6 @@ describe MomentumApi::Discourse do
         expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(0)
       end
     end
-
-
-    # describe "client.categories DiscourseApi::TooManyRequests x2 raises error" do      # todo move to man
-    #
-    #   let(:mock_dependencies) do
-    #     mock_dependencies = instance_double('mock_dependencies')
-    #     expect(mock_dependencies).to receive(:group_members).and_return(group_member_list).once
-    #     expect(mock_dependencies).to receive(:user).and_return(user_details).once
-    #     expect(mock_dependencies).to receive(:categories).exactly(2).times
-    #                                      .and_raise(DiscourseApi::TooManyRequests.new('error message here'))
-    #     mock_dependencies
-    #   end
-    #
-    #   subject { MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies)}
-    #
-    #   it "responds to unknown .connect_to_instance" do
-    #     expect { subject.apply_to_users(schedule_options) }
-    #       .to raise_error(DiscourseApi::TooManyRequests)
-    #     expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(0)
-    #   end
-    # end
-
-
-    describe "client.categories may raise DiscourseApi::UnauthenticatedError and still run scan" do
-
-      let(:mock_dependencies) do
-        mock_dependencies = instance_double('mock_dependencies')
-        expect(mock_dependencies).to receive(:group_members).and_return(group_member_list).once
-        expect(mock_dependencies).to receive(:user).and_return(user_details).exactly(group_member_list.length).times
-        expect(mock_dependencies).to receive(:membership_scan).exactly(group_member_list.length).times
-        mock_dependencies
-      end
-
-      subject { MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies) }
-
-      it "responds to unknown .connect_to_instance" do
-        subject.apply_to_users(schedule_options)
-        expect(subject).to respond_to(:apply_to_users)
-        expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(group_member_list.length)
-      end
-    end
   end
 
   context 'staged users' do
