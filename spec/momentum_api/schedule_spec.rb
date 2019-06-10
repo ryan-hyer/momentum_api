@@ -14,9 +14,7 @@ describe MomentumApi::Schedule do
 
     let(:mock_dependencies) do
       mock_dependencies = instance_double('mock_dependencies')
-      expect(mock_dependencies).to receive(:run_scans)
-      expect(mock_dependencies).to receive(:user_details).and_return(user_details).once
-      expect(mock_dependencies).to receive(:users_categories).and_return(category_list).once
+      # expect(mock_dependencies).to receive(:group_cases)
       mock_dependencies
     end
 
@@ -25,9 +23,9 @@ describe MomentumApi::Schedule do
 
     subject { MomentumApi::Schedule.new(discourse, schedule_options, mock_dependencies) }
 
-    it 'responds to run_scans' do
-      subject.run_scans(mock_dependencies)
-      expect(subject).to respond_to(:run_scans)
+    it 'responds to group_cases' do
+      subject.group_cases('fake group')
+      expect(subject).to respond_to(:group_cases)
     end
   end
 

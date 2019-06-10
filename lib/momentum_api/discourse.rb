@@ -89,7 +89,7 @@ module MomentumApi
 
         @discourse_counters[:'Processed Users'] += 1
         @mock ? man = nil : man = MomentumApi::Man.new(self, user_client, user_details)
-        @mock ? @mock.membership_scan(self) : man.membership_scan
+        @mock ? @mock.scan_contexts(self) : man.scan_contexts
       end
     end
 

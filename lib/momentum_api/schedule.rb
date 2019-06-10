@@ -5,7 +5,6 @@ require_relative '../momentum_api/api/user'
 
 module MomentumApi
   class Schedule
-    # attr_accessor :do_live_updates
     attr_reader :user_client, :user_details, :discourse
 
     include MomentumApi::Notification
@@ -18,77 +17,102 @@ module MomentumApi
       @emails_from_username   =   'Kim_Miller'
 
       # parameter setting
-      @discourse              = discourse
+      @discourse              =   discourse
       @scan_options           =   schedule_options
       # if @scan_options['team_category_watching'.to_sym]   # todo convert Notification to a Class
       # end
 
       if @scan_options['score_user_levels'.to_sym]
-        @user_score_poll   = mock || MomentumApi::Poll.new(self, @scan_options['score_user_levels'.to_sym])
+        @user_score_poll      =   mock || MomentumApi::Poll.new(self, @scan_options['score_user_levels'.to_sym])
       end
 
       # counter init
-      @notifications_counters = {'Notifications': ''}
+      @notifications_counters =   {'Notifications': ''}
       @discourse.scan_pass_counters << @notifications_counters
 
       # testing parameters
-      @issue_users            =     %w()
+      @issue_users            =   %w()
 
       zero_notifications_counters
       
     end
 
-    def run_scans(man)
-      # parameter setting
-      @man                    =   man
-      # @user_client            =   user_client
-      @user_details           =   @man.user_details
-      @users_categories       =   @man.users_categories
-
-      users_groups = @user_details['groups']
-
-      is_owner = false
-      if @discourse.issue_users.include?(@user_details['username'])
-        puts "#{@user_details['username']} in apply_function"
-      end
-
-      # Examine Users Groups
-      users_groups.each do |group|
-        group_name = group['name']
-
-        if @discourse.issue_users.include?(@user_details['username'])
-          puts "\n#{@user_details['username']}  with group: #{group_name}\n"
+    # def run_scans(man)
+    #   # parameter setting
+    #   @man                    =   man
+    #   # @user_client            =   user_client
+    #   @user_details           =   @man.user_details
+    #   @users_categories       =   @man.users_categories
+    #
+    #   # users_groups = @user_details['groups']
+    #
+    #   # is_owner = false
+    #   if @discourse.issue_users.include?(@user_details['username'])
+    #     puts "#{@user_details['username']} in schedule run_scans"
+    #   end
+    #
+    #   # Examine Users Groups
+    #   # users_groups.each do |group|
+    #   #   group_name = group['name']
+    #   #
+    #   #   if @discourse.issue_users.include?(@user_details['username'])
+    #   #     puts "\n#{@user_details['username']}  with group: #{group_name}\n"
+    #   #   end
+    #   #
+    #   #   if @users_categories
+    #   #     category_cases(group_name)
+    #   #   else
+    #   #     puts "\nSkipping Category Cases for #{@user_details['username']}.\n"
+    #   #   end
+    #   #
+    #   #   # Group Cases (make a method)
+    #   #   case
+    #   #   when group_name == 'Owner'
+    #   #     is_owner = true
+    #   #   else
+    #   #     # puts 'No Group Case'
+    #   #   end
+    #   # end
+    #
+    #   # Update Trust Level
+    #   # if @scan_options['trust_level_updates'.to_sym]
+    #   #   self.update_user_trust_level(discourse, is_owner, 0, @user_details)
+    #   # end
+    #
+    #   # Update User Group Alias Notification
+    #   # if @scan_options['user_group_alias_notify'.to_sym]
+    #   #   self.user_group_notify_to_default
+    #   # end
+    #   #
+    #   # # User Scoring
+    #   # if @scan_options['score_user_levels'.to_sym]
+    #   #   # puts @scan_options['score_user_levels'.to_sym]
+    #   #   @user_score_poll.run_scans(self)
+    #   # end
+    # end
+    
+    def group_cases(group_name)
+      case
+      when group_name == 'Owner'
+        # is_owner = true
+        if @scan_options['trust_level_updates'.to_sym]
+          self.update_user_trust_level(discourse, 0, @user_details)
         end
 
-        if @users_categories
-          category_cases(group_name)
-        else
-          puts "\nSkipping Category Cases for #{@user_details['username']}.\n"
+        # User Scoring
+        if @scan_options['score_user_levels'.to_sym]
+          # puts @scan_options['score_user_levels'.to_sym]
+          @user_score_poll.run_scans(self)
+        end
+        
+        when group_name == 'trust_level_1'
+
+        if @scan_options['user_group_alias_notify'.to_sym]
+          self.user_group_notify_to_default
         end
 
-        # Group Cases (make a method)
-        case
-        when group_name == 'Owner'
-          is_owner = true
-        else
-          # puts 'No Group Case'
-        end
-      end
-
-      # Update Trust Level
-      if @scan_options['trust_level_updates'.to_sym]
-        self.update_user_trust_level(discourse, is_owner, 0, @user_details)
-      end
-
-      # Update User Group Alias Notification
-      if @scan_options['user_group_alias_notify'.to_sym]
-        self.user_group_notify_to_default
-      end
-
-      # User Scoring
-      if @scan_options['score_user_levels'.to_sym]
-        # puts @scan_options['score_user_levels'.to_sym]
-        @user_score_poll.run_scans(self)
+      else
+        # puts 'No Group Case'
       end
     end
 

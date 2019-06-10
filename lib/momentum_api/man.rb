@@ -31,7 +31,7 @@ module MomentumApi
       end
     end
     
-    def membership_scan
+    def scan_contexts
       users_groups = @user_details['groups']
 
       is_owner = false
@@ -39,27 +39,21 @@ module MomentumApi
         puts "#{@user_details['username']} in membership_scan"
       end
 
-      # Examine Users Groups
+      # Examine Users Groups and Cagegories
       users_groups.each do |group|
-        group_name = group['name']
-
+        
         if @discourse.issue_users.include?(@user_details['username'])
-          puts "\n#{@user_details['username']}  with group: #{group_name}\n"
+          puts "\n#{@user_details['username']}  with group: #{group['name']}\n"
         end
 
+        # Group Cases
+        @discourse.schedule.group_cases(group['name'])
+
         if @users_categories
-          @discourse.schedule.category_cases(group_name)
+          @discourse.schedule.category_cases(group['name'])
         else
           puts "\nSkipping Category Cases for #{@user_details['username']}.\n"
         end
-
-      #   # Group Cases (make a method)
-      #   case
-      #   when group_name == 'Owner'
-      #     is_owner = true
-      #   else
-      #     # puts 'No Group Case'
-      #   end
       
       end
 
@@ -79,6 +73,7 @@ module MomentumApi
       #   @user_score_poll.run_scans(self)
       # end
     end
-    
+
+
   end
 end

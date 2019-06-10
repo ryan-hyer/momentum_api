@@ -13,7 +13,7 @@ describe MomentumApi::Discourse do
       mock_dependencies = instance_double('mock_dependencies')
       expect(mock_dependencies).to receive(:group_members).and_return(group_member_list)
       expect(mock_dependencies).to receive(:user).and_return(user_details).exactly(group_member_list.length).times
-      expect(mock_dependencies).to receive(:membership_scan).exactly(group_member_list.length).times
+      expect(mock_dependencies).to receive(:scan_contexts).exactly(group_member_list.length).times
       mock_dependencies
     end
 
@@ -61,7 +61,7 @@ describe MomentumApi::Discourse do
         mock_dependencies = instance_double('mock_dependencies')
         expect(mock_dependencies).to receive(:group_members).and_return(group_member_list)
         expect(mock_dependencies).to receive(:user).and_return(user_details).once
-        expect(mock_dependencies).to receive(:membership_scan).once
+        expect(mock_dependencies).to receive(:scan_contexts).once
         mock_dependencies
       end
 
