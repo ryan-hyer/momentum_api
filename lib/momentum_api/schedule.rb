@@ -5,6 +5,7 @@ require_relative '../momentum_api/api/user'
 
 module MomentumApi
   class Schedule
+
     attr_reader :user_client, :user_details, :discourse
 
     include MomentumApi::Notification
@@ -12,6 +13,7 @@ module MomentumApi
 
     def initialize(discourse, schedule_options, mock=nil)
       raise ArgumentError, 'user_client needs to be defined' if discourse.nil?
+      raise ArgumentError, 'schedule_options needs to be defined' if schedule_options.nil? or schedule_options.empty?
 
       # messages
       @emails_from_username   =   'Kim_Miller'
@@ -31,72 +33,22 @@ module MomentumApi
       @discourse.scan_pass_counters << @notifications_counters
 
       # testing parameters
-      @issue_users            =   %w()
+      # @issue_users            =   %w()
 
       zero_notifications_counters
-      
+
     end
 
-    # def run_scans(man)
-    #   # parameter setting
-    #   @man                    =   man
-    #   # @user_client            =   user_client
-    #   @user_details           =   @man.user_details
-    #   @users_categories       =   @man.users_categories
-    #
-    #   # users_groups = @user_details['groups']
-    #
-    #   # is_owner = false
-    #   if @discourse.issue_users.include?(@user_details['username'])
-    #     puts "#{@user_details['username']} in schedule run_scans"
-    #   end
-    #
-    #   # Examine Users Groups
-    #   # users_groups.each do |group|
-    #   #   group_name = group['name']
-    #   #
-    #   #   if @discourse.issue_users.include?(@user_details['username'])
-    #   #     puts "\n#{@user_details['username']}  with group: #{group_name}\n"
-    #   #   end
-    #   #
-    #   #   if @users_categories
-    #   #     category_cases(group_name)
-    #   #   else
-    #   #     puts "\nSkipping Category Cases for #{@user_details['username']}.\n"
-    #   #   end
-    #   #
-    #   #   # Group Cases (make a method)
-    #   #   case
-    #   #   when group_name == 'Owner'
-    #   #     is_owner = true
-    #   #   else
-    #   #     # puts 'No Group Case'
-    #   #   end
-    #   # end
-    #
-    #   # Update Trust Level
-    #   # if @scan_options['trust_level_updates'.to_sym]
-    #   #   self.update_user_trust_level(discourse, is_owner, 0, @user_details)
-    #   # end
-    #
-    #   # Update User Group Alias Notification
-    #   # if @scan_options['user_group_alias_notify'.to_sym]
-    #   #   self.user_group_notify_to_default
-    #   # end
-    #   #
-    #   # # User Scoring
-    #   # if @scan_options['score_user_levels'.to_sym]
-    #   #   # puts @scan_options['score_user_levels'.to_sym]
-    #   #   @user_score_poll.run_scans(self)
-    #   # end
-    # end
-    
-    def group_cases(group_name)
+    def group_cases(user_details, group_name)
+      if @discourse.issue_users.include?(user_details['username'])
+        puts "#{@user_details['username']} in group_cases"
+      end
+
       case
       when group_name == 'Owner'
         # is_owner = true
         if @scan_options['trust_level_updates'.to_sym]
-          self.update_user_trust_level(discourse, 0, @user_details)
+          update_user_trust_level(@discourse, 0, user_details)
         end
 
         # User Scoring
@@ -104,12 +56,12 @@ module MomentumApi
           # puts @scan_options['score_user_levels'.to_sym]
           @user_score_poll.run_scans(self)
         end
-        
-        when group_name == 'trust_level_1'
 
-        if @scan_options['user_group_alias_notify'.to_sym]
-          self.user_group_notify_to_default
-        end
+        # when group_name == 'trust_level_1'
+        #
+        # if @scan_options['user_group_alias_notify'.to_sym]
+        #   self.user_group_notify_to_default
+        # end
 
       else
         # puts 'No Group Case'

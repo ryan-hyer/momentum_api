@@ -25,10 +25,10 @@ module MomentumApi
         @users_categories = user_client.categories
       end
 
-    def apply_call(group_member)
-       # man = MomentumApi::Man.new(user_client, user_details, users_categories=users_categories)
-       # @mock ? @mock.run_scans(self) : @schedule.run_scans(man)
-      end
+      # def apply_call(group_member)
+      #   # man = MomentumApi::Man.new(user_client, user_details, users_categories=users_categories)
+      #   # @mock ? @mock.run_scans(self) : @schedule.run_scans(man)
+      # end
     end
     
     def scan_contexts
@@ -47,7 +47,7 @@ module MomentumApi
         end
 
         # Group Cases
-        @discourse.schedule.group_cases(group['name'])
+        @discourse.schedule.group_cases(@user_details, group['name'])
 
         if @users_categories
           @discourse.schedule.category_cases(group['name'])

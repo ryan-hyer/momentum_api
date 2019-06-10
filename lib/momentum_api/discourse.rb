@@ -75,17 +75,6 @@ module MomentumApi
         @discourse_counters[:'Skipped Users'] += 1
       else
         user_client = @mock || connect_to_instance(user_details['username'], @options[:instance])
-        # begin
-        #   users_categories = user_client.categories
-        #   @mock ? sleep(0) : sleep(1)
-        # rescue DiscourseApi::UnauthenticatedError
-        #   users_categories = nil
-        #   puts "\n#{user_details['username']} : DiscourseApi::UnauthenticatedError - Not permitted to view resource.\n"
-        # rescue DiscourseApi::TooManyRequests
-        #   puts 'Sleeping for 20 seconds ....'
-        #   @mock ? sleep(0) : sleep(20)
-        #   users_categories = user_client.categories
-        # end
 
         @discourse_counters[:'Processed Users'] += 1
         @mock ? man = nil : man = MomentumApi::Man.new(self, user_client, user_details)
