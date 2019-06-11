@@ -32,7 +32,7 @@ module MomentumApi
     end
 
 
-    def run_scans(man)
+    def run(man)
       @man = man
 
       begin

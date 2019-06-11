@@ -24,8 +24,8 @@ module MomentumApi
 
       @queue_group_owner      =   []
       if @scan_options['score_user_levels'.to_sym]
-        @user_score_poll      =   mock || MomentumApi::Poll.new(self, @scan_options['score_user_levels'.to_sym])
-        @queue_group_owner    <<  @user_score_poll
+        # @user_score_poll      =   mock || MomentumApi::Poll.new(self, @scan_options['score_user_levels'.to_sym])
+        @queue_group_owner    <<  mock || MomentumApi::Poll.new(self, @scan_options['score_user_levels'.to_sym])
       end
 
       # counter init
@@ -47,10 +47,17 @@ module MomentumApi
         # Owner checking
         man.is_owner = true
 
+        # Owner Tasks
+        if @queue_group_owner.any?
+          @queue_group_owner.each do |owner_task|
+            owner_task.run(man)
+          end
+        end
+
         # User Scoring
         if @scan_options[:score_user_levels]
           # puts @scan_options['score_user_levels'.to_sym]
-          @user_score_poll.run_scans(man)
+          # @user_score_poll.run(man)
         end
 
       when group_name == 'trust_level_1'

@@ -120,8 +120,8 @@ def apply_function(user, admin_client, user_client='')
     target_post = 28707    # 28649
     target_polls = %w(version_two) # basic new version_two
     poll_url = 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
-    run_scans(user_client, user, target_post, target_polls, poll_url, update_type = update_type,
-              do_live_updates = @do_live_updates)
+    run(user_client, user, target_post, target_polls, poll_url, update_type = update_type,
+        do_live_updates = @do_live_updates)
   end
 
 end
