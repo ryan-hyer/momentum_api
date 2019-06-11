@@ -19,11 +19,10 @@ describe MomentumApi::Discourse do
 
     describe '.apply_to_users all' do
 
-      discourse_options[:target_groups] = nil
       subject {MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies)}
 
       it 'responds to apply_to_users and runs thru default group of users' do
-        subject.apply_to_users(schedule_options)
+        subject.apply_to_users
         expect(subject).to respond_to(:apply_to_users)
         expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(group_member_list.length)
       end
@@ -34,7 +33,7 @@ describe MomentumApi::Discourse do
       subject {MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies)}
 
       it 'responds to apply_to_users and runs thru group of users' do
-        subject.apply_to_users(schedule_options)
+        subject.apply_to_users
         expect(subject).to respond_to(:apply_to_users)
         expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(group_member_list.length)
       end
@@ -46,7 +45,7 @@ describe MomentumApi::Discourse do
 
       it 'responds to apply_to_users and runs thru group of users' do
         subject.instance_variable_set(:@issue_users, %w(Tony_Christopher))
-        expect {subject.apply_to_users(schedule_options)}
+        expect {subject.apply_to_users}
             .to output(/Tony_Christopher in apply_to_group_users method/).to_stdout
       end
     end
@@ -70,51 +69,13 @@ describe MomentumApi::Discourse do
       subject { MomentumApi::Discourse.new(discourse_single_user_option, schedule_options, mock: mock_dependencies) }
 
       it 'runs single user and responds to apply_to_users' do
-        subject.apply_to_users(schedule_options)
+        subject.apply_to_users
         expect(subject).to respond_to(:apply_to_users)
         expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(1)
       end
     end
   end
 
-
-  context 'errors are raised' do
-
-    describe "client.group_members may raise DiscourseApi::TooManyRequests error" do
-
-      let(:mock_dependencies) do
-        mock_dependencies = instance_double('mock_dependencies')
-        expect(mock_dependencies).to receive(:group_members).and_raise('DiscourseApi::TooManyRequests')
-        mock_dependencies
-      end
-
-      subject { MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies) }
-
-      it "responds to unknown .connect_to_instance" do
-        expect { subject.apply_to_users(schedule_options) }
-            .to raise_error('DiscourseApi::TooManyRequests')
-      end
-    end
-
-    describe "client.user  DiscourseApi::TooManyRequests x2 raises error" do
-
-      let(:mock_dependencies) do
-        mock_dependencies = instance_double('mock_dependencies')
-        expect(mock_dependencies).to receive(:group_members).and_return(group_member_list).once
-        expect(mock_dependencies).to receive(:user).exactly(2).times
-                                         .and_raise(DiscourseApi::TooManyRequests.new('error message here'))
-        mock_dependencies
-      end
-
-      subject { MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies) }
-
-      it ". apply_to_users TooManyRequests x2 raises error" do
-        expect { subject.apply_to_users(schedule_options) }
-            .to raise_error(DiscourseApi::TooManyRequests)
-        expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(0)
-      end
-    end
-  end
 
   context 'staged users' do
 
@@ -135,13 +96,80 @@ describe MomentumApi::Discourse do
       subject { MomentumApi::Discourse.new(discourse_staged_user_option, schedule_options, mock: mock_dependencies) }
 
       it 'skips staged users and responds to apply_to_users' do
-        subject.apply_to_users(schedule_options)
+        subject.apply_to_users
         expect(subject).to respond_to(:apply_to_users)
         expect(subject.instance_variable_get(:@discourse_counters)[:'Skipped Users']).to eql(1)
       end
     end
   end
 
+
+  context 'no group specified' do
+
+    describe '.apply_to_users uses default group' do
+
+      let(:group_member_list) { json_fixture("groups_members.json")}
+
+      let(:mock_dependencies) do
+        mock_dependencies = instance_double('mock_dependencies')
+        expect(mock_dependencies).to receive(:group_members).and_return(group_member_list)
+        expect(mock_dependencies).to receive(:user).and_return(user_details).exactly(group_member_list.length).times
+        expect(mock_dependencies).to receive(:scan_contexts).exactly(group_member_list.length).times
+        mock_dependencies
+      end
+
+      discourse_no_group_specified = discourse_options
+      discourse_no_group_specified[:target_groups] = []
+      subject { MomentumApi::Discourse.new(discourse_no_group_specified, schedule_options, mock: mock_dependencies) }
+
+      it 'responds to apply_to_users and uses trust_level_1 default group' do
+        subject.apply_to_users
+        expect(subject).to respond_to(:apply_to_users)
+        expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(group_member_list.length)
+      end
+    end
+  end
+
+  
+  context 'errors are raised' do
+
+    describe "client.group_members may raise DiscourseApi::TooManyRequests error" do
+
+      let(:mock_dependencies) do
+        mock_dependencies = instance_double('mock_dependencies')
+        expect(mock_dependencies).to receive(:group_members).and_raise('DiscourseApi::TooManyRequests')
+        mock_dependencies
+      end
+
+      subject { MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies) }
+
+      it "responds to unknown .connect_to_instance" do
+        expect { subject.apply_to_users }
+            .to raise_error('DiscourseApi::TooManyRequests')
+      end
+    end
+
+    describe "client.user  DiscourseApi::TooManyRequests x2 raises error" do
+
+      let(:mock_dependencies) do
+        mock_dependencies = instance_double('mock_dependencies')
+        expect(mock_dependencies).to receive(:group_members).and_return(group_member_list).once
+        expect(mock_dependencies).to receive(:user).exactly(2).times
+                                         .and_raise(DiscourseApi::TooManyRequests.new('error message here'))
+        mock_dependencies
+      end
+
+      subject { MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies) }
+
+      it ". apply_to_users TooManyRequests x2 raises error" do
+        expect { subject.apply_to_users }
+            .to raise_error(DiscourseApi::TooManyRequests)
+        expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(0)
+      end
+    end
+  end
+
+  
  context 'final scan summary' do
     
     let(:mock_dependencies) do

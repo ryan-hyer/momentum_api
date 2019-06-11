@@ -19,11 +19,6 @@ module MomentumApi
 
       # parameter setting
       @options              = discourse_options
-      # @target_username    = discourse_options[:target_username]
-      # @target_groups      = discourse_options[:target_groups]
-      # @do_live_updates    = discourse_options[:do_live_updates]
-      # @instance           = discourse_options[:instance]
-      # @api_username       = discourse_options[:api_username]
 
       @mock               = mock
       @admin_client       = mock || connect_to_instance(discourse_options[:api_username], discourse_options[:instance])
@@ -77,13 +72,12 @@ module MomentumApi
         user_client = @mock || connect_to_instance(user_details['username'], @options[:instance])
 
         @discourse_counters[:'Processed Users'] += 1
-        @mock ? man = nil : man = MomentumApi::Man.new(self, user_client, user_details)
-        @mock ? @mock.scan_contexts(self) : man.scan_contexts
+        @mock ? @mock.scan_contexts(self) : MomentumApi::Man.new(self, user_client, user_details).scan_contexts
       end
     end
 
-    def apply_to_users(schedule_options, skip_staged_user=true)      # move to schedule_options
-      if @options[:target_groups]
+    def apply_to_users(skip_staged_user=true)      # move to schedule_options
+      if @options[:target_groups] and not @options[:target_groups].empty?
         @options[:target_groups].each do |group_name|
           apply_to_group_users(group_name, skip_staged_user)
         end

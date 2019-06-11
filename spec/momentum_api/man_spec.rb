@@ -4,6 +4,7 @@ describe MomentumApi::Man do
 
   let(:group_member_list) {json_fixture("groups_members.json")[0..1]}
   let(:user_details) {json_fixture("user_details.json")}
+  let(:user_details_non_owner) {json_fixture("user_details_non_owner.json")}
   let(:category_list) {json_fixture("categories.json")}
 
   let(:mock_dependencies) do
@@ -16,6 +17,7 @@ describe MomentumApi::Man do
     mock_schedule = instance_double('mock_schedule')
     expect(mock_schedule).to receive(:group_cases).exactly(6).times
     expect(mock_schedule).to receive(:category_cases).exactly(6).times
+    expect(mock_schedule).to receive(:scan_options).once.and_return(schedule_options)
     mock_schedule
   end
 
@@ -27,46 +29,79 @@ describe MomentumApi::Man do
   end
 
 
-  context 'one regular user' do
+  context 'a regular Owner' do
 
     let(:mock_discourse) do
       mock_discourse = instance_double('mock_discourse')
       expect(mock_discourse).to receive(:issue_users).exactly(7).times.and_return([])
-      expect(mock_discourse).to receive(:schedule).exactly(12).times.and_return(mock_schedule)
+      expect(mock_discourse).to receive(:schedule).exactly(13).times.and_return(mock_schedule)
       mock_discourse
     end
 
-    describe '.membership_scan inits Man and pulls categories' do
+    describe '.scan_contexts inits Man pulls categories' do
 
       subject {MomentumApi::Man.new(mock_discourse, mock_dependencies, user_details, mock: mock_dependencies)}
 
-      it 'responds to membership_scan and inits' do
+      it 'responds to scan_contexts and pulls categories' do
+        subject.instance_variable_set(:@is_owner, true)
         subject.scan_contexts
         expect(subject).to respond_to(:scan_contexts)
         expect(subject.instance_variable_get(:@users_categories)).to be_an(Array)
       end
     end
 
-    describe '.membership_scan sees issue user' do
+    describe '.scan_contexts sees issue user' do
 
       let(:mock_discourse) do
         mock_discourse = instance_double('mock_discourse')
         expect(mock_discourse).to receive(:issue_users).exactly(7).times.and_return(%w(Tony_Christopher))
-        expect(mock_discourse).to receive(:schedule).exactly(12).times.and_return(mock_schedule)
+        expect(mock_discourse).to receive(:schedule).exactly(13).times.and_return(mock_schedule)
         mock_discourse
       end
 
-      subject { MomentumApi::Man.new(mock_discourse, mock_dependencies, user_details, mock: mock_dependencies) }
+      let(:man) { man_is_owner(mock_discourse, mock_dependencies, user_details, mock: mock_dependencies) }
 
-      it 'responds to apply_to_users and runs thru group of users' do
-        expect { subject.scan_contexts }
-            .to output(/Tony_Christopher in membership_scan/).to_stdout
+      it 'responds to scan_contexts and prints issue user' do
+        expect { man.scan_contexts }
+            .to output(/Tony_Christopher in scan_contexts/).to_stdout
       end
     end
   end
 
-   
-  context 'errors present' do
+
+  context 'a non-Owner' do
+
+    let(:mock_discourse) do
+      mock_discourse = instance_double('mock_discourse')
+      expect(mock_discourse).to receive(:issue_users).exactly(6).times.and_return([])
+      expect(mock_discourse).to receive(:schedule).exactly(12).times.and_return(mock_schedule)
+      mock_discourse
+    end
+
+    let(:mock_schedule) do
+      mock_schedule = instance_double('mock_schedule')
+      expect(mock_schedule).to receive(:group_cases).exactly(5).times
+      expect(mock_schedule).to receive(:category_cases).exactly(5).times
+      expect(mock_schedule).to receive(:scan_options).once.and_return(schedule_options)
+      expect(mock_schedule).to receive(:update_user_trust_level).once
+      mock_schedule
+    end
+    
+    describe '.scan_contexts inits w/o categories' do
+
+      let(:non_owner) {MomentumApi::Man.new(mock_discourse, mock_dependencies,
+                                            user_details_non_owner, mock: mock_dependencies)}
+
+      it 'responds to scan_contexts and update_user_trust_level for non-owner' do
+        non_owner.instance_variable_set(:@is_owner, false)
+        non_owner.scan_contexts
+        expect(non_owner).to respond_to(:scan_contexts)
+        expect(non_owner.instance_variable_get(:@users_categories)).to be_an(Array)
+      end
+    end
+ end
+
+    context 'errors present' do
 
     describe "client.categories DiscourseApi::TooManyRequests x2 raises error" do
 
@@ -102,22 +137,23 @@ describe MomentumApi::Man do
       let(:mock_schedule) do
         mock_schedule = instance_double('mock_schedule')
         expect(mock_schedule).to receive(:group_cases).exactly(6).times
+        expect(mock_schedule).to receive(:scan_options).once.and_return(schedule_options)
         mock_schedule
       end
 
       let(:mock_discourse) do
         mock_discourse = instance_double('mock_discourse')
         expect(mock_discourse).to receive(:issue_users).exactly(7).times.and_return([])
-        expect(mock_discourse).to receive(:schedule).exactly(6).times.and_return(mock_schedule)
+        expect(mock_discourse).to receive(:schedule).exactly(7).times.and_return(mock_schedule)
         mock_discourse
       end
 
-      subject {MomentumApi::Man.new(mock_discourse, mock_dependencies, user_details, mock: mock_dependencies)}
-
-      it 'responds to membership_scan and inits' do
-        subject.scan_contexts
-        expect(subject).to respond_to(:scan_contexts)
-        expect(subject.instance_variable_get(:@users_categories)).to be_nil
+      let(:man) { man_is_owner(mock_discourse, mock_dependencies, user_details, mock: mock_dependencies) }
+      
+      it 'responds to scan_contexts and inits' do
+        man.scan_contexts
+        expect(man).to respond_to(:scan_contexts)
+        expect(man.instance_variable_get(:@users_categories)).to be_nil
       end
     end
   end

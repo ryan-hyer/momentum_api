@@ -51,3 +51,9 @@ def json_fixture(json_file)
   json_object = File.read(fixture_path + '/' + json_file)
   JSON.parse(json_object)
 end
+
+def man_is_owner(mock_discourse, mock_dependencies, user_details, mock: mock_dependencies)
+  man = MomentumApi::Man.new(mock_discourse, mock_dependencies, user_details, mock: mock_dependencies)
+  man.instance_variable_set(:@is_owner, true)
+  man
+end

@@ -2,15 +2,15 @@ require '../lib/momentum_api'
 
 def schedule_options
   {
-      user_group_alias_notify:  true
+      trust_level_updates:      true
   }
 end
 
 def discourse_options
   {
       do_live_updates:          false,
-      target_username:          'Tim_Tannatt',
-      target_groups:            %w(trust_level_1),
+      target_username:          'Brad_Fino',
+      target_groups:            %w(trust_level_0),
       instance:                 'live',
       api_username:             'KM_Admin'
   }
