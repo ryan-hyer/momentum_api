@@ -1,7 +1,9 @@
 module MomentumApi
   module User
 
-    def update_user_trust_level(discourse, man, trust_level_target)
+    def downgrade_non_owner_trust(man)
+
+      trust_level_target = 0
 
       user_option_print = %w(
             last_seen_at
@@ -13,7 +15,7 @@ module MomentumApi
           )
 
       # puts 'update_trust_level'
-      if discourse.issue_users.include?(man.user_details['username'])
+      if man.discourse.issue_users.include?(man.user_details['username'])
         puts "#{man.user_details['username']}  Is Owner"
       end
 
@@ -24,14 +26,14 @@ module MomentumApi
         print_user_options(man.user_details, user_option_print, 'Non Owner')
         # puts 'User to be updated'
         # discourse.user_targets += 1     # todo update with notifications class
-        if discourse.do_live_updates
+        if man.discourse.do_live_updates
 
-          update_response = discourse.admin_client.update_trust_level(user_id: man.user_details['id'], level: trust_level_target)
+          update_response = man.discourse.admin_client.update_trust_level(user_id: man.user_details['id'], level: trust_level_target)
           puts "#{update_response['admin_user']['username']} Updated"
           discourse.users_updated += 1
 
           # check if update happened
-          user_details_after_update = discourse.admin_client.user(man.user_details['username'])
+          user_details_after_update = man.discourse.admin_client.user(man.user_details['username'])
           print_user_options(user_details_after_update, user_option_print, 'Non Owner')
           sleep(1)
         end

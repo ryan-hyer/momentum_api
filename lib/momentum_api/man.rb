@@ -1,7 +1,7 @@
 module MomentumApi
   class Man
 
-    attr_reader :user_client, :user_details, :users_categories
+    attr_reader :discourse, :user_client, :user_details, :users_categories
     attr_accessor :is_owner
 
     def initialize(discourse, user_client, user_details, mock: nil)
@@ -12,9 +12,10 @@ module MomentumApi
       @mock               =   mock
 
       @user_details       =   user_details
+      @user_client        =   user_client
 
       begin
-        @users_categories = user_client.categories
+        @users_categories = @user_client.categories
         @mock ? sleep(0) : sleep(1)
       rescue DiscourseApi::UnauthenticatedError
         @users_categories = nil
@@ -22,7 +23,7 @@ module MomentumApi
       rescue DiscourseApi::TooManyRequests
         puts 'Sleeping for 20 seconds ....'
         @mock ? sleep(0) : sleep(20)
-        @users_categories = user_client.categories
+        @users_categories = @user_client.categories
       end
 
       @is_owner = false
@@ -47,7 +48,7 @@ module MomentumApi
         @discourse.schedule.group_cases(self, group['name'])
 
         if @users_categories
-          @discourse.schedule.category_cases(@user_details, group['name'], @users_categories)
+          @discourse.schedule.category_cases(self, group['name'])
         else
           puts "\nSkipping Category Cases for #{@user_details['username']}.\n"
         end
@@ -56,7 +57,7 @@ module MomentumApi
 
       # # Update Trust Level
       if @discourse.schedule.scan_options[:trust_level_updates] and not @is_owner
-        @discourse.schedule.update_user_trust_level(@discourse, self, 0)
+        @discourse.schedule.downgrade_non_owner_trust(@discourse, self, 0)
       end
       
       # # Update User Group Alias Notification

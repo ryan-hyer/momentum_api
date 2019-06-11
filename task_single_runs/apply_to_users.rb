@@ -1,8 +1,6 @@
 require '../lib/momentum_api'
 
-do_live_updates           =   false
-
-scan_options = {                     
+schedule_options = {
     team_category_watching:   true,
     essential_watching:       true,
     growth_first_post:        true,
@@ -17,18 +15,25 @@ scan_options = {
     user_group_alias_notify:  true
 }
 
-# @emails_from_username     =   'Kim_Miller'
+def discourse_options
+    {
+        do_live_updates:          false,
+        target_username:          nil,
+        target_groups:            %w(Mods),
+        instance:                 'live',
+        api_username:             'KM_Admin'
+    }
+end
 
-# testing variables
-target_username   = nil # Steven_Lang_Test Kim_test_Staged Randy_Horton Steve_Scott Marty_Fauth Kim_Miller Don_Morgan David_Kirk Brad_Fino
-target_groups     = %w(Mods)  # OwnerExpired Mods Committed GreatX BraveHearts trust_level_1 trust_level_0
+discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
 
-master_client = MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates=do_live_updates,
-                                           target_groups=target_groups, target_username=target_username)
+scan_options = {
+    user_group_alias_notify:  true
+}
 
-master_client.apply_to_users(scan_options)
+discourse.apply_to_users(scan_options)
 
-master_client.scan_summary
+discourse.scan_summary
 
 # Jun 2, 2019
 # GroupUser          Group                Category             Level      Status

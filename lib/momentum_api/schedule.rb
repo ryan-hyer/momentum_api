@@ -6,7 +6,7 @@ require_relative '../momentum_api/api/user'
 module MomentumApi
   class Schedule
 
-    attr_reader :user_client, :user_details, :discourse, :scan_options
+    attr_reader :user_client, :discourse, :scan_options
 
     include MomentumApi::Notification
     include MomentumApi::User
@@ -22,8 +22,10 @@ module MomentumApi
       @discourse              =   discourse
       @scan_options           =   schedule_options
 
+      @queue_group_owner      =   []
       if @scan_options['score_user_levels'.to_sym]
         @user_score_poll      =   mock || MomentumApi::Poll.new(self, @scan_options['score_user_levels'.to_sym])
+        @queue_group_owner    <<  @user_score_poll
       end
 
       # counter init
@@ -54,66 +56,69 @@ module MomentumApi
       when group_name == 'trust_level_1'
 
         if @scan_options[:user_group_alias_notify]
-          self.user_group_notify_to_default(man.user_details)
+          self.user_group_notify_to_default(man)
         end
 
-      # when group_name == 'trust_level_0'
-      #
-      #   if @scan_options[:trust_level_updates]
-      #     update_user_trust_level(@discourse, man, 0)
-      #   end
+        if @scan_options[:trust_level_updates]
+          downgrade_non_owner_trust(man)
+        end
+
+      when group_name == 'trust_level_0'
+
+        # add upgrade_owner_trust_level 
+
       else
         # puts 'No Group Case'
       end
     end
 
-    def category_cases(user_details, group_name, users_categories)       # todo refactor to Class
+    def category_cases(man, group_name)       # todo refactor to Class
       starting_categories_updated = @notifications_counters[:'Category Notify Updated']
 
-      users_categories.each do |category|
+      man.users_categories.each do |category|
 
-        if @discourse.issue_users.include?(user_details['username'])
-          puts "\n#{user_details['username']}  Category case on category: #{category['slug']}\n"
+        if @discourse.issue_users.include?(man.user_details['username'])
+          puts "\n#{man.user_details['username']}  Category case on category: #{category['slug']}\n"
         end
 
         case
         when category['slug'] == group_name
           case_excludes = %w(Steve_Scott)
-          if case_excludes.include?(user_details['username'])
-            # puts "#{user_details['username']} specifically excluded from Watching Meta"
+          if case_excludes.include?(man.user_details['username'])
+            # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
           else
             if @scan_options['team_category_watching'.to_sym]    # todo simplify signature
-              self.set_category_notification(category, group_name, [3], 3)
+              self.set_category_notification(man, category, group_name, [3], 3)
             end
           end
 
         when (category['slug'] == 'Essential' and group_name == 'Owner')
           case_excludes = %w(Steve_Scott Joe_Sabolefski)
-          if case_excludes.include?(user_details['username'])
-            # puts "#{user_details['username']} specifically excluded from Essential Watching"
+          if case_excludes.include?(man.user_details['username'])
+            # puts "#{man.user_details['username']} specifically excluded from Essential Watching"
           else                            # 4 = Watching first post, 3 = Watching, 1 = blank or ...?
             if @scan_options['essential_watching'.to_sym]
-              self.set_category_notification(category, group_name, [3], 3)
+              self.set_category_notification(man, category, group_name, [3], 3)
             end
           end
 
         when (category['slug'] == 'Growth' and group_name == 'Owner')
           case_excludes = %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
-          if case_excludes.include?(user_details['username'])
-            # puts "#{user_details['username']} specifically excluded from Watching Growth"
+          if case_excludes.include?(man.user_details['username'])
+            # puts "#{man.user_details['username']} specifically excluded from Watching Growth"
           else
             if @scan_options['growth_first_post'.to_sym]
-              self.set_category_notification(category, group_name, [3, 4], 4)
+              self.set_category_notification(man, category, group_name, [3, 4], 4)
             end
           end
 
         when (category['slug'] == 'Meta' and group_name == 'Owner')
           case_excludes = %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
-          if case_excludes.include?(user_details['username'])
-            # puts "#{user_details['username']} specifically excluded from Watching Meta"
+          if case_excludes.include?(man.user_details['username'])
+            # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
           else
             if @scan_options['meta_first_post'.to_sym]
-              self.set_category_notification(category, group_name, [3, 4], 4)
+              self.set_category_notification(man, category, group_name, [3, 4], 4)
             end
           end
 

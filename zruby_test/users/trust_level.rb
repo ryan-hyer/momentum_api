@@ -19,7 +19,7 @@ def apply_function(master_client, user_details, user_client)
     end
   end
 
-   master_client.update_user_trust_level(is_owner, 0, user_details)
+   master_client.downgrade_non_owner_trust(is_owner, 0, user_details)
 
 end
 

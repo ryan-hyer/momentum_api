@@ -83,7 +83,7 @@ describe MomentumApi::Man do
       expect(mock_schedule).to receive(:group_cases).exactly(5).times
       expect(mock_schedule).to receive(:category_cases).exactly(5).times
       expect(mock_schedule).to receive(:scan_options).once.and_return(schedule_options)
-      expect(mock_schedule).to receive(:update_user_trust_level).once
+      expect(mock_schedule).to receive(:downgrade_non_owner_trust).once
       mock_schedule
     end
     

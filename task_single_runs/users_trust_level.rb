@@ -16,12 +16,12 @@ def discourse_options
   }
 end
 
-master_client = MomentumApi::Discourse.new(discourse_options, schedule_options)
+discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
 
 scan_options = {
     user_group_alias_notify:  true
 }
 
-master_client.apply_to_users(scan_options)
+discourse.apply_to_users(scan_options)
 
-master_client.scan_summary
+discourse.scan_summary

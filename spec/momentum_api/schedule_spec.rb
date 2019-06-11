@@ -56,9 +56,9 @@ describe MomentumApi::Schedule do
       let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock_dependencies) }
 
       it 'responds to group_cases' do
-        allow(schedule).to receive(:update_user_trust_level)
+        allow(schedule).to receive(:downgrade_non_owner_trust)
         schedule.group_cases(mock_man, 'Owner')
-        expect(schedule).to respond_to(:update_user_trust_level)
+        expect(schedule).to respond_to(:downgrade_non_owner_trust)
       end
     end
 
