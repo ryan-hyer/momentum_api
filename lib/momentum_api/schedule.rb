@@ -6,12 +6,12 @@ require_relative '../momentum_api/api/user'
 module MomentumApi
   class Schedule
 
-    attr_reader :user_client, :discourse, :scan_options
+    attr_reader :user_client, :discourse, :schedule_options
 
     include MomentumApi::Notification
     include MomentumApi::User
 
-    def initialize(discourse, schedule_options, mock=nil)
+    def initialize(discourse, schedule_options, mock: nil)
       raise ArgumentError, 'user_client needs to be defined' if discourse.nil?
       raise ArgumentError, 'schedule_options needs to be defined' if schedule_options.nil? or schedule_options.empty?
 
@@ -20,12 +20,11 @@ module MomentumApi
 
       # parameter setting
       @discourse              =   discourse
-      @scan_options           =   schedule_options
+      @schedule_options       =   schedule_options
 
       @queue_group_owner      =   []
-      if @scan_options['score_user_levels'.to_sym]
-        # @user_score_poll      =   mock || MomentumApi::Poll.new(self, @scan_options['score_user_levels'.to_sym])
-        @queue_group_owner    <<  mock || MomentumApi::Poll.new(self, @scan_options['score_user_levels'.to_sym])
+      if @schedule_options[:score_user_levels]
+        @queue_group_owner    <<  ( mock || MomentumApi::Poll.new(self, @schedule_options[:score_user_levels]) )
       end
 
       # counter init
@@ -37,7 +36,7 @@ module MomentumApi
     end
 
     def group_cases(man, group_name)
-      if @discourse.issue_users.include?(man.user_details['username'])
+      if @discourse.options[:issue_users].include?(man.user_details['username'])
         puts "#{man.user_details['username']} in group_cases"
       end
 
@@ -55,18 +54,18 @@ module MomentumApi
         end
 
         # User Scoring
-        if @scan_options[:score_user_levels]
+        if @schedule_options[:score_user_levels]
           # puts @scan_options['score_user_levels'.to_sym]
           # @user_score_poll.run(man)
         end
 
       when group_name == 'trust_level_1'
 
-        if @scan_options[:user_group_alias_notify]
+        if @schedule_options[:user_group_alias_notify]
           self.user_group_notify_to_default(man)
         end
 
-        if @scan_options[:trust_level_updates]
+        if @schedule_options[:trust_level_updates]
           downgrade_non_owner_trust(man)
         end
 
@@ -84,7 +83,7 @@ module MomentumApi
 
       man.users_categories.each do |category|
 
-        if @discourse.issue_users.include?(man.user_details['username'])
+        if @discourse.options[:issue_users].include?(man.user_details['username'])
           puts "\n#{man.user_details['username']}  Category case on category: #{category['slug']}\n"
         end
 
@@ -94,7 +93,7 @@ module MomentumApi
           if case_excludes.include?(man.user_details['username'])
             # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
           else
-            if @scan_options['team_category_watching'.to_sym]    # todo simplify signature
+            if @schedule_options[:team_category_watching]    # todo simplify signature
               self.set_category_notification(man, category, group_name, [3], 3)
             end
           end
@@ -104,7 +103,7 @@ module MomentumApi
           if case_excludes.include?(man.user_details['username'])
             # puts "#{man.user_details['username']} specifically excluded from Essential Watching"
           else                            # 4 = Watching first post, 3 = Watching, 1 = blank or ...?
-            if @scan_options['essential_watching'.to_sym]
+            if @schedule_options[:essential_watching]
               self.set_category_notification(man, category, group_name, [3], 3)
             end
           end
@@ -114,7 +113,7 @@ module MomentumApi
           if case_excludes.include?(man.user_details['username'])
             # puts "#{man.user_details['username']} specifically excluded from Watching Growth"
           else
-            if @scan_options['growth_first_post'.to_sym]
+            if @schedule_options[:growth_first_post]
               self.set_category_notification(man, category, group_name, [3, 4], 4)
             end
           end
@@ -124,7 +123,7 @@ module MomentumApi
           if case_excludes.include?(man.user_details['username'])
             # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
           else
-            if @scan_options['meta_first_post'.to_sym]
+            if @schedule_options[:meta_first_post]
               self.set_category_notification(man, category, group_name, [3, 4], 4)
             end
           end
@@ -138,19 +137,19 @@ module MomentumApi
       end
     end
 
-    def print_user_options(user_details, user_option_print, user_label='UserName', pos_5=user_details[user_option_print[5].to_s])
-
-      field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
-
-      printf field_settings, user_label,
-             user_option_print[0], user_option_print[1], user_option_print[2],
-             user_option_print[3], user_option_print[4], user_option_print[5]
-
-      printf field_settings, user_details['username'],
-             user_details[user_option_print[0].to_s].to_s[0..9], user_details[user_option_print[1].to_s].to_s[0..9],
-             user_details[user_option_print[2].to_s], user_details[user_option_print[3].to_s],
-             user_details[user_option_print[4].to_s], pos_5
-    end
+    # def print_user_options(user_details, user_option_print, user_label='UserName', pos_5=user_details[user_option_print[5].to_s])
+    #
+    #   field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
+    #
+    #   printf field_settings, user_label,
+    #          user_option_print[0], user_option_print[1], user_option_print[2],
+    #          user_option_print[3], user_option_print[4], user_option_print[5]
+    #
+    #   printf field_settings, user_details['username'],
+    #          user_details[user_option_print[0].to_s].to_s[0..9], user_details[user_option_print[1].to_s].to_s[0..9],
+    #          user_details[user_option_print[2].to_s], user_details[user_option_print[3].to_s],
+    #          user_details[user_option_print[4].to_s], pos_5
+    # end
 
     def zero_notifications_counters
       @notifications_counters[:'User Categories']         =   0

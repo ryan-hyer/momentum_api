@@ -7,7 +7,7 @@ require_relative '../momentum_api/api/messages'
 
 module MomentumApi
   class Discourse
-    attr_reader :do_live_updates, :issue_users, :user_score_poll, :scan_pass_counters, :admin_client, :schedule
+    attr_reader :options, :user_score_poll, :scan_pass_counters, :admin_client, :schedule
 
     include MomentumApi::Messages
 
@@ -20,20 +20,16 @@ module MomentumApi
       # parameter setting
       @options              = discourse_options
 
-      @mock               = mock
-      @admin_client       = mock || connect_to_instance(discourse_options[:api_username], discourse_options[:instance])
+      @mock                 = mock
+      @admin_client         = mock || connect_to_instance(discourse_options[:api_username], discourse_options[:instance])
 
       # counter init
-      @discourse_counters = {'Discourse Men': ''}
-      @scan_pass_counters = []
-      @scan_pass_counters << @discourse_counters
+      @discourse_counters   = {'Discourse Men': ''}
+      @scan_pass_counters   = []
+      @scan_pass_counters   << @discourse_counters
 
       # create schedule Class
-      @schedule = MomentumApi::Schedule.new(self, schedule_options)
-
-      # testing variables
-      @exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin)
-      @issue_users        = %w()
+      @schedule             = MomentumApi::Schedule.new(self, schedule_options)
 
       zero_discourse_counters
 
@@ -93,8 +89,8 @@ module MomentumApi
           if group_member['username'] == @options[:target_username]
             apply_call(group_member)
           end
-        elsif not @exclude_user_names.include?(group_member['username'])
-          if @issue_users.include?(group_member['username'])
+        elsif not @options[:exclude_users].include?(group_member['username'])
+          if @options[:issue_users].include?(group_member['username'])
             puts "#{group_member['username']} in apply_to_group_users method"
           end
           # puts user['username']

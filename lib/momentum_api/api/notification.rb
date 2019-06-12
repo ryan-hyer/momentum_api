@@ -7,7 +7,7 @@ module MomentumApi
                    status='NOT Watching', type='CategoryUser')
 
         @notifications_counters[:'Category Update Targets'] += 1
-        if @discourse.do_live_updates
+        if @discourse.options[:do_live_updates]
           update_response = man.user_client.category_set_user_notification(id: category['id'], notification_level: set_level)
           sleep 1
           puts update_response
@@ -24,7 +24,7 @@ module MomentumApi
           end
         end
       else
-        if @discourse.issue_users.include?(man.user_details['username'])
+        if @discourse.options[:issue_users].include?(man.user_details['username'])
           print_user(man, category['slug'], group_name, category['notification_level'],
                      status='Watching', type='CategoryUser')
         end
@@ -43,7 +43,7 @@ module MomentumApi
               print_user(man, 'na', group['name'], users_group['notification_level'],
                          status="NOT Group Default of #{group['default_notification_level']}", type='GroupUser')
               @notifications_counters[:'Group Update Targets'] += 1
-              if @discourse.do_live_updates
+              if @discourse.options[:do_live_updates]
                 response = @discourse.admin_client.group_set_user_notify_level(group['name'], man.user_details['id'], group['default_notification_level'])
                 sleep 1
                 puts response

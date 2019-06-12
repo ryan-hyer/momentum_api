@@ -8,7 +8,7 @@ describe MomentumApi::Schedule do
   let(:mock_discourse) do
     mock_discourse = instance_double('mock_discourse')
     expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
-    expect(mock_discourse).to receive(:issue_users).once.and_return([])
+    expect(mock_discourse).to receive(:options).once.and_return(discourse_options)
     mock_discourse
   end
 
@@ -27,7 +27,7 @@ describe MomentumApi::Schedule do
         mock_man
       end
 
-      let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock_dependencies) }
+      let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock: mock_dependencies) }
 
       it 'responds to group_cases' do
         schedule.group_cases(mock_man, 'fake group')
@@ -53,10 +53,10 @@ describe MomentumApi::Schedule do
         mock_man
       end
 
-      let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock_dependencies) }
+      let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock: mock_dependencies) }
 
       it 'responds to group_cases' do
-        allow(schedule).to receive(:downgrade_non_owner_trust)
+        # expect(schedule).to receive(:downgrade_non_owner_trust)     # todo should work?
         schedule.group_cases(mock_man, 'Owner')
         expect(schedule).to respond_to(:downgrade_non_owner_trust)
       end
@@ -67,7 +67,9 @@ describe MomentumApi::Schedule do
       let(:mock_discourse) do
         mock_discourse = instance_double('mock_discourse')
         expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
-        expect(mock_discourse).to receive(:issue_users).exactly(1).times.and_return(%w(Tony_Christopher))
+        reset_options = discourse_options
+        reset_options[:issue_users] = %w(Tony_Christopher)
+         expect(mock_discourse).to receive(:options).exactly(1).times.and_return(reset_options)
         mock_discourse
       end
 
@@ -78,7 +80,7 @@ describe MomentumApi::Schedule do
         mock_man
       end
 
-      let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock_dependencies) }
+      let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock: mock_dependencies) }
 
       it 'responds to scan_contexts and prints issue user' do
         expect { schedule.group_cases(mock_man, 'Owner') }

@@ -1,0 +1,289 @@
+{
+  "id": 28707,
+  "name": "Kim Miller",
+  "username": "Kim_Miller",
+  "avatar_template": "/user_avatar/discourse.gomomentum.org/kim_miller/{size}/3220_2.png",
+  "created_at": "2019-05-08T21:53:03.788Z",
+  "cooked": "<p>I’m excited how an obvious path seems to be forming before us; It’s always great when the path feels not just incrementally better, but clearly better. Based on the last comments, here is a very clean, simple survey that asks:</p>\n<p>Tell us what you have done so far in Discourse:</p>\n<div class=\"poll\" data-poll-status=\"open\" data-poll-max=\"40\" data-poll-min=\"1\" data-poll-name=\"version_two\" data-poll-public=\"true\" data-poll-results=\"on_vote\" data-poll-type=\"multiple\">\n<div>\n<div class=\"poll-container\">\n<ul>\n<li data-poll-option-id=\"2866af3c4fcae62068e00994e993dff9\">Stayed informed by receiving Essential Posts</li>\n<li data-poll-option-id=\"4da3fed7ee8c150b5fc2bd695f9b3b8a\">Stayed informed by receiving weekly digest of activity</li>\n<li data-poll-option-id=\"cd0b16a0d692ca2a6070d4ee0aba5b66\">Participated in discussions, e.g. on Routine or Growth</li>\n<li data-poll-option-id=\"d883c1c8c6b23bb93bee99a652b19a84\">Created new Posts via email (e.g. emailing to <a href=\"mailto:routine@gomomentum.org\">routine@gomomentum.org</a>)</li>\n<li data-poll-option-id=\"b8cd774bb2e4e54fa24c6ca75bbd1dd4\">Looked up another man's phone number or other info</li>\n<li data-poll-option-id=\"6cab4093403d77ad48afbd2f44dd7228\">Renewed my Membership</li>\n<li data-poll-option-id=\"a9a11494aeaaf41d5720a40557877aa0\">Learned what a man looks like from his profile picture</li>\n<li data-poll-option-id=\"5f90772a1001bdc0ae6ba23e0b46aaa8\">Learned a man's last name from seeing him on the platform</li>\n<li data-poll-option-id=\"f03ae04e505328a99f9bc71a235f3bbb\">Browsed <a>the homepage</a> for the latest discussions</li>\n<li data-poll-option-id=\"fce94f072f8ae54ff000dcf9bd1d69ab\">Contacted other men via the built-in messaging system</li>\n<li data-poll-option-id=\"2919dd44dcf1ba764573154495c29f75\">Updated fields like my phone number on my profile</li>\n<li data-poll-option-id=\"2e7b3fca56ad9af579ef5165444824d6\">Looked at Team pages to learn who is on the Team</li>\n<li data-poll-option-id=\"b2548dab9b60c642b7cff4729d63e963\">Looked at a <a>man's profile</a> to learn more about him</li>\n<li data-poll-option-id=\"f62461e8dfe127bf499b142a0e23ac77\">Responded to a Discourse Poll (like this one)</li>\n<li data-poll-option-id=\"74256eeab701d8334a6c55146c59d8cd\">Sent messages to Groups, e.g. to a Team, Council, etc.</li>\n<li data-poll-option-id=\"d2a378bf329ccf1a2ca0c78d5f06edb9\">Used the site search to find Posts, Topics, men, or Teams</li>\n<li data-poll-option-id=\"b552cc2cebabfdac632f3a18571a49f7\">\"Liked\" a post, rather than writing a reply such as \"+1 or me too\"</li>\n<li data-poll-option-id=\"25b3a968b70689a0a79b47b68d77cb08\">Turned on Category notifications for \"Watching First Post\" or \"Watching\" for all Posts</li>\n<li data-poll-option-id=\"cb697fcf3e45d497f9b965a96a622394\">Added myself or requested to be added to a Group (e.g. \"Skiers\")</li>\n<li data-poll-option-id=\"fa2209d206229a4239464d31a8e425b3\">Updated my profile with a picture and something personal about me</li>\n<li data-poll-option-id=\"5fa2beeb30ba1917d1fe50faeaa7f165\">Looked at Team pages to learn more about the Team's mission &amp; standards</li>\n<li data-poll-option-id=\"bedcdcd64b05823e6bcd3d2a66007fe4\">Dragged and dropped images into Posts</li>\n<li data-poll-option-id=\"24a4b173349325c665d6284c8ecc4ab3\">Searched the site for specific Tags, e.g. \"Tempo\"</li>\n<li data-poll-option-id=\"8015d600198bd4ddc1fee1190888b82b\">Mentioned (e.g. \"<a class=\"mention\" href=\"/u/steve_scott\">@Steve_Scott</a>\") to notify another man in a Post</li>\n<li data-poll-option-id=\"585b05d76981f3acc7d8b5ef9d1060ad\">Looked at the Team Lead Group to find a current Team leader</li>\n<li data-poll-option-id=\"a385e899cde88df63d2fa313d9b94e33\">Used the site on my phone</li>\n<li data-poll-option-id=\"7b1837794a5bac0e2f895b1121c5b91a\">Mentioned a Group of men (e.g. everyone on <a class=\"mention-group\" href=\"/groups/foundry\">@Foundry</a>) to notify them of my Post</li>\n<li data-poll-option-id=\"342bd7e566dd56b82f1a141ce6930273\">Edited a message to correct something after I posted</li>\n<li data-poll-option-id=\"49db4892fe3420b2524ab76f4cdc79e9\">Filtered Category Topics further by Tags</li>\n<li data-poll-option-id=\"3f24b2416fd375d86f832a5d511504a8\">Created a Poll and collected results</li>\n<li data-poll-option-id=\"945dc2d055a760bc4404b744aad4475e\">Used my Team's Category for my Team's primary communication</li>\n<li data-poll-option-id=\"dacfaba0855890f0d24f801916da8a86\">Participated in a Council Category, such as the Chief's Council</li>\n<li data-poll-option-id=\"692487f6dbb00c348c34d449da07b337\">Turned on Topic notifications based on my desire to be notified specifically on that Topic</li>\n<li data-poll-option-id=\"832837e7468a8c7b994b01a2c02a3ca9\">Set a \"tag\" (e.g. \"mens-work\") when creating a new Topic</li>\n<li data-poll-option-id=\"ba10d64dcb629e80b65e184fd77c9c9f\">Copied spreadsheet grids into Posts</li>\n<li data-poll-option-id=\"844159222638058310eec2ce8e6c662b\">Downloaded and used the Discourse app on my phone</li>\n<li data-poll-option-id=\"67ef8a7364cb5767dcc2f23104768407\">Turned on Desktop notifications to see activity in real-time</li>\n<li data-poll-option-id=\"3a0f59391dead5784c4c13c480fc67b9\">Participated in active conversations where I was told when the other user was typing</li>\n<li data-poll-option-id=\"8e1753db4384f2cb63c1edaebc3c9ece\">Collaborated editing Wiki Posts with other men</li>\n<li data-poll-option-id=\"02d95ef7ee1a79324e61ccaf29760798\">Managed my Team's Team Page by editing our mission, adding our photo, etc.</li>\n</ul>\n</div>\n<div class=\"poll-info\">\n<p>\n<span class=\"info-number\">0</span>\n<span class=\"info-label\">voters</span>\n</p>\n</div>\n</div>\n</div>\n<p>I know I’m missing some cool functionality here, so help me out <a class=\"mention-group\" href=\"/groups/moderators\">@moderators</a>. I think we’re close! Go head and take the survey above and see what comes to mind.</p>",
+  "ignored": false,
+  "post_number": 20,
+  "post_type": 1,
+  "updated_at": "2019-05-08T21:53:03.788Z",
+  "reply_count": 0,
+  "reply_to_post_number": null,
+  "quote_count": 0,
+  "avg_time": 332,
+  "incoming_link_count": 0,
+  "reads": 7,
+  "score": 18,
+  "yours": false,
+  "topic_id": 6485,
+  "topic_slug": "user-persona-survey",
+  "display_username": "Kim Miller",
+  "primary_group_name": "NewOwnersCouncil",
+  "primary_group_flair_url": "https://static.thenounproject.com/png/344454-200.png",
+  "primary_group_flair_bg_color": "",
+  "primary_group_flair_color": "",
+  "version": 1,
+  "can_edit": true,
+  "can_delete": true,
+  "can_recover": null,
+  "can_wiki": true,
+  "user_title": "New Owners Council",
+  "raw": "I'm excited how an obvious path seems to be forming before us; It's always great when the path feels not just incrementally better, but clearly better. Based on the last comments, here is a very clean, simple survey that asks:\n\nTell us what you have done so far in Discourse:\n\n[poll type=multiple name=version_two results=on_vote min=1 max=40 public=true]\n* Stayed informed by receiving Essential Posts\n* Stayed informed by receiving weekly digest of activity\n* Participated in discussions, e.g. on Routine or Growth\n* Created new Posts via email (e.g. emailing to routine@gomomentum.org)\n* Looked up another man&#39;s phone number or other info\n* Renewed my Membership\n* Learned what a man looks like from his profile picture\n* Learned a man&#39;s last name from seeing him on the platform\n* Browsed [the homepage](discourse.gomomentum.org) for the latest discussions\n* Contacted other men via the built-in messaging system\n* Updated fields like my phone number on my profile\n* Looked at Team pages to learn who is on the Team\n* Looked at a [man&#39;s profile](discourse.gomomentum.org/u/steve_scott/) to learn more about him\n* Responded to a Discourse Poll (like this one)\n* Sent messages to Groups, e.g. to a Team, Council, etc.\n* Used the site search to find Posts, Topics, men, or Teams\n* &quot;Liked&quot; a post, rather than writing a reply such as &quot;+1 or me too&quot;\n* Turned on Category notifications for &quot;Watching First Post&quot; or &quot;Watching&quot; for all Posts\n* Added myself or requested to be added to a Group (e.g. &quot;Skiers&quot;)\n* Updated my profile with a picture and something personal about me\n* Looked at Team pages to learn more about the Team&#39;s mission &amp; standards\n* Dragged and dropped images into Posts\n* Searched the site for specific Tags, e.g. &quot;Tempo&quot;\n* Mentioned (e.g. &quot;@Steve_Scott&quot;) to notify another man in a Post\n* Looked at the Team Lead Group to find a current Team leader\n* Used the site on my phone\n* Mentioned a Group of men (e.g. everyone on @Foundry) to notify them of my Post\n* Edited a message to correct something after I posted\n* Filtered Category Topics further by Tags\n* Created a Poll and collected results\n* Used my Team&#39;s Category for my Team&#39;s primary communication\n* Participated in a Council Category, such as the Chief&#39;s Council\n* Turned on Topic notifications based on my desire to be notified specifically on that Topic\n* Set a &quot;tag&quot; (e.g. &quot;mens-work&quot;) when creating a new Topic\n* Copied spreadsheet grids into Posts\n* Downloaded and used the Discourse app on my phone\n* Turned on Desktop notifications to see activity in real-time\n* Participated in active conversations where I was told when the other user was typing\n* Collaborated editing Wiki Posts with other men\n* Managed my Team&#39;s Team Page by editing our mission, adding our photo, etc.\n[/poll]\n\nI know I'm missing some cool functionality here, so help me out @moderators. I think we're close! Go head and take the survey above and see what comes to mind.",
+  "actions_summary": [
+    {
+      "id": 2,
+      "count": 2,
+      "can_act": true
+    },
+    {
+      "id": 3,
+      "can_act": true
+    },
+    {
+      "id": 4,
+      "can_act": true
+    },
+    {
+      "id": 8,
+      "can_act": true
+    },
+    {
+      "id": 6,
+      "can_act": true
+    },
+    {
+      "id": 7,
+      "can_act": true
+    }
+  ],
+  "moderator": true,
+  "admin": false,
+  "staff": true,
+  "user_id": 17,
+  "hidden": false,
+  "trust_level": 3,
+  "deleted_at": null,
+  "user_deleted": false,
+  "edit_reason": null,
+  "can_view_edit_history": true,
+  "wiki": false,
+  "can_accept_answer": true,
+  "can_unaccept_answer": false,
+  "accepted_answer": false,
+  "polls": [
+    {
+      "name": "version_two",
+      "type": "multiple",
+      "status": "open",
+      "public": true,
+      "results": "on_vote",
+      "min": 1,
+      "max": 40,
+      "options": [
+        {
+          "id": "2866af3c4fcae62068e00994e993dff9",
+          "html": "Stayed informed by receiving Essential Posts",
+          "votes": 7
+        },
+        {
+          "id": "4da3fed7ee8c150b5fc2bd695f9b3b8a",
+          "html": "Stayed informed by receiving weekly digest of activity",
+          "votes": 3
+        },
+        {
+          "id": "cd0b16a0d692ca2a6070d4ee0aba5b66",
+          "html": "Participated in discussions, e.g. on Routine or Growth",
+          "votes": 7
+        },
+        {
+          "id": "d883c1c8c6b23bb93bee99a652b19a84",
+          "html": "Created new Posts via email (e.g. emailing to <a href=\"mailto:routine@gomomentum.org\">routine@gomomentum.org</a>)",
+          "votes": 4
+        },
+        {
+          "id": "b8cd774bb2e4e54fa24c6ca75bbd1dd4",
+          "html": "Looked up another man's phone number or other info",
+          "votes": 6
+        },
+        {
+          "id": "6cab4093403d77ad48afbd2f44dd7228",
+          "html": "Renewed my Membership",
+          "votes": 6
+        },
+        {
+          "id": "a9a11494aeaaf41d5720a40557877aa0",
+          "html": "Learned what a man looks like from his profile picture",
+          "votes": 4
+        },
+        {
+          "id": "5f90772a1001bdc0ae6ba23e0b46aaa8",
+          "html": "Learned a man's last name from seeing him on the platform",
+          "votes": 5
+        },
+        {
+          "id": "f03ae04e505328a99f9bc71a235f3bbb",
+          "html": "Browsed <a>the homepage</a> for the latest discussions",
+          "votes": 7
+        },
+        {
+          "id": "fce94f072f8ae54ff000dcf9bd1d69ab",
+          "html": "Contacted other men via the built-in messaging system",
+          "votes": 7
+        },
+        {
+          "id": "2919dd44dcf1ba764573154495c29f75",
+          "html": "Updated fields like my phone number on my profile",
+          "votes": 6
+        },
+        {
+          "id": "2e7b3fca56ad9af579ef5165444824d6",
+          "html": "Looked at Team pages to learn who is on the Team",
+          "votes": 6
+        },
+        {
+          "id": "b2548dab9b60c642b7cff4729d63e963",
+          "html": "Looked at a <a>man's profile</a> to learn more about him",
+          "votes": 5
+        },
+        {
+          "id": "f62461e8dfe127bf499b142a0e23ac77",
+          "html": "Responded to a Discourse Poll (like this one)",
+          "votes": 6
+        },
+        {
+          "id": "74256eeab701d8334a6c55146c59d8cd",
+          "html": "Sent messages to Groups, e.g. to a Team, Council, etc.",
+          "votes": 6
+        },
+        {
+          "id": "d2a378bf329ccf1a2ca0c78d5f06edb9",
+          "html": "Used the site search to find Posts, Topics, men, or Teams",
+          "votes": 5
+        },
+        {
+          "id": "b552cc2cebabfdac632f3a18571a49f7",
+          "html": "\"Liked\" a post, rather than writing a reply such as \"+1 or me too\"",
+          "votes": 7
+        },
+        {
+          "id": "25b3a968b70689a0a79b47b68d77cb08",
+          "html": "Turned on Category notifications for \"Watching First Post\" or \"Watching\" for all Posts",
+          "votes": 6
+        },
+        {
+          "id": "cb697fcf3e45d497f9b965a96a622394",
+          "html": "Added myself or requested to be added to a Group (e.g. \"Skiers\")",
+          "votes": 4
+        },
+        {
+          "id": "fa2209d206229a4239464d31a8e425b3",
+          "html": "Updated my profile with a picture and something personal about me",
+          "votes": 7
+        },
+        {
+          "id": "5fa2beeb30ba1917d1fe50faeaa7f165",
+          "html": "Looked at Team pages to learn more about the Team's mission &amp; standards",
+          "votes": 5
+        },
+        {
+          "id": "bedcdcd64b05823e6bcd3d2a66007fe4",
+          "html": "Dragged and dropped images into Posts",
+          "votes": 3
+        },
+        {
+          "id": "24a4b173349325c665d6284c8ecc4ab3",
+          "html": "Searched the site for specific Tags, e.g. \"Tempo\"",
+          "votes": 6
+        },
+        {
+          "id": "8015d600198bd4ddc1fee1190888b82b",
+          "html": "Mentioned (e.g. \"<a class=\"mention\" href=\"/u/steve_scott\">@Steve_Scott</a>\") to notify another man in a Post",
+          "votes": 7
+        },
+        {
+          "id": "585b05d76981f3acc7d8b5ef9d1060ad",
+          "html": "Looked at the Team Lead Group to find a current Team leader",
+          "votes": 5
+        },
+        {
+          "id": "a385e899cde88df63d2fa313d9b94e33",
+          "html": "Used the site on my phone",
+          "votes": 7
+        },
+        {
+          "id": "7b1837794a5bac0e2f895b1121c5b91a",
+          "html": "Mentioned a Group of men (e.g. everyone on <a class=\"mention-group\" href=\"/groups/foundry\">@Foundry</a>) to notify them of my Post",
+          "votes": 3
+        },
+        {
+          "id": "342bd7e566dd56b82f1a141ce6930273",
+          "html": "Edited a message to correct something after I posted",
+          "votes": 6
+        },
+        {
+          "id": "49db4892fe3420b2524ab76f4cdc79e9",
+          "html": "Filtered Category Topics further by Tags",
+          "votes": 5
+        },
+        {
+          "id": "3f24b2416fd375d86f832a5d511504a8",
+          "html": "Created a Poll and collected results",
+          "votes": 4
+        },
+        {
+          "id": "945dc2d055a760bc4404b744aad4475e",
+          "html": "Used my Team's Category for my Team's primary communication",
+          "votes": 5
+        },
+        {
+          "id": "dacfaba0855890f0d24f801916da8a86",
+          "html": "Participated in a Council Category, such as the Chief's Council",
+          "votes": 7
+        },
+        {
+          "id": "692487f6dbb00c348c34d449da07b337",
+          "html": "Turned on Topic notifications based on my desire to be notified specifically on that Topic",
+          "votes": 4
+        },
+        {
+          "id": "832837e7468a8c7b994b01a2c02a3ca9",
+          "html": "Set a \"tag\" (e.g. \"mens-work\") when creating a new Topic",
+          "votes": 6
+        },
+        {
+          "id": "ba10d64dcb629e80b65e184fd77c9c9f",
+          "html": "Copied spreadsheet grids into Posts",
+          "votes": 6
+        },
+        {
+          "id": "844159222638058310eec2ce8e6c662b",
+          "html": "Downloaded and used the Discourse app on my phone",
+          "votes": 6
+        },
+        {
+          "id": "67ef8a7364cb5767dcc2f23104768407",
+          "html": "Turned on Desktop notifications to see activity in real-time",
+          "votes": 4
+        },
+        {
+          "id": "3a0f59391dead5784c4c13c480fc67b9",
+          "html": "Participated in active conversations where I was told when the other user was typing",
+          "votes": 4
+        },
+        {
+          "id": "8e1753db4384f2cb63c1edaebc3c9ece",
+          "html": "Collaborated editing Wiki Posts with other men",
+          "votes": 5
+        },
+        {
+          "id": "02d95ef7ee1a79324e61ccaf29760798",
+          "html": "Managed my Team's Team Page by editing our mission, adding our photo, etc.",
+          "votes": 5
+        }
+      ],
+      "voters": 7
+    }
+  ]
+}

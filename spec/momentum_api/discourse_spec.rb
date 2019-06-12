@@ -44,7 +44,9 @@ describe MomentumApi::Discourse do
       subject {MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies)}
 
       it 'responds to apply_to_users and runs thru group of users' do
-        subject.instance_variable_set(:@issue_users, %w(Tony_Christopher))
+        reset_options = subject.instance_variable_get(:@options)
+        reset_options[:issue_users] = %w(Tony_Christopher)
+        subject.instance_variable_set(:@options, reset_options)
         expect {subject.apply_to_users}
             .to output(/Tony_Christopher in apply_to_group_users method/).to_stdout
       end

@@ -12,7 +12,9 @@ def discourse_options
       target_username:          'Tim_Tannatt',
       target_groups:            %w(trust_level_1),
       instance:                 'live',
-      api_username:             'KM_Admin'
+      api_username:             'KM_Admin',
+      exclude_users:            %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin),
+      issue_users:              %w()
   }
 end
 

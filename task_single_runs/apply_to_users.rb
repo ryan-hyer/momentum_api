@@ -1,38 +1,32 @@
 require '../lib/momentum_api'
 
-schedule_options = {
-    team_category_watching:   true,
-    essential_watching:       true,
-    growth_first_post:        true,
-    meta_first_post:          true,
-    trust_level_updates:      true,
-    score_user_levels: {
-        update_type:  'not_voted',      # have_voted, not_voted, newly_voted, all
-        target_post:  28707,            # 28649
-        target_polls: %w(version_two),  # basic new version_two
-        poll_url:     'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
-    },
-    user_group_alias_notify:  true
+discourse_options = {
+    do_live_updates:            false,
+    target_username:            nil,
+    target_groups:              %w(Mods),
+    instance:                   'live',
+    api_username:               'KM_Admin',
+    exclude_users:              %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin),
+    issue_users:                %w()
 }
 
-def discourse_options
-    {
-        do_live_updates:          false,
-        target_username:          nil,
-        target_groups:            %w(Mods),
-        instance:                 'live',
-        api_username:             'KM_Admin'
-    }
-end
+schedule_options = {
+    team_category_watching:     true,
+    essential_watching:         true,
+    growth_first_post:          true,
+    meta_first_post:            true,
+    trust_level_updates:        true,
+    score_user_levels: {
+        update_type:    'not_voted', # have_voted, not_voted, newly_voted, all
+        target_post:    28707, # 28649
+        target_polls:   %w(version_two), # basic new version_two
+        poll_url:       'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
+    },
+    user_group_alias_notify:    true
+}
 
 discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
-
-scan_options = {
-    user_group_alias_notify:  true
-}
-
-discourse.apply_to_users(scan_options)
-
+discourse.apply_to_users
 discourse.scan_summary
 
 # Jun 2, 2019

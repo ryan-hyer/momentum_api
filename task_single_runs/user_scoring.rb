@@ -1,23 +1,25 @@
-require '../../lib/momentum_api'
+require '../lib/momentum_api'
 
-do_live_updates   = false
+discourse_options = {
+    do_live_updates:        false,
+    target_username:        'KM_Admin',         # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Don_Morgan
+    target_groups:          %w(Mods),    # Mods GreatX BraveHearts
+    instance:               'live',
+    api_username:           'KM_Admin',
+    exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin),
+    # exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
+    issue_users:             %w()
+}
 
-# testing variables
-target_username   = nil # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Don_Morgan
-target_groups     = %w(Mods)  # Mods GreatX BraveHearts (trust_level_1 trust_level_0 hits 100 record limit)
-
-master_client = MomentumApi::Discourse.new('KM_Admin', 'live', do_live_updates=do_live_updates,
-                                           target_groups=target_groups, target_username=target_username)
-
-scan_options = {
+schedule_options = {
     score_user_levels: {
-        update_type:  'not_voted',      # have_voted, not_voted, newly_voted, all
-        target_post:  28707,            # 28649
-        target_polls: %w(version_two),  # basic new version_two
+        update_type:  'have_voted',       # have_voted, not_voted, newly_voted, all
+        target_post:  28707,             # 28649
+        target_polls: %w(version_two),   # basic new version_two
         poll_url:     'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
     }
 }
 
-master_client.apply_to_users(scan_options)
-
-master_client.scan_summary
+discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
+discourse.apply_to_users
+discourse.scan_summary
