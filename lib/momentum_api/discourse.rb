@@ -3,13 +3,13 @@ require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__
 # require_relative '../momentum_api/error'
 require_relative '../momentum_api/schedule'
 require_relative '../momentum_api/man'
-require_relative '../momentum_api/api/messages'
+# require_relative '../momentum_api/api/messages'
 
 module MomentumApi
   class Discourse
     attr_reader :options, :user_score_poll, :scan_pass_counters, :admin_client, :schedule
 
-    include MomentumApi::Messages
+    # include MomentumApi::Messages
 
     def initialize(discourse_options, schedule_options, mock: nil)
       raise ArgumentError, 'api_username needs to be defined' if discourse_options.nil? || discourse_options.empty?

@@ -63,25 +63,17 @@ module MomentumApi
               if existing_value == current_voter_points
                 if @poll_settings[:update_type] == 'have_voted' or @poll_settings[:update_type] == 'all'
                   print_scored_user(current_voter_points, existing_value, max_points_possible, poll, user_badge_level)
-                  send_voted_message(current_voter_points, max_points_possible, user_badge_level, @poll_settings[:poll_url])
+                  send_voted_message(current_voter_points, max_points_possible, user_badge_level)
                   printf "\n"
                 end
-                # print_scored_user(current_voter_points, existing_value, max_points_possible, poll, @man.user_details['username'])
                 # printf "%-30s \n", 'User Score is not new.'
               else
                 @user_scores_counters[:'New Vote Targets'] += 1
                 update_user_profile_score(current_voter_points)
                 print_scored_user(current_voter_points, existing_value, max_points_possible, poll, user_badge_level)
-                send_voted_message(current_voter_points, max_points_possible, user_badge_level, @poll_settings[:poll_url])
+                send_voted_message(current_voter_points, max_points_possible, user_badge_level)
                 printf "\n"
               end
-              #
-              # if @poll_settings[:update_type] == 'have_voted' or @poll_settings[:update_type] == 'all'
-              #   print_scored_user(current_voter_points, existing_value, max_points_possible, poll, user_badge_level)
-              #   send_voted_message(current_voter_points, max_points_possible, user_badge_level, @poll_settings[:poll_url])
-              #   printf "\n"
-              # end
-              # printf "\n"
             end
 
             # if voter not voted
@@ -89,7 +81,7 @@ module MomentumApi
             if @poll_settings[:update_type] == 'not_voted' or @poll_settings[:update_type] == 'all'
               @user_scores_counters[:'Not Voted Targets'] += 1
               printf "%-18s %-20s\n", @man.user_details['username'], 'has not voted yet'
-              send_not_voted_message(@poll_settings[:poll_url])
+              send_not_voted_message
               printf "\n"
             end
             # next
@@ -99,34 +91,32 @@ module MomentumApi
     end
 
 
-    def send_voted_message(current_voter_points, max_points_possible, user_badge_level, poll_url)
+    def send_voted_message(current_voter_points, max_points_possible, user_badge_level)
       message_subject = "Thank You for Taking Momentum's Discourse User Poll"
       message_body = "Congratulations! Your Momentum Discourse User Score is #{current_voter_points.to_int} out of a maximum possible score of #{max_points_possible.to_int}.
 
   In addition to your User Score of #{current_voter_points.to_int}, you have been assigned the Momentum [**Discourse #{user_badge_level} User**](http://discourse.gomomentum.org/u/#{@man.user_details['username']}/badges) Badge Level. You can also visit these links to:
 
-  - [Retake the poll and receive a new score at anytime](#{poll_url})
+  - [Retake the poll and receive a new score at anytime](#{@poll_settings[:poll_url]})
   - [See all Badges you have earned](https://discourse.gomomentum.org/u/#{@man.user_details['username']}/badges)
   - [See all the possible Momentum Badges that you can earn](https://discourse.gomomentum.org/badges)
 
   -- Your Momentum Moderators"
 
-      @man.discourse.send_private_message(@emails_from_username, @man.user_details['username'],
-                                          message_subject, message_body, @man.discourse.options[:do_live_updates])
+      @man.send_private_message(@emails_from_username, message_subject, message_body)
     end
 
-    def send_not_voted_message(poll_url)
+    def send_not_voted_message
       message_subject = "Momentum's Discourse User Poll is Waiting for Your Input!"
       message_body = "Your input is very important to help Momentum better understand men's Discourse experience. Please take a moment to give your input!
 
-  Contribute to [Momentum's Discourse User Poll here](#{poll_url}). The questions are all yes / no and should take you no more than 5 minutes to complete.
+  Contribute to [Momentum's Discourse User Poll here](#{@poll_settings[:poll_url]}). The questions are all yes / no and should take you no more than 5 minutes to complete.
 
   Once you take the poll you will earn a [Discourse User Badge showing your Discourse User achievement level here](https://discourse.gomomentum.org/u/#{@man.user_details['username']}/badges), and you can [see all possible Momentum Badges that you can earn here](https://discourse.gomomentum.org/badges).
 
   -- Your Momentum Moderators"
 
-      @man.discourse.send_private_message(@emails_from_username, @man.user_details['username'],
-                                          message_subject, message_body, @man.discourse.options[:do_live_updates])
+      @man.send_private_message(@emails_from_username, message_subject, message_body)
     end
 
     def score_voter(poll, poll_option_votes)

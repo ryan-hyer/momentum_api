@@ -1,8 +1,12 @@
+require_relative '../momentum_api/api/messages'
+
 module MomentumApi
   class Man
 
     attr_reader :discourse, :user_client, :user_details, :users_categories
     attr_accessor :is_owner
+
+    include MomentumApi::Messages
 
     def initialize(discourse, user_client, user_details, mock: nil)
       raise ArgumentError, 'user_client needs to be defined' if user_client.nil?
