@@ -49,8 +49,8 @@ module MomentumApi
           end
           sleep 1
 
-          # if user has voted
           if poll_option_votes
+            # user has voted
             if @poll_settings[:update_type] == 'have_voted' or @poll_settings[:update_type] == 'newly_voted' or @update_type == 'all'
               user_fields = @man.user_details[@user_fields]
               existing_value = user_fields[@user_score_field].to_i
@@ -59,15 +59,15 @@ module MomentumApi
               current_voter_points, max_points_possible = score_voter(poll, poll_option_votes)
               user_badge_level = update_user_profile_badges(current_voter_points)
 
-              # is this vote new?
               if existing_value == current_voter_points
+                # existing vote
                 if @poll_settings[:update_type] == 'have_voted' or @poll_settings[:update_type] == 'all'
                   print_scored_user(current_voter_points, existing_value, max_points_possible, poll, user_badge_level)
                   send_voted_message(current_voter_points, max_points_possible, user_badge_level)
                   printf "\n"
                 end
-                # printf "%-30s \n", 'User Score is not new.'
               else
+                # new vote
                 @user_scores_counters[:'New Vote Targets'] += 1
                 update_user_profile_score(current_voter_points)
                 print_scored_user(current_voter_points, existing_value, max_points_possible, poll, user_badge_level)
@@ -76,8 +76,8 @@ module MomentumApi
               end
             end
 
-            # if voter not voted
           else
+            # user has not voted
             if @poll_settings[:update_type] == 'not_voted' or @poll_settings[:update_type] == 'all'
               @user_scores_counters[:'Not Voted Targets'] += 1
               printf "%-18s %-20s\n", @man.user_details['username'], 'has not voted yet'

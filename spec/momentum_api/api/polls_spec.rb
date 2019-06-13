@@ -5,6 +5,7 @@ describe MomentumApi::Poll do
   let(:user_details) { json_fixture("user_details.json") }
   let(:post_with_poll) { json_fixture("post_with_poll.json") }
   let(:poll_voters) { json_fixture("poll_voters.json") }
+  let(:badge_grated) { json_fixture("badge_grated.json") }
   let(:poll_voters_error) { {"errors": ["poll_name is invalid"]} }
 
   let(:mock_user_client) do
@@ -99,7 +100,7 @@ describe MomentumApi::Poll do
 
       let(:poll_voter_new) { json_fixture("poll_voter_new.json") }
 
-      describe '.run init all ' do
+      describe '.run init all' do
 
         let(:mock_discourse) do
           mock_discourse = instance_double('discourse')
@@ -128,7 +129,7 @@ describe MomentumApi::Poll do
         end
       end
 
-      describe '.run subcalls ' do
+      describe '.run subcalls' do
         
         let(:mock_man) do
           mock_man = instance_double('man')
@@ -151,6 +152,52 @@ describe MomentumApi::Poll do
         end
       end
 
+
+      describe '.run init all with do_live_update' do
+
+        options_do_live_updates = discourse_options
+        options_do_live_updates[:do_live_updates] = true
+
+        let(:mock_discourse) do
+          mock_discourse = instance_double('discourse')
+          expect(mock_discourse).to receive(:options).twice.and_return(options_do_live_updates)
+          expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
+          mock_discourse
+        end
+
+        let(:mock_user_client) do
+          mock_user_client = instance_double('user_client')
+          expect(mock_user_client).to receive(:get_post).once.and_return post_with_poll
+          expect(mock_user_client).to receive(:poll_voters).once.and_return(poll_voters)
+          expect(mock_user_client).to receive(:user_badges).once.and_return([])    # todo sub correct return json
+          expect(mock_user_client).to receive(:grant_user_badge).once.and_return(badge_grated)
+          expect(mock_user_client).to receive(:update_user).once.and_return({"body": {"success": "OK"}})
+          expect(mock_user_client).to receive(:user).once.and_return(poll_voter_new)
+          mock_user_client
+        end
+        
+        let(:mock_man) do
+          mock_man = instance_double('man')
+          expect(mock_man).to receive(:discourse).exactly(2).times.and_return(mock_discourse)
+          expect(mock_man).to receive(:user_details).exactly(9).times.and_return(poll_voter_new)
+          expect(mock_man).to receive(:user_client).exactly(6).times.and_return(mock_user_client)
+          expect(mock_man).to receive(:print_user_options).exactly(2).times
+          mock_man
+        end
+
+        options_have_voted = schedule_options[:score_user_levels]
+        options_have_voted[:update_type] = 'have_voted'
+        let(:have_voted_poll) { MomentumApi::Poll.new(mock_schedule, options_have_voted) }
+
+        it 'updates users profile and grant badge' do
+          expect(have_voted_poll).to receive(:send_voted_message)
+          # expect(have_voted_poll).to receive(:update_user_profile_score)
+          expect(have_voted_poll).to receive(:print_scored_user)
+          have_voted_poll.run(mock_man)
+          expect(have_voted_poll).to respond_to(:send_voted_message)
+        end
+      end
+      
     end
 
   end

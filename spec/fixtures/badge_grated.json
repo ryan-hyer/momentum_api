@@ -1,0 +1,19 @@
+[
+  {
+    "id": 113,
+    "name": "PowerUser",
+    "description": "Discourse Power User",
+    "grant_count": 2,
+    "allow_title": false,
+    "multiple_grant": false,
+    "icon": "fa-certificate",
+    "image": "https://discourse.gomomentum.org/uploads/default/original/2X/4/473062daa5b0296e8f12774eacd03c02f3ea05f9.png",
+    "listable": true,
+    "enabled": true,
+    "badge_grouping_id": 7,
+    "system": false,
+    "slug": "poweruser",
+    "manually_grantable": true,
+    "badge_type_id": 1
+  }
+]
