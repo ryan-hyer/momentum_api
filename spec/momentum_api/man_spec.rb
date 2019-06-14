@@ -103,7 +103,7 @@ describe MomentumApi::Man do
     end
  end
 
-    context 'errors present' do
+  context 'errors present' do
 
     describe "client.categories DiscourseApi::TooManyRequests x2 raises error" do
 
@@ -158,6 +158,29 @@ describe MomentumApi::Man do
         expect(man.instance_variable_get(:@users_categories)).to be_nil
       end
     end
+  end
+
+
+  context 'print_user_options' do
+
+    describe '.print_user_options' do
+
+      let(:user_option_print) { %w(last_seen_at last_posted_at post_count time_read recent_time_read user_field_score) }
+
+      let(:mock_discourse) do
+        mock_discourse = instance_double('mock_discourse')
+        mock_discourse
+      end
+
+      let(:man) {MomentumApi::Man.new(mock_discourse, mock_dependencies, user_details, mock: mock_dependencies)}
+      
+      it 'responds and prints user' do
+        expect { man.print_user_options(user_details, user_option_print) }
+            .to output(/last_seen_at/).to_stdout
+
+      end
+    end
+
   end
 
 end

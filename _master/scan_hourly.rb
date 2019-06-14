@@ -1,35 +1,44 @@
-require '../_master/apply_to_users_v1'
+require '../lib/momentum_api'
 
 @scan_passes_end        =   1
-@live_scan_updates      =   false
+@scan_passes            =   0
 
-@team_category_watching =   false
-@essential_watching     =   false
-@growth_first_post      =   false
-@meta_first_post        =   false
-@trust_level_updates    =   false
-@score_user_levels      =   true
+discourse_options = {
+    do_live_updates:            false,
+    target_username:            nil,
+    target_groups:              %w(trust_level_1),   # Mods GreatX BraveHearts trust_level_0 trust_level_1
+    instance:                   'live',
+    api_username:               'KM_Admin',
+    exclude_users:              %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
+    issue_users:                %w()
+}
 
-@instance = 'live' # 'live' or 'local'
-@emails_from_username = 'Kim_Miller'
+schedule_options = {
+    team_category_watching:     true,
+    essential_watching:         true,
+    growth_first_post:          true,
+    meta_first_post:            true,
+    trust_level_updates:        false,    # todo broken: Not seeing Owners
+    score_user_levels: {
+        update_type:    'newly_voted',    # have_voted, not_voted, newly_voted, all
+        target_post:    28707,            # 28649
+        target_polls:   %w(version_two),  # basic new version_two
+        poll_url:       'https://discourse.gomomentum.org/t/user-persona-survey/6485/20',
+        messages_from:  'Kim_Miller'
+    },
+    user_group_alias_notify:    false
+}
 
-@exclude_user_names = %w(system discobot js_admin sl_admin JP_Admin admin_sscott RH_admin KM_Admin Winston_Churchill
-                            Joe_Sabolefski)
-
-# testing variables
-# @target_username = 'Michael_Skowronek' # Kim_Miller Randy_Horton Steve_Scott Marty_Fauth Joe_Sabolefski Don_Morgan
-# @target_groups = %w(expedition02)  # Mods GreatX BraveHearts (trust_level_1 trust_level_0 hits 100 record limit)
-@issue_users = %w() # past in debug issue user_names Brad_Fino Michael_Skowronek
 
 def scan_hourly
 
   printf "\n%s\n", 'Scanning All-Users for Tasks ...'
-  run_tasks_for_all_users(do_live_updates=@live_scan_updates)
+  @discourse.apply_to_users
   @scan_passes += 1
   printf "%s\n", "\nPass #{@scan_passes} complete \n"
 
   printf "%s\n", "\nWaiting 1 hour ... \n"
-  sleep(60 * 60)
+  # sleep(60 * 60)
 
   if @scan_passes < @scan_passes_end
     printf "%s\n", 'Repeating Scan'
@@ -40,11 +49,14 @@ def scan_hourly
 
 end
 
+@discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
+@discourse.apply_to_users
+
 printf "\n%s\n", 'Starting Scan ...'
 
 scan_hourly
 
-scan_summary
+@discourse.scan_summary
 
 # todo save log to disk
 # todo tests

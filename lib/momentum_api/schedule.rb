@@ -89,7 +89,7 @@ module MomentumApi
 
         case
         when category['slug'] == group_name
-          case_excludes = %w(Steve_Scott)
+          case_excludes = %w(Steve_Scott Ryan_Hyer David_Kirk)
           if case_excludes.include?(man.user_details['username'])
             # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
           else

@@ -5,7 +5,7 @@
 #
 #   describe "#set_category_notification" do
     # before do
-    #   stub_get("http://localhost:3000/admin/badges.json").to_return(body: fixture("badges.json"), headers: { content_type: "application/json" })
+    #   stub_get("http://localhost:3000/admin/badges.json").to_return(body: fixture("badges_intermediate.json"), headers: { content_type: "application/json" })
     # end
 
 

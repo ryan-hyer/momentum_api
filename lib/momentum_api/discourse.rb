@@ -15,7 +15,7 @@ module MomentumApi
       raise ArgumentError, 'api_username needs to be defined' if discourse_options.nil? || discourse_options.empty?
 
       # messages
-      @emails_from_username = 'Kim_Miller'
+      # @emails_from_username = 'Kim_Miller'
 
       # parameter setting
       @options              = discourse_options
