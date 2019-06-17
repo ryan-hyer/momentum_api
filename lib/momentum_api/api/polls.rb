@@ -43,8 +43,11 @@ module MomentumApi
       end
       @mock ? sleep(0) : sleep(1)
 
-      polls = post['polls']
-      polls.each do |poll|
+      if @poll_settings[:target_polls].nil? or @poll_settings[:target_polls].empty?
+        @poll_settings[:target_polls] = %w(poll)
+      end
+
+      post['polls'].each do |poll|
         if @poll_settings[:target_polls].include?(poll['name'])
 
           begin
@@ -98,33 +101,35 @@ module MomentumApi
 
 
     def send_voted_message(current_voter_points, max_points_possible, user_badge_level)
-      message_subject = "Thank You for Taking Momentum's Discourse User Poll"
-      message_body = "Congratulations! Your Momentum Discourse User Score is #{current_voter_points.to_int} out of a maximum possible score of #{max_points_possible.to_int}.
+      message_subject = "Thank You for Taking Momentum's Discourse User Quiz"
+      message_body = eval(message_body('voted_message.txt'))
 
-  In addition to your User Score of #{current_voter_points.to_int}, you have been assigned the Momentum [**Discourse #{user_badge_level} User**](http://discourse.gomomentum.org/u/#{@man.user_details['username']}/badges) Badge Level. You can also visit these links to:
-
-  - [Retake the poll and receive a new score at anytime](#{@poll_settings[:poll_url]})
-  - [See all Badges you have earned](https://discourse.gomomentum.org/u/#{@man.user_details['username']}/badges)
-  - [See all the possible Momentum Badges that you can earn](https://discourse.gomomentum.org/badges)
-
-  -- Your Momentum Moderators"
+  #     message_body = "Congratulations! Your Momentum Discourse User Score is #{current_voter_points.to_int} out of a maximum possible score of #{max_points_possible.to_int}.
+  #
+  # In addition to your User Score of #{current_voter_points.to_int}, you have been assigned the Momentum [**Discourse #{user_badge_level} User**](http://discourse.gomomentum.org/u/#{@man.user_details['username']}/badges) Badge Level. You can also visit these links to:
+  #
+  # - [Retake the poll and receive a new score at anytime](#{@poll_settings[:poll_url]})
+  # - [See all Badges you have earned](https://discourse.gomomentum.org/u/#{@man.user_details['username']}/badges)
+  # - [See all the possible Momentum Badges that you can earn](https://discourse.gomomentum.org/badges)
+  #
+  # -- Your Momentum Moderators"
 
       @message_client.send_private_message(@man, message_body, message_subject)
-      # @man.send_private_message(@emails_from_username, message_subject, message_body)
     end
 
     def send_not_voted_message
-      message_subject = "Momentum's Discourse User Poll is Waiting for Your Input!"
-      message_body = "Your input is very important to help Momentum better understand men's Discourse experience. Please take a moment to give your input!
+      message_subject = "What is Your Score? Please Take Your User Quiz and Find Out!"
+      message_body = eval(message_body('not_voted_message.txt'))
 
-  Contribute to [Momentum's Discourse User Poll here](#{@poll_settings[:poll_url]}). The questions are all yes / no and should take you no more than 5 minutes to complete.
-
-  Once you take the poll you will earn a [Discourse User Badge showing your Discourse User achievement level here](https://discourse.gomomentum.org/u/#{@man.user_details['username']}/badges), and you can [see all possible Momentum Badges that you can earn here](https://discourse.gomomentum.org/badges).
-
-  -- Your Momentum Moderators"
+  #     message_body = "Your input is very important to help Momentum better understand men's Discourse experience. Please take a moment to give your input!
+  # 
+  # Contribute to [Momentum's Discourse User Poll here](#{@poll_settings[:poll_url]}). The questions are all yes / no and should take you no more than 5 minutes to complete.
+  #
+  # Once you take the poll you will earn a [Discourse User Badge showing your Discourse User achievement level here](https://discourse.gomomentum.org/u/#{@man.user_details['username']}/badges), and you can [see all possible Momentum Badges that you can earn here](https://discourse.gomomentum.org/badges).
+  #
+  # -- Your Momentum Moderators"
 
       @message_client.send_private_message(@man, message_body, message_subject)
-      # @man.send_private_message(@emails_from_username, message_subject, message_body)
     end
 
     def score_voter(poll, poll_option_votes)
@@ -247,6 +252,18 @@ module MomentumApi
       @counters[:'New User Badges']          =   0
       @counters[:'Not Voted Targets']        =   0
       @counters[:'Messages Sent']            =   0
+    end
+
+    def message_path
+      File.expand_path("../../../../polls/user_score", __FILE__)
+    end
+
+    # def message(file)
+    #   File.new(message_path + '/' + file)
+    # end
+
+    def message_body(text_file)
+      File.read(message_path + '/' + text_file)
     end
 
   end

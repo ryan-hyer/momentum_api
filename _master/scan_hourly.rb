@@ -1,11 +1,10 @@
 require '../lib/momentum_api'
 
-@scan_passes_end        =   1
-@scan_passes            =   0
+@scan_passes_end        =   20
 
 discourse_options = {
-    do_live_updates:            false,
-    target_username:            nil,
+    do_live_updates:            true,
+    target_username:            'KM_Admin',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Don_Morgan KM_Admin
     target_groups:              %w(trust_level_1),   # Mods GreatX BraveHearts trust_level_0 trust_level_1
     instance:                   'live',
     api_username:               'KM_Admin',
@@ -14,31 +13,34 @@ discourse_options = {
 }
 
 schedule_options = {
-    team_category_watching:     true,
-    essential_watching:         true,
-    growth_first_post:          true,
-    meta_first_post:            true,
+    team_category_watching:     false,
+    essential_watching:         false,
+    growth_first_post:          false,
+    meta_first_post:            false,
     trust_level_updates:        false,    # todo broken: Not seeing Owners
     score_user_levels: {
         update_type:    'newly_voted',    # have_voted, not_voted, newly_voted, all
-        target_post:    28707,            # 28649
-        target_polls:   %w(version_two),  # basic new version_two
-        poll_url:       'https://discourse.gomomentum.org/t/user-persona-survey/6485/20',
+        target_post:    30590,            # 28707 28649
+        # target_polls:   %w(poll),  # testing was version_two
+        poll_url:       'https://discourse.gomomentum.org/t/what-s-your-score/7057',
         messages_from:  'Kim_Miller'
     },
     user_group_alias_notify:    false
 }
 
+# init
+@scan_passes            =   0
 
 def scan_hourly
 
-  printf "\n%s\n", 'Scanning All-Users for Tasks ...'
+  printf "\n%s\n", "Scanning #{@discourse.options[:target_groups]} Users for Tasks ..."
   @discourse.apply_to_users
   @scan_passes += 1
   printf "%s\n", "\nPass #{@scan_passes} complete \n"
 
-  printf "%s\n", "\nWaiting 1 hour ... \n"
-  # sleep(60 * 60)
+  printf "%s\n", "\nWaiting 30 minutes ... \n"
+  sleep 5
+  # sleep 60 * 30
 
   if @scan_passes < @scan_passes_end
     printf "%s\n", 'Repeating Scan'
@@ -50,7 +52,7 @@ def scan_hourly
 end
 
 @discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
-@discourse.apply_to_users
+# @discourse.apply_to_users
 
 printf "\n%s\n", 'Starting Scan ...'
 
