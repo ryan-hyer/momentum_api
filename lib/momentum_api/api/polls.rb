@@ -2,8 +2,6 @@ module MomentumApi
   class Poll
 
     attr_accessor :counters
-    # attr_reader :instance
-
 
     def initialize(schedule, poll_settings, mock: nil)
       raise ArgumentError, 'schedule needs to be defined' if schedule.nil?
@@ -255,7 +253,7 @@ module MomentumApi
     end
 
     def message_path
-      File.expand_path("../../../../polls/user_score", __FILE__)
+      File.expand_path("../../../../polls/user_score/messages", __FILE__)
     end
 
     # def message(file)
