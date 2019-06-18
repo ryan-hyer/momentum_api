@@ -8,4 +8,4 @@
 
   -- Your Momentum Moderators
 
-  \\* Just click *'Hide Resluts'* when retaking the quiz."
+  \\* Just click *'Hide Results'* when retaking the quiz."

@@ -2,8 +2,8 @@ require '../lib/momentum_api'
 
 discourse_options = {
     do_live_updates:        false,
-    # target_username:        'KM_Admin',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Don_Morgan
-    target_groups:          %w(Mods),       # Mods GreatX BraveHearts
+    # target_username:        'KM_Admin',       # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Don_Morgan
+    target_groups:          %w(trust_level_1),  # Mods GreatX BraveHearts trust_level_0 trust_level_1
     instance:               'live',
     api_username:           'KM_Admin',
     exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),

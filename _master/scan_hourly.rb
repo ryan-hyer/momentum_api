@@ -4,7 +4,7 @@ require '../lib/momentum_api'
 
 discourse_options = {
     do_live_updates:            true,
-    target_username:            'KM_Admin',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Don_Morgan KM_Admin
+    # target_username:            'KM_Admin',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Don_Morgan KM_Admin
     target_groups:              %w(trust_level_1),   # Mods GreatX BraveHearts trust_level_0 trust_level_1
     instance:                   'live',
     api_username:               'KM_Admin',
@@ -20,9 +20,9 @@ schedule_options = {
     trust_level_updates:        false,    # todo broken: Not seeing Owners
     score_user_levels: {
         update_type:    'newly_voted',    # have_voted, not_voted, newly_voted, all
-        target_post:    30590,            # 28707 28649
+        target_post:    30719,            # 28707 28649
         # target_polls:   %w(poll),  # testing was version_two
-        poll_url:       'https://discourse.gomomentum.org/t/what-s-your-score/7057',
+        poll_url:       'https://discourse.gomomentum.org/t/what-s-your-score',
         messages_from:  'Kim_Miller'
     },
     user_group_alias_notify:    false
@@ -33,17 +33,17 @@ schedule_options = {
 
 def scan_hourly
 
-  printf "\n%s\n", "Scanning #{@discourse.options[:target_groups]} Users for Tasks ..."
+  printf "%s\n", "Scanning #{@discourse.options[:target_groups]} Users for Tasks ..."
   @discourse.apply_to_users
   @scan_passes += 1
-  printf "%s\n", "\nPass #{@scan_passes} complete \n"
+  printf "%s\n", "Pass #{@scan_passes} complete. Waiting 30 minutes ..."
 
-  printf "%s\n", "\nWaiting 30 minutes ... \n"
-  sleep 5
-  # sleep 60 * 30
+  # printf "%s\n", "Waiting 30 minutes ..."
+  # sleep 5
+  sleep 60 * 30
 
   if @scan_passes < @scan_passes_end
-    printf "%s\n", 'Repeating Scan'
+    # printf "%s\n", 'Repeating Scan'
     scan_hourly
   else
     printf "%s\n", '... Exiting ...'
