@@ -1,21 +1,16 @@
 $LOAD_PATH.unshift File.expand_path('../../../../discourse_api/lib', __FILE__)
 require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__)
 # require_relative '../momentum_api/error'
-# require_relative '../momentum_api/api/messages'
 require_relative '../momentum_api/schedule'
 require_relative '../momentum_api/man'
 
 module MomentumApi
   class Discourse
-    attr_reader :options, :user_score_poll, :scan_pass_counters, :admin_client, :schedule
-
-    # include MomentumApi::Messages
+    attr_reader :options, :scan_pass_counters, :admin_client, :schedule
+    attr_accessor :counters
 
     def initialize(discourse_options, schedule_options, mock: nil)
       raise ArgumentError, 'api_username needs to be defined' if discourse_options.nil? || discourse_options.empty?
-
-      # messages
-      # @emails_from_username = 'Kim_Miller'
 
       # parameter setting
       @options              = discourse_options
@@ -24,9 +19,9 @@ module MomentumApi
       @admin_client         = mock || connect_to_instance(discourse_options[:api_username], discourse_options[:instance])
 
       # counter init
-      @discourse_counters   = {'Discourse Men': ''}
+      @counters             = {'Discourse Men': ''}
       @scan_pass_counters   = []
-      @scan_pass_counters   << @discourse_counters
+      @scan_pass_counters   << @counters
 
       # create schedule Class
       @schedule             = MomentumApi::Schedule.new(self, schedule_options)
@@ -57,17 +52,17 @@ module MomentumApi
         user_details = @admin_client.user(group_member['username'])
         @mock ? sleep(0) : sleep(2)
       rescue DiscourseApi::TooManyRequests
-        puts 'Sleeping for 20 seconds ....'
+        puts 'TooManyRequests: Sleeping for 20 seconds ....'
         @mock ? sleep(0) : sleep(20)
         user_details = @admin_client.user(group_member['username'])
       end
 
       if user_details['staged']
-        @discourse_counters[:'Skipped Users'] += 1
+        @counters[:'Skipped Users'] += 1
       else
         user_client = @mock || connect_to_instance(user_details['username'], @options[:instance])
 
-        @discourse_counters[:'Processed Users'] += 1
+        @counters[:'Processed Users'] += 1
         @mock ? @mock.scan_contexts(self) : MomentumApi::Man.new(self, user_client, user_details).scan_contexts
       end
     end
@@ -94,7 +89,7 @@ module MomentumApi
             puts "#{group_member['username']} in apply_to_group_users method"
           end
           # puts user['username']
-          printf "%-15s %s \r", 'Scanning User: ', @discourse_counters[:'Processed Users']
+          printf "%-15s %s \r", 'Scanning User: ', @counters[:'Processed Users']
           apply_call(group_member)
         else
         end
@@ -104,9 +99,9 @@ module MomentumApi
 
 
     def zero_discourse_counters
-      @discourse_counters[:'Processed Users']    =   0      # @user_count
-      @discourse_counters[:'Skipped Users']      =   0      # @skipped_users
-      @discourse_counters[:'Messages Sent']      =   0      # @skipped_users
+      @counters[:'Processed Users']    =   0
+      @counters[:'Skipped Users']      =   0
+      @counters[:'Messages Sent']      =   0
     end
 
 

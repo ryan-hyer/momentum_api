@@ -2,7 +2,7 @@
 
 For me there is nothing more fun than a game that awards points for learning, like the NYT Crossword or GM Fun. Now you can become more connected with the men through improving your Discourse skills, all while tracking your progress in a point score. 
 
-Here’s how it works: Just take the 4-minute quiz below by simply checking the items you have mastered. Within the hour you will receive a message from Discourse telling you your score. Then return to the quiz to see what new skills you would like to master. If you need help, just post your questions. Once you’ve mastered new skills, simply check them off and click *“vote”*. Your score will be updated within the hour. Update the quiz as many times as you like.
+Here’s how it works: Just take the 4-minute quiz below by checking off the items you have mastered and click *“Vote now!”* Within the hour you will receive a message from Discourse telling you your score. Then return to the quiz to see what new skills you would like to master. If you need help, just post your questions. Once you’ve mastered new skills, simply check them off and click *“Vote now!”* Your score will be updated within the hour. Update the quiz as many times as you like.
 
 Good luck, have fun!
 
@@ -54,6 +54,7 @@ Good luck, have fun!
 
 Example of what your Discourse User Score will look like on your user card:
 ![image|690x397](upload://dtn4nfQu2y8iNZsBWdYNVCvpJf5.jpeg) 
+
 Example of what your earned badges will look like: 
 ![image|690x373](upload://hu8pFt4ehzFKFRc0N1VkUbN6NyE.png) 
 Possible badges are Beginner, Intermediate, Advanced, and Power User.

@@ -49,12 +49,12 @@ module MomentumApi
         if @poll_settings[:target_polls].include?(poll['name'])
 
           begin
-            poll_option_votes = @man.user_client.poll_voters(post_id: @poll_settings[:target_post], poll_name: poll['name'],
-                                                             api_username: @man.user_details['username'])['voters']
-          rescue DiscourseApi::UnprocessableEntity   # voter has not voted
-            poll_option_votes = nil
+            poll_option_votes = has_man_voted?(poll)
+          rescue DiscourseApi::TooManyRequests
+            puts 'TooManyRequests: Sleeping for 30 seconds ....'
+            @mock ? sleep(0) : sleep(30)
+            poll_option_votes = has_man_voted?(poll)
           end
-          @mock ? sleep(0) : sleep(1)
 
           if poll_option_votes
             # user has voted
@@ -101,32 +101,12 @@ module MomentumApi
     def send_voted_message(current_voter_points, max_points_possible, user_badge_level)
       message_subject = "Thank You for Taking Momentum's Discourse User Quiz"
       message_body = eval(message_body('voted_message.txt'))
-
-  #     message_body = "Congratulations! Your Momentum Discourse User Score is #{current_voter_points.to_int} out of a maximum possible score of #{max_points_possible.to_int}.
-  #
-  # In addition to your User Score of #{current_voter_points.to_int}, you have been assigned the Momentum [**Discourse #{user_badge_level} User**](http://discourse.gomomentum.org/u/#{@man.user_details['username']}/badges) Badge Level. You can also visit these links to:
-  #
-  # - [Retake the poll and receive a new score at anytime](#{@poll_settings[:poll_url]})
-  # - [See all Badges you have earned](https://discourse.gomomentum.org/u/#{@man.user_details['username']}/badges)
-  # - [See all the possible Momentum Badges that you can earn](https://discourse.gomomentum.org/badges)
-  #
-  # -- Your Momentum Moderators"
-
       @message_client.send_private_message(@man, message_body, message_subject)
     end
 
     def send_not_voted_message
       message_subject = "What is Your Score? Please Take Your User Quiz and Find Out!"
       message_body = eval(message_body('not_voted_message.txt'))
-
-  #     message_body = "Your input is very important to help Momentum better understand men's Discourse experience. Please take a moment to give your input!
-  # 
-  # Contribute to [Momentum's Discourse User Poll here](#{@poll_settings[:poll_url]}). The questions are all yes / no and should take you no more than 5 minutes to complete.
-  #
-  # Once you take the poll you will earn a [Discourse User Badge showing your Discourse User achievement level here](https://discourse.gomomentum.org/u/#{@man.user_details['username']}/badges), and you can [see all possible Momentum Badges that you can earn here](https://discourse.gomomentum.org/badges).
-  #
-  # -- Your Momentum Moderators"
-
       @message_client.send_private_message(@man, message_body, message_subject)
     end
 
@@ -157,19 +137,22 @@ module MomentumApi
 
     def update_user_profile_score(current_voter_points)
       @counters[:'New User Scores'] += 1
-      # @new_user_score_targets += 1
       # puts 'User Score to be updated'
       user_option_print = %w(last_seen_at last_posted_at post_count time_read recent_time_read user_field_score)
       @man.print_user_options(@man.user_details, user_option_print, user_label='UserName',
                               pos_5=@man.user_details[@user_fields][@user_score_field])
 
       if @man.discourse.options[:do_live_updates]
-        update_response = @man.user_client.update_user(@man.user_details['username'], {"#{@user_fields}": {"#{@user_score_field}": current_voter_points}})
+        update_response = @man.discourse.admin_client.update_user(
+            @man.user_details['username'], {"#{@user_fields}": {"#{@user_score_field}": current_voter_points}})
+        # update_response = @man.user_client.update_user(
+        #     @man.user_details['username'], {"#{@user_fields}": {"#{@user_score_field}": current_voter_points}})
         puts update_response[:body]['success']
         @counters[:'Updated User Scores'] += 1
 
         # check if update happened
-        user_details_after_update = @man.user_client.user(@man.user_details['username'])
+        user_details_after_update = @man.discourse.admin_client.user(@man.user_details['username'])
+        # user_details_after_update = @man.user_client.user(@man.user_details['username'])
         @man.print_user_options(user_details_after_update, user_option_print, user_label='UserName',
                            pos_5=user_details_after_update[@user_fields][@user_score_field])
         @mock ? sleep(0) : sleep(1)
@@ -178,7 +161,8 @@ module MomentumApi
 
     def update_badge(target_badge_name, badge_id)
       if @man.discourse.options[:do_live_updates]
-        current_badges = @man.user_client.user_badges(@man.user_details['username'])
+        current_badges = @man.discourse.admin_client.user_badges(@man.user_details['username'])
+        # current_badges = @man.user_client.user_badges(@man.user_details['username'])
         has_target_badge = false
         current_badges.each do |current_badge|
           if current_badge['name'] == target_badge_name
@@ -189,7 +173,8 @@ module MomentumApi
           # puts 'User already has badge'
         else
           # puts 'about to post'
-          post_response = @man.user_client.grant_user_badge(username: @man.user_details['username'], badge_id: badge_id, reason: 'https://discourse.gomomentum.org/t/user-persona-survey/6485/20')
+          post_response = @man.discourse.admin_client.grant_user_badge(
+              username: @man.user_details['username'], badge_id: badge_id, reason: @poll_settings[:poll_url])
           # puts "User badges granted:"
           post_response.each do |badge|
             printf "%-35s %-20s \n", 'User badge granted: ', badge['name']
@@ -201,10 +186,7 @@ module MomentumApi
 
     def update_user_profile_badges(current_voter_points)
       @counters[:'New User Badges'] += 1
-      # @new_user_badge_targets += 1
       target_badge_name = nil
-      # puts 'User Badges to be updated'
-      # @man.print_user_options(@man.user_details, user_option_print)
 
       # calculate badges
       case current_voter_points
@@ -256,12 +238,21 @@ module MomentumApi
       File.expand_path("../../../../polls/user_score/messages", __FILE__)
     end
 
-    # def message(file)
-    #   File.new(message_path + '/' + file)
-    # end
-
     def message_body(text_file)
       File.read(message_path + '/' + text_file)
+    end
+
+    private
+
+    def has_man_voted?(poll)
+      begin
+        poll_option_votes = @man.user_client.poll_voters(post_id: @poll_settings[:target_post], poll_name: poll['name'],
+                                                         api_username: @man.user_details['username'])['voters']
+      rescue DiscourseApi::UnprocessableEntity # voter has not voted
+        poll_option_votes = nil
+      end
+      @mock ? sleep(0) : sleep(1)
+      poll_option_votes
     end
 
   end

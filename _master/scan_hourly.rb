@@ -22,7 +22,7 @@ schedule_options = {
         update_type:    'newly_voted',    # have_voted, not_voted, newly_voted, all
         target_post:    30719,            # 28707 28649
         # target_polls:   %w(poll),  # testing was version_two
-        poll_url:       'https://discourse.gomomentum.org/t/what-s-your-score',
+        poll_url:       'https://discourse.gomomentum.org/t/what-s-your-score/7104',
         messages_from:  'Kim_Miller'
     },
     user_group_alias_notify:    false
@@ -33,17 +33,14 @@ schedule_options = {
 
 def scan_hourly
 
-  printf "%s\n", "Scanning #{@discourse.options[:target_groups]} Users for Tasks ..."
+  printf "%s\n", "Scanning #{@discourse.options[:target_groups]} Users for Tasks"
   @discourse.apply_to_users
   @scan_passes += 1
-  printf "%s\n", "Pass #{@scan_passes} complete. Waiting 30 minutes ..."
-
-  # printf "%s\n", "Waiting 30 minutes ..."
-  # sleep 5
-  sleep 60 * 30
+  printf "\n%s\n", "Pass #{@scan_passes} complete. Waiting 5 minutes ..."
+  sleep 5 * 60
 
   if @scan_passes < @scan_passes_end
-    # printf "%s\n", 'Repeating Scan'
+    @discourse.counters[:'Processed Users'], @discourse.counters[:'Skipped Users'] = 0, 0
     scan_hourly
   else
     printf "%s\n", '... Exiting ...'
@@ -52,7 +49,6 @@ def scan_hourly
 end
 
 @discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
-# @discourse.apply_to_users
 
 printf "\n%s\n", 'Starting Scan ...'
 

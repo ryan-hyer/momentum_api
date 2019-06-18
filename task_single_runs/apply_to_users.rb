@@ -20,7 +20,7 @@ schedule_options = {
         update_type:    'not_voted', # have_voted, not_voted, newly_voted, all
         target_post:    28707, # 28649
         target_polls:   %w(version_two), # basic new version_two
-        poll_url:       'https://discourse.gomomentum.org/t/user-persona-survey/6485/20'
+        poll_url:       'https://discourse.gomomentum.org/t/what-s-your-score'
     },
     user_group_alias_notify:    true
 }

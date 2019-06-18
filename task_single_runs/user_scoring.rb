@@ -1,9 +1,9 @@
 require '../lib/momentum_api'
 
 discourse_options = {
-    do_live_updates:        false,
-    target_username:        'KM_Admin',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Don_Morgan KM_Admin
-    target_groups:          %w(Mods),       # Mods GreatX BraveHearts
+    do_live_updates:        true,
+    target_username:        'Konrad_Thaler',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Don_Morgan KM_Admin
+    target_groups:          %w(trust_level_1),       # Mods GreatX BraveHearts  trust_level_0 trust_level_1
     instance:               'live',
     api_username:           'KM_Admin',
     exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin),
@@ -14,9 +14,9 @@ discourse_options = {
 schedule_options = {
     score_user_levels: {
         update_type:    'newly_voted',      # have_voted, not_voted, newly_voted, all
-        target_post:    30590,              # 28649
+        target_post:    30719,              # 28649
         # target_polls:   %w(poll),    # default is 'poll'
-        poll_url:       'https://discourse.gomomentum.org/t/user-persona-survey/6485/20',
+        poll_url:       'https://discourse.gomomentum.org/t/what-s-your-score/7057',
         messages_from:  'Kim_Miller'
     }
 }
