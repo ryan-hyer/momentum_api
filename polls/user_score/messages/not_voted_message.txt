@@ -1,6 +1,6 @@
 "We want to better understand your Discourse experience to make it even better!  Please take 4 minutes to fill out your Momentum User Quiz and get your User Score, which helps us understand how you currently use Discourse.
 
-Take [Momentum's Discourse User Quiz here](#{@poll_settings[:poll_url]}). The questions are all yes / no and should take you no more than 4 minutes to complete.
+Take [Momentum's Discourse User Quiz here](#{@options[:poll_url]}). The questions are all yes / no and should take you no more than 4 minutes to complete.
 
   Once you take the quiz you will earn a [Discourse User Badge showing your Discourse User achievement level here](https://discourse.gomomentum.org/u/#{@man.user_details['username']}/badges), and you can [see all possible Momentum Badges that you can earn here](https://discourse.gomomentum.org/badges).
 

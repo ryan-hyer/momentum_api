@@ -60,7 +60,7 @@ module MomentumApi
       end
 
       # # Update Trust Level
-      if @discourse.schedule.schedule_options[:trust_level_updates] and not @is_owner
+      if @discourse.schedule.options[:trust_level_updates] and not @is_owner
         @discourse.schedule.downgrade_non_owner_trust(@discourse, self, 0)
       end
       

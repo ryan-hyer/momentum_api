@@ -17,7 +17,7 @@ describe MomentumApi::Man do
     mock_schedule = instance_double('mock_schedule')
     expect(mock_schedule).to receive(:group_cases).exactly(6).times
     expect(mock_schedule).to receive(:category_cases).exactly(6).times
-    expect(mock_schedule).to receive(:schedule_options).once.and_return(schedule_options)
+    expect(mock_schedule).to receive(:options).once.and_return(schedule_options)
     mock_schedule
   end
 
@@ -84,7 +84,7 @@ describe MomentumApi::Man do
       mock_schedule = instance_double('mock_schedule')
       expect(mock_schedule).to receive(:group_cases).exactly(5).times
       expect(mock_schedule).to receive(:category_cases).exactly(5).times
-      expect(mock_schedule).to receive(:schedule_options).once.and_return(schedule_options)
+      expect(mock_schedule).to receive(:options).once.and_return(schedule_options)
       expect(mock_schedule).to receive(:downgrade_non_owner_trust).once
       mock_schedule
     end
@@ -139,7 +139,7 @@ describe MomentumApi::Man do
       let(:mock_schedule) do
         mock_schedule = instance_double('mock_schedule')
         expect(mock_schedule).to receive(:group_cases).exactly(6).times
-        expect(mock_schedule).to receive(:schedule_options).once.and_return(schedule_options)
+        expect(mock_schedule).to receive(:options).once.and_return(schedule_options)
         mock_schedule
       end
 

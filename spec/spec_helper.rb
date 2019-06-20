@@ -25,15 +25,17 @@ end
 
 def schedule_options
   {
-      team_category_watching:   true,
-      essential_watching:       true,
-      growth_first_post:        true,
-      meta_first_post:          true,
+      category_watching:{
+          matching_team:   true,
+          essential:       true,
+          growth_first_post:        true,
+          meta_first_post:          true
+      },
       trust_level_updates:      true,
       score_user_levels: {
           update_type:    'not_voted', # have_voted, not_voted, newly_voted, all
           target_post:    28707, # 28649
-          target_polls:   %w(version_two), # basic new version_two
+          # target_polls:   %w(poll), # basic new version_two
           poll_url:       'https://discourse.gomomentum.org/t/what-s-your-score',
           messages_from:  'Kim_Miller'
       },

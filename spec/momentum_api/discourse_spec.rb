@@ -24,7 +24,7 @@ describe MomentumApi::Discourse do
       it 'responds to apply_to_users and runs thru default group of users' do
         subject.apply_to_users
         expect(subject).to respond_to(:apply_to_users)
-        expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(group_member_list.length)
+        expect(subject.instance_variable_get(:@counters)[:'Processed Users']).to eql(group_member_list.length)
       end
     end
 
@@ -35,7 +35,7 @@ describe MomentumApi::Discourse do
       it 'responds to apply_to_users and runs thru group of users' do
         subject.apply_to_users
         expect(subject).to respond_to(:apply_to_users)
-        expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(group_member_list.length)
+        expect(subject.instance_variable_get(:@counters)[:'Processed Users']).to eql(group_member_list.length)
       end
     end
     
@@ -73,7 +73,7 @@ describe MomentumApi::Discourse do
       it 'runs single user and responds to apply_to_users' do
         subject.apply_to_users
         expect(subject).to respond_to(:apply_to_users)
-        expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(1)
+        expect(subject.instance_variable_get(:@counters)[:'Processed Users']).to eql(1)
       end
     end
   end
@@ -100,7 +100,7 @@ describe MomentumApi::Discourse do
       it 'skips staged users and responds to apply_to_users' do
         subject.apply_to_users
         expect(subject).to respond_to(:apply_to_users)
-        expect(subject.instance_variable_get(:@discourse_counters)[:'Skipped Users']).to eql(1)
+        expect(subject.instance_variable_get(:@counters)[:'Skipped Users']).to eql(1)
       end
     end
   end
@@ -127,7 +127,7 @@ describe MomentumApi::Discourse do
       it 'responds to apply_to_users and uses trust_level_1 default group' do
         subject.apply_to_users
         expect(subject).to respond_to(:apply_to_users)
-        expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(group_member_list.length)
+        expect(subject.instance_variable_get(:@counters)[:'Processed Users']).to eql(group_member_list.length)
       end
     end
   end
@@ -166,7 +166,7 @@ describe MomentumApi::Discourse do
       it ". apply_to_users TooManyRequests x2 raises error" do
         expect { subject.apply_to_users }
             .to raise_error(DiscourseApi::TooManyRequests)
-        expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(0)
+        expect(subject.instance_variable_get(:@counters)[:'Processed Users']).to eql(0)
       end
     end
   end
@@ -206,7 +206,7 @@ describe MomentumApi::Discourse do
       it "responds to .scan_summary and find 0 init" do
         subject.scan_summary
         expect(subject).to respond_to(:scan_summary)
-        expect(subject.instance_variable_get(:@discourse_counters)[:'Processed Users']).to eql(0)
+        expect(subject.instance_variable_get(:@counters)[:'Processed Users']).to eql(0)
       end
 
       it "responds to .scan_summary and print to stand out" do

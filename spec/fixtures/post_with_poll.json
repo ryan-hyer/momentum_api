@@ -74,7 +74,7 @@
   "accepted_answer": false,
   "polls": [
     {
-      "name": "version_two",
+      "name": "poll",
       "type": "multiple",
       "status": "open",
       "public": true,

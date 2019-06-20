@@ -106,6 +106,7 @@ module MomentumApi
 
 
     def scan_summary
+
       field_settings = "%-35s %-20s \n"
 
       @scan_pass_counters.each do |score|

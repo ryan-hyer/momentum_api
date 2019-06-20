@@ -3,9 +3,9 @@ module MomentumApi
 
     attr_accessor :counters
 
-    def initialize(schedule, poll_settings, mock: nil)
+    def initialize(schedule, poll_options, mock: nil)
       raise ArgumentError, 'schedule needs to be defined' if schedule.nil?
-      raise ArgumentError, 'score_user_levels needs to be defined' if poll_settings.nil? || poll_settings.empty?
+      raise ArgumentError, 'score_user_levels needs to be defined' if poll_options.nil? || poll_options.empty?
 
 
       # poll settings
@@ -17,8 +17,8 @@ module MomentumApi
       schedule.discourse.scan_pass_counters << @counters
 
       # parameter setting
-      @poll_settings          = poll_settings
-      @message_client         = mock || MomentumApi::Messages.new(self, poll_settings[:messages_from])
+      @options                = poll_options
+      @message_client         = mock || MomentumApi::Messages.new(self, poll_options[:messages_from])
 
       # user score saving
       @user_fields            = 'user_fields'
@@ -35,30 +35,24 @@ module MomentumApi
       @man = man
 
       begin
-        post = @man.user_client.get_post(@poll_settings[:target_post])
+        post = @man.user_client.get_post(@options[:target_post])
       rescue DiscourseApi::UnauthenticatedError
         return
       end
       @mock ? sleep(0) : sleep(1)
 
-      if @poll_settings[:target_polls].nil? or @poll_settings[:target_polls].empty?
-        @poll_settings[:target_polls] = %w(poll)
+      if @options[:target_polls].nil? or @options[:target_polls].empty?
+        @options[:target_polls] = %w(poll)
       end
 
       post['polls'].each do |poll|
-        if @poll_settings[:target_polls].include?(poll['name'])
+        if @options[:target_polls].include?(poll['name'])
 
-          begin
-            poll_option_votes = has_man_voted?(poll)
-          rescue DiscourseApi::TooManyRequests
-            puts 'TooManyRequests: Sleeping for 30 seconds ....'
-            @mock ? sleep(0) : sleep(30)
-            poll_option_votes = has_man_voted?(poll)
-          end
+          poll_option_votes = has_man_voted?(poll)
 
           if poll_option_votes
             # user has voted
-            if @poll_settings[:update_type] == 'have_voted' or @poll_settings[:update_type] == 'newly_voted' or @update_type == 'all'
+            if @options[:update_type] == 'have_voted' or @options[:update_type] == 'newly_voted' or @update_type == 'all'
               user_fields = @man.user_details[@user_fields]
               existing_value = user_fields[@user_score_field].to_i
 
@@ -68,7 +62,7 @@ module MomentumApi
 
               if existing_value == current_voter_points
                 # existing vote
-                if @poll_settings[:update_type] == 'have_voted' or @poll_settings[:update_type] == 'all'
+                if @options[:update_type] == 'have_voted' or @options[:update_type] == 'all'
                   print_scored_user(current_voter_points, existing_value, max_points_possible, poll, user_badge_level)
                   send_voted_message(current_voter_points, max_points_possible, user_badge_level)
                   printf "\n"
@@ -85,7 +79,7 @@ module MomentumApi
 
           else
             # user has not voted
-            if @poll_settings[:update_type] == 'not_voted' or @poll_settings[:update_type] == 'all'
+            if @options[:update_type] == 'not_voted' or @options[:update_type] == 'all'
               @counters[:'Not Voted Targets'] += 1
               printf "%-18s %-20s\n", @man.user_details['username'], 'has not voted yet'
               send_not_voted_message
@@ -105,7 +99,7 @@ module MomentumApi
     end
 
     def send_not_voted_message
-      message_subject = "What is Your Score? Please Take Your User Quiz and Find Out!"
+      message_subject = "What's Your Score? Please Take Your User Quiz and Find Out!"
       message_body = eval(message_body('not_voted_message.txt'))
       @message_client.send_private_message(@man, message_body, message_subject)
     end
@@ -152,7 +146,6 @@ module MomentumApi
 
         # check if update happened
         user_details_after_update = @man.discourse.admin_client.user(@man.user_details['username'])
-        # user_details_after_update = @man.user_client.user(@man.user_details['username'])
         @man.print_user_options(user_details_after_update, user_option_print, user_label='UserName',
                            pos_5=user_details_after_update[@user_fields][@user_score_field])
         @mock ? sleep(0) : sleep(1)
@@ -162,7 +155,6 @@ module MomentumApi
     def update_badge(target_badge_name, badge_id)
       if @man.discourse.options[:do_live_updates]
         current_badges = @man.discourse.admin_client.user_badges(@man.user_details['username'])
-        # current_badges = @man.user_client.user_badges(@man.user_details['username'])
         has_target_badge = false
         current_badges.each do |current_badge|
           if current_badge['name'] == target_badge_name
@@ -174,7 +166,7 @@ module MomentumApi
         else
           # puts 'about to post'
           post_response = @man.discourse.admin_client.grant_user_badge(
-              username: @man.user_details['username'], badge_id: badge_id, reason: @poll_settings[:poll_url])
+              username: @man.user_details['username'], badge_id: badge_id, reason: @options[:poll_url])
           # puts "User badges granted:"
           post_response.each do |badge|
             printf "%-35s %-20s \n", 'User badge granted: ', badge['name']
@@ -246,10 +238,14 @@ module MomentumApi
 
     def has_man_voted?(poll)
       begin
-        poll_option_votes = @man.user_client.poll_voters(post_id: @poll_settings[:target_post], poll_name: poll['name'],
+        poll_option_votes = @man.user_client.poll_voters(post_id: @options[:target_post], poll_name: poll['name'],
                                                          api_username: @man.user_details['username'])['voters']
       rescue DiscourseApi::UnprocessableEntity # voter has not voted
         poll_option_votes = nil
+      rescue DiscourseApi::TooManyRequests
+        puts 'TooManyRequests: Sleeping for 30 seconds ....'
+        @mock ? sleep(0) : sleep(30)
+        poll_option_votes = has_man_voted?(poll)
       end
       @mock ? sleep(0) : sleep(1)
       poll_option_votes

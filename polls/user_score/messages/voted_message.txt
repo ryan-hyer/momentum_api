@@ -2,7 +2,7 @@
 
   In addition to your User Score of #{current_voter_points.to_int}, you have been assigned the Momentum [**Discourse #{user_badge_level} User**](http://discourse.gomomentum.org/u/#{@man.user_details['username']}/badges) Badge Level. You can also visit these links to:
 
-  - [Retake the quiz and receive a new score at anytime*](#{@poll_settings[:poll_url]})
+  - [Retake the quiz and receive a new score at anytime*](#{@options[:poll_url]})
   - [See all Badges you have earned](https://discourse.gomomentum.org/u/#{@man.user_details['username']}/badges)
   - [See all the possible Momentum Badges that you can earn](https://discourse.gomomentum.org/badges)
 
