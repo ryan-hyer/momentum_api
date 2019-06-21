@@ -17,7 +17,7 @@ describe MomentumApi::Man do
     mock_schedule = instance_double('mock_schedule')
     expect(mock_schedule).to receive(:group_cases).exactly(6).times
     expect(mock_schedule).to receive(:category_cases).exactly(6).times
-    expect(mock_schedule).to receive(:options).once.and_return(schedule_options)
+    expect(mock_schedule).to receive(:options).exactly(7).times.and_return(schedule_options)
     mock_schedule
   end
 
@@ -34,7 +34,7 @@ describe MomentumApi::Man do
     let(:mock_discourse) do
       mock_discourse = instance_double('mock_discourse')
       expect(mock_discourse).to receive(:options).exactly(7).times.and_return(discourse_options)
-      expect(mock_discourse).to receive(:schedule).exactly(13).times.and_return(mock_schedule)
+      expect(mock_discourse).to receive(:schedule).exactly(19).times.and_return(mock_schedule)
       mock_discourse
     end
 
@@ -57,7 +57,7 @@ describe MomentumApi::Man do
         reset_options = discourse_options
         reset_options[:issue_users] = %w(Tony_Christopher)
         expect(mock_discourse).to receive(:options).exactly(7).times.and_return(reset_options)
-        expect(mock_discourse).to receive(:schedule).exactly(13).times.and_return(mock_schedule)
+        expect(mock_discourse).to receive(:schedule).exactly(19).times.and_return(mock_schedule)
         mock_discourse
       end
 
@@ -76,7 +76,7 @@ describe MomentumApi::Man do
     let(:mock_discourse) do
       mock_discourse = instance_double('mock_discourse')
       expect(mock_discourse).to receive(:options).exactly(6).times.and_return(discourse_options)
-      expect(mock_discourse).to receive(:schedule).exactly(12).times.and_return(mock_schedule)
+      expect(mock_discourse).to receive(:schedule).exactly(17).times.and_return(mock_schedule)
       mock_discourse
     end
 
@@ -84,7 +84,7 @@ describe MomentumApi::Man do
       mock_schedule = instance_double('mock_schedule')
       expect(mock_schedule).to receive(:group_cases).exactly(5).times
       expect(mock_schedule).to receive(:category_cases).exactly(5).times
-      expect(mock_schedule).to receive(:options).once.and_return(schedule_options)
+      expect(mock_schedule).to receive(:options).exactly(6).times.and_return(schedule_options)
       expect(mock_schedule).to receive(:downgrade_non_owner_trust).once
       mock_schedule
     end

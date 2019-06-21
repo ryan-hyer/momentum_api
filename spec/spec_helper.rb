@@ -28,19 +28,23 @@ def schedule_options
       watching:{
           matching_team:              {
               allowed_levels:         [3],
-              set_level:               3
+              set_level:               3,
+              excludes:               %w(Steve_Scott Ryan_Hyer David_Kirk)
           },
           essential:                  {
               allowed_levels:         [3],
-              set_level:               3
+              set_level:               3,
+              excludes:               %w(Steve_Scott Joe_Sabolefski)
           },
           growth:                     {
               allowed_levels:         [3, 4],
-              set_level:               4
+              set_level:               4,
+              excludes:               %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
           },
           meta:                       {
               allowed_levels:         [3, 4],
-              set_level:               4
+              set_level:               4,
+              excludes:               %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
           },
           group_alias:                true
       },

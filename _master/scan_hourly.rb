@@ -13,25 +13,25 @@ discourse_options = {
 }
 
 schedule_options = {
-    watching:{
-        matching_team:              {
-            allowed_levels:         [3],
-            set_level:               3
-        },
-        essential:                  {
-            allowed_levels:         [3],
-            set_level:               3
-        },
-        growth:                     {
-            allowed_levels:         [3, 4],
-            set_level:               4
-        },
-        meta:                       {
-            allowed_levels:         [3, 4],
-            set_level:               4
-        },
-        group_alias:                true
-    },
+    # watching:{
+    #     matching_team:              {
+    #         allowed_levels:         [3],
+    #         set_level:               3
+    #     },
+    #     essential:                  {
+    #         allowed_levels:         [3],
+    #         set_level:               3
+    #     },
+    #     growth:                     {
+    #         allowed_levels:         [3, 4],
+    #         set_level:               4
+    #     },
+    #     meta:                       {
+    #         allowed_levels:         [3, 4],
+    #         set_level:               4
+    #     },
+    #     group_alias:                true
+    # },
     trust_level_updates:            false,    # todo broken: Not seeing Owners
     user_scores: {
         update_type:                'newly_voted',    # have_voted, not_voted, newly_voted, all
