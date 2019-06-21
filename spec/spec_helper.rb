@@ -13,33 +13,33 @@ require 'webmock/rspec'
 
 def discourse_options
   {
-      do_live_updates:          false,
-      target_username:          nil,
-      target_groups:            %w(trust_level_1),
-      instance:                 'live',
-      api_username:             'KM_Admin',
-      exclude_users:            %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
-      issue_users:              %w()
+      do_live_updates:              false,
+      target_username:              nil,
+      target_groups:                %w(trust_level_1),
+      instance:                     'live',
+      api_username:                 'KM_Admin',
+      exclude_users:                %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
+      issue_users:                  %w()
   }
 end
 
 def schedule_options
   {
       category_watching:{
-          matching_team:   true,
-          essential:       true,
+          matching_team:            true,
+          essential:                true,
           growth_first_post:        true,
-          meta_first_post:          true
+          meta_first_post:          true,
+          user_group_alias:         true
       },
-      trust_level_updates:      true,
+      trust_level_updates:          true,
       score_user_levels: {
-          update_type:    'not_voted', # have_voted, not_voted, newly_voted, all
-          target_post:    28707, # 28649
-          # target_polls:   %w(poll), # basic new version_two
-          poll_url:       'https://discourse.gomomentum.org/t/what-s-your-score',
-          messages_from:  'Kim_Miller'
-      },
-      user_group_alias_notify:  true
+          update_type:              'not_voted', # have_voted, not_voted, newly_voted, all
+          target_post:              28707, # 28649
+          # target_polls:           %w(poll), # basic new version_two
+          poll_url:                 'https://discourse.gomomentum.org/t/what-s-your-score',
+          messages_from:            'Kim_Miller'
+      }
   }
 end
 

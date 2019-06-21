@@ -5,14 +5,7 @@ module MomentumApi
 
       trust_level_target = 0
 
-      user_option_print = %w(
-            last_seen_at
-            last_posted_at
-            post_count
-            time_read
-            recent_time_read
-            trust_level
-          )
+      user_option_print = %w(last_seen_at last_posted_at post_count time_read recent_time_read trust_level)
 
       # puts 'update_trust_level'
       if man.discourse.options[:issue_users].include?(man.user_details['username'])

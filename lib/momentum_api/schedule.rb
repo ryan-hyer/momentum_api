@@ -1,4 +1,3 @@
-require_relative '../momentum_api/api/notification'
 require_relative '../momentum_api/api/user'
 
 module MomentumApi
@@ -6,7 +5,6 @@ module MomentumApi
 
     attr_reader :user_client, :discourse, :options
 
-    include MomentumApi::Notification
     include MomentumApi::User
 
     def initialize(discourse, schedule_options, mock: nil)
@@ -26,16 +24,8 @@ module MomentumApi
         @queue_group_owner    <<  ( mock || MomentumApi::Poll.new(self, @options[:score_user_levels]) )
       end
       if @options[:category_watching]
-        @notifications_counters =   {'Notifications': ''}   # todo notificatons class
-        @discourse.scan_pass_counters << @notifications_counters
-        # @queue_group_owner    <<  ( mock || MomentumApi::Poll.new(self, @options[:score_user_levels]) )
+        @notifications        =  ( mock || MomentumApi::Notifications.new(self, @options[:score_user_levels]) )
       end
-
-      # counter init
-      # @notifications_counters =   {'Notifications': ''}  
-      # @discourse.scan_pass_counters << @notifications_counters
-
-      zero_notifications_counters
 
     end
 
@@ -65,8 +55,8 @@ module MomentumApi
 
       when group_name == 'trust_level_1'
 
-        if @options[:user_group_alias_notify]
-          self.user_group_notify_to_default(man)
+        if @options[:category_watching][:user_group_alias]
+          @notifications.user_group_notify_to_default(man)
         end
 
         if @options[:trust_level_updates]
@@ -83,7 +73,7 @@ module MomentumApi
     end
 
     def category_cases(man, group_name)       # todo refactor to Class
-      starting_categories_updated = @notifications_counters[:'Category Notify Updated']
+      starting_categories_updated = @notifications.counters[:'Category Notify Updated']
 
       man.users_categories.each do |category|
 
@@ -98,7 +88,7 @@ module MomentumApi
             # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
           else
             if @options[:category_watching][:matching_team]    # todo simplify signature
-              self.set_category_notification(man, category, group_name, [3], 3)
+              @notifications.set_category_notification(man, category, group_name, [3], 3)
             end
           end
 
@@ -108,7 +98,7 @@ module MomentumApi
             # puts "#{man.user_details['username']} specifically excluded from Essential Watching"
           else                            # 4 = Watching first post, 3 = Watching, 1 = blank or ...?
             if @options[:category_watching][:essential]
-              self.set_category_notification(man, category, group_name, [3], 3)
+              @notifications.set_category_notification(man, category, group_name, [3], 3)
             end
           end
 
@@ -118,7 +108,7 @@ module MomentumApi
             # puts "#{man.user_details['username']} specifically excluded from Watching Growth"
           else
             if @options[:category_watching][:growth]  # first_post
-              self.set_category_notification(man, category, group_name, [3, 4], 4)
+              @notifications.set_category_notification(man, category, group_name, [3, 4], 4)
             end
           end
 
@@ -128,7 +118,7 @@ module MomentumApi
             # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
           else
             if @options[:category_watching][:meta]
-              self.set_category_notification(man, category, group_name, [3, 4], 4)
+              @notifications.set_category_notification(man, category, group_name, [3, 4], 4)
             end
           end
 
@@ -136,18 +126,9 @@ module MomentumApi
           # puts 'Category not a target'
         end
       end
-      if @notifications_counters[:'Category Notify Updated'] > starting_categories_updated
-        @notifications_counters[:'Category Notify Updated'] += 1
+      if @notifications.counters[:'Category Notify Updated'] > starting_categories_updated
+        @notifications.counters[:'Category Notify Updated'] += 1
       end
-    end
-
-    def zero_notifications_counters
-      @notifications_counters[:'User Categories']         =   0
-      @notifications_counters[:'User Groups']          =   0
-      @notifications_counters[:'Category Update Targets']      =   0
-      @notifications_counters[:'Group Update Targets']      =   0
-      @notifications_counters[:'Category Notify Updated']      =   0
-      @notifications_counters[:'Group Notify Updated']      =   0
     end
 
   end

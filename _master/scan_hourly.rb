@@ -14,10 +14,11 @@ discourse_options = {
 
 schedule_options = {
     category_watching:{
-        team_category_watching:     false,
-        essential_watching:         false,
+        matching_team:              false,
+        essential:                  false,
         growth:                     false,
-        meta:                       false
+        meta:                       false,
+        user_group_alias:           false
     },
     trust_level_updates:            false,    # todo broken: Not seeing Owners
     score_user_levels: {
@@ -27,7 +28,6 @@ schedule_options = {
         poll_url:                   'https://discourse.gomomentum.org/t/what-s-your-score/7104',
         messages_from:              'Kim_Miller'
     },
-    user_group_alias_notify:        false
 }
 
 # init

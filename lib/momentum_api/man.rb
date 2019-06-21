@@ -63,17 +63,7 @@ module MomentumApi
       if @discourse.schedule.options[:trust_level_updates] and not @is_owner
         @discourse.schedule.downgrade_non_owner_trust(@discourse, self, 0)
       end
-      
-      # # Update User Group Alias Notification
-      # if @scan_options['user_group_alias_notify'.to_sym]
-      #   self.user_group_notify_to_default
-      # end
-      #
-      # # User Scoring
-      # if @scan_options['score_user_levels'.to_sym]
-      #   # puts @scan_options['score_user_levels'.to_sym]
-      #   @user_score_poll.run_scans(self)
-      # end
+
     end
 
 
