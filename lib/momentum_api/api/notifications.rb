@@ -3,9 +3,9 @@ module MomentumApi
 
     attr_accessor :counters
 
-    def initialize(schedule, schedule_options, mock: nil)
+    def initialize(schedule, options: nil, mock: nil)
       raise ArgumentError, 'schedule needs to be defined' if schedule.nil?
-      # raise ArgumentError, 'schedule_options needs to be defined' if schedule_options.nil? or schedule_options.empty?
+      # raise ArgumentError, 'options needs to be defined' if options.nil? or options.empty?
 
       # counter init
       @counters =   {'Notifications': ''}   # todo finish class & tests

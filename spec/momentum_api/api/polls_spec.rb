@@ -31,7 +31,7 @@ describe MomentumApi::Poll do
 
   context '.run have_voted scan' do
 
-    options_have_voted = schedule_options[:score_user_levels]
+    options_have_voted = schedule_options[:user_scores]
     options_have_voted[:update_type] = 'have_voted'
 
     let(:mock_user_client) do
@@ -83,7 +83,7 @@ describe MomentumApi::Poll do
         mock_man
       end
 
-      options_default_poll = schedule_options[:score_user_levels]
+      options_default_poll = schedule_options[:user_scores]
       options_default_poll[:update_type] = 'have_voted'
       options_default_poll[:target_polls] = nil
       let(:poll) { MomentumApi::Poll.new(mock_schedule, options_default_poll, mock: mock_dependencies) }
@@ -160,7 +160,7 @@ describe MomentumApi::Poll do
           mock_man
         end
 
-        options_have_voted = schedule_options[:score_user_levels]
+        options_have_voted = schedule_options[:user_scores]
         options_have_voted[:update_type] = 'have_voted'
         let(:have_voted_poll) { MomentumApi::Poll.new(mock_schedule, options_have_voted, mock: mock_dependencies) }
 
@@ -225,7 +225,7 @@ describe MomentumApi::Poll do
           mock_man
         end
 
-        options_have_voted = schedule_options[:score_user_levels]
+        options_have_voted = schedule_options[:user_scores]
         options_have_voted[:update_type] = 'have_voted'
         let(:have_voted_poll) { MomentumApi::Poll.new(mock_schedule, options_have_voted, mock: mock_dependencies) }
 
@@ -270,7 +270,7 @@ describe MomentumApi::Poll do
           mock_man
         end
 
-        options_have_voted = schedule_options[:score_user_levels]
+        options_have_voted = schedule_options[:user_scores]
         options_have_voted[:update_type] = 'have_voted'
         let(:have_voted_poll) { MomentumApi::Poll.new(mock_schedule, options_have_voted, mock: mock_dependencies) }
 
@@ -321,7 +321,7 @@ describe MomentumApi::Poll do
           mock_man
         end
 
-        options_newly_voted = schedule_options[:score_user_levels]
+        options_newly_voted = schedule_options[:user_scores]
         options_newly_voted[:update_type] = 'newly_voted'
         let(:have_voted_poll) { MomentumApi::Poll.new(mock_schedule, options_newly_voted, mock: mock_dependencies) }
 
@@ -340,7 +340,7 @@ describe MomentumApi::Poll do
   
   context '.run not_voted scan' do
 
-    options_not_voted = schedule_options[:score_user_levels]
+    options_not_voted = schedule_options[:user_scores]
     options_not_voted[:update_type] = 'not_voted'
 
     let(:mock_user_client_not_voted) do
@@ -430,7 +430,7 @@ describe MomentumApi::Poll do
 
   context '.run get_post errors found' do
 
-    options_not_voted = schedule_options[:score_user_levels]
+    options_not_voted = schedule_options[:user_scores]
     options_not_voted[:update_type] = 'not_voted'
 
 
@@ -467,7 +467,7 @@ describe MomentumApi::Poll do
 
   context '.update_user_profile_badges' do
 
-    options_have_voted = schedule_options[:score_user_levels]
+    options_have_voted = schedule_options[:user_scores]
     options_have_voted[:update_type] = 'have_voted'
 
 

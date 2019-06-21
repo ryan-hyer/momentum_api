@@ -12,7 +12,7 @@ discourse_options = {
 }
 
 schedule_options = {
-    score_user_levels: {
+    user_scores: {
         update_type:        'not_voted',                # have_voted, not_voted, newly_voted, all
         target_post:        30719,                      # 28649
         # target_polls:      %w(poll),                  # default is 'poll'

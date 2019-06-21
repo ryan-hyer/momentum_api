@@ -5,7 +5,7 @@ module MomentumApi
 
     def initialize(schedule, poll_options, mock: nil)
       raise ArgumentError, 'schedule needs to be defined' if schedule.nil?
-      raise ArgumentError, 'score_user_levels needs to be defined' if poll_options.nil? || poll_options.empty?
+      raise ArgumentError, 'poll_options needs to be defined' if poll_options.nil? || poll_options.empty?
 
 
       # poll settings

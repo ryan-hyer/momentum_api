@@ -20,11 +20,11 @@ module MomentumApi
 
       # queue tasks
       @queue_group_owner      =   []
-      if @options[:score_user_levels]
-        @queue_group_owner    <<  ( mock || MomentumApi::Poll.new(self, @options[:score_user_levels]) )
+      if @options[:user_scores]
+        @queue_group_owner    <<  ( mock || MomentumApi::Poll.new(self, @options[:user_scores]) )
       end
-      if @options[:category_watching]
-        @notifications        =  ( mock || MomentumApi::Notifications.new(self, @options[:score_user_levels]) )
+      if @options[:watching]
+        @notifications        =   ( mock || MomentumApi::Notifications.new(self, options: @options[:watching]) )
       end
 
     end
@@ -48,14 +48,14 @@ module MomentumApi
         end
 
         # User Scoring
-        if @options[:score_user_levels]
-          # puts @scan_options['score_user_levels'.to_sym]
+        if @options[:user_scores]
+          # puts @scan_options['user_scores'.to_sym]
           # @user_score_poll.run(man)
         end
 
       when group_name == 'trust_level_1'
 
-        if @options[:category_watching][:user_group_alias]
+        if @options[:watching][:user_group_alias]
           @notifications.user_group_notify_to_default(man)
         end
 
@@ -87,7 +87,7 @@ module MomentumApi
           if case_excludes.include?(man.user_details['username'])
             # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
           else
-            if @options[:category_watching][:matching_team]    # todo simplify signature
+            if @options[:watching][:matching_team]    # todo simplify signature
               @notifications.set_category_notification(man, category, group_name, [3], 3)
             end
           end
@@ -97,7 +97,7 @@ module MomentumApi
           if case_excludes.include?(man.user_details['username'])
             # puts "#{man.user_details['username']} specifically excluded from Essential Watching"
           else                            # 4 = Watching first post, 3 = Watching, 1 = blank or ...?
-            if @options[:category_watching][:essential]
+            if @options[:watching][:essential]
               @notifications.set_category_notification(man, category, group_name, [3], 3)
             end
           end
@@ -107,7 +107,7 @@ module MomentumApi
           if case_excludes.include?(man.user_details['username'])
             # puts "#{man.user_details['username']} specifically excluded from Watching Growth"
           else
-            if @options[:category_watching][:growth]  # first_post
+            if @options[:watching][:growth]  # first_post
               @notifications.set_category_notification(man, category, group_name, [3, 4], 4)
             end
           end
@@ -117,7 +117,7 @@ module MomentumApi
           if case_excludes.include?(man.user_details['username'])
             # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
           else
-            if @options[:category_watching][:meta]
+            if @options[:watching][:meta]
               @notifications.set_category_notification(man, category, group_name, [3, 4], 4)
             end
           end

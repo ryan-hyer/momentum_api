@@ -13,7 +13,7 @@ discourse_options = {
 }
 
 schedule_options = {
-    category_watching:{
+    watching:{
         matching_team:              false,
         essential:                  false,
         growth:                     false,
@@ -21,7 +21,7 @@ schedule_options = {
         user_group_alias:           false
     },
     trust_level_updates:            false,    # todo broken: Not seeing Owners
-    score_user_levels: {
+    user_scores: {
         update_type:                'newly_voted',    # have_voted, not_voted, newly_voted, all
         target_post:                30719,            # 28707 28649
         # target_polls:             %w(poll),  # testing was version_two
