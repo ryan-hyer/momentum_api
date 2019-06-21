@@ -3,26 +3,30 @@ module MomentumApi
 
     attr_accessor :counters
 
-    def initialize(schedule, options: nil, mock: nil)
+    def initialize(schedule, watching_options, mock: nil)
       raise ArgumentError, 'schedule needs to be defined' if schedule.nil?
-      # raise ArgumentError, 'options needs to be defined' if options.nil? or options.empty?
+      raise ArgumentError, 'options needs to be defined' if watching_options.nil? or watching_options.empty?
 
+      # parameter setting
+      @schedule               =   schedule
+      @options                =   watching_options
+      
       # counter init
-      @counters =   {'Notifications': ''}   # todo finish class & tests
+      @counters               =   {'Notifications': ''}   # todo finish tests
       schedule.discourse.scan_pass_counters << @counters
 
       zero_notifications_counters
 
     end
 
-    def set_category_notification(man, category, group_name, allowed_levels, set_level)
-      if not allowed_levels.include?(category['notification_level'])
+    def set_category_notification(man, category, group_name, levels)
+      if not levels[levels.first(1)[0][0]][:allowed_levels].include?(category['notification_level'])
         print_user(man, category['slug'], group_name, category['notification_level'],
                    status='NOT Watching', type='CategoryUser')
 
         @counters[:'Category Update Targets'] += 1
-        if @discourse.options[:do_live_updates]
-          update_response = man.user_client.category_set_user_notification(id: category['id'], notification_level: set_level)
+        if @schedule.discourse.options[:do_live_updates]
+          update_response = man.user_client.category_set_user_notification(id: category['id'], notification_level: levels[:set_level])
           sleep 1
           puts update_response
           @counters[:'Category Notify Updated'] += 1
@@ -38,7 +42,7 @@ module MomentumApi
           end
         end
       else
-        if @discourse.options[:issue_users].include?(man.user_details['username'])
+        if @schedule.discourse.options[:issue_users].include?(man.user_details['username'])
           print_user(man, category['slug'], group_name, category['notification_level'],
                      status='Watching', type='CategoryUser')
         end
@@ -57,14 +61,14 @@ module MomentumApi
               print_user(man, 'na', group['name'], users_group['notification_level'],
                          status="NOT Group Default of #{group['default_notification_level']}", type='GroupUser')
               @counters[:'Group Update Targets'] += 1
-              if @discourse.options[:do_live_updates]
-                response = @discourse.admin_client.group_set_user_notify_level(group['name'], man.user_details['id'], group['default_notification_level'])
+              if @schedule.discourse.options[:do_live_updates]
+                response = @schedule.discourse.admin_client.group_set_user_notify_level(group['name'], man.user_details['id'], group['default_notification_level'])
                 sleep 1
                 puts response
                 @counters[:'Group Notify Updated'] += 1
 
                 # check if update happened ... or ... comment out for no check after update
-                user_details_after_update = @discourse.admin_client.user(man.user_details['username'])['group_users']
+                user_details_after_update = @schedule.discourse.admin_client.user(man.user_details['username'])['group_users']
                 sleep 1
                 user_details_after_update.each do |users_group_second_pass| # uncomment to check for the update
                   if users_group_second_pass['group_id'] == users_group['group_id']

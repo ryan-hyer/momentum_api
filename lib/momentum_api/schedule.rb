@@ -24,7 +24,7 @@ module MomentumApi
         @queue_group_owner    <<  ( mock || MomentumApi::Poll.new(self, @options[:user_scores]) )
       end
       if @options[:watching]
-        @notifications        =   ( mock || MomentumApi::Notifications.new(self, options: @options[:watching]) )
+        @notifications        =   ( mock || MomentumApi::Notifications.new(self, @options[:watching]) )
       end
 
     end
@@ -55,7 +55,7 @@ module MomentumApi
 
       when group_name == 'trust_level_1'
 
-        if @options[:watching][:user_group_alias]
+        if @options[:watching][:group_alias]
           @notifications.user_group_notify_to_default(man)
         end
 

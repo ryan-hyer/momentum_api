@@ -26,11 +26,23 @@ end
 def schedule_options
   {
       watching:{
-          matching_team:            true,
-          essential:                true,
-          growth_first_post:        true,
-          meta_first_post:          true,
-          user_group_alias:         true
+          matching_team:              {
+              allowed_levels:         [3],
+              set_level:               3
+          },
+          essential:                  {
+              allowed_levels:         [3],
+              set_level:               3
+          },
+          growth:                     {
+              allowed_levels:         [3, 4],
+              set_level:               4
+          },
+          meta:                       {
+              allowed_levels:         [3, 4],
+              set_level:               4
+          },
+          group_alias:                true
       },
       trust_level_updates:          true,
       user_scores: {
