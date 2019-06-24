@@ -74,7 +74,118 @@ scan_hourly
 # todo tests
 
 # Jun 23, 2019 fix
+# Scanning ["trust_level_1"] Users for Tasks
+# User badge granted:                 Intermediate
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Antonio_Martinez   2019-06-24     2019-02-28       20           7173         1244
+# OK
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Antonio_Martinez   2019-06-24     2019-02-28       20           7173         1244              232
+# User               Poll                 Last Saved Score                    Score /  Max     Badge
+# Antonio_Martinez   poll                 0                                   232   /  1146    Intermediate
+#   Message From:    Kim_Miller           Antonio_Martinez     Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending
+#   Message From:    Kim_Miller           Antonio_Martinez     thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent
 #
+# User badge granted:                 Intermediate
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Bill_Herndon       2019-06-24     2019-06-11       23           13241        4781
+# OK
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Bill_Herndon       2019-06-24     2019-06-11       23           13241        4781              57
+# User               Poll                 Last Saved Score                    Score /  Max     Badge
+# Bill_Herndon       poll                 0                                   57    /  1146    Intermediate
+#   Message From:    Kim_Miller           Bill_Herndon         Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending
+#   Message From:    Kim_Miller           Bill_Herndon         thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent
+#
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Brian_Haskin       2019-06-24     2019-06-19       48           49840        11325             0
+# OK
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Brian_Haskin       2019-06-24     2019-06-19       48           49840        11325             167
+# User               Poll                 Last Saved Score                    Score /  Max     Badge
+# Brian_Haskin       poll                 0                                   167   /  1146    Intermediate
+#   Message From:    Kim_Miller           Brian_Haskin         Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending
+#   Message From:    Kim_Miller           Brian_Haskin         thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent
+#
+# User badge granted:                 Advanced
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Chris_Sulek        2019-06-24     2019-06-23       157          338594       39740
+# OK
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Chris_Sulek        2019-06-24     2019-06-23       157          338594       39740             459
+# User               Poll                 Last Saved Score                    Score /  Max     Badge
+# Chris_Sulek        poll                 0                                   459   /  1146    Advanced
+#   Message From:    Kim_Miller           Chris_Sulek          Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending
+#   Message From:    Kim_Miller           Chris_Sulek          thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent
+#
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Clay_Campbell      2019-06-24     2019-06-24       42           59145        2441              0
+# OK
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Clay_Campbell      2019-06-24     2019-06-24       42           59145        2441              155
+# User               Poll                 Last Saved Score                    Score /  Max     Badge
+# Clay_Campbell      poll                 0                                   155   /  1146    Intermediate
+#   Message From:    Kim_Miller           Clay_Campbell        Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending
+#   Message From:    Kim_Miller           Clay_Campbell        thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent
+#
+# User badge granted:                 Intermediate
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Curt_Weil          2019-06-24     2019-06-16       113          11015        328
+# OK
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Curt_Weil          2019-06-24     2019-06-16       113          11015        328               73
+# User               Poll                 Last Saved Score                    Score /  Max     Badge
+# Curt_Weil          poll                 0                                   73    /  1146    Intermediate
+#   Message From:    Kim_Miller           Curt_Weil            Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending
+#   Message From:    Kim_Miller           Curt_Weil            thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent
+#
+# User badge granted:                 Intermediate
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# James_Grubinskas   2019-06-24     2019-06-24       100          47926        29555             D3
+# OK
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# James_Grubinskas   2019-06-24     2019-06-24       100          47926        29555             269
+# User               Poll                 Last Saved Score                    Score /  Max     Badge
+# James_Grubinskas   poll                 0                                   269   /  1146    Intermediate
+#   Message From:    Kim_Miller           James_Grubinskas     Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending
+#   Message From:    Kim_Miller           James_Grubinskas     thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent
+#
+# User badge granted:                 Beginner
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Jim_Knapp          2019-06-24     2019-06-23       179          5250         1213
+# OK
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Jim_Knapp          2019-06-24     2019-06-23       179          5250         1213              11
+# User               Poll                 Last Saved Score                    Score /  Max     Badge
+# Jim_Knapp          poll                 0                                   11    /  1146    Beginner
+#   Message From:    Kim_Miller           Jim_Knapp            Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending
+#   Message From:    Kim_Miller           Jim_Knapp            thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent
+#
+# User badge granted:                 Advanced
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Krishna_Yetchina   2019-06-24     2019-06-24       114          154746       1961
+# OK
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Krishna_Yetchina   2019-06-24     2019-06-24       114          154746       1961              742
+# User               Poll                 Last Saved Score                    Score /  Max     Badge
+# Krishna_Yetchina   poll                 0                                   742   /  1146    Advanced
+#   Message From:    Kim_Miller           Krishna_Yetchina     Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending
+#   Message From:    Kim_Miller           Krishna_Yetchina     thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent
+#
+# Keep trying!
+# User badge granted:                 Intermediate
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Tony_Christopher   2019-06-24     2019-05-30       44           27130        684
+# OK
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Tony_Christopher   2019-06-24     2019-05-30       44           27130        684               74
+# User               Poll                 Last Saved Score                    Score /  Max     Badge
+# Tony_Christopher   poll                 0                                   74    /  1146    Intermediate
+#   Message From:    Kim_Miller           Tony_Christopher     Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending
+#   Message From:    Kim_Miller           Tony_Christopher     thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent
+#
+# Scanning User:  166
+
 
 # Jun 23, 2019 bug
 # You ran out of gas.

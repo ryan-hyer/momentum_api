@@ -51,6 +51,7 @@ describe MomentumApi::Discourse do
             .to output(/Tony_Christopher in apply_to_group_users method/).to_stdout
       end
     end
+
   end
 
 

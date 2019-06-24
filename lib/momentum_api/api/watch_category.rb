@@ -20,7 +20,7 @@ module MomentumApi
     end
 
     def run(man, category, group_name, levels)
-      if not levels[levels.first(1)[0][0]][:allowed_levels].include?(category['notification_level'])
+      if not levels[:allowed_levels].include?(category['notification_level'])
         print_user(man, category['slug'], group_name, category['notification_level'],
                    status='NOT Watching', type='CategoryUser')
 

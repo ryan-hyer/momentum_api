@@ -1,5 +1,5 @@
 module MomentumApi
-  class WatchCategory
+  class WatchGroup
 
     attr_accessor :counters
 
