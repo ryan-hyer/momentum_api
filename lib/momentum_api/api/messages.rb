@@ -38,6 +38,7 @@ module MomentumApi
             raw: message_body,
             target_usernames: to_username
         )
+        sleep 1
 
         # check if message sent - may be commented out
         created_message = from_client.get_post(response['id'])
@@ -46,7 +47,7 @@ module MomentumApi
 
         @requestor.counters[:'Messages Sent'] += 1
         # man.discourse.scan_pass_counters.discourse_counters[:'Messages Sent'] += 1
-        sleep(1)
+        sleep 1
       end
     end
 

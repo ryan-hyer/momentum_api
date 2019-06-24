@@ -98,7 +98,7 @@ describe MomentumApi::Schedule do
       mock_dependencies = instance_double('mock_dependencies')
       expect(mock_dependencies).to receive(:counters).once.and_return({'Category Notify Updated': 0})
       expect(mock_dependencies).to receive(:counters).twice.and_return({'Category Notify Updated': 1})
-      expect(mock_dependencies).to receive(:set_category_notification).once
+      expect(mock_dependencies).to receive(:run).once
       mock_dependencies
     end
 
@@ -111,19 +111,19 @@ describe MomentumApi::Schedule do
 
     context 'group matching_team' do
 
-      let(:mock_dependencies) do
-        mock_dependencies = instance_double('mock_dependencies')
-        expect(mock_dependencies).to receive(:counters).once.and_return({'Category Notify Updated': 0})
-        expect(mock_dependencies).to receive(:counters).twice.and_return({'Category Notify Updated': 1})
-        expect(mock_dependencies).to receive(:set_category_notification).once
-        mock_dependencies
-      end
-
       let(:mock_man) do
         mock_man = instance_double('man')
         expect(mock_man).to receive(:user_details).exactly(14).times.and_return(user_details)
         expect(mock_man).to receive(:users_categories).once.and_return(users_categories)
         mock_man
+      end
+
+      let(:mock_dependencies) do
+        mock_dependencies = instance_double('mock_dependencies')
+        expect(mock_dependencies).to receive(:counters).once.and_return({'Category Notify Updated': 0})
+        expect(mock_dependencies).to receive(:counters).twice.and_return({'Category Notify Updated': 1})
+        expect(mock_dependencies).to receive(:run).once.with(mock_man, anything, 'Committed', anything)
+        mock_dependencies
       end
 
       let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock: mock_dependencies) }
@@ -135,13 +135,13 @@ describe MomentumApi::Schedule do
     end
     
 
-    context 'owner watches Essential' do
+    context 'watch Essential, Growth, and Meta' do
 
       let(:mock_dependencies) do
         mock_dependencies = instance_double('mock_dependencies')
         expect(mock_dependencies).to receive(:counters).once.and_return({'Category Notify Updated': 0})
         expect(mock_dependencies).to receive(:counters).twice.and_return({'Category Notify Updated': 1})
-        expect(mock_dependencies).to receive(:set_category_notification).exactly(3).times
+        expect(mock_dependencies).to receive(:run).exactly(3).times
         mock_dependencies
       end
 

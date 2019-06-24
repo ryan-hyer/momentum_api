@@ -1,10 +1,10 @@
 require '../lib/momentum_api'
 
-@scan_passes_end                =   40
+@scan_passes_end                =   60
 
 discourse_options = {
     do_live_updates:                true,
-    # target_username:              'KM_Admin',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Don_Morgan KM_Admin
+    # target_username:              'David_Ashby',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Don_Morgan KM_Admin
     target_groups:                  %w(trust_level_1),   # Mods GreatX BraveHearts trust_level_0 trust_level_1
     instance:                       'live',
     api_username:                   'KM_Admin',
@@ -72,3 +72,52 @@ scan_hourly
 
 # todo save log to disk
 # todo tests
+
+# Jun 23, 2019 fix
+#
+
+# Jun 23, 2019 bug
+# You ran out of gas.
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Alfonso_Benavides  2019-06-24     2019-06-24       182          239404       37649             401
+# OK
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Alfonso_Benavides  2019-06-24     2019-06-24       182          239404       37649             0
+# User               Poll                 Last Saved Score                    Score /  Max     Badge
+# Alfonso_Benavides  poll                 401                                 0     /  1146
+#   Message From:    Kim_Miller           Alfonso_Benavides    Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending
+#   Message From:    Kim_Miller           Alfonso_Benavides    thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent
+#
+# You ran out of gas.
+# You ran out of gas.
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Brian_Haskin       2019-06-24     2019-06-19       48           49840        11325             167
+# OK
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Brian_Haskin       2019-06-24     2019-06-19       48           49840        11325             0
+# User               Poll                 Last Saved Score                    Score /  Max     Badge
+# Brian_Haskin       poll                 167                                 0     /  1146
+#   Message From:    Kim_Miller           Brian_Haskin         Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending
+#   Message From:    Kim_Miller           Brian_Haskin         thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent
+#
+# You ran out of gas.
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Clay_Campbell      2019-06-23     2019-06-16       42           58860        2156              155
+# OK
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# Clay_Campbell      2019-06-23     2019-06-16       42           58860        2156              0
+# User               Poll                 Last Saved Score                    Score /  Max     Badge
+# Clay_Campbell      poll                 155                                 0     /  1146
+#   Message From:    Kim_Miller           Clay_Campbell        Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending
+#   Message From:    Kim_Miller           Clay_Campbell        thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent
+#
+# You ran out of gas.
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# David_Ashby        2019-06-23     2019-06-21       93           53283        28851             942
+# OK
+# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+# David_Ashby        2019-06-23     2019-06-21       93           53283        28851             0
+# User               Poll                 Last Saved Score                    Score /  Max     Badge
+# David_Ashby        poll                 942                                 0     /  1146
+#   Message From:    Kim_Miller           David_Ashby          Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending
+#   Message From:    Kim_Miller           David_Ashby          thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent

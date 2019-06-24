@@ -99,9 +99,12 @@ module MomentumApi
     end
 
     def send_not_voted_message
-      message_subject = "What's Your Score? Please Take Your User Quiz and Find Out!"
-      message_body = eval(message_body('not_voted_message.txt'))
+      # message_subject = "What's Your Score? Please Take Your User Quiz and Find Out!"
+      message_subject = "Check Off One Last Item Off Your Weekend Checklist"
+      # message_body = eval(message_body('not_voted_message.txt'))
+      message_body = eval(message_body('not_voted_message_2.txt'))
       @message_client.send_private_message(@man, message_body, message_subject)
+      sleep 2   # mass emails can easily trigger TooManyRequests
     end
 
     def score_voter(poll, poll_option_votes)
@@ -183,9 +186,9 @@ module MomentumApi
       # calculate badges
       case current_voter_points
       when 0
-        puts "You ran out of gas."
+        # puts "You ran out of gas."
       when 1..7
-        puts "Keep trying!"
+        # puts "Keep trying!"
       when 8..39
         target_badge_name = 'Beginner'
         # puts target_badge_name

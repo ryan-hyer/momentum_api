@@ -24,7 +24,7 @@ module MomentumApi
         @queue_group_owner    <<  ( mock || MomentumApi::Poll.new(self, @options[:user_scores]) )
       end
       if @options[:watching]
-        @notifications        =   ( mock || MomentumApi::Notifications.new(self, @options[:watching]) )
+        @watch_category       =   ( mock || MomentumApi::WatchCategory.new(self, @options[:watching]) )
       end
 
     end
@@ -40,23 +40,17 @@ module MomentumApi
         # Owner checking
         man.is_owner = true
 
-        # Owner Tasks
+        # Owner Tasks e.g. User Scoring
         if @queue_group_owner.any?
           @queue_group_owner.each do |owner_task|
             owner_task.run(man)
           end
         end
 
-        # User Scoring
-        if @options[:user_scores]
-          # puts @scan_options['user_scores'.to_sym]
-          # @user_score_poll.run(man)
-        end
-
       when group_name == 'trust_level_1'
 
         if @options[:watching] and @options[:watching][:group_alias]
-          @notifications.user_group_notify_to_default(man)
+          @watch_category.user_group_notify_to_default(man)
         end
 
         if @options[:trust_level_updates]
@@ -73,7 +67,7 @@ module MomentumApi
     end
 
     def category_cases(man, group_name)  
-      starting_categories_updated = @notifications.counters[:'Category Notify Updated']
+      starting_categories_updated = @watch_category.counters[:'Category Notify Updated']
 
       man.users_categories.each do |category|
 
@@ -88,7 +82,7 @@ module MomentumApi
             # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
           else
             if @options[:watching][:matching_team]
-              @notifications.set_category_notification(man, category, group_name, @options[:watching][:matching_team])
+              @watch_category.run(man, category, group_name, @options[:watching][:matching_team])
             end
           end
 
@@ -98,7 +92,7 @@ module MomentumApi
             # puts "#{man.user_details['username']} specifically excluded from Essential Watching"
           else                            # 4 = Watching first post, 3 = Watching, 1 = blank or ...?
             if @options[:watching][:essential]
-              @notifications.set_category_notification(man, category, group_name, @options[:watching][:essential])
+              @watch_category.run(man, category, group_name, @options[:watching][:essential])
             end
           end
 
@@ -108,7 +102,7 @@ module MomentumApi
             # puts "#{man.user_details['username']} specifically excluded from Watching Growth"
           else
             if @options[:watching][:growth]  # first_post
-              @notifications.set_category_notification(man, category, group_name, @options[:watching][:growth])
+              @watch_category.run(man, category, group_name, @options[:watching][:growth])
             end
           end
 
@@ -118,7 +112,7 @@ module MomentumApi
             # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
           else
             if @options[:watching][:meta]
-              @notifications.set_category_notification(man, category, group_name, @options[:watching][:meta])
+              @watch_category.run(man, category, group_name, @options[:watching][:meta])
             end
           end
 
@@ -126,8 +120,8 @@ module MomentumApi
           # puts 'Category not a target'
         end
       end
-      if @notifications.counters[:'Category Notify Updated'] > starting_categories_updated
-        @notifications.counters[:'Category Notify Updated'] += 1      # todo this logic even correct?
+      if @watch_category.counters[:'Category Notify Updated'] > starting_categories_updated
+        @watch_category.counters[:'Category Notify Updated'] += 1      # todo this logic even correct?
       end
     end
 
