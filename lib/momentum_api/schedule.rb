@@ -25,17 +25,30 @@ module MomentumApi
       end
       if @options[:watching]
         @watch_category       =   ( mock || MomentumApi::WatchCategory.new(self, @options[:watching]) )
+        @watch_group          =   ( mock || MomentumApi::WatchGroup.new(self, @options[:watching]) )
       end
 
     end
 
-    def group_cases(man, group_name)
+    def group_cases(man, group)
       if @discourse.options[:issue_users].include?(man.user_details['username'])
         puts "#{man.user_details['username']} in group_cases"
       end
 
+      # for all groups
+      # if @options[:watching][:group_alias][:excludes].include?(man.user_details['username'])
+      #   # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
+      # else
+      #   if @options[:watching][:group_alias]
+      #     @watch_group.run(man, group_name, @options[:watching][:group_alias])
+      #   end
+      # end
+
+      @watch_group.run(man, group)
+
+      # for certain groups
       case
-      when group_name == 'Owner'
+      when group['name'] == 'Owner'
 
         # Owner checking
         man.is_owner = true
@@ -47,17 +60,17 @@ module MomentumApi
           end
         end
 
-      when group_name == 'trust_level_1'
+      when group['name'] == 'trust_level_1'
 
-        if @options[:watching] and @options[:watching][:group_alias]
-          @watch_category.user_group_notify_to_default(man)
-        end
+        # if @options[:watching] and @options[:watching][:group_alias]
+        #   @watch_category.user_group_notify_to_default(man)
+        # end
 
         if @options[:trust_level_updates]
           downgrade_non_owner_trust(man)
         end
 
-      when group_name == 'trust_level_0'
+      when group['name'] == 'trust_level_0'
 
         # add upgrade_owner_trust_level 
 
@@ -72,48 +85,48 @@ module MomentumApi
       man.users_categories.each do |category|
 
         if @discourse.options[:issue_users].include?(man.user_details['username'])
-          puts "\n#{man.user_details['username']}  Category case on category: #{category['slug']}\n"
+          puts "\n#{man.user_details['username']} Category case on category: #{category['slug']}\n"
         end
 
         case
-        when category['slug'] == group_name
-          case_excludes = %w(Steve_Scott Ryan_Hyer David_Kirk)
+        when (category['slug'] == group_name and @options[:watching][:matching_team])
+          # case_excludes = %w(Steve_Scott Ryan_Hyer David_Kirk)
           if @options[:watching][:matching_team][:excludes].include?(man.user_details['username'])
             # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
           else
-            if @options[:watching][:matching_team]
+            # if @options[:watching][:matching_team]
               @watch_category.run(man, category, group_name, @options[:watching][:matching_team])
-            end
+            # end
           end
 
-        when (category['slug'] == 'Essential' and group_name == 'Owner')
-          case_excludes = %w(Steve_Scott Joe_Sabolefski)
-          if case_excludes.include?(man.user_details['username'])
+        when (category['slug'] == 'Essential' and group_name == 'Owner' and @options[:watching][:essential])
+          # case_excludes = %w(Steve_Scott Joe_Sabolefski)
+          if @options[:watching][:essential][:excludes].include?(man.user_details['username'])
             # puts "#{man.user_details['username']} specifically excluded from Essential Watching"
           else                            # 4 = Watching first post, 3 = Watching, 1 = blank or ...?
-            if @options[:watching][:essential]
+            # if @options[:watching][:essential]
               @watch_category.run(man, category, group_name, @options[:watching][:essential])
-            end
+            # end
           end
 
-        when (category['slug'] == 'Growth' and group_name == 'Owner')
-          case_excludes = %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
-          if case_excludes.include?(man.user_details['username'])
+        when (category['slug'] == 'Growth' and group_name == 'Owner' and @options[:watching][:growth])
+          # case_excludes = %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
+          if @options[:watching][:growth][:excludes].include?(man.user_details['username'])
             # puts "#{man.user_details['username']} specifically excluded from Watching Growth"
           else
-            if @options[:watching][:growth]  # first_post
+            # if @options[:watching][:growth]  # first_post
               @watch_category.run(man, category, group_name, @options[:watching][:growth])
-            end
+            # end
           end
 
-        when (category['slug'] == 'Meta' and group_name == 'Owner')
-          case_excludes = %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
-          if case_excludes.include?(man.user_details['username'])
+        when (category['slug'] == 'Meta' and group_name == 'Owner' and @options[:watching][:meta])
+          # case_excludes = %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
+          if @options[:watching][:meta][:excludes].include?(man.user_details['username'])
             # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
           else
-            if @options[:watching][:meta]
+            # if @options[:watching][:meta]
               @watch_category.run(man, category, group_name, @options[:watching][:meta])
-            end
+            # end
           end
 
         else

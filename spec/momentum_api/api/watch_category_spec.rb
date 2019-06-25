@@ -3,8 +3,9 @@ require_relative '../../spec_helper'
 describe MomentumApi::WatchCategory do
 
   let(:user_details) { json_fixture("user_details.json") }
-  let(:category_committed) { json_fixture("category_committed.json") }
+  let(:category_committed_not_watching) { json_fixture("category_committed_not_watching.json") }
   let(:categories) { json_fixture("categories.json") }
+  let(:category_committed_watching) { json_fixture("category_committed_watching.json") }
 
   options = schedule_options[:watching]
 
@@ -34,12 +35,10 @@ describe MomentumApi::WatchCategory do
       mock_dependencies
     end
 
-    let(:watch_category) { MomentumApi::WatchCategory.new(mock_schedule, options: options) }
+    let(:watch_category) { MomentumApi::WatchCategory.new(mock_schedule, options, mock: mock_dependencies) }
 
     context "init" do
-
-      # let(:watch_category) { MomentumApi::WatchCategory.new(mock_schedule, options: options) }
-
+      
       it ".run inits and responds" do
         expect(watch_category).to respond_to(:run)
         watch_category.run(mock_man, 'category', 'group_name', options[:matching_team])
@@ -51,7 +50,7 @@ describe MomentumApi::WatchCategory do
 
       it "Category Update Targets updates" do
         expect(watch_category).to respond_to(:run)
-        watch_category.run(mock_man, category_committed, 'category_committed', options[:matching_team])
+        watch_category.run(mock_man, category_committed_not_watching, 'category_committed', options[:matching_team])
         expect(watch_category.instance_variable_get(:@counters)[:'Category Update Targets']).to eql(1)
       end
     end
@@ -89,27 +88,43 @@ describe MomentumApi::WatchCategory do
         mock_schedule
       end
 
-      let(:watch_category) { MomentumApi::WatchCategory.new(mock_schedule, options: options) }
-
       it "do_live_updates runs" do
         expect(watch_category).to respond_to(:run)
-        watch_category.run(mock_man, category_committed, 'category_committed', options[:matching_team])
+        watch_category.run(mock_man, category_committed_not_watching, 'category_committed', options[:matching_team])
       end
     end
 
 
-    # describe '.apply_to_users in group to see issue user' do
-    #
-    #   # subject {MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies)}
-    #
-    #   it 'sees issue user' do
-    #     reset_options = watch_category.instance_variable_get(:@schedule)
-    #     reset_options[:issue_users] = %w(Tony_Christopher)
-    #     watch_category.instance_variable_set(:@schedule.discourse.options, reset_options)
-    #     expect { watch_category.run(mock_man, category_committed, 'category_committed', options[:matching_team]) }
-    #         .to output(/Tony_Christopher in apply_to_group_users method/).to_stdout
-    #   end
-    # end
+    context '.run sees already watching issue user' do
+
+      let(:mock_man) do
+        mock_man = instance_double('man')
+        expect(mock_man).to receive(:user_details).twice.and_return(user_details)
+        mock_man
+      end
+
+      discourse_options_issue_user = discourse_options
+      discourse_options_issue_user[:issue_users] = %w(Tony_Christopher)
+
+      let(:mock_discourse) do
+        mock_discourse = instance_double('discourse')
+        expect(mock_discourse).to receive(:options).once.and_return(discourse_options_issue_user)
+        expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
+        mock_discourse
+      end
+
+      let(:mock_schedule) do
+        mock_schedule = instance_double('schedule')
+        expect(mock_schedule).to receive(:discourse).twice.and_return(mock_discourse)
+        mock_schedule
+      end
+      
+      it 'sees issue user' do
+        expect { watch_category.run(mock_man, category_committed_watching,
+                                    'category_committed_watching', options[:matching_team]) }
+            .to output(/Tony_Christopher already Watching/).to_stdout
+      end
+    end
 
   end
 

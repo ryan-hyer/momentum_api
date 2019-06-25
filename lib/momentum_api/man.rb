@@ -49,7 +49,7 @@ module MomentumApi
         end
 
         # Group Cases
-        @discourse.schedule.group_cases(self, group['name'])
+        @discourse.schedule.group_cases(self, group)
 
         if @users_categories and @discourse.schedule.options[:watching]
           @discourse.schedule.category_cases(self, group['name'])

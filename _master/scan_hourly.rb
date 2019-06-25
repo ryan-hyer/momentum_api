@@ -30,7 +30,11 @@ schedule_options = {
     #         allowed_levels:         [3, 4],
     #         set_level:               4
     #     },
-    #     group_alias:                true
+    #     group_alias:                {
+    #               allowed_levels:         'nil',
+    #               set_level:              nil,
+    #               excludes:               %w()
+    #           }
     # },
     trust_level_updates:            false,    # todo broken: Not seeing Owners
     user_scores: {

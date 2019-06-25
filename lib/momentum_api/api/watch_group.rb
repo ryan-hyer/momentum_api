@@ -9,75 +9,65 @@ module MomentumApi
 
       # parameter setting
       @schedule               =   schedule
-      @options                =   watching_options
-      
+      @options                =   watching_options[:group_alias]
+      @mock                   =   mock
+
       # counter init
-      @counters               =   {'Watch Categories': ''}   # todo finish tests
+      @counters               =   {'Watch Categories': ''}
       schedule.discourse.scan_pass_counters << @counters
 
       zero_notifications_counters
 
     end
 
-    def run(man, category, group_name, levels)
-      if not levels[levels.first(1)[0][0]][:allowed_levels].include?(category['notification_level'])
-        print_user(man, category['slug'], group_name, category['notification_level'],
-                   status='NOT Watching', type='CategoryUser')
+    def run(man, group) 
+      # users_groups = man.user_details['groups']
+      # users_groups.each do |group|
+      if @options and not @options[:excludes].include?(man.user_details['username'])
+        # @watch_group.run(man, group_name, @options[:watching][:group_alias])
+      # end
 
-        @counters[:'Category Update Targets'] += 1
-        if @schedule.discourse.options[:do_live_updates]
-          update_response = man.user_client.category_set_user_notification(id: category['id'], notification_level: levels[:set_level])
-          sleep 1
-          puts update_response
-          @counters[:'Category Notify Updated'] += 1
+      # if @options[:group_alias][:excludes].include?(man.user_details['username'])
+        # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
+      # else
 
-          # check if update happened ... or ... comment out for no check after update
-          user_details_after_update = man.user_client.categories
-          sleep 1
-          user_details_after_update.each do |users_category_second_pass|
-            new_category_slug = users_category_second_pass['slug']
-            if category['slug'] == new_category_slug
-              puts "Updated Category: #{new_category_slug}    Notification Level: #{users_category_second_pass['notification_level']}\n"
-            end
-          end
-        end
-      else
-        if @schedule.discourse.options[:issue_users].include?(man.user_details['username'])
-          print_user(man, category['slug'], group_name, category['notification_level'],
-                     status='Watching', type='CategoryUser')
-        end
-      end
-      @counters[:'User Categories'] += 1
-    end
+      # end
 
-    def user_group_notify_to_default(man)                 # todo refactor inside discourse group
-      users_groups = man.user_details['groups']
-      users_groups.each do |group|
         users_group_users = man.user_details['group_users']
         users_group_users.each do |users_group|
           if group['id'] == users_group['group_id']
             @counters[:'User Groups'] += 1
-            if users_group['notification_level'] != group['default_notification_level'] # and if group['name'] == @target_group_name    # uncomment for just one group
+            allowed_levels   = @options[:allowed_levels] || [group['default_notification_level']]
+            set_notification_level   = @options[:set_level] || group['default_notification_level']
+
+            # if users_group['notification_level'] != group['default_notification_level'] # and if group['name'] == @target_group_name    # uncomment for just one group
+            if allowed_levels.include?(users_group['notification_level'])
+              if @schedule.discourse.options[:issue_users].include?(man.user_details['username'])
+                puts "#{man.user_details['username']} already Watching"
+              end
+              # printf "%-16s %-20s %-15s %-15s  OK :)\n", man.user_details['username'], group['name'], users_group['notification_level'].to_s.center(15), group['default_notification_level'].to_s.center(15)
+            else
               print_user(man, 'na', group['name'], users_group['notification_level'],
                          status="NOT Group Default of #{group['default_notification_level']}", type='GroupUser')
               @counters[:'Group Update Targets'] += 1
+
               if @schedule.discourse.options[:do_live_updates]
-                response = @schedule.discourse.admin_client.group_set_user_notify_level(group['name'], man.user_details['id'], group['default_notification_level'])
-                sleep 1
+                response = @schedule.discourse.admin_client.group_set_user_notify_level(group['name'], man.user_details['id'], set_notification_level)
+                @mock ? sleep(0) : sleep(1)
                 puts response
                 @counters[:'Group Notify Updated'] += 1
 
                 # check if update happened ... or ... comment out for no check after update
                 user_details_after_update = @schedule.discourse.admin_client.user(man.user_details['username'])['group_users']
-                sleep 1
+                @mock ? sleep(0) : sleep(1)
                 user_details_after_update.each do |users_group_second_pass| # uncomment to check for the update
                   if users_group_second_pass['group_id'] == users_group['group_id']
-                    puts "Updated Group: #{group['name']}    Notification Level: #{users_group_second_pass['notification_level']}    Default: #{group['default_notification_level']}"
+                    puts "Updated Group: #{group['name']}    Notification Level: #{users_group_second_pass['notification_level']}    Set Level: #{set_notification_level}"
                   end
                 end
               end
-            else
-              # printf "%-16s %-20s %-15s %-15s  OK :)\n", man.user_details['username'], group['name'], users_group['notification_level'].to_s.center(15), group['default_notification_level'].to_s.center(15)
+            # else
+              # printf "%-16s %-20s %-15s %-15s  OK :)\n", man.user_details['username'], group['name'], users_group['notification_level'].to_s.center(15), set_notification_level.to_s.center(15)
             end
           end
         end
@@ -91,11 +81,11 @@ module MomentumApi
     end
 
     def zero_notifications_counters
-      counters[:'User Categories']          =   0
+      # counters[:'User Categories']          =   0
       counters[:'User Groups']              =   0
-      counters[:'Category Update Targets']  =   0
+      # counters[:'Category Update Targets']  =   0
       counters[:'Group Update Targets']     =   0
-      counters[:'Category Notify Updated']  =   0
+      # counters[:'Category Notify Updated']  =   0
       counters[:'Group Notify Updated']     =   0
     end
 

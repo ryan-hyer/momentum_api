@@ -46,7 +46,11 @@ def schedule_options
               set_level:               4,
               excludes:               %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
           },
-          group_alias:                true
+          group_alias:                {
+              # allowed_levels:         'nil',
+              # set_level:              'nil',
+              excludes:               %w()
+          }
       },
       trust_level_updates:          true,
       user_scores: {

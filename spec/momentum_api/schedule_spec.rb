@@ -3,6 +3,7 @@ require_relative '../spec_helper'
 describe MomentumApi::Schedule do
 
   let(:user_details) { json_fixture("user_details.json") }
+  let(:group_owner) { json_fixture("group_owner.json") }
   let(:category_list) { json_fixture("categories.json") }
   
   let(:mock_discourse) do
@@ -16,6 +17,7 @@ describe MomentumApi::Schedule do
 
     let(:mock_dependencies) do
       mock_dependencies = instance_double('mock_dependencies')
+      expect(mock_dependencies).to receive(:run).once
       mock_dependencies
     end
 
@@ -41,7 +43,7 @@ describe MomentumApi::Schedule do
 
     let(:mock_dependencies) do
       mock_dependencies = instance_double('mock_dependencies')
-      expect(mock_dependencies).to receive(:run).once
+      expect(mock_dependencies).to receive(:run).twice
       mock_dependencies
     end
 
@@ -57,16 +59,21 @@ describe MomentumApi::Schedule do
       let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock: mock_dependencies) }
 
       it 'responds to group_cases' do
-        schedule.group_cases(mock_man, 'Owner')
+        schedule.group_cases(mock_man, group_owner)
         expect(schedule).to respond_to(:downgrade_non_owner_trust)
       end
     end
 
     describe '.group_cases sees issue user' do
 
+      let(:mock_dependencies) do
+        mock_dependencies = instance_double('mock_dependencies')
+        expect(mock_dependencies).to receive(:run).twice
+        mock_dependencies
+      end
+
       let(:mock_discourse) do
         mock_discourse = instance_double('mock_discourse')
-        # expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
         reset_options = discourse_options
         reset_options[:issue_users] = %w(Tony_Christopher)
          expect(mock_discourse).to receive(:options).exactly(1).times.and_return(reset_options)
@@ -83,7 +90,7 @@ describe MomentumApi::Schedule do
       let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock: mock_dependencies) }
 
       it 'responds to scan_contexts and prints issue user' do
-        expect { schedule.group_cases(mock_man, 'Owner') }
+        expect { schedule.group_cases(mock_man, group_owner) }
             .to output(/Tony_Christopher in group_cases/).to_stdout
       end
     end
@@ -161,30 +168,37 @@ describe MomentumApi::Schedule do
     end
 
 
-    # describe '.group_cases sees issue user' do
-    #
-    #   let(:mock_discourse) do
-    #     mock_discourse = instance_double('mock_discourse')
-    #     reset_options = discourse_options
-    #     reset_options[:issue_users] = %w(Tony_Christopher)
-    #      expect(mock_discourse).to receive(:options).exactly(1).times.and_return(reset_options)
-    #     mock_discourse
-    #   end
-    #
-    #   let(:mock_man) do
-    #     mock_man = instance_double('man')
-    #     expect(mock_man).to receive(:user_details).exactly(2).times.and_return(user_details)
-    #     expect(mock_man).to receive(:is_owner=).once.and_return(true)
-    #     mock_man
-    #   end
-    #
-    #   let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock: mock_dependencies) }
-    #
-    #   it 'responds to scan_contexts and prints issue user' do
-    #     expect { schedule.group_cases(mock_man, 'Owner') }
-    #         .to output(/Tony_Christopher in group_cases/).to_stdout
-    #   end
-    # end
+    context '.group_cases sees issue user' do
+
+      let(:mock_dependencies) do
+        mock_dependencies = instance_double('mock_dependencies')
+        expect(mock_dependencies).to receive(:counters).once.and_return({'Category Notify Updated': 0})
+        expect(mock_dependencies).to receive(:counters).twice.and_return({'Category Notify Updated': 1})
+        expect(mock_dependencies).to receive(:run).exactly(3).times
+        mock_dependencies
+      end
+      let(:mock_discourse) do
+        mock_discourse = instance_double('mock_discourse')
+        reset_options = discourse_options
+        reset_options[:issue_users] = %w(Tony_Christopher)
+         expect(mock_discourse).to receive(:options).exactly(13).times.and_return(reset_options)
+        mock_discourse
+      end
+
+      let(:mock_man) do
+        mock_man = instance_double('man')
+        expect(mock_man).to receive(:user_details).exactly(29).times.and_return(user_details)
+        expect(mock_man).to receive(:users_categories).once.and_return(users_categories)
+        mock_man
+      end
+
+      let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock: mock_dependencies) }
+
+      it 'responds to scan_contexts and prints issue user' do
+        expect { schedule.category_cases(mock_man, 'Owner') }
+            .to output(/Tony_Christopher Category case on category/).to_stdout
+      end
+    end
   end
 
 end
