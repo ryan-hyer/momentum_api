@@ -13,7 +13,7 @@ module MomentumApi
       @mock                   =   mock
 
       # counter init
-      @counters               =   {'Watch Categories': ''}
+      @counters               =   {'Watch Groups': ''}
       schedule.discourse.scan_pass_counters << @counters
 
       zero_notifications_counters

@@ -4,6 +4,7 @@ describe MomentumApi::Schedule do
 
   let(:user_details) { json_fixture("user_details.json") }
   let(:group_owner) { json_fixture("group_owner.json") }
+  let(:group_committed) { json_fixture("group_committed.json") }
   let(:category_list) { json_fixture("categories.json") }
   
   let(:mock_discourse) do
@@ -136,7 +137,7 @@ describe MomentumApi::Schedule do
       let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock: mock_dependencies) }
 
       it '.category_cases should find group that macthes category' do
-        schedule.category_cases(mock_man, 'Committed')
+        schedule.category_cases(mock_man, group_committed)
         expect(schedule).to respond_to(:category_cases)
       end
     end
@@ -162,7 +163,7 @@ describe MomentumApi::Schedule do
       let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock: mock_dependencies) }
 
       it '.category_cases should find owner not watching Essential' do
-        schedule.category_cases(mock_man, 'Owner')
+        schedule.category_cases(mock_man, group_owner)
         expect(schedule).to respond_to(:category_cases)
       end
     end
@@ -195,7 +196,7 @@ describe MomentumApi::Schedule do
       let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock: mock_dependencies) }
 
       it 'responds to scan_contexts and prints issue user' do
-        expect { schedule.category_cases(mock_man, 'Owner') }
+        expect { schedule.category_cases(mock_man, group_owner) }
             .to output(/Tony_Christopher Category case on category/).to_stdout
       end
     end

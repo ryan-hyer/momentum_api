@@ -23,9 +23,11 @@ module MomentumApi
       if @options[:user_scores]
         @queue_group_owner    <<  ( mock || MomentumApi::Poll.new(self, @options[:user_scores]) )
       end
+      @queue_group_all        =   []
       if @options[:watching]
         @watch_category       =   ( mock || MomentumApi::WatchCategory.new(self, @options[:watching]) )
-        @watch_group          =   ( mock || MomentumApi::WatchGroup.new(self, @options[:watching]) )
+        # @watch_group          =   ( mock || MomentumApi::WatchGroup.new(self, @options[:watching]) )
+        @queue_group_all      <<  ( mock || MomentumApi::WatchGroup.new(self, @options[:watching]) )
       end
 
     end
@@ -36,15 +38,12 @@ module MomentumApi
       end
 
       # for all groups
-      # if @options[:watching][:group_alias][:excludes].include?(man.user_details['username'])
-      #   # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
-      # else
-      #   if @options[:watching][:group_alias]
-      #     @watch_group.run(man, group_name, @options[:watching][:group_alias])
-      #   end
-      # end
-
-      @watch_group.run(man, group)
+      # @watch_group.run(man, group)
+      if @queue_group_all.any?
+        @queue_group_all.each do |task|
+          task.run(man, group)
+        end
+      end
 
       # for certain groups
       case
@@ -62,25 +61,20 @@ module MomentumApi
 
       when group['name'] == 'trust_level_1'
 
-        # if @options[:watching] and @options[:watching][:group_alias]
-        #   @watch_category.user_group_notify_to_default(man)
-        # end
-
         if @options[:trust_level_updates]
           downgrade_non_owner_trust(man)
         end
 
       when group['name'] == 'trust_level_0'
-
-        # add upgrade_owner_trust_level 
-
+        
       else
         # puts 'No Group Case'
       end
     end
 
-    def category_cases(man, group_name)  
+    def category_cases(man, group)
       starting_categories_updated = @watch_category.counters[:'Category Notify Updated']
+      group_name = group['name']
 
       man.users_categories.each do |category|
 

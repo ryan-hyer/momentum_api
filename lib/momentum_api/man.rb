@@ -52,7 +52,7 @@ module MomentumApi
         @discourse.schedule.group_cases(self, group)
 
         if @users_categories and @discourse.schedule.options[:watching]
-          @discourse.schedule.category_cases(self, group['name'])
+          @discourse.schedule.category_cases(self, group)
         else
           # puts "\nSkipping Category Cases for #{@user_details['username']}.\n"
         end
