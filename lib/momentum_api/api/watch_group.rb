@@ -3,13 +3,13 @@ module MomentumApi
 
     attr_accessor :counters
 
-    def initialize(schedule, watching_options, mock: nil)
+    def initialize(schedule, group_options, mock: nil)
       raise ArgumentError, 'schedule needs to be defined' if schedule.nil?
-      raise ArgumentError, 'options needs to be defined' if watching_options.nil? or watching_options.empty?
+      raise ArgumentError, 'options needs to be defined' if group_options.nil? or group_options.empty?
 
       # parameter setting
       @schedule               =   schedule
-      @options                =   watching_options[:group_alias]
+      @options                =   group_options[:group_alias]
       @mock                   =   mock
 
       # counter init
@@ -21,18 +21,7 @@ module MomentumApi
     end
 
     def run(man, group) 
-      # users_groups = man.user_details['groups']
-      # users_groups.each do |group|
       if @options and not @options[:excludes].include?(man.user_details['username'])
-        # @watch_group.run(man, group_name, @options[:watching][:group_alias])
-      # end
-
-      # if @options[:group_alias][:excludes].include?(man.user_details['username'])
-        # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
-      # else
-
-      # end
-
         users_group_users = man.user_details['group_users']
         users_group_users.each do |users_group|
           if group['id'] == users_group['group_id']
@@ -81,11 +70,8 @@ module MomentumApi
     end
 
     def zero_notifications_counters
-      # counters[:'User Categories']          =   0
       counters[:'User Groups']              =   0
-      # counters[:'Category Update Targets']  =   0
       counters[:'Group Update Targets']     =   0
-      # counters[:'Category Notify Updated']  =   0
       counters[:'Group Notify Updated']     =   0
     end
 

@@ -50,7 +50,7 @@ module MomentumApi
       @counters[:'User Categories'] += 1
     end
 
-    def user_group_notify_to_default(man)                 # todo refactor inside discourse group
+    def user_group_notify_to_default(man)
       users_groups = man.user_details['groups']
       users_groups.each do |group|
         users_group_users = man.user_details['group_users']

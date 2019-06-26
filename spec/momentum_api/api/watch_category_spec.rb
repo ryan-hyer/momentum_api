@@ -7,7 +7,7 @@ describe MomentumApi::WatchCategory do
   let(:categories) { json_fixture("categories.json") }
   let(:category_committed_watching) { json_fixture("category_committed_watching.json") }
 
-  options = schedule_options[:watching]
+  options = schedule_options[:category]
 
   let(:mock_discourse) do
     mock_discourse = instance_double('discourse')

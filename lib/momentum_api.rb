@@ -8,5 +8,5 @@ require_relative 'momentum_api/api/polls'
 # require_relative 'momentum_api/api/notifications'
 require_relative 'momentum_api/api/watch_category'
 require_relative 'momentum_api/api/watch_group'
-require_relative 'momentum_api/api/user'
+require_relative 'momentum_api/api/downgrade_trust'
 

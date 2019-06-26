@@ -1,11 +1,8 @@
-require_relative '../momentum_api/api/user'
 
 module MomentumApi
   class Schedule
 
     attr_reader :user_client, :discourse, :options
-
-    include MomentumApi::User
 
     def initialize(discourse, schedule_options, mock: nil)
       raise ArgumentError, 'user_client needs to be defined' if discourse.nil?
@@ -19,15 +16,24 @@ module MomentumApi
       @options                =   schedule_options
 
       # queue tasks
-      @queue_group_owner      =   []
+      @owner_queue            =   []
       if @options[:user_scores]
-        @queue_group_owner    <<  ( mock || MomentumApi::Poll.new(self, @options[:user_scores]) )
+        @owner_queue          <<  ( mock || MomentumApi::Poll.new(self, @options[:user_scores]) )
       end
-      @queue_group_all        =   []
-      if @options[:watching]
-        @watch_category       =   ( mock || MomentumApi::WatchCategory.new(self, @options[:watching]) )
-        # @watch_group          =   ( mock || MomentumApi::WatchGroup.new(self, @options[:watching]) )
-        @queue_group_all      <<  ( mock || MomentumApi::WatchGroup.new(self, @options[:watching]) )
+
+      @group_queue            =   []
+      if @options[:group]
+        @group_queue          <<  ( mock || MomentumApi::WatchGroup.new(self, @options[:group]) )
+      end
+
+      @category_queue         =   []
+      if @options[:category]
+        @category_queue       <<   ( mock || MomentumApi::WatchCategory.new(self, @options[:category]) )
+      end
+
+      @user_queue             =   []
+      if @options[:user]
+        @user_queue           <<   ( mock || MomentumApi::DowngradeTrust.new(self, @options[:user]) )
       end
 
     end
@@ -38,9 +44,8 @@ module MomentumApi
       end
 
       # for all groups
-      # @watch_group.run(man, group)
-      if @queue_group_all.any?
-        @queue_group_all.each do |task|
+      if @group_queue.any?
+        @group_queue.each do |task|
           task.run(man, group)
         end
       end
@@ -53,17 +58,13 @@ module MomentumApi
         man.is_owner = true
 
         # Owner Tasks e.g. User Scoring
-        if @queue_group_owner.any?
-          @queue_group_owner.each do |owner_task|
+        if @owner_queue.any?
+          @owner_queue.each do |owner_task|
             owner_task.run(man)
           end
         end
 
       when group['name'] == 'trust_level_1'
-
-        if @options[:trust_level_updates]
-          downgrade_non_owner_trust(man)
-        end
 
       when group['name'] == 'trust_level_0'
         
@@ -73,63 +74,63 @@ module MomentumApi
     end
 
     def category_cases(man, group)
-      starting_categories_updated = @watch_category.counters[:'Category Notify Updated']
-      group_name = group['name']
+      if @category_queue.any?
+        group_name = group['name']
 
-      man.users_categories.each do |category|
+        man.users_categories.each do |category|
 
-        if @discourse.options[:issue_users].include?(man.user_details['username'])
-          puts "\n#{man.user_details['username']} Category case on category: #{category['slug']}\n"
+          @category_queue.each do |category_task|
+
+            if @discourse.options[:issue_users].include?(man.user_details['username'])
+              puts "\n#{man.user_details['username']} Category case on category: #{category['slug']}\n"
+            end
+
+            case
+            when (category['slug'] == group_name and @options[:category][:matching_team])
+              if @options[:category][:matching_team][:excludes].include?(man.user_details['username'])
+                # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
+              else
+                category_task.run(man, category, group_name, @options[:category][:matching_team])
+              end
+
+            when (category['slug'] == 'Essential' and group_name == 'Owner' and @options[:category][:essential])
+              if @options[:category][:essential][:excludes].include?(man.user_details['username'])
+                # puts "#{man.user_details['username']} specifically excluded from Essential Watching"
+              else                            # 4 = Watching first post, 3 = Watching, 1 = blank or ...?
+                category_task.run(man, category, group_name, @options[:category][:essential])
+              end
+
+            when (category['slug'] == 'Growth' and group_name == 'Owner' and @options[:category][:growth])
+              if @options[:category][:growth][:excludes].include?(man.user_details['username'])
+                # puts "#{man.user_details['username']} specifically excluded from Watching Growth"
+              else
+                category_task.run(man, category, group_name, @options[:category][:growth])
+              end
+
+            when (category['slug'] == 'Meta' and group_name == 'Owner' and @options[:category][:meta])
+              if @options[:category][:meta][:excludes].include?(man.user_details['username'])
+                # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
+              else
+                category_task.run(man, category, group_name, @options[:category][:meta])
+              end
+
+            else
+              # puts 'Category not a target'
+            end
+
+          end
         end
+     end
+    end
 
-        case
-        when (category['slug'] == group_name and @options[:watching][:matching_team])
-          # case_excludes = %w(Steve_Scott Ryan_Hyer David_Kirk)
-          if @options[:watching][:matching_team][:excludes].include?(man.user_details['username'])
-            # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
-          else
-            # if @options[:watching][:matching_team]
-              @watch_category.run(man, category, group_name, @options[:watching][:matching_team])
-            # end
-          end
+    def user_cases(man)
 
-        when (category['slug'] == 'Essential' and group_name == 'Owner' and @options[:watching][:essential])
-          # case_excludes = %w(Steve_Scott Joe_Sabolefski)
-          if @options[:watching][:essential][:excludes].include?(man.user_details['username'])
-            # puts "#{man.user_details['username']} specifically excluded from Essential Watching"
-          else                            # 4 = Watching first post, 3 = Watching, 1 = blank or ...?
-            # if @options[:watching][:essential]
-              @watch_category.run(man, category, group_name, @options[:watching][:essential])
-            # end
-          end
-
-        when (category['slug'] == 'Growth' and group_name == 'Owner' and @options[:watching][:growth])
-          # case_excludes = %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
-          if @options[:watching][:growth][:excludes].include?(man.user_details['username'])
-            # puts "#{man.user_details['username']} specifically excluded from Watching Growth"
-          else
-            # if @options[:watching][:growth]  # first_post
-              @watch_category.run(man, category, group_name, @options[:watching][:growth])
-            # end
-          end
-
-        when (category['slug'] == 'Meta' and group_name == 'Owner' and @options[:watching][:meta])
-          # case_excludes = %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
-          if @options[:watching][:meta][:excludes].include?(man.user_details['username'])
-            # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
-          else
-            # if @options[:watching][:meta]
-              @watch_category.run(man, category, group_name, @options[:watching][:meta])
-            # end
-          end
-
-        else
-          # puts 'Category not a target'
+      if @user_queue.any?
+        @user_queue.each do |task|
+          task.run(man)
         end
       end
-      if @watch_category.counters[:'Category Notify Updated'] > starting_categories_updated
-        @watch_category.counters[:'Category Notify Updated'] += 1      # todo this logic even correct?
-      end
+
     end
 
   end

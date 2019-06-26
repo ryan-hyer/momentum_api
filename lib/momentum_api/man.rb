@@ -1,12 +1,9 @@
-# require_relative '../momentum_api/api/messages'
 
 module MomentumApi
   class Man
 
     attr_reader :discourse, :user_client, :user_details, :users_categories
     attr_accessor :is_owner
-
-    # include MomentumApi::Messages
 
     def initialize(discourse, user_client, user_details, mock: nil)
       raise ArgumentError, 'user_client needs to be defined' if user_client.nil?
@@ -51,7 +48,8 @@ module MomentumApi
         # Group Cases
         @discourse.schedule.group_cases(self, group)
 
-        if @users_categories and @discourse.schedule.options[:watching]
+        # Category Cases
+        if @users_categories and @discourse.schedule.options[:category]
           @discourse.schedule.category_cases(self, group)
         else
           # puts "\nSkipping Category Cases for #{@user_details['username']}.\n"
@@ -59,9 +57,10 @@ module MomentumApi
 
       end
 
-      # # Update Trust Level
-      if @discourse.schedule.options[:trust_level_updates] and not @is_owner
-        @discourse.schedule.downgrade_non_owner_trust(@discourse, self, 0)
+      # Once per User Cases          # todo move to schedule.user_cases
+      if @discourse.schedule.options[:user]
+        @discourse.schedule.user_cases(self)
+        # @discourse.schedule.downgrade_trust_level(self)
       end
 
     end

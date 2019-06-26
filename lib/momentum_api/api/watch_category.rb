@@ -22,8 +22,7 @@ module MomentumApi
 
     def run(man, category, group_name, levels)
       if not levels[:allowed_levels].include?(category['notification_level'])
-        print_user(man, category['slug'], group_name, category['notification_level'],
-                   status='NOT Watching', type='CategoryUser')
+        print_user(man, category['slug'], group_name, category['notification_level'], status='NOT Watching', type='CategoryUser')
 
         @counters[:'Category Update Targets'] += 1
         if @schedule.discourse.options[:do_live_updates]

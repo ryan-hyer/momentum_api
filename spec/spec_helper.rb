@@ -25,7 +25,7 @@ end
 
 def schedule_options
   {
-      watching:{
+      category:{
           matching_team:              {
               allowed_levels:         [3],
               set_level:               3,
@@ -45,14 +45,23 @@ def schedule_options
               allowed_levels:         [3, 4],
               set_level:               4,
               excludes:               %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
-          },
+          }
+      },
+      group:{
           group_alias:                {
-              # allowed_levels:         'nil',
-              # set_level:              'nil',
+              allowed_levels:         nil,
+              set_level:              nil,
               excludes:               %w()
           }
       },
-      trust_level_updates:          true,
+      user:{
+          downgrade_non_owner_trust:                {
+              allowed_levels:         0,
+              set_level:              0,
+              excludes:               %w()
+          }
+      },
+      # downgrade_non_owner_trust:          true,
       user_scores: {
           update_type:              'not_voted', # have_voted, not_voted, newly_voted, all
           target_post:              28707, # 28649

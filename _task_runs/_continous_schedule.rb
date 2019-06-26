@@ -13,7 +13,7 @@ discourse_options = {
 }
 
 schedule_options = {
-    # watching:{
+    # category:{
     #     matching_team:              {
     #         allowed_levels:         [3],
     #         set_level:               3
@@ -30,20 +30,28 @@ schedule_options = {
     #         allowed_levels:         [3, 4],
     #         set_level:               4
     #     },
-    #     group_alias:                {
-    #               allowed_levels:         'nil',
-    #               set_level:              nil,
-    #               excludes:               %w()
-    #           }
+    #     },
+    #   group:{
+    #       group_alias:               {
+    #          # allowed_levels:         nil,
+    #          # set_level:              nil,
+    #          excludes:               %w()
+    #       }
     # },
-    trust_level_updates:            false,    # todo broken: Not seeing Owners
+    # user:{
+    #       downgrade_non_owner_trust:                {
+    #           allowed_levels:         nil,
+    #           set_level:              nil,
+    #           excludes:               %w()
+    #       }
+    #   },    # place under a 'user' level
     user_scores: {
         update_type:                'newly_voted',    # have_voted, not_voted, newly_voted, all
         target_post:                30719,            # 28707 28649
         # target_polls:             %w(poll),  # testing was version_two
         poll_url:                   'https://discourse.gomomentum.org/t/what-s-your-score/7104',
         messages_from:              'Kim_Miller'
-    },
+    }
 }
 
 # init

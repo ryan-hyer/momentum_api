@@ -5,11 +5,8 @@ describe MomentumApi::WatchGroup do
   let(:user_details_group_watching) { json_fixture("user_details_group_watching.json") }
   let(:user_details_group_not_watching) { json_fixture("user_details_group_not_watching.json") }
   let(:group_committed) { json_fixture("group_committed.json") }
-  let(:category_committed_not_watching) { json_fixture("category_committed_not_watching.json") }
-  let(:categories) { json_fixture("categories.json") }
-  let(:category_committed_watching) { json_fixture("category_committed_watching.json") }
 
-  watching_options = schedule_options[:watching]
+  group_options = schedule_options[:group]
 
   let(:mock_discourse) do
     mock_discourse = instance_double('discourse')
@@ -37,7 +34,7 @@ describe MomentumApi::WatchGroup do
       mock_dependencies
     end
 
-    let(:watch_group) { MomentumApi::WatchGroup.new(mock_schedule, watching_options, mock: mock_dependencies) }
+    let(:watch_group) { MomentumApi::WatchGroup.new(mock_schedule, group_options, mock: mock_dependencies) }
 
     context "init" do
       
@@ -50,13 +47,7 @@ describe MomentumApi::WatchGroup do
 
     context "group already at default" do
 
-      # let(:mock_man) do
-      #   mock_man = instance_double('man')
-      #   expect(mock_man).to receive(:user_details).exactly(2).times.and_return(user_details_group_watching)
-      #   mock_man
-      # end
-
-      it "Category Update Targets updates" do
+      it "Group Update Targets updates" do
         expect(watch_group).to respond_to(:run)
                 watch_group.run(mock_man, group_committed)
         expect(watch_group.instance_variable_get(:@counters)[:'Group Update Targets']).to eql(0)
@@ -85,7 +76,7 @@ describe MomentumApi::WatchGroup do
         mock_man
       end
 
-      it "Category Update Targets updates" do
+      it "Group Update Targets updates" do
         expect(watch_group).to respond_to(:run)
                 watch_group.run(mock_man, group_committed)
         expect(watch_group.instance_variable_get(:@counters)[:'Group Update Targets']).to eql(1)

@@ -15,7 +15,7 @@ schedule_options = {
     essential_watching:         true,
     growth_first_post:          true,
     meta_first_post:            true,
-    trust_level_updates:        true,
+    downgrade_non_owner_trust:        true,
     user_scores: {
         update_type:    'not_voted', # have_voted, not_voted, newly_voted, all
         target_post:    28707, # 28649
