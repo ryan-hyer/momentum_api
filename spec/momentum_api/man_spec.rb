@@ -45,8 +45,8 @@ describe MomentumApi::Man do
 
       it 'responds to scan_contexts and pulls categories' do
         subject.instance_variable_set(:@is_owner, true)
-        subject.scan_contexts
-        expect(subject).to respond_to(:scan_contexts)
+        subject.run
+        expect(subject).to respond_to(:run)
         expect(subject.instance_variable_get(:@users_categories)).to be_an(Array)
       end
     end
@@ -65,7 +65,7 @@ describe MomentumApi::Man do
       let(:man) { man_is_owner(mock_discourse, mock_dependencies, user_details, mock: mock_dependencies) }
 
       it 'responds to scan_contexts and prints issue user' do
-        expect { man.scan_contexts }
+        expect { man.run }
             .to output(/Tony_Christopher in scan_contexts/).to_stdout
       end
     end
@@ -87,7 +87,6 @@ describe MomentumApi::Man do
       expect(mock_schedule).to receive(:category_cases).exactly(3).times
       expect(mock_schedule).to receive(:user_cases).once
       expect(mock_schedule).to receive(:options).exactly(4).times.and_return(schedule_options)
-      # expect(mock_schedule).to receive(:run).once
       mock_schedule
     end
     
@@ -98,8 +97,8 @@ describe MomentumApi::Man do
 
       it 'responds to scan_contexts and update_user_trust_level for non-owner' do
         non_owner.instance_variable_set(:@is_owner, false)
-        non_owner.scan_contexts
-        expect(non_owner).to respond_to(:scan_contexts)
+        non_owner.run
+        expect(non_owner).to respond_to(:run)
         expect(non_owner.instance_variable_get(:@users_categories)).to be_an(Array)
       end
     end
@@ -124,7 +123,7 @@ describe MomentumApi::Man do
       subject {MomentumApi::Man.new(mock_discourse, mock_dependencies, user_details, mock: mock_dependencies)}
 
       it "responds to unknown .connect_to_instance" do
-        expect { subject.scan_contexts }.to raise_error(DiscourseApi::TooManyRequests)
+        expect { subject.run }.to raise_error(DiscourseApi::TooManyRequests)
       end
     end
 
@@ -156,8 +155,8 @@ describe MomentumApi::Man do
       let(:man) { man_is_owner(mock_discourse, mock_dependencies, user_details, mock: mock_dependencies) }
       
       it 'responds to scan_contexts and inits' do
-        man.scan_contexts
-        expect(man).to respond_to(:scan_contexts)
+        man.run
+        expect(man).to respond_to(:run)
         expect(man.instance_variable_get(:@users_categories)).to be_nil
       end
     end
@@ -180,10 +179,8 @@ describe MomentumApi::Man do
       it 'responds and prints user' do
         expect { man.print_user_options(user_details, user_option_print) }
             .to output(/last_seen_at/).to_stdout
-
       end
     end
-
   end
 
 end

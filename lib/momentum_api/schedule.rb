@@ -54,7 +54,7 @@ module MomentumApi
       case
       when group['name'] == 'Owner'
 
-        # Owner checking
+        # Set Owner status
         man.is_owner = true
 
         # Owner Tasks e.g. User Scoring

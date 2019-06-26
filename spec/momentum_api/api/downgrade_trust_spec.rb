@@ -161,6 +161,5 @@ describe MomentumApi::DowngradeTrust do
     end
 
   end
-
 end
 

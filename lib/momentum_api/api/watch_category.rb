@@ -56,7 +56,7 @@ module MomentumApi
     end
 
     def zero_notifications_counters
-      counters[:'User Categories']          =   0
+      counters[:'User Categories']          =   0     # interesting we don't need the @instance in front
       counters[:'Category Update Targets']  =   0
       counters[:'Category Notify Updated']  =   0
     end

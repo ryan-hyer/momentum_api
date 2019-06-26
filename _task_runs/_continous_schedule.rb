@@ -3,8 +3,8 @@ require '../lib/momentum_api'
 @scan_passes_end                =   60
 
 discourse_options = {
-    do_live_updates:                true,
-    # target_username:              'David_Ashby',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Don_Morgan KM_Admin
+    do_live_updates:                false,
+    # target_username:              'David_Ashby',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby KM_Admin
     target_groups:                  %w(trust_level_1),   # Mods GreatX BraveHearts trust_level_0 trust_level_1
     instance:                       'live',
     api_username:                   'KM_Admin',
@@ -13,38 +13,38 @@ discourse_options = {
 }
 
 schedule_options = {
-    # category:{
-    #     matching_team:              {
-    #         allowed_levels:         [3],
-    #         set_level:               3
-    #     },
-    #     essential:                  {
-    #         allowed_levels:         [3],
-    #         set_level:               3
-    #     },
-    #     growth:                     {
-    #         allowed_levels:         [3, 4],
-    #         set_level:               4
-    #     },
-    #     meta:                       {
-    #         allowed_levels:         [3, 4],
-    #         set_level:               4
-    #     },
-    #     },
-    #   group:{
-    #       group_alias:               {
-    #          # allowed_levels:         nil,
-    #          # set_level:              nil,
-    #          excludes:               %w()
-    #       }
-    # },
-    # user:{
-    #       downgrade_non_owner_trust:                {
-    #           allowed_levels:         nil,
-    #           set_level:              nil,
-    #           excludes:               %w()
-    #       }
-    #   },    # place under a 'user' level
+    category:{
+        matching_team:              {
+            allowed_levels:         [3],
+            set_level:               3
+        },
+        essential:                  {
+            allowed_levels:         [3],
+            set_level:               3
+        },
+        growth:                     {
+            allowed_levels:         [3, 4],
+            set_level:               4
+        },
+        meta:                       {
+            allowed_levels:         [3, 4],
+            set_level:               4
+        },
+        },
+      group:{
+          group_alias:               {
+             allowed_levels:         nil,
+             set_level:              nil,
+             excludes:               %w()
+          }
+    },
+    user:{
+          downgrade_non_owner_trust:                {
+              allowed_levels:         nil,
+              set_level:              nil,
+              excludes:               %w()
+          }
+      },
     user_scores: {
         update_type:                'newly_voted',    # have_voted, not_voted, newly_voted, all
         target_post:                30719,            # 28707 28649

@@ -32,7 +32,7 @@ module MomentumApi
     end
 
 
-    def scan_contexts
+    def run
 
       if @discourse.options[:issue_users].include?(@user_details['username'])
         puts "#{@user_details['username']} in scan_contexts"
@@ -57,10 +57,9 @@ module MomentumApi
 
       end
 
-      # Once per User Cases          # todo move to schedule.user_cases
+      # Once per User Cases
       if @discourse.schedule.options[:user]
         @discourse.schedule.user_cases(self)
-        # @discourse.schedule.downgrade_trust_level(self)
       end
 
     end

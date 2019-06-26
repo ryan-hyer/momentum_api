@@ -63,7 +63,7 @@ module MomentumApi
         user_client = @mock || connect_to_instance(user_details['username'], @options[:instance])
 
         @counters[:'Processed Users'] += 1
-        @mock ? @mock.scan_contexts(self) : MomentumApi::Man.new(self, user_client, user_details).scan_contexts
+        @mock ? @mock.run(self) : MomentumApi::Man.new(self, user_client, user_details).run
       end
     end
 
