@@ -48,22 +48,6 @@ describe MomentumApi::Schedule do
       mock_dependencies
     end
 
-    # describe '.group_cases should call .downgrade_non_owner_trust for Owners' do
-    #
-    #   let(:mock_man) do
-    #     mock_man = instance_double('man')
-    #     expect(mock_man).to receive(:user_details).once.and_return(user_details)
-    #     expect(mock_man).to receive(:is_owner=).once.and_return(true)
-    #     mock_man
-    #   end
-    #
-    #   let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock: mock_dependencies) }
-    #
-    #   it 'responds to group_cases' do
-    #     schedule.group_cases(mock_man, group_owner)
-    #     expect(schedule).to respond_to(:downgrade_trust_level)
-    #   end
-    # end
 
     describe '.group_cases sees issue user' do
 
@@ -128,8 +112,6 @@ describe MomentumApi::Schedule do
 
       let(:mock_dependencies) do
         mock_dependencies = instance_double('mock_dependencies')
-        # expect(mock_dependencies).to receive(:counters).exactly(26).times.and_return({'Category Notify Updated': 0})
-        # expect(mock_dependencies).to receive(:counters).exactly(2).times.and_return({'Category Notify Updated': 1})
         expect(mock_dependencies).to receive(:run).once.with(mock_man, anything, 'Committed', anything)
         mock_dependencies
       end
@@ -198,5 +180,32 @@ describe MomentumApi::Schedule do
     end
   end
 
+
+  describe '.user_cases' do
+    
+    let(:mock_dependencies) do
+      mock_dependencies = instance_double('mock_dependencies')
+      expect(mock_dependencies).to receive(:run).once
+      mock_dependencies
+    end
+
+    let(:mock_discourse) do
+      mock_discourse = instance_double('mock_discourse')
+      mock_discourse
+    end
+
+    let(:mock_man) do
+      mock_man = instance_double('man')
+      mock_man
+    end
+
+    let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock: mock_dependencies) }
+
+    it '.category_cases should find group that macthes category' do
+      schedule.user_cases(mock_man)
+      expect(schedule).to respond_to(:user_cases)
+    end
+
+  end
 end
 

@@ -83,7 +83,6 @@ scan_hourly
 @discourse.scan_summary
 
 # todo save log to disk
-# todo tests
 
 # Jun 23, 2019 fix
 # Scanning ["trust_level_1"] Users for Tasks
