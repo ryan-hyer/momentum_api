@@ -32,60 +32,67 @@ module MomentumApi
 
 
     def run(man)
-      @man = man
+      # puts 'issue user here'
+      if @options[:excludes].include?(man.user_details['username'])
+        puts "#{man.user_details['username']} is Excluded from this Poll."
 
-      begin
-        post = @man.user_client.get_post(@options[:target_post])
-      rescue DiscourseApi::UnauthenticatedError
-        return
-      end
-      @mock ? sleep(0) : sleep(1)
+      else
+        @man = man
 
-      if @options[:target_polls].nil? or @options[:target_polls].empty?
-        @options[:target_polls] = %w(poll)
-      end
+        begin
+          post = @man.user_client.get_post(@options[:target_post])
+        rescue DiscourseApi::UnauthenticatedError
+          puts "#{man.user_details['username']} does not have access to Poll Post."
+          return
+        end
+        @mock ? sleep(0) : sleep(1)
 
-      post['polls'].each do |poll|
-        if @options[:target_polls].include?(poll['name'])
+        if @options[:target_polls].nil? or @options[:target_polls].empty?
+          @options[:target_polls] = %w(poll)
+        end
 
-          poll_option_votes = has_man_voted?(poll)
+        post['polls'].each do |poll|
+          if @options[:target_polls].include?(poll['name'])
 
-          if poll_option_votes
-            # user has voted
-            if @options[:update_type] == 'have_voted' or @options[:update_type] == 'newly_voted' or @update_type == 'all'
-              user_fields = @man.user_details[@user_fields]
-              existing_value = user_fields[@user_score_field].to_i
+            poll_option_votes = has_man_voted?(poll)
 
-              # score voter
-              current_voter_points, max_points_possible = score_voter(poll, poll_option_votes)
-              user_badge_level = update_user_profile_badges(current_voter_points)
+            if poll_option_votes
+              # user has voted
+              if @options[:update_type] == 'have_voted' or @options[:update_type] == 'newly_voted' or @options[:update_type] == 'all'
+                user_fields = @man.user_details[@user_fields]
+                existing_value = user_fields[@user_score_field].to_i
 
-              if existing_value == current_voter_points
-                # existing vote
-                if @options[:update_type] == 'have_voted' or @options[:update_type] == 'all'
+                # score voter
+                current_voter_points, max_points_possible = score_voter(poll, poll_option_votes)
+                user_badge_level = update_user_profile_badges(current_voter_points)
+
+                if existing_value == current_voter_points
+                  # existing vote
+                  if @options[:update_type] == 'have_voted' or @options[:update_type] == 'all'
+                    print_scored_user(current_voter_points, existing_value, max_points_possible, poll, user_badge_level)
+                    send_voted_message(current_voter_points, max_points_possible, user_badge_level)
+                    printf "\n"
+                  end
+                else
+                  # new vote
+                  @counters[:'New Vote Targets'] += 1
+                  update_user_profile_score(current_voter_points)
                   print_scored_user(current_voter_points, existing_value, max_points_possible, poll, user_badge_level)
                   send_voted_message(current_voter_points, max_points_possible, user_badge_level)
                   printf "\n"
                 end
-              else
-                # new vote
-                @counters[:'New Vote Targets'] += 1
-                update_user_profile_score(current_voter_points)
-                print_scored_user(current_voter_points, existing_value, max_points_possible, poll, user_badge_level)
-                send_voted_message(current_voter_points, max_points_possible, user_badge_level)
+              end
+
+            else
+              # user has not voted
+              if @options[:update_type] == 'not_voted' or @options[:update_type] == 'all'
+                @counters[:'Not Voted Targets'] += 1
+                printf "%-18s %-20s\n", @man.user_details['username'], 'has not voted yet'
+                send_not_voted_message
                 printf "\n"
               end
+              # next
             end
-
-          else
-            # user has not voted
-            if @options[:update_type] == 'not_voted' or @options[:update_type] == 'all'
-              @counters[:'Not Voted Targets'] += 1
-              printf "%-18s %-20s\n", @man.user_details['username'], 'has not voted yet'
-              send_not_voted_message
-              printf "\n"
-            end
-            # next
           end
         end
       end

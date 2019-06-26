@@ -61,13 +61,13 @@ def schedule_options
               excludes:               %w()
           }
       },
-      # downgrade_non_owner_trust:          true,
       user_scores: {
           update_type:              'not_voted', # have_voted, not_voted, newly_voted, all
-          target_post:              28707, # 28649
-          # target_polls:           %w(poll), # basic new version_two
+          target_post:              30719,       # 28707 28649
+          # target_polls:           %w(poll),    # basic new version_two
           poll_url:                 'https://discourse.gomomentum.org/t/what-s-your-score',
-          messages_from:            'Kim_Miller'
+          messages_from:            'Kim_Miller',
+          excludes:                 %w()
       }
   }
 end

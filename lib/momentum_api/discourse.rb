@@ -1,8 +1,5 @@
 $LOAD_PATH.unshift File.expand_path('../../../../discourse_api/lib', __FILE__)
 require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__)
-# require_relative '../momentum_api/error'
-require_relative '../momentum_api/schedule'
-require_relative '../momentum_api/man'
 
 module MomentumApi
   class Discourse
@@ -80,15 +77,15 @@ module MomentumApi
     def apply_to_group_users(group_name, skip_staged_user=false)
       group_members = @admin_client.group_members(group_name, limit: 10000)
       group_members.each do |group_member|
+        if @options[:issue_users].include?(group_member['username'])
+          puts "#{group_member['username']} in apply_to_group_users method"
+        end
+        
         if @options[:target_username]
           if group_member['username'] == @options[:target_username]
             apply_call(group_member)
           end
         elsif not @options[:exclude_users].include?(group_member['username'])
-          if @options[:issue_users].include?(group_member['username'])
-            puts "#{group_member['username']} in apply_to_group_users method"
-          end
-          # puts user['username']
           printf "%-15s %s \r", 'Scanning User: ', @counters[:'Processed Users']
           apply_call(group_member)
         else
