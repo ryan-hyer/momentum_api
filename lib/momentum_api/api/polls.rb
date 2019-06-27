@@ -34,16 +34,16 @@ module MomentumApi
     def run(man)
       # puts 'issue user here'
       if @options[:excludes].include?(man.user_details['username'])
-        puts "#{man.user_details['username']} is Excluded from this Poll."
+        # puts "#{man.user_details['username']} is Excluded from this Poll."
 
       else
         @man = man
 
         begin
-          post = @man.user_client.get_post(@options[:target_post])
+          post = get_poll_post
         rescue DiscourseApi::UnauthenticatedError
           puts "#{man.user_details['username']} does not have access to Poll Post."
-          return
+          return 'UnauthenticatedError'
         end
         @mock ? sleep(0) : sleep(1)
 
@@ -245,6 +245,19 @@ module MomentumApi
     end
 
     private
+
+    def get_poll_post
+      post = nil
+      begin
+        post = @man.user_client.get_post(@options[:target_post])
+      rescue DiscourseApi::TooManyRequests
+        puts 'TooManyRequests: Sleeping for 30 seconds ....'
+        @mock ? sleep(0) : sleep(30)
+        post = get_poll_post
+      end
+      @mock ? sleep(0) : sleep(1)
+      post
+    end
 
     def has_man_voted?(poll)
       begin

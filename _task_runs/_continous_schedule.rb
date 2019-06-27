@@ -3,7 +3,7 @@ require '../lib/momentum_api'
 @scan_passes_end                =   60
 
 discourse_options = {
-    do_live_updates:                false,
+    do_live_updates:                true,
     # target_username:              'David_Ashby',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby KM_Admin
     target_groups:                  %w(trust_level_1),   # Mods GreatX BraveHearts trust_level_0 trust_level_1
     instance:                       'live',

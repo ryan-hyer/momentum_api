@@ -275,6 +275,50 @@ describe MomentumApi::Poll do
       end
 
 
+      describe '.run get_poll_post' do
+
+        let(:mock_dependencies) do
+          mock_dependencies = instance_double('mock_dependencies')
+          mock_dependencies
+        end
+
+        let(:mock_user_client) do
+          mock_user_client = instance_double('user_client')
+          expect(mock_user_client).to receive(:get_post).once
+                                          .and_raise(DiscourseApi::TooManyRequests.new('error message here'))
+          expect(mock_user_client).to receive(:get_post).once.and_return post_with_poll
+          expect(mock_user_client).to receive(:poll_voters).once.and_return(poll_voters)
+          mock_user_client
+        end
+
+        let(:mock_discourse) do
+          mock_discourse = instance_double('discourse')
+          expect(mock_discourse).to receive(:options).once.and_return(discourse_options)
+          expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
+          mock_discourse
+        end
+
+        let(:mock_man) do
+          mock_man = instance_double('man')
+          expect(mock_man).to receive(:discourse).once.and_return(mock_discourse)
+          expect(mock_man).to receive(:user_details).exactly(4).times.and_return(poll_voter_new)
+          expect(mock_man).to receive(:user_client).exactly(3).times.and_return(mock_user_client)
+          mock_man
+        end
+
+        options_have_voted = schedule_options[:user_scores]
+        options_have_voted[:update_type] = 'have_voted'
+        let(:have_voted_poll) { MomentumApi::Poll.new(mock_schedule, options_have_voted, mock: mock_dependencies) }
+
+        it 'handles TooManyRequests and tries again' do
+          expect(have_voted_poll).to receive(:update_user_profile_score)
+          expect(have_voted_poll).to receive(:print_scored_user)
+          expect(have_voted_poll).to receive(:send_voted_message)
+          have_voted_poll.run(mock_man)
+        end
+      end
+
+
       describe '.run New voter, needs badge, do_live_update' do
 
         options_do_live_updates = discourse_options
