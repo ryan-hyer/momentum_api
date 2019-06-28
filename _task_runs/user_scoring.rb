@@ -2,7 +2,7 @@ require '../lib/momentum_api'
 
 discourse_options = {
     do_live_updates:        false,
-    target_username:        'Mike_Ehlers',                 # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Don_Morgan KM_Admin
+    target_username:        'Mike_Ehlers',            # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Mike_Ehlers KM_Admin
     target_groups:          %w(trust_level_1),          # Mods GreatX BraveHearts  trust_level_0 trust_level_1
     instance:               'live',
     api_username:           'KM_Admin',
@@ -18,7 +18,7 @@ schedule_options = {
         # target_polls:      %w(poll),                  # default is 'poll'
         poll_url:           'https://discourse.gomomentum.org/t/what-s-your-score/7104',
         messages_from:      'Kim_Miller',
-        excludes:            %w()  # Mike_Ehlers
+        excludes:            %w(Mike_Ehlers)  # Mike_Ehlers
     }
 }
 

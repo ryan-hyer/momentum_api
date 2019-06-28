@@ -9,7 +9,7 @@ discourse_options = {
     instance:                       'live',
     api_username:                   'KM_Admin',
     exclude_users:                  %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
-    issue_users:                    %w(KM_Admin)
+    issue_users:                    %w()
 }
 
 schedule_options = {

@@ -179,8 +179,8 @@ module MomentumApi
               username: @man.user_details['username'], badge_id: badge_id, reason: @options[:poll_url])
           # puts "User badges granted:"
           post_response.each do |badge|
+            # puts @man.user_details['username']
             printf "%-35s %-20s \n", 'User badge granted: ', badge['name']
-            # puts badge['name']
           end
         end
       end
