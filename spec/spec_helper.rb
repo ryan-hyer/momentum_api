@@ -11,6 +11,24 @@ require 'rspec'
 require 'json'
 require 'webmock/rspec'
 
+
+class MockLogger
+  def initialize(*targets)
+    # @targets = targets
+  end
+
+  def info(to_stand_out)
+    puts to_stand_out
+  end
+
+  # def close
+  #   @targets.each(&:close)
+  # end
+end
+
+# log_file = File.open("scan.log", "a")
+logger = MockLogger.new
+
 def discourse_options
   {
       do_live_updates:              false,
@@ -19,7 +37,8 @@ def discourse_options
       instance:                     'live',
       api_username:                 'KM_Admin',
       exclude_users:                %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
-      issue_users:                  %w()
+      issue_users:                  %w(),
+      logger:                       MockLogger.new
   }
 end
 

@@ -171,6 +171,7 @@ describe MomentumApi::Man do
 
       let(:mock_discourse) do
         mock_discourse = instance_double('mock_discourse')
+        expect(mock_discourse).to receive(:options).exactly(2).times.and_return(discourse_options)
         mock_discourse
       end
 

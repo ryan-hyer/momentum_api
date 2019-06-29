@@ -87,7 +87,8 @@ module MomentumApi
               # user has not voted
               if @options[:update_type] == 'not_voted' or @options[:update_type] == 'all'
                 @counters[:'Not Voted Targets'] += 1
-                printf "%-18s %-20s\n", @man.user_details['username'], 'has not voted yet'
+                not_voted = sprintf "%-18s %-20s\n", @man.user_details['username'], 'has not voted yet'
+                man.discourse.options[:logger].info not_voted
                 send_not_voted_message
                 printf "\n"
               end
@@ -180,7 +181,9 @@ module MomentumApi
           # puts "User badges granted:"
           post_response.each do |badge|
             # puts @man.user_details['username']
-            printf "%-35s %-20s \n", 'User badge granted: ', badge['name']
+            granted_badge = sprintf "%-35s %-20s \n", 'User badge granted: ', badge['name']
+            @man.discourse.options[:logger].info granted_badge
+            # printf "%-35s %-20s \n", 'User badge granted: ', badge['name']
           end
         end
       end
@@ -223,8 +226,11 @@ module MomentumApi
 
     def print_scored_user(current_voter_points, existing_value, max_points_possible, poll, user_badge_level)
       field_settings = "%-18s %-20s %-35s %-5s %-2s %-7s %-20s\n"
-      printf field_settings, 'User', 'Poll', 'Last Saved Score', 'Score', '/', 'Max', 'Badge'
-      printf field_settings, @man.user_details['username'], poll['name'], existing_value, current_voter_points, '/', max_points_possible, user_badge_level
+      heading = sprintf field_settings, 'User', 'Poll', 'Last Saved Score', 'Score', '/', 'Max', 'Badge'
+      body = sprintf field_settings, @man.user_details['username'], poll['name'], existing_value,
+                     current_voter_points, '/', max_points_possible, user_badge_level
+      @man.discourse.options[:logger].info heading
+      @man.discourse.options[:logger].info body
     end
 
     def zero_poll_counters
@@ -250,9 +256,14 @@ module MomentumApi
       post = nil
       begin
         post = @man.user_client.get_post(@options[:target_post])
+
       rescue DiscourseApi::TooManyRequests
         puts 'TooManyRequests: Sleeping for 30 seconds ....'
         @mock ? sleep(0) : sleep(30)
+        post = get_poll_post
+      rescue DiscourseApi::Error
+        puts 'Basic DiscourseApi::Error: Sleeping for 1 minute ....'
+        @mock ? sleep(0) : sleep(60)
         post = get_poll_post
       end
       @mock ? sleep(0) : sleep(1)
@@ -268,6 +279,10 @@ module MomentumApi
       rescue DiscourseApi::TooManyRequests
         puts 'TooManyRequests: Sleeping for 30 seconds ....'
         @mock ? sleep(0) : sleep(30)
+        poll_option_votes = has_man_voted?(poll)
+      rescue DiscourseApi::Error
+        puts 'Basic DiscourseApi::Error: Sleeping for 1 minute ....'
+        @mock ? sleep(0) : sleep(60)
         poll_option_votes = has_man_voted?(poll)
       end
       @mock ? sleep(0) : sleep(1)

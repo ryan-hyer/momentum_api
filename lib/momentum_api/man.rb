@@ -69,14 +69,16 @@ module MomentumApi
 
       field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
 
-      printf field_settings, user_label,
+      heading = sprintf field_settings, user_label,
              user_option_print[0], user_option_print[1], user_option_print[2],
              user_option_print[3], user_option_print[4], user_option_print[5]
 
-      printf field_settings, user_details['username'],
+      body = sprintf field_settings, user_details['username'],
              user_details[user_option_print[0].to_s].to_s[0..9], user_details[user_option_print[1].to_s].to_s[0..9],
              user_details[user_option_print[2].to_s], user_details[user_option_print[3].to_s],
              user_details[user_option_print[4].to_s], pos_5
+      @discourse.options[:logger].info heading
+      @discourse.options[:logger].info body
     end
 
   end

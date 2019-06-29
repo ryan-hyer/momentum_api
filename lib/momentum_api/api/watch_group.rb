@@ -65,8 +65,10 @@ module MomentumApi
 
     def print_user(man, category_slug, group_name, notify_level, status='', type='UserName')
       field_settings = "%-18s %-20s %-20s %-10s %-30s\n"
-      printf field_settings, type, 'Group', 'Category', 'Level', 'Status'
-      printf field_settings, man.user_details['username'], group_name, category_slug, notify_level.to_s.center(5), status
+      heading = sprintf field_settings, type, 'Group', 'Category', 'Level', 'Status'
+      body = sprintf field_settings, man.user_details['username'], group_name, category_slug, notify_level.to_s.center(5), status
+      man.discourse.options[:logger].info heading
+      man.discourse.options[:logger].info body
     end
 
     def zero_notifications_counters

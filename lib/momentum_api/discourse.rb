@@ -104,12 +104,13 @@ module MomentumApi
 
     def scan_summary
 
-      field_settings = "%-35s %-20s \n"
+      field_settings = "%-35s %-20s"
 
       @scan_pass_counters.each do |score|
-        printf "\n\n"
+        printf "\n"
         score.each do |key, value|
-          printf field_settings, key.to_s, value
+          summary_detail = sprintf field_settings, key.to_s, value
+          @options[:logger].info summary_detail
         end
       end
     end

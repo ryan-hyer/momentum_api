@@ -1,0 +1,28 @@
+I, [19-06-29 12:15:47#88720]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-06-29 12:34:43#88720]  INFO -- : Pass 1 complete. Waiting 5 minutes ...
+I, [19-06-29 12:39:43#88720]  INFO -- : ... Exiting ...
+I, [19-06-29 12:39:43#88720]  INFO -- : Discourse Men                                           
+I, [19-06-29 12:39:43#88720]  INFO -- : Processed Users                     166                 
+I, [19-06-29 12:39:43#88720]  INFO -- : Skipped Users                       0                   
+I, [19-06-29 12:39:43#88720]  INFO -- : Messages Sent                       0                   
+I, [19-06-29 12:39:43#88720]  INFO -- : User Scores                                             
+I, [19-06-29 12:39:43#88720]  INFO -- : New Vote Targets                    0                   
+I, [19-06-29 12:39:43#88720]  INFO -- : New User Scores                     0                   
+I, [19-06-29 12:39:43#88720]  INFO -- : Updated User Scores                 0                   
+I, [19-06-29 12:39:43#88720]  INFO -- : New User Badges                     42                  
+I, [19-06-29 12:39:43#88720]  INFO -- : Not Voted Targets                   0                   
+I, [19-06-29 12:39:43#88720]  INFO -- : Messages Sent                       0                   
+I, [19-06-29 12:39:43#88720]  INFO -- : Watch Groups                                            
+I, [19-06-29 12:39:43#88720]  INFO -- : User Groups                         1157                
+I, [19-06-29 12:39:43#88720]  INFO -- : Group Update Targets                0                   
+I, [19-06-29 12:39:43#88720]  INFO -- : Group Notify Updated                0                   
+I, [19-06-29 12:39:43#88720]  INFO -- : Watch Categories                                        
+I, [19-06-29 12:39:43#88720]  INFO -- : User Categories                     677                 
+I, [19-06-29 12:39:43#88720]  INFO -- : Category Update Targets             0                   
+I, [19-06-29 12:39:43#88720]  INFO -- : Category Notify Updated             0                   
+I, [19-06-29 12:39:43#88720]  INFO -- : Downgrade Trust                                         
+I, [19-06-29 12:39:43#88720]  INFO -- : Users                               0                   
+I, [19-06-29 12:39:43#88720]  INFO -- : User Trust Targets                  0                   
+I, [19-06-29 12:39:43#88720]  INFO -- : User Trust Updated                  0                   
+I, [19-06-29 13:07:03#90232]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-06-29 13:11:36#90634]  INFO -- : Scanning ["trust_level_1"] Users for Tasks

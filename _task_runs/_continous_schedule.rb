@@ -1,15 +1,17 @@
+require_relative 'log/utility'
 require '../lib/momentum_api'
 
-@scan_passes_end                =   60
+@scan_passes_end                =   1
 
 discourse_options = {
     do_live_updates:                true,
-    # target_username:              'David_Ashby',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby KM_Admin
+    # target_username:                'Kim_Miller',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby KM_Admin
     target_groups:                  %w(trust_level_1),   # Mods GreatX BraveHearts trust_level_0 trust_level_1
     instance:                       'live',
     api_username:                   'KM_Admin',
     exclude_users:                  %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
-    issue_users:                    %w()
+    issue_users:                    %w(),
+    logger:                         momentum_api_logger
 }
 
 schedule_options = {
@@ -64,30 +66,29 @@ schedule_options = {
 
 def scan_hourly
 
-  printf "%s\n", "Scanning #{@discourse.options[:target_groups]} Users for Tasks"
   @discourse.apply_to_users
   @scan_passes += 1
-  printf "\n%s\n", "Pass #{@scan_passes} complete. Waiting 5 minutes ..."
-  sleep 5 * 60
+  sleep_minutes = 5
+  @discourse.options[:logger].info "Pass #{@scan_passes} complete for #{@discourse.counters[:'Processed Users']} users,
+      #{@discourse.counters[:'Skipped Users']} skipped. Waiting #{sleep_minutes} minutes ..."
+  sleep sleep_minutes * 60
 
   if @scan_passes < @scan_passes_end
     @discourse.counters[:'Processed Users'], @discourse.counters[:'Skipped Users'] = 0, 0
     scan_hourly
   else
-    printf "%s\n", '... Exiting ...'
+    @discourse.options[:logger].info "... Exiting ..."
   end
 
 end
 
 @discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
 
-printf "\n%s\n\n", 'Starting Scan ...'
+printf "\n%s\n\n", "#{Time.now.strftime('%y%m%d%H%M')} Starting Scan ..."
+@discourse.options[:logger].info "Scanning #{@discourse.options[:target_groups]} Users for Tasks"
 
 scan_hourly
-
 @discourse.scan_summary
-
-# todo save log to disk
 
 # Jun 25, 2019
 # Scanning ["trust_level_1"] Users for Tasks
