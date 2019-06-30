@@ -25,7 +25,7 @@ describe MomentumApi::Poll do
 
   let(:mock_schedule) do
     mock_schedule = instance_double('schedule')
-    expect(mock_schedule).to receive(:discourse).once.and_return(mock_discourse)
+    expect(mock_schedule).to receive(:discourse).twice.and_return(mock_discourse)
     mock_schedule
   end
 
@@ -49,11 +49,16 @@ describe MomentumApi::Poll do
       mock_discourse
     end
 
+    let(:mock_schedule) do
+      mock_schedule = instance_double('schedule')
+      expect(mock_schedule).to receive(:discourse).exactly(3).times.and_return(mock_discourse)
+      mock_schedule
+    end
+
     let(:mock_man) do
       mock_man = instance_double('man')
       expect(mock_man).to receive(:user_details).exactly(7).times.and_return(user_details)
       expect(mock_man).to receive(:user_client).twice.and_return(mock_user_client)
-      expect(mock_man).to receive(:discourse).exactly(2).times.and_return(mock_discourse)
       mock_man
     end
 
@@ -109,9 +114,14 @@ describe MomentumApi::Poll do
           mock_discourse
         end
 
+        let(:mock_schedule) do
+          mock_schedule = instance_double('schedule')
+          expect(mock_schedule).to receive(:discourse).exactly(4).times.and_return(mock_discourse)
+          mock_schedule
+        end
+
         let(:mock_man) do
           mock_man = instance_double('man')
-          expect(mock_man).to receive(:discourse).exactly(3).times.and_return(mock_discourse)
           expect(mock_man).to receive(:user_details).exactly(5).times.and_return(poll_voter_existing)
           expect(mock_man).to receive(:user_client).twice.and_return(mock_user_client)
           mock_man
@@ -153,9 +163,14 @@ describe MomentumApi::Poll do
           mock_user_client
         end
 
+        let(:mock_schedule) do
+          mock_schedule = instance_double('schedule')
+          expect(mock_schedule).to receive(:discourse).exactly(3).times.and_return(mock_discourse)
+          mock_schedule
+        end
+
         let(:mock_man) do
           mock_man = instance_double('man')
-          expect(mock_man).to receive(:discourse).twice.and_return(mock_discourse)
           expect(mock_man).to receive(:user_details).exactly(5).times.and_return(poll_voter_existing)
           expect(mock_man).to receive(:user_client).twice.and_return(mock_user_client)
           mock_man
@@ -190,9 +205,14 @@ describe MomentumApi::Poll do
           mock_discourse
         end
 
+        let(:mock_schedule) do
+          mock_schedule = instance_double('schedule')
+          expect(mock_schedule).to receive(:discourse).exactly(5).times.and_return(mock_discourse)
+          mock_schedule
+        end
+
         let(:mock_man) do
           mock_man = instance_double('man')
-          expect(mock_man).to receive(:discourse).exactly(4).times.and_return(mock_discourse)
           expect(mock_man).to receive(:user_details).exactly(7).times.and_return(poll_voter_new)
           expect(mock_man).to receive(:user_client).twice.and_return(mock_user_client)
           expect(mock_man).to receive(:print_user_options).once
@@ -218,9 +238,14 @@ describe MomentumApi::Poll do
           mock_discourse
         end
 
+        let(:mock_schedule) do
+          mock_schedule = instance_double('schedule')
+          expect(mock_schedule).to receive(:discourse).exactly(2).times.and_return(mock_discourse)
+          mock_schedule
+        end
+        
         let(:mock_man) do
           mock_man = instance_double('man')
-          expect(mock_man).to receive(:discourse).once.and_return(mock_discourse)
           expect(mock_man).to receive(:user_details).exactly(4).times.and_return(poll_voter_new)
           expect(mock_man).to receive(:user_client).twice.and_return(mock_user_client)
           mock_man
@@ -258,14 +283,19 @@ describe MomentumApi::Poll do
 
         let(:mock_discourse) do
           mock_discourse = instance_double('discourse')
-          expect(mock_discourse).to receive(:options).once.and_return(discourse_options)
+          expect(mock_discourse).to receive(:options).exactly(2).times.and_return(discourse_options)
           expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
           mock_discourse
         end
 
+        let(:mock_schedule) do
+          mock_schedule = instance_double('schedule')
+          expect(mock_schedule).to receive(:discourse).exactly(3).times.and_return(mock_discourse)
+          mock_schedule
+        end
+
         let(:mock_man) do
           mock_man = instance_double('man')
-          expect(mock_man).to receive(:discourse).once.and_return(mock_discourse)
           expect(mock_man).to receive(:user_details).exactly(5).times.and_return(poll_voter_new)
           expect(mock_man).to receive(:user_client).exactly(3).times.and_return(mock_user_client)
           mock_man
@@ -302,14 +332,19 @@ describe MomentumApi::Poll do
 
         let(:mock_discourse) do
           mock_discourse = instance_double('discourse')
-          expect(mock_discourse).to receive(:options).once.and_return(discourse_options)
+          expect(mock_discourse).to receive(:options).exactly(2).times.and_return(discourse_options)
           expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
           mock_discourse
         end
 
+        let(:mock_schedule) do
+          mock_schedule = instance_double('schedule')
+          expect(mock_schedule).to receive(:discourse).exactly(3).times.and_return(mock_discourse)
+          mock_schedule
+        end
+
         let(:mock_man) do
           mock_man = instance_double('man')
-          expect(mock_man).to receive(:discourse).once.and_return(mock_discourse)
           expect(mock_man).to receive(:user_details).exactly(4).times.and_return(poll_voter_new)
           expect(mock_man).to receive(:user_client).exactly(3).times.and_return(mock_user_client)
           mock_man
@@ -344,10 +379,16 @@ describe MomentumApi::Poll do
 
         let(:mock_discourse) do
           mock_discourse = instance_double('discourse')
-          expect(mock_discourse).to receive(:options).exactly(3).times.and_return(options_do_live_updates)
+          expect(mock_discourse).to receive(:options).exactly(4).times.and_return(options_do_live_updates)
           expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
           expect(mock_discourse).to receive(:admin_client).exactly(4).times.and_return(mock_admin_client)
           mock_discourse
+        end
+
+        let(:mock_schedule) do
+          mock_schedule = instance_double('schedule')
+          expect(mock_schedule).to receive(:discourse).exactly(9).times.and_return(mock_discourse)
+          mock_schedule
         end
 
         let(:mock_user_client) do
@@ -359,7 +400,6 @@ describe MomentumApi::Poll do
         
         let(:mock_man) do
           mock_man = instance_double('man')
-          expect(mock_man).to receive(:discourse).exactly(7).times.and_return(mock_discourse)
           expect(mock_man).to receive(:user_details).exactly(10).times.and_return(poll_voter_new)
           expect(mock_man).to receive(:user_client).twice.and_return(mock_user_client)
           expect(mock_man).to receive(:print_user_options).twice
@@ -396,6 +436,11 @@ describe MomentumApi::Poll do
       mock_user_client
     end
 
+    let(:mock_schedule) do
+      mock_schedule = instance_double('schedule')
+      expect(mock_schedule).to receive(:discourse).once.and_return(mock_discourse)
+      mock_schedule
+    end
 
     describe '.run should init and send_private_message' do
 
@@ -411,7 +456,6 @@ describe MomentumApi::Poll do
         mock_dependencies = instance_double('mock_dependencies')
         expect(mock_dependencies).to receive(:send_private_message).once
                                          .with(mock_man, any_args)
-                                         # .with(mock_man, any_args, /What's Your Score?/)
         mock_dependencies
       end
 
@@ -497,9 +541,10 @@ describe MomentumApi::Poll do
       let(:mock_discourse) do
         mock_discourse = instance_double('discourse')
         expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
+        expect(mock_discourse).to receive(:options).once.and_return(discourse_options)
         mock_discourse
       end
-
+      
       let(:mock_man) do
         mock_man = instance_double('man')
         expect(mock_man).to receive(:user_details).twice.and_return(user_details)
@@ -529,6 +574,18 @@ describe MomentumApi::Poll do
         mock_discourse = instance_double('discourse')
         expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
         mock_discourse
+      end
+
+      let(:mock_schedule) do
+        mock_schedule = instance_double('schedule')
+        expect(mock_schedule).to receive(:discourse).once.and_return(mock_discourse)
+        mock_schedule
+      end
+
+      let(:mock_man) do
+        mock_man = instance_double('man')
+        expect(mock_man).to receive(:discourse).exactly(2).times.and_return(mock_discourse)
+        mock_man
       end
 
       let(:poll) { MomentumApi::Poll.new(mock_schedule, options_have_voted, mock: mock_dependencies) }
@@ -561,9 +618,28 @@ describe MomentumApi::Poll do
         poll.update_user_profile_badges(1015)
       end
 
-      it 'errors on invalud score' do
-        expect { poll.update_user_profile_badges('abc') }
-            .to output(/Error/).to_stdout
+      context 'invalid score' do
+
+        let(:mock_discourse) do
+          mock_discourse = instance_double('discourse')
+          expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
+          expect(mock_discourse).to receive(:options).once.and_return(discourse_options)
+          mock_discourse
+        end
+
+        let(:mock_schedule) do
+          mock_schedule = instance_double('schedule')
+          expect(mock_schedule).to receive(:discourse).twice.and_return(mock_discourse)
+          mock_schedule
+        end
+
+        let(:poll) { MomentumApi::Poll.new(mock_schedule, options_have_voted, mock: mock_dependencies) }
+
+        it 'errors on invalid score' do
+          expect { poll.update_user_profile_badges('abc') }
+              .to output(/Error/).to_stdout
+        end
+
       end
 
     end

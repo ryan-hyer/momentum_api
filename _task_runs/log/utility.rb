@@ -20,5 +20,3 @@ def momentum_api_logger
   logger.datetime_format = "%y-%m-%d %H:%M:%S"
   logger
 end
-
-# momentum_api_logger

@@ -17,6 +17,10 @@ class MockLogger
     # @targets = targets
   end
 
+  def warn(to_stand_out)
+    puts to_stand_out
+  end
+
   def info(to_stand_out)
     puts to_stand_out
   end

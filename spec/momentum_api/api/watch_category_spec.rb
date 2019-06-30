@@ -70,7 +70,7 @@ describe MomentumApi::WatchCategory do
         mock_man = instance_double('man')
         expect(mock_man).to receive(:user_details).once.and_return(user_details)
         expect(mock_man).to receive(:user_client).twice.and_return(mock_user_client)
-        expect(mock_man).to receive(:discourse).exactly(2).times.and_return(mock_discourse)
+        expect(mock_man).to receive(:discourse).exactly(4).times.and_return(mock_discourse)
         mock_man
       end
       
@@ -79,7 +79,7 @@ describe MomentumApi::WatchCategory do
 
       let(:mock_discourse) do
         mock_discourse = instance_double('discourse')
-        expect(mock_discourse).to receive(:options).exactly(3).times.and_return(options_do_live_updates)
+        expect(mock_discourse).to receive(:options).exactly(5).times.and_return(options_do_live_updates)
         expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
         mock_discourse
       end

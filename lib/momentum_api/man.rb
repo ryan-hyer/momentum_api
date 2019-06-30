@@ -20,9 +20,9 @@ module MomentumApi
         @mock ? sleep(0) : sleep(1)
       rescue DiscourseApi::UnauthenticatedError
         @users_categories = nil
-        puts "\n#{user_details['username']} : DiscourseApi::UnauthenticatedError - Not permitted to view resource.\n"
+        @discourse.options[:logger].warn "#{user_details['username']} : DiscourseApi::UnauthenticatedError - Not permitted to view resource."
       rescue DiscourseApi::TooManyRequests
-        puts 'Sleeping for 20 seconds ....'
+        @discourse.options[:logger].warn 'Sleeping for 20 seconds ....'
         @mock ? sleep(0) : sleep(20)
         @users_categories = @user_client.categories
       end
@@ -67,7 +67,8 @@ module MomentumApi
 
     def print_user_options(user_details, user_option_print, user_label='UserName', pos_5=user_details[user_option_print[5].to_s])
 
-      field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
+      field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s"
+      # field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s\n"
 
       heading = sprintf field_settings, user_label,
              user_option_print[0], user_option_print[1], user_option_print[2],

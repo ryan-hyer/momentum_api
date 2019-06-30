@@ -26,9 +26,9 @@ module MomentumApi
         @from_username = 'KM_Admin'
       end
 
-      field_settings = "%-18s %-20s %-20s %-55s %-25s %-25s\n"
-      message_detail = sprintf field_settings, '  Message From:', @from_username, to_username,
-             message_subject, message_body[0..20], 'Pending'
+      field_settings = "%-18s %-20s %-20s %-55s %-25s %-25s"
+      # field_settings = "%-18s %-20s %-20s %-55s %-25s %-25s\n"
+      message_detail = sprintf field_settings, '  Message From:', @from_username, to_username, message_subject, message_body[0..20], 'Pending'
       man.discourse.options[:logger].info message_detail
 
       if man.discourse.options[:do_live_updates]
@@ -43,8 +43,7 @@ module MomentumApi
 
         # check if message sent - may be commented out
         created_message = from_client.get_post(response['id'])
-        sent_message_detail = sprintf field_settings, '  Message From:', created_message['username'], to_username,
-               created_message['topic_slug'], created_message['raw'][0..20], 'Sent'
+        sent_message_detail = sprintf field_settings, '  Message From:', created_message['username'], to_username, created_message['topic_slug'], created_message['raw'][0..20], 'Sent'
         man.discourse.options[:logger].info sent_message_detail
 
         @requestor.counters[:'Messages Sent'] += 1

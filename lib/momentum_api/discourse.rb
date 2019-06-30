@@ -49,7 +49,7 @@ module MomentumApi
         user_details = @admin_client.user(group_member['username'])
         @mock ? sleep(0) : sleep(2)
       rescue DiscourseApi::TooManyRequests
-        puts 'TooManyRequests: Sleeping for 20 seconds ....'
+        @options[:logger].warn 'TooManyRequests: Sleeping for 20 seconds ....'
         @mock ? sleep(0) : sleep(20)
         user_details = @admin_client.user(group_member['username'])
       end
@@ -107,7 +107,7 @@ module MomentumApi
       field_settings = "%-35s %-20s"
 
       @scan_pass_counters.each do |score|
-        printf "\n"
+        @options[:logger].info "\n"
         score.each do |key, value|
           summary_detail = sprintf field_settings, key.to_s, value
           @options[:logger].info summary_detail

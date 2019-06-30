@@ -1,7 +1,7 @@
 require_relative 'log/utility'
 require '../lib/momentum_api'
 
-@scan_passes_end                =   1
+@scan_passes_end                =   20
 
 discourse_options = {
     do_live_updates:                true,
@@ -69,8 +69,7 @@ def scan_hourly
   @discourse.apply_to_users
   @scan_passes += 1
   sleep_minutes = 5
-  @discourse.options[:logger].info "Pass #{@scan_passes} complete for #{@discourse.counters[:'Processed Users']} users,
-      #{@discourse.counters[:'Skipped Users']} skipped. Waiting #{sleep_minutes} minutes ..."
+  @discourse.options[:logger].info "Pass #{@scan_passes} complete for #{@discourse.counters[:'Processed Users']} users, #{@discourse.counters[:'Skipped Users']} skipped. Waiting #{sleep_minutes} minutes ..."
   sleep sleep_minutes * 60
 
   if @scan_passes < @scan_passes_end
@@ -84,7 +83,7 @@ end
 
 @discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
 
-printf "\n%s\n\n", "#{Time.now.strftime('%y%m%d%H%M')} Starting Scan ..."
+# printf "\n%s\n\n", "#{Time.now.strftime('%y%m%d%H%M')} Starting Scan ..."
 @discourse.options[:logger].info "Scanning #{@discourse.options[:target_groups]} Users for Tasks"
 
 scan_hourly

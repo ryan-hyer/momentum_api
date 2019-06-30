@@ -43,7 +43,8 @@ module MomentumApi
               if @schedule.discourse.options[:do_live_updates]
                 response = @schedule.discourse.admin_client.group_set_user_notify_level(group['name'], man.user_details['id'], set_notification_level)
                 @mock ? sleep(0) : sleep(1)
-                puts response
+                man.discourse.options[:logger].info response
+                # puts response
                 @counters[:'Group Notify Updated'] += 1
 
                 # check if update happened ... or ... comment out for no check after update
@@ -51,7 +52,9 @@ module MomentumApi
                 @mock ? sleep(0) : sleep(1)
                 user_details_after_update.each do |users_group_second_pass| # uncomment to check for the update
                   if users_group_second_pass['group_id'] == users_group['group_id']
-                    puts "Updated Group: #{group['name']}    Notification Level: #{users_group_second_pass['notification_level']}    Set Level: #{set_notification_level}"
+                    # puts "Updated Group: #{group['name']}    Notification Level: #{users_group_second_pass['notification_level']}    Set Level: #{set_notification_level}"
+                    print_user(man, 'na', group['name'], users_group_second_pass['notification_level'],
+                               status="User set to #{set_notification_level}", type='UpdatedUser')
                   end
                 end
               end
@@ -64,7 +67,8 @@ module MomentumApi
     end
 
     def print_user(man, category_slug, group_name, notify_level, status='', type='UserName')
-      field_settings = "%-18s %-20s %-20s %-10s %-30s\n"
+      field_settings = "%-18s %-20s %-20s %-10s %-30s"
+      # field_settings = "%-18s %-20s %-20s %-10s %-30s\n"
       heading = sprintf field_settings, type, 'Group', 'Category', 'Level', 'Status'
       body = sprintf field_settings, man.user_details['username'], group_name, category_slug, notify_level.to_s.center(5), status
       man.discourse.options[:logger].info heading

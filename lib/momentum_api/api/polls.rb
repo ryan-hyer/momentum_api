@@ -7,24 +7,24 @@ module MomentumApi
       raise ArgumentError, 'schedule needs to be defined' if schedule.nil?
       raise ArgumentError, 'poll_options needs to be defined' if poll_options.nil? || poll_options.empty?
 
+      # parameter setting
+      @schedule               =   schedule
+      @options                =   poll_options
+      @mock                   =   mock
+
+      @message_client         =   mock || MomentumApi::Messages.new(self, poll_options[:messages_from])
 
       # poll settings
-      @points_multiplier      = 1.13
-      @emails_from_username   = 'Kim_Miller'
+      @points_multiplier      =   1.13
+      @emails_from_username   =   'Kim_Miller'
 
       # counter init
-      @counters               = {'User Scores': ''}
+      @counters               =   {'User Scores': ''}
       schedule.discourse.scan_pass_counters << @counters
 
-      # parameter setting
-      @options                = poll_options
-      @message_client         = mock || MomentumApi::Messages.new(self, poll_options[:messages_from])
-
       # user score saving
-      @user_fields            = 'user_fields'
-      @user_score_field       = '5'
-
-      @mock                   = mock
+      @user_fields            =   'user_fields'
+      @user_score_field       =   '5'
 
       zero_poll_counters
 
@@ -42,7 +42,7 @@ module MomentumApi
         begin
           post = get_poll_post
         rescue DiscourseApi::UnauthenticatedError
-          puts "#{man.user_details['username']} does not have access to Poll Post."
+          @schedule.discourse.options[:logger].warn "#{man.user_details['username']} does not have access to Poll Post."
           return 'UnauthenticatedError'
         end
         @mock ? sleep(0) : sleep(1)
@@ -71,7 +71,7 @@ module MomentumApi
                   if @options[:update_type] == 'have_voted' or @options[:update_type] == 'all'
                     print_scored_user(current_voter_points, existing_value, max_points_possible, poll, user_badge_level)
                     send_voted_message(current_voter_points, max_points_possible, user_badge_level)
-                    printf "\n"
+                    # printf "\n"
                   end
                 else
                   # new vote
@@ -79,7 +79,7 @@ module MomentumApi
                   update_user_profile_score(current_voter_points)
                   print_scored_user(current_voter_points, existing_value, max_points_possible, poll, user_badge_level)
                   send_voted_message(current_voter_points, max_points_possible, user_badge_level)
-                  printf "\n"
+                  # printf "\n"
                 end
               end
 
@@ -90,7 +90,7 @@ module MomentumApi
                 not_voted = sprintf "%-18s %-20s\n", @man.user_details['username'], 'has not voted yet'
                 man.discourse.options[:logger].info not_voted
                 send_not_voted_message
-                printf "\n"
+                # printf "\n"
               end
               # next
             end
@@ -147,16 +147,17 @@ module MomentumApi
       @man.print_user_options(@man.user_details, user_option_print, user_label='UserName',
                               pos_5=@man.user_details[@user_fields][@user_score_field])
 
-      if @man.discourse.options[:do_live_updates]
-        update_response = @man.discourse.admin_client.update_user(
+      if @schedule.discourse.options[:do_live_updates]
+        update_response = @schedule.discourse.admin_client.update_user(
             @man.user_details['username'], {"#{@user_fields}": {"#{@user_score_field}": current_voter_points}})
         # update_response = @man.user_client.update_user(
         #     @man.user_details['username'], {"#{@user_fields}": {"#{@user_score_field}": current_voter_points}})
-        puts update_response[:body]['success']
+        @schedule.discourse.options[:logger].warn "Success: #{update_response[:body]['success']}"
+        # @schedule.discourse.options[:logger].warn update_response[:body]['success']
         @counters[:'Updated User Scores'] += 1
 
         # check if update happened
-        user_details_after_update = @man.discourse.admin_client.user(@man.user_details['username'])
+        user_details_after_update = @schedule.discourse.admin_client.user(@man.user_details['username'])
         @man.print_user_options(user_details_after_update, user_option_print, user_label='UserName',
                            pos_5=user_details_after_update[@user_fields][@user_score_field])
         @mock ? sleep(0) : sleep(1)
@@ -164,8 +165,8 @@ module MomentumApi
     end
 
     def update_badge(target_badge_name, badge_id)
-      if @man.discourse.options[:do_live_updates]
-        current_badges = @man.discourse.admin_client.user_badges(@man.user_details['username'])
+      if @schedule.discourse.options[:do_live_updates]
+        current_badges = @schedule.discourse.admin_client.user_badges(@man.user_details['username'])
         has_target_badge = false
         current_badges.each do |current_badge|
           if current_badge['name'] == target_badge_name
@@ -176,13 +177,13 @@ module MomentumApi
           # puts 'User already has badge'
         else
           # puts 'about to post'
-          post_response = @man.discourse.admin_client.grant_user_badge(
+          post_response = @schedule.discourse.admin_client.grant_user_badge(
               username: @man.user_details['username'], badge_id: badge_id, reason: @options[:poll_url])
           # puts "User badges granted:"
           post_response.each do |badge|
             # puts @man.user_details['username']
             granted_badge = sprintf "%-35s %-20s \n", 'User badge granted: ', badge['name']
-            @man.discourse.options[:logger].info granted_badge
+            @schedule.discourse.options[:logger].info granted_badge
             # printf "%-35s %-20s \n", 'User badge granted: ', badge['name']
           end
         end
@@ -216,7 +217,7 @@ module MomentumApi
         # puts target_badge_name
         update_badge(target_badge_name, 113)
       else
-        puts "Error: current_voter_points has an invalid value (#{current_voter_points})"
+        @schedule.discourse.options[:logger].warn "Error: current_voter_points has an invalid value (#{current_voter_points})"
       end
 
       target_badge_name
@@ -225,12 +226,13 @@ module MomentumApi
 
 
     def print_scored_user(current_voter_points, existing_value, max_points_possible, poll, user_badge_level)
-      field_settings = "%-18s %-20s %-35s %-5s %-2s %-7s %-20s\n"
+      field_settings = "%-18s %-20s %-35s %-5s %-2s %-7s %-20s"
+      # field_settings = "%-18s %-20s %-35s %-5s %-2s %-7s %-20s\n"
       heading = sprintf field_settings, 'User', 'Poll', 'Last Saved Score', 'Score', '/', 'Max', 'Badge'
       body = sprintf field_settings, @man.user_details['username'], poll['name'], existing_value,
                      current_voter_points, '/', max_points_possible, user_badge_level
-      @man.discourse.options[:logger].info heading
-      @man.discourse.options[:logger].info body
+      @schedule.discourse.options[:logger].info heading
+      @schedule.discourse.options[:logger].info body
     end
 
     def zero_poll_counters
@@ -258,11 +260,11 @@ module MomentumApi
         post = @man.user_client.get_post(@options[:target_post])
 
       rescue DiscourseApi::TooManyRequests
-        puts 'TooManyRequests: Sleeping for 30 seconds ....'
+        @schedule.discourse.options[:logger].warn 'TooManyRequests: Sleeping for 30 seconds ....'
         @mock ? sleep(0) : sleep(30)
         post = get_poll_post
       rescue DiscourseApi::Error
-        puts 'Basic DiscourseApi::Error: Sleeping for 1 minute ....'
+        @schedule.discourse.options[:logger].warn 'Basic DiscourseApi::Error: Sleeping for 1 minute ....'
         @mock ? sleep(0) : sleep(60)
         post = get_poll_post
       end
@@ -277,11 +279,11 @@ module MomentumApi
       rescue DiscourseApi::UnprocessableEntity # voter has not voted
         poll_option_votes = nil
       rescue DiscourseApi::TooManyRequests
-        puts 'TooManyRequests: Sleeping for 30 seconds ....'
+        @schedule.discourse.options[:logger].warn 'TooManyRequests: Sleeping for 30 seconds ....'
         @mock ? sleep(0) : sleep(30)
         poll_option_votes = has_man_voted?(poll)
       rescue DiscourseApi::Error
-        puts 'Basic DiscourseApi::Error: Sleeping for 1 minute ....'
+        @schedule.discourse.options[:logger].warn 'Basic DiscourseApi::Error: Sleeping for 1 minute ....'
         @mock ? sleep(0) : sleep(60)
         poll_option_votes = has_man_voted?(poll)
       end

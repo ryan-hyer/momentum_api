@@ -60,7 +60,7 @@ describe MomentumApi::DowngradeTrust do
 
       let(:mock_discourse) do
         mock_discourse = instance_double('discourse')
-        expect(mock_discourse).to receive(:options).twice.and_return(discourse_options)
+        expect(mock_discourse).to receive(:options).exactly(2).times.and_return(discourse_options)
         expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
         mock_discourse
       end
@@ -98,6 +98,7 @@ describe MomentumApi::DowngradeTrust do
 
       let(:mock_man) do
         mock_man = instance_double('man')
+        expect(mock_man).to receive(:discourse).exactly(1).times.and_return(mock_discourse)
         expect(mock_man).to receive(:user_details).exactly(5).times.and_return(user_details_owner)
         expect(mock_man).to receive(:is_owner).exactly(1).times.and_return false
         expect(mock_man).to receive(:print_user_options).exactly(2).times
@@ -110,7 +111,7 @@ describe MomentumApi::DowngradeTrust do
       let(:mock_discourse) do
         mock_discourse = instance_double('discourse')
         expect(mock_discourse).to receive(:admin_client).twice.and_return(mock_admin_client)
-        expect(mock_discourse).to receive(:options).twice.and_return(options_do_live_updates)
+        expect(mock_discourse).to receive(:options).exactly(3).times.and_return(options_do_live_updates)
         expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
         mock_discourse
       end

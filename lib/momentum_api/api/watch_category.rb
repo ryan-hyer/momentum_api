@@ -28,7 +28,7 @@ module MomentumApi
         if @schedule.discourse.options[:do_live_updates]
           update_response = man.user_client.category_set_user_notification(id: category['id'], notification_level: levels[:set_level])
           @mock ? sleep(0) : sleep(1)
-          puts update_response
+          man.discourse.options[:logger].warn update_response
           @counters[:'Category Notify Updated'] += 1
 
           # check if update happened ... or ... comment out for no check after update
@@ -37,7 +37,7 @@ module MomentumApi
           user_details_after_update.each do |users_category_second_pass|
             new_category_slug = users_category_second_pass['slug']
             if category['slug'] == new_category_slug
-              puts "Updated Category: #{new_category_slug}    Notification Level: #{users_category_second_pass['notification_level']}\n"
+              man.discourse.options[:logger].warn "Updated Category: #{new_category_slug}    Notification Level: #{users_category_second_pass['notification_level']}"
             end
           end
         end
@@ -50,7 +50,8 @@ module MomentumApi
     end
     
     def print_user(man, category_slug, group_name, notify_level, status='', type='UserName')
-      field_settings = "%-18s %-20s %-20s %-10s %-30s\n"
+      field_settings = "%-18s %-20s %-20s %-10s %-30s"
+      # field_settings = "%-18s %-20s %-20s %-10s %-30s\n"
       heading = sprintf field_settings, type, 'Group', 'Category', 'Level', 'Status'
       body = sprintf field_settings, man.user_details['username'], group_name, category_slug, notify_level.to_s.center(5), status
       man.discourse.options[:logger].info heading

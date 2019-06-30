@@ -45,7 +45,7 @@ module MomentumApi
 
             update_response = @schedule.discourse.admin_client.update_trust_level(
                 user_id: man.user_details['id'], level: @options[:downgrade_non_owner_trust][:set_level])
-            puts "#{update_response['admin_user']['username']} Updated"
+            man.discourse.options[:logger].warn "#{update_response['admin_user']['username']} Downgraded"
             @counters[:'User Trust Updated'] += 1
 
             # check if update happened
