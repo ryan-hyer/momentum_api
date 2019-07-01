@@ -14,17 +14,15 @@ module MomentumApi
 
       @message_client         =   mock || MomentumApi::Messages.new(self, poll_options[:messages_from])
 
-      # poll settings
-      @points_multiplier      =   1.13
-      @emails_from_username   =   'Kim_Miller'
-
       # counter init
       @counters               =   {'User Scores': ''}
       schedule.discourse.scan_pass_counters << @counters
 
-      # user score saving
+      # poll settings                           todo move params into poll options hash
+      @points_multiplier      =   1.13
       @user_fields            =   'user_fields'
       @user_score_field       =   '5'
+      # @emails_from_username   =   'Kim_Miller'
 
       zero_poll_counters
 
@@ -79,7 +77,6 @@ module MomentumApi
                   update_user_profile_score(current_voter_points)
                   print_scored_user(current_voter_points, existing_value, max_points_possible, poll, user_badge_level)
                   send_voted_message(current_voter_points, max_points_possible, user_badge_level)
-                  # printf "\n"
                 end
               end
 
@@ -87,10 +84,9 @@ module MomentumApi
               # user has not voted
               if @options[:update_type] == 'not_voted' or @options[:update_type] == 'all'
                 @counters[:'Not Voted Targets'] += 1
-                not_voted = sprintf "%-18s %-20s\n", @man.user_details['username'], 'has not voted yet'
+                not_voted = sprintf "%-18s %-20s", @man.user_details['username'], 'has not voted yet'
                 man.discourse.options[:logger].info not_voted
                 send_not_voted_message
-                # printf "\n"
               end
               # next
             end
@@ -108,9 +104,9 @@ module MomentumApi
 
     def send_not_voted_message
       # message_subject = "What's Your Score? Please Take Your User Quiz and Find Out!"
-      message_subject = "Check Off One Last Item Off Your Weekend Checklist"
+      message_subject = "It's Not Too Late To Be Counted"
       # message_body = eval(message_body('not_voted_message.txt'))
-      message_body = eval(message_body('not_voted_message_2.txt'))
+      message_body = eval(message_body('not_voted_message_3.txt'))
       @message_client.send_private_message(@man, message_body, message_subject)
       sleep 2   # mass emails can easily trigger TooManyRequests
     end
@@ -182,9 +178,8 @@ module MomentumApi
           # puts "User badges granted:"
           post_response.each do |badge|
             # puts @man.user_details['username']
-            granted_badge = sprintf "%-35s %-20s \n", 'User badge granted: ', badge['name']
+            granted_badge = sprintf "%-35s %-20s", 'User badge granted: ', badge['name']
             @schedule.discourse.options[:logger].info granted_badge
-            # printf "%-35s %-20s \n", 'User badge granted: ', badge['name']
           end
         end
       end

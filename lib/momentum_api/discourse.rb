@@ -74,8 +74,8 @@ module MomentumApi
       end
     end
 
-    def apply_to_group_users(group_name, skip_staged_user=false)
-      group_members = @admin_client.group_members(group_name, limit: 10000)
+    def apply_to_group_users(group_name, skip_staged_user=false)   # 10000 not allowed in 2.4
+      group_members = @admin_client.group_members(group_name, limit: 1000) # todo add errors rescues
       group_members.each do |group_member|
         if @options[:issue_users].include?(group_member['username'])
           puts "#{group_member['username']} in apply_to_group_users method"

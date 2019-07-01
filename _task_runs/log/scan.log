@@ -1,0 +1,663 @@
+I, [19-06-29 22:32:52#5972]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-06-29 22:44:31#5972]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-06-29 22:44:31#5972]  INFO -- : Kim_Miller         2019-06-30     2019-06-30       1726         766183       94987                           
+W, [19-06-29 22:44:32#5972]  WARN -- : Success: OK
+I, [19-06-29 22:44:32#5972]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-06-29 22:44:32#5972]  INFO -- : Kim_Miller         2019-06-30     2019-06-30       1726         766183       94987             1146          
+I, [19-06-29 22:44:33#5972]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-06-29 22:44:33#5972]  INFO -- : Kim_Miller         poll                 0                                   1146  /  1146    PowerUser           
+I, [19-06-29 22:44:33#5972]  INFO -- :   Message From:    KM_Admin             Kim_Miller           Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-06-29 22:44:34#5972]  INFO -- :   Message From:    KM_Admin             Kim_Miller           thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-06-29 22:51:53#5972]  INFO -- : Pass 1 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-29 22:56:53#5972]  INFO -- : ... Exiting ...
+I, [19-06-29 22:56:53#5972]  INFO -- : Discourse Men                                           
+I, [19-06-29 22:56:53#5972]  INFO -- : Processed Users                     166                 
+I, [19-06-29 22:56:53#5972]  INFO -- : Skipped Users                       0                   
+I, [19-06-29 22:56:53#5972]  INFO -- : Messages Sent                       0                   
+I, [19-06-29 22:56:53#5972]  INFO -- : User Scores                                             
+I, [19-06-29 22:56:53#5972]  INFO -- : New Vote Targets                    1                   
+I, [19-06-29 22:56:53#5972]  INFO -- : New User Scores                     1                   
+I, [19-06-29 22:56:53#5972]  INFO -- : Updated User Scores                 1                   
+I, [19-06-29 22:56:53#5972]  INFO -- : New User Badges                     42                  
+I, [19-06-29 22:56:53#5972]  INFO -- : Not Voted Targets                   0                   
+I, [19-06-29 22:56:53#5972]  INFO -- : Messages Sent                       1                   
+I, [19-06-29 22:56:53#5972]  INFO -- : Watch Groups                                            
+I, [19-06-29 22:56:53#5972]  INFO -- : User Groups                         1157                
+I, [19-06-29 22:56:53#5972]  INFO -- : Group Update Targets                0                   
+I, [19-06-29 22:56:53#5972]  INFO -- : Group Notify Updated                0                   
+I, [19-06-29 22:56:53#5972]  INFO -- : Watch Categories                                        
+I, [19-06-29 22:56:53#5972]  INFO -- : User Categories                     677                 
+I, [19-06-29 22:56:53#5972]  INFO -- : Category Update Targets             0                   
+I, [19-06-29 22:56:53#5972]  INFO -- : Category Notify Updated             0                   
+I, [19-06-29 22:56:53#5972]  INFO -- : Downgrade Trust                                         
+I, [19-06-29 22:56:53#5972]  INFO -- : Users                               0                   
+I, [19-06-29 22:56:53#5972]  INFO -- : User Trust Targets                  0                   
+I, [19-06-29 22:56:53#5972]  INFO -- : User Trust Updated                  0                   
+I, [19-06-29 23:03:06#6836]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-06-29 23:22:01#6836]  INFO -- : Pass 1 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-29 23:46:04#6836]  INFO -- : Pass 2 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 00:10:03#6836]  INFO -- : Pass 3 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 00:34:01#6836]  INFO -- : Pass 4 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 00:57:56#6836]  INFO -- : Pass 5 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 01:21:52#6836]  INFO -- : Pass 6 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 01:45:46#6836]  INFO -- : Pass 7 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 02:09:40#6836]  INFO -- : Pass 8 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 02:33:31#6836]  INFO -- : Pass 9 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 02:57:23#6836]  INFO -- : Pass 10 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 03:21:16#6836]  INFO -- : Pass 11 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 03:45:11#6836]  INFO -- : Pass 12 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 04:09:02#6836]  INFO -- : Pass 13 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+W, [19-06-30 04:21:24#6836]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+I, [19-06-30 04:34:56#6836]  INFO -- : Pass 14 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 04:58:57#6836]  INFO -- : Pass 15 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 05:22:52#6836]  INFO -- : Pass 16 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 05:46:46#6836]  INFO -- : Pass 17 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 06:10:42#6836]  INFO -- : Pass 18 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 06:34:39#6836]  INFO -- : Pass 19 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 06:58:35#6836]  INFO -- : Pass 20 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 07:03:35#6836]  INFO -- : ... Exiting ...
+I, [19-06-30 07:03:35#6836]  INFO -- : Discourse Men                                           
+I, [19-06-30 07:03:35#6836]  INFO -- : Processed Users                     166                 
+I, [19-06-30 07:03:35#6836]  INFO -- : Skipped Users                       0                   
+I, [19-06-30 07:03:35#6836]  INFO -- : Messages Sent                       0                   
+I, [19-06-30 07:03:35#6836]  INFO -- : User Scores                                             
+I, [19-06-30 07:03:35#6836]  INFO -- : New Vote Targets                    0                   
+I, [19-06-30 07:03:35#6836]  INFO -- : New User Scores                     0                   
+I, [19-06-30 07:03:35#6836]  INFO -- : Updated User Scores                 0                   
+I, [19-06-30 07:03:35#6836]  INFO -- : New User Badges                     840                 
+I, [19-06-30 07:03:35#6836]  INFO -- : Not Voted Targets                   0                   
+I, [19-06-30 07:03:35#6836]  INFO -- : Messages Sent                       0                   
+I, [19-06-30 07:03:35#6836]  INFO -- : Watch Groups                                            
+I, [19-06-30 07:03:35#6836]  INFO -- : User Groups                         23140               
+I, [19-06-30 07:03:35#6836]  INFO -- : Group Update Targets                0                   
+I, [19-06-30 07:03:35#6836]  INFO -- : Group Notify Updated                0                   
+I, [19-06-30 07:03:35#6836]  INFO -- : Watch Categories                                        
+I, [19-06-30 07:03:35#6836]  INFO -- : User Categories                     13540               
+I, [19-06-30 07:03:35#6836]  INFO -- : Category Update Targets             0                   
+I, [19-06-30 07:03:35#6836]  INFO -- : Category Notify Updated             0                   
+I, [19-06-30 07:03:35#6836]  INFO -- : Downgrade Trust                                         
+I, [19-06-30 07:03:35#6836]  INFO -- : Users                               0                   
+I, [19-06-30 07:03:35#6836]  INFO -- : User Trust Targets                  0                   
+I, [19-06-30 07:03:35#6836]  INFO -- : User Trust Updated                  0                   
+I, [19-06-30 15:26:31#59966]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-06-30 15:45:28#59966]  INFO -- : Pass 1 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 15:55:18#59966]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-06-30 15:55:18#59966]  INFO -- : David_Coleman      2019-06-30     2019-06-05       1            881          881                             
+W, [19-06-30 15:55:18#59966]  WARN -- : Success: OK
+I, [19-06-30 15:55:18#59966]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-06-30 15:55:18#59966]  INFO -- : David_Coleman      2019-06-30     2019-06-05       1            881          881               2             
+I, [19-06-30 15:55:19#59966]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-06-30 15:55:19#59966]  INFO -- : David_Coleman      poll                 0                                   2     /  1146                        
+I, [19-06-30 15:55:19#59966]  INFO -- :   Message From:    Kim_Miller           David_Coleman        Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-06-30 15:55:21#59966]  INFO -- :   Message From:    Kim_Miller           David_Coleman        thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-06-30 16:09:27#59966]  INFO -- : Pass 2 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 16:33:25#59966]  INFO -- : Pass 3 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 16:38:28#62672]  INFO -- : KM_Admin           has not voted yet   
+
+I, [19-06-30 16:38:28#62672]  INFO -- :   Message From:    Kim_Miller           KM_Admin             Check Off One Last Item Off Your Weekend Checklist      In just 4 minutes you     Pending                  
+I, [19-06-30 16:38:30#62672]  INFO -- : 
+
+I, [19-06-30 16:38:30#62672]  INFO -- : Discourse Men                                           
+I, [19-06-30 16:38:30#62672]  INFO -- : Processed Users                     1                   
+I, [19-06-30 16:38:30#62672]  INFO -- : Skipped Users                       0                   
+I, [19-06-30 16:38:30#62672]  INFO -- : Messages Sent                       0                   
+I, [19-06-30 16:38:30#62672]  INFO -- : 
+
+I, [19-06-30 16:38:30#62672]  INFO -- : User Scores                                             
+I, [19-06-30 16:38:30#62672]  INFO -- : New Vote Targets                    0                   
+I, [19-06-30 16:38:30#62672]  INFO -- : New User Scores                     0                   
+I, [19-06-30 16:38:30#62672]  INFO -- : Updated User Scores                 0                   
+I, [19-06-30 16:38:30#62672]  INFO -- : New User Badges                     0                   
+I, [19-06-30 16:38:30#62672]  INFO -- : Not Voted Targets                   1                   
+I, [19-06-30 16:38:30#62672]  INFO -- : Messages Sent                       0                   
+I, [19-06-30 16:51:15#63175]  INFO -- : KM_Admin           has not voted yet   
+
+I, [19-06-30 16:51:15#63175]  INFO -- :   Message From:    Kim_Miller           KM_Admin             It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 16:51:16#63175]  INFO -- :   Message From:    Kim_Miller           KM_Admin             its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 16:51:20#63175]  INFO -- : 
+
+I, [19-06-30 16:51:20#63175]  INFO -- : Discourse Men                                           
+I, [19-06-30 16:51:20#63175]  INFO -- : Processed Users                     1                   
+I, [19-06-30 16:51:20#63175]  INFO -- : Skipped Users                       0                   
+I, [19-06-30 16:51:20#63175]  INFO -- : Messages Sent                       0                   
+I, [19-06-30 16:51:20#63175]  INFO -- : 
+
+I, [19-06-30 16:51:20#63175]  INFO -- : User Scores                                             
+I, [19-06-30 16:51:20#63175]  INFO -- : New Vote Targets                    0                   
+I, [19-06-30 16:51:20#63175]  INFO -- : New User Scores                     0                   
+I, [19-06-30 16:51:20#63175]  INFO -- : Updated User Scores                 0                   
+I, [19-06-30 16:51:20#63175]  INFO -- : New User Badges                     0                   
+I, [19-06-30 16:51:20#63175]  INFO -- : Not Voted Targets                   1                   
+I, [19-06-30 16:51:20#63175]  INFO -- : Messages Sent                       1                   
+I, [19-06-30 16:53:31#63488]  INFO -- : KM_Admin           has not voted yet   
+I, [19-06-30 16:53:31#63488]  INFO -- :   Message From:    Kim_Miller           KM_Admin             It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 16:53:32#63488]  INFO -- :   Message From:    Kim_Miller           KM_Admin             its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 16:53:35#63488]  INFO -- : 
+
+I, [19-06-30 16:53:35#63488]  INFO -- : Discourse Men                                           
+I, [19-06-30 16:53:35#63488]  INFO -- : Processed Users                     1                   
+I, [19-06-30 16:53:35#63488]  INFO -- : Skipped Users                       0                   
+I, [19-06-30 16:53:35#63488]  INFO -- : Messages Sent                       0                   
+I, [19-06-30 16:53:35#63488]  INFO -- : 
+
+I, [19-06-30 16:53:35#63488]  INFO -- : User Scores                                             
+I, [19-06-30 16:53:35#63488]  INFO -- : New Vote Targets                    0                   
+I, [19-06-30 16:53:35#63488]  INFO -- : New User Scores                     0                   
+I, [19-06-30 16:53:35#63488]  INFO -- : Updated User Scores                 0                   
+I, [19-06-30 16:53:35#63488]  INFO -- : New User Badges                     0                   
+I, [19-06-30 16:53:35#63488]  INFO -- : Not Voted Targets                   1                   
+I, [19-06-30 16:53:35#63488]  INFO -- : Messages Sent                       1                   
+I, [19-06-30 16:59:44#63925]  INFO -- : KM_Admin           has not voted yet   
+I, [19-06-30 16:59:44#63925]  INFO -- :   Message From:    Kim_Miller           KM_Admin             It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 16:59:46#63925]  INFO -- :   Message From:    Kim_Miller           KM_Admin             its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 16:59:49#63925]  INFO -- : 
+
+I, [19-06-30 16:59:49#63925]  INFO -- : Discourse Men                                           
+I, [19-06-30 16:59:49#63925]  INFO -- : Processed Users                     1                   
+I, [19-06-30 16:59:49#63925]  INFO -- : Skipped Users                       0                   
+I, [19-06-30 16:59:49#63925]  INFO -- : Messages Sent                       0                   
+I, [19-06-30 16:59:49#63925]  INFO -- : 
+
+I, [19-06-30 16:59:49#63925]  INFO -- : User Scores                                             
+I, [19-06-30 16:59:49#63925]  INFO -- : New Vote Targets                    0                   
+I, [19-06-30 16:59:49#63925]  INFO -- : New User Scores                     0                   
+I, [19-06-30 16:59:49#63925]  INFO -- : Updated User Scores                 0                   
+I, [19-06-30 16:59:49#63925]  INFO -- : New User Badges                     0                   
+I, [19-06-30 16:59:49#63925]  INFO -- : Not Voted Targets                   1                   
+I, [19-06-30 16:59:49#63925]  INFO -- : Messages Sent                       1                   
+I, [19-06-30 17:05:41#64340]  INFO -- : KM_Admin           has not voted yet   
+I, [19-06-30 17:05:41#64340]  INFO -- :   Message From:    Kim_Miller           KM_Admin             It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:05:43#64340]  INFO -- :   Message From:    Kim_Miller           KM_Admin             its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:05:46#64340]  INFO -- : 
+
+I, [19-06-30 17:05:46#64340]  INFO -- : Discourse Men                                           
+I, [19-06-30 17:05:46#64340]  INFO -- : Processed Users                     1                   
+I, [19-06-30 17:05:46#64340]  INFO -- : Skipped Users                       0                   
+I, [19-06-30 17:05:46#64340]  INFO -- : Messages Sent                       0                   
+I, [19-06-30 17:05:46#64340]  INFO -- : 
+
+I, [19-06-30 17:05:46#64340]  INFO -- : User Scores                                             
+I, [19-06-30 17:05:46#64340]  INFO -- : New Vote Targets                    0                   
+I, [19-06-30 17:05:46#64340]  INFO -- : New User Scores                     0                   
+I, [19-06-30 17:05:46#64340]  INFO -- : Updated User Scores                 0                   
+I, [19-06-30 17:05:46#64340]  INFO -- : New User Badges                     0                   
+I, [19-06-30 17:05:46#64340]  INFO -- : Not Voted Targets                   1                   
+I, [19-06-30 17:05:46#64340]  INFO -- : Messages Sent                       1                   
+I, [19-06-30 17:11:26#64755]  INFO -- : Al_Dorji           has not voted yet   
+I, [19-06-30 17:11:26#64755]  INFO -- :   Message From:    Kim_Miller           Al_Dorji             It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:11:28#64755]  INFO -- :   Message From:    Kim_Miller           Al_Dorji             its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:11:45#64755]  INFO -- : Andrew_M_Webster   has not voted yet   
+I, [19-06-30 17:11:45#64755]  INFO -- :   Message From:    Kim_Miller           Andrew_M_Webster     It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:11:47#64755]  INFO -- :   Message From:    Kim_Miller           Andrew_M_Webster     its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:12:04#64755]  INFO -- : Anshu_Sanghi       has not voted yet   
+I, [19-06-30 17:12:04#64755]  INFO -- :   Message From:    Kim_Miller           Anshu_Sanghi         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:12:05#64755]  INFO -- :   Message From:    Kim_Miller           Anshu_Sanghi         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:12:22#64755]  INFO -- : Art_Muir           has not voted yet   
+I, [19-06-30 17:12:22#64755]  INFO -- :   Message From:    Kim_Miller           Art_Muir             It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:12:24#64755]  INFO -- :   Message From:    Kim_Miller           Art_Muir             its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:12:34#64755]  INFO -- : Barry_Finkelstein  has not voted yet   
+I, [19-06-30 17:12:34#64755]  INFO -- :   Message From:    Kim_Miller           Barry_Finkelstein    It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:12:36#64755]  INFO -- :   Message From:    Kim_Miller           Barry_Finkelstein    its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:12:45#64755]  INFO -- : Benjamin_Berman    has not voted yet   
+I, [19-06-30 17:12:45#64755]  INFO -- :   Message From:    Kim_Miller           Benjamin_Berman      It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:12:47#64755]  INFO -- :   Message From:    Kim_Miller           Benjamin_Berman      its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:13:04#64755]  INFO -- : Bill_Sprague       has not voted yet   
+I, [19-06-30 17:13:04#64755]  INFO -- :   Message From:    Kim_Miller           Bill_Sprague         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:13:06#64755]  INFO -- :   Message From:    Kim_Miller           Bill_Sprague         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:13:16#64755]  INFO -- : Bill_Zabor         has not voted yet   
+I, [19-06-30 17:13:16#64755]  INFO -- :   Message From:    Kim_Miller           Bill_Zabor           It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:13:17#64755]  INFO -- :   Message From:    Kim_Miller           Bill_Zabor           its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:13:27#64755]  INFO -- : Bob_Richards       has not voted yet   
+I, [19-06-30 17:13:27#64755]  INFO -- :   Message From:    Kim_Miller           Bob_Richards         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:13:29#64755]  INFO -- :   Message From:    Kim_Miller           Bob_Richards         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:13:39#64755]  INFO -- : Bob_Silver         has not voted yet   
+I, [19-06-30 17:13:39#64755]  INFO -- :   Message From:    Kim_Miller           Bob_Silver           It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:13:40#64755]  INFO -- :   Message From:    Kim_Miller           Bob_Silver           its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:13:50#64755]  INFO -- : Bo_Zhou            has not voted yet   
+I, [19-06-30 17:13:50#64755]  INFO -- :   Message From:    Kim_Miller           Bo_Zhou              It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:13:52#64755]  INFO -- :   Message From:    Kim_Miller           Bo_Zhou              its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:14:02#64755]  INFO -- : Brad_Milliken      has not voted yet   
+I, [19-06-30 17:14:02#64755]  INFO -- :   Message From:    Kim_Miller           Brad_Milliken        It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:14:03#64755]  INFO -- :   Message From:    Kim_Miller           Brad_Milliken        its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:14:13#64755]  INFO -- : Brad_Peppard       has not voted yet   
+I, [19-06-30 17:14:13#64755]  INFO -- :   Message From:    Kim_Miller           Brad_Peppard         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:14:15#64755]  INFO -- :   Message From:    Kim_Miller           Brad_Peppard         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:14:25#64755]  INFO -- : Bran_Scott         has not voted yet   
+I, [19-06-30 17:14:25#64755]  INFO -- :   Message From:    Kim_Miller           Bran_Scott           It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:14:26#64755]  INFO -- :   Message From:    Kim_Miller           Bran_Scott           its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:14:43#64755]  INFO -- : Brian_Ruthruff     has not voted yet   
+I, [19-06-30 17:14:43#64755]  INFO -- :   Message From:    Kim_Miller           Brian_Ruthruff       It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:14:45#64755]  INFO -- :   Message From:    Kim_Miller           Brian_Ruthruff       its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:14:54#64755]  INFO -- : Bruce_Scheer       has not voted yet   
+I, [19-06-30 17:14:54#64755]  INFO -- :   Message From:    Kim_Miller           Bruce_Scheer         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:14:56#64755]  INFO -- :   Message From:    Kim_Miller           Bruce_Scheer         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:15:06#64755]  INFO -- : Butch_Dority       has not voted yet   
+I, [19-06-30 17:15:06#64755]  INFO -- :   Message From:    Kim_Miller           Butch_Dority         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:15:08#64755]  INFO -- :   Message From:    Kim_Miller           Butch_Dority         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:15:24#64755]  INFO -- : Charlie_Ohanlon    has not voted yet   
+I, [19-06-30 17:15:24#64755]  INFO -- :   Message From:    Kim_Miller           Charlie_Ohanlon      It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:15:26#64755]  INFO -- :   Message From:    Kim_Miller           Charlie_Ohanlon      its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:15:36#64755]  INFO -- : Chris_Edgar        has not voted yet   
+I, [19-06-30 17:15:36#64755]  INFO -- :   Message From:    Kim_Miller           Chris_Edgar          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:15:38#64755]  INFO -- :   Message From:    Kim_Miller           Chris_Edgar          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:15:48#64755]  INFO -- : Chris_Reed         has not voted yet   
+I, [19-06-30 17:15:48#64755]  INFO -- :   Message From:    Kim_Miller           Chris_Reed           It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:15:49#64755]  INFO -- :   Message From:    Kim_Miller           Chris_Reed           its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:16:13#64755]  INFO -- : Christian_Agardi   has not voted yet   
+I, [19-06-30 17:16:13#64755]  INFO -- :   Message From:    Kim_Miller           Christian_Agardi     It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:16:14#64755]  INFO -- :   Message From:    Kim_Miller           Christian_Agardi     its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:16:25#64755]  INFO -- : Clark_Zhang        has not voted yet   
+I, [19-06-30 17:16:25#64755]  INFO -- :   Message From:    Kim_Miller           Clark_Zhang          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:16:26#64755]  INFO -- :   Message From:    Kim_Miller           Clark_Zhang          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:16:43#64755]  INFO -- : Cory_Harasha       has not voted yet   
+I, [19-06-30 17:16:43#64755]  INFO -- :   Message From:    Kim_Miller           Cory_Harasha         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:16:45#64755]  INFO -- :   Message From:    Kim_Miller           Cory_Harasha         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:16:54#64755]  INFO -- : Curt_Haynes        has not voted yet   
+I, [19-06-30 17:16:54#64755]  INFO -- :   Message From:    Kim_Miller           Curt_Haynes          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:16:56#64755]  INFO -- :   Message From:    Kim_Miller           Curt_Haynes          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:17:13#64755]  INFO -- : Dainuri            has not voted yet   
+I, [19-06-30 17:17:13#64755]  INFO -- :   Message From:    Kim_Miller           Dainuri              It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:17:14#64755]  INFO -- :   Message From:    Kim_Miller           Dainuri              its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:17:24#64755]  INFO -- : Dan_Ollendorff     has not voted yet   
+I, [19-06-30 17:17:24#64755]  INFO -- :   Message From:    Kim_Miller           Dan_Ollendorff       It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:17:26#64755]  INFO -- :   Message From:    Kim_Miller           Dan_Ollendorff       its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:17:36#64755]  INFO -- : Dave_Lloyd         has not voted yet   
+I, [19-06-30 17:17:36#64755]  INFO -- :   Message From:    Kim_Miller           Dave_Lloyd           It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:17:37#64755]  INFO -- :   Message From:    Kim_Miller           Dave_Lloyd           its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:17:47#64755]  INFO -- : Dave_Mahal         has not voted yet   
+I, [19-06-30 17:17:47#64755]  INFO -- :   Message From:    Kim_Miller           Dave_Mahal           It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:17:49#64755]  INFO -- :   Message From:    Kim_Miller           Dave_Mahal           its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:17:59#64755]  INFO -- : Dave_Mussoff       has not voted yet   
+I, [19-06-30 17:17:59#64755]  INFO -- :   Message From:    Kim_Miller           Dave_Mussoff         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:18:00#64755]  INFO -- :   Message From:    Kim_Miller           Dave_Mussoff         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:18:10#64755]  INFO -- : Dave_Strigler      has not voted yet   
+I, [19-06-30 17:18:10#64755]  INFO -- :   Message From:    Kim_Miller           Dave_Strigler        It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:18:12#64755]  INFO -- :   Message From:    Kim_Miller           Dave_Strigler        its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:18:49#64755]  INFO -- : David_Mock         has not voted yet   
+I, [19-06-30 17:18:49#64755]  INFO -- :   Message From:    Kim_Miller           David_Mock           It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:18:51#64755]  INFO -- :   Message From:    Kim_Miller           David_Mock           its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:19:01#64755]  INFO -- : David_Montagna     has not voted yet   
+I, [19-06-30 17:19:01#64755]  INFO -- :   Message From:    Kim_Miller           David_Montagna       It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:19:02#64755]  INFO -- :   Message From:    Kim_Miller           David_Montagna       its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:19:12#64755]  INFO -- : Dennis_Adsit       has not voted yet   
+I, [19-06-30 17:19:12#64755]  INFO -- :   Message From:    Kim_Miller           Dennis_Adsit         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:19:14#64755]  INFO -- :   Message From:    Kim_Miller           Dennis_Adsit         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:19:23#64755]  INFO -- : Dennis_Sorensen    has not voted yet   
+I, [19-06-30 17:19:23#64755]  INFO -- :   Message From:    Kim_Miller           Dennis_Sorensen      It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:19:25#64755]  INFO -- :   Message From:    Kim_Miller           Dennis_Sorensen      its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:19:35#64755]  INFO -- : Deven_Kalra        has not voted yet   
+I, [19-06-30 17:19:35#64755]  INFO -- :   Message From:    Kim_Miller           Deven_Kalra          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:19:37#64755]  INFO -- :   Message From:    Kim_Miller           Deven_Kalra          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:19:46#64755]  INFO -- : Don_Morgan         has not voted yet   
+I, [19-06-30 17:19:46#64755]  INFO -- :   Message From:    Kim_Miller           Don_Morgan           It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:19:48#64755]  INFO -- :   Message From:    Kim_Miller           Don_Morgan           its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:20:05#64755]  INFO -- : Eamon_Rooney       has not voted yet   
+I, [19-06-30 17:20:05#64755]  INFO -- :   Message From:    Kim_Miller           Eamon_Rooney         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:20:06#64755]  INFO -- :   Message From:    Kim_Miller           Eamon_Rooney         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:20:16#64755]  INFO -- : Edmond_Cote        has not voted yet   
+I, [19-06-30 17:20:16#64755]  INFO -- :   Message From:    Kim_Miller           Edmond_Cote          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:20:18#64755]  INFO -- :   Message From:    Kim_Miller           Edmond_Cote          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:20:28#64755]  INFO -- : EO_Rojas           has not voted yet   
+I, [19-06-30 17:20:28#64755]  INFO -- :   Message From:    Kim_Miller           EO_Rojas             It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:20:29#64755]  INFO -- :   Message From:    Kim_Miller           EO_Rojas             its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:20:39#64755]  INFO -- : Eric_Nitzberg      has not voted yet   
+I, [19-06-30 17:20:39#64755]  INFO -- :   Message From:    Kim_Miller           Eric_Nitzberg        It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:20:41#64755]  INFO -- :   Message From:    Kim_Miller           Eric_Nitzberg        its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:20:51#64755]  INFO -- : Flint_Thorne       has not voted yet   
+I, [19-06-30 17:20:51#64755]  INFO -- :   Message From:    Kim_Miller           Flint_Thorne         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:20:52#64755]  INFO -- :   Message From:    Kim_Miller           Flint_Thorne         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:21:02#64755]  INFO -- : Francis_daCosta    has not voted yet   
+I, [19-06-30 17:21:02#64755]  INFO -- :   Message From:    Kim_Miller           Francis_daCosta      It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:21:04#64755]  INFO -- :   Message From:    Kim_Miller           Francis_daCosta      its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:21:14#64755]  INFO -- : Garry_Cheney       has not voted yet   
+I, [19-06-30 17:21:14#64755]  INFO -- :   Message From:    Kim_Miller           Garry_Cheney         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:21:15#64755]  INFO -- :   Message From:    Kim_Miller           Garry_Cheney         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:21:25#64755]  INFO -- : Gary_Koerzendorfer has not voted yet   
+I, [19-06-30 17:21:25#64755]  INFO -- :   Message From:    Kim_Miller           Gary_Koerzendorfer   It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:21:27#64755]  INFO -- :   Message From:    Kim_Miller           Gary_Koerzendorfer   its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:21:37#64755]  INFO -- : Gary_Kraemer       has not voted yet   
+I, [19-06-30 17:21:37#64755]  INFO -- :   Message From:    Kim_Miller           Gary_Kraemer         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:21:38#64755]  INFO -- :   Message From:    Kim_Miller           Gary_Kraemer         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:21:48#64755]  INFO -- : Gary_Merrick       has not voted yet   
+I, [19-06-30 17:21:48#64755]  INFO -- :   Message From:    Kim_Miller           Gary_Merrick         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:21:50#64755]  INFO -- :   Message From:    Kim_Miller           Gary_Merrick         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:21:59#64755]  INFO -- : Gary_Plep          has not voted yet   
+I, [19-06-30 17:21:59#64755]  INFO -- :   Message From:    Kim_Miller           Gary_Plep            It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:22:01#64755]  INFO -- :   Message From:    Kim_Miller           Gary_Plep            its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:22:11#64755]  INFO -- : Gene_Sussli        has not voted yet   
+I, [19-06-30 17:22:11#64755]  INFO -- :   Message From:    Kim_Miller           Gene_Sussli          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:22:12#64755]  INFO -- :   Message From:    Kim_Miller           Gene_Sussli          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:22:22#64755]  INFO -- : Geoff_Wright       has not voted yet   
+I, [19-06-30 17:22:22#64755]  INFO -- :   Message From:    Kim_Miller           Geoff_Wright         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:22:24#64755]  INFO -- :   Message From:    Kim_Miller           Geoff_Wright         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:22:34#64755]  INFO -- : Graham_Howe        has not voted yet   
+I, [19-06-30 17:22:34#64755]  INFO -- :   Message From:    Kim_Miller           Graham_Howe          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:22:35#64755]  INFO -- :   Message From:    Kim_Miller           Graham_Howe          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:22:45#64755]  INFO -- : Greg_Thayer        has not voted yet   
+I, [19-06-30 17:22:45#64755]  INFO -- :   Message From:    Kim_Miller           Greg_Thayer          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:22:47#64755]  INFO -- :   Message From:    Kim_Miller           Greg_Thayer          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:22:57#64755]  INFO -- : Howard_Bailey      has not voted yet   
+I, [19-06-30 17:22:57#64755]  INFO -- :   Message From:    Kim_Miller           Howard_Bailey        It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:22:58#64755]  INFO -- :   Message From:    Kim_Miller           Howard_Bailey        its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:23:08#64755]  INFO -- : How_Shaw           has not voted yet   
+I, [19-06-30 17:23:08#64755]  INFO -- :   Message From:    Kim_Miller           How_Shaw             It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:23:10#64755]  INFO -- :   Message From:    Kim_Miller           How_Shaw             its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:23:19#64755]  INFO -- : Ian_Wilkes         has not voted yet   
+I, [19-06-30 17:23:20#64755]  INFO -- :   Message From:    Kim_Miller           Ian_Wilkes           It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:23:21#64755]  INFO -- :   Message From:    Kim_Miller           Ian_Wilkes           its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:23:38#64755]  INFO -- : Jack_Shannon       has not voted yet   
+I, [19-06-30 17:23:38#64755]  INFO -- :   Message From:    Kim_Miller           Jack_Shannon         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:23:40#64755]  INFO -- :   Message From:    Kim_Miller           Jack_Shannon         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:23:50#64755]  INFO -- : James_Fitzgerald   has not voted yet   
+I, [19-06-30 17:23:50#64755]  INFO -- :   Message From:    Kim_Miller           James_Fitzgerald     It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:23:51#64755]  INFO -- :   Message From:    Kim_Miller           James_Fitzgerald     its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:24:08#64755]  INFO -- : James_McKeefery    has not voted yet   
+I, [19-06-30 17:24:08#64755]  INFO -- :   Message From:    Kim_Miller           James_McKeefery      It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:24:10#64755]  INFO -- :   Message From:    Kim_Miller           James_McKeefery      its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:24:20#64755]  INFO -- : Janos_Keresztes    has not voted yet   
+I, [19-06-30 17:24:20#64755]  INFO -- :   Message From:    Kim_Miller           Janos_Keresztes      It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:24:22#64755]  INFO -- :   Message From:    Kim_Miller           Janos_Keresztes      its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:24:32#64755]  INFO -- : Jay_Larrick        has not voted yet   
+I, [19-06-30 17:24:32#64755]  INFO -- :   Message From:    Kim_Miller           Jay_Larrick          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:24:34#64755]  INFO -- :   Message From:    Kim_Miller           Jay_Larrick          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:24:44#64755]  INFO -- : Jeff_Cintas        has not voted yet   
+I, [19-06-30 17:24:44#64755]  INFO -- :   Message From:    Kim_Miller           Jeff_Cintas          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:24:45#64755]  INFO -- :   Message From:    Kim_Miller           Jeff_Cintas          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:24:55#64755]  INFO -- : Jeff_Colvin        has not voted yet   
+I, [19-06-30 17:24:55#64755]  INFO -- :   Message From:    Kim_Miller           Jeff_Colvin          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:24:57#64755]  INFO -- :   Message From:    Kim_Miller           Jeff_Colvin          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:25:07#64755]  INFO -- : Jeff_Klay          has not voted yet   
+I, [19-06-30 17:25:07#64755]  INFO -- :   Message From:    Kim_Miller           Jeff_Klay            It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:25:08#64755]  INFO -- :   Message From:    Kim_Miller           Jeff_Klay            its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:25:18#64755]  INFO -- : Jerry_Raitzer      has not voted yet   
+I, [19-06-30 17:25:18#64755]  INFO -- :   Message From:    Kim_Miller           Jerry_Raitzer        It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:25:20#64755]  INFO -- :   Message From:    Kim_Miller           Jerry_Raitzer        its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:25:36#64755]  INFO -- : Jim_Charley        has not voted yet   
+I, [19-06-30 17:25:36#64755]  INFO -- :   Message From:    Kim_Miller           Jim_Charley          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:25:38#64755]  INFO -- :   Message From:    Kim_Miller           Jim_Charley          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:25:48#64755]  INFO -- : Jim_Georgiou       has not voted yet   
+I, [19-06-30 17:25:48#64755]  INFO -- :   Message From:    Kim_Miller           Jim_Georgiou         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:25:49#64755]  INFO -- :   Message From:    Kim_Miller           Jim_Georgiou         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:26:06#64755]  INFO -- : Jim_Leney          has not voted yet   
+I, [19-06-30 17:26:06#64755]  INFO -- :   Message From:    Kim_Miller           Jim_Leney            It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:26:08#64755]  INFO -- :   Message From:    Kim_Miller           Jim_Leney            its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:26:25#64755]  INFO -- : John_Bodeau        has not voted yet   
+I, [19-06-30 17:26:25#64755]  INFO -- :   Message From:    Kim_Miller           John_Bodeau          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:26:26#64755]  INFO -- :   Message From:    Kim_Miller           John_Bodeau          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:26:36#64755]  INFO -- : John_Butler        has not voted yet   
+I, [19-06-30 17:26:36#64755]  INFO -- :   Message From:    Kim_Miller           John_Butler          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:26:38#64755]  INFO -- :   Message From:    Kim_Miller           John_Butler          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:26:55#64755]  INFO -- : John_Jeffs         has not voted yet   
+I, [19-06-30 17:26:55#64755]  INFO -- :   Message From:    Kim_Miller           John_Jeffs           It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:26:56#64755]  INFO -- :   Message From:    Kim_Miller           John_Jeffs           its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:27:13#64755]  INFO -- : John_Mansperger    has not voted yet   
+I, [19-06-30 17:27:13#64755]  INFO -- :   Message From:    Kim_Miller           John_Mansperger      It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:27:15#64755]  INFO -- :   Message From:    Kim_Miller           John_Mansperger      its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:27:25#64755]  INFO -- : John_Nadler        has not voted yet   
+I, [19-06-30 17:27:25#64755]  INFO -- :   Message From:    Kim_Miller           John_Nadler          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:27:26#64755]  INFO -- :   Message From:    Kim_Miller           John_Nadler          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:27:36#64755]  INFO -- : John_Oberstar      has not voted yet   
+I, [19-06-30 17:27:36#64755]  INFO -- :   Message From:    Kim_Miller           John_Oberstar        It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:27:38#64755]  INFO -- :   Message From:    Kim_Miller           John_Oberstar        its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:27:47#64755]  INFO -- : John_Piggott       has not voted yet   
+I, [19-06-30 17:27:47#64755]  INFO -- :   Message From:    Kim_Miller           John_Piggott         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:27:49#64755]  INFO -- :   Message From:    Kim_Miller           John_Piggott         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:28:06#64755]  INFO -- : Juergen_Weltz      has not voted yet   
+I, [19-06-30 17:28:06#64755]  INFO -- :   Message From:    Kim_Miller           Juergen_Weltz        It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:28:08#64755]  INFO -- :   Message From:    Kim_Miller           Juergen_Weltz        its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:28:18#64755]  INFO -- : Keerti_Narayan     has not voted yet   
+I, [19-06-30 17:28:18#64755]  INFO -- :   Message From:    Kim_Miller           Keerti_Narayan       It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:28:19#64755]  INFO -- :   Message From:    Kim_Miller           Keerti_Narayan       its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:28:29#64755]  INFO -- : Keith_Britany      has not voted yet   
+I, [19-06-30 17:28:29#64755]  INFO -- :   Message From:    Kim_Miller           Keith_Britany        It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:28:31#64755]  INFO -- :   Message From:    Kim_Miller           Keith_Britany        its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:28:41#64755]  INFO -- : Ken_Cahill         has not voted yet   
+I, [19-06-30 17:28:41#64755]  INFO -- :   Message From:    Kim_Miller           Ken_Cahill           It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:28:42#64755]  INFO -- :   Message From:    Kim_Miller           Ken_Cahill           its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:28:52#64755]  INFO -- : Ken_Krantz         has not voted yet   
+I, [19-06-30 17:28:52#64755]  INFO -- :   Message From:    Kim_Miller           Ken_Krantz           It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:28:54#64755]  INFO -- :   Message From:    Kim_Miller           Ken_Krantz           its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:29:11#64755]  INFO -- : KM_Admin           has not voted yet   
+I, [19-06-30 17:29:11#64755]  INFO -- :   Message From:    Kim_Miller           KM_Admin             It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:29:13#64755]  INFO -- :   Message From:    Kim_Miller           KM_Admin             its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:29:37#64755]  INFO -- : Lars_Rider         has not voted yet   
+I, [19-06-30 17:29:37#64755]  INFO -- :   Message From:    Kim_Miller           Lars_Rider           It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:29:38#64755]  INFO -- :   Message From:    Kim_Miller           Lars_Rider           its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:30:02#64755]  INFO -- : Madon_Snell        has not voted yet   
+I, [19-06-30 17:30:02#64755]  INFO -- :   Message From:    Kim_Miller           Madon_Snell          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:30:04#64755]  INFO -- :   Message From:    Kim_Miller           Madon_Snell          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:30:14#64755]  INFO -- : Marco_Milletti     has not voted yet   
+I, [19-06-30 17:30:14#64755]  INFO -- :   Message From:    Kim_Miller           Marco_Milletti       It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:30:16#64755]  INFO -- :   Message From:    Kim_Miller           Marco_Milletti       its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:30:26#64755]  INFO -- : Mark_Habberley     has not voted yet   
+I, [19-06-30 17:30:26#64755]  INFO -- :   Message From:    Kim_Miller           Mark_Habberley       It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:30:27#64755]  INFO -- :   Message From:    Kim_Miller           Mark_Habberley       its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:30:37#64755]  INFO -- : Mark_Reinheimer    has not voted yet   
+I, [19-06-30 17:30:37#64755]  INFO -- :   Message From:    Kim_Miller           Mark_Reinheimer      It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:30:39#64755]  INFO -- :   Message From:    Kim_Miller           Mark_Reinheimer      its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:30:56#64755]  INFO -- : Marton_Toth        has not voted yet   
+I, [19-06-30 17:30:56#64755]  INFO -- :   Message From:    Kim_Miller           Marton_Toth          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:30:58#64755]  INFO -- :   Message From:    Kim_Miller           Marton_Toth          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:31:14#64755]  INFO -- : Matthew_Lewsadder  has not voted yet   
+I, [19-06-30 17:31:14#64755]  INFO -- :   Message From:    Kim_Miller           Matthew_Lewsadder    It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:31:16#64755]  INFO -- :   Message From:    Kim_Miller           Matthew_Lewsadder    its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:31:26#64755]  INFO -- : Matt_Hill          has not voted yet   
+I, [19-06-30 17:31:26#64755]  INFO -- :   Message From:    Kim_Miller           Matt_Hill            It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:31:28#64755]  INFO -- :   Message From:    Kim_Miller           Matt_Hill            its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:31:38#64755]  INFO -- : Michael_Kahn       has not voted yet   
+I, [19-06-30 17:31:38#64755]  INFO -- :   Message From:    Kim_Miller           Michael_Kahn         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:31:39#64755]  INFO -- :   Message From:    Kim_Miller           Michael_Kahn         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:31:49#64755]  INFO -- : Michael_Orr        has not voted yet   
+I, [19-06-30 17:31:49#64755]  INFO -- :   Message From:    Kim_Miller           Michael_Orr          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:31:51#64755]  INFO -- :   Message From:    Kim_Miller           Michael_Orr          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:32:01#64755]  INFO -- : Michael_Skowronek  has not voted yet   
+I, [19-06-30 17:32:01#64755]  INFO -- :   Message From:    Kim_Miller           Michael_Skowronek    It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:32:02#64755]  INFO -- :   Message From:    Kim_Miller           Michael_Skowronek    its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:32:12#64755]  INFO -- : Michael_Wilson     has not voted yet   
+I, [19-06-30 17:32:12#64755]  INFO -- :   Message From:    Kim_Miller           Michael_Wilson       It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:32:14#64755]  INFO -- :   Message From:    Kim_Miller           Michael_Wilson       its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:32:31#64755]  INFO -- : Mike_Druke         has not voted yet   
+I, [19-06-30 17:32:31#64755]  INFO -- :   Message From:    Kim_Miller           Mike_Druke           It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:32:33#64755]  INFO -- :   Message From:    Kim_Miller           Mike_Druke           its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:32:53#64755]  INFO -- : Mike_Wilkins       has not voted yet   
+I, [19-06-30 17:32:53#64755]  INFO -- :   Message From:    Kim_Miller           Mike_Wilkins         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:32:55#64755]  INFO -- :   Message From:    Kim_Miller           Mike_Wilkins         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:33:05#64755]  INFO -- : Mikhail_Zhidko     has not voted yet   
+I, [19-06-30 17:33:05#64755]  INFO -- :   Message From:    Kim_Miller           Mikhail_Zhidko       It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:33:06#64755]  INFO -- :   Message From:    Kim_Miller           Mikhail_Zhidko       its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:33:37#64755]  INFO -- : Noah_Salzman       has not voted yet   
+I, [19-06-30 17:33:37#64755]  INFO -- :   Message From:    Kim_Miller           Noah_Salzman         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:33:39#64755]  INFO -- :   Message From:    Kim_Miller           Noah_Salzman         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:33:48#64755]  INFO -- : Patrick_Morin      has not voted yet   
+I, [19-06-30 17:33:48#64755]  INFO -- :   Message From:    Kim_Miller           Patrick_Morin        It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:33:50#64755]  INFO -- :   Message From:    Kim_Miller           Patrick_Morin        its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:34:07#64755]  INFO -- : Pete_Rabbitt       has not voted yet   
+I, [19-06-30 17:34:07#64755]  INFO -- :   Message From:    Kim_Miller           Pete_Rabbitt         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:34:09#64755]  INFO -- :   Message From:    Kim_Miller           Pete_Rabbitt         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:34:18#64755]  INFO -- : Peter_Johnson      has not voted yet   
+I, [19-06-30 17:34:18#64755]  INFO -- :   Message From:    Kim_Miller           Peter_Johnson        It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:34:20#64755]  INFO -- :   Message From:    Kim_Miller           Peter_Johnson        its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:34:30#64755]  INFO -- : Peter_Montana      has not voted yet   
+I, [19-06-30 17:34:30#64755]  INFO -- :   Message From:    Kim_Miller           Peter_Montana        It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:34:32#64755]  INFO -- :   Message From:    Kim_Miller           Peter_Montana        its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:34:42#64755]  INFO -- : Randy_Horton       has not voted yet   
+I, [19-06-30 17:34:42#64755]  INFO -- :   Message From:    Kim_Miller           Randy_Horton         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:34:43#64755]  INFO -- :   Message From:    Kim_Miller           Randy_Horton         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:34:53#64755]  INFO -- : Ravi_Narra         has not voted yet   
+I, [19-06-30 17:34:53#64755]  INFO -- :   Message From:    Kim_Miller           Ravi_Narra           It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:34:55#64755]  INFO -- :   Message From:    Kim_Miller           Ravi_Narra           its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:35:04#64755]  INFO -- : Raymond_Miller     has not voted yet   
+I, [19-06-30 17:35:04#64755]  INFO -- :   Message From:    Kim_Miller           Raymond_Miller       It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:35:06#64755]  INFO -- :   Message From:    Kim_Miller           Raymond_Miller       its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:35:16#64755]  INFO -- : Rich_Worthington   has not voted yet   
+I, [19-06-30 17:35:16#64755]  INFO -- :   Message From:    Kim_Miller           Rich_Worthington     It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:35:17#64755]  INFO -- :   Message From:    Kim_Miller           Rich_Worthington     its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:35:27#64755]  INFO -- : Rick_Kananen       has not voted yet   
+I, [19-06-30 17:35:27#64755]  INFO -- :   Message From:    Kim_Miller           Rick_Kananen         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:35:29#64755]  INFO -- :   Message From:    Kim_Miller           Rick_Kananen         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:35:46#64755]  INFO -- : Roger_Chapman      has not voted yet   
+I, [19-06-30 17:35:46#64755]  INFO -- :   Message From:    Kim_Miller           Roger_Chapman        It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:35:47#64755]  INFO -- :   Message From:    Kim_Miller           Roger_Chapman        its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:35:57#64755]  INFO -- : Ron_McDowell       has not voted yet   
+I, [19-06-30 17:35:57#64755]  INFO -- :   Message From:    Kim_Miller           Ron_McDowell         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:35:59#64755]  INFO -- :   Message From:    Kim_Miller           Ron_McDowell         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:36:09#64755]  INFO -- : Ron_Tugender       has not voted yet   
+I, [19-06-30 17:36:09#64755]  INFO -- :   Message From:    Kim_Miller           Ron_Tugender         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:36:10#64755]  INFO -- :   Message From:    Kim_Miller           Ron_Tugender         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:36:34#64755]  INFO -- : Samyeer_Metrani    has not voted yet   
+I, [19-06-30 17:36:34#64755]  INFO -- :   Message From:    Kim_Miller           Samyeer_Metrani      It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:36:36#64755]  INFO -- :   Message From:    Kim_Miller           Samyeer_Metrani      its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:36:46#64755]  INFO -- : Sanjeev_Balarajan  has not voted yet   
+I, [19-06-30 17:36:46#64755]  INFO -- :   Message From:    Kim_Miller           Sanjeev_Balarajan    It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:36:47#64755]  INFO -- :   Message From:    Kim_Miller           Sanjeev_Balarajan    its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:36:57#64755]  INFO -- : Sanjeev_Sanghera   has not voted yet   
+I, [19-06-30 17:36:57#64755]  INFO -- :   Message From:    Kim_Miller           Sanjeev_Sanghera     It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:36:59#64755]  INFO -- :   Message From:    Kim_Miller           Sanjeev_Sanghera     its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:37:08#64755]  INFO -- : Save_Torquato      has not voted yet   
+I, [19-06-30 17:37:08#64755]  INFO -- :   Message From:    Kim_Miller           Save_Torquato        It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:37:10#64755]  INFO -- :   Message From:    Kim_Miller           Save_Torquato        its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:37:20#64755]  INFO -- : Scott_StGermain    has not voted yet   
+I, [19-06-30 17:37:20#64755]  INFO -- :   Message From:    Kim_Miller           Scott_StGermain      It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:37:21#64755]  INFO -- :   Message From:    Kim_Miller           Scott_StGermain      its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:37:31#64755]  INFO -- : Shane_Reed         has not voted yet   
+I, [19-06-30 17:37:31#64755]  INFO -- :   Message From:    Kim_Miller           Shane_Reed           It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:37:33#64755]  INFO -- :   Message From:    Kim_Miller           Shane_Reed           its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:37:43#64755]  INFO -- : S_James_Biggs      has not voted yet   
+I, [19-06-30 17:37:43#64755]  INFO -- :   Message From:    Kim_Miller           S_James_Biggs        It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:37:45#64755]  INFO -- :   Message From:    Kim_Miller           S_James_Biggs        its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:37:54#64755]  INFO -- : Sridhar_Ramanathan has not voted yet   
+I, [19-06-30 17:37:54#64755]  INFO -- :   Message From:    Kim_Miller           Sridhar_Ramanathan   It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:37:56#64755]  INFO -- :   Message From:    Kim_Miller           Sridhar_Ramanathan   its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:38:06#64755]  INFO -- : Stefan_Schmitz     has not voted yet   
+I, [19-06-30 17:38:06#64755]  INFO -- :   Message From:    Kim_Miller           Stefan_Schmitz       It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:38:08#64755]  INFO -- :   Message From:    Kim_Miller           Stefan_Schmitz       its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:38:18#64755]  INFO -- : Steve_Cross        has not voted yet   
+I, [19-06-30 17:38:18#64755]  INFO -- :   Message From:    Kim_Miller           Steve_Cross          It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:38:19#64755]  INFO -- :   Message From:    Kim_Miller           Steve_Cross          its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:38:29#64755]  INFO -- : Steve_Fitzsimons   has not voted yet   
+I, [19-06-30 17:38:29#64755]  INFO -- :   Message From:    Kim_Miller           Steve_Fitzsimons     It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:38:31#64755]  INFO -- :   Message From:    Kim_Miller           Steve_Fitzsimons     its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:38:48#64755]  INFO -- : Suhas_Chelian      has not voted yet   
+I, [19-06-30 17:38:48#64755]  INFO -- :   Message From:    Kim_Miller           Suhas_Chelian        It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:38:49#64755]  INFO -- :   Message From:    Kim_Miller           Suhas_Chelian        its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:38:59#64755]  INFO -- : Tesh_Tesfaye       has not voted yet   
+I, [19-06-30 17:38:59#64755]  INFO -- :   Message From:    Kim_Miller           Tesh_Tesfaye         It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:39:01#64755]  INFO -- :   Message From:    Kim_Miller           Tesh_Tesfaye         its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:39:31#64755]  INFO -- : Tony_Pogue         has not voted yet   
+I, [19-06-30 17:39:31#64755]  INFO -- :   Message From:    Kim_Miller           Tony_Pogue           It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:39:33#64755]  INFO -- :   Message From:    Kim_Miller           Tony_Pogue           its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:39:43#64755]  INFO -- : Vern_Mcgeorge      has not voted yet   
+I, [19-06-30 17:39:43#64755]  INFO -- :   Message From:    Kim_Miller           Vern_Mcgeorge        It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:39:44#64755]  INFO -- :   Message From:    Kim_Miller           Vern_Mcgeorge        its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:39:54#64755]  INFO -- : William_Burton     has not voted yet   
+I, [19-06-30 17:39:54#64755]  INFO -- :   Message From:    Kim_Miller           William_Burton       It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-06-30 17:39:56#64755]  INFO -- :   Message From:    Kim_Miller           William_Burton       its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-06-30 17:39:59#64755]  INFO -- : 
+
+I, [19-06-30 17:39:59#64755]  INFO -- : Discourse Men                                           
+I, [19-06-30 17:39:59#64755]  INFO -- : Processed Users                     167                 
+I, [19-06-30 17:39:59#64755]  INFO -- : Skipped Users                       0                   
+I, [19-06-30 17:39:59#64755]  INFO -- : Messages Sent                       0                   
+I, [19-06-30 17:39:59#64755]  INFO -- : 
+
+I, [19-06-30 17:39:59#64755]  INFO -- : User Scores                                             
+I, [19-06-30 17:39:59#64755]  INFO -- : New Vote Targets                    0                   
+I, [19-06-30 17:39:59#64755]  INFO -- : New User Scores                     0                   
+I, [19-06-30 17:39:59#64755]  INFO -- : Updated User Scores                 0                   
+I, [19-06-30 17:39:59#64755]  INFO -- : New User Badges                     0                   
+I, [19-06-30 17:39:59#64755]  INFO -- : Not Voted Targets                   123                 
+I, [19-06-30 17:39:59#64755]  INFO -- : Messages Sent                       123                 
+I, [19-06-30 18:04:02#66012]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-06-30 18:08:41#66012]  INFO -- : User badge granted:                 Beginner            
+I, [19-06-30 18:08:41#66012]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-06-30 18:08:41#66012]  INFO -- : Dave_Strigler      2019-07-01     2019-04-21       9            64353        594                             
+W, [19-06-30 18:08:41#66012]  WARN -- : Success: OK
+I, [19-06-30 18:08:42#66012]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-06-30 18:08:42#66012]  INFO -- : Dave_Strigler      2019-07-01     2019-04-21       9            64353        594               16            
+I, [19-06-30 18:08:43#66012]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-06-30 18:08:43#66012]  INFO -- : Dave_Strigler      poll                 0                                   16    /  1146    Beginner            
+I, [19-06-30 18:08:43#66012]  INFO -- :   Message From:    Kim_Miller           Dave_Strigler        Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-06-30 18:08:44#66012]  INFO -- :   Message From:    Kim_Miller           Dave_Strigler        thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-06-30 18:18:21#66012]  INFO -- : User badge granted:                 Beginner            
+I, [19-06-30 18:18:21#66012]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-06-30 18:18:21#66012]  INFO -- : Mike_Druke         2019-07-01     2019-03-12       6            1137         234                             
+W, [19-06-30 18:18:21#66012]  WARN -- : Success: OK
+I, [19-06-30 18:18:21#66012]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-06-30 18:18:21#66012]  INFO -- : Mike_Druke         2019-07-01     2019-03-12       6            1137         234               23            
+I, [19-06-30 18:18:22#66012]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-06-30 18:18:22#66012]  INFO -- : Mike_Druke         poll                 0                                   23    /  1146    Beginner            
+I, [19-06-30 18:18:22#66012]  INFO -- :   Message From:    Kim_Miller           Mike_Druke           Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-06-30 18:18:24#66012]  INFO -- :   Message From:    Kim_Miller           Mike_Druke           thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-06-30 18:23:29#66012]  INFO -- : Pass 1 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 18:29:54#66012]  INFO -- : User badge granted:                 Intermediate        
+I, [19-06-30 18:29:54#66012]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-06-30 18:29:54#66012]  INFO -- : Bill_Zabor         2019-07-01     2019-06-28       109          96915        11321                           
+W, [19-06-30 18:29:54#66012]  WARN -- : Success: OK
+I, [19-06-30 18:29:54#66012]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-06-30 18:29:54#66012]  INFO -- : Bill_Zabor         2019-07-01     2019-06-28       109          96915        11321             161           
+I, [19-06-30 18:29:55#66012]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-06-30 18:29:55#66012]  INFO -- : Bill_Zabor         poll                 0                                   161   /  1146    Intermediate        
+I, [19-06-30 18:29:55#66012]  INFO -- :   Message From:    Kim_Miller           Bill_Zabor           Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-06-30 18:29:57#66012]  INFO -- :   Message From:    Kim_Miller           Bill_Zabor           thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-06-30 18:47:49#66012]  INFO -- : Pass 2 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 19:11:58#66012]  INFO -- : Pass 3 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 19:36:10#66012]  INFO -- : Pass 4 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 20:00:20#66012]  INFO -- : Pass 5 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 20:24:34#66012]  INFO -- : Pass 6 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 20:48:40#66012]  INFO -- : Pass 7 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 21:04:15#66012]  INFO -- : User badge granted:                 Advanced            
+I, [19-06-30 21:04:15#66012]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-06-30 21:04:15#66012]  INFO -- : John_Mansperger    2019-07-01     2019-07-01       162          71286        6035                            
+W, [19-06-30 21:04:15#66012]  WARN -- : Success: OK
+I, [19-06-30 21:04:15#66012]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-06-30 21:04:15#66012]  INFO -- : John_Mansperger    2019-07-01     2019-07-01       162          71286        6035              405           
+I, [19-06-30 21:04:16#66012]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-06-30 21:04:16#66012]  INFO -- : John_Mansperger    poll                 0                                   405   /  1146    Advanced            
+I, [19-06-30 21:04:16#66012]  INFO -- :   Message From:    Kim_Miller           John_Mansperger      Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-06-30 21:04:18#66012]  INFO -- :   Message From:    Kim_Miller           John_Mansperger      thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-06-30 21:12:50#66012]  INFO -- : Pass 8 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 21:37:09#66012]  INFO -- : Pass 9 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 22:01:19#66012]  INFO -- : Pass 10 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 22:25:25#66012]  INFO -- : Pass 11 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 22:49:26#66012]  INFO -- : Pass 12 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-06-30 22:57:27#66012]  INFO -- : User badge granted:                 Intermediate        
+I, [19-06-30 22:57:27#66012]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-06-30 22:57:27#66012]  INFO -- : Chris_Reed         2019-07-01     2019-07-01       42           12502        2255                            
+W, [19-06-30 22:57:27#66012]  WARN -- : Success: OK
+I, [19-06-30 22:57:27#66012]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-06-30 22:57:27#66012]  INFO -- : Chris_Reed         2019-07-01     2019-07-01       42           12502        2255              83            
+I, [19-06-30 22:57:28#66012]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-06-30 22:57:28#66012]  INFO -- : Chris_Reed         poll                 0                                   83    /  1146    Intermediate        
+I, [19-06-30 22:57:28#66012]  INFO -- :   Message From:    Kim_Miller           Chris_Reed           Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-06-30 22:57:30#66012]  INFO -- :   Message From:    Kim_Miller           Chris_Reed           thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-06-30 23:13:32#66012]  INFO -- : Pass 13 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+W, [19-06-30 23:27:24#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-06-30 23:28:54#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-06-30 23:30:25#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-06-30 23:31:56#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-06-30 23:33:27#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-06-30 23:34:58#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-06-30 23:36:29#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-06-30 23:38:00#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-06-30 23:39:31#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-06-30 23:41:02#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-06-30 23:42:33#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-06-30 23:44:04#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-06-30 23:45:35#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-06-30 23:47:06#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-06-30 23:48:37#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-06-30 23:50:07#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-06-30 23:51:38#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-06-30 23:53:09#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+I, [19-07-01 00:05:10#66012]  INFO -- : Pass 14 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+W, [19-07-01 00:10:43#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-07-01 00:11:43#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-07-01 00:12:43#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-07-01 00:13:43#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-07-01 00:14:43#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-07-01 00:15:43#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-07-01 00:16:43#66012]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+I, [19-07-01 00:36:20#66012]  INFO -- : Pass 15 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 07:39:55#80460]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-01 07:42:47#80786]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-01 08:31:49#81921]  INFO -- : Scanning ["trust_level_1"] Users for Tasks

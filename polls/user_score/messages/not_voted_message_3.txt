@@ -1,0 +1,9 @@
+"It takes just 4 minutes to help us help you, #{@man.user_details['name'].split[0]}. When you tell us about your Discourse experience, you will help us shape a path for Discourse to better serve users just like you.
+
+ The questions are all yes / no, so just go [here to take this very quick survey quiz](#{@options[:poll_url]}). Don't forget to click *Vote now!* at the bottom when you are done.
+
+ Once you take the quiz you will earn a [Discourse User Badge showing your Discourse User achievement level here](https://discourse.gomomentum.org/u/#{@man.user_details['username']}/badges), and you can [see all possible Momentum Badges that you can earn here](https://discourse.gomomentum.org/badges).
+
+ Help us help you while ending your weekend on a high-note! 
+
+   -- Your Momentum Moderators"
