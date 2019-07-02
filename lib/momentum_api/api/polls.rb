@@ -173,12 +173,14 @@ module MomentumApi
           # puts 'User already has badge'
         else
           # puts 'about to post'
+          @counters[:'New User Badges'] += 1
           post_response = @schedule.discourse.admin_client.grant_user_badge(
               username: @man.user_details['username'], badge_id: badge_id, reason: @options[:poll_url])
           # puts "User badges granted:"
           post_response.each do |badge|
             # puts @man.user_details['username']
-            granted_badge = sprintf "%-35s %-20s", 'User badge granted: ', badge['name']
+            granted_badge = sprintf "%-18s %-35s %-20s", @man.user_details['username'],
+                                    ' granted User Badge: ', badge['name']
             @schedule.discourse.options[:logger].info granted_badge
           end
         end
@@ -186,7 +188,7 @@ module MomentumApi
     end
 
     def update_user_profile_badges(current_voter_points)
-      @counters[:'New User Badges'] += 1
+      # @counters[:'New User Badges'] += 1
       target_badge_name = nil
 
       # calculate badges

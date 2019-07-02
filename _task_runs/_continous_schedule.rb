@@ -29,7 +29,7 @@ schedule_options = {
         growth:                     {
             allowed_levels:         [3, 4],
             set_level:               4,
-            excludes:               %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
+            excludes:               %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott Suhas_Chelian)
         },
         meta:                       {
             allowed_levels:         [3, 4],

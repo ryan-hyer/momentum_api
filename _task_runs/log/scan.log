@@ -661,3 +661,188 @@ I, [19-07-01 00:36:20#66012]  INFO -- : Pass 15 complete for 166 users, 0 skippe
 I, [19-07-01 07:39:55#80460]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
 I, [19-07-01 07:42:47#80786]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
 I, [19-07-01 08:31:49#81921]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-01 08:34:42#82258]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-01 08:53:47#82258]  INFO -- : Pass 1 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 09:01:33#82258]  INFO -- : User badge granted:                 Advanced            
+I, [19-07-01 09:01:33#82258]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-07-01 09:01:33#82258]  INFO -- : Charlie_Ohanlon    2019-07-01     2019-07-01       120          30553        1715                            
+W, [19-07-01 09:01:34#82258]  WARN -- : Success: OK
+I, [19-07-01 09:01:34#82258]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-07-01 09:01:34#82258]  INFO -- : Charlie_Ohanlon    2019-07-01     2019-07-01       120          30553        1715              540           
+I, [19-07-01 09:01:35#82258]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-07-01 09:01:35#82258]  INFO -- : Charlie_Ohanlon    poll                 0                                   540   /  1146    Advanced            
+I, [19-07-01 09:01:35#82258]  INFO -- :   Message From:    Kim_Miller           Charlie_Ohanlon      Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-07-01 09:01:37#82258]  INFO -- :   Message From:    Kim_Miller           Charlie_Ohanlon      thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-07-01 09:14:48#82258]  INFO -- : User badge granted:                 Intermediate        
+I, [19-07-01 09:14:48#82258]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-07-01 09:14:48#82258]  INFO -- : Rich_Worthington   2019-07-01     2019-06-30       99           45696        1017                            
+W, [19-07-01 09:14:48#82258]  WARN -- : Success: OK
+I, [19-07-01 09:14:49#82258]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-07-01 09:14:49#82258]  INFO -- : Rich_Worthington   2019-07-01     2019-06-30       99           45696        1017              70            
+I, [19-07-01 09:14:50#82258]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-07-01 09:14:50#82258]  INFO -- : Rich_Worthington   poll                 0                                   70    /  1146    Intermediate        
+I, [19-07-01 09:14:50#82258]  INFO -- :   Message From:    Kim_Miller           Rich_Worthington     Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-07-01 09:14:51#82258]  INFO -- :   Message From:    Kim_Miller           Rich_Worthington     thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-07-01 09:17:58#82258]  INFO -- : Pass 2 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 09:42:02#82258]  INFO -- : Pass 3 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 11:15:51#3400]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-01 11:34:55#3400]  INFO -- : Pass 1 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 11:59:00#3400]  INFO -- : Pass 2 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 12:23:01#3400]  INFO -- : Pass 3 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 12:47:02#3400]  INFO -- : Pass 4 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 13:10:16#3400]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-07-01 13:10:16#3400]  INFO -- : Suhas_Chelian      Owner                Growth                 1        NOT Watching                  
+W, [19-07-01 13:10:17#3400]  WARN -- : {"success"=>"OK"}
+W, [19-07-01 13:10:18#3400]  WARN -- : Updated Category: Growth    Notification Level: 4
+I, [19-07-01 13:11:08#3400]  INFO -- : Pass 5 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 13:35:13#3400]  INFO -- : Pass 6 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 13:59:17#3400]  INFO -- : Pass 7 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 14:23:21#3400]  INFO -- : Pass 8 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 14:47:28#3400]  INFO -- : Pass 9 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 15:11:32#3400]  INFO -- : Pass 10 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 15:35:35#3400]  INFO -- : Pass 11 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 15:59:33#3400]  INFO -- : Pass 12 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 16:23:28#3400]  INFO -- : Pass 13 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 16:47:28#3400]  INFO -- : Pass 14 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 17:11:32#3400]  INFO -- : Pass 15 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 17:35:38#3400]  INFO -- : Pass 16 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 17:59:52#3400]  INFO -- : Pass 17 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 18:24:07#3400]  INFO -- : Pass 18 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 18:48:22#3400]  INFO -- : Pass 19 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 19:12:32#3400]  INFO -- : Pass 20 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 19:17:32#3400]  INFO -- : ... Exiting ...
+I, [19-07-01 19:17:32#3400]  INFO -- : 
+
+I, [19-07-01 19:17:32#3400]  INFO -- : Discourse Men                                           
+I, [19-07-01 19:17:32#3400]  INFO -- : Processed Users                     166                 
+I, [19-07-01 19:17:32#3400]  INFO -- : Skipped Users                       0                   
+I, [19-07-01 19:17:32#3400]  INFO -- : Messages Sent                       0                   
+I, [19-07-01 19:17:32#3400]  INFO -- : 
+
+I, [19-07-01 19:17:32#3400]  INFO -- : User Scores                                             
+I, [19-07-01 19:17:32#3400]  INFO -- : New Vote Targets                    0                   
+I, [19-07-01 19:17:32#3400]  INFO -- : New User Scores                     0                   
+I, [19-07-01 19:17:32#3400]  INFO -- : Updated User Scores                 0                   
+I, [19-07-01 19:17:32#3400]  INFO -- : New User Badges                     1000                
+I, [19-07-01 19:17:32#3400]  INFO -- : Not Voted Targets                   0                   
+I, [19-07-01 19:17:32#3400]  INFO -- : Messages Sent                       0                   
+I, [19-07-01 19:17:32#3400]  INFO -- : 
+
+I, [19-07-01 19:17:32#3400]  INFO -- : Watch Groups                                            
+I, [19-07-01 19:17:32#3400]  INFO -- : User Groups                         23133               
+I, [19-07-01 19:17:32#3400]  INFO -- : Group Update Targets                0                   
+I, [19-07-01 19:17:32#3400]  INFO -- : Group Notify Updated                0                   
+I, [19-07-01 19:17:32#3400]  INFO -- : 
+
+I, [19-07-01 19:17:32#3400]  INFO -- : Watch Categories                                        
+I, [19-07-01 19:17:32#3400]  INFO -- : User Categories                     13540               
+I, [19-07-01 19:17:32#3400]  INFO -- : Category Update Targets             1                   
+I, [19-07-01 19:17:32#3400]  INFO -- : Category Notify Updated             1                   
+I, [19-07-01 19:17:32#3400]  INFO -- : 
+
+I, [19-07-01 19:17:32#3400]  INFO -- : Downgrade Trust                                         
+I, [19-07-01 19:17:32#3400]  INFO -- : Users                               0                   
+I, [19-07-01 19:17:32#3400]  INFO -- : User Trust Targets                  0                   
+I, [19-07-01 19:17:32#3400]  INFO -- : User Trust Updated                  0                   
+I, [19-07-01 20:40:42#14186]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-01 20:42:31#14186]  INFO -- : Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level   
+I, [19-07-01 20:42:31#14186]  INFO -- : Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 1             
+W, [19-07-01 20:42:31#14186]  WARN -- : Brad_Fino Downgraded
+I, [19-07-01 20:42:31#14186]  INFO -- : Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level   
+I, [19-07-01 20:42:31#14186]  INFO -- : Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 0             
+I, [19-07-01 20:52:37#14186]  INFO -- : User badge granted:                 PowerUser           
+I, [19-07-01 20:59:58#14186]  INFO -- : Pass 1 complete for 167 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 21:04:58#14186]  INFO -- : ... Exiting ...
+I, [19-07-01 21:04:58#14186]  INFO -- : Discourse Men                                           
+I, [19-07-01 21:04:58#14186]  INFO -- : Processed Users                     167                 
+I, [19-07-01 21:04:58#14186]  INFO -- : Skipped Users                       0                   
+I, [19-07-01 21:04:58#14186]  INFO -- : Messages Sent                       0                   
+I, [19-07-01 21:04:58#14186]  INFO -- : User Scores                                             
+I, [19-07-01 21:04:58#14186]  INFO -- : New Vote Targets                    0                   
+I, [19-07-01 21:04:58#14186]  INFO -- : New User Scores                     0                   
+I, [19-07-01 21:04:58#14186]  INFO -- : Updated User Scores                 0                   
+I, [19-07-01 21:04:58#14186]  INFO -- : New User Badges                     1                   
+I, [19-07-01 21:04:58#14186]  INFO -- : Not Voted Targets                   0                   
+I, [19-07-01 21:04:58#14186]  INFO -- : Messages Sent                       0                   
+I, [19-07-01 21:04:58#14186]  INFO -- : Watch Groups                                            
+I, [19-07-01 21:04:58#14186]  INFO -- : User Groups                         1159                
+I, [19-07-01 21:04:58#14186]  INFO -- : Group Update Targets                0                   
+I, [19-07-01 21:04:58#14186]  INFO -- : Group Notify Updated                0                   
+I, [19-07-01 21:04:58#14186]  INFO -- : Watch Categories                                        
+I, [19-07-01 21:04:58#14186]  INFO -- : User Categories                     676                 
+I, [19-07-01 21:04:58#14186]  INFO -- : Category Update Targets             0                   
+I, [19-07-01 21:04:58#14186]  INFO -- : Category Notify Updated             0                   
+I, [19-07-01 21:04:58#14186]  INFO -- : Downgrade Trust                                         
+I, [19-07-01 21:04:58#14186]  INFO -- : Users                               0                   
+I, [19-07-01 21:04:58#14186]  INFO -- : User Trust Targets                  1                   
+I, [19-07-01 21:04:58#14186]  INFO -- : User Trust Updated                  1                   
+I, [19-07-01 21:10:24#15142]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-01 21:29:37#15142]  INFO -- : Pass 1 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 21:53:43#15142]  INFO -- : Pass 2 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 22:10:30#15142]  INFO -- : User badge granted:                 PowerUser           
+I, [19-07-01 22:17:50#15142]  INFO -- : Pass 3 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 22:21:36#16761]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-01 22:33:19#16761]  INFO -- : Kim_Miller          granted User Badge:                PowerUser           
+I, [19-07-01 22:40:35#16761]  INFO -- : Pass 1 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 22:57:19#16761]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-07-01 22:57:19#16761]  INFO -- : Kim_Miller         2019-07-01     2019-07-01       1732         769164       96728                           
+W, [19-07-01 22:57:20#16761]  WARN -- : Success: OK
+I, [19-07-01 22:57:20#16761]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-07-01 22:57:20#16761]  INFO -- : Kim_Miller         2019-07-01     2019-07-01       1732         769164       96728             1146          
+I, [19-07-01 22:57:21#16761]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-07-01 22:57:21#16761]  INFO -- : Kim_Miller         poll                 0                                   1146  /  1146    PowerUser           
+I, [19-07-01 22:57:21#16761]  INFO -- :   Message From:    KM_Admin             Kim_Miller           Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-07-01 22:57:23#16761]  INFO -- :   Message From:    KM_Admin             Kim_Miller           thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-07-01 23:04:45#16761]  INFO -- : Pass 2 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 23:28:44#16761]  INFO -- : Pass 3 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-01 23:52:43#16761]  INFO -- : Pass 4 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-02 00:16:40#16761]  INFO -- : Pass 5 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-02 00:40:40#16761]  INFO -- : Pass 6 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-02 01:04:41#16761]  INFO -- : Pass 7 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-02 01:28:40#16761]  INFO -- : Pass 8 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-02 01:52:40#16761]  INFO -- : Pass 9 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-02 02:16:38#16761]  INFO -- : Pass 10 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-02 02:40:36#16761]  INFO -- : Pass 11 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-02 03:04:31#16761]  INFO -- : Pass 12 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-02 03:28:29#16761]  INFO -- : Pass 13 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-02 03:52:25#16761]  INFO -- : Pass 14 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-02 04:16:25#16761]  INFO -- : Pass 15 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-02 04:40:22#16761]  INFO -- : Pass 16 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-02 05:03:05#16761]  INFO -- : Stefan_Schmitz      granted User Badge:                Advanced            
+I, [19-07-02 05:03:05#16761]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-07-02 05:03:05#16761]  INFO -- : Stefan_Schmitz     2019-07-02     2019-06-26       84           126864       22790             354           
+W, [19-07-02 05:03:05#16761]  WARN -- : Success: OK
+I, [19-07-02 05:03:05#16761]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-07-02 05:03:05#16761]  INFO -- : Stefan_Schmitz     2019-07-02     2019-06-26       84           126864       22790             542           
+I, [19-07-02 05:03:06#16761]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-07-02 05:03:06#16761]  INFO -- : Stefan_Schmitz     poll                 354                                 542   /  1146    Advanced            
+I, [19-07-02 05:03:06#16761]  INFO -- :   Message From:    KM_Admin             Stefan_Schmitz       Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-07-02 05:03:08#16761]  INFO -- :   Message From:    KM_Admin             Stefan_Schmitz       thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-07-02 05:04:25#16761]  INFO -- : Pass 17 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-02 05:28:22#16761]  INFO -- : Pass 18 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-02 05:52:18#16761]  INFO -- : Pass 19 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-02 06:16:16#16761]  INFO -- : Pass 20 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-02 06:21:16#16761]  INFO -- : ... Exiting ...
+I, [19-07-02 06:21:16#16761]  INFO -- : Discourse Men                                           
+I, [19-07-02 06:21:16#16761]  INFO -- : Processed Users                     166                 
+I, [19-07-02 06:21:16#16761]  INFO -- : Skipped Users                       0                   
+I, [19-07-02 06:21:16#16761]  INFO -- : Messages Sent                       0                   
+I, [19-07-02 06:21:16#16761]  INFO -- : User Scores                                             
+I, [19-07-02 06:21:16#16761]  INFO -- : New Vote Targets                    2                   
+I, [19-07-02 06:21:16#16761]  INFO -- : New User Scores                     2                   
+I, [19-07-02 06:21:16#16761]  INFO -- : Updated User Scores                 2                   
+I, [19-07-02 06:21:16#16761]  INFO -- : New User Badges                     2                   
+I, [19-07-02 06:21:16#16761]  INFO -- : Not Voted Targets                   0                   
+I, [19-07-02 06:21:16#16761]  INFO -- : Messages Sent                       2                   
+I, [19-07-02 06:21:16#16761]  INFO -- : Watch Groups                                            
+I, [19-07-02 06:21:16#16761]  INFO -- : User Groups                         23120               
+I, [19-07-02 06:21:16#16761]  INFO -- : Group Update Targets                0                   
+I, [19-07-02 06:21:16#16761]  INFO -- : Group Notify Updated                0                   
+I, [19-07-02 06:21:16#16761]  INFO -- : Watch Categories                                        
+I, [19-07-02 06:21:16#16761]  INFO -- : User Categories                     13520               
+I, [19-07-02 06:21:16#16761]  INFO -- : Category Update Targets             0                   
+I, [19-07-02 06:21:16#16761]  INFO -- : Category Notify Updated             0                   
+I, [19-07-02 06:21:16#16761]  INFO -- : Downgrade Trust                                         
+I, [19-07-02 06:21:16#16761]  INFO -- : Users                               0                   
+I, [19-07-02 06:21:16#16761]  INFO -- : User Trust Targets                  0                   
+I, [19-07-02 06:21:16#16761]  INFO -- : User Trust Updated                  0                   
