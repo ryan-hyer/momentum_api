@@ -936,3 +936,75 @@ I, [19-07-03 00:28:15#36331]  INFO -- : Downgrade Trust
 I, [19-07-03 00:28:15#36331]  INFO -- : Users                               0                   
 I, [19-07-03 00:28:15#36331]  INFO -- : User Trust Targets                  0                   
 I, [19-07-03 00:28:15#36331]  INFO -- : User Trust Updated                  0                   
+I, [19-07-03 09:22:35#54012]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-03 09:41:38#54012]  INFO -- : Pass 1 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 10:05:38#54012]  INFO -- : Pass 2 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 10:16:51#54012]  INFO -- : EO_Rojas            granted User Badge:                Beginner            
+I, [19-07-03 10:16:51#54012]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-07-03 10:16:51#54012]  INFO -- : EO_Rojas           2019-07-03     2019-06-20       135          102001       2275                            
+W, [19-07-03 10:16:51#54012]  WARN -- : Success: OK
+I, [19-07-03 10:16:51#54012]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score
+I, [19-07-03 10:16:51#54012]  INFO -- : EO_Rojas           2019-07-03     2019-06-20       135          102001       2275              23            
+I, [19-07-03 10:16:52#54012]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-07-03 10:16:52#54012]  INFO -- : EO_Rojas           poll                 0                                   23    /  1146    Beginner            
+I, [19-07-03 10:16:52#54012]  INFO -- :   Message From:    Kim_Miller           EO_Rojas             Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-07-03 10:16:54#54012]  INFO -- :   Message From:    Kim_Miller           EO_Rojas             thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-07-03 10:29:41#54012]  INFO -- : Pass 3 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 10:53:38#54012]  INFO -- : Pass 4 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 11:17:33#54012]  INFO -- : Pass 5 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 11:41:31#54012]  INFO -- : Pass 6 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 12:05:25#54012]  INFO -- : Pass 7 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 12:29:21#54012]  INFO -- : Pass 8 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 12:53:24#54012]  INFO -- : Pass 9 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 13:17:24#54012]  INFO -- : Pass 10 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 13:41:21#54012]  INFO -- : Pass 11 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 14:05:17#54012]  INFO -- : Pass 12 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 14:29:12#54012]  INFO -- : Pass 13 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 14:53:15#71444]  INFO -- : Discourse Men                                           
+I, [19-07-03 14:53:15#71444]  INFO -- : Processed Users                     0                   
+I, [19-07-03 14:53:15#71444]  INFO -- : Skipped Users                       0                   
+I, [19-07-03 14:53:15#71444]  INFO -- : Messages Sent                       0                   
+I, [19-07-03 14:53:15#71444]  INFO -- : Downgrade Trust                                         
+I, [19-07-03 14:53:15#71444]  INFO -- : Users                               0                   
+I, [19-07-03 14:53:15#71444]  INFO -- : User Trust Targets                  0                   
+I, [19-07-03 14:53:15#71444]  INFO -- : User Trust Updated                  0                   
+I, [19-07-03 14:53:58#71770]  INFO -- : Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level   
+I, [19-07-03 14:53:58#71770]  INFO -- : Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 1             
+I, [19-07-03 14:53:58#71770]  INFO -- : Discourse Men                                           
+I, [19-07-03 14:53:58#71770]  INFO -- : Processed Users                     1                   
+I, [19-07-03 14:53:58#71770]  INFO -- : Skipped Users                       0                   
+I, [19-07-03 14:53:58#71770]  INFO -- : Messages Sent                       0                   
+I, [19-07-03 14:53:58#71770]  INFO -- : Downgrade Trust                                         
+I, [19-07-03 14:53:58#71770]  INFO -- : Users                               0                   
+I, [19-07-03 14:53:58#71770]  INFO -- : User Trust Targets                  1                   
+I, [19-07-03 14:53:58#71770]  INFO -- : User Trust Updated                  0                   
+I, [19-07-03 14:54:08#72059]  INFO -- : Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level   
+I, [19-07-03 14:54:08#72059]  INFO -- : Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 1             
+I, [19-07-03 14:54:08#72059]  INFO -- : Discourse Men                                           
+I, [19-07-03 14:54:08#72059]  INFO -- : Processed Users                     1                   
+I, [19-07-03 14:54:08#72059]  INFO -- : Skipped Users                       0                   
+I, [19-07-03 14:54:08#72059]  INFO -- : Messages Sent                       0                   
+I, [19-07-03 14:54:08#72059]  INFO -- : Downgrade Trust                                         
+I, [19-07-03 14:54:08#72059]  INFO -- : Users                               0                   
+I, [19-07-03 14:54:08#72059]  INFO -- : User Trust Targets                  1                   
+I, [19-07-03 14:54:08#72059]  INFO -- : User Trust Updated                  0                   
+I, [19-07-03 14:54:19#72343]  INFO -- : Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level   
+I, [19-07-03 14:54:19#72343]  INFO -- : Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 1             
+I, [19-07-03 14:54:19#72343]  INFO -- : Discourse Men                                           
+I, [19-07-03 14:54:19#72343]  INFO -- : Processed Users                     1                   
+I, [19-07-03 14:54:19#72343]  INFO -- : Skipped Users                       0                   
+I, [19-07-03 14:54:19#72343]  INFO -- : Messages Sent                       0                   
+I, [19-07-03 14:54:19#72343]  INFO -- : Downgrade Trust                                         
+I, [19-07-03 14:54:19#72343]  INFO -- : Users                               0                   
+I, [19-07-03 14:54:19#72343]  INFO -- : User Trust Targets                  1                   
+I, [19-07-03 14:54:19#72343]  INFO -- : User Trust Updated                  0                   
+I, [19-07-03 14:54:28#72628]  INFO -- : Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level   
+I, [19-07-03 14:54:28#72628]  INFO -- : Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 1             
+I, [19-07-03 14:54:28#72628]  INFO -- : Discourse Men                                           
+I, [19-07-03 14:54:28#72628]  INFO -- : Processed Users                     1                   
+I, [19-07-03 14:54:28#72628]  INFO -- : Skipped Users                       0                   
+I, [19-07-03 14:54:28#72628]  INFO -- : Messages Sent                       0                   
+I, [19-07-03 14:54:28#72628]  INFO -- : Downgrade Trust                                         
+I, [19-07-03 14:54:28#72628]  INFO -- : Users                               0                   
+I, [19-07-03 14:54:28#72628]  INFO -- : User Trust Targets                  1                   
+I, [19-07-03 14:54:28#72628]  INFO -- : User Trust Updated                  0                   

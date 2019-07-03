@@ -46,6 +46,7 @@ schedule_options = {
     },
     user:{
         downgrade_non_owner_trust:                {
+            do_task_update:         false,            # false = list but do not downgrade trust level
             allowed_levels:         0,                # Default: 0
             set_level:              0,                # Default: 0
             excludes:               %w()

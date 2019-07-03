@@ -1,5 +1,5 @@
 module MomentumApi
-  class DowngradeTrust
+  class Preferences
 
     attr_accessor :counters
 
@@ -9,7 +9,7 @@ module MomentumApi
 
       # parameter setting
       @schedule               =   schedule
-      @options                =   user_options[:downgrade_non_owner_trust]
+      @options                =   user_options[:preferences]
       @mock                   =   mock
 
       # counter init
@@ -22,10 +22,12 @@ module MomentumApi
 
     def run(man)
 
-      if man.is_owner
+      # if man.is_owner
         # puts "#{man.user_details['username']} is an owner."
 
-      else
+      # else
+
+      @options.each do |preference|
         user_option_print = %w(last_seen_at last_posted_at post_count time_read recent_time_read trust_level)
 
         # puts 'update_trust_level'
@@ -34,7 +36,7 @@ module MomentumApi
         end
 
         # what to update
-        if man.user_details['trust_level'] == @options[:allowed_levels]
+        if man.user_details['user_option'][preference[0].to_s] == preference[1][:allowed_levels]
           # man.print_user_options(man.user_details, user_option_print, 'Correct Trust')
         else
           man.print_user_options(man.user_details, user_option_print, 'Non Owner')

@@ -1,6 +1,6 @@
 require_relative '../../spec_helper'
 
-describe MomentumApi::DowngradeTrust do
+describe MomentumApi::Preferences do
 
   let(:user_details_owner) { json_fixture("user_details.json") }
   let(:user_details_non_owner) { json_fixture("user_details_non_owner.json") }
@@ -23,19 +23,19 @@ describe MomentumApi::DowngradeTrust do
 
   let(:mock_man) do
     mock_man = instance_double('man')
-    expect(mock_man).to receive(:is_owner).exactly(1).times.and_return false
+    # expect(mock_man).to receive(:is_owner).exactly(1).times.and_return false
     expect(mock_man).to receive(:user_details).exactly(2).times.and_return(user_details_non_owner)
     mock_man
   end
 
-  describe '.downgrade_trust_level' do
+  describe '.preference' do
 
     let(:mock_dependencies) do
       mock_dependencies = instance_double('mock_dependencies')
       mock_dependencies
     end
 
-    let(:user) { MomentumApi::DowngradeTrust.new(mock_schedule, user_options, mock: mock_dependencies) }
+    let(:user) { MomentumApi::Preferences.new(mock_schedule, user_options, mock: mock_dependencies) }
 
     context "init" do
 
@@ -147,7 +147,7 @@ describe MomentumApi::DowngradeTrust do
         mock_man
       end
 
-      user_options[:downgrade_non_owner_trust][:do_task_update] = true
+      # user_options[:downgrade_non_owner_trust][:do_task_update] = true
 
       options_do_live_updates = discourse_options
       options_do_live_updates[:do_live_updates] = true

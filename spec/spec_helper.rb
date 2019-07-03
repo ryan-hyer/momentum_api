@@ -78,7 +78,16 @@ def schedule_options
           }
       },
       user:{
+          preferences:                              {
+              email_messages_level: {
+                  do_task_update:         false,
+                  allowed_levels:         0,
+                  set_level:              0,
+                  excludes:               %w()
+              }
+          },
           downgrade_non_owner_trust:                {
+              do_task_update:         false,
               allowed_levels:         0,
               set_level:              0,
               excludes:               %w()
