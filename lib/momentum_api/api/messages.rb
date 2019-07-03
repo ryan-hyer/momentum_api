@@ -1,7 +1,7 @@
 module MomentumApi
   class Messages
 
-    def initialize(requestor, from_username, message_subject: nil, message_body: nil)
+    def initialize(requestor, from_username, message_subject: nil, message_body: nil, mock: nil)
       raise ArgumentError, 'requestor needs to be defined' if requestor.nil?
       raise ArgumentError, 'from_username needs to be defined' if from_username.nil?
 
@@ -10,6 +10,7 @@ module MomentumApi
       @from_username      =   from_username
       @message_subject    =   message_subject
       @message_body       =   message_body
+      @mock               =   mock
 
     end
 
@@ -39,7 +40,7 @@ module MomentumApi
             raw: message_body,
             target_usernames: to_username
         )
-        sleep 1
+        @mock ? sleep(0) : sleep(1)
 
         # check if message sent - may be commented out
         created_message = from_client.get_post(response['id'])
@@ -48,7 +49,7 @@ module MomentumApi
 
         @requestor.counters[:'Messages Sent'] += 1
         # man.discourse.scan_pass_counters.discourse_counters[:'Messages Sent'] += 1
-        sleep 1
+        @mock ? sleep(0) : sleep(1)
       end
     end
 

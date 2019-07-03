@@ -28,7 +28,7 @@ describe MomentumApi::Messages do
       mock_dependencies
     end
 
-    let(:messages) { MomentumApi::Messages.new(mock_dependencies, 'Kim_Miller' )}
+    let(:messages) { MomentumApi::Messages.new(mock_dependencies, 'Kim_Miller', mock: mock_dependencies)}
 
     describe "init message master" do
 
@@ -76,7 +76,7 @@ describe MomentumApi::Messages do
 
     describe '.send_private_message from same as to' do
 
-      let(:messages) { MomentumApi::Messages.new(mock_dependencies, 'Kim_Miller' )}
+      let(:messages) { MomentumApi::Messages.new(mock_dependencies, 'Kim_Miller', mock: mock_dependencies)}
 
       it "sends message" do
         expect(messages).to respond_to(:send_private_message)
@@ -86,7 +86,7 @@ describe MomentumApi::Messages do
 
     describe '.send_private_message from same as to' do
 
-      let(:messages) { MomentumApi::Messages.new(mock_dependencies, 'Tony_Christopher' )}
+      let(:messages) { MomentumApi::Messages.new(mock_dependencies, 'Tony_Christopher', mock: mock_dependencies)}
 
       it ".send_private_message inits and changes from to 'KM_Admin'" do
         expect(messages).to respond_to(:send_private_message)
@@ -97,7 +97,7 @@ describe MomentumApi::Messages do
 
     describe '.send_private_message from same as to' do
 
-      let(:messages) { MomentumApi::Messages.new(mock_dependencies, 'Tony_Christopher' )}
+      let(:messages) { MomentumApi::Messages.new(mock_dependencies, 'Tony_Christopher', mock: mock_dependencies)}
 
       it ".send_private_message inits and changes from to 'KM_Admin'" do
         expect(messages).to respond_to(:send_private_message)
