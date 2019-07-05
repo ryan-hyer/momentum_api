@@ -1,19 +1,51 @@
-[
-  {
-    "id": 113,
-    "name": "PowerUser",
-    "description": "Discourse Power User",
-    "grant_count": 2,
-    "allow_title": false,
-    "multiple_grant": false,
-    "icon": "fa-certificate",
-    "image": "https://discourse.gomomentum.org/uploads/default/original/2X/4/473062daa5b0296e8f12774eacd03c02f3ea05f9.png",
-    "listable": true,
-    "enabled": true,
-    "badge_grouping_id": 7,
-    "system": false,
-    "slug": "poweruser",
-    "manually_grantable": true,
-    "badge_type_id": 1
+{
+  "badges": [
+    {
+      "id": 113,
+      "name": "PowerUser",
+      "description": "Discourse Power User",
+      "grant_count": 3,
+      "allow_title": false,
+      "multiple_grant": false,
+      "icon": "fa-certificate",
+      "image": "https://discourse.gomomentum.org/uploads/default/original/2X/4/473062daa5b0296e8f12774eacd03c02f3ea05f9.png",
+      "listable": true,
+      "enabled": true,
+      "badge_grouping_id": 7,
+      "system": false,
+      "slug": "poweruser",
+      "manually_grantable": true,
+      "badge_type_id": 1
+    }
+  ],
+  "badge_types": [
+    {
+      "id": 1,
+      "name": "Gold",
+      "sort_order": 9
+    }
+  ],
+  "granted_bies": [
+    {
+      "id": 150,
+      "username": "KM_Admin",
+      "name": "Kim Miller",
+      "avatar_template": "/user_avatar/discourse.gomomentum.org/km_admin/{size}/1232_2.png",
+      "primary_group_name": "Admin",
+      "primary_group_flair_url": "fa-info-circle",
+      "primary_group_flair_color": "b91f24",
+      "moderator": true,
+      "admin": true
+    }
+  ],
+  "user_badge": {
+    "id": 1315,
+    "granted_at": "2019-05-17T00:16:41.904Z",
+    "grouping_position": 6,
+    "post_number": 20,
+    "topic_id": 6485,
+    "topic_title": "Discourse User Scores",
+    "badge_id": 113,
+    "granted_by_id": 150
   }
-]
+}

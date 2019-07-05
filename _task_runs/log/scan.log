@@ -1008,3 +1008,294 @@ I, [19-07-03 14:54:28#72628]  INFO -- : Downgrade Trust
 I, [19-07-03 14:54:28#72628]  INFO -- : Users                               0                   
 I, [19-07-03 14:54:28#72628]  INFO -- : User Trust Targets                  1                   
 I, [19-07-03 14:54:28#72628]  INFO -- : User Trust Updated                  0                   
+I, [19-07-03 15:11:06#73506]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-03 15:12:54#73506]  INFO -- : Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level   
+I, [19-07-03 15:12:54#73506]  INFO -- : Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 1             
+I, [19-07-03 15:30:07#73506]  INFO -- : Pass 1 complete for 167 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 15:36:54#73506]  INFO -- : Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level   
+I, [19-07-03 15:36:54#73506]  INFO -- : Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 1             
+I, [19-07-03 15:54:09#73506]  INFO -- : Pass 2 complete for 167 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 16:00:56#73506]  INFO -- : Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level   
+I, [19-07-03 16:00:56#73506]  INFO -- : Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 1             
+I, [19-07-03 16:10:38#83125]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-03 16:12:25#83125]  INFO -- : Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level   
+I, [19-07-03 16:12:25#83125]  INFO -- : Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 1             
+W, [19-07-03 16:12:25#83125]  WARN -- : Brad_Fino Downgraded
+I, [19-07-03 16:12:25#83125]  INFO -- : Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level   
+I, [19-07-03 16:12:25#83125]  INFO -- : Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 0             
+I, [19-07-03 16:29:42#83125]  INFO -- : Pass 1 complete for 167 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 16:53:41#83125]  INFO -- : Pass 2 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 17:17:55#83125]  INFO -- : Pass 3 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 17:42:03#83125]  INFO -- : Pass 4 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 18:06:13#83125]  INFO -- : Pass 5 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 18:30:24#83125]  INFO -- : Pass 6 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 18:54:33#83125]  INFO -- : Pass 7 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 19:18:36#83125]  INFO -- : Pass 8 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 19:42:41#83125]  INFO -- : Pass 9 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 20:06:44#83125]  INFO -- : Pass 10 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 20:30:47#83125]  INFO -- : Pass 11 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 20:54:53#83125]  INFO -- : Pass 12 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 21:18:58#83125]  INFO -- : Pass 13 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 21:43:06#83125]  INFO -- : Pass 14 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 22:07:17#83125]  INFO -- : Pass 15 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 22:31:21#83125]  INFO -- : Pass 16 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 22:55:20#83125]  INFO -- : Pass 17 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 23:19:22#83125]  INFO -- : Pass 18 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-03 23:43:20#83125]  INFO -- : Pass 19 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 00:07:18#83125]  INFO -- : Pass 20 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 00:12:18#83125]  INFO -- : ... Exiting ...
+I, [19-07-04 00:12:18#83125]  INFO -- : Discourse Men                                           
+I, [19-07-04 00:12:18#83125]  INFO -- : Processed Users                     166                 
+I, [19-07-04 00:12:18#83125]  INFO -- : Skipped Users                       0                   
+I, [19-07-04 00:12:18#83125]  INFO -- : Messages Sent                       0                   
+I, [19-07-04 00:12:18#83125]  INFO -- : User Scores                                             
+I, [19-07-04 00:12:18#83125]  INFO -- : New Vote Targets                    0                   
+I, [19-07-04 00:12:18#83125]  INFO -- : New User Scores                     0                   
+I, [19-07-04 00:12:18#83125]  INFO -- : Updated User Scores                 0                   
+I, [19-07-04 00:12:18#83125]  INFO -- : New User Badges                     0                   
+I, [19-07-04 00:12:18#83125]  INFO -- : Not Voted Targets                   0                   
+I, [19-07-04 00:12:18#83125]  INFO -- : Messages Sent                       0                   
+I, [19-07-04 00:12:18#83125]  INFO -- : Watch Groups                                            
+I, [19-07-04 00:12:18#83125]  INFO -- : User Groups                         23149               
+I, [19-07-04 00:12:18#83125]  INFO -- : Group Update Targets                0                   
+I, [19-07-04 00:12:18#83125]  INFO -- : Group Notify Updated                0                   
+I, [19-07-04 00:12:18#83125]  INFO -- : Watch Categories                                        
+I, [19-07-04 00:12:18#83125]  INFO -- : User Categories                     13520               
+I, [19-07-04 00:12:18#83125]  INFO -- : Category Update Targets             0                   
+I, [19-07-04 00:12:18#83125]  INFO -- : Category Notify Updated             0                   
+I, [19-07-04 00:12:18#83125]  INFO -- : Downgrade Trust                                         
+I, [19-07-04 00:12:18#83125]  INFO -- : Users                               0                   
+I, [19-07-04 00:12:18#83125]  INFO -- : User Trust Targets                  1                   
+I, [19-07-04 00:12:18#83125]  INFO -- : User Trust Updated                  1                   
+I, [19-07-04 16:27:56#31035]  INFO -- : Discourse Men                                           
+I, [19-07-04 16:27:56#31035]  INFO -- : Processed Users                     1                   
+I, [19-07-04 16:27:56#31035]  INFO -- : Skipped Users                       0                   
+I, [19-07-04 16:27:56#31035]  INFO -- : Messages Sent                       0                   
+I, [19-07-04 16:27:56#31035]  INFO -- : Downgrade Trust                                         
+I, [19-07-04 16:27:56#31035]  INFO -- : Users                               0                   
+I, [19-07-04 16:27:56#31035]  INFO -- : User Trust Targets                  0                   
+I, [19-07-04 16:27:56#31035]  INFO -- : User Trust Updated                  0                   
+I, [19-07-04 16:44:32#34987]  INFO -- : Discourse Men                                           
+I, [19-07-04 16:44:32#34987]  INFO -- : Processed Users                     1                   
+I, [19-07-04 16:44:32#34987]  INFO -- : Skipped Users                       0                   
+I, [19-07-04 16:44:32#34987]  INFO -- : Messages Sent                       0                   
+I, [19-07-04 16:44:32#34987]  INFO -- : User Preferences                    0                   
+I, [19-07-04 16:44:32#34987]  INFO -- : User Preference Targets             0                   
+I, [19-07-04 16:44:32#34987]  INFO -- : User Preference Updated             0                   
+I, [19-07-04 16:45:14#35281]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                               
+I, [19-07-04 16:45:14#35281]  INFO -- : Kim_Miller         2019-07-04     2019-07-03       1735         769946       92437                                          
+I, [19-07-04 16:45:14#35281]  INFO -- : Discourse Men                                           
+I, [19-07-04 16:45:14#35281]  INFO -- : Processed Users                     1                   
+I, [19-07-04 16:45:14#35281]  INFO -- : Skipped Users                       0                   
+I, [19-07-04 16:45:14#35281]  INFO -- : Messages Sent                       0                   
+I, [19-07-04 16:45:14#35281]  INFO -- : User Preferences                    0                   
+I, [19-07-04 16:45:14#35281]  INFO -- : User Preference Targets             1                   
+I, [19-07-04 16:45:14#35281]  INFO -- : User Preference Updated             0                   
+I, [19-07-04 16:46:51#35590]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-04 16:46:51#35590]  INFO -- : Kim_Miller         2019-07-04     2019-07-03       1735         769946       92437                            1             
+I, [19-07-04 16:46:51#35590]  INFO -- : Discourse Men                                           
+I, [19-07-04 16:46:51#35590]  INFO -- : Processed Users                     1                   
+I, [19-07-04 16:46:51#35590]  INFO -- : Skipped Users                       0                   
+I, [19-07-04 16:46:51#35590]  INFO -- : Messages Sent                       0                   
+I, [19-07-04 16:46:51#35590]  INFO -- : User Preferences                    0                   
+I, [19-07-04 16:46:51#35590]  INFO -- : User Preference Targets             1                   
+I, [19-07-04 16:46:51#35590]  INFO -- : User Preference Updated             0                   
+I, [19-07-04 16:48:38#35912]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-04 16:48:38#35912]  INFO -- : Kim_Miller         2019-07-04     2019-07-03       1735         769946       92437                            1             
+I, [19-07-04 16:48:38#35912]  INFO -- : Discourse Men                                           
+I, [19-07-04 16:48:38#35912]  INFO -- : Processed Users                     1                   
+I, [19-07-04 16:48:38#35912]  INFO -- : Skipped Users                       0                   
+I, [19-07-04 16:48:38#35912]  INFO -- : Messages Sent                       0                   
+I, [19-07-04 16:48:38#35912]  INFO -- : User Preferences                    0                   
+I, [19-07-04 16:48:38#35912]  INFO -- : User Preference Targets             1                   
+I, [19-07-04 16:48:38#35912]  INFO -- : User Preference Updated             0                   
+I, [19-07-04 16:48:57#36199]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-04 16:48:57#36199]  INFO -- : Kim_Miller         2019-07-04     2019-07-03       1735         769946       92437                            1             
+I, [19-07-04 16:58:42#36657]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-04 16:58:42#36657]  INFO -- : Kim_Miller         2019-07-04     2019-07-03       1735         769946       92437                            1             
+I, [19-07-04 16:59:12#36951]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-04 16:59:12#36951]  INFO -- : Kim_Miller         2019-07-04     2019-07-03       1735         769946       92437                            1             
+I, [19-07-04 17:01:13#37267]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-04 17:01:13#37267]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-04 17:09:12#37697]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-04 17:09:12#37697]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-04 18:52:34#39824]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-04 18:52:34#39824]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-04 18:52:58#40118]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-04 18:52:58#40118]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-04 18:59:55#40527]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-04 18:59:55#40527]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-04 19:00:12#40818]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-04 19:00:12#40818]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-04 19:03:29#41149]  INFO -- : Discourse Men                                           
+I, [19-07-04 19:03:29#41149]  INFO -- : Processed Users                     1                   
+I, [19-07-04 19:03:29#41149]  INFO -- : Skipped Users                       0                   
+I, [19-07-04 19:03:29#41149]  INFO -- : Messages Sent                       0                   
+I, [19-07-04 19:03:29#41149]  INFO -- : User Preferences                    0                   
+I, [19-07-04 19:03:29#41149]  INFO -- : User Preference Targets             0                   
+I, [19-07-04 19:03:29#41149]  INFO -- : User Preference Updated             0                   
+I, [19-07-04 19:04:18#41730]  INFO -- : Discourse Men                                           
+I, [19-07-04 19:04:18#41730]  INFO -- : Processed Users                     1                   
+I, [19-07-04 19:04:18#41730]  INFO -- : Skipped Users                       0                   
+I, [19-07-04 19:04:18#41730]  INFO -- : Messages Sent                       0                   
+I, [19-07-04 19:04:18#41730]  INFO -- : User Preferences                    0                   
+I, [19-07-04 19:04:18#41730]  INFO -- : User Preference Targets             0                   
+I, [19-07-04 19:04:18#41730]  INFO -- : User Preference Updated             0                   
+I, [19-07-04 19:04:53#42024]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-04 19:04:53#42024]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            2             
+I, [19-07-04 12:27:37#4764]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-04 12:46:38#4764]  INFO -- : Pass 1 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 13:10:39#4764]  INFO -- : Pass 2 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 13:34:41#4764]  INFO -- : Pass 3 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 13:58:38#4764]  INFO -- : Pass 4 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 14:22:36#4764]  INFO -- : Pass 5 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 14:46:38#4764]  INFO -- : Pass 6 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 15:10:38#4764]  INFO -- : Pass 7 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 15:34:40#4764]  INFO -- : Pass 8 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 15:58:38#4764]  INFO -- : Pass 9 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 16:22:37#4764]  INFO -- : Pass 10 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 16:46:38#4764]  INFO -- : Pass 11 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 17:10:42#4764]  INFO -- : Pass 12 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 17:34:48#4764]  INFO -- : Pass 13 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 17:58:54#4764]  INFO -- : Pass 14 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 18:23:01#4764]  INFO -- : Pass 15 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 18:47:10#4764]  INFO -- : Pass 16 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 19:11:14#4764]  INFO -- : Pass 17 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 19:35:16#4764]  INFO -- : Pass 18 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 19:59:23#4764]  INFO -- : Pass 19 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 20:23:37#4764]  INFO -- : Pass 20 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-04 20:28:37#4764]  INFO -- : ... Exiting ...
+I, [19-07-04 20:28:37#4764]  INFO -- : Discourse Men                                           
+I, [19-07-04 20:28:37#4764]  INFO -- : Processed Users                     166                 
+I, [19-07-04 20:28:37#4764]  INFO -- : Skipped Users                       0                   
+I, [19-07-04 20:28:37#4764]  INFO -- : Messages Sent                       0                   
+I, [19-07-04 20:28:37#4764]  INFO -- : User Scores                                             
+I, [19-07-04 20:28:37#4764]  INFO -- : New Vote Targets                    0                   
+I, [19-07-04 20:28:37#4764]  INFO -- : New User Scores                     0                   
+I, [19-07-04 20:28:37#4764]  INFO -- : Updated User Scores                 0                   
+I, [19-07-04 20:28:37#4764]  INFO -- : New User Badges                     0                   
+I, [19-07-04 20:28:37#4764]  INFO -- : Not Voted Targets                   0                   
+I, [19-07-04 20:28:37#4764]  INFO -- : Messages Sent                       0                   
+I, [19-07-04 20:28:37#4764]  INFO -- : Watch Groups                                            
+I, [19-07-04 20:28:37#4764]  INFO -- : User Groups                         23160               
+I, [19-07-04 20:28:37#4764]  INFO -- : Group Update Targets                0                   
+I, [19-07-04 20:28:37#4764]  INFO -- : Group Notify Updated                0                   
+I, [19-07-04 20:28:37#4764]  INFO -- : Watch Categories                                        
+I, [19-07-04 20:28:37#4764]  INFO -- : User Categories                     13520               
+I, [19-07-04 20:28:37#4764]  INFO -- : Category Update Targets             0                   
+I, [19-07-04 20:28:37#4764]  INFO -- : Category Notify Updated             0                   
+I, [19-07-04 20:28:37#4764]  INFO -- : Downgrade Trust                                         
+I, [19-07-04 20:28:37#4764]  INFO -- : Users                               0                   
+I, [19-07-04 20:28:37#4764]  INFO -- : User Trust Targets                  0                   
+I, [19-07-04 20:28:37#4764]  INFO -- : User Trust Updated                  0                   
+I, [19-07-05 10:34:29#58601]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 10:34:29#58601]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-05 13:02:46#66092]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 13:02:46#66092]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-05 13:08:45#66479]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 13:08:45#66479]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-05 13:09:40#66782]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 13:09:40#66782]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-05 13:10:42#67090]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 13:10:42#67090]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-05 13:16:59#67494]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 13:16:59#67494]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-05 13:19:13#67817]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 13:19:13#67817]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-05 15:16:36#71589]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 15:16:36#71589]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-05 15:18:36#72188]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 15:18:36#72188]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+W, [19-07-05 15:18:36#72188]  WARN -- : OK
+I, [19-07-05 15:18:36#72188]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 15:18:36#72188]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-05 15:18:37#72188]  INFO -- : Discourse Men                                           
+I, [19-07-05 15:18:37#72188]  INFO -- : Processed Users                     1                   
+I, [19-07-05 15:18:37#72188]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 15:18:37#72188]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 15:18:37#72188]  INFO -- : User Preferences                    0                   
+I, [19-07-05 15:18:37#72188]  INFO -- : User Preference Targets             1                   
+I, [19-07-05 15:18:37#72188]  INFO -- : User Preference Updated             1                   
+I, [19-07-05 15:19:18#72487]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 15:19:18#72487]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+W, [19-07-05 15:19:18#72487]  WARN -- : OK
+I, [19-07-05 15:19:18#72487]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 15:19:18#72487]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            0             
+I, [19-07-05 15:19:19#72487]  INFO -- : Discourse Men                                           
+I, [19-07-05 15:19:19#72487]  INFO -- : Processed Users                     1                   
+I, [19-07-05 15:19:19#72487]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 15:19:19#72487]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 15:19:19#72487]  INFO -- : User Preferences                    0                   
+I, [19-07-05 15:19:19#72487]  INFO -- : User Preference Targets             1                   
+I, [19-07-05 15:19:19#72487]  INFO -- : User Preference Updated             1                   
+I, [19-07-05 15:20:15#72790]  INFO -- : Discourse Men                                           
+I, [19-07-05 15:20:15#72790]  INFO -- : Processed Users                     1                   
+I, [19-07-05 15:20:15#72790]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 15:20:15#72790]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 15:20:15#72790]  INFO -- : User Preferences                    0                   
+I, [19-07-05 15:20:15#72790]  INFO -- : User Preference Targets             0                   
+I, [19-07-05 15:20:15#72790]  INFO -- : User Preference Updated             0                   
+I, [19-07-05 15:20:58#73086]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 15:20:58#73086]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+W, [19-07-05 15:20:58#73086]  WARN -- : OK
+I, [19-07-05 15:20:59#73086]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 15:20:59#73086]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-05 15:21:00#73086]  INFO -- : Discourse Men                                           
+I, [19-07-05 15:21:00#73086]  INFO -- : Processed Users                     1                   
+I, [19-07-05 15:21:00#73086]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 15:21:00#73086]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 15:21:00#73086]  INFO -- : User Preferences                    0                   
+I, [19-07-05 15:21:00#73086]  INFO -- : User Preference Targets             1                   
+I, [19-07-05 15:21:00#73086]  INFO -- : User Preference Updated             1                   
+I, [19-07-05 15:21:46#73379]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 15:21:46#73379]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+W, [19-07-05 15:21:46#73379]  WARN -- : OK
+I, [19-07-05 15:21:46#73379]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 15:21:46#73379]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-05 15:21:47#73379]  INFO -- : Discourse Men                                           
+I, [19-07-05 15:21:47#73379]  INFO -- : Processed Users                     1                   
+I, [19-07-05 15:21:47#73379]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 15:21:47#73379]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 15:21:47#73379]  INFO -- : User Preferences                    0                   
+I, [19-07-05 15:21:47#73379]  INFO -- : User Preference Targets             1                   
+I, [19-07-05 15:21:47#73379]  INFO -- : User Preference Updated             1                   
+I, [19-07-05 15:22:13#73671]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 15:22:13#73671]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-05 15:22:31#73965]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 15:22:31#73965]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+I, [19-07-05 15:31:22#74425]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 15:31:22#74425]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            1             
+W, [19-07-05 15:31:23#74425]  WARN -- : OK
+I, [19-07-05 15:31:23#74425]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_messages_level
+I, [19-07-05 15:31:23#74425]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            0             
+I, [19-07-05 15:31:24#74425]  INFO -- : Discourse Men                                           
+I, [19-07-05 15:31:24#74425]  INFO -- : Processed Users                     1                   
+I, [19-07-05 15:31:24#74425]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 15:31:24#74425]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 15:31:24#74425]  INFO -- : User Preferences                    0                   
+I, [19-07-05 15:31:24#74425]  INFO -- : User Preference Targets             1                   
+I, [19-07-05 15:31:24#74425]  INFO -- : User Preference Updated             1                   
+I, [19-07-05 15:35:36#74814]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 mailing_list_mode
+I, [19-07-05 15:35:36#74814]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            true          
+W, [19-07-05 15:35:36#74814]  WARN -- : OK
+I, [19-07-05 15:35:36#74814]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 mailing_list_mode
+I, [19-07-05 15:35:36#74814]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            true          
+I, [19-07-05 15:35:37#74814]  INFO -- : Discourse Men                                           
+I, [19-07-05 15:35:37#74814]  INFO -- : Processed Users                     1                   
+I, [19-07-05 15:35:37#74814]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 15:35:37#74814]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 15:35:37#74814]  INFO -- : User Preferences                    0                   
+I, [19-07-05 15:35:37#74814]  INFO -- : User Preference Targets             1                   
+I, [19-07-05 15:35:37#74814]  INFO -- : User Preference Updated             1                   
+I, [19-07-05 15:35:55#75099]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 mailing_list_mode
+I, [19-07-05 15:35:55#75099]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            true          
+W, [19-07-05 15:35:56#75099]  WARN -- : OK
+I, [19-07-05 15:35:56#75099]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 mailing_list_mode
+I, [19-07-05 15:35:56#75099]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       90994                            false         
+I, [19-07-05 15:35:57#75099]  INFO -- : Discourse Men                                           
+I, [19-07-05 15:35:57#75099]  INFO -- : Processed Users                     1                   
+I, [19-07-05 15:35:57#75099]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 15:35:57#75099]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 15:35:57#75099]  INFO -- : User Preferences                    0                   
+I, [19-07-05 15:35:57#75099]  INFO -- : User Preference Targets             1                   
+I, [19-07-05 15:35:57#75099]  INFO -- : User Preference Updated             1                   

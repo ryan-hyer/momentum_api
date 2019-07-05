@@ -1,104 +1,32 @@
+require_relative 'log/utility'
 require '../lib/momentum_api'
 
 discourse_options = {
-    do_live_updates:        false,
-    # target_username:        'Kim_Miller',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby
+    do_live_updates:        true,
+    target_username:        'Kim_Miller',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby
     target_groups:          %w(trust_level_1),       # Mods GreatX BraveHearts trust_level_1
     instance:               'live',
     api_username:           'KM_Admin',
     exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
-    issue_users:             %w()
+    issue_users:             %w(),
+    logger:                  momentum_api_logger
 }
 
 schedule_options = {
-    group:{
-        group_alias:                {
-            # allowed_levels:         nil,
-            # set_level:              nil,
-            excludes:               %w()
+    user:{
+        preferences:                              {
+            email_messages_level: {
+                do_task_update:         true,
+                allowed_levels:         0,
+                set_level:              0,
+                excludes:               %w()
+            }
         }
-    },
+    }
 }
 discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
 discourse.apply_to_users
 discourse.scan_summary
-
-require '../utility/momentum_api'
-
-@do_live_updates = false 
-client = connect_to_instance('live')   # 'live' or 'local'
-
-# testing variables
-# @target_username = 'Eric_Nitzberg'
-@issue_users = %w() # debug issue user_names
-
-@user_option_targets = {
-    'email_private_messages': true, # Send me an email when someone messages me
-    'email_direct': true,           # Send me an email when someone quotes me, replies to my post, mentions my @username, or invites me to a topic
-    'email_always': true,           # Send me email notifications even when I am active on the site
-    # 'email_digests': true         # When I don’t visit here, send me an email summary of popular topics and replies
-}
-
-@target_groups = %w(trust_level_0)
-@exclude_user_names = %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin)
-@field_settings = "%-18s %-24s %-14s %-14s %-14s %-14s\n"
-
-zero_counters
-
-def print_user_options(user_option)
-  printf @field_settings, @users_username,
-         user_option[@user_option_targets.keys[0].to_s], user_option[@user_option_targets.keys[1].to_s],
-         user_option[@user_option_targets.keys[2].to_s], user_option[@user_option_targets.keys[3].to_s],
-         user_option['mailing_list_mode']
-end
-
-# standardize_email_settings
-def apply_function(user, admin_client, user_client='')
-  @users_username = user['username']
-  # @user_count += 1
-  user_details = user_client.user(@users_username)
-  user_groups = user_details['groups']
-  user_option = user_details['user_option']
-
-  user_groups.each do |group|
-    @group_name = group['name']
-    if @issue_users.include?(@users_username)
-      puts "\n#{@users_username}  Group: #{@group_name}\n"
-    end
-
-    if @target_groups.include?(@group_name)
-      # what to update
-      all_settings_true = [user_option[@user_option_targets.keys[0].to_s], user_option[@user_option_targets.keys[1].to_s],
-              user_option[@user_option_targets.keys[2].to_s]].all?
-      if all_settings_true
-        # puts 'All settings are correct'
-      else
-        print_user_options(user_option)
-
-        if @do_live_updates
-          update_response = user_client.update_user(@users_username, @user_option_targets)
-          puts update_response[:body]['success']
-          @users_updated += 1
-
-          # check if update happened
-          user_option_after_update = user_client.user(@users_username)['user_option']
-          print_user_options(user_option_after_update)
-          sleep(1)
-        end
-      end
-    end
-    break
-  end
-end
-
-printf @field_settings, 'UserName',
-       @user_option_targets.keys[0], @user_option_targets.keys[1],
-       @user_option_targets.keys[2], @user_option_targets.keys[3], 'mailing_list_mode'
-
-apply_to_all_users(client)
-
-# puts "\n#{@users_updated} users updated out of #{@user_count} users found."
-scan_summary
 
 
 # Feb 27, 2019

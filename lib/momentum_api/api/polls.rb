@@ -177,7 +177,7 @@ module MomentumApi
           post_response = @schedule.discourse.admin_client.grant_user_badge(
               username: @man.user_details['username'], badge_id: badge_id, reason: @options[:poll_url])
           # puts "User badges granted:"
-          post_response.each do |badge|
+          post_response['badges'].each do |badge|
             # puts @man.user_details['username']
             granted_badge = sprintf "%-18s %-35s %-20s", @man.user_details['username'],
                                     ' granted User Badge: ', badge['name']

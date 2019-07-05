@@ -32,8 +32,11 @@ module MomentumApi
       end
 
       @user_queue             =   []
-      if @options[:user]
+      if @options[:user][:downgrade_non_owner_trust]
         @user_queue           <<   ( mock || MomentumApi::DowngradeTrust.new(self, @options[:user]) )
+      end
+      if @options[:user][:preferences]
+        @user_queue           <<   ( mock || MomentumApi::Preferences.new(self, @options[:user][:preferences]) )
       end
 
     end
