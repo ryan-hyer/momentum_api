@@ -1386,3 +1386,46 @@ I, [19-07-05 19:06:06#85515]  INFO -- : Watch Categories
 I, [19-07-05 19:06:06#85515]  INFO -- : User Categories                     13                  
 I, [19-07-05 19:06:06#85515]  INFO -- : Category Update Targets             1                   
 I, [19-07-05 19:06:06#85515]  INFO -- : Category Notify Updated             1                   
+I, [19-07-05 19:17:04#86021]  INFO -- : Discourse Men                                           
+I, [19-07-05 19:17:04#86021]  INFO -- : Processed Users                     1                   
+I, [19-07-05 19:17:04#86021]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 19:17:04#86021]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 19:17:04#86021]  INFO -- : User Preferences                    0                   
+I, [19-07-05 19:17:04#86021]  INFO -- : User Preference Targets             0                   
+I, [19-07-05 19:17:04#86021]  INFO -- : User Preference Updated             0                   
+I, [19-07-05 19:17:15#86312]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 homepage_id   
+I, [19-07-05 19:17:15#86312]  INFO -- : Kim_Miller         2019-07-06     2019-07-06       1735         769946       87413                            2             
+W, [19-07-05 19:17:16#86312]  WARN -- : OK
+I, [19-07-05 19:17:16#86312]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 homepage_id   
+I, [19-07-05 19:17:16#86312]  INFO -- : Kim_Miller         2019-07-06     2019-07-06       1735         769946       87413                            2             
+I, [19-07-05 19:17:17#86312]  INFO -- : Discourse Men                                           
+I, [19-07-05 19:17:17#86312]  INFO -- : Processed Users                     1                   
+I, [19-07-05 19:17:17#86312]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 19:17:17#86312]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 19:17:17#86312]  INFO -- : User Preferences                    0                   
+I, [19-07-05 19:17:17#86312]  INFO -- : User Preference Targets             1                   
+I, [19-07-05 19:17:17#86312]  INFO -- : User Preference Updated             1                   
+I, [19-07-05 19:19:18#86623]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 homepage_id   
+I, [19-07-05 19:19:18#86623]  INFO -- : Kim_Miller         2019-07-06     2019-07-06       1735         769946       87413                            2             
+W, [19-07-05 19:19:18#86623]  WARN -- : OK
+I, [19-07-05 19:19:19#86623]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 homepage_id   
+I, [19-07-05 19:19:19#86623]  INFO -- : Kim_Miller         2019-07-06     2019-07-06       1735         769946       87413                            1             
+I, [19-07-05 19:19:20#86623]  INFO -- : Discourse Men                                           
+I, [19-07-05 19:19:20#86623]  INFO -- : Processed Users                     1                   
+I, [19-07-05 19:19:20#86623]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 19:19:20#86623]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 19:19:20#86623]  INFO -- : User Preferences                    0                   
+I, [19-07-05 19:19:20#86623]  INFO -- : User Preference Targets             1                   
+I, [19-07-05 19:19:20#86623]  INFO -- : User Preference Updated             1                   
+I, [19-07-05 19:19:32#86909]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 homepage_id   
+I, [19-07-05 19:19:32#86909]  INFO -- : Kim_Miller         2019-07-06     2019-07-06       1735         769946       87413                            1             
+W, [19-07-05 19:19:32#86909]  WARN -- : OK
+I, [19-07-05 19:19:32#86909]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 homepage_id   
+I, [19-07-05 19:19:32#86909]  INFO -- : Kim_Miller         2019-07-06     2019-07-06       1735         769946       87413                            2             
+I, [19-07-05 19:19:33#86909]  INFO -- : Discourse Men                                           
+I, [19-07-05 19:19:33#86909]  INFO -- : Processed Users                     1                   
+I, [19-07-05 19:19:33#86909]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 19:19:33#86909]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 19:19:33#86909]  INFO -- : User Preferences                    0                   
+I, [19-07-05 19:19:33#86909]  INFO -- : User Preference Targets             1                   
+I, [19-07-05 19:19:33#86909]  INFO -- : User Preference Updated             1                   
