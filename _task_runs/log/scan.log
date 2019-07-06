@@ -1429,3 +1429,24 @@ I, [19-07-05 19:19:33#86909]  INFO -- : Messages Sent                       0
 I, [19-07-05 19:19:33#86909]  INFO -- : User Preferences                    0                   
 I, [19-07-05 19:19:33#86909]  INFO -- : User Preference Targets             1                   
 I, [19-07-05 19:19:33#86909]  INFO -- : User Preference Updated             1                   
+I, [19-07-05 19:56:53#88318]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score               
+I, [19-07-05 19:56:53#88318]  INFO -- : Kim_Miller         2019-07-06     2019-07-06       1735         769946       87413                                          
+W, [19-07-05 19:56:53#88318]  WARN -- : Success: OK
+I, [19-07-05 19:56:54#88318]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score               
+I, [19-07-05 19:56:54#88318]  INFO -- : Kim_Miller         2019-07-06     2019-07-06       1735         769946       87413             1146                         
+I, [19-07-05 19:56:55#88318]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-07-05 19:56:55#88318]  INFO -- : Kim_Miller         poll                 0                                   1146  /  1146    PowerUser           
+I, [19-07-05 19:56:55#88318]  INFO -- :   Message From:    KM_Admin             Kim_Miller           Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-07-05 19:56:56#88318]  INFO -- :   Message From:    KM_Admin             Kim_Miller           thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-07-05 19:56:57#88318]  INFO -- : Discourse Men                                           
+I, [19-07-05 19:56:57#88318]  INFO -- : Processed Users                     1                   
+I, [19-07-05 19:56:57#88318]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 19:56:57#88318]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 19:56:57#88318]  INFO -- : User Scores                                             
+I, [19-07-05 19:56:57#88318]  INFO -- : New Vote Targets                    1                   
+I, [19-07-05 19:56:57#88318]  INFO -- : New User Scores                     1                   
+I, [19-07-05 19:56:57#88318]  INFO -- : Updated User Scores                 1                   
+I, [19-07-05 19:56:57#88318]  INFO -- : New User Badges                     0                   
+I, [19-07-05 19:56:57#88318]  INFO -- : Not Voted Targets                   0                   
+I, [19-07-05 19:56:57#88318]  INFO -- : Messages Sent                       1                   
+I, [19-07-05 19:49:08#87905]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
