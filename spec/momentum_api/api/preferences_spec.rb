@@ -4,7 +4,6 @@ describe MomentumApi::Preferences do
 
   let(:user_details_preference_correct) { json_fixture("user_details.json") }
   let(:user_details_preference_wrong) { json_fixture("user_details_preference_wrong.json") }
-  # let(:admin_user_put) { json_fixture("admin_user_put.json") }
 
   user_preference_tasks = schedule_options[:user][:preferences]
 
@@ -23,7 +22,6 @@ describe MomentumApi::Preferences do
 
   let(:mock_man) do
     mock_man = instance_double('man')
-    # expect(mock_man).to receive(:is_owner).exactly(1).times.and_return false
     expect(mock_man).to receive(:user_details).exactly(2).times.and_return(user_details_preference_correct)
     mock_man
   end
@@ -74,7 +72,6 @@ describe MomentumApi::Preferences do
       let(:mock_man) do
         mock_man = instance_double('man')
         expect(mock_man).to receive(:user_details).exactly(3).times.and_return(user_details_preference_wrong)
-        # expect(mock_man).to receive(:is_owner).exactly(1).times.and_return false
         expect(mock_man).to receive(:print_user_options).exactly(1).times
         mock_man
       end
@@ -91,16 +88,12 @@ describe MomentumApi::Preferences do
 
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
-        # expect(mock_admin_client).to receive(:user_perference).once.and_return user_details_preference_wrong
-        # expect(mock_admin_client).to receive(:update_user).once.and_return admin_user_put
         mock_admin_client
       end
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        # expect(mock_man).to receive(:discourse).exactly(1).times.and_return(mock_discourse)
         expect(mock_man).to receive(:user_details).exactly(3).times.and_return(user_details_preference_wrong)
-        # expect(mock_man).to receive(:is_owner).exactly(1).times.and_return false
         expect(mock_man).to receive(:print_user_options).exactly(1).times
         mock_man
       end
@@ -110,7 +103,6 @@ describe MomentumApi::Preferences do
 
       let(:mock_discourse) do
         mock_discourse = instance_double('discourse')
-        # expect(mock_discourse).to receive(:admin_client).twice.and_return(mock_admin_client)
         expect(mock_discourse).to receive(:options).exactly(2).times.and_return(options_do_live_updates)
         expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
         mock_discourse
@@ -141,8 +133,7 @@ describe MomentumApi::Preferences do
       let(:mock_man) do
         mock_man = instance_double('man')
         expect(mock_man).to receive(:discourse).exactly(1).times.and_return(mock_discourse)
-        expect(mock_man).to receive(:user_details).exactly(4).times.and_return(user_details_preference_wrong)
-        # expect(mock_man).to receive(:is_owner).exactly(1).times.and_return false
+        expect(mock_man).to receive(:user_details).exactly(5).times.and_return(user_details_preference_wrong)
         expect(mock_man).to receive(:print_user_options).exactly(2).times
         mock_man
       end
@@ -181,8 +172,6 @@ describe MomentumApi::Preferences do
       let(:mock_man) do
         mock_man = instance_double('man')
         expect(mock_man).to receive(:user_details).exactly(3).times.and_return(user_details_preference_correct)
-        # expect(mock_man).to receive(:is_owner).exactly(1).times.and_return false
-        # expect(mock_man).to receive(:print_user_options).exactly(1).times
         mock_man
       end
 

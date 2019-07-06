@@ -1299,3 +1299,90 @@ I, [19-07-05 15:35:57#75099]  INFO -- : Messages Sent                       0
 I, [19-07-05 15:35:57#75099]  INFO -- : User Preferences                    0                   
 I, [19-07-05 15:35:57#75099]  INFO -- : User Preference Targets             1                   
 I, [19-07-05 15:35:57#75099]  INFO -- : User Preference Updated             1                   
+I, [19-07-05 13:34:25#68357]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-05 13:53:27#68357]  INFO -- : Pass 1 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-05 14:17:25#68357]  INFO -- : Pass 2 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-05 14:41:19#68357]  INFO -- : Pass 3 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-05 15:05:15#68357]  INFO -- : Pass 4 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-05 15:29:10#68357]  INFO -- : Pass 5 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-05 15:53:05#68357]  INFO -- : Pass 6 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-05 15:59:51#68357]  INFO -- : Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level                  
+I, [19-07-05 15:59:51#68357]  INFO -- : Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 1                            
+I, [19-07-05 16:11:51#78726]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-05 16:13:39#78726]  INFO -- : Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level                  
+I, [19-07-05 16:13:39#78726]  INFO -- : Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 1                            
+I, [19-07-05 18:49:25#82344]  INFO -- : Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level                  
+I, [19-07-05 18:49:25#82344]  INFO -- : Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 1                            
+I, [19-07-05 18:54:18#83013]  INFO -- : Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level                  
+I, [19-07-05 18:54:18#83013]  INFO -- : Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 1                            
+W, [19-07-05 18:54:18#83013]  WARN -- : Brad_Fino Downgraded
+I, [19-07-05 18:54:18#83013]  INFO -- : Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level                  
+I, [19-07-05 18:54:18#83013]  INFO -- : Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 0                            
+I, [19-07-05 18:54:19#83013]  INFO -- : Discourse Men                                           
+I, [19-07-05 18:54:19#83013]  INFO -- : Processed Users                     1                   
+I, [19-07-05 18:54:19#83013]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 18:54:19#83013]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 18:54:19#83013]  INFO -- : Downgrade Trust                                         
+I, [19-07-05 18:54:19#83013]  INFO -- : Users                               0                   
+I, [19-07-05 18:54:19#83013]  INFO -- : User Trust Targets                  1                   
+I, [19-07-05 18:54:19#83013]  INFO -- : User Trust Updated                  1                   
+I, [19-07-05 19:00:03#83985]  INFO -- : Kim_Miller          granted User Badge:                PowerUser           
+I, [19-07-05 19:00:03#83985]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score               
+I, [19-07-05 19:00:03#83985]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       87413                                          
+W, [19-07-05 19:00:03#83985]  WARN -- : Success: OK
+I, [19-07-05 19:00:04#83985]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  user_field_score               
+I, [19-07-05 19:00:04#83985]  INFO -- : Kim_Miller         2019-07-05     2019-07-03       1735         769946       87413                                          
+I, [19-07-05 19:00:05#83985]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-07-05 19:00:05#83985]  INFO -- : Kim_Miller         poll                 0                                   1146  /  1146    PowerUser           
+I, [19-07-05 19:00:05#83985]  INFO -- :   Message From:    KM_Admin             Kim_Miller           Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-07-05 19:00:06#83985]  INFO -- :   Message From:    KM_Admin             Kim_Miller           thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-07-05 19:00:07#83985]  INFO -- : Discourse Men                                           
+I, [19-07-05 19:00:07#83985]  INFO -- : Processed Users                     1                   
+I, [19-07-05 19:00:07#83985]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 19:00:07#83985]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 19:00:07#83985]  INFO -- : User Scores                                             
+I, [19-07-05 19:00:07#83985]  INFO -- : New Vote Targets                    1                   
+I, [19-07-05 19:00:07#83985]  INFO -- : New User Scores                     1                   
+I, [19-07-05 19:00:07#83985]  INFO -- : Updated User Scores                 1                   
+I, [19-07-05 19:00:07#83985]  INFO -- : New User Badges                     1                   
+I, [19-07-05 19:00:07#83985]  INFO -- : Not Voted Targets                   0                   
+I, [19-07-05 19:00:07#83985]  INFO -- : Messages Sent                       1                   
+I, [19-07-05 19:00:44#84288]  INFO -- : KM_Admin           has not voted yet   
+I, [19-07-05 19:00:44#84288]  INFO -- :   Message From:    Kim_Miller           KM_Admin             It's Not Too Late To Be Counted                         It takes just 4 minut     Pending                  
+I, [19-07-05 19:00:46#84288]  INFO -- :   Message From:    Kim_Miller           KM_Admin             its-not-too-late-to-be-counted                          It takes just 4 minut     Sent                     
+I, [19-07-05 19:00:49#84288]  INFO -- : Discourse Men                                           
+I, [19-07-05 19:00:49#84288]  INFO -- : Processed Users                     1                   
+I, [19-07-05 19:00:49#84288]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 19:00:49#84288]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 19:00:49#84288]  INFO -- : User Scores                                             
+I, [19-07-05 19:00:49#84288]  INFO -- : New Vote Targets                    0                   
+I, [19-07-05 19:00:49#84288]  INFO -- : New User Scores                     0                   
+I, [19-07-05 19:00:49#84288]  INFO -- : Updated User Scores                 0                   
+I, [19-07-05 19:00:49#84288]  INFO -- : New User Badges                     0                   
+I, [19-07-05 19:00:49#84288]  INFO -- : Not Voted Targets                   1                   
+I, [19-07-05 19:00:49#84288]  INFO -- : Messages Sent                       1                   
+I, [19-07-05 19:04:25#85207]  INFO -- : GroupUser          Group                Category             Level      Status                        
+I, [19-07-05 19:04:25#85207]  INFO -- : Kim_Miller         Skier                na                     2        NOT Group Default of 3        
+I, [19-07-05 19:04:26#85207]  INFO -- : {"success"=>"OK"}
+I, [19-07-05 19:04:27#85207]  INFO -- : UpdatedUser        Group                Category             Level      Status                        
+I, [19-07-05 19:04:27#85207]  INFO -- : Kim_Miller         Skier                na                     3        User set to 3                 
+I, [19-07-05 19:04:27#85207]  INFO -- : Discourse Men                                           
+I, [19-07-05 19:04:27#85207]  INFO -- : Processed Users                     1                   
+I, [19-07-05 19:04:27#85207]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 19:04:27#85207]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 19:04:27#85207]  INFO -- : Watch Groups                                            
+I, [19-07-05 19:04:27#85207]  INFO -- : User Groups                         32                  
+I, [19-07-05 19:04:27#85207]  INFO -- : Group Update Targets                1                   
+I, [19-07-05 19:04:27#85207]  INFO -- : Group Notify Updated                1                   
+I, [19-07-05 19:06:03#85515]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-07-05 19:06:03#85515]  INFO -- : Kim_Miller         Owner                Growth                 2        NOT Watching                  
+W, [19-07-05 19:06:05#85515]  WARN -- : {"success"=>"OK"}
+W, [19-07-05 19:06:06#85515]  WARN -- : Updated Category: Growth    Notification Level: 4
+I, [19-07-05 19:06:06#85515]  INFO -- : Discourse Men                                           
+I, [19-07-05 19:06:06#85515]  INFO -- : Processed Users                     1                   
+I, [19-07-05 19:06:06#85515]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 19:06:06#85515]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 19:06:06#85515]  INFO -- : Watch Categories                                        
+I, [19-07-05 19:06:06#85515]  INFO -- : User Categories                     13                  
+I, [19-07-05 19:06:06#85515]  INFO -- : Category Update Targets             1                   
+I, [19-07-05 19:06:06#85515]  INFO -- : Category Notify Updated             1                   
