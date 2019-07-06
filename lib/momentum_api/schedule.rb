@@ -39,6 +39,7 @@ module MomentumApi
         if @options[:user][:preferences]
           @user_queue << (mock || MomentumApi::Preferences.new(self, @options[:user][:preferences]))
         end
+        @user_queue << (mock || MomentumApi::Preferences.new(self, @options[:user]))
       end
 
     end

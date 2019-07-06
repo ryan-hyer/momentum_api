@@ -1450,3 +1450,36 @@ I, [19-07-05 19:56:57#88318]  INFO -- : New User Badges                     0
 I, [19-07-05 19:56:57#88318]  INFO -- : Not Voted Targets                   0                   
 I, [19-07-05 19:56:57#88318]  INFO -- : Messages Sent                       1                   
 I, [19-07-05 19:49:08#87905]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-05 23:46:59#93166]  INFO -- : Discourse Men                                           
+I, [19-07-05 23:46:59#93166]  INFO -- : Processed Users                     1                   
+I, [19-07-05 23:46:59#93166]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 23:46:59#93166]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 23:46:59#93166]  INFO -- : User Preferences                    0                   
+I, [19-07-05 23:46:59#93166]  INFO -- : User Preference Targets             0                   
+I, [19-07-05 23:46:59#93166]  INFO -- : User Preference Updated             0                   
+I, [19-07-05 23:48:01#93550]  INFO -- : Discourse Men                                           
+I, [19-07-05 23:48:01#93550]  INFO -- : Processed Users                     1                   
+I, [19-07-05 23:48:01#93550]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 23:48:01#93550]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 23:48:01#93550]  INFO -- : User Preferences                    0                   
+I, [19-07-05 23:48:01#93550]  INFO -- : User Preference Targets             0                   
+I, [19-07-05 23:48:01#93550]  INFO -- : User Preference Updated             0                   
+I, [19-07-05 23:48:27#93860]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 email_digests 
+I, [19-07-05 23:48:27#93860]  INFO -- : Kim_Miller         2019-07-06     2019-07-06       1735         769946       87413                            false         
+I, [19-07-05 23:48:27#93860]  INFO -- : Discourse Men                                           
+I, [19-07-05 23:48:27#93860]  INFO -- : Processed Users                     1                   
+I, [19-07-05 23:48:27#93860]  INFO -- : Skipped Users                       0                   
+I, [19-07-05 23:48:27#93860]  INFO -- : Messages Sent                       0                   
+I, [19-07-05 23:48:27#93860]  INFO -- : User Preferences                    0                   
+I, [19-07-05 23:48:27#93860]  INFO -- : User Preference Targets             1                   
+I, [19-07-05 23:48:27#93860]  INFO -- : User Preference Updated             0                   
+I, [19-07-06 00:03:36#94499]  INFO -- : Discourse Men                                           
+I, [19-07-06 00:03:36#94499]  INFO -- : Processed Users                     1                   
+I, [19-07-06 00:03:36#94499]  INFO -- : Skipped Users                       0                   
+I, [19-07-06 00:03:36#94499]  INFO -- : Messages Sent                       0                   
+I, [19-07-06 00:03:36#94499]  INFO -- : User Preferences                    0                   
+I, [19-07-06 00:03:36#94499]  INFO -- : User Preference Targets             0                   
+I, [19-07-06 00:03:36#94499]  INFO -- : User Preference Updated             0                   
+I, [19-07-06 00:03:36#94499]  INFO -- : User Preferences                    0                   
+I, [19-07-06 00:03:36#94499]  INFO -- : User Preference Targets             0                   
+I, [19-07-06 00:03:36#94499]  INFO -- : User Preference Updated             0                   
