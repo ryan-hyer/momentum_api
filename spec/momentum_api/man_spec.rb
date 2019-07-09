@@ -164,7 +164,29 @@ describe MomentumApi::Man do
   end
 
 
-  context 'print_user_options' do
+  context 'print_user_options plain' do
+
+    describe '.print_user_options' do
+
+      # let(:user_option_print) { %w(last_seen_at last_posted_at post_count time_read recent_time_read user_field_score) }
+
+      let(:mock_discourse) do
+        mock_discourse = instance_double('mock_discourse')
+        expect(mock_discourse).to receive(:options).exactly(2).times.and_return(discourse_options)
+        mock_discourse
+      end
+
+      let(:man) {MomentumApi::Man.new(mock_discourse, mock_dependencies, user_details, mock: mock_dependencies)}
+      
+      it 'responds and prints user' do
+        expect { man.print_user_options(user_details) }
+            .to output(/last_seen_at/).to_stdout
+      end
+    end
+  end
+
+
+  context 'print_user_options with updated_option and user_option_print' do
 
     describe '.print_user_options' do
 
@@ -177,9 +199,9 @@ describe MomentumApi::Man do
       end
 
       let(:man) {MomentumApi::Man.new(mock_discourse, mock_dependencies, user_details, mock: mock_dependencies)}
-      
+
       it 'responds and prints user' do
-        expect { man.print_user_options(user_details, user_option_print) }
+        expect { man.print_user_options(user_details, user_option_print, updated_option: %W(user_fields 5)) }
             .to output(/last_seen_at/).to_stdout
       end
     end

@@ -65,10 +65,11 @@ module MomentumApi
     end
 
 
-    def print_user_options(user_details, user_option_print, user_label='UserName', pos_5=user_details[user_option_print[5].to_s], updated_option: nil)
+    def print_user_options(user_details, user_option_print=nil, user_label='UserName', pos_5=user_details['user_field_score'.to_s], updated_option: nil)
 
       field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s %-14s"
-
+      user_option_print = user_option_print ||  %w(last_seen_at last_posted_at post_count time_read recent_time_read user_field_score)
+      
       if updated_option
         updated_value = user_details
         updated_option.each {|level| updated_value = updated_value[level]}
