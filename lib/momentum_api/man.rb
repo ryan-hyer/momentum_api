@@ -65,18 +65,25 @@ module MomentumApi
     end
 
 
-    def print_user_options(user_details, user_option_print, user_label='UserName', pos_5=user_details[user_option_print[5].to_s], user_option: nil)
+    def print_user_options(user_details, user_option_print, user_label='UserName', pos_5=user_details[user_option_print[5].to_s], updated_option: nil)
 
       field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s %-14s"
 
+      if updated_option
+        updated_value = user_details
+        updated_option.each {|level| updated_value = updated_value[level]}
+      else
+        updated_value = nil
+      end
+
       heading = sprintf field_settings, user_label,
-             user_option_print[0], user_option_print[1], user_option_print[2],
-             user_option_print[3], user_option_print[4], user_option_print[5], user_option
+                        user_option_print[0], user_option_print[1], user_option_print[2],
+                        user_option_print[3], user_option_print[4], user_option_print[5], updated_option
 
       body = sprintf field_settings, user_details['username'],
              user_details[user_option_print[0].to_s].to_s[0..9], user_details[user_option_print[1].to_s].to_s[0..9],
              user_details[user_option_print[2].to_s], user_details[user_option_print[3].to_s],
-             user_details[user_option_print[4].to_s], pos_5, user_details['user_option'][user_option.to_s]
+             user_details[user_option_print[4].to_s], pos_5, updated_value
       @discourse.options[:logger].info heading
       @discourse.options[:logger].info body
     end

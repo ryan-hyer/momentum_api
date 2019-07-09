@@ -81,18 +81,18 @@ def schedule_options
           preferences:                              {
               user_option: {
                   email_messages_level: {
-                  do_task_update:         false,
-                  allowed_levels:         0,
-                  set_level:              0,
-                  excludes:               %w()
+                    do_task_update:         false,
+                    allowed_levels:         0,
+                    set_level:              0,
+                    excludes:               %w()
                   }
               },
               user_fields: {
-                  '5': {
-                  do_task_update:         false,
-                  allowed_levels:         0,
-                  set_level:              0,
-                  excludes:               %w()
+                  user_fields: {
+                    do_task_update:         false,
+                    allowed_levels:         '0',
+                    set_level:              {'5':'0'},
+                    excludes:               %w()
                   }
               }
           },

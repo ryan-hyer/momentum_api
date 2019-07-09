@@ -18,7 +18,7 @@ schedule_options = {
             user_option: {
                 email_messages_level: {
                     do_task_update:         true,
-                    allowed_levels:         0,
+                    allowed_levels:         1,
                     set_level:              0,
                     excludes:               %w()
                 }

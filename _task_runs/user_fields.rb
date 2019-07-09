@@ -2,7 +2,7 @@ require_relative 'log/utility'
 require '../lib/momentum_api'
 
 discourse_options = {
-    do_live_updates:        false,
+    do_live_updates:        true,
     target_username:        'Kim_Miller',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby
     target_groups:          %w(trust_level_1),       # Mods GreatX BraveHearts trust_level_1
     instance:               'live',
@@ -16,10 +16,10 @@ schedule_options = {
     user:{
         preferences:  {
             user_fields:                              {
-              "user_fields[5]": {
-                  do_task_update:         false,
-                  allowed_levels:         0,
-                  set_level:              0,
+                user_fields: {
+                  do_task_update:         true,
+                  allowed_levels:         '1',
+                  set_level:              {'5':'0'},
                   excludes:               %w()
               }
           }
