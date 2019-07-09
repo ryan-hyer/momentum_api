@@ -15,11 +15,13 @@ discourse_options = {
 schedule_options = {
     user:{
         preferences:                              {
-            email_messages_level: {
-                do_task_update:         true,
-                allowed_levels:         0,
-                set_level:              0,
-                excludes:               %w()
+            user_option: {
+                email_messages_level: {
+                    do_task_update:         true,
+                    allowed_levels:         0,
+                    set_level:              0,
+                    excludes:               %w()
+                }
             }
         }
     }

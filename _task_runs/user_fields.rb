@@ -14,13 +14,15 @@ discourse_options = {
 
 schedule_options = {
     user:{
-        user_fields:                              {
-            "5": {
-                do_task_update:         false,
-                allowed_levels:         0,
-                set_level:              0,
-                excludes:               %w()
-            }
+        preferences:  {
+            user_fields:                              {
+              "user_fields[5]": {
+                  do_task_update:         false,
+                  allowed_levels:         0,
+                  set_level:              0,
+                  excludes:               %w()
+              }
+          }
         }
     }
 }

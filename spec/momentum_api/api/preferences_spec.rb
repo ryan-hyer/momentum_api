@@ -9,20 +9,20 @@ describe MomentumApi::Preferences do
 
   let(:mock_discourse) do
     mock_discourse = instance_double('discourse')
-    expect(mock_discourse).to receive(:options).once.and_return(discourse_options)
+    # expect(mock_discourse).to receive(:options).once.and_return(discourse_options)
     expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
     mock_discourse
   end
 
   let(:mock_schedule) do
     mock_schedule = instance_double('schedule')
-    expect(mock_schedule).to receive(:discourse).exactly(2).times.and_return(mock_discourse)
+    expect(mock_schedule).to receive(:discourse).exactly(1).times.and_return(mock_discourse)
     mock_schedule
   end
 
   let(:mock_man) do
     mock_man = instance_double('man')
-    expect(mock_man).to receive(:user_details).exactly(2).times.and_return(user_details_preference_correct)
+    expect(mock_man).to receive(:user_details).exactly(1).times.and_return(user_details_preference_correct)
     mock_man
   end
 
@@ -121,7 +121,7 @@ describe MomentumApi::Preferences do
     end
 
 
-    context "do_live_updates and do_task_update" do
+    context "do_live_updates and do_task_update for user_option" do
 
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
@@ -139,7 +139,7 @@ describe MomentumApi::Preferences do
       end
 
       user_pref_tasks_do_task_update = schedule_options[:user][:preferences]
-      user_pref_tasks_do_task_update[:email_messages_level][:do_task_update] = true
+      user_pref_tasks_do_task_update[:user_option][:email_messages_level][:do_task_update] = true
 
       options_do_live_updates = discourse_options
       options_do_live_updates[:do_live_updates] = true
@@ -171,7 +171,8 @@ describe MomentumApi::Preferences do
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(3).times.and_return(user_details_preference_correct)
+        expect(mock_man).to receive(:user_details).exactly(8).times.and_return(user_details_preference_wrong)
+        expect(mock_man).to receive(:print_user_options).exactly(2).times
         mock_man
       end
 
@@ -180,14 +181,14 @@ describe MomentumApi::Preferences do
 
       let(:mock_discourse) do
         mock_discourse = instance_double('discourse')
-        expect(mock_discourse).to receive(:options).once.and_return(discourse_options_issue_user)
+        expect(mock_discourse).to receive(:options).exactly(4).times.and_return(discourse_options_issue_user)
         expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
         mock_discourse
       end
 
       let(:mock_schedule) do
         mock_schedule = instance_double('schedule')
-        expect(mock_schedule).to receive(:discourse).exactly(2).times.and_return(mock_discourse)
+        expect(mock_schedule).to receive(:discourse).exactly(5).times.and_return(mock_discourse)
         mock_schedule
       end
 
