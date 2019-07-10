@@ -22,7 +22,7 @@ describe MomentumApi::Preferences do
 
   let(:mock_man) do
     mock_man = instance_double('man')
-    expect(mock_man).to receive(:user_details).exactly(2).times.and_return(user_details_preference_correct)
+    expect(mock_man).to receive(:user_details).exactly(4).times.and_return(user_details_preference_correct)
     mock_man
   end
 
@@ -71,7 +71,7 @@ describe MomentumApi::Preferences do
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(6).times.and_return(user_details_preference_wrong)
+        expect(mock_man).to receive(:user_details).exactly(8).times.and_return(user_details_preference_wrong)
         expect(mock_man).to receive(:print_user_options).exactly(2).times
         mock_man
       end
@@ -93,7 +93,7 @@ describe MomentumApi::Preferences do
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(6).times.and_return(user_details_preference_wrong)
+        expect(mock_man).to receive(:user_details).exactly(8).times.and_return(user_details_preference_wrong)
         expect(mock_man).to receive(:print_user_options).exactly(2).times
         mock_man
       end
@@ -133,7 +133,7 @@ describe MomentumApi::Preferences do
       let(:mock_man) do
         mock_man = instance_double('man')
         expect(mock_man).to receive(:discourse).exactly(2).times.and_return(mock_discourse)
-        expect(mock_man).to receive(:user_details).exactly(10).times.and_return(user_details_preference_wrong)
+        expect(mock_man).to receive(:user_details).exactly(12).times.and_return(user_details_preference_wrong)
         expect(mock_man).to receive(:print_user_options).exactly(4).times
         mock_man
       end
@@ -172,7 +172,7 @@ describe MomentumApi::Preferences do
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(8).times.and_return(user_details_preference_wrong)
+        expect(mock_man).to receive(:user_details).exactly(10).times.and_return(user_details_preference_wrong)
         expect(mock_man).to receive(:print_user_options).exactly(2).times
         mock_man
       end

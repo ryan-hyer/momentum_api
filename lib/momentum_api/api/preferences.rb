@@ -26,20 +26,27 @@ module MomentumApi
         case
         when preference_type[0].to_s == 'user_option'
           preference_type[1].each do |preference|
-            if man.user_details['user_option'][preference[0].to_s] == preference[1][:allowed_levels]
-              # man.print_user_options(man.user_details, user_option_print, 'Correct Preference')
+            if preference[1][:excludes].include?(man.user_details['username'])
+              # puts "#{man.user_details['username']} is Excluded from this Task."
             else
-              field_update(man, preference,%W(#{preference_type[0]} #{preference[0]}))
+              if man.user_details['user_option'][preference[0].to_s] == preference[1][:allowed_levels]
+                # man.print_user_options(man.user_details, user_option_print, 'Correct Preference')
+              else
+                field_update(man, preference,%W(#{preference_type[0]} #{preference[0]}))
+              end
             end
           end
         when preference_type[0].to_s == 'user_fields'
           preference_type[1].each do |preference|
-            # if man.user_details['user_fields'][preference[0].to_s] == preference[1][:allowed_levels]
-            user_field = preference[1][:set_level].keys[0].to_s
-            if man.user_details['user_fields'][user_field] == preference[1][:allowed_levels]
-              # man.print_user_options(man.user_details, user_option_print, 'Correct Preference')
+            if preference[1][:excludes].include?(man.user_details['username'])
+              # puts "#{man.user_details['username']} is Excluded from this Task."
             else
-              field_update(man, preference,%W(#{preference_type[0]} #{user_field}))
+            user_field = preference[1][:set_level].keys[0].to_s
+              if man.user_details['user_fields'][user_field] == preference[1][:allowed_levels]
+                # man.print_user_options(man.user_details, user_option_print, 'Correct Preference')
+              else
+                field_update(man, preference,%W(#{preference_type[0]} #{user_field}))
+              end
             end
           end
         else

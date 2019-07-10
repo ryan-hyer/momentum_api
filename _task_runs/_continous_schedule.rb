@@ -1,7 +1,7 @@
 require_relative 'log/utility'
 require '../lib/momentum_api'
 
-@scan_passes_end                =   20
+@scan_passes_end                =   1
 
 discourse_options = {
     do_live_updates:                true,

@@ -1,9 +1,9 @@
 require_relative 'log/utility'
 require '../lib/momentum_api'
 
-discourse_options = {
+discourse_options = {                         # todo 1. Stamp just acitive group with [4], then 2. Turn Dark to Default
     do_live_updates:        true,
-    target_username:        'Kim_Miller',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby
+    # target_username:        'Jerry_Strebig',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Jerry_Strebig Lee_Wheeler
     target_groups:          %w(trust_level_1),       # Mods GreatX BraveHearts trust_level_1
     instance:               'live',
     api_username:           'KM_Admin',
@@ -17,10 +17,10 @@ schedule_options = {
         preferences:                              {
             user_option: {
                 theme_ids: {
-                    do_task_update:         true,
-                    allowed_levels:         [4],  # [10] = Dark
-                    set_level:              [4],  # [10] = Dark
-                    excludes:               %w()
+                    do_task_update:         false,
+                    allowed_levels:         [10],  # [10] = Dark, [4] = Light
+                    set_level:              [4],  # [10] = Dark, [4] = Light
+                    excludes:               %w(Ryan_Hyer Steve_Scott David_Kirk)
                 }
             }
         }
@@ -31,59 +31,353 @@ discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
 discourse.apply_to_users
 discourse.scan_summary
 
-# puts "\n#{@users_updated} users updated out of #{@user_targets} possible targets out of #{@user_count} total users."
-
-# Apr 12, 2019
-# UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read  mailing_list_mode
-# Laurence_Kuhn      2019-04-12     2019-04-02       108          11734        60                true
-# Stefan_Schmitz     2019-04-12     2019-04-11       73           92565        20703             true
-# Rich_Worthington   2019-04-12     2019-04-10       95           44418        4942              true
-# Marty_Fauth        2019-04-12     2019-04-12       320          116572       20998             true
-# Paul_Tyner         2019-04-12     2019-03-11       37           39091        3969              true
-# Jeff_Cintas        2019-04-11     2019-01-31       37           40372        582               true
-# Edmond_Cote        2019-04-11     2019-04-08       209          86034        11491             true
-# John_Oberstar      2019-04-11     2019-04-03       27           12488        5385              true
-# Mitch_Slomiak      2019-04-10     2019-04-08       148          5027         390               true
-# Jim_Knapp          2019-04-10     2019-04-08       157          4037         41                true
-# Miles_Bradley      2019-04-09     2019-04-12       242          49065        1011              true
-# Mike_Weston        2019-04-08     2019-04-08       28           26522        5932              true
-# Russ_Towne         2019-04-08     2019-04-09       132          11947        1434              true
-# Marco_Milletti     2019-04-04     2018-10-11       0            12703        1425              true
-# Joseph_Kuo         2019-04-03     2019-03-11       3            2979         568               true
-# Randy_Horton       2019-04-02     2019-04-08       285          18461        5870              true
-# Anshu_Sanghi       2019-03-29     2019-01-23       72           45285        100               true
-# Curt_Weil          2019-03-26     2019-04-03       106          10687        1544              true
-# Tom_Feasby         2019-03-25     2019-04-09       176          22118        2265              true
-# Garry_Cheney       2019-03-23     2019-04-08       79           1574         102               true
-# Charlie_Bedard     2019-03-22     2019-03-28       67           10794        1278              true
-# Ron_Tugender       2019-03-22     2018-12-09       68           37760        0                 true
-# Jerry_Strebig      2019-03-21     2019-03-31       173          6490         504               true
-# Vern_Mcgeorge      2019-03-21     2018-11-14       11           2032         134               true
-# Mike_Ehlers        2019-03-15     2019-01-09       13           12431        0                 true
-# Flint_Thorne       2019-03-12     2019-03-31       19           4046         804               true
-# Juergen_Weltz      2019-03-11     2018-12-05       5            5258         72                true
-# Doug_Greig         2019-03-09     2019-03-09       30           10121        237               true
-# Roger_Chapman      2019-03-08     2019-02-10       11           1864         0                 true
-# Bob_Richards       2019-02-26     2018-10-14       8            386          25                true
-# Rick_Kananen       2019-02-16     2019-03-22       28           534          125               true
-# Jim_Leney          2019-02-16     2018-04-13       24           6219         71                true
-# Mark_Habberley     2019-01-10     2018-04-25       3            1021         0                 true
-# Gene_Sussli        2018-12-14     2019-02-09       28           13261        0                 true
-# Tesh_Tesfaye       2018-09-13     2016-12-21       1            567          0                 true
-# Butch_Dority       2018-08-13                      0            1196         0                 true
-# Curt_Haynes        2018-05-16     2018-05-02       17           3750         0                 true
-# Dennis_Sorensen    2018-04-13     2019-04-08       7            1644         0                 true
-# Jack_Shannon       2018-02-18     2018-01-03       1            42           0                 true
-# Ravi_Narra         2018-01-09     2017-12-31       11           7130         0                 true
-# Maarten_Korringa   2018-01-06     2017-01-20       1            3712         0                 true
-# Lars_Rider         2018-01-05     2019-04-08       156          7014         0                 true
-# Bill_Heller        2017-12-28     2019-02-07       9            1529         0                 true
-# Steve_Benjamin     2017-11-16     2016-11-26       0            857          0                 true
-# Al_Dorji           2017-08-09                      0            10           0                 true
-# Stephen_Gorman     2017-07-19     2017-04-11       2            2507         0                 true
-# Udy_Gold           2017-01-13     2017-01-20       12           1023         0                 true
-# Bill_Strahm        2016-11-24     2018-10-10       6            1562         0                 true
+# Jul 10, 2019 Light Mode users  todo Flag expired users Matt_Hill Jim_Leney
 #
-# 0 users updated out of 48 possible targets out of 201 total users.
+# I, [19-07-10 14:26:56#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:26:56#45508]  INFO -- : Al_Dorji           2019-05-11     2019-05-11       0            31           0                                [4]
+# I, [19-07-10 14:27:03#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:27:03#45508]  INFO -- : Andrew_M_Webster   2019-04-28     2019-04-28       29           8563         0                                [4]
+# I, [19-07-10 14:27:06#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:27:06#45508]  INFO -- : Andrew_Webster     2019-06-24     2019-04-13       56           21148        559                              [4]
+# I, [19-07-10 14:27:10#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:27:10#45508]  INFO -- : Anshu_Sanghi       2019-05-29     2019-05-22       72           46621        562                              [4]
+# I, [19-07-10 14:27:17#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:27:17#45508]  INFO -- : Art_Muir           2019-07-02     2019-07-04       30           20314        1850                             [4]
+# I, [19-07-10 14:27:20#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:27:20#45508]  INFO -- : Barry_Finkelstein  2019-07-06     2019-07-04       31           54094        6095                             [4]
+# I, [19-07-10 14:27:23#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:27:23#45508]  INFO -- : Benjamin_Berman    2019-07-03     2019-05-28       46           37332        246                              [4]
+# I, [19-07-10 14:27:27#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:27:27#45508]  INFO -- : Bill_Herndon       2019-07-09     2019-06-11       23           13637        2644                             [4]
+# I, [19-07-10 14:27:30#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:27:30#45508]  INFO -- : Bill_Sprague       2019-06-24                      0            4481         2262                             [4]
+# I, [19-07-10 14:27:33#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:27:33#45508]  INFO -- : Bill_Zabor         2019-07-10     2019-06-28       109          97098        10724                            [4]
+# I, [19-07-10 14:27:37#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:27:37#45508]  INFO -- : Bob_Richards       2019-04-24     2018-10-14       8            386          0                                [4]
+# I, [19-07-10 14:27:40#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:27:40#45508]  INFO -- : Bob_Silver         2019-07-01     2019-07-02       5            935          21                               [4]
+# I, [19-07-10 14:27:47#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:27:47#45508]  INFO -- : Brad_Milliken      2019-05-20     2019-07-09       7            181          0                                [4]
+# I, [19-07-10 14:27:50#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:27:50#45508]  INFO -- : Brad_Peppard       2019-07-09     2019-07-09       29           12460        647                              [4]
+# I, [19-07-10 14:27:54#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:27:54#45508]  INFO -- : Bran_Scott         2019-01-28                      0            0            0                                [4]
+# I, [19-07-10 14:27:57#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:27:57#45508]  INFO -- : Brian_Haskin       2019-07-09     2019-06-19       48           50328        11813                            [4]
+# I, [19-07-10 14:28:00#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:28:00#45508]  INFO -- : Brian_Ruthruff     2019-04-12     2019-02-13       3            451          0                                [4]
+# I, [19-07-10 14:28:04#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:28:04#45508]  INFO -- : Bruce_Scheer       2019-03-13     2019-03-30       5            5762         0                                [4]
+# I, [19-07-10 14:28:07#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:28:07#45508]  INFO -- : Butch_Dority       2018-08-13                      0            1196         0                                [4]
+# I, [19-07-10 14:28:10#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:28:10#45508]  INFO -- : Charlie_Bedard     2019-07-09     2019-07-09       73           12214        1354                             [4]
+# I, [19-07-10 14:28:14#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:28:14#45508]  INFO -- : Charlie_Ohanlon    2019-07-10     2019-07-08       123          30598        1760                             [4]
+# I, [19-07-10 14:28:17#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:28:17#45508]  INFO -- : Chris_Edgar        2019-02-11     2018-11-12       0            68           0                                [4]
+# I, [19-07-10 14:28:21#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:28:21#45508]  INFO -- : Chris_Reed         2019-07-05     2019-07-08       45           12725        2073                             [4]
+# I, [19-07-10 14:28:31#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:28:31#45508]  INFO -- : Christian_Agardi   2017-08-18     2018-12-20       15           1736         0                                [4]
+# I, [19-07-10 14:28:34#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:28:34#45508]  INFO -- : Clark_Zhang        2019-07-01     2019-01-10       20           5863         41                               [4]
+# I, [19-07-10 14:28:38#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:28:38#45508]  INFO -- : Clay_Campbell      2019-07-02     2019-07-03       44           59435        1845                             [4]
+# I, [19-07-10 14:28:41#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:28:41#45508]  INFO -- : Cory_Harasha       2019-07-09     2019-07-09       20           5459         3787                             [4]
+# I, [19-07-10 14:28:44#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:28:44#45508]  INFO -- : Curt_Haynes        2019-06-08     2018-05-02       17           3750         0                                [4]
+# I, [19-07-10 14:28:48#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:28:48#45508]  INFO -- : Curt_Weil          2019-07-09     2019-07-04       122          11896        1209                             [4]
+# I, [19-07-10 14:28:55#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:28:55#45508]  INFO -- : Dan_Ollendorff     2019-06-24     2019-07-04       20           42046        71                               [4]
+# I, [19-07-10 14:28:58#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:28:58#45508]  INFO -- : Dave_Lloyd         2019-07-10     2019-07-09       40           21712        3033                             [4]
+# I, [19-07-10 14:29:01#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:29:01#45508]  INFO -- : Dave_Mahal         2019-04-22                      0            303          0                                [4]
+# I, [19-07-10 14:29:05#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:29:05#45508]  INFO -- : Dave_Mussoff       2019-07-02     2019-06-11       22           15400        1139                             [4]
+# I, [19-07-10 14:29:08#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:29:08#45508]  INFO -- : Dave_Strigler      2019-07-04     2019-04-21       9            65624        1691                             [4]
+# I, [19-07-10 14:29:15#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:29:15#45508]  INFO -- : David_Coleman      2019-07-03     2019-06-05       1            997          997                              [4]
+# I, [19-07-10 14:29:19#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:29:19#45508]  INFO -- : David_Hohl         2019-07-01     2019-05-25       9            25874        3527                             [4]
+# I, [19-07-10 14:29:25#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:29:25#45508]  INFO -- : David_Mock         2019-07-02     2019-05-13       9            3043         147                              [4]
+# I, [19-07-10 14:29:29#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:29:29#45508]  INFO -- : David_Montagna     2019-02-13     2019-07-09       10           8105         0                                [4]
+# I, [19-07-10 14:29:35#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:29:35#45508]  INFO -- : Dennis_Sorensen    2018-04-13     2019-04-08       7            1644         0                                [4]
+# I, [19-07-10 14:29:39#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:29:39#45508]  INFO -- : Deven_Kalra        2018-10-31     2018-10-30       1            423          0                                [4]
+# I, [19-07-10 14:29:42#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:29:42#45508]  INFO -- : Don_Morgan         2019-06-11     2019-07-03       6            730          213                              [4]
+# I, [19-07-10 14:29:46#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:29:46#45508]  INFO -- : Doug_Greig         2019-06-22     2019-06-08       31           10707        586                              [4]
+# I, [19-07-10 14:29:49#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:29:49#45508]  INFO -- : Eamon_Rooney       2019-03-19                      0            605          0                                [4]
+# I, [19-07-10 14:29:53#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:29:53#45508]  INFO -- : Edmond_Cote        2019-07-10     2019-07-08       229          98251        6131                             [4]
+# I, [19-07-10 14:29:56#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:29:56#45508]  INFO -- : EO_Rojas           2019-07-03     2019-06-20       135          102001       2275                             [4]
+# I, [19-07-10 14:30:00#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:30:00#45508]  INFO -- : Eric_Nitzberg      2019-07-05     2019-03-02       0            110          52                               [4]
+# I, [19-07-10 14:30:03#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:30:03#45508]  INFO -- : Flint_Thorne       2019-07-06     2019-06-28       24           4572         496                              [4]
+# I, [19-07-10 14:30:06#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:30:06#45508]  INFO -- : Francis_daCosta    2019-07-02     2018-12-14       5            12984        12                               [4]
+# I, [19-07-10 14:30:11#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:30:11#45508]  INFO -- : Garry_Cheney       2019-07-04     2019-07-04       88           2061         350                              [4]
+# I, [19-07-10 14:30:14#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:30:14#45508]  INFO -- : Gary_Koerzendorfer 2019-06-09     2019-06-13       1            481          481                              [4]
+# I, [19-07-10 14:30:21#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:30:21#45508]  INFO -- : Gary_Merrick       2019-07-10     2019-07-10       332          307382       33665                            [4]
+# I, [19-07-10 14:30:24#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:30:24#45508]  INFO -- : Gary_Plep          2019-06-29     2019-06-29       2            2063         678                              [4]
+# I, [19-07-10 14:30:27#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:30:27#45508]  INFO -- : Gene_Sussli        2018-12-14     2019-02-09       28           13261        0                                [4]
+# I, [19-07-10 14:30:31#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:30:31#45508]  INFO -- : Geoff_Wright       2019-01-20     2019-01-13       3            760          0                                [4]
+# I, [19-07-10 14:30:34#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:30:34#45508]  INFO -- : Graham_Howe        2018-09-24                      0            80           0                                [4]
+# I, [19-07-10 14:30:38#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:30:38#45508]  INFO -- : Greg_Thayer        2019-03-15     2019-07-09       5            626          0                                [4]
+# I, [19-07-10 14:30:41#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:30:41#45508]  INFO -- : Howard_Bailey      2019-01-18     2019-01-11       0            252          0                                [4]
+# I, [19-07-10 14:30:44#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:30:44#45508]  INFO -- : How_Shaw           2017-09-13     2019-02-08       0            0            0                                [4]
+# I, [19-07-10 14:30:48#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:30:48#45508]  INFO -- : Ian_Wilkes         2019-07-10     2019-07-09       33           25277        10123                            [4]
+# I, [19-07-10 14:30:51#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:30:51#45508]  INFO -- : Jack_McInerney     2019-07-10     2019-07-08       203          301970       34226                            [4]
+# I, [19-07-10 14:30:55#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:30:55#45508]  INFO -- : Jack_Shannon       2018-02-18     2018-01-03       1            42           0                                [4]
+# I, [19-07-10 14:30:58#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:30:58#45508]  INFO -- : James_Fitzgerald   2019-06-08     2019-04-20       0            34469        182                              [4]
+# I, [19-07-10 14:31:05#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:31:05#45508]  INFO -- : James_McKeefery    2019-03-02                      0            625          0                                [4]
+# I, [19-07-10 14:31:08#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:31:08#45508]  INFO -- : Janos_Keresztes    2019-03-23     2019-05-04       0            21           0                                [4]
+# I, [19-07-10 14:31:12#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:31:12#45508]  INFO -- : Jay_Larrick        2019-07-03     2019-07-01       13           3587         0                                [4]
+# I, [19-07-10 14:31:15#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:31:15#45508]  INFO -- : Jeff_Cintas        2019-04-11     2019-01-31       37           40372        0                                [4]
+# I, [19-07-10 14:31:18#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:31:18#45508]  INFO -- : Jeff_Colvin        2019-03-15     2019-04-08       5            1727         0                                [4]
+# I, [19-07-10 14:31:22#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:31:22#45508]  INFO -- : Jeff_Klay          2019-07-01     2019-06-04       7            3722         0                                [4]
+# I, [19-07-10 14:31:25#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:31:25#45508]  INFO -- : Jerry_Raitzer      2019-06-05     2019-05-27       4            5744         405                              [4]
+# I, [19-07-10 14:31:29#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:31:29#45508]  INFO -- : Jerry_Strebig      2019-07-09     2019-07-09       210          12416        4437                             [4]
+# I, [19-07-10 14:31:35#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:31:35#45508]  INFO -- : Jim_Georgiou       2019-06-20     2019-04-22       89           93839        101                              [4]
+# I, [19-07-10 14:31:39#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:31:39#45508]  INFO -- : Jim_Knapp          2019-07-02     2019-07-09       182          5250         1213                             [4]
+# I, [19-07-10 14:31:42#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:31:42#45508]  INFO -- : Jim_Leney          2019-02-16     2019-04-26       26           6219         0                                [4]
+# I, [19-07-10 14:31:45#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:31:45#45508]  INFO -- : Joe_Sabolefski     2019-07-10     2019-07-04       201          317221       10631                            [4]
+# I, [19-07-10 14:31:49#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:31:49#45508]  INFO -- : John_Bodeau        2019-06-25     2019-06-24       41           3881         264                              [4]
+# I, [19-07-10 14:31:52#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:31:52#45508]  INFO -- : John_Butler        2019-07-03     2019-06-27       152          6384         606                              [4]
+# I, [19-07-10 14:31:56#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:31:56#45508]  INFO -- : John_Doodokyan     2019-07-02     2019-02-04       0            2268         1042                             [4]
+# I, [19-07-10 14:31:59#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:31:59#45508]  INFO -- : John_Jeffs         2019-04-16                      0            325          0                                [4]
+# I, [19-07-10 14:32:02#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:32:02#45508]  INFO -- : John_Lasersohn     2019-07-08     2019-07-03       173          35906        2117                             [4]
+# I, [19-07-10 14:32:06#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:32:06#45508]  INFO -- : John_Mansperger    2019-07-07     2019-07-09       166          71286        5506                             [4]
+# I, [19-07-10 14:32:09#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:32:09#45508]  INFO -- : John_Nadler        2019-05-15     2019-05-15       71           25578        0                                [4]
+# I, [19-07-10 14:32:13#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:32:13#45508]  INFO -- : John_Oberstar      2019-07-10     2019-07-10       34           28086        9105                             [4]
+# I, [19-07-10 14:32:16#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:32:16#45508]  INFO -- : John_Piggott       2019-06-05     2016-07-22       1            607          355                              [4]
+# I, [19-07-10 14:32:23#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:32:23#45508]  INFO -- : Juergen_Weltz      2019-06-20     2018-12-05       5            5382         0                                [4]
+# I, [19-07-10 14:32:26#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:32:26#45508]  INFO -- : Keerti_Narayan     2019-06-21     2019-06-21       11           5354         2203                             [4]
+# I, [19-07-10 14:32:30#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:32:30#45508]  INFO -- : Keith_Britany      2019-03-04     2019-06-17       16           2538         0                                [4]
+# I, [19-07-10 14:32:33#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:32:33#45508]  INFO -- : Ken_Cahill         2019-07-10     2019-06-05       73           109833       2029                             [4]
+# I, [19-07-10 14:32:37#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:32:37#45508]  INFO -- : Ken_Krantz         2019-04-21     2018-10-19       0            1048         0                                [4]
+# I, [19-07-10 14:32:47#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:32:47#45508]  INFO -- : Krishna_Yetchina   2019-07-01     2019-06-27       116          155644       2443                             [4]
+# I, [19-07-10 14:32:50#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:32:50#45508]  INFO -- : Lars_Rider         2018-01-05     2019-07-09       164          7014         0                                [4]
+# I, [19-07-10 14:32:54#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:32:54#45508]  INFO -- : Laurence_Kuhn      2019-07-06     2019-07-01       118          16693        4455                             [4]
+# I, [19-07-10 14:32:57#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:32:57#45508]  INFO -- : Lee_Wheeler        2019-07-10     2019-07-04       96           56240        640                              [4]
+# I, [19-07-10 14:33:04#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:33:04#45508]  INFO -- : Marco_Milletti     2019-06-13     2018-10-11       0            13121        381                              [4]
+# I, [19-07-10 14:33:07#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:33:07#45508]  INFO -- : Mark_Habberley     2019-06-04     2018-04-25       3            1021         0                                [4]
+# I, [19-07-10 14:33:10#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:33:10#45508]  INFO -- : Mark_Reinheimer    2019-05-29     2019-05-31       53           32914        68                               [4]
+# I, [19-07-10 14:33:14#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:33:14#45508]  INFO -- : Mark_Thorpe        2019-07-10     2019-07-09       373          235126       9223                             [4]
+# I, [19-07-10 14:33:24#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:33:24#45508]  INFO -- : Matthew_Lewsadder  2019-07-05     2019-07-01       122          76394        3729                             [4]
+# I, [19-07-10 14:33:27#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:33:27#45508]  INFO -- : Matt_Hill                                          0            0            0                                [4]
+# I, [19-07-10 14:33:34#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:33:34#45508]  INFO -- : Michael_Orr        2019-06-05     2019-06-06       106          93803        572                              [4]
+# I, [19-07-10 14:33:38#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:33:38#45508]  INFO -- : Michael_Skowronek  2019-06-09     2019-06-09       11           19317        2823                             [4]
+# I, [19-07-10 14:33:44#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:33:44#45508]  INFO -- : Mike_Drilling      2019-07-09     2019-07-05       412          145336       8438                             [4]
+# I, [19-07-10 14:33:48#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:33:48#45508]  INFO -- : Mike_Druke         2019-07-08     2019-03-12       6            1137         234                              [4]
+# I, [19-07-10 14:33:51#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:33:51#45508]  INFO -- : Mike_Ehlers        2019-07-09     2019-06-26       13           13685        987                              [4]
+# I, [19-07-10 14:33:54#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:33:54#45508]  INFO -- : Mike_Weston        2019-07-09     2019-07-04       37           32882        5344                             [4]
+# I, [19-07-10 14:33:58#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:33:58#45508]  INFO -- : Mike_Wilkins                                       0            0            0                                [4]
+# I, [19-07-10 14:34:05#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:34:05#45508]  INFO -- : Miles_Bradley      2019-07-02     2019-07-03       250          51957        1214                             [4]
+# I, [19-07-10 14:34:08#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:34:08#45508]  INFO -- : Mitch_Slomiak      2019-07-04     2019-07-09       158          6015         630                              [4]
+# I, [19-07-10 14:34:15#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:34:15#45508]  INFO -- : Noah_Salzman       2019-06-28     2019-06-20       1            3538         3538                             [4]
+# I, [19-07-10 14:34:18#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:34:18#45508]  INFO -- : Patrick_Morin      2019-02-26     2018-06-21       1            4223         0                                [4]
+# I, [19-07-10 14:34:21#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:34:21#45508]  INFO -- : Paul_Tyner         2019-07-07     2019-06-28       40           43461        3025                             [4]
+# I, [19-07-10 14:34:28#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:34:28#45508]  INFO -- : Peter_Johnson      2019-03-26     2019-03-25       4            805          0                                [4]
+# I, [19-07-10 14:34:31#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:34:31#45508]  INFO -- : Peter_Montana      2019-06-28     2018-08-18       19           6150         0                                [4]
+# I, [19-07-10 14:34:35#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:34:35#45508]  INFO -- : Randy_Horton       2019-07-04     2019-07-08       308          20356        1575                             [4]
+# I, [19-07-10 14:34:38#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:34:38#45508]  INFO -- : Ravi_Narra         2018-01-09     2017-12-31       11           7130         0                                [4]
+# I, [19-07-10 14:34:42#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:34:42#45508]  INFO -- : Raymond_Miller     2019-02-12                      0            355          0                                [4]
+# I, [19-07-10 14:34:45#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:34:45#45508]  INFO -- : Rich_Worthington   2019-07-02     2019-06-30       99           45696        996                              [4]
+# I, [19-07-10 14:34:48#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:34:48#45508]  INFO -- : Rick_Kananen       2019-02-16     2019-07-06       30           534          0                                [4]
+# I, [19-07-10 14:34:52#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:34:52#45508]  INFO -- : Robbie_Bow         2019-06-28     2019-06-28       43           31230        1239                             [4]
+# I, [19-07-10 14:34:55#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:34:55#45508]  INFO -- : Roger_Chapman      2019-03-08     2019-02-10       11           1864         0                                [4]
+# I, [19-07-10 14:34:59#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:34:59#45508]  INFO -- : Ron_McDowell       2018-11-20     2019-03-13       2            274          0                                [4]
+# I, [19-07-10 14:35:02#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:35:02#45508]  INFO -- : Ron_Tugender       2019-07-08     2018-12-09       68           38060        300                              [4]
+# I, [19-07-10 14:35:05#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:35:05#45508]  INFO -- : Russ_Towne         2019-07-01     2019-07-10       156          17168        4018                             [4]
+# I, [19-07-10 14:35:15#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:35:15#45508]  INFO -- : Sanjeev_Balarajan  2019-07-09     2019-07-09       140          123593       549                              [4]
+# I, [19-07-10 14:35:22#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:35:22#45508]  INFO -- : Save_Torquato      2019-07-01     2019-07-09       12           2330         1913                             [4]
+# I, [19-07-10 14:35:25#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:35:25#45508]  INFO -- : Scott_StGermain    2019-07-09     2019-07-09       121          61980        4991                             [4]
+# I, [19-07-10 14:35:29#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:35:29#45508]  INFO -- : Shane_Reed         2019-03-25                      0            764          0                                [4]
+# I, [19-07-10 14:35:35#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:35:35#45508]  INFO -- : Sridhar_Ramanathan 2019-07-03     2019-07-03       34           13913        948                              [4]
+# I, [19-07-10 14:35:39#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:35:39#45508]  INFO -- : Stefan_Schmitz     2019-07-06     2019-06-26       84           126950       18114                            [4]
+# I, [19-07-10 14:35:42#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:35:42#45508]  INFO -- : Steve_Cross        2019-06-22     2019-06-29       75           5708         138                              [4]
+# I, [19-07-10 14:35:56#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:35:56#45508]  INFO -- : Tesh_Tesfaye       2018-09-13     2019-05-20       2            567          0                                [4]
+# I, [19-07-10 14:36:02#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:36:02#45508]  INFO -- : Tom_Feasby         2019-07-04     2019-07-09       197          27744        5041                             [4]
+# I, [19-07-10 14:36:06#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:36:06#45508]  INFO -- : Tony_Christopher   2019-07-01     2019-05-30       44           27130        684                              [4]
+# I, [19-07-10 14:36:09#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:36:09#45508]  INFO -- : Tony_Pogue         2019-06-10     2018-03-13       0            394          394                              [4]
+# I, [19-07-10 14:36:12#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:36:12#45508]  INFO -- : Vern_Mcgeorge      2019-03-21     2018-11-14       11           2032         0                                [4]
+# I, [19-07-10 14:36:16#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 14:36:16#45508]  INFO -- : William_Burton     2019-03-15     2019-06-07       26           1089         0                                [4]
+# I, [19-07-10 14:36:16#45508]  INFO -- : Discourse Men
+# I, [19-07-10 14:36:16#45508]  INFO -- : Processed Users                     166
+# I, [19-07-10 14:36:16#45508]  INFO -- : Skipped Users                       0
+# I, [19-07-10 14:36:16#45508]  INFO -- : Messages Sent                       0
+# I, [19-07-10 14:36:16#45508]  INFO -- : User Preferences                    0
+# I, [19-07-10 14:36:16#45508]  INFO -- : User Preference Targets             135
+# I, [19-07-10 14:36:16#45508]  INFO -- : User Preference Updated             0
+# 
 #
-# Process finished with exit code 0
+# Jul 10, 2019 Dark Mode users
+#
+# I, [19-07-10 13:02:14#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:02:14#34595]  INFO -- : Alfonso_Benavides  2019-07-10     2019-07-09       184          244620       38802                            [10]
+# I, [19-07-10 13:02:28#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:02:28#34595]  INFO -- : Antonio_Martinez   2019-07-03     2019-07-01       21           7181         497                              [10]
+# I, [19-07-10 13:02:59#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:02:59#34595]  INFO -- : Bo_Zhou            2019-03-13     2019-01-18       6            2569         0                                [10]
+# I, [19-07-10 13:03:40#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:03:40#34595]  INFO -- : Chris_Steck        2019-07-10     2019-06-25       122          205341       8974                             [10]
+# I, [19-07-10 13:03:43#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:03:43#34595]  INFO -- : Chris_Sulek        2019-07-10     2019-07-03       158          345107       38265                            [10]
+# I, [19-07-10 13:04:07#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:04:07#34595]  INFO -- : Dainuri            2019-06-03     2019-04-20       8            14454        481                              [10]
+# I, [19-07-10 13:04:27#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:04:27#34595]  INFO -- : David_Ashby        2019-07-10     2019-07-08       102          57361        22550                            [10]
+# I, [19-07-10 13:04:37#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:04:37#34595]  INFO -- : David_Kirk         2019-07-10     2019-07-09       268          229757       16957                            [10]
+# I, [19-07-10 13:04:47#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:04:47#34595]  INFO -- : Dennis_Adsit       2019-07-01     2019-07-01       0            713          0                                [10]
+# I, [19-07-10 13:05:31#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:05:31#34595]  INFO -- : Gary_Kraemer       2019-06-19     2019-06-09       1            1258         851                              [10]
+# I, [19-07-10 13:06:15#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:06:15#34595]  INFO -- : James_Grubinskas   2019-07-03     2019-06-26       105          50247        22365                            [10]
+# I, [19-07-10 13:06:46#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:06:46#34595]  INFO -- : Jim_Charley        2019-07-10     2019-07-10       338          168909       78                               [10]
+# I, [19-07-10 13:07:33#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:07:33#34595]  INFO -- : Joseph_Kuo         2019-06-30     2019-06-30       6            5699         2399                             [10]
+# I, [19-07-10 13:07:56#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:07:56#34595]  INFO -- : Konrad_Thaler      2019-07-06     2019-07-08       83           45842        7530                             [10]
+# I, [19-07-10 13:08:13#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:08:13#34595]  INFO -- : Madon_Snell        2019-06-04     2019-05-20       0            1416         41                               [10]
+# I, [19-07-10 13:08:30#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:08:30#34595]  INFO -- : Marton_Toth        2019-06-27     2019-06-27       4            1030         827                              [10]
+# I, [19-07-10 13:08:34#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:08:34#34595]  INFO -- : Marty_Fauth        2019-07-10     2019-07-10       358          143046       17173                            [10]
+# I, [19-07-10 13:08:44#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:08:44#34595]  INFO -- : Michael_Kahn       2019-07-01     2019-07-08       30           20515        1910                             [10]
+# I, [19-07-10 13:08:54#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:08:54#34595]  INFO -- : Michael_Wilson     2019-05-29     2019-04-27       29           12441        21                               [10]
+# I, [19-07-10 13:09:14#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:09:14#34595]  INFO -- : Mikhail_Zhidko     2019-07-05     2019-06-20       88           81559        942                              [10]
+# I, [19-07-10 13:09:24#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:09:24#34595]  INFO -- : Moe_Rubenzahl      2019-07-10     2019-07-09       929          438021       64225                            [10]
+# I, [19-07-10 13:09:38#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:09:38#34595]  INFO -- : Pete_Rabbitt       2019-06-24     2019-05-25       11           9027         990                              [10]
+# I, [19-07-10 13:10:22#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:10:22#34595]  INFO -- : Ryan_Hyer          2019-07-08     2019-07-08       602          412687       26735                            [14]
+# I, [19-07-10 13:10:26#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:10:26#34595]  INFO -- : Samyeer_Metrani    2019-04-12     2019-06-21       11           441          0                                [10]
+# I, [19-07-10 13:10:33#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:10:33#34595]  INFO -- : Sanjeev_Sanghera   2019-07-08     2019-05-01       20           30169        1488                             [10]
+# I, [19-07-10 13:10:46#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:10:46#34595]  INFO -- : S_James_Biggs      2019-07-01     2019-06-23       58           14938        570                              [10]
+# I, [19-07-10 13:11:00#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:11:00#34595]  INFO -- : Steve_Fitzsimons   2019-07-01     2019-07-08       179          3859         20                               [10]
+# I, [19-07-10 13:11:03#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:11:03#34595]  INFO -- : Steve_Scott        2019-07-10     2019-07-10       1987         1830765      71695                            [10]
+# I, [19-07-10 13:11:07#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:11:07#34595]  INFO -- : Suhas_Chelian      2019-07-04     2019-07-01       48           21102        8391                             [10]
+# I, [19-07-10 13:11:14#34595]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+# I, [19-07-10 13:11:14#34595]  INFO -- : Tim_Tannatt        2019-07-01     2019-06-26       11           11592        5397                             [10]
+# I, [19-07-10 13:11:30#34595]  INFO -- : Discourse Men
+# I, [19-07-10 13:11:30#34595]  INFO -- : Processed Users                     166
+# I, [19-07-10 13:11:30#34595]  INFO -- : Skipped Users                       0
+# I, [19-07-10 13:11:30#34595]  INFO -- : Messages Sent                       0
+# I, [19-07-10 13:11:30#34595]  INFO -- : User Preferences                    0
+# I, [19-07-10 13:11:30#34595]  INFO -- : User Preference Targets             30
+# I, [19-07-10 13:11:30#34595]  INFO -- : User Preference Updated             0
