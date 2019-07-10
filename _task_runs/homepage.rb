@@ -14,12 +14,14 @@ discourse_options = {
 
 schedule_options = {
     user:{
-        preferences:                              {
-            homepage_id: {
-                do_task_update:         false ,
-                allowed_levels:         2,
-                set_level:              2,
-                excludes:               %w()
+        preferences:  {
+            user_option: {
+                homepage_id: {
+                    do_task_update:         false ,
+                    allowed_levels:         2,
+                    set_level:              2,
+                    excludes:               %w()
+                }
             }
         }
     }

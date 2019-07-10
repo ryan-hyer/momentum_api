@@ -18,7 +18,7 @@ schedule_options = {
             user_option: {
                 email_messages_level: {
                     do_task_update:         true,
-                    allowed_levels:         1,
+                    allowed_levels:         0,
                     set_level:              0,
                     excludes:               %w()
                 }
@@ -26,6 +26,7 @@ schedule_options = {
         }
     }
 }
+
 discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
 discourse.apply_to_users
 discourse.scan_summary

@@ -2095,3 +2095,214 @@ I, [19-07-09 12:42:38#51884]  INFO -- : Messages Sent                       0
 I, [19-07-09 12:42:38#51884]  INFO -- : User Preferences                    0                   
 I, [19-07-09 12:42:38#51884]  INFO -- : User Preference Targets             1                   
 I, [19-07-09 12:42:38#51884]  INFO -- : User Preference Updated             1                   
+I, [19-07-09 17:24:25#9987]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-09 17:28:45#9987]  INFO -- : Dave_Lloyd          granted User Badge:                Intermediate        
+I, [19-07-09 17:28:45#9987]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read                               
+I, [19-07-09 17:28:45#9987]  INFO -- : Dave_Lloyd         2019-07-09     2019-07-09       40           21622        2943                                           
+W, [19-07-09 17:28:45#9987]  WARN -- : Success: OK
+I, [19-07-09 17:28:45#9987]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read                               
+I, [19-07-09 17:28:45#9987]  INFO -- : Dave_Lloyd         2019-07-09     2019-07-09       40           21622        2943                                           
+I, [19-07-09 17:28:46#9987]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-07-09 17:28:46#9987]  INFO -- : Dave_Lloyd         poll                 0                                   171   /  1146    Intermediate        
+I, [19-07-09 17:28:46#9987]  INFO -- :   Message From:    Kim_Miller           Dave_Lloyd           Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-07-09 17:28:48#9987]  INFO -- :   Message From:    Kim_Miller           Dave_Lloyd           thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-07-09 17:36:23#9987]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read                               
+I, [19-07-09 17:36:23#9987]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                                          
+W, [19-07-09 17:36:24#9987]  WARN -- : Success: OK
+I, [19-07-09 17:36:24#9987]  INFO -- : UserName           last_seen_at   last_posted_at   post_count   time_read    recent_time_read                               
+I, [19-07-09 17:36:24#9987]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                                          
+I, [19-07-09 17:36:25#9987]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-07-09 17:36:25#9987]  INFO -- : Kim_Miller         poll                 1                                   1146  /  1146    PowerUser           
+I, [19-07-09 17:36:25#9987]  INFO -- :   Message From:    KM_Admin             Kim_Miller           Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-07-09 17:36:27#9987]  INFO -- :   Message From:    KM_Admin             Kim_Miller           thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-07-09 17:44:04#9987]  INFO -- : Pass 1 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-09 18:08:24#9987]  INFO -- : Pass 2 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-09 18:32:41#9987]  INFO -- : Pass 3 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-09 18:57:01#9987]  INFO -- : Pass 4 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-09 19:21:17#9987]  INFO -- : Pass 5 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-09 19:45:35#9987]  INFO -- : Pass 6 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-09 20:09:54#9987]  INFO -- : Pass 7 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-09 20:34:17#9987]  INFO -- : Pass 8 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-09 20:58:38#9987]  INFO -- : Pass 9 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-09 21:22:54#9987]  INFO -- : Pass 10 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-09 21:47:11#9987]  INFO -- : Pass 11 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-09 22:11:27#9987]  INFO -- : Pass 12 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-09 22:35:44#9987]  INFO -- : Pass 13 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-09 22:59:52#9987]  INFO -- : Pass 14 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-09 23:24:03#9987]  INFO -- : Pass 15 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-09 23:48:11#9987]  INFO -- : Pass 16 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-10 00:12:16#9987]  INFO -- : Pass 17 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-10 00:36:22#9987]  INFO -- : Pass 18 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-10 01:00:28#9987]  INFO -- : Pass 19 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-10 01:24:34#9987]  INFO -- : Pass 20 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-10 01:29:34#9987]  INFO -- : ... Exiting ...
+I, [19-07-10 01:29:34#9987]  INFO -- : Discourse Men                                           
+I, [19-07-10 01:29:34#9987]  INFO -- : Processed Users                     166                 
+I, [19-07-10 01:29:34#9987]  INFO -- : Skipped Users                       0                   
+I, [19-07-10 01:29:34#9987]  INFO -- : Messages Sent                       0                   
+I, [19-07-10 01:29:34#9987]  INFO -- : User Scores                                             
+I, [19-07-10 01:29:34#9987]  INFO -- : New Vote Targets                    2                   
+I, [19-07-10 01:29:34#9987]  INFO -- : New User Scores                     2                   
+I, [19-07-10 01:29:34#9987]  INFO -- : Updated User Scores                 2                   
+I, [19-07-10 01:29:34#9987]  INFO -- : New User Badges                     1                   
+I, [19-07-10 01:29:34#9987]  INFO -- : Not Voted Targets                   0                   
+I, [19-07-10 01:29:34#9987]  INFO -- : Messages Sent                       2                   
+I, [19-07-10 01:29:34#9987]  INFO -- : Watch Groups                                            
+I, [19-07-10 01:29:34#9987]  INFO -- : User Groups                         23140               
+I, [19-07-10 01:29:34#9987]  INFO -- : Group Update Targets                0                   
+I, [19-07-10 01:29:34#9987]  INFO -- : Group Notify Updated                0                   
+I, [19-07-10 01:29:34#9987]  INFO -- : Watch Categories                                        
+I, [19-07-10 01:29:34#9987]  INFO -- : User Categories                     13520               
+I, [19-07-10 01:29:34#9987]  INFO -- : Category Update Targets             0                   
+I, [19-07-10 01:29:34#9987]  INFO -- : Category Notify Updated             0                   
+I, [19-07-10 01:29:34#9987]  INFO -- : Downgrade Trust                                         
+I, [19-07-10 01:29:34#9987]  INFO -- : Users                               0                   
+I, [19-07-10 01:29:34#9987]  INFO -- : User Trust Targets                  0                   
+I, [19-07-10 01:29:34#9987]  INFO -- : User Trust Updated                  0                   
+I, [19-07-10 12:38:27#29594]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+I, [19-07-10 12:38:27#29594]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            [10]          
+I, [19-07-10 12:38:27#29594]  INFO -- : Discourse Men                                           
+I, [19-07-10 12:38:27#29594]  INFO -- : Processed Users                     1                   
+I, [19-07-10 12:38:27#29594]  INFO -- : Skipped Users                       0                   
+I, [19-07-10 12:38:27#29594]  INFO -- : Messages Sent                       0                   
+I, [19-07-10 12:38:27#29594]  INFO -- : User Preferences                    0                   
+I, [19-07-10 12:38:27#29594]  INFO -- : User Preference Targets             1                   
+I, [19-07-10 12:38:27#29594]  INFO -- : User Preference Updated             0                   
+I, [19-07-10 12:38:52#29887]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+I, [19-07-10 12:38:52#29887]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            [10]          
+I, [19-07-10 12:38:52#29887]  INFO -- : Discourse Men                                           
+I, [19-07-10 12:38:52#29887]  INFO -- : Processed Users                     1                   
+I, [19-07-10 12:38:52#29887]  INFO -- : Skipped Users                       0                   
+I, [19-07-10 12:38:52#29887]  INFO -- : Messages Sent                       0                   
+I, [19-07-10 12:38:52#29887]  INFO -- : User Preferences                    0                   
+I, [19-07-10 12:38:52#29887]  INFO -- : User Preference Targets             1                   
+I, [19-07-10 12:38:52#29887]  INFO -- : User Preference Updated             0                   
+I, [19-07-10 12:39:04#30171]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+I, [19-07-10 12:39:04#30171]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            [10]          
+W, [19-07-10 12:39:04#30171]  WARN -- : OK
+I, [19-07-10 12:39:05#30171]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+I, [19-07-10 12:39:05#30171]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            [10]          
+I, [19-07-10 12:39:06#30171]  INFO -- : Discourse Men                                           
+I, [19-07-10 12:39:06#30171]  INFO -- : Processed Users                     1                   
+I, [19-07-10 12:39:06#30171]  INFO -- : Skipped Users                       0                   
+I, [19-07-10 12:39:06#30171]  INFO -- : Messages Sent                       0                   
+I, [19-07-10 12:39:06#30171]  INFO -- : User Preferences                    0                   
+I, [19-07-10 12:39:06#30171]  INFO -- : User Preference Targets             1                   
+I, [19-07-10 12:39:06#30171]  INFO -- : User Preference Updated             1                   
+I, [19-07-10 12:39:58#30469]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+I, [19-07-10 12:39:58#30469]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            [10]          
+W, [19-07-10 12:39:58#30469]  WARN -- : OK
+I, [19-07-10 12:39:58#30469]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+I, [19-07-10 12:39:58#30469]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            [10]          
+I, [19-07-10 12:39:59#30469]  INFO -- : Discourse Men                                           
+I, [19-07-10 12:39:59#30469]  INFO -- : Processed Users                     1                   
+I, [19-07-10 12:39:59#30469]  INFO -- : Skipped Users                       0                   
+I, [19-07-10 12:39:59#30469]  INFO -- : Messages Sent                       0                   
+I, [19-07-10 12:39:59#30469]  INFO -- : User Preferences                    0                   
+I, [19-07-10 12:39:59#30469]  INFO -- : User Preference Targets             1                   
+I, [19-07-10 12:39:59#30469]  INFO -- : User Preference Updated             1                   
+I, [19-07-10 12:41:07#30780]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+I, [19-07-10 12:41:07#30780]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            [10]          
+W, [19-07-10 12:41:08#30780]  WARN -- : OK
+I, [19-07-10 12:41:08#30780]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+I, [19-07-10 12:41:08#30780]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            [10]          
+I, [19-07-10 12:41:09#30780]  INFO -- : Discourse Men                                           
+I, [19-07-10 12:41:09#30780]  INFO -- : Processed Users                     1                   
+I, [19-07-10 12:41:09#30780]  INFO -- : Skipped Users                       0                   
+I, [19-07-10 12:41:09#30780]  INFO -- : Messages Sent                       0                   
+I, [19-07-10 12:41:09#30780]  INFO -- : User Preferences                    0                   
+I, [19-07-10 12:41:09#30780]  INFO -- : User Preference Targets             1                   
+I, [19-07-10 12:41:09#30780]  INFO -- : User Preference Updated             1                   
+I, [19-07-10 12:41:14#31063]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+I, [19-07-10 12:41:14#31063]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            [10]          
+W, [19-07-10 12:41:14#31063]  WARN -- : OK
+I, [19-07-10 12:41:15#31063]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+I, [19-07-10 12:41:15#31063]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            [10]          
+I, [19-07-10 12:46:52#31434]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+I, [19-07-10 12:46:52#31434]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            [10]          
+W, [19-07-10 12:46:52#31434]  WARN -- : OK
+I, [19-07-10 12:46:52#31434]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
+I, [19-07-10 12:46:52#31434]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            [4]           
+I, [19-07-10 12:46:53#31434]  INFO -- : Discourse Men                                           
+I, [19-07-10 12:46:53#31434]  INFO -- : Processed Users                     1                   
+I, [19-07-10 12:46:53#31434]  INFO -- : Skipped Users                       0                   
+I, [19-07-10 12:46:53#31434]  INFO -- : Messages Sent                       0                   
+I, [19-07-10 12:46:53#31434]  INFO -- : User Preferences                    0                   
+I, [19-07-10 12:46:53#31434]  INFO -- : User Preference Targets             1                   
+I, [19-07-10 12:46:53#31434]  INFO -- : User Preference Updated             1                   
+I, [19-07-10 12:51:46#31823]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "email_messages_level"]
+I, [19-07-10 12:51:46#31823]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            0             
+W, [19-07-10 12:51:47#31823]  WARN -- : OK
+I, [19-07-10 12:51:47#31823]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "email_messages_level"]
+I, [19-07-10 12:51:47#31823]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            0             
+I, [19-07-10 12:51:48#31823]  INFO -- : Discourse Men                                           
+I, [19-07-10 12:51:48#31823]  INFO -- : Processed Users                     1                   
+I, [19-07-10 12:51:48#31823]  INFO -- : Skipped Users                       0                   
+I, [19-07-10 12:51:48#31823]  INFO -- : Messages Sent                       0                   
+I, [19-07-10 12:51:48#31823]  INFO -- : User Preferences                    0                   
+I, [19-07-10 12:51:48#31823]  INFO -- : User Preference Targets             1                   
+I, [19-07-10 12:51:48#31823]  INFO -- : User Preference Updated             1                   
+I, [19-07-10 12:54:29#32161]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "homepage_id"]
+I, [19-07-10 12:54:29#32161]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            2             
+I, [19-07-10 12:54:29#32161]  INFO -- : Discourse Men                                           
+I, [19-07-10 12:54:29#32161]  INFO -- : Processed Users                     1                   
+I, [19-07-10 12:54:29#32161]  INFO -- : Skipped Users                       0                   
+I, [19-07-10 12:54:29#32161]  INFO -- : Messages Sent                       0                   
+I, [19-07-10 12:54:29#32161]  INFO -- : User Preferences                    0                   
+I, [19-07-10 12:54:29#32161]  INFO -- : User Preference Targets             1                   
+I, [19-07-10 12:54:29#32161]  INFO -- : User Preference Updated             0                   
+I, [19-07-10 12:54:41#32449]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "homepage_id"]
+I, [19-07-10 12:54:41#32449]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            2             
+W, [19-07-10 12:54:41#32449]  WARN -- : OK
+I, [19-07-10 12:54:42#32449]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "homepage_id"]
+I, [19-07-10 12:54:42#32449]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            2             
+I, [19-07-10 12:54:43#32449]  INFO -- : Discourse Men                                           
+I, [19-07-10 12:54:43#32449]  INFO -- : Processed Users                     1                   
+I, [19-07-10 12:54:43#32449]  INFO -- : Skipped Users                       0                   
+I, [19-07-10 12:54:43#32449]  INFO -- : Messages Sent                       0                   
+I, [19-07-10 12:54:43#32449]  INFO -- : User Preferences                    0                   
+I, [19-07-10 12:54:43#32449]  INFO -- : User Preference Targets             1                   
+I, [19-07-10 12:54:43#32449]  INFO -- : User Preference Updated             1                   
+I, [19-07-10 12:55:00#32737]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "homepage_id"]
+I, [19-07-10 12:55:00#32737]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            2             
+W, [19-07-10 12:55:00#32737]  WARN -- : OK
+I, [19-07-10 12:55:00#32737]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "homepage_id"]
+I, [19-07-10 12:55:00#32737]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            1             
+I, [19-07-10 12:55:01#32737]  INFO -- : Discourse Men                                           
+I, [19-07-10 12:55:01#32737]  INFO -- : Processed Users                     1                   
+I, [19-07-10 12:55:01#32737]  INFO -- : Skipped Users                       0                   
+I, [19-07-10 12:55:01#32737]  INFO -- : Messages Sent                       0                   
+I, [19-07-10 12:55:01#32737]  INFO -- : User Preferences                    0                   
+I, [19-07-10 12:55:01#32737]  INFO -- : User Preference Targets             1                   
+I, [19-07-10 12:55:01#32737]  INFO -- : User Preference Updated             1                   
+I, [19-07-10 12:56:43#33051]  INFO -- : Discourse Men                                           
+I, [19-07-10 12:56:43#33051]  INFO -- : Processed Users                     1                   
+I, [19-07-10 12:56:43#33051]  INFO -- : Skipped Users                       0                   
+I, [19-07-10 12:56:43#33051]  INFO -- : Messages Sent                       0                   
+I, [19-07-10 12:56:43#33051]  INFO -- : User Preferences                    0                   
+I, [19-07-10 12:56:43#33051]  INFO -- : User Preference Targets             0                   
+I, [19-07-10 12:56:43#33051]  INFO -- : User Preference Updated             0                   
+I, [19-07-10 12:57:05#33346]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "mailing_list_mode"]
+I, [19-07-10 12:57:05#33346]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            false         
+W, [19-07-10 12:57:05#33346]  WARN -- : OK
+I, [19-07-10 12:57:05#33346]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "mailing_list_mode"]
+I, [19-07-10 12:57:05#33346]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            true          
+I, [19-07-10 12:57:06#33346]  INFO -- : Discourse Men                                           
+I, [19-07-10 12:57:06#33346]  INFO -- : Processed Users                     1                   
+I, [19-07-10 12:57:06#33346]  INFO -- : Skipped Users                       0                   
+I, [19-07-10 12:57:06#33346]  INFO -- : Messages Sent                       0                   
+I, [19-07-10 12:57:06#33346]  INFO -- : User Preferences                    0                   
+I, [19-07-10 12:57:06#33346]  INFO -- : User Preference Targets             1                   
+I, [19-07-10 12:57:06#33346]  INFO -- : User Preference Updated             1                   
+I, [19-07-10 12:57:22#33630]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "mailing_list_mode"]
+I, [19-07-10 12:57:22#33630]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            true          
+W, [19-07-10 12:57:22#33630]  WARN -- : OK
+I, [19-07-10 12:57:22#33630]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "mailing_list_mode"]
+I, [19-07-10 12:57:22#33630]  INFO -- : Kim_Miller         2019-07-10     2019-07-10       1742         772148       74672                            false         
+I, [19-07-10 12:57:23#33630]  INFO -- : Discourse Men                                           
+I, [19-07-10 12:57:23#33630]  INFO -- : Processed Users                     1                   
+I, [19-07-10 12:57:23#33630]  INFO -- : Skipped Users                       0                   
+I, [19-07-10 12:57:23#33630]  INFO -- : Messages Sent                       0                   
+I, [19-07-10 12:57:23#33630]  INFO -- : User Preferences                    0                   
+I, [19-07-10 12:57:23#33630]  INFO -- : User Preference Targets             1                   
+I, [19-07-10 12:57:23#33630]  INFO -- : User Preference Updated             1                   
