@@ -201,7 +201,7 @@ describe MomentumApi::Man do
       let(:man) {MomentumApi::Man.new(mock_discourse, mock_dependencies, user_details, mock: mock_dependencies)}
 
       it 'responds and prints user' do
-        expect { man.print_user_options(user_details, user_option_print, updated_option: %W(user_fields 5)) }
+        expect { man.print_user_options(user_details, fields: user_option_print, updated_option: %W(user_fields 5)) }
             .to output(/last_seen_at/).to_stdout
       end
     end

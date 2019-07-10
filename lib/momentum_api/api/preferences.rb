@@ -57,8 +57,8 @@ module MomentumApi
         puts "#{man.user_details['username']} in Preferences"
       end
 
-      user_option_print = %w(last_seen_at last_posted_at post_count time_read recent_time_read)
-      man.print_user_options(man.user_details, user_option_print, 'Updated User', updated_option: updated_option)
+      # user_option_print = %w(last_seen_at last_posted_at post_count time_read recent_time_read)
+      man.print_user_options(man.user_details, user_label: 'Updated User', updated_option: updated_option)
       @counters[:'User Preference Targets'] += 1
       # puts 'User to be updated'
 
@@ -71,7 +71,7 @@ module MomentumApi
 
         # check if update happened
         user_option_after_update = @schedule.discourse.admin_client.user(man.user_details['username'])
-        man.print_user_options(user_option_after_update, user_option_print, 'Updated User', updated_option: updated_option)
+        man.print_user_options(user_option_after_update, user_label: 'Updated User', updated_option: updated_option)
         @mock ? sleep(0) : sleep(1)
 
       end

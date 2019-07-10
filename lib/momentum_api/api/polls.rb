@@ -139,23 +139,20 @@ module MomentumApi
     def update_user_profile_score(current_voter_points)
       @counters[:'New User Scores'] += 1
       # puts 'User Score to be updated'
-      user_option_print = %w(last_seen_at last_posted_at post_count time_read recent_time_read user_field_score)
-      @man.print_user_options(@man.user_details, user_option_print, user_label='UserName',
-                              pos_5=@man.user_details[@user_fields][@user_score_field])
+      # user_option_print = %w(last_seen_at last_posted_at post_count time_read recent_time_read user_field_score)
+      @man.print_user_options(@man.user_details, user_label: 'UserName',
+                              pos_5: @man.user_details[@user_fields][@user_score_field])
 
       if @schedule.discourse.options[:do_live_updates]
         update_response = @schedule.discourse.admin_client.update_user(
             @man.user_details['username'], {"#{@user_fields}": {"#{@user_score_field}": current_voter_points}})
-        # update_response = @man.user_client.update_user(
-        #     @man.user_details['username'], {"#{@user_fields}": {"#{@user_score_field}": current_voter_points}})
         @schedule.discourse.options[:logger].warn "Success: #{update_response[:body]['success']}"
-        # @schedule.discourse.options[:logger].warn update_response[:body]['success']
         @counters[:'Updated User Scores'] += 1
 
         # check if update happened
         user_details_after_update = @schedule.discourse.admin_client.user(@man.user_details['username'])
-        @man.print_user_options(user_details_after_update, user_option_print, user_label='UserName',
-                           pos_5=user_details_after_update[@user_fields][@user_score_field])
+        @man.print_user_options(user_details_after_update, user_label: 'UserName',
+                           pos_5: user_details_after_update[@user_fields][@user_score_field])
         @mock ? sleep(0) : sleep(1)
       end
     end
