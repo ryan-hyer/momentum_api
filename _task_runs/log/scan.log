@@ -3153,3 +3153,180 @@ I, [19-07-11 13:19:58#8354]  INFO -- : Skipped Users                       0
 I, [19-07-11 13:19:58#8354]  INFO -- : Messages Sent                       0                   
 I, [19-07-11 13:19:58#8354]  INFO -- : Activity                                                
 I, [19-07-11 13:19:58#8354]  INFO -- : User Activity                       1                   
+I, [19-07-11 14:10:27#9684]  INFO -- : User Activity      last_seen_at   last_posted_at   post_count   time_read    recent_time_read  profile_view_count               
+I, [19-07-11 14:10:27#9684]  INFO -- : Kim_Miller         2019-07-11     2019-07-11       1753         773937       74834             400                          
+I, [19-07-11 14:10:27#9684]  INFO -- : Discourse Men                                           
+I, [19-07-11 14:10:27#9684]  INFO -- : Processed Users                     1                   
+I, [19-07-11 14:10:27#9684]  INFO -- : Skipped Users                       0                   
+I, [19-07-11 14:10:27#9684]  INFO -- : Messages Sent                       0                   
+I, [19-07-11 14:10:27#9684]  INFO -- : Activity                                                
+I, [19-07-11 14:10:27#9684]  INFO -- : User Activity                       1                   
+I, [19-07-11 14:10:27#9684]  INFO -- : o                                   0                   
+I, [19-07-11 14:11:18#10259]  INFO -- : User Activity      last_seen_at   last_posted_at   post_count   time_read    recent_time_read  profile_view_count               
+I, [19-07-11 14:11:18#10259]  INFO -- : Kim_Miller         2019-07-11     2019-07-11       1753         773937       74834             400                          
+I, [19-07-11 14:11:18#10259]  INFO -- : Discourse Men                                           
+I, [19-07-11 14:11:18#10259]  INFO -- : Processed Users                     1                   
+I, [19-07-11 14:11:18#10259]  INFO -- : Skipped Users                       0                   
+I, [19-07-11 14:11:18#10259]  INFO -- : Messages Sent                       0                   
+I, [19-07-11 14:11:18#10259]  INFO -- : Activity                                                
+I, [19-07-11 14:11:18#10259]  INFO -- : User Activity                       1                   
+I, [19-07-11 14:11:18#10259]  INFO -- : option                              0                   
+I, [19-07-11 14:12:30#10843]  INFO -- : User Activity      last_seen_at   last_posted_at   post_count   time_read    recent_time_read  profile_view_count               
+I, [19-07-11 14:12:30#10843]  INFO -- : Kim_Miller         2019-07-11     2019-07-11       1753         773937       74834             400                          
+I, [19-07-11 14:12:30#10843]  INFO -- : Discourse Men                                           
+I, [19-07-11 14:12:30#10843]  INFO -- : Processed Users                     1                   
+I, [19-07-11 14:12:30#10843]  INFO -- : Skipped Users                       0                   
+I, [19-07-11 14:12:30#10843]  INFO -- : Messages Sent                       0                   
+I, [19-07-11 14:12:30#10843]  INFO -- : Activity                                                
+I, [19-07-11 14:12:30#10843]  INFO -- : User Activity                       1                   
+I, [19-07-11 14:12:30#10843]  INFO -- : recent_time_read                    0                   
+I, [19-07-11 14:17:14#11203]  INFO -- : User Activity      last_seen_at   last_posted_at   post_count   time_read    recent_time_read  profile_view_count               
+I, [19-07-11 14:17:14#11203]  INFO -- : Kim_Miller         2019-07-11     2019-07-11       1750         773937       74834             400                          
+I, [19-07-11 14:17:14#11203]  INFO -- : Discourse Men                                           
+I, [19-07-11 14:17:14#11203]  INFO -- : Processed Users                     1                   
+I, [19-07-11 14:17:14#11203]  INFO -- : Skipped Users                       0                   
+I, [19-07-11 14:17:14#11203]  INFO -- : Messages Sent                       0                   
+I, [19-07-11 14:17:14#11203]  INFO -- : Activity                                                
+I, [19-07-11 14:17:14#11203]  INFO -- : User Activity                       1                   
+I, [19-07-11 14:17:14#11203]  INFO -- : recent_time_read                    0                   
+I, [19-07-11 14:17:14#11203]  INFO -- : post_count                          0                   
+I, [19-07-11 14:20:06#11822]  INFO -- : User Activity      last_seen_at   last_posted_at   post_count   time_read    recent_time_read  profile_view_count               
+I, [19-07-11 14:20:06#11822]  INFO -- : Kim_Miller         2019-07-11     2019-07-11       1750         773937       74834             400                          
+I, [19-07-11 14:20:06#11822]  INFO -- : Discourse Men                                           
+I, [19-07-11 14:20:06#11822]  INFO -- : Processed Users                     1                   
+I, [19-07-11 14:20:06#11822]  INFO -- : Skipped Users                       0                   
+I, [19-07-11 14:20:06#11822]  INFO -- : Messages Sent                       0                   
+I, [19-07-11 14:20:06#11822]  INFO -- : Activity                                                
+I, [19-07-11 14:20:06#11822]  INFO -- : User Activity                       1                   
+I, [19-07-11 14:20:06#11822]  INFO -- : recent_time_read                    74834               
+I, [19-07-11 14:20:06#11822]  INFO -- : post_count                          1750                
+I, [19-07-11 14:23:18#12166]  INFO -- : User Activity      last_seen_at   last_posted_at   post_count   time_read    recent_time_read  profile_view_count               
+I, [19-07-11 14:23:18#12166]  INFO -- : Kim_Miller         2019-07-11     2019-07-11       1750         773937       74834             400                          
+I, [19-07-11 14:23:18#12166]  INFO -- : Discourse Men                                           
+I, [19-07-11 14:23:18#12166]  INFO -- : Processed Users                     1                   
+I, [19-07-11 14:23:18#12166]  INFO -- : Skipped Users                       0                   
+I, [19-07-11 14:23:18#12166]  INFO -- : Messages Sent                       0                   
+I, [19-07-11 14:23:18#12166]  INFO -- : Activity                                                
+I, [19-07-11 14:23:18#12166]  INFO -- : User Activity                       1                   
+I, [19-07-11 14:23:18#12166]  INFO -- : recent_time_read                    74834               
+I, [19-07-11 14:23:18#12166]  INFO -- : time_read                           773937              
+I, [19-07-11 14:23:18#12166]  INFO -- : post_count                          1750                
+I, [19-07-11 14:27:42#12518]  INFO -- : User Activity      last_seen_at   last_posted_at   post_count   time_read    recent_time_read  profile_view_count               
+I, [19-07-11 14:27:42#12518]  INFO -- : Kim_Miller         2019-07-11     2019-07-11       1750         773937       74834             400                          
+I, [19-07-11 14:27:42#12518]  INFO -- : Discourse Men                                           
+I, [19-07-11 14:27:42#12518]  INFO -- : Processed Users                     1                   
+I, [19-07-11 14:27:42#12518]  INFO -- : Skipped Users                       0                   
+I, [19-07-11 14:27:42#12518]  INFO -- : Messages Sent                       0                   
+I, [19-07-11 14:27:42#12518]  INFO -- : Activity                                                
+I, [19-07-11 14:27:42#12518]  INFO -- : User Activity                       1                   
+I, [19-07-11 14:27:42#12518]  INFO -- : recent_time_read                    74834               
+I, [19-07-11 14:27:42#12518]  INFO -- : time_read                           773937              
+I, [19-07-11 14:27:42#12518]  INFO -- : post_count                          1750                
+I, [19-07-11 14:35:24#13785]  INFO -- : User Activity      last_seen_at   last_posted_at   post_count   time_read    recent_time_read  profile_view_count               
+I, [19-07-11 14:35:24#13785]  INFO -- : Kim_Miller         2019-07-11     2019-07-11       1750         773937       74834             400                          
+I, [19-07-11 14:35:24#13785]  INFO -- : Discourse Men                                           
+I, [19-07-11 14:35:24#13785]  INFO -- : Processed Users                     1                   
+I, [19-07-11 14:35:24#13785]  INFO -- : Skipped Users                       0                   
+I, [19-07-11 14:35:24#13785]  INFO -- : Messages Sent                       0                   
+I, [19-07-11 14:35:24#13785]  INFO -- : Activity                                                
+I, [19-07-11 14:35:24#13785]  INFO -- : User Activity                       1                   
+I, [19-07-11 14:35:24#13785]  INFO -- : recent_time_read                    74834               
+I, [19-07-11 14:35:24#13785]  INFO -- : time_read                           773937              
+I, [19-07-11 14:35:24#13785]  INFO -- : post_count                          1750                
+I, [19-07-11 14:35:24#13785]  INFO -- : Read-Post Ratio                     7                   
+I, [19-07-11 14:40:14#14124]  INFO -- : User Activity      last_seen_at   last_posted_at   post_count   time_read    recent_time_read  profile_view_count               
+I, [19-07-11 14:40:14#14124]  INFO -- : Kim_Miller         2019-07-11     2019-07-11       1750         773937       74834             400                          
+I, [19-07-11 14:40:14#14124]  INFO -- : Discourse Men                                           
+I, [19-07-11 14:40:14#14124]  INFO -- : Processed Users                     1                   
+I, [19-07-11 14:40:14#14124]  INFO -- : Skipped Users                       0                   
+I, [19-07-11 14:40:14#14124]  INFO -- : Messages Sent                       0                   
+I, [19-07-11 14:40:14#14124]  INFO -- : Activity                                                
+I, [19-07-11 14:40:14#14124]  INFO -- : User Activity                       1                   
+I, [19-07-11 14:40:14#14124]  INFO -- : recent_time_read                    74834               
+I, [19-07-11 14:40:14#14124]  INFO -- : time_read                           773937              
+I, [19-07-11 14:40:14#14124]  INFO -- : post_count                          1750                
+I, [19-07-11 14:40:14#14124]  INFO -- : Read-Post Ratio                     7                   
+I, [19-07-11 14:45:34#14447]  INFO -- : User Activity      last_seen_at   last_posted_at   post_count   time_read    recent_time_read  profile_view_count               
+I, [19-07-11 14:45:34#14447]  INFO -- : Kim_Miller         2019-07-11     2019-07-11       1750         773937       74834             400                          
+I, [19-07-11 14:45:34#14447]  INFO -- : Discourse Men                                           
+I, [19-07-11 14:45:34#14447]  INFO -- : Processed Users                     1                   
+I, [19-07-11 14:45:34#14447]  INFO -- : Skipped Users                       0                   
+I, [19-07-11 14:45:34#14447]  INFO -- : Messages Sent                       0                   
+I, [19-07-11 14:45:34#14447]  INFO -- : Activity                                                
+I, [19-07-11 14:45:34#14447]  INFO -- : User Activity                       1                   
+I, [19-07-11 14:45:34#14447]  INFO -- : recent_time_read                    74834               
+I, [19-07-11 14:45:34#14447]  INFO -- : time_read                           773937              
+I, [19-07-11 14:45:34#14447]  INFO -- : post_count                          1750                
+I, [19-07-11 14:45:34#14447]  INFO -- : Read-Post Ratio                     7                   
+I, [19-07-11 14:45:44#14831]  INFO -- : User Activity      last_seen_at   last_posted_at   post_count   time_read    recent_time_read profile_view_count                Read-Post Ratio
+I, [19-07-11 14:45:44#14831]  INFO -- : Kim_Miller         2019-07-11     2019-07-11       1750         773937       74834          400                           7             
+I, [19-07-11 14:45:44#14831]  INFO -- : Discourse Men                                           
+I, [19-07-11 14:45:44#14831]  INFO -- : Processed Users                     1                   
+I, [19-07-11 14:45:44#14831]  INFO -- : Skipped Users                       0                   
+I, [19-07-11 14:45:44#14831]  INFO -- : Messages Sent                       0                   
+I, [19-07-11 14:45:44#14831]  INFO -- : Activity                                                
+I, [19-07-11 14:45:44#14831]  INFO -- : User Activity                       1                   
+I, [19-07-11 14:45:44#14831]  INFO -- : recent_time_read                    74834               
+I, [19-07-11 14:45:44#14831]  INFO -- : time_read                           773937              
+I, [19-07-11 14:45:44#14831]  INFO -- : post_count                          1750                
+I, [19-07-11 14:45:44#14831]  INFO -- : Read-Post Ratio                     7                   
+I, [19-07-11 14:47:16#15138]  INFO -- : User Activity      last_seen_at   last_posted_at   post_count   time_read      recent_time_read profile_view_count                Read-Post Ratio
+I, [19-07-11 14:47:16#15138]  INFO -- : Kim_Miller         2019-07-11     2019-07-11       1750         773937         74834          400                           7             
+I, [19-07-11 14:47:16#15138]  INFO -- : Discourse Men                                           
+I, [19-07-11 14:47:16#15138]  INFO -- : Processed Users                     1                   
+I, [19-07-11 14:47:16#15138]  INFO -- : Skipped Users                       0                   
+I, [19-07-11 14:47:16#15138]  INFO -- : Messages Sent                       0                   
+I, [19-07-11 14:47:16#15138]  INFO -- : Activity                                                
+I, [19-07-11 14:47:16#15138]  INFO -- : User Activity                       1                   
+I, [19-07-11 14:47:16#15138]  INFO -- : recent_time_read                    74834               
+I, [19-07-11 14:47:16#15138]  INFO -- : time_read                           773937              
+I, [19-07-11 14:47:16#15138]  INFO -- : post_count                          1750                
+I, [19-07-11 14:47:16#15138]  INFO -- : Read-Post Ratio                     7                   
+I, [19-07-11 14:47:32#15423]  INFO -- : User Activity      last_seen_at   last_posted_at   post_count   time_read    recent_time_read  profile_view_count                Read-Post Ratio
+I, [19-07-11 14:47:32#15423]  INFO -- : Kim_Miller         2019-07-11     2019-07-11       1750         773937       74834             400                           7             
+I, [19-07-11 14:47:32#15423]  INFO -- : Discourse Men                                           
+I, [19-07-11 14:47:32#15423]  INFO -- : Processed Users                     1                   
+I, [19-07-11 14:47:32#15423]  INFO -- : Skipped Users                       0                   
+I, [19-07-11 14:47:32#15423]  INFO -- : Messages Sent                       0                   
+I, [19-07-11 14:47:32#15423]  INFO -- : Activity                                                
+I, [19-07-11 14:47:32#15423]  INFO -- : User Activity                       1                   
+I, [19-07-11 14:47:32#15423]  INFO -- : recent_time_read                    74834               
+I, [19-07-11 14:47:32#15423]  INFO -- : time_read                           773937              
+I, [19-07-11 14:47:32#15423]  INFO -- : post_count                          1750                
+I, [19-07-11 14:47:32#15423]  INFO -- : Read-Post Ratio                     7                   
+I, [19-07-11 14:48:52#15726]  INFO -- : User Activity      last_seen_at   last_posted_at   post_count   time_read    recent_time_read  profile_view_count                Read-Post Ratio
+I, [19-07-11 14:48:52#15726]  INFO -- : Kim_Miller         2019-07-11     2019-07-11       1750         773937       74834             400                           7             
+I, [19-07-11 14:48:52#15726]  INFO -- : Discourse Men                                           
+I, [19-07-11 14:48:52#15726]  INFO -- : Processed Users                     1                   
+I, [19-07-11 14:48:52#15726]  INFO -- : Skipped Users                       0                   
+I, [19-07-11 14:48:52#15726]  INFO -- : Messages Sent                       0                   
+I, [19-07-11 14:48:52#15726]  INFO -- : Activity                                                
+I, [19-07-11 14:48:52#15726]  INFO -- : User Activity                       1                   
+I, [19-07-11 14:48:52#15726]  INFO -- : recent_time_read                    74834               
+I, [19-07-11 14:48:52#15726]  INFO -- : time_read                           773937              
+I, [19-07-11 14:48:52#15726]  INFO -- : post_count                          1750                
+I, [19-07-11 14:48:52#15726]  INFO -- : Read-Post Ratio                     7                   
+I, [19-07-11 15:01:09#17073]  INFO -- : User Activity      last_seen_at   last_posted_at   post_count   time_read    recent_time_read  profile_view_count                Read-Post Ratio
+I, [19-07-11 15:01:09#17073]  INFO -- : Kim_Miller         2019-07-11     2019-07-11       1750         773937       74834             400                           7             
+I, [19-07-11 15:01:09#17073]  INFO -- : Discourse Men                                           
+I, [19-07-11 15:01:09#17073]  INFO -- : Processed Users                     1                   
+I, [19-07-11 15:01:09#17073]  INFO -- : Skipped Users                       0                   
+I, [19-07-11 15:01:09#17073]  INFO -- : Messages Sent                       0                   
+I, [19-07-11 15:01:09#17073]  INFO -- : Activity                                                
+I, [19-07-11 15:01:09#17073]  INFO -- : User Activity                       1                   
+I, [19-07-11 15:01:09#17073]  INFO -- : recent_time_read                    74834               
+I, [19-07-11 15:01:09#17073]  INFO -- : time_read                           773937              
+I, [19-07-11 15:01:09#17073]  INFO -- : post_count                          1750                
+I, [19-07-11 15:01:09#17073]  INFO -- : Read-Post Ratio                     7                   
+I, [19-07-11 15:14:49#19551]  INFO -- : User Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read   profile_view_count      Read-Post Ratio   
+I, [19-07-11 15:14:49#19551]  INFO -- : Kim_Miller      2019-07-11     2019-07-11       1750         773937      74834              400                     7                 
+I, [19-07-11 15:14:49#19551]  INFO -- : Discourse Men                                           
+I, [19-07-11 15:14:49#19551]  INFO -- : Processed Users                     1                   
+I, [19-07-11 15:14:49#19551]  INFO -- : Skipped Users                       0                   
+I, [19-07-11 15:14:49#19551]  INFO -- : Messages Sent                       0                   
+I, [19-07-11 15:14:49#19551]  INFO -- : Activity                                                
+I, [19-07-11 15:14:49#19551]  INFO -- : User Activity                       1                   
+I, [19-07-11 15:14:49#19551]  INFO -- : recent_time_read                    74834               
+I, [19-07-11 15:14:49#19551]  INFO -- : time_read                           773937              
+I, [19-07-11 15:14:49#19551]  INFO -- : post_count                          1750                
+I, [19-07-11 15:14:49#19551]  INFO -- : Read-Post Ratio                     7                   

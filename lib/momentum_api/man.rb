@@ -65,9 +65,9 @@ module MomentumApi
     end
 
 
-    def print_user_options(user_details, fields: nil, user_label: 'UserName', user_field: 'user_field_score', nested_user_field: nil)
+    def print_user_options(user_details, fields: nil, user_label: 'UserName', user_field: 'user_field_score',
+                           nested_user_field: nil, hash: {'': nil})
 
-      field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s %-14s"
       fields = fields ||  %w(last_seen_at last_posted_at post_count time_read recent_time_read)
       
       if nested_user_field
@@ -75,17 +75,22 @@ module MomentumApi
         nested_user_field.each {|level| nested_user_value = nested_user_value[level]}
       else
         nested_user_value = nil
+        nested_user_field = ''
       end
 
-      heading = sprintf field_settings, user_label,
-                        fields[0], fields[1], fields[2],
-                        fields[3], fields[4], user_field, nested_user_field
+      header = [user_label, fields[0], fields[1], fields[2], fields[3], fields[4], user_field, nested_user_field, hash.keys[0]]
                         # fields[3], fields[4], fields[5], nested_user_field
+      field_settings = ""
+      header.each do |d|
+        field_settings <<  "%-#{d.length + 2}s "
+      end
+      heading = sprintf field_settings, *header
 
       body = sprintf field_settings, user_details['username'],
                      user_details[fields[0].to_s].to_s[0..9], user_details[fields[1].to_s].to_s[0..9],
-                     user_details[fields[2].to_s], user_details[fields[3].to_s],
-                     user_details[fields[4].to_s], user_details[user_field], nested_user_value
+                     user_details[fields[2].to_s], user_details[fields[3].to_s], user_details[fields[4].to_s],
+                     user_details[user_field], nested_user_value, hash.values[0]
+
       @discourse.options[:logger].info heading
       @discourse.options[:logger].info body
     end

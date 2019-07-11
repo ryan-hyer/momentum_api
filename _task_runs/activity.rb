@@ -20,6 +20,18 @@ schedule_options = {
                 allowed_levels:         nil,
                 set_level:              nil,
                 excludes:               %w()
+            },
+            time_read: {
+                do_task_update:         true,
+                allowed_levels:         nil,
+                set_level:              nil,
+                excludes:               %w()
+            },
+            post_count: {
+                do_task_update:         true,
+                allowed_levels:         nil,
+                set_level:              nil,
+                excludes:               %w()
             }
         }
     }

@@ -22,8 +22,17 @@ module MomentumApi
 
     def run(man)
       # if not levels[:allowed_levels].include?(category['notification_level'])
+      if @options[:time_read] and @options[:post_count]
+        counters[:'Read-Post Ratio'] = (man.user_details['time_read'] / 60) / man.user_details['post_count']
+        # puts 'time_read'
+      end
 
-        man.print_user_options(man.user_details, user_label: 'User Activity', user_field: 'profile_view_count')
+      man.print_user_options(man.user_details, user_label: 'User Activity', user_field: 'profile_view_count',
+                             hash: {'Read-Post Ratio': counters[:'Read-Post Ratio']})
+
+      @options.each do |option|
+        counters[option[0]] += man.user_details[option[0].to_s]
+      end
 
         # @counters[:'Category Update Targets'] += 1
         # if @schedule.discourse.options[:do_live_updates]
@@ -50,19 +59,13 @@ module MomentumApi
       @counters[:'User Activity'] += 1
     end
 
-
-
-    # def print_user(man, category_slug, group_name, notify_level, status='', type='UserName')
-    #   field_settings = "%-18s %-20s %-20s %-10s %-30s"
-    #   # field_settings = "%-18s %-20s %-20s %-10s %-30s\n"
-    #   heading = sprintf field_settings, type, 'Group', 'Category', 'Level', 'Status'
-    #   body = sprintf field_settings, man.user_details['username'], group_name, category_slug, notify_level.to_s.center(5), status
-    #   man.discourse.options[:logger].info heading
-    #   man.discourse.options[:logger].info body
-    # end
+    private
 
     def zero_notifications_counters
-      counters[:'User Activity']          =   0     # interesting we don't need the @instance in front
+      counters[:'User Activity']    =   0
+      @options.each do |option|
+        counters[option[0]]         =   0
+      end
       # counters[:'Category Update Targets']  =   0
       # counters[:'Category Notify Updated']  =   0
     end
