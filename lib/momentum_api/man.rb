@@ -65,26 +65,27 @@ module MomentumApi
     end
 
 
-    def print_user_options(user_details, fields: nil, user_label: 'UserName', pos_5: 'user_field_score', updated_option: nil)
+    def print_user_options(user_details, fields: nil, user_label: 'UserName', user_field: 'user_field_score', nested_user_field: nil)
 
       field_settings = "%-18s %-14s %-16s %-12s %-12s %-17s %-14s %-14s"
       fields = fields ||  %w(last_seen_at last_posted_at post_count time_read recent_time_read)
       
-      if updated_option
-        updated_user_value = user_details
-        updated_option.each {|level| updated_user_value = updated_user_value[level]}
+      if nested_user_field
+        nested_user_value = user_details
+        nested_user_field.each {|level| nested_user_value = nested_user_value[level]}
       else
-        updated_user_value = nil
+        nested_user_value = nil
       end
 
       heading = sprintf field_settings, user_label,
                         fields[0], fields[1], fields[2],
-                        fields[3], fields[4], fields[5], updated_option
+                        fields[3], fields[4], user_field, nested_user_field
+                        # fields[3], fields[4], fields[5], nested_user_field
 
       body = sprintf field_settings, user_details['username'],
-             user_details[fields[0].to_s].to_s[0..9], user_details[fields[1].to_s].to_s[0..9],
-             user_details[fields[2].to_s], user_details[fields[3].to_s],
-             user_details[fields[4].to_s], user_details[pos_5], updated_user_value
+                     user_details[fields[0].to_s].to_s[0..9], user_details[fields[1].to_s].to_s[0..9],
+                     user_details[fields[2].to_s], user_details[fields[3].to_s],
+                     user_details[fields[4].to_s], user_details[user_field], nested_user_value
       @discourse.options[:logger].info heading
       @discourse.options[:logger].info body
     end

@@ -17,8 +17,8 @@ schedule_options = {
         preferences:  {
             user_option: {
                 homepage_id: {
-                    do_task_update:         false ,
-                    allowed_levels:         2,
+                    do_task_update:         true ,
+                    allowed_levels:         2,       # 2 is the Momentum standard
                     set_level:              2,
                     excludes:               %w()
                 }

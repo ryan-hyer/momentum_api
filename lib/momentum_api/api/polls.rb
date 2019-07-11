@@ -141,7 +141,7 @@ module MomentumApi
       # puts 'User Score to be updated'
       # user_option_print = %w(last_seen_at last_posted_at post_count time_read recent_time_read user_field_score)
       @man.print_user_options(@man.user_details, user_label: 'UserName',
-                              pos_5: @man.user_details[@user_fields][@user_score_field])
+                              user_field: @man.user_details[@user_fields][@user_score_field])
 
       if @schedule.discourse.options[:do_live_updates]
         update_response = @schedule.discourse.admin_client.update_user(
@@ -152,7 +152,7 @@ module MomentumApi
         # check if update happened
         user_details_after_update = @schedule.discourse.admin_client.user(@man.user_details['username'])
         @man.print_user_options(user_details_after_update, user_label: 'UserName',
-                           pos_5: user_details_after_update[@user_fields][@user_score_field])
+                                user_field: user_details_after_update[@user_fields][@user_score_field])
         @mock ? sleep(0) : sleep(1)
       end
     end

@@ -37,7 +37,7 @@ module MomentumApi
         if man.user_details['trust_level'] == @options[:allowed_levels]
           # man.print_user_options(man.user_details, user_option_print, 'Correct Trust')
         else
-          man.print_user_options(man.user_details, user_label: 'Non Owner', pos_5: 'trust_level')
+          man.print_user_options(man.user_details, user_label: 'Non Owner', user_field: 'trust_level')
           @counters[:'User Trust Targets'] += 1
           # puts 'User to be updated'
 
@@ -50,7 +50,7 @@ module MomentumApi
 
             # check if update happened
             user_details_after_update = @schedule.discourse.admin_client.user(man.user_details['username'])
-            man.print_user_options(user_details_after_update, user_label: 'Non Owner', pos_5: 'trust_level')
+            man.print_user_options(user_details_after_update, user_label: 'Non Owner', user_field: 'trust_level')
             @mock ? sleep(0) : sleep(1)
           end
         end
