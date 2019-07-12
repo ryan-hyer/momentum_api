@@ -81,8 +81,8 @@ module MomentumApi
       header = [user_label, fields[0], fields[1], fields[2], fields[3], fields[4], user_field, nested_user_field, hash.keys[0]]
                         # fields[3], fields[4], fields[5], nested_user_field
       field_settings = ""
-      header.each do |d|
-        field_settings <<  "%-#{d.length + 2}s "
+      header.each do |head|
+        field_settings <<  "%-#{head.length + 2}s "
       end
       heading = sprintf field_settings, *header
 
@@ -93,6 +93,7 @@ module MomentumApi
 
       @discourse.options[:logger].info heading
       @discourse.options[:logger].info body
+
     end
 
   end

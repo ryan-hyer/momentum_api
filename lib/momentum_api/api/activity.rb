@@ -21,17 +21,25 @@ module MomentumApi
     end
 
     def run(man)
-      # if not levels[:allowed_levels].include?(category['notification_level'])
-      if @options[:time_read] and @options[:post_count]
-        counters[:'Read-Post Ratio'] = (man.user_details['time_read'] / 60) / man.user_details['post_count']
-        # puts 'time_read'
-      end
 
-      man.print_user_options(man.user_details, user_label: 'User Activity', user_field: 'profile_view_count',
-                             hash: {'Read-Post Ratio': counters[:'Read-Post Ratio']})
+      if man.user_details['post_count'] > 0 and man.user_details['time_read'] < (60 * 60)
+        @counters[:'User Activity'] += 1
 
-      @options.each do |option|
-        counters[option[0]] += man.user_details[option[0].to_s]
+        @options.each do |option|
+          counters[option[0]] += man.user_details[option[0].to_s]
+        end
+
+        read_post_ratio = nil
+        if @options[:time_read] and @options[:post_count]
+          read_post_ratio = (man.user_details['time_read'] / 60) / man.user_details['post_count']
+          
+          if counters[:post_count] > 0
+            counters[:'Read-Post Ratio'] = (counters[:time_read] / 60) / counters[:post_count]
+          end
+        end
+
+        man.print_user_options(man.user_details, user_label: 'Momentum Man Activity', user_field: 'profile_view_count',
+                               hash: {'Read-Post Ratio': read_post_ratio})
       end
 
         # @counters[:'Category Update Targets'] += 1
@@ -56,7 +64,6 @@ module MomentumApi
       #     puts "#{man.user_details['username']} already Watching"
       #   end
       # end
-      @counters[:'User Activity'] += 1
     end
 
     private
