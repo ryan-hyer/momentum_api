@@ -65,7 +65,7 @@ module MomentumApi
     end
 
 
-    def print_user_options(user_details, fields: nil, user_label: 'UserName', user_field: 'user_field_score',
+    def print_user_options(user_details, fields: nil, user_label: 'UserName', user_field: nil,
                            nested_user_field: nil, hash: {'': nil})
 
       fields = fields ||  %w(last_seen_at last_posted_at post_count time_read recent_time_read)
@@ -82,6 +82,7 @@ module MomentumApi
                         # fields[3], fields[4], fields[5], nested_user_field
       field_settings = ""
       header.each do |head|
+        head = head || ''
         field_settings <<  "%-#{head.length + 2}s "
       end
       heading = sprintf field_settings, *header

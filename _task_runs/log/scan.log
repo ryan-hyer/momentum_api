@@ -5168,3 +5168,54 @@ I, [19-07-15 12:15:44#69963]  INFO -- : Updated User Scores                 0
 I, [19-07-15 12:15:44#69963]  INFO -- : New User Badges                     0                   
 I, [19-07-15 12:15:44#69963]  INFO -- : Not Voted Targets                   0                   
 I, [19-07-15 12:15:44#69963]  INFO -- : Messages Sent                       0                   
+I, [19-07-15 16:09:03#75646]  INFO -- : UserName   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "5"]    
+I, [19-07-15 16:09:03#75646]  INFO -- : Kim_Miller 2019-07-15     2019-07-15       1764         782123      67226                         
+W, [19-07-15 16:09:04#75646]  WARN -- : Success: OK
+I, [19-07-15 16:09:04#75646]  INFO -- : UserName   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "5"]    
+I, [19-07-15 16:09:04#75646]  INFO -- : Kim_Miller 2019-07-15     2019-07-15       1764         782123      67226                 1146    
+I, [19-07-15 16:09:05#75646]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-07-15 16:09:05#75646]  INFO -- : Kim_Miller         poll                 0                                   1146  /  1146    PowerUser           
+I, [19-07-15 16:09:05#75646]  INFO -- :   Message From:    KM_Admin             Kim_Miller           Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-07-15 16:09:06#75646]  INFO -- :   Message From:    KM_Admin             Kim_Miller           thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-07-15 16:09:07#75646]  INFO -- : Discourse Men                                           
+I, [19-07-15 16:09:07#75646]  INFO -- : Processed Users                     1                   
+I, [19-07-15 16:09:07#75646]  INFO -- : Skipped Users                       0                   
+I, [19-07-15 16:09:07#75646]  INFO -- : Messages Sent                       0                   
+I, [19-07-15 16:09:07#75646]  INFO -- : User Scores                                             
+I, [19-07-15 16:09:07#75646]  INFO -- : New Vote Targets                    1                   
+I, [19-07-15 16:09:07#75646]  INFO -- : New User Scores                     1                   
+I, [19-07-15 16:09:07#75646]  INFO -- : Updated User Scores                 1                   
+I, [19-07-15 16:09:07#75646]  INFO -- : New User Badges                     0                   
+I, [19-07-15 16:09:07#75646]  INFO -- : Not Voted Targets                   0                   
+I, [19-07-15 16:09:07#75646]  INFO -- : Messages Sent                       1                   
+I, [19-07-15 16:10:46#76540]  INFO -- : UserName   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "5"]    
+I, [19-07-15 16:10:46#76540]  INFO -- : Kim_Miller 2019-07-15     2019-07-15       1764         782123      67226                         
+W, [19-07-15 16:10:46#76540]  WARN -- : Success: OK
+I, [19-07-15 16:10:46#76540]  INFO -- : UserName   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "5"]    
+I, [19-07-15 16:10:46#76540]  INFO -- : Kim_Miller 2019-07-15     2019-07-15       1764         782123      67226                 1146    
+I, [19-07-15 16:10:47#76540]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-07-15 16:10:47#76540]  INFO -- : Kim_Miller         poll                 0                                   1146  /  1146    PowerUser           
+I, [19-07-15 16:10:47#76540]  INFO -- :   Message From:    KM_Admin             Kim_Miller           Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-07-15 16:10:49#76540]  INFO -- :   Message From:    KM_Admin             Kim_Miller           thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-07-15 16:10:50#76540]  INFO -- : Discourse Men                                           
+I, [19-07-15 16:10:50#76540]  INFO -- : Processed Users                     1                   
+I, [19-07-15 16:10:50#76540]  INFO -- : Skipped Users                       0                   
+I, [19-07-15 16:10:50#76540]  INFO -- : Messages Sent                       0                   
+I, [19-07-15 16:10:50#76540]  INFO -- : User Scores                                             
+I, [19-07-15 16:10:50#76540]  INFO -- : New Vote Targets                    1                   
+I, [19-07-15 16:10:50#76540]  INFO -- : New User Scores                     1                   
+I, [19-07-15 16:10:50#76540]  INFO -- : Updated User Scores                 1                   
+I, [19-07-15 16:10:50#76540]  INFO -- : New User Badges                     0                   
+I, [19-07-15 16:10:50#76540]  INFO -- : Not Voted Targets                   0                   
+I, [19-07-15 16:10:50#76540]  INFO -- : Messages Sent                       1                   
+I, [19-07-15 16:11:12#76977]  INFO -- : Discourse Men                                           
+I, [19-07-15 16:11:12#76977]  INFO -- : Processed Users                     1                   
+I, [19-07-15 16:11:12#76977]  INFO -- : Skipped Users                       0                   
+I, [19-07-15 16:11:12#76977]  INFO -- : Messages Sent                       0                   
+I, [19-07-15 16:11:12#76977]  INFO -- : User Scores                                             
+I, [19-07-15 16:11:12#76977]  INFO -- : New Vote Targets                    0                   
+I, [19-07-15 16:11:12#76977]  INFO -- : New User Scores                     0                   
+I, [19-07-15 16:11:12#76977]  INFO -- : Updated User Scores                 0                   
+I, [19-07-15 16:11:12#76977]  INFO -- : New User Badges                     0                   
+I, [19-07-15 16:11:12#76977]  INFO -- : Not Voted Targets                   0                   
+I, [19-07-15 16:11:12#76977]  INFO -- : Messages Sent                       0                   
