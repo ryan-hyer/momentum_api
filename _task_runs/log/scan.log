@@ -5157,3 +5157,14 @@ I, [19-07-15 12:14:07#69471]  INFO -- : Updated User Scores                 1
 I, [19-07-15 12:14:07#69471]  INFO -- : New User Badges                     0                   
 I, [19-07-15 12:14:07#69471]  INFO -- : Not Voted Targets                   0                   
 I, [19-07-15 12:14:07#69471]  INFO -- : Messages Sent                       1                   
+I, [19-07-15 12:15:44#69963]  INFO -- : Discourse Men                                           
+I, [19-07-15 12:15:44#69963]  INFO -- : Processed Users                     1                   
+I, [19-07-15 12:15:44#69963]  INFO -- : Skipped Users                       0                   
+I, [19-07-15 12:15:44#69963]  INFO -- : Messages Sent                       0                   
+I, [19-07-15 12:15:44#69963]  INFO -- : User Scores                                             
+I, [19-07-15 12:15:44#69963]  INFO -- : New Vote Targets                    0                   
+I, [19-07-15 12:15:44#69963]  INFO -- : New User Scores                     0                   
+I, [19-07-15 12:15:44#69963]  INFO -- : Updated User Scores                 0                   
+I, [19-07-15 12:15:44#69963]  INFO -- : New User Badges                     0                   
+I, [19-07-15 12:15:44#69963]  INFO -- : Not Voted Targets                   0                   
+I, [19-07-15 12:15:44#69963]  INFO -- : Messages Sent                       0                   

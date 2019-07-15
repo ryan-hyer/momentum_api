@@ -213,7 +213,7 @@ describe MomentumApi::Poll do
 
         let(:mock_man) do
           mock_man = instance_double('man')
-          expect(mock_man).to receive(:user_details).exactly(7).times.and_return(poll_voter_new)
+          expect(mock_man).to receive(:user_details).exactly(6).times.and_return(poll_voter_new)
           expect(mock_man).to receive(:user_client).twice.and_return(mock_user_client)
           expect(mock_man).to receive(:print_user_options).once
           mock_man
@@ -400,7 +400,7 @@ describe MomentumApi::Poll do
         
         let(:mock_man) do
           mock_man = instance_double('man')
-          expect(mock_man).to receive(:user_details).exactly(11).times.and_return(poll_voter_new)
+          expect(mock_man).to receive(:user_details).exactly(10).times.and_return(poll_voter_new)
           expect(mock_man).to receive(:user_client).twice.and_return(mock_user_client)
           expect(mock_man).to receive(:print_user_options).twice
           mock_man
