@@ -22,24 +22,27 @@ module MomentumApi
 
     def run(man)
 
-      if man.user_details['post_count'] > 0 and man.user_details['time_read'] < (60 * 60)
+      # if man.user_details['post_count'] > 0 and man.user_details['time_read'] < (60 * 60)
+      if man.user_details['time_read'] < (30 * 60)
         @counters[:'User Activity'] += 1
+
+        read_post_ratio = nil
+        if @options[:time_read] and @options[:post_count] and man.user_details['post_count'] > 0
+          read_post_ratio = (man.user_details['time_read'] / 60) / man.user_details['post_count']
+          
+        end
+
+        man.print_user_options(man.user_details, user_label: 'Momentum Man Activity', user_field: 'profile_view_count',
+                               hash: {'Read-Post Ratio': read_post_ratio})
 
         @options.each do |option|
           counters[option[0]] += man.user_details[option[0].to_s]
         end
 
-        read_post_ratio = nil
-        if @options[:time_read] and @options[:post_count]
-          read_post_ratio = (man.user_details['time_read'] / 60) / man.user_details['post_count']
-          
-          if counters[:post_count] > 0
-            counters[:'Read-Post Ratio'] = (counters[:time_read] / 60) / counters[:post_count]
-          end
+        if counters[:post_count] > 0
+          counters[:'Read-Post Ratio'] = (counters[:time_read] / 60) / counters[:post_count]
         end
 
-        man.print_user_options(man.user_details, user_label: 'Momentum Man Activity', user_field: 'profile_view_count',
-                               hash: {'Read-Post Ratio': read_post_ratio})
       end
 
         # @counters[:'Category Update Targets'] += 1

@@ -1,7 +1,7 @@
 require_relative 'log/utility'
 require '../lib/momentum_api'
 
-@scan_passes_end                =   1
+@scan_passes_end                =   -1
 
 discourse_options = {
     do_live_updates:                true,
@@ -73,7 +73,7 @@ def scan_hourly
   @discourse.options[:logger].info "Pass #{@scan_passes} complete for #{@discourse.counters[:'Processed Users']} users, #{@discourse.counters[:'Skipped Users']} skipped. Waiting #{sleep_minutes} minutes ..."
   sleep sleep_minutes * 60
 
-  if @scan_passes < @scan_passes_end
+  if @scan_passes < @scan_passes_end or @scan_passes_end < 0
     @discourse.counters[:'Processed Users'], @discourse.counters[:'Skipped Users'] = 0, 0
     scan_hourly
   else

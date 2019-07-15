@@ -9,7 +9,7 @@ end
 require 'momentum_api'
 require 'rspec'
 require 'json'
-require 'webmock/rspec'
+# require 'webmock/rspec'
 
 
 class MockLogger
