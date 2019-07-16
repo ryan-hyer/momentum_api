@@ -5219,3 +5219,194 @@ I, [19-07-15 16:11:12#76977]  INFO -- : Updated User Scores                 0
 I, [19-07-15 16:11:12#76977]  INFO -- : New User Badges                     0                   
 I, [19-07-15 16:11:12#76977]  INFO -- : Not Voted Targets                   0                   
 I, [19-07-15 16:11:12#76977]  INFO -- : Messages Sent                       0                   
+I, [19-07-15 12:15:53#70394]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-15 12:35:00#70394]  INFO -- : Pass 1 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 12:59:04#70394]  INFO -- : Pass 2 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 13:23:07#70394]  INFO -- : Pass 3 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 13:47:11#70394]  INFO -- : Pass 4 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 14:11:14#70394]  INFO -- : Pass 5 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 14:35:18#70394]  INFO -- : Pass 6 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 14:59:21#70394]  INFO -- : Pass 7 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 15:23:25#70394]  INFO -- : Pass 8 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 15:47:30#70394]  INFO -- : Pass 9 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 16:11:33#70394]  INFO -- : Pass 10 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 16:35:36#70394]  INFO -- : Pass 11 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 16:59:40#70394]  INFO -- : Pass 12 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 17:23:49#70394]  INFO -- : Pass 13 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 17:48:00#70394]  INFO -- : Pass 14 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 18:12:12#70394]  INFO -- : Pass 15 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 18:36:27#70394]  INFO -- : Pass 16 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 19:00:43#70394]  INFO -- : Pass 17 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 19:24:59#70394]  INFO -- : Pass 18 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 19:49:10#70394]  INFO -- : Pass 19 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 20:13:23#70394]  INFO -- : Pass 20 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 20:37:37#70394]  INFO -- : Pass 21 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 21:01:54#70394]  INFO -- : Pass 22 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 21:26:10#70394]  INFO -- : Pass 23 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 21:50:23#70394]  INFO -- : Pass 24 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 22:14:37#70394]  INFO -- : Pass 25 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 22:38:52#70394]  INFO -- : Pass 26 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 23:02:57#70394]  INFO -- : Pass 27 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 23:27:02#70394]  INFO -- : Pass 28 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-15 23:51:05#70394]  INFO -- : Pass 29 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 00:15:10#70394]  INFO -- : Pass 30 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 00:39:09#70394]  INFO -- : Pass 31 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 01:03:12#70394]  INFO -- : Pass 32 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 01:27:12#70394]  INFO -- : Pass 33 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 01:51:11#70394]  INFO -- : Pass 34 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 02:15:13#70394]  INFO -- : Pass 35 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 02:39:16#70394]  INFO -- : Pass 36 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 03:03:21#70394]  INFO -- : Pass 37 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 03:27:21#70394]  INFO -- : Pass 38 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 03:51:17#70394]  INFO -- : Pass 39 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 04:15:14#70394]  INFO -- : Pass 40 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 04:39:10#70394]  INFO -- : Pass 41 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 05:03:07#70394]  INFO -- : Pass 42 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 05:27:03#70394]  INFO -- : Pass 43 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 05:51:00#70394]  INFO -- : Pass 44 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 06:14:59#70394]  INFO -- : Pass 45 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 06:39:02#70394]  INFO -- : Pass 46 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 07:03:02#70394]  INFO -- : Pass 47 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 07:27:04#70394]  INFO -- : Pass 48 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 07:51:06#70394]  INFO -- : Pass 49 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 08:15:07#70394]  INFO -- : Pass 50 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 08:39:06#70394]  INFO -- : Pass 51 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 09:03:13#70394]  INFO -- : Pass 52 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 09:27:22#70394]  INFO -- : Pass 53 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 09:51:41#70394]  INFO -- : Pass 54 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 10:15:49#70394]  INFO -- : Pass 55 complete for 166 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 12:31:44#7312]  INFO -- : Scanning ["trust_level_1"] Users for Tasks
+I, [19-07-16 13:12:38#8579]  INFO -- : Discourse Men                                           
+I, [19-07-16 13:12:38#8579]  INFO -- : Processed Users                     1                   
+I, [19-07-16 13:12:38#8579]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 13:12:38#8579]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 13:12:38#8579]  INFO -- : Watch Categories                                        
+I, [19-07-16 13:12:38#8579]  INFO -- : User Categories                     13                  
+I, [19-07-16 13:12:38#8579]  INFO -- : Category Update Targets             0                   
+I, [19-07-16 13:12:38#8579]  INFO -- : Category Notify Updated             0                   
+I, [19-07-16 13:12:55#9015]  INFO -- : Discourse Men                                           
+I, [19-07-16 13:12:55#9015]  INFO -- : Processed Users                     0                   
+I, [19-07-16 13:12:55#9015]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 13:12:55#9015]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 13:12:55#9015]  INFO -- : Watch Categories                                        
+I, [19-07-16 13:12:55#9015]  INFO -- : User Categories                     0                   
+I, [19-07-16 13:12:55#9015]  INFO -- : Category Update Targets             0                   
+I, [19-07-16 13:12:55#9015]  INFO -- : Category Notify Updated             0                   
+I, [19-07-16 13:14:18#9468]  INFO -- : Discourse Men                                           
+I, [19-07-16 13:14:18#9468]  INFO -- : Processed Users                     0                   
+I, [19-07-16 13:14:18#9468]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 13:14:18#9468]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 13:14:18#9468]  INFO -- : Watch Categories                                        
+I, [19-07-16 13:14:18#9468]  INFO -- : User Categories                     0                   
+I, [19-07-16 13:14:18#9468]  INFO -- : Category Update Targets             0                   
+I, [19-07-16 13:14:18#9468]  INFO -- : Category Notify Updated             0                   
+I, [19-07-16 13:16:40#9933]  INFO -- : Discourse Men                                           
+I, [19-07-16 13:16:40#9933]  INFO -- : Processed Users                     1                   
+I, [19-07-16 13:16:40#9933]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 13:16:40#9933]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 13:16:40#9933]  INFO -- : Watch Categories                                        
+I, [19-07-16 13:16:40#9933]  INFO -- : User Categories                     13                  
+I, [19-07-16 13:16:40#9933]  INFO -- : Category Update Targets             0                   
+I, [19-07-16 13:16:40#9933]  INFO -- : Category Notify Updated             0                   
+I, [19-07-16 13:16:50#10364]  INFO -- : Discourse Men                                           
+I, [19-07-16 13:16:50#10364]  INFO -- : Processed Users                     0                   
+I, [19-07-16 13:16:50#10364]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 13:16:50#10364]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 13:16:50#10364]  INFO -- : Watch Categories                                        
+I, [19-07-16 13:16:50#10364]  INFO -- : User Categories                     0                   
+I, [19-07-16 13:16:50#10364]  INFO -- : Category Update Targets             0                   
+I, [19-07-16 13:16:50#10364]  INFO -- : Category Notify Updated             0                   
+I, [19-07-16 13:17:30#10804]  INFO -- : Discourse Men                                           
+I, [19-07-16 13:17:30#10804]  INFO -- : Processed Users                     0                   
+I, [19-07-16 13:17:30#10804]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 13:17:30#10804]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 13:17:30#10804]  INFO -- : Watch Categories                                        
+I, [19-07-16 13:17:30#10804]  INFO -- : User Categories                     0                   
+I, [19-07-16 13:17:30#10804]  INFO -- : Category Update Targets             0                   
+I, [19-07-16 13:17:30#10804]  INFO -- : Category Notify Updated             0                   
+I, [19-07-16 13:19:14#11261]  INFO -- : Discourse Men                                           
+I, [19-07-16 13:19:14#11261]  INFO -- : Processed Users                     1                   
+I, [19-07-16 13:19:14#11261]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 13:19:14#11261]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 13:19:14#11261]  INFO -- : Watch Categories                                        
+I, [19-07-16 13:19:14#11261]  INFO -- : User Categories                     0                   
+I, [19-07-16 13:19:14#11261]  INFO -- : Category Update Targets             0                   
+I, [19-07-16 13:19:14#11261]  INFO -- : Category Notify Updated             0                   
+I, [19-07-16 13:36:05#11960]  INFO -- : Discourse Men                                           
+I, [19-07-16 13:36:05#11960]  INFO -- : Processed Users                     1                   
+I, [19-07-16 13:36:05#11960]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 13:36:05#11960]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 13:36:05#11960]  INFO -- : Watch Categories                                        
+I, [19-07-16 13:36:05#11960]  INFO -- : User Categories                     0                   
+I, [19-07-16 13:36:05#11960]  INFO -- : Category Update Targets             0                   
+I, [19-07-16 13:36:05#11960]  INFO -- : Category Notify Updated             0                   
+I, [19-07-16 13:36:18#12392]  INFO -- : Discourse Men                                           
+I, [19-07-16 13:36:18#12392]  INFO -- : Processed Users                     1                   
+I, [19-07-16 13:36:18#12392]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 13:36:18#12392]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 13:36:18#12392]  INFO -- : Watch Categories                                        
+I, [19-07-16 13:36:18#12392]  INFO -- : User Categories                     0                   
+I, [19-07-16 13:36:18#12392]  INFO -- : Category Update Targets             0                   
+I, [19-07-16 13:36:18#12392]  INFO -- : Category Notify Updated             0                   
+I, [19-07-16 13:37:09#12832]  INFO -- : Discourse Men                                           
+I, [19-07-16 13:37:09#12832]  INFO -- : Processed Users                     0                   
+I, [19-07-16 13:37:09#12832]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 13:37:09#12832]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 13:37:09#12832]  INFO -- : Watch Categories                                        
+I, [19-07-16 13:37:09#12832]  INFO -- : User Categories                     0                   
+I, [19-07-16 13:37:09#12832]  INFO -- : Category Update Targets             0                   
+I, [19-07-16 13:37:09#12832]  INFO -- : Category Notify Updated             0                   
+I, [19-07-16 13:38:11#13281]  INFO -- : Discourse Men                                           
+I, [19-07-16 13:38:11#13281]  INFO -- : Processed Users                     0                   
+I, [19-07-16 13:38:11#13281]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 13:38:11#13281]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 13:38:11#13281]  INFO -- : Watch Categories                                        
+I, [19-07-16 13:38:11#13281]  INFO -- : User Categories                     0                   
+I, [19-07-16 13:38:11#13281]  INFO -- : Category Update Targets             0                   
+I, [19-07-16 13:38:11#13281]  INFO -- : Category Notify Updated             0                   
+I, [19-07-16 13:40:48#13746]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-07-16 13:40:48#13746]  INFO -- : Matthew_Raines     LaunchpadVI          LaunchpadVI            1        NOT Watching                  
+I, [19-07-16 13:40:48#13746]  INFO -- : Discourse Men                                           
+I, [19-07-16 13:40:48#13746]  INFO -- : Processed Users                     1                   
+I, [19-07-16 13:40:48#13746]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 13:40:48#13746]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 13:40:48#13746]  INFO -- : Watch Categories                                        
+I, [19-07-16 13:40:48#13746]  INFO -- : User Categories                     1                   
+I, [19-07-16 13:40:48#13746]  INFO -- : Category Update Targets             1                   
+I, [19-07-16 13:40:48#13746]  INFO -- : Category Notify Updated             0                   
+I, [19-07-16 13:41:03#14182]  INFO -- : Discourse Men                                           
+I, [19-07-16 13:41:03#14182]  INFO -- : Processed Users                     0                   
+I, [19-07-16 13:41:03#14182]  INFO -- : Skipped Users                       1                   
+I, [19-07-16 13:41:03#14182]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 13:41:03#14182]  INFO -- : Watch Categories                                        
+I, [19-07-16 13:41:03#14182]  INFO -- : User Categories                     0                   
+I, [19-07-16 13:41:03#14182]  INFO -- : Category Update Targets             0                   
+I, [19-07-16 13:41:03#14182]  INFO -- : Category Notify Updated             0                   
+I, [19-07-16 13:41:13#14618]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-07-16 13:41:13#14618]  INFO -- : Matthew_Raines     LaunchpadVI          LaunchpadVI            1        NOT Watching                  
+I, [19-07-16 13:41:13#14618]  INFO -- : Discourse Men                                           
+I, [19-07-16 13:41:13#14618]  INFO -- : Processed Users                     1                   
+I, [19-07-16 13:41:13#14618]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 13:41:13#14618]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 13:41:13#14618]  INFO -- : Watch Categories                                        
+I, [19-07-16 13:41:13#14618]  INFO -- : User Categories                     1                   
+I, [19-07-16 13:41:13#14618]  INFO -- : Category Update Targets             1                   
+I, [19-07-16 13:41:13#14618]  INFO -- : Category Notify Updated             0                   
+I, [19-07-16 12:33:04#7632]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-07-16 12:38:18#7632]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-07-16 12:38:18#7632]  INFO -- : David_Ashby        LaunchpadVI          LaunchpadVI            1        NOT Watching                  
+W, [19-07-16 12:38:20#7632]  WARN -- : {"success"=>"OK"}
+W, [19-07-16 12:38:21#7632]  WARN -- : Updated Category: LaunchpadVI    Notification Level: 3
+I, [19-07-16 12:44:38#7632]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-07-16 12:44:38#7632]  INFO -- : John_Mansperger    LaunchpadVI          LaunchpadVI            1        NOT Watching                  
+W, [19-07-16 12:44:40#7632]  WARN -- : {"success"=>"OK"}
+W, [19-07-16 12:44:41#7632]  WARN -- : Updated Category: LaunchpadVI    Notification Level: 3
+I, [19-07-16 12:46:03#7632]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-07-16 12:46:03#7632]  INFO -- : Kim_Miller         LaunchpadVI          LaunchpadVI            1        NOT Watching                  
+W, [19-07-16 12:46:04#7632]  WARN -- : {"success"=>"OK"}
+W, [19-07-16 12:46:05#7632]  WARN -- : Updated Category: LaunchpadVI    Notification Level: 3
+W, [19-07-16 12:53:07#7632]  WARN -- : Steven_Lang_Test : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-07-16 12:54:08#7632]  WARN -- : Tshombe_Moore : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-07-16 12:54:25#7632]  INFO -- : Pass 1 complete for 206 users, 0 skipped. Waiting 5 minutes ...
+W, [19-07-16 13:19:20#7632]  WARN -- : Steven_Lang_Test : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-07-16 13:20:40#7632]  INFO -- : Pass 2 complete for 206 users, 0 skipped. Waiting 5 minutes ...

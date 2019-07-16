@@ -54,27 +54,26 @@ module MomentumApi
         user_details = @admin_client.user(group_member['username'])
       end
 
-      if user_details['staged']
+      if user_details['staged'] and not @options[:include_staged_users]
         @counters[:'Skipped Users'] += 1
       else
         user_client = @mock || connect_to_instance(user_details['username'], @options[:instance])
-
-        @counters[:'Processed Users'] += 1
         @mock ? @mock.run(self) : MomentumApi::Man.new(self, user_client, user_details).run
+        @counters[:'Processed Users'] += 1
       end
     end
 
     def apply_to_users(skip_staged_user=true)      # move to schedule_options
       if @options[:target_groups] and not @options[:target_groups].empty?
         @options[:target_groups].each do |group_name|
-          apply_to_group_users(group_name, skip_staged_user)
+          apply_to_group_users(group_name)
         end
       else
-        apply_to_group_users('trust_level_1', skip_staged_user)
+        apply_to_group_users('trust_level_1')
       end
     end
 
-    def apply_to_group_users(group_name, skip_staged_user=false)   # 10000 not allowed in 2.4
+    def apply_to_group_users(group_name)      # 10000 not allowed in 2.4
       group_members = @admin_client.group_members(group_name, limit: 1000) # todo add errors rescues
       group_members.each do |group_member|
         if @options[:issue_users].include?(group_member['username'])

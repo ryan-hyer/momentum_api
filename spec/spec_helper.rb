@@ -38,6 +38,7 @@ def discourse_options
       do_live_updates:              false,
       target_username:              nil,
       target_groups:                %w(trust_level_1),
+      include_staged_users:         false,
       instance:                     'live',
       api_username:                 'KM_Admin',
       exclude_users:                %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
