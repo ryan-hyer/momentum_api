@@ -5926,3 +5926,20 @@ I, [19-07-16 17:06:18#26515]  INFO -- : time_read Updated                   1
 I, [19-07-16 17:06:18#26515]  INFO -- : post_count                          0                   
 I, [19-07-16 17:06:18#26515]  INFO -- : post_count Count                    0                   
 I, [19-07-16 17:06:18#26515]  INFO -- : post_count Updated                  0                   
+I, [19-07-16 17:19:11#27191]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 17:19:11#27191]  INFO -- : David_Kirk            2019-07-15     2019-07-15       270          231774      17710                       
+I, [19-07-16 17:19:11#27191]  INFO -- : Discourse Men                                           
+I, [19-07-16 17:19:11#27191]  INFO -- : Processed Users                     1                   
+I, [19-07-16 17:19:11#27191]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 17:19:11#27191]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 17:19:11#27191]  INFO -- : Activity                                                
+I, [19-07-16 17:19:11#27191]  INFO -- : User Activity                       1                   
+I, [19-07-16 17:19:11#27191]  INFO -- : recent_time_read                    0                   
+I, [19-07-16 17:19:11#27191]  INFO -- : recent_time_read Count              0                   
+I, [19-07-16 17:19:11#27191]  INFO -- : recent_time_read Updated            0                   
+I, [19-07-16 17:19:11#27191]  INFO -- : time_read                           231774              
+I, [19-07-16 17:19:11#27191]  INFO -- : time_read Count                     1                   
+I, [19-07-16 17:19:11#27191]  INFO -- : time_read Updated                   0                   
+I, [19-07-16 17:19:11#27191]  INFO -- : post_count                          0                   
+I, [19-07-16 17:19:11#27191]  INFO -- : post_count Count                    0                   
+I, [19-07-16 17:19:11#27191]  INFO -- : post_count Updated                  0                   
