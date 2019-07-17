@@ -65,11 +65,9 @@ module MomentumApi
 
     def apply_to_users(skip_staged_user=true)      # move to schedule_options
       if @options[:target_groups] and not @options[:target_groups].empty?
-        @options[:target_groups].each do |group_name|
-          apply_to_group_users(group_name)
-        end
+        @options[:target_groups].each(&method(:group_applied))
       else
-        apply_to_group_users('trust_level_1')
+        group_applied('trust_level_1')
       end
     end
 
@@ -116,6 +114,10 @@ module MomentumApi
 
 
     private
+
+    def group_applied(group_name)
+      apply_to_group_users(group_name)
+    end
 
 
     # def handle_error(response)

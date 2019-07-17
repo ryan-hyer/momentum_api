@@ -5410,3 +5410,519 @@ W, [19-07-16 12:54:08#7632]  WARN -- : Tshombe_Moore : DiscourseApi::Unauthentic
 I, [19-07-16 12:54:25#7632]  INFO -- : Pass 1 complete for 206 users, 0 skipped. Waiting 5 minutes ...
 W, [19-07-16 13:19:20#7632]  WARN -- : Steven_Lang_Test : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
 I, [19-07-16 13:20:40#7632]  INFO -- : Pass 2 complete for 206 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 13:43:10#15088]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-07-16 13:57:45#15088]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-07-16 13:57:45#15088]  INFO -- : Matthew_Raines     LaunchpadVI          LaunchpadVI            1        NOT Watching                  
+W, [19-07-16 13:57:46#15088]  WARN -- : {"success"=>"OK"}
+W, [19-07-16 13:57:47#15088]  WARN -- : Updated Category: LaunchpadVI    Notification Level: 3
+I, [19-07-16 14:04:34#15088]  INFO -- : Pass 1 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 14:14:19#15088]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-07-16 14:14:19#15088]  INFO -- : Darryl_Green       LaunchpadVI          LaunchpadVI            1        NOT Watching                  
+W, [19-07-16 14:14:21#15088]  WARN -- : {"success"=>"OK"}
+W, [19-07-16 14:14:22#15088]  WARN -- : Updated Category: LaunchpadVI    Notification Level: 3
+I, [19-07-16 14:17:48#15088]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-07-16 14:17:48#15088]  INFO -- : George_Kotsovolos  LaunchpadVI          LaunchpadVI            1        NOT Watching                  
+W, [19-07-16 14:17:49#15088]  WARN -- : {"success"=>"OK"}
+W, [19-07-16 14:17:50#15088]  WARN -- : Updated Category: LaunchpadVI    Notification Level: 3
+I, [19-07-16 14:21:54#15088]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-07-16 14:21:54#15088]  INFO -- : Jonas_Papaurelis   LaunchpadVI          LaunchpadVI            1        NOT Watching                  
+W, [19-07-16 14:21:55#15088]  WARN -- : {"success"=>"OK"}
+W, [19-07-16 14:21:56#15088]  WARN -- : Updated Category: LaunchpadVI    Notification Level: 3
+I, [19-07-16 14:27:10#15088]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-07-16 14:27:10#15088]  INFO -- : Phil_Brouwer       LaunchpadVI          LaunchpadVI            1        NOT Watching                  
+W, [19-07-16 14:27:11#15088]  WARN -- : {"success"=>"OK"}
+W, [19-07-16 14:27:12#15088]  WARN -- : Updated Category: LaunchpadVI    Notification Level: 3
+I, [19-07-16 14:31:23#15088]  INFO -- : Pass 2 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-16 14:44:38#18121]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-07-16 15:15:46#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:15:46#20824]  INFO -- : Alfonso_Benavides       2019-07-16     2019-07-16       189          248430      37351                       
+I, [19-07-16 15:15:53#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:15:53#20824]  INFO -- : Andrew_Webster          2019-07-12     2019-04-13       56           21148       559                         
+I, [19-07-16 15:15:56#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:15:56#20824]  INFO -- : Anshu_Sanghi            2019-05-29     2019-05-22       72           46621       369                         
+I, [19-07-16 15:16:03#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:16:03#20824]  INFO -- : Art_Muir                2019-07-02     2019-07-16       31           20314       1850                        
+I, [19-07-16 15:16:06#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:16:06#20824]  INFO -- : Barry_Finkelstein       2019-07-16     2019-07-12       32           54903       6904                        
+I, [19-07-16 15:16:10#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:16:10#20824]  INFO -- : Benjamin_Berman         2019-07-03     2019-05-28       46           37332       226                         
+I, [19-07-16 15:16:20#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:16:20#20824]  INFO -- : Bill_Zabor              2019-07-16     2019-07-16       112          100502      14128                       
+I, [19-07-16 15:16:43#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:16:43#20824]  INFO -- : Brian_Haskin            2019-07-16     2019-06-19       48           50328       1908                        
+I, [19-07-16 15:17:00#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:17:00#20824]  INFO -- : Charlie_Ohanlon         2019-07-16     2019-07-16       125          30782       1892                        
+I, [19-07-16 15:17:10#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:17:10#20824]  INFO -- : Chris_Steck             2019-07-16     2019-07-13       122          206466      9442                        
+I, [19-07-16 15:17:14#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:17:14#20824]  INFO -- : Chris_Sulek             2019-07-16     2019-07-13       160          347847      39251                       
+I, [19-07-16 15:17:24#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:17:24#20824]  INFO -- : Clay_Campbell           2019-07-15     2019-07-15       45           60028       2438                        
+I, [19-07-16 15:17:41#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:17:41#20824]  INFO -- : Dan_Ollendorff          2019-07-15     2019-07-15       23           43197       1222                        
+I, [19-07-16 15:17:44#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:17:44#20824]  INFO -- : Dave_Lloyd              2019-07-13     2019-07-09       40           21780       2416                        
+I, [19-07-16 15:17:54#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:17:54#20824]  INFO -- : Dave_Strigler           2019-07-15     2019-04-21       9            66546       2613                        
+I, [19-07-16 15:17:58#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:17:58#20824]  INFO -- : David_Ashby             2019-07-16     2019-07-16       109          60243       20542                       
+I, [19-07-16 15:18:04#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:18:04#20824]  INFO -- : David_Hohl              2019-07-01     2019-05-25       9            25874       3527                        
+I, [19-07-16 15:18:08#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:18:08#20824]  INFO -- : David_Kirk              2019-07-15     2019-07-15       270          231774      17710                       
+I, [19-07-16 15:18:38#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:18:38#20824]  INFO -- : Edmond_Cote             2019-07-15     2019-07-14       231          99104       5412                        
+I, [19-07-16 15:18:42#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:18:42#20824]  INFO -- : EO_Rojas                2019-07-03     2019-06-20       135          102001      1061                        
+I, [19-07-16 15:19:05#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:19:05#20824]  INFO -- : Gary_Merrick            2019-07-16     2019-07-16       343          312881      33753                       
+I, [19-07-16 15:19:32#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:19:32#20824]  INFO -- : Ian_Wilkes              2019-07-15     2019-07-15       34           25942       8843                        
+I, [19-07-16 15:19:36#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:19:36#20824]  INFO -- : Jack_McInerney          2019-07-16     2019-07-15       206          304892      34734                       
+I, [19-07-16 15:19:42#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:19:42#20824]  INFO -- : James_Fitzgerald        2019-06-08     2019-04-20       0            34469       182                         
+I, [19-07-16 15:19:46#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:19:46#20824]  INFO -- : James_Grubinskas        2019-07-16     2019-07-15       106          51072       20166                       
+I, [19-07-16 15:19:59#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:19:59#20824]  INFO -- : Jeff_Cintas             2019-04-11     2019-01-31       37           40372       0                           
+I, [19-07-16 15:20:16#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:20:16#20824]  INFO -- : Jim_Charley             2019-07-14     2019-07-14       339          168943      112                         
+I, [19-07-16 15:20:20#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:20:20#20824]  INFO -- : Jim_Georgiou            2019-06-20     2019-04-22       89           93839       101                         
+I, [19-07-16 15:20:30#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:20:30#20824]  INFO -- : Joe_Sabolefski          2019-07-16     2019-07-16       201          318475      11067                       
+I, [19-07-16 15:20:47#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:20:47#20824]  INFO -- : John_Lasersohn          2019-07-11     2019-07-03       173          36232       2443                        
+I, [19-07-16 15:20:50#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:20:50#20824]  INFO -- : John_Mansperger         2019-07-16     2019-07-16       168          72041       5954                        
+I, [19-07-16 15:20:54#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:20:54#20824]  INFO -- : John_Nadler             2019-05-15     2019-05-15       71           25578       0                           
+I, [19-07-16 15:20:57#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:20:57#20824]  INFO -- : John_Oberstar           2019-07-16     2019-07-16       41           30069       9130                        
+I, [19-07-16 15:21:17#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:21:17#20824]  INFO -- : Ken_Cahill              2019-07-16     2019-06-05       73           111222      2748                        
+I, [19-07-16 15:21:24#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:21:24#20824]  INFO -- : Kim_Miller              2019-07-16     2019-07-16       1779         785032      67644                       
+I, [19-07-16 15:21:28#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:21:28#20824]  INFO -- : Konrad_Thaler           2019-07-15     2019-07-15       90           45842       7530                        
+I, [19-07-16 15:21:31#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:21:31#20824]  INFO -- : Krishna_Yetchina        2019-07-01     2019-06-27       116          155644      2443                        
+I, [19-07-16 15:21:41#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:21:41#20824]  INFO -- : Lee_Wheeler             2019-07-16     2019-07-16       97           58122       2522                        
+I, [19-07-16 15:21:55#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:21:55#20824]  INFO -- : Mark_Reinheimer         2019-05-29     2019-05-31       53           32914       68                          
+I, [19-07-16 15:21:58#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:21:58#20824]  INFO -- : Mark_Thorpe             2019-07-16     2019-07-16       374          238083      9951                        
+I, [19-07-16 15:22:05#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:22:05#20824]  INFO -- : Marty_Fauth             2019-07-16     2019-07-14       361          144813      18212                       
+I, [19-07-16 15:22:08#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:22:08#20824]  INFO -- : Matthew_Lewsadder       2019-07-05     2019-07-01       122          76394       2828                        
+I, [19-07-16 15:22:15#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:22:15#20824]  INFO -- : Michael_Kahn            2019-07-14     2019-07-08       30           20553       1546                        
+I, [19-07-16 15:22:18#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:22:18#20824]  INFO -- : Michael_Orr             2019-06-05     2019-06-06       106          93803       572                         
+I, [19-07-16 15:22:22#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:22:22#20824]  INFO -- : Michael_Skowronek       2019-07-14     2019-06-09       11           19367       2873                        
+I, [19-07-16 15:22:28#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:22:28#20824]  INFO -- : Mike_Drilling           2019-07-16     2019-07-15       412          147748      9344                        
+I, [19-07-16 15:22:38#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:22:38#20824]  INFO -- : Mike_Weston             2019-07-09     2019-07-04       37           32882       4854                        
+I, [19-07-16 15:22:45#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:22:45#20824]  INFO -- : Mikhail_Zhidko          2019-07-12     2019-06-20       88           81559       801                         
+I, [19-07-16 15:22:49#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:22:49#20824]  INFO -- : Miles_Bradley           2019-07-02     2019-07-11       251          51957       1214                        
+I, [19-07-16 15:22:56#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:22:56#20824]  INFO -- : Moe_Rubenzahl           2019-07-16     2019-07-16       950          451712      74315                       
+I, [19-07-16 15:23:06#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:23:06#20824]  INFO -- : Paul_Tyner              2019-07-12     2019-06-28       40           43461       2507                        
+I, [19-07-16 15:23:19#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:23:19#20824]  INFO -- : Randy_Horton            2019-07-14     2019-07-15       312          20583       1802                        
+I, [19-07-16 15:23:29#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:23:29#20824]  INFO -- : Rich_Worthington        2019-07-02     2019-06-30       99           45696       996                         
+I, [19-07-16 15:23:36#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:23:36#20824]  INFO -- : Robbie_Bow              2019-07-15     2019-06-28       43           31259       1226                        
+I, [19-07-16 15:23:46#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:23:46#20824]  INFO -- : Ron_Tugender            2019-07-15     2018-12-09       68           38465       705                         
+I, [19-07-16 15:23:53#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:23:53#20824]  INFO -- : Ryan_Hyer               2019-07-16     2019-07-14       610          419281      29237                       
+I, [19-07-16 15:23:59#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:23:59#20824]  INFO -- : Sanjeev_Balarajan       2019-07-15     2019-07-15       140          125240      2196                        
+I, [19-07-16 15:24:03#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:24:03#20824]  INFO -- : Sanjeev_Sanghera        2019-07-13     2019-05-01       20           30229       1548                        
+I, [19-07-16 15:24:10#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:24:10#20824]  INFO -- : Scott_StGermain         2019-07-16     2019-07-16       123          62296       4397                        
+I, [19-07-16 15:24:23#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:24:23#20824]  INFO -- : Stefan_Schmitz          2019-07-15     2019-07-12       84           127966      15503                       
+I, [19-07-16 15:24:33#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:24:33#20824]  INFO -- : Steve_Scott             2019-07-16     2019-07-16       2002         1843752     69619                       
+I, [19-07-16 15:24:37#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:24:37#20824]  INFO -- : Suhas_Chelian           2019-07-16     2019-07-16       53           24349       11376                       
+I, [19-07-16 15:24:47#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:24:47#20824]  INFO -- : Tom_Feasby              2019-07-04     2019-07-16       198          27744       4083                        
+I, [19-07-16 15:24:50#20824]  INFO -- : Momentum Man Activity   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:24:50#20824]  INFO -- : Tony_Christopher        2019-07-01     2019-05-30       44           27130       646                         
+I, [19-07-16 15:25:00#20824]  INFO -- : Discourse Men                                           
+I, [19-07-16 15:25:00#20824]  INFO -- : Processed Users                     166                 
+I, [19-07-16 15:25:00#20824]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 15:25:00#20824]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 15:25:00#20824]  INFO -- : Activity                                                
+I, [19-07-16 15:25:00#20824]  INFO -- : User Activity                       46                  
+I, [19-07-16 15:25:00#20824]  INFO -- : recent_time_read                    5063                
+I, [19-07-16 15:25:00#20824]  INFO -- : time_read                           28785               
+I, [19-07-16 15:25:00#20824]  INFO -- : post_count                          164                 
+I, [19-07-16 15:25:00#20824]  INFO -- : Read-Post Ratio                     2                   
+I, [19-07-16 15:28:42#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:28:42#21455]  INFO -- : Alfonso_Benavides     2019-07-16     2019-07-16       189          248430      37351                       
+I, [19-07-16 15:28:49#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:28:49#21455]  INFO -- : Andrew_Webster        2019-07-12     2019-04-13       56           21148       559                         
+I, [19-07-16 15:28:52#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:28:52#21455]  INFO -- : Anshu_Sanghi          2019-05-29     2019-05-22       72           46621       369                         
+I, [19-07-16 15:28:59#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:28:59#21455]  INFO -- : Art_Muir              2019-07-02     2019-07-16       31           20314       1850                        
+I, [19-07-16 15:29:03#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:29:03#21455]  INFO -- : Barry_Finkelstein     2019-07-16     2019-07-12       32           54903       6904                        
+I, [19-07-16 15:29:06#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:29:06#21455]  INFO -- : Benjamin_Berman       2019-07-03     2019-05-28       46           37332       226                         
+I, [19-07-16 15:29:16#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:29:16#21455]  INFO -- : Bill_Zabor            2019-07-16     2019-07-16       112          100502      14128                       
+I, [19-07-16 15:29:40#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:29:40#21455]  INFO -- : Brian_Haskin          2019-07-16     2019-06-19       48           50328       1908                        
+I, [19-07-16 15:29:57#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:29:57#21455]  INFO -- : Charlie_Ohanlon       2019-07-16     2019-07-16       125          30782       1892                        
+I, [19-07-16 15:30:07#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:30:07#21455]  INFO -- : Chris_Steck           2019-07-16     2019-07-13       122          206466      9442                        
+I, [19-07-16 15:30:10#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:30:10#21455]  INFO -- : Chris_Sulek           2019-07-16     2019-07-13       160          347847      39251                       
+I, [19-07-16 15:30:21#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:30:21#21455]  INFO -- : Clay_Campbell         2019-07-15     2019-07-15       45           60028       2438                        
+I, [19-07-16 15:30:38#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:30:38#21455]  INFO -- : Dan_Ollendorff        2019-07-15     2019-07-15       23           43197       1222                        
+I, [19-07-16 15:30:41#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:30:41#21455]  INFO -- : Dave_Lloyd            2019-07-13     2019-07-09       40           21780       2416                        
+I, [19-07-16 15:30:51#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:30:51#21455]  INFO -- : Dave_Strigler         2019-07-15     2019-04-21       9            66546       2613                        
+I, [19-07-16 15:30:55#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:30:55#21455]  INFO -- : David_Ashby           2019-07-16     2019-07-16       109          60243       20542                       
+I, [19-07-16 15:31:01#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:31:01#21455]  INFO -- : David_Hohl            2019-07-01     2019-05-25       9            25874       3527                        
+I, [19-07-16 15:31:05#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:31:05#21455]  INFO -- : David_Kirk            2019-07-15     2019-07-15       270          231774      17710                       
+I, [19-07-16 15:31:35#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:31:35#21455]  INFO -- : Edmond_Cote           2019-07-15     2019-07-14       231          99104       5412                        
+I, [19-07-16 15:31:39#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:31:39#21455]  INFO -- : EO_Rojas              2019-07-03     2019-06-20       135          102001      1061                        
+I, [19-07-16 15:32:02#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:32:02#21455]  INFO -- : Gary_Merrick          2019-07-16     2019-07-16       343          312881      33753                       
+I, [19-07-16 15:32:29#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:32:29#21455]  INFO -- : Ian_Wilkes            2019-07-15     2019-07-15       34           25942       8843                        
+I, [19-07-16 15:32:33#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:32:33#21455]  INFO -- : Jack_McInerney        2019-07-16     2019-07-15       206          304892      34734                       
+I, [19-07-16 15:32:40#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:32:40#21455]  INFO -- : James_Fitzgerald      2019-06-08     2019-04-20       0            34469       182                         
+I, [19-07-16 15:32:43#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:32:43#21455]  INFO -- : James_Grubinskas      2019-07-16     2019-07-15       106          51072       20166                       
+I, [19-07-16 15:32:57#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:32:57#21455]  INFO -- : Jeff_Cintas           2019-04-11     2019-01-31       37           40372       0                           
+I, [19-07-16 15:33:14#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:33:14#21455]  INFO -- : Jim_Charley           2019-07-14     2019-07-14       339          168943      112                         
+I, [19-07-16 15:33:17#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:33:17#21455]  INFO -- : Jim_Georgiou          2019-06-20     2019-04-22       89           93839       101                         
+I, [19-07-16 15:33:27#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:33:27#21455]  INFO -- : Joe_Sabolefski        2019-07-16     2019-07-16       201          318789      11381                       
+I, [19-07-16 15:33:44#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:33:44#21455]  INFO -- : John_Lasersohn        2019-07-11     2019-07-03       173          36232       2443                        
+I, [19-07-16 15:33:47#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:33:47#21455]  INFO -- : John_Mansperger       2019-07-16     2019-07-16       168          72041       5954                        
+I, [19-07-16 15:33:51#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:33:51#21455]  INFO -- : John_Nadler           2019-05-15     2019-05-15       71           25578       0                           
+I, [19-07-16 15:33:54#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:33:54#21455]  INFO -- : John_Oberstar         2019-07-16     2019-07-16       41           30069       9130                        
+I, [19-07-16 15:34:14#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:34:14#21455]  INFO -- : Ken_Cahill            2019-07-16     2019-06-05       73           111222      2748                        
+I, [19-07-16 15:34:21#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:34:21#21455]  INFO -- : Kim_Miller            2019-07-16     2019-07-16       1779         785032      67644                       
+I, [19-07-16 15:34:24#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:34:24#21455]  INFO -- : Konrad_Thaler         2019-07-15     2019-07-15       90           45842       7530                        
+I, [19-07-16 15:34:28#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:34:28#21455]  INFO -- : Krishna_Yetchina      2019-07-01     2019-06-27       116          155644      2443                        
+I, [19-07-16 15:34:38#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:34:38#21455]  INFO -- : Lee_Wheeler           2019-07-16     2019-07-16       97           58122       2522                        
+I, [19-07-16 15:34:51#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:34:51#21455]  INFO -- : Mark_Reinheimer       2019-05-29     2019-05-31       53           32914       68                          
+I, [19-07-16 15:34:55#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:34:55#21455]  INFO -- : Mark_Thorpe           2019-07-16     2019-07-16       374          238083      9951                        
+I, [19-07-16 15:35:01#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:35:01#21455]  INFO -- : Marty_Fauth           2019-07-16     2019-07-14       361          144813      18212                       
+I, [19-07-16 15:35:05#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:35:05#21455]  INFO -- : Matthew_Lewsadder     2019-07-05     2019-07-01       122          76394       2828                        
+I, [19-07-16 15:35:12#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:35:12#21455]  INFO -- : Michael_Kahn          2019-07-14     2019-07-08       30           20553       1546                        
+I, [19-07-16 15:35:15#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:35:15#21455]  INFO -- : Michael_Orr           2019-06-05     2019-06-06       106          93803       572                         
+I, [19-07-16 15:35:19#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:35:19#21455]  INFO -- : Michael_Skowronek     2019-07-14     2019-06-09       11           19367       2873                        
+I, [19-07-16 15:35:25#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:35:25#21455]  INFO -- : Mike_Drilling         2019-07-16     2019-07-15       412          147748      9344                        
+I, [19-07-16 15:35:35#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:35:35#21455]  INFO -- : Mike_Weston           2019-07-09     2019-07-04       37           32882       4854                        
+I, [19-07-16 15:35:42#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:35:42#21455]  INFO -- : Mikhail_Zhidko        2019-07-12     2019-06-20       88           81559       801                         
+I, [19-07-16 15:35:46#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:35:46#21455]  INFO -- : Miles_Bradley         2019-07-02     2019-07-11       251          51957       1214                        
+I, [19-07-16 15:35:52#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:35:52#21455]  INFO -- : Moe_Rubenzahl         2019-07-16     2019-07-16       950          451712      74315                       
+I, [19-07-16 15:36:02#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:36:02#21455]  INFO -- : Paul_Tyner            2019-07-12     2019-06-28       40           43461       2507                        
+I, [19-07-16 15:36:16#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:36:16#21455]  INFO -- : Randy_Horton          2019-07-14     2019-07-15       312          20583       1802                        
+I, [19-07-16 15:36:26#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:36:26#21455]  INFO -- : Rich_Worthington      2019-07-02     2019-06-30       99           45696       996                         
+I, [19-07-16 15:36:33#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:36:33#21455]  INFO -- : Robbie_Bow            2019-07-15     2019-06-28       43           31259       1226                        
+I, [19-07-16 15:36:43#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:36:43#21455]  INFO -- : Ron_Tugender          2019-07-15     2018-12-09       68           38465       705                         
+I, [19-07-16 15:36:50#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:36:50#21455]  INFO -- : Ryan_Hyer             2019-07-16     2019-07-14       610          419281      29237                       
+I, [19-07-16 15:36:57#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:36:57#21455]  INFO -- : Sanjeev_Balarajan     2019-07-15     2019-07-15       140          125240      2196                        
+I, [19-07-16 15:37:00#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:37:00#21455]  INFO -- : Sanjeev_Sanghera      2019-07-13     2019-05-01       20           30229       1548                        
+I, [19-07-16 15:37:07#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:37:07#21455]  INFO -- : Scott_StGermain       2019-07-16     2019-07-16       123          62296       4397                        
+I, [19-07-16 15:37:20#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:37:20#21455]  INFO -- : Stefan_Schmitz        2019-07-15     2019-07-12       84           127966      15503                       
+I, [19-07-16 15:37:30#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:37:30#21455]  INFO -- : Steve_Scott           2019-07-16     2019-07-16       2002         1843752     69619                       
+I, [19-07-16 15:37:34#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:37:34#21455]  INFO -- : Suhas_Chelian         2019-07-16     2019-07-16       53           24349       11376                       
+I, [19-07-16 15:37:44#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:37:44#21455]  INFO -- : Tom_Feasby            2019-07-04     2019-07-16       198          27744       4083                        
+I, [19-07-16 15:37:47#21455]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:37:47#21455]  INFO -- : Tony_Christopher      2019-07-01     2019-05-30       44           27130       646                         
+I, [19-07-16 15:37:58#21455]  INFO -- : Discourse Men                                           
+I, [19-07-16 15:37:58#21455]  INFO -- : Processed Users                     166                 
+I, [19-07-16 15:37:58#21455]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 15:37:58#21455]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 15:37:58#21455]  INFO -- : Activity                                                
+I, [19-07-16 15:37:58#21455]  INFO -- : User Activity                       166                 
+I, [19-07-16 15:37:58#21455]  INFO -- : recent_time_read                    0                   
+I, [19-07-16 15:37:58#21455]  INFO -- : recent_time_read_count              0                   
+I, [19-07-16 15:37:58#21455]  INFO -- : time_read                           8805437             
+I, [19-07-16 15:37:58#21455]  INFO -- : time_read_count                     64                  
+I, [19-07-16 15:37:58#21455]  INFO -- : post_count                          0                   
+I, [19-07-16 15:37:58#21455]  INFO -- : post_count_count                    0                   
+I, [19-07-16 15:43:23#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:43:23#22138]  INFO -- : Alfonso_Benavides     2019-07-16     2019-07-16       189          248430      37351                       
+I, [19-07-16 15:43:33#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:43:33#22138]  INFO -- : Anshu_Sanghi          2019-05-29     2019-05-22       72           46621       369                         
+I, [19-07-16 15:43:40#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:43:40#22138]  INFO -- : Art_Muir              2019-07-02     2019-07-16       31           20314       1850                        
+I, [19-07-16 15:43:43#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:43:43#22138]  INFO -- : Barry_Finkelstein     2019-07-16     2019-07-12       32           54903       6904                        
+I, [19-07-16 15:43:50#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:43:50#22138]  INFO -- : Bill_Herndon          2019-07-16     2019-07-16       23           14374       2853                        
+I, [19-07-16 15:43:53#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:43:53#22138]  INFO -- : Bill_Sprague          2019-07-15                      0            4481        2165                        
+I, [19-07-16 15:43:57#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:43:57#22138]  INFO -- : Bill_Zabor            2019-07-16     2019-07-16       112          100502      14128                       
+I, [19-07-16 15:44:21#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:44:21#22138]  INFO -- : Brian_Haskin          2019-07-16     2019-06-19       48           50328       1908                        
+I, [19-07-16 15:44:37#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:44:37#22138]  INFO -- : Charlie_Ohanlon       2019-07-16     2019-07-16       125          30782       1892                        
+I, [19-07-16 15:44:48#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:44:48#22138]  INFO -- : Chris_Steck           2019-07-16     2019-07-13       122          206466      9442                        
+I, [19-07-16 15:44:51#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:44:51#22138]  INFO -- : Chris_Sulek           2019-07-16     2019-07-13       160          347847      39251                       
+I, [19-07-16 15:45:01#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:45:01#22138]  INFO -- : Clay_Campbell         2019-07-15     2019-07-15       45           60028       2438                        
+I, [19-07-16 15:45:04#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:45:04#22138]  INFO -- : Cory_Harasha          2019-07-15     2019-07-15       23           6698        4972                        
+I, [19-07-16 15:45:21#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:45:21#22138]  INFO -- : Dave_Lloyd            2019-07-13     2019-07-09       40           21780       2416                        
+I, [19-07-16 15:45:32#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:45:32#22138]  INFO -- : Dave_Strigler         2019-07-15     2019-04-21       9            66546       2613                        
+I, [19-07-16 15:45:35#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:45:35#22138]  INFO -- : David_Ashby           2019-07-16     2019-07-16       109          60243       20542                       
+I, [19-07-16 15:45:42#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:45:42#22138]  INFO -- : David_Hohl            2019-07-01     2019-05-25       9            25874       3527                        
+I, [19-07-16 15:45:45#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:45:45#22138]  INFO -- : David_Kirk            2019-07-15     2019-07-15       270          231774      17710                       
+I, [19-07-16 15:46:15#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:46:15#22138]  INFO -- : Edmond_Cote           2019-07-15     2019-07-14       231          99104       5412                        
+I, [19-07-16 15:46:19#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:46:19#22138]  INFO -- : EO_Rojas              2019-07-03     2019-06-20       135          102001      1061                        
+I, [19-07-16 15:46:42#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:46:42#22138]  INFO -- : Gary_Merrick          2019-07-16     2019-07-16       343          312881      33753                       
+I, [19-07-16 15:47:09#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:47:09#22138]  INFO -- : Ian_Wilkes            2019-07-15     2019-07-15       34           25942       8843                        
+I, [19-07-16 15:47:13#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:47:13#22138]  INFO -- : Jack_McInerney        2019-07-16     2019-07-15       206          304892      34734                       
+I, [19-07-16 15:47:23#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:47:23#22138]  INFO -- : James_Grubinskas      2019-07-16     2019-07-15       106          51072       20166                       
+I, [19-07-16 15:47:50#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:47:50#22138]  INFO -- : Jerry_Strebig         2019-07-16     2019-07-16       221          12944       4915                        
+I, [19-07-16 15:47:54#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:47:54#22138]  INFO -- : Jim_Charley           2019-07-14     2019-07-14       339          168943      112                         
+I, [19-07-16 15:47:57#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:47:57#22138]  INFO -- : Jim_Georgiou          2019-06-20     2019-04-22       89           93839       101                         
+I, [19-07-16 15:48:07#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:48:07#22138]  INFO -- : Joe_Sabolefski        2019-07-16     2019-07-16       201          318789      11381                       
+I, [19-07-16 15:48:24#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:48:24#22138]  INFO -- : John_Lasersohn        2019-07-11     2019-07-03       173          36232       2443                        
+I, [19-07-16 15:48:27#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:48:27#22138]  INFO -- : John_Mansperger       2019-07-16     2019-07-16       168          72041       5954                        
+I, [19-07-16 15:48:34#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:48:34#22138]  INFO -- : John_Oberstar         2019-07-16     2019-07-16       41           30069       9130                        
+I, [19-07-16 15:48:41#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:48:41#22138]  INFO -- : Joseph_Kuo            2019-07-16     2019-06-30       6            5916        2122                        
+I, [19-07-16 15:48:47#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:48:47#22138]  INFO -- : Keerti_Narayan        2019-06-21     2019-06-21       11           5354        2020                        
+I, [19-07-16 15:48:54#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:48:54#22138]  INFO -- : Ken_Cahill            2019-07-16     2019-06-05       73           111222      2748                        
+I, [19-07-16 15:49:01#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:49:01#22138]  INFO -- : Kim_Miller            2019-07-16     2019-07-16       1779         785032      67644                       
+I, [19-07-16 15:49:04#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:49:04#22138]  INFO -- : Konrad_Thaler         2019-07-15     2019-07-15       90           45842       7530                        
+I, [19-07-16 15:49:08#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:49:08#22138]  INFO -- : Krishna_Yetchina      2019-07-01     2019-06-27       116          155644      2443                        
+I, [19-07-16 15:49:15#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:49:15#22138]  INFO -- : Laurence_Kuhn         2019-07-15     2019-07-01       118          17524       5237                        
+I, [19-07-16 15:49:18#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:49:18#22138]  INFO -- : Lee_Wheeler           2019-07-16     2019-07-16       97           58122       2522                        
+I, [19-07-16 15:49:35#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:49:35#22138]  INFO -- : Mark_Thorpe           2019-07-16     2019-07-16       374          238083      9951                        
+I, [19-07-16 15:49:42#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:49:42#22138]  INFO -- : Marty_Fauth           2019-07-16     2019-07-14       361          144813      18212                       
+I, [19-07-16 15:49:45#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:49:45#22138]  INFO -- : Matthew_Lewsadder     2019-07-05     2019-07-01       122          76394       2828                        
+I, [19-07-16 15:49:56#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:49:56#22138]  INFO -- : Michael_Orr           2019-06-05     2019-06-06       106          93803       572                         
+I, [19-07-16 15:49:59#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:49:59#22138]  INFO -- : Michael_Skowronek     2019-07-14     2019-06-09       11           19367       2873                        
+I, [19-07-16 15:50:06#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:50:06#22138]  INFO -- : Mike_Drilling         2019-07-16     2019-07-15       412          147748      9344                        
+I, [19-07-16 15:50:16#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:50:16#22138]  INFO -- : Mike_Weston           2019-07-09     2019-07-04       37           32882       4854                        
+I, [19-07-16 15:50:23#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:50:23#22138]  INFO -- : Mikhail_Zhidko        2019-07-12     2019-06-20       88           81559       801                         
+I, [19-07-16 15:50:26#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:50:26#22138]  INFO -- : Miles_Bradley         2019-07-02     2019-07-11       251          51957       1214                        
+I, [19-07-16 15:50:33#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:50:33#22138]  INFO -- : Moe_Rubenzahl         2019-07-16     2019-07-16       950          451712      74315                       
+I, [19-07-16 15:50:37#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:50:37#22138]  INFO -- : Noah_Salzman          2019-07-13     2019-06-20       1            3798        3798                        
+I, [19-07-16 15:50:43#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:50:43#22138]  INFO -- : Paul_Tyner            2019-07-12     2019-06-28       40           43461       2507                        
+I, [19-07-16 15:50:57#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:50:57#22138]  INFO -- : Randy_Horton          2019-07-14     2019-07-15       312          20583       1802                        
+I, [19-07-16 15:51:07#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:51:07#22138]  INFO -- : Rich_Worthington      2019-07-02     2019-06-30       99           45696       996                         
+I, [19-07-16 15:51:27#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:51:27#22138]  INFO -- : Russ_Towne            2019-07-11     2019-07-15       159          17168       3708                        
+I, [19-07-16 15:51:31#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:51:31#22138]  INFO -- : Ryan_Hyer             2019-07-16     2019-07-14       610          419281      29237                       
+I, [19-07-16 15:51:37#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:51:37#22138]  INFO -- : Sanjeev_Balarajan     2019-07-15     2019-07-15       140          125240      2196                        
+I, [19-07-16 15:51:48#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:51:48#22138]  INFO -- : Scott_StGermain       2019-07-16     2019-07-16       123          62296       4397                        
+I, [19-07-16 15:52:01#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:52:01#22138]  INFO -- : Stefan_Schmitz        2019-07-15     2019-07-12       84           127966      15503                       
+I, [19-07-16 15:52:11#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:52:11#22138]  INFO -- : Steve_Scott           2019-07-16     2019-07-16       2002         1843752     69619                       
+I, [19-07-16 15:52:15#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:52:15#22138]  INFO -- : Suhas_Chelian         2019-07-16     2019-07-16       53           24349       11376                       
+I, [19-07-16 15:52:21#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:52:21#22138]  INFO -- : Tim_Tannatt           2019-07-16     2019-07-16       13           11880       5685                        
+I, [19-07-16 15:52:25#22138]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 15:52:25#22138]  INFO -- : Tom_Feasby            2019-07-04     2019-07-16       198          27744       4083                        
+I, [19-07-16 15:52:38#22138]  INFO -- : Discourse Men                                           
+I, [19-07-16 15:52:38#22138]  INFO -- : Processed Users                     166                 
+I, [19-07-16 15:52:38#22138]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 15:52:38#22138]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 15:52:38#22138]  INFO -- : Activity                                                
+I, [19-07-16 15:52:38#22138]  INFO -- : User Activity                       166                 
+I, [19-07-16 15:52:38#22138]  INFO -- : recent_time_read                    0                   
+I, [19-07-16 15:52:38#22138]  INFO -- : recent_time_read_count              0                   
+I, [19-07-16 15:52:38#22138]  INFO -- : time_read                           8522928             
+I, [19-07-16 15:52:38#22138]  INFO -- : time_read_count                     62                  
+I, [19-07-16 15:52:38#22138]  INFO -- : post_count                          0                   
+I, [19-07-16 15:52:38#22138]  INFO -- : post_count_count                    0                   
+I, [19-07-16 16:54:39#23745]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 16:54:39#23745]  INFO -- : Kim_Miller            2019-07-16     2019-07-16       1779         785032      67644                       
+I, [19-07-16 16:54:39#23745]  INFO -- : Discourse Men                                           
+I, [19-07-16 16:54:39#23745]  INFO -- : Processed Users                     1                   
+I, [19-07-16 16:54:39#23745]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 16:54:39#23745]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 16:54:39#23745]  INFO -- : Activity                                                
+I, [19-07-16 16:54:39#23745]  INFO -- : User Activity                       1                   
+I, [19-07-16 16:54:39#23745]  INFO -- : recent_time_read                    0                   
+I, [19-07-16 16:54:39#23745]  INFO -- : recent_time_read Count              0                   
+I, [19-07-16 16:54:39#23745]  INFO -- : recent_time_read Updated            0                   
+I, [19-07-16 16:54:39#23745]  INFO -- : time_read                           785032              
+I, [19-07-16 16:54:39#23745]  INFO -- : time_read Count                     1                   
+I, [19-07-16 16:54:39#23745]  INFO -- : time_read Updated                   0                   
+I, [19-07-16 16:54:39#23745]  INFO -- : post_count                          0                   
+I, [19-07-16 16:54:39#23745]  INFO -- : post_count Count                    0                   
+I, [19-07-16 16:54:39#23745]  INFO -- : post_count Updated                  0                   
+I, [19-07-16 16:55:03#24177]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 16:55:03#24177]  INFO -- : Kim_Miller            2019-07-16     2019-07-16       1779         785032      67644                       
+I, [19-07-16 16:56:31#24629]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 16:56:31#24629]  INFO -- : Kim_Miller            2019-07-16     2019-07-16       1779         785032      67644                       
+I, [19-07-16 16:57:37#25071]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 16:57:37#25071]  INFO -- : Kim_Miller            2019-07-16     2019-07-16       1779         785032      67644                       
+I, [19-07-16 17:02:13#25589]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 17:02:13#25589]  INFO -- : Kim_Miller            2019-07-17     2019-07-16       1779         785032      65551                       
+I, [19-07-16 17:02:13#25589]  INFO -- : Discourse Men                                           
+I, [19-07-16 17:02:13#25589]  INFO -- : Processed Users                     1                   
+I, [19-07-16 17:02:13#25589]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 17:02:13#25589]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 17:02:13#25589]  INFO -- : Activity                                                
+I, [19-07-16 17:02:13#25589]  INFO -- : User Activity                       1                   
+I, [19-07-16 17:02:13#25589]  INFO -- : recent_time_read                    0                   
+I, [19-07-16 17:02:13#25589]  INFO -- : recent_time_read Count              0                   
+I, [19-07-16 17:02:13#25589]  INFO -- : recent_time_read Updated            0                   
+I, [19-07-16 17:02:13#25589]  INFO -- : time_read                           785032              
+I, [19-07-16 17:02:13#25589]  INFO -- : time_read Count                     1                   
+I, [19-07-16 17:02:13#25589]  INFO -- : time_read Updated                   0                   
+I, [19-07-16 17:02:13#25589]  INFO -- : post_count                          0                   
+I, [19-07-16 17:02:13#25589]  INFO -- : post_count Count                    0                   
+I, [19-07-16 17:02:13#25589]  INFO -- : post_count Updated                  0                   
+I, [19-07-16 17:03:39#26044]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 17:03:39#26044]  INFO -- : David_Kirk            2019-07-15     2019-07-15       270          231774      17710                       
+W, [19-07-16 17:03:40#26044]  WARN -- : #<Faraday::Env @method=:put @body={"success"=>"OK", "usernames"=>["David_Kirk"]} @url=#<URI::HTTPS https://discourse.gomomentum.org/admin/groups/130/members.json> @request=#<Faraday::RequestOptions (empty)> @request_headers={"Accept"=>"application/json", "User-Agent"=>"DiscourseAPI Ruby Gem 0.35.0", "Api-Key"=>"0e40202bf4bf5c4214aff6db70ed6fd8eb6886b5821261f22535590672ee077e", "Api-Username"=>"KM_Admin", "Content-Type"=>"application/x-www-form-urlencoded"} @ssl=#<Faraday::SSLOptions verify=true> @response=#<Faraday::Response:0x00007f814b9e53f8 @on_complete_callbacks=[], @env=#<Faraday::Env @method=:put @body={"success"=>"OK", "usernames"=>["David_Kirk"]} @url=#<URI::HTTPS https://discourse.gomomentum.org/admin/groups/130/members.json> @request=#<Faraday::RequestOptions (empty)> @request_headers={"Accept"=>"application/json", "User-Agent"=>"DiscourseAPI Ruby Gem 0.35.0", "Api-Key"=>"0e40202bf4bf5c4214aff6db70ed6fd8eb6886b5821261f22535590672ee077e", "Api-Username"=>"KM_Admin", "Content-Type"=>"application/x-www-form-urlencoded"} @ssl=#<Faraday::SSLOptions verify=true> @response=#<Faraday::Response:0x00007f814b9e53f8 ...> @response_headers={"date"=>"Wed, 17 Jul 2019 00:03:39 GMT", "content-type"=>"application/json; charset=utf-8", "transfer-encoding"=>"chunked", "connection"=>"close", "set-cookie"=>"__cfduid=ddd766191217ff24aa688b22bd65c4b801563321819; expires=Thu, 16-Jul-20 00:03:39 GMT; path=/; domain=.gomomentum.org; HttpOnly; Secure, __profilin=p%3Dt%2Ca%3Dcf62e020c1eb60cfd87a0251ada1dcb7%7Cabd24f49b10641909aff89e0cd6b19a4; path=/; secure; HttpOnly", "vary"=>"Accept-Encoding", "x-frame-options"=>"SAMEORIGIN", "x-xss-protection"=>"1; mode=block", "x-content-type-options"=>"nosniff", "x-download-options"=>"noopen", "x-permitted-cross-domain-policies"=>"none", "referrer-policy"=>"strict-origin-when-cross-origin", "x-discourse-username"=>"KM_Admin", "x-discourse-route"=>"groups/add_members", "cache-control"=>"no-cache, no-store", "x-request-id"=>"bdfb9726-719f-4888-b03c-84f7507a574c", "x-runtime"=>"0.029316", "strict-transport-security"=>"max-age=15552000; includeSubDomains; preload", "expect-ct"=>"max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"", "server"=>"cloudflare", "cf-ray"=>"4f77f43b6dc69346-SJC"} @status=200 @reason_phrase="OK">> @response_headers={"date"=>"Wed, 17 Jul 2019 00:03:39 GMT", "content-type"=>"application/json; charset=utf-8", "transfer-encoding"=>"chunked", "connection"=>"close", "set-cookie"=>"__cfduid=ddd766191217ff24aa688b22bd65c4b801563321819; expires=Thu, 16-Jul-20 00:03:39 GMT; path=/; domain=.gomomentum.org; HttpOnly; Secure, __profilin=p%3Dt%2Ca%3Dcf62e020c1eb60cfd87a0251ada1dcb7%7Cabd24f49b10641909aff89e0cd6b19a4; path=/; secure; HttpOnly", "vary"=>"Accept-Encoding", "x-frame-options"=>"SAMEORIGIN", "x-xss-protection"=>"1; mode=block", "x-content-type-options"=>"nosniff", "x-download-options"=>"noopen", "x-permitted-cross-domain-policies"=>"none", "referrer-policy"=>"strict-origin-when-cross-origin", "x-discourse-username"=>"KM_Admin", "x-discourse-route"=>"groups/add_members", "cache-control"=>"no-cache, no-store", "x-request-id"=>"bdfb9726-719f-4888-b03c-84f7507a574c", "x-runtime"=>"0.029316", "strict-transport-security"=>"max-age=15552000; includeSubDomains; preload", "expect-ct"=>"max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"", "server"=>"cloudflare", "cf-ray"=>"4f77f43b6dc69346-SJC"} @status=200 @reason_phrase="OK">
+W, [19-07-16 17:03:41#26044]  WARN -- : User Added to : z_ActiveUsers
+I, [19-07-16 17:03:41#26044]  INFO -- : Discourse Men                                           
+I, [19-07-16 17:03:41#26044]  INFO -- : Processed Users                     1                   
+I, [19-07-16 17:03:41#26044]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 17:03:41#26044]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 17:03:41#26044]  INFO -- : Activity                                                
+I, [19-07-16 17:03:41#26044]  INFO -- : User Activity                       1                   
+I, [19-07-16 17:03:41#26044]  INFO -- : recent_time_read                    0                   
+I, [19-07-16 17:03:41#26044]  INFO -- : recent_time_read Count              0                   
+I, [19-07-16 17:03:41#26044]  INFO -- : recent_time_read Updated            0                   
+I, [19-07-16 17:03:41#26044]  INFO -- : time_read                           231774              
+I, [19-07-16 17:03:41#26044]  INFO -- : time_read Count                     1                   
+I, [19-07-16 17:03:41#26044]  INFO -- : time_read Updated                   1                   
+I, [19-07-16 17:03:41#26044]  INFO -- : post_count                          0                   
+I, [19-07-16 17:03:41#26044]  INFO -- : post_count Count                    0                   
+I, [19-07-16 17:03:41#26044]  INFO -- : post_count Updated                  0                   
+I, [19-07-16 17:06:16#26515]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-16 17:06:16#26515]  INFO -- : David_Kirk            2019-07-15     2019-07-15       270          231774      17710                       
+W, [19-07-16 17:06:17#26515]  WARN -- : OK
+W, [19-07-16 17:06:18#26515]  WARN -- : User Added to : z_ActiveUsers
+I, [19-07-16 17:06:18#26515]  INFO -- : Discourse Men                                           
+I, [19-07-16 17:06:18#26515]  INFO -- : Processed Users                     1                   
+I, [19-07-16 17:06:18#26515]  INFO -- : Skipped Users                       0                   
+I, [19-07-16 17:06:18#26515]  INFO -- : Messages Sent                       0                   
+I, [19-07-16 17:06:18#26515]  INFO -- : Activity                                                
+I, [19-07-16 17:06:18#26515]  INFO -- : User Activity                       1                   
+I, [19-07-16 17:06:18#26515]  INFO -- : recent_time_read                    0                   
+I, [19-07-16 17:06:18#26515]  INFO -- : recent_time_read Count              0                   
+I, [19-07-16 17:06:18#26515]  INFO -- : recent_time_read Updated            0                   
+I, [19-07-16 17:06:18#26515]  INFO -- : time_read                           231774              
+I, [19-07-16 17:06:18#26515]  INFO -- : time_read Count                     1                   
+I, [19-07-16 17:06:18#26515]  INFO -- : time_read Updated                   1                   
+I, [19-07-16 17:06:18#26515]  INFO -- : post_count                          0                   
+I, [19-07-16 17:06:18#26515]  INFO -- : post_count Count                    0                   
+I, [19-07-16 17:06:18#26515]  INFO -- : post_count Updated                  0                   
