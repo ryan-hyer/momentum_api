@@ -24,6 +24,16 @@ module MomentumApi
 
       @counters[:'User Activity'] += 1
 
+      activity_groups = [130, nil, nil]
+      mans_current_activity_groups = []
+      target_activity_groups = []
+
+      man.user_details['groups'].each do |user_group|
+        if activity_groups.include?(user_group['id'])
+          mans_current_activity_groups << user_group['id']
+        end
+      end
+
       if @options[:time_read]       # Active Users (60 * 60) = 1 hour   recent_time_read = last 60 days
         if man.user_details['time_read'] > 12 * (60 * 60) or man.user_details['recent_time_read'] > 0.5 * (60 * 60)
           man.print_user_options(man.user_details, user_label: 'Read Time Groupping')
@@ -34,12 +44,12 @@ module MomentumApi
           active_user_group = 130
           is_a_member = false
 
-          man.user_details['groups'].each do |user_group|
-            if user_group['id'] == active_user_group
-              is_a_member = true
-              puts 'already a member'
-            end
-          end
+          # man.user_details['groups'].each do |user_group|
+          #   if user_group['id'] == active_user_group
+          #     is_a_member = true
+          #     puts 'already a member'
+          #   end
+          # end
 
           if @schedule.discourse.options[:do_live_updates] and @options[:time_read][:do_task_update] and not is_a_member
             update_response = @schedule.discourse.admin_client.group_add(active_user_group, username: man.user_details['username'])
