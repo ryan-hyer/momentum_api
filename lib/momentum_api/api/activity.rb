@@ -26,7 +26,7 @@ module MomentumApi
 
       activity_groups = [130, nil, nil]
       mans_current_activity_groups = []
-      target_activity_groups = []
+      target_activity_groups = nil
 
       man.user_details['groups'].each do |user_group|
         if activity_groups.include?(user_group['id'])
@@ -34,11 +34,11 @@ module MomentumApi
         end
       end
 
-      if @options[:time_read]       # Active Users (60 * 60) = 1 hour   recent_time_read = last 60 days
+      if @options[:activity_groupping]       # Active Users (60 * 60) = 1 hour   recent_time_read = last 60 days
         if man.user_details['time_read'] > 12 * (60 * 60) or man.user_details['recent_time_read'] > 0.5 * (60 * 60)
           man.print_user_options(man.user_details, user_label: 'Read Time Groupping')
 
-          counters[:time_read] += man.user_details['time_read']
+          counters[:activity_groupping] += man.user_details['time_read']
           counters[:'time_read Count'] += 1
 
           active_user_group = 130
@@ -51,7 +51,7 @@ module MomentumApi
           #   end
           # end
 
-          if @schedule.discourse.options[:do_live_updates] and @options[:time_read][:do_task_update] and not is_a_member
+          if @schedule.discourse.options[:do_live_updates] and @options[:activity_groupping][:do_task_update] and not is_a_member
             update_response = @schedule.discourse.admin_client.group_add(active_user_group, username: man.user_details['username'])
             @mock ? sleep(0) : sleep(1)
             man.discourse.options[:logger].warn update_response.body['success']
@@ -74,7 +74,7 @@ module MomentumApi
       if man.user_details['time_read'] < (30 * 60)
 
         read_post_ratio = nil
-        if @options[:time_read] and @options[:post_count] and man.user_details['post_count'] > 0
+        if @options[:activity_groupping] and @options[:post_count] and man.user_details['post_count'] > 0
           read_post_ratio = (man.user_details['time_read'] / 60) / man.user_details['post_count']
           
         end

@@ -21,7 +21,7 @@ schedule_options = {
                 set_level:              nil,
                 excludes:               %w()
             },
-            time_read: {
+            activity_groupping: {
                 do_task_update:         true,
                 allowed_levels:         nil,
                 set_level:              nil,
