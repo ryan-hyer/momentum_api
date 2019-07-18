@@ -40,7 +40,7 @@ module MomentumApi
           @user_queue << (mock || MomentumApi::Preferences.new(self, @options[:user][:preferences]))
         end
         if @options[:user][:activity]
-          @user_queue << (mock || MomentumApi::Activity.new(self, @options[:user][:activity]))
+          @user_queue << (mock || MomentumApi::ActivityGroup.new(self, @options[:user][:activity]))
         end
       end
 

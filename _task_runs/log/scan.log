@@ -6053,3 +6053,86 @@ I, [19-07-18 09:12:39#48675]  INFO -- : Pass 47 complete for 207 users, 0 skippe
 I, [19-07-18 09:39:03#48675]  INFO -- : Pass 48 complete for 207 users, 0 skipped. Waiting 5 minutes ...
 I, [19-07-18 10:05:26#48675]  INFO -- : Pass 49 complete for 207 users, 0 skipped. Waiting 5 minutes ...
 W, [19-07-18 10:13:07#48675]  WARN -- : Sleeping for 20 seconds ....
+I, [19-07-18 10:55:26#89751]  INFO -- : Read Time Groupping   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-18 10:55:26#89751]  INFO -- : David_Kirk            2019-07-18     2019-07-18       275          233400      19336                       
+I, [19-07-18 11:00:14#90702]  INFO -- : Active User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-18 11:00:14#90702]  INFO -- : David_Kirk    2019-07-18     2019-07-18       275          233400      19336                       
+I, [19-07-18 11:01:14#91145]  INFO -- : Active User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-18 11:01:14#91145]  INFO -- : David_Kirk    2019-07-18     2019-07-18       275          233400      19336                       
+I, [19-07-18 11:01:14#91145]  INFO -- : Discourse Men                                           
+I, [19-07-18 11:01:14#91145]  INFO -- : Processed Users                     1                   
+I, [19-07-18 11:01:14#91145]  INFO -- : Skipped Users                       0                   
+I, [19-07-18 11:01:14#91145]  INFO -- : Messages Sent                       0                   
+I, [19-07-18 11:01:14#91145]  INFO -- : Activity                                                
+I, [19-07-18 11:01:14#91145]  INFO -- : User Activity Groupping             1                   
+I, [19-07-18 11:01:14#91145]  INFO -- : time_read                           233400              
+I, [19-07-18 11:01:14#91145]  INFO -- : time_read Count                     1                   
+I, [19-07-18 11:01:14#91145]  INFO -- : active_user                         1                   
+I, [19-07-18 11:01:14#91145]  INFO -- : recent_time_read                    0                   
+I, [19-07-18 11:01:14#91145]  INFO -- : recent_time_read Count              0                   
+I, [19-07-18 11:01:14#91145]  INFO -- : recent_time_read Updated            0                   
+I, [19-07-18 11:01:14#91145]  INFO -- : activity_groupping                  0                   
+I, [19-07-18 11:01:14#91145]  INFO -- : activity_groupping Count            0                   
+I, [19-07-18 11:01:14#91145]  INFO -- : activity_groupping Updated          0                   
+I, [19-07-18 11:01:14#91145]  INFO -- : post_count                          0                   
+I, [19-07-18 11:01:14#91145]  INFO -- : post_count Count                    0                   
+I, [19-07-18 11:01:14#91145]  INFO -- : post_count Updated                  0                   
+I, [19-07-18 11:02:35#91599]  INFO -- : Active User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-18 11:02:35#91599]  INFO -- : David_Kirk    2019-07-18     2019-07-18       275          233400      19336                       
+I, [19-07-18 11:02:35#91599]  INFO -- : Discourse Men                                           
+I, [19-07-18 11:02:35#91599]  INFO -- : Processed Users                     1                   
+I, [19-07-18 11:02:35#91599]  INFO -- : Skipped Users                       0                   
+I, [19-07-18 11:02:35#91599]  INFO -- : Messages Sent                       0                   
+I, [19-07-18 11:02:35#91599]  INFO -- : Activity                                                
+I, [19-07-18 11:02:35#91599]  INFO -- : User Activity Groupping             1                   
+I, [19-07-18 11:02:35#91599]  INFO -- : time_read                           233400              
+I, [19-07-18 11:02:35#91599]  INFO -- : time_read Count                     1                   
+I, [19-07-18 11:02:35#91599]  INFO -- : Active User                         1                   
+I, [19-07-18 11:02:35#91599]  INFO -- : recent_time_read                    0                   
+I, [19-07-18 11:02:35#91599]  INFO -- : recent_time_read Count              0                   
+I, [19-07-18 11:02:35#91599]  INFO -- : recent_time_read Updated            0                   
+I, [19-07-18 11:02:35#91599]  INFO -- : activity_groupping                  0                   
+I, [19-07-18 11:02:35#91599]  INFO -- : activity_groupping Count            0                   
+I, [19-07-18 11:02:35#91599]  INFO -- : activity_groupping Updated          0                   
+I, [19-07-18 11:02:35#91599]  INFO -- : post_count                          0                   
+I, [19-07-18 11:02:35#91599]  INFO -- : post_count Count                    0                   
+I, [19-07-18 11:02:35#91599]  INFO -- : post_count Updated                  0                   
+I, [19-07-18 11:04:01#92052]  INFO -- : Active User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-18 11:04:01#92052]  INFO -- : David_Kirk    2019-07-18     2019-07-18       275          233400      19336                       
+I, [19-07-18 11:04:01#92052]  INFO -- : Discourse Men                                           
+I, [19-07-18 11:04:01#92052]  INFO -- : Processed Users                     1                   
+I, [19-07-18 11:04:01#92052]  INFO -- : Skipped Users                       0                   
+I, [19-07-18 11:04:01#92052]  INFO -- : Messages Sent                       0                   
+I, [19-07-18 11:04:01#92052]  INFO -- : Activity                                                
+I, [19-07-18 11:04:01#92052]  INFO -- : User Activity Groupping             1                   
+I, [19-07-18 11:04:01#92052]  INFO -- : time_read                           233400              
+I, [19-07-18 11:04:01#92052]  INFO -- : time_read Count                     1                   
+I, [19-07-18 11:04:01#92052]  INFO -- : Active User                         1                   
+I, [19-07-18 11:04:47#92492]  INFO -- : Active User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-18 11:04:47#92492]  INFO -- : David_Kirk    2019-07-18     2019-07-18       275          233400      19336                       
+I, [19-07-18 11:04:47#92492]  INFO -- : Discourse Men                                           
+I, [19-07-18 11:04:47#92492]  INFO -- : Processed Users                     1                   
+I, [19-07-18 11:04:47#92492]  INFO -- : Skipped Users                       0                   
+I, [19-07-18 11:04:47#92492]  INFO -- : Messages Sent                       0                   
+I, [19-07-18 11:04:47#92492]  INFO -- : Activity Groupping                                      
+I, [19-07-18 11:04:47#92492]  INFO -- : User Activity Groupping             1                   
+I, [19-07-18 11:04:47#92492]  INFO -- : time_read                           233400              
+I, [19-07-18 11:04:47#92492]  INFO -- : time_read Count                     1                   
+I, [19-07-18 11:04:47#92492]  INFO -- : Active User                         1                   
+I, [19-07-18 11:05:44#92959]  INFO -- : Active User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-18 11:05:44#92959]  INFO -- : David_Kirk    2019-07-18     2019-07-18       275          233400      19336                       
+W, [19-07-18 11:05:45#92959]  WARN -- : OK
+I, [19-07-18 11:08:26#93471]  INFO -- : Active User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-18 11:08:26#93471]  INFO -- : David_Kirk    2019-07-18     2019-07-18       275          233400      19336                       
+W, [19-07-18 11:08:27#93471]  WARN -- : OK
+W, [19-07-18 11:08:28#93471]  WARN -- : User Added to : z_ActiveUsers
+I, [19-07-18 11:08:28#93471]  INFO -- : Discourse Men                                           
+I, [19-07-18 11:08:28#93471]  INFO -- : Processed Users                     1                   
+I, [19-07-18 11:08:28#93471]  INFO -- : Skipped Users                       0                   
+I, [19-07-18 11:08:28#93471]  INFO -- : Messages Sent                       0                   
+I, [19-07-18 11:08:28#93471]  INFO -- : Activity Groupping                                      
+I, [19-07-18 11:08:28#93471]  INFO -- : User Activity Groupping             1                   
+I, [19-07-18 11:08:28#93471]  INFO -- : User Group Updated                  1                   
+I, [19-07-18 11:08:28#93471]  INFO -- : time_read                           233400              
+I, [19-07-18 11:08:28#93471]  INFO -- : time_read Count                     1                   
+I, [19-07-18 11:08:28#93471]  INFO -- : Active User                         1                   
