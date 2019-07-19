@@ -8362,3 +8362,836 @@ I, [19-07-18 18:17:45#18127]  INFO -- : Email User Count                    1
 I, [19-07-18 18:17:45#18127]  INFO -- : Inactive User Count                 0                   
 I, [19-07-18 18:17:45#18127]  INFO -- : User Group Updated                  1                   
 I, [19-07-18 18:17:45#18127]  INFO -- : User Removed from Group             1                   
+I, [19-07-19 08:49:48#32513]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-07-19 08:57:41#32513]  WARN -- : TooManyRequests: Sleeping for 30 seconds ....
+W, [19-07-19 08:58:13#32513]  WARN -- : TooManyRequests: Sleeping for 20 seconds ....
+I, [19-07-19 09:04:24#32513]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-07-19 09:04:24#32513]  INFO -- : Mahan_Harirsaz     LaunchpadVI          LaunchpadVI            1        NOT Watching                  
+W, [19-07-19 09:04:25#32513]  WARN -- : {"success"=>"OK"}
+W, [19-07-19 09:04:27#32513]  WARN -- : Updated Category: LaunchpadVI    Notification Level: 3
+I, [19-07-19 09:12:07#32513]  INFO -- : Pass 1 complete for 208 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-19 09:38:35#32513]  INFO -- : Pass 2 complete for 208 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-19 10:05:03#32513]  INFO -- : Pass 3 complete for 208 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-19 10:31:29#32513]  INFO -- : Pass 4 complete for 208 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-19 11:03:04#35027]  INFO -- : Discourse Men                                           
+I, [19-07-19 11:03:04#35027]  INFO -- : Processed Users                     1                   
+I, [19-07-19 11:03:04#35027]  INFO -- : Skipped Users                       0                   
+I, [19-07-19 11:03:04#35027]  INFO -- : Messages Sent                       0                   
+I, [19-07-19 11:03:04#35027]  INFO -- : Activity Groupping                                      
+I, [19-07-19 11:03:04#35027]  INFO -- : User Activity Groupping             1                   
+I, [19-07-19 11:03:04#35027]  INFO -- : time_read                           1089                
+I, [19-07-19 11:03:04#35027]  INFO -- : time_read Count                     1                   
+I, [19-07-19 11:03:04#35027]  INFO -- : Active User Count                   0                   
+I, [19-07-19 11:03:04#35027]  INFO -- : Average User Count                  0                   
+I, [19-07-19 11:03:04#35027]  INFO -- : Email User Count                    0                   
+I, [19-07-19 11:03:04#35027]  INFO -- : Inactive User Count                 0                   
+I, [19-07-19 11:03:04#35027]  INFO -- : User Group Updated                  0                   
+I, [19-07-19 11:03:04#35027]  INFO -- : User Removed from Group             0                   
+I, [19-07-19 11:03:46#35896]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:03:46#35896]  INFO -- : Andrew_M_Webster 2019-04-28     2019-04-28       29           8563        0                        4                 
+W, [19-07-19 11:03:47#35896]  WARN -- : OK
+W, [19-07-19 11:03:49#35896]  WARN -- : Andrew_M_Webster added to z_Activity_Active
+I, [19-07-19 11:03:52#35896]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:03:52#35896]  INFO -- : Andrew_Webster 2019-07-12     2019-04-13       56           21148       559                      6                 
+W, [19-07-19 11:03:53#35896]  WARN -- : OK
+W, [19-07-19 11:03:54#35896]  WARN -- : Andrew_Webster added to z_Activity_Active
+I, [19-07-19 11:04:01#35896]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:04:01#35896]  INFO -- : Antonio_Martinez 2019-07-15     2019-07-01       21           7376        692                      5                 
+W, [19-07-19 11:04:02#35896]  WARN -- : OK
+W, [19-07-19 11:04:04#35896]  WARN -- : Antonio_Martinez added to z_Activity_Active
+I, [19-07-19 11:04:07#35896]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:04:07#35896]  INFO -- : Art_Muir       2019-07-19     2019-07-19       34           20314       1850                     9                 
+W, [19-07-19 11:04:08#35896]  WARN -- : OK
+W, [19-07-19 11:04:09#35896]  WARN -- : Art_Muir added to z_Activity_Active
+I, [19-07-19 11:04:20#35896]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:04:20#35896]  INFO -- : Bill_Herndon   2019-07-19     2019-07-16       23           14652       3054                     10                
+W, [19-07-19 11:04:21#35896]  WARN -- : OK
+W, [19-07-19 11:04:22#35896]  WARN -- : Bill_Herndon added to z_Activity_Active
+I, [19-07-19 11:05:01#36341]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:05:01#36341]  INFO -- : Andrew_M_Webster 2019-04-28     2019-04-28       29           8563        0                        4                 
+I, [19-07-19 11:05:05#36341]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:05:05#36341]  INFO -- : Andrew_Webster 2019-07-12     2019-04-13       56           21148       559                      6                 
+I, [19-07-19 11:05:12#36341]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:05:12#36341]  INFO -- : Antonio_Martinez 2019-07-15     2019-07-01       21           7376        692                      5                 
+I, [19-07-19 11:05:15#36341]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:05:15#36341]  INFO -- : Art_Muir       2019-07-19     2019-07-19       34           20314       1850                     9                 
+I, [19-07-19 11:05:25#36341]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:05:25#36341]  INFO -- : Bill_Herndon   2019-07-19     2019-07-16       23           14652       3054                     10                
+I, [19-07-19 11:05:29#36341]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:05:29#36341]  INFO -- : Bill_Sprague   2019-07-15                      0            4481        2165                                       
+I, [19-07-19 11:05:49#36341]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:05:49#36341]  INFO -- : Brad_Peppard   2019-07-09     2019-07-18       31           12460       647                      6                 
+I, [19-07-19 11:06:02#36341]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:06:02#36341]  INFO -- : Bruce_Scheer   2019-03-13     2019-03-30       5            5762        0                        19                
+I, [19-07-19 11:06:09#36341]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:06:09#36341]  INFO -- : Charlie_Bedard 2019-07-16     2019-07-17       78           12769       1909                     2                 
+I, [19-07-19 11:06:13#36341]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:06:13#36341]  INFO -- : Charlie_Ohanlon 2019-07-19     2019-07-19       126          30847       1957                     4                 
+I, [19-07-19 11:06:19#36341]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:06:19#36341]  INFO -- : Chris_Reed     2019-07-19     2019-07-19       45           13377       2351                     4                 
+I, [19-07-19 11:06:33#36341]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:06:33#36341]  INFO -- : Clark_Zhang    2019-07-01     2019-01-10       20           5863        41                       4                 
+I, [19-07-19 11:06:43#36341]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:06:43#36341]  INFO -- : Curt_Haynes    2019-06-08     2018-05-02       17           3750        0                        3                 
+I, [19-07-19 11:06:47#36341]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:06:47#36341]  INFO -- : Curt_Weil      2019-07-18     2019-07-04       122          11970       1203                     1                 
+I, [19-07-19 11:06:50#36341]  INFO -- : Average User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:06:50#36341]  INFO -- : Dainuri        2019-06-03     2019-04-20       8            14454       481                      30                
+I, [19-07-19 11:07:04#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:07:04#36804]  INFO -- : Andrew_M_Webster        2019-04-28     2019-04-28       29           8563        0                        4                 
+I, [19-07-19 11:07:07#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:07:07#36804]  INFO -- : Andrew_Webster          2019-07-12     2019-04-13       56           21148       559                      6                 
+I, [19-07-19 11:07:14#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:07:14#36804]  INFO -- : Antonio_Martinez        2019-07-15     2019-07-01       21           7376        692                      5                 
+I, [19-07-19 11:07:18#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:07:18#36804]  INFO -- : Art_Muir                2019-07-19     2019-07-19       34           20314       1850                     9                 
+I, [19-07-19 11:07:28#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:07:28#36804]  INFO -- : Bill_Herndon            2019-07-19     2019-07-16       23           14652       3054                     10                
+I, [19-07-19 11:07:31#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:07:31#36804]  INFO -- : Bill_Sprague            2019-07-15                      0            4481        2165                                       
+I, [19-07-19 11:07:52#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:07:52#36804]  INFO -- : Brad_Peppard            2019-07-09     2019-07-18       31           12460       647                      6                 
+I, [19-07-19 11:08:05#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:08:05#36804]  INFO -- : Bruce_Scheer            2019-03-13     2019-03-30       5            5762        0                        19                
+I, [19-07-19 11:08:12#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:08:12#36804]  INFO -- : Charlie_Bedard          2019-07-16     2019-07-17       78           12769       1909                     2                 
+I, [19-07-19 11:08:15#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:08:15#36804]  INFO -- : Charlie_Ohanlon         2019-07-19     2019-07-19       126          30847       1957                     4                 
+I, [19-07-19 11:08:22#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:08:22#36804]  INFO -- : Chris_Reed              2019-07-19     2019-07-19       45           13377       2351                     4                 
+I, [19-07-19 11:08:36#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:08:36#36804]  INFO -- : Clark_Zhang             2019-07-01     2019-01-10       20           5863        41                       4                 
+I, [19-07-19 11:08:46#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:08:46#36804]  INFO -- : Curt_Haynes             2019-06-08     2018-05-02       17           3750        0                        3                 
+I, [19-07-19 11:08:49#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:08:49#36804]  INFO -- : Curt_Weil               2019-07-18     2019-07-04       122          11970       1203                     1                 
+I, [19-07-19 11:08:53#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:08:53#36804]  INFO -- : Dainuri                 2019-06-03     2019-04-20       8            14454       481                      30                
+I, [19-07-19 11:08:59#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:08:59#36804]  INFO -- : Dave_Lloyd              2019-07-13     2019-07-09       40           21780       2416                     9                 
+I, [19-07-19 11:09:06#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:09:06#36804]  INFO -- : Dave_Mussoff            2019-07-02     2019-06-11       22           15400       747                      11                
+I, [19-07-19 11:09:30#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:09:30#36804]  INFO -- : David_Montagna          2019-07-14     2019-07-09       10           8286        181                      13                
+I, [19-07-19 11:09:47#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:09:47#36804]  INFO -- : Doug_Greig              2019-06-22     2019-07-18       32           10707       586                      5                 
+I, [19-07-19 11:10:04#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:10:04#36804]  INFO -- : Flint_Thorne            2019-07-06     2019-06-28       24           4572        496                      3                 
+I, [19-07-19 11:10:07#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:10:07#36804]  INFO -- : Francis_daCosta         2019-07-16     2018-12-14       5            14025       1053                     46                
+I, [19-07-19 11:10:18#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:10:18#36804]  INFO -- : Gary_Kraemer            2019-06-19     2019-06-09       1            1258        851                      20                
+I, [19-07-19 11:10:28#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:10:28#36804]  INFO -- : Gene_Sussli             2018-12-14     2019-02-09       28           13261       0                        7                 
+I, [19-07-19 11:10:58#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:10:58#36804]  INFO -- : James_Fitzgerald        2019-06-08     2019-04-20       0            34469       182                                        
+I, [19-07-19 11:11:22#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:11:22#36804]  INFO -- : Jeff_Klay               2019-07-01     2019-06-04       7            3722        0                        8                 
+I, [19-07-19 11:11:26#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:11:26#36804]  INFO -- : Jerry_Raitzer           2019-06-05     2019-05-27       4            5744        405                      23                
+I, [19-07-19 11:11:40#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:11:40#36804]  INFO -- : Jim_Knapp               2019-07-02     2019-07-18       184          5250        1213                     0                 
+I, [19-07-19 11:11:43#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:11:43#36804]  INFO -- : Jim_Leney               2019-02-16     2019-04-26       26           6219        0                        3                 
+I, [19-07-19 11:11:50#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:11:50#36804]  INFO -- : John_Bodeau             2019-06-25     2019-06-24       41           3881        264                      1                 
+I, [19-07-19 11:11:53#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:11:53#36804]  INFO -- : John_Butler             2019-07-17     2019-07-18       153          6384        197                      0                 
+I, [19-07-19 11:11:56#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:11:56#36804]  INFO -- : John_Doodokyan          2019-07-13     2019-02-04       0            2268        1042                                       
+I, [19-07-19 11:12:10#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:12:10#36804]  INFO -- : John_Nadler             2019-05-15     2019-05-15       71           25578       0                        6                 
+I, [19-07-19 11:12:20#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:12:20#36804]  INFO -- : Joseph_Kuo              2019-07-17     2019-06-30       6            5916        2122                     16                
+I, [19-07-19 11:12:24#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:12:24#36804]  INFO -- : Juergen_Weltz           2019-06-20     2018-12-05       5            5382        0                        17                
+I, [19-07-19 11:12:27#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:12:27#36804]  INFO -- : Keerti_Narayan          2019-06-21     2019-06-21       11           5354        1985                     8                 
+I, [19-07-19 11:12:51#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:12:51#36804]  INFO -- : Lars_Rider              2018-01-05     2019-07-13       170          7014        0                        0                 
+I, [19-07-19 11:13:05#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:13:05#36804]  INFO -- : Marco_Milletti          2019-06-13     2018-10-11       0            13121       381                                        
+I, [19-07-19 11:13:12#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:13:12#36804]  INFO -- : Mark_Reinheimer         2019-05-29     2019-05-31       53           32914       68                       10                
+I, [19-07-19 11:13:18#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:13:18#36804]  INFO -- : Marton_Toth             2019-06-27     2019-06-27       4            1030        827                      4                 
+I, [19-07-19 11:13:32#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:13:32#36804]  INFO -- : Michael_Kahn            2019-07-19     2019-07-08       30           20553       1546                     11                
+I, [19-07-19 11:13:39#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:13:39#36804]  INFO -- : Michael_Skowronek       2019-07-14     2019-06-09       11           19367       2873                     29                
+I, [19-07-19 11:13:42#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:13:42#36804]  INFO -- : Michael_Wilson          2019-05-29     2019-04-27       29           12441       21                       7                 
+I, [19-07-19 11:13:52#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:13:52#36804]  INFO -- : Mike_Ehlers             2019-07-19     2019-07-17       13           14022       1324                     17                
+I, [19-07-19 11:14:09#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:14:09#36804]  INFO -- : Mitch_Slomiak           2019-07-18     2019-07-14       158          6018        633                      0                 
+I, [19-07-19 11:14:19#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:14:19#36804]  INFO -- : Patrick_Morin           2019-07-13     2018-06-21       1            4283        60                       71                
+I, [19-07-19 11:14:26#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:14:26#36804]  INFO -- : Pete_Rabbitt            2019-07-19     2019-07-19       11           9526        1417                     14                
+I, [19-07-19 11:14:33#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:14:33#36804]  INFO -- : Peter_Montana           2019-06-28     2018-08-18       19           6150        0                        5                 
+I, [19-07-19 11:14:36#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:14:36#36804]  INFO -- : Philip_Brouwer          2019-07-19     2019-07-17       0            2513        2513                                       
+I, [19-07-19 11:14:39#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:14:39#36804]  INFO -- : Randy_Horton            2019-07-14     2019-07-17       315          20583       1802                     1                 
+I, [19-07-19 11:14:43#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:14:43#36804]  INFO -- : Ravi_Narra              2018-01-09     2017-12-31       11           7130        0                        10                
+I, [19-07-19 11:14:56#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:14:56#36804]  INFO -- : Robbie_Bow              2019-07-17     2019-07-17       45           31459       1426                     11                
+I, [19-07-19 11:15:10#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:15:10#36804]  INFO -- : Russ_Towne              2019-07-11     2019-07-15       159          17168       3440                     1                 
+I, [19-07-19 11:15:23#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:15:23#36804]  INFO -- : Sanjeev_Sanghera        2019-07-18     2019-05-01       20           30240       1523                     25                
+I, [19-07-19 11:15:27#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:15:27#36804]  INFO -- : Save_Torquato           2019-07-01     2019-07-15       14           2330        1565                     2                 
+I, [19-07-19 11:15:37#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:15:37#36804]  INFO -- : S_James_Biggs           2019-07-14     2019-07-15       58           14938       422                      4                 
+I, [19-07-19 11:15:40#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:15:40#36804]  INFO -- : Sridhar_Ramanathan      2019-07-19     2019-07-19       38           14482       1007                     6                 
+I, [19-07-19 11:15:47#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:15:47#36804]  INFO -- : Steve_Cross             2019-07-19     2019-07-18       77           6277        707                      1                 
+I, [19-07-19 11:15:50#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:15:50#36804]  INFO -- : Steve_Fitzsimons        2019-07-01     2019-07-19       181          3859        20                       0                 
+I, [19-07-19 11:16:07#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:16:07#36804]  INFO -- : Tom_Feasby              2019-07-04     2019-07-16       198          27744       2381                     2                 
+I, [19-07-19 11:16:11#36804]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:16:11#36804]  INFO -- : Tony_Christopher        2019-07-17     2019-05-30       44           27130       646                      10                
+I, [19-07-19 11:16:21#36804]  INFO -- : Discourse Men                                           
+I, [19-07-19 11:16:21#36804]  INFO -- : Processed Users                     167                 
+I, [19-07-19 11:16:21#36804]  INFO -- : Skipped Users                       0                   
+I, [19-07-19 11:16:21#36804]  INFO -- : Messages Sent                       0                   
+I, [19-07-19 11:16:21#36804]  INFO -- : Activity Groupping                                      
+I, [19-07-19 11:16:21#36804]  INFO -- : User Activity Groupping             167                 
+I, [19-07-19 11:16:21#36804]  INFO -- : time_read                           9314989             
+I, [19-07-19 11:16:21#36804]  INFO -- : time_read Count                     167                 
+I, [19-07-19 11:16:21#36804]  INFO -- : Active User Count                   0                   
+I, [19-07-19 11:16:21#36804]  INFO -- : Average User Count                  60                  
+I, [19-07-19 11:16:21#36804]  INFO -- : Email User Count                    0                   
+I, [19-07-19 11:16:21#36804]  INFO -- : Inactive User Count                 0                   
+I, [19-07-19 11:16:21#36804]  INFO -- : User Group Updated                  0                   
+I, [19-07-19 11:16:21#36804]  INFO -- : User Removed from Group             0                   
+I, [19-07-19 11:29:33#38493]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:29:33#38493]  INFO -- : Andrew_M_Webster        2019-04-28     2019-04-28       29           8563        0                        4                 
+I, [19-07-19 11:29:37#38493]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:29:37#38493]  INFO -- : Andrew_Webster          2019-07-12     2019-04-13       56           21148       559                      6                 
+I, [19-07-19 11:29:44#38493]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:29:44#38493]  INFO -- : Antonio_Martinez        2019-07-15     2019-07-01       21           7376        692                      5                 
+I, [19-07-19 11:29:47#38493]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:29:47#38493]  INFO -- : Art_Muir                2019-07-19     2019-07-19       34           20314       1850                     9                 
+I, [19-07-19 11:29:58#38493]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:29:58#38493]  INFO -- : Bill_Herndon            2019-07-19     2019-07-16       23           14652       3054                     10                
+I, [19-07-19 11:30:22#38493]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:30:22#38493]  INFO -- : Brad_Peppard            2019-07-09     2019-07-18       31           12460       647                      6                 
+I, [19-07-19 11:30:39#38980]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:30:39#38980]  INFO -- : Andrew_M_Webster        2019-04-28     2019-04-28       29           8563        0                        4                 
+I, [19-07-19 11:30:42#38980]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:30:42#38980]  INFO -- : Andrew_Webster          2019-07-12     2019-04-13       56           21148       559                      6                 
+I, [19-07-19 11:30:49#38980]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:30:49#38980]  INFO -- : Antonio_Martinez        2019-07-15     2019-07-01       21           7376        692                      5                 
+I, [19-07-19 11:33:11#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:33:11#39988]  INFO -- : Andrew_M_Webster        2019-04-28     2019-04-28       29           8563        0                        4                 
+I, [19-07-19 11:33:14#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:33:14#39988]  INFO -- : Andrew_Webster          2019-07-12     2019-04-13       56           21148       559                      6                 
+I, [19-07-19 11:33:21#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:33:21#39988]  INFO -- : Antonio_Martinez        2019-07-15     2019-07-01       21           7376        692                      5                 
+I, [19-07-19 11:33:24#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:33:24#39988]  INFO -- : Art_Muir                2019-07-19     2019-07-19       34           20314       1850                     9                 
+I, [19-07-19 11:33:35#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:33:35#39988]  INFO -- : Bill_Herndon            2019-07-19     2019-07-16       23           14652       3054                     10                
+I, [19-07-19 11:33:59#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:33:59#39988]  INFO -- : Brad_Peppard            2019-07-09     2019-07-18       31           12460       647                      6                 
+I, [19-07-19 11:34:13#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:34:13#39988]  INFO -- : Bruce_Scheer            2019-03-13     2019-03-30       5            5762        0                        19                
+I, [19-07-19 11:34:20#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:34:20#39988]  INFO -- : Charlie_Bedard          2019-07-16     2019-07-17       78           12769       1909                     2                 
+I, [19-07-19 11:34:24#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:34:24#39988]  INFO -- : Charlie_Ohanlon         2019-07-19     2019-07-19       126          30847       1957                     4                 
+I, [19-07-19 11:34:30#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:34:30#39988]  INFO -- : Chris_Reed              2019-07-19     2019-07-19       45           13377       2351                     4                 
+I, [19-07-19 11:34:44#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:34:44#39988]  INFO -- : Clark_Zhang             2019-07-01     2019-01-10       20           5863        41                       4                 
+I, [19-07-19 11:34:54#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:34:54#39988]  INFO -- : Curt_Haynes             2019-06-08     2018-05-02       17           3750        0                        3                 
+I, [19-07-19 11:34:58#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:34:58#39988]  INFO -- : Curt_Weil               2019-07-18     2019-07-04       122          11970       1203                     1                 
+I, [19-07-19 11:35:01#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:35:01#39988]  INFO -- : Dainuri                 2019-06-03     2019-04-20       8            14454       481                      30                
+I, [19-07-19 11:35:08#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:35:08#39988]  INFO -- : Dave_Lloyd              2019-07-13     2019-07-09       40           21780       2416                     9                 
+I, [19-07-19 11:35:15#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:35:15#39988]  INFO -- : Dave_Mussoff            2019-07-02     2019-06-11       22           15400       747                      11                
+I, [19-07-19 11:35:38#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:35:38#39988]  INFO -- : David_Montagna          2019-07-14     2019-07-09       10           8286        181                      13                
+I, [19-07-19 11:35:55#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:35:55#39988]  INFO -- : Doug_Greig              2019-06-22     2019-07-18       32           10707       586                      5                 
+I, [19-07-19 11:36:12#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:36:12#39988]  INFO -- : Flint_Thorne            2019-07-06     2019-06-28       24           4572        496                      3                 
+I, [19-07-19 11:36:16#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:36:16#39988]  INFO -- : Francis_daCosta         2019-07-16     2018-12-14       5            14025       1053                     46                
+I, [19-07-19 11:36:26#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:36:26#39988]  INFO -- : Gary_Kraemer            2019-06-19     2019-06-09       1            1258        851                      20                
+I, [19-07-19 11:36:36#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:36:36#39988]  INFO -- : Gene_Sussli             2018-12-14     2019-02-09       28           13261       0                        7                 
+I, [19-07-19 11:37:31#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:37:31#39988]  INFO -- : Jeff_Klay               2019-07-01     2019-06-04       7            3722        0                        8                 
+I, [19-07-19 11:37:34#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:37:34#39988]  INFO -- : Jerry_Raitzer           2019-06-05     2019-05-27       4            5744        405                      23                
+I, [19-07-19 11:37:48#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:37:48#39988]  INFO -- : Jim_Knapp               2019-07-02     2019-07-18       184          5250        1213                     0                 
+I, [19-07-19 11:37:51#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:37:51#39988]  INFO -- : Jim_Leney               2019-02-16     2019-04-26       26           6219        0                        3                 
+I, [19-07-19 11:37:58#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:37:58#39988]  INFO -- : John_Bodeau             2019-06-25     2019-06-24       41           3881        264                      1                 
+I, [19-07-19 11:38:01#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:38:01#39988]  INFO -- : John_Butler             2019-07-17     2019-07-18       153          6384        197                      0                 
+I, [19-07-19 11:38:19#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:38:19#39988]  INFO -- : John_Nadler             2019-05-15     2019-05-15       71           25578       0                        6                 
+I, [19-07-19 11:38:29#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:38:29#39988]  INFO -- : Joseph_Kuo              2019-07-17     2019-06-30       6            5916        2122                     16                
+I, [19-07-19 11:38:32#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:38:32#39988]  INFO -- : Juergen_Weltz           2019-06-20     2018-12-05       5            5382        0                        17                
+I, [19-07-19 11:38:36#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:38:36#39988]  INFO -- : Keerti_Narayan          2019-06-21     2019-06-21       11           5354        1985                     8                 
+I, [19-07-19 11:39:00#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:39:00#39988]  INFO -- : Lars_Rider              2018-01-05     2019-07-13       170          7014        0                        0                 
+I, [19-07-19 11:39:21#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:39:21#39988]  INFO -- : Mark_Reinheimer         2019-05-29     2019-05-31       53           32914       68                       10                
+I, [19-07-19 11:39:28#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:39:28#39988]  INFO -- : Marton_Toth             2019-06-27     2019-06-27       4            1030        827                      4                 
+I, [19-07-19 11:39:41#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:39:41#39988]  INFO -- : Michael_Kahn            2019-07-19     2019-07-08       30           20553       1546                     11                
+I, [19-07-19 11:39:48#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:39:48#39988]  INFO -- : Michael_Skowronek       2019-07-14     2019-06-09       11           19367       2873                     29                
+I, [19-07-19 11:39:51#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:39:51#39988]  INFO -- : Michael_Wilson          2019-05-29     2019-04-27       29           12441       21                       7                 
+I, [19-07-19 11:40:02#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:40:02#39988]  INFO -- : Mike_Ehlers             2019-07-19     2019-07-17       13           14022       1324                     17                
+I, [19-07-19 11:40:19#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:40:19#39988]  INFO -- : Mitch_Slomiak           2019-07-18     2019-07-14       158          6018        633                      0                 
+I, [19-07-19 11:40:29#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:40:29#39988]  INFO -- : Patrick_Morin           2019-07-13     2018-06-21       1            4283        60                       71                
+I, [19-07-19 11:40:36#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:40:36#39988]  INFO -- : Pete_Rabbitt            2019-07-19     2019-07-19       11           9526        1417                     14                
+I, [19-07-19 11:40:43#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:40:43#39988]  INFO -- : Peter_Montana           2019-06-28     2018-08-18       19           6150        0                        5                 
+I, [19-07-19 11:40:49#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:40:49#39988]  INFO -- : Randy_Horton            2019-07-14     2019-07-17       315          20583       1802                     1                 
+I, [19-07-19 11:40:53#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:40:53#39988]  INFO -- : Ravi_Narra              2018-01-09     2017-12-31       11           7130        0                        10                
+I, [19-07-19 11:41:06#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:41:06#39988]  INFO -- : Robbie_Bow              2019-07-17     2019-07-17       45           31459       1426                     11                
+I, [19-07-19 11:41:20#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:41:20#39988]  INFO -- : Russ_Towne              2019-07-11     2019-07-15       159          17168       3440                     1                 
+I, [19-07-19 11:41:34#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:41:34#39988]  INFO -- : Sanjeev_Sanghera        2019-07-18     2019-05-01       20           30240       1523                     25                
+I, [19-07-19 11:41:37#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:41:37#39988]  INFO -- : Save_Torquato           2019-07-01     2019-07-15       14           2330        1565                     2                 
+I, [19-07-19 11:41:47#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:41:47#39988]  INFO -- : S_James_Biggs           2019-07-14     2019-07-15       58           14938       422                      4                 
+I, [19-07-19 11:41:51#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:41:51#39988]  INFO -- : Sridhar_Ramanathan      2019-07-19     2019-07-19       38           14482       1007                     6                 
+I, [19-07-19 11:41:57#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:41:57#39988]  INFO -- : Steve_Cross             2019-07-19     2019-07-18       77           6277        707                      1                 
+I, [19-07-19 11:42:01#39988]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:42:01#39988]  INFO -- : Steve_Fitzsimons        2019-07-01     2019-07-19       181          3859        20                       0                 
+I, [19-07-19 11:42:21#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:42:21#40578]  INFO -- : Andrew_M_Webster        2019-04-28     2019-04-28       29           8563        0                        4                 
+I, [19-07-19 11:42:25#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:42:25#40578]  INFO -- : Andrew_Webster          2019-07-12     2019-04-13       56           21148       559                      6                 
+I, [19-07-19 11:42:32#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:42:32#40578]  INFO -- : Antonio_Martinez        2019-07-15     2019-07-01       21           7376        692                      5                 
+I, [19-07-19 11:42:35#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:42:35#40578]  INFO -- : Art_Muir                2019-07-19     2019-07-19       34           20314       1850                     9                 
+I, [19-07-19 11:42:45#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:42:45#40578]  INFO -- : Bill_Herndon            2019-07-19     2019-07-16       23           14652       3054                     10                
+I, [19-07-19 11:42:49#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:42:49#40578]  INFO -- : Bill_Sprague            2019-07-15                      0            4481        2165                                       
+I, [19-07-19 11:43:09#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:43:09#40578]  INFO -- : Brad_Peppard            2019-07-09     2019-07-18       31           12460       647                      6                 
+I, [19-07-19 11:43:23#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:43:23#40578]  INFO -- : Bruce_Scheer            2019-03-13     2019-03-30       5            5762        0                        19                
+I, [19-07-19 11:43:33#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:43:33#40578]  INFO -- : Charlie_Ohanlon         2019-07-19     2019-07-19       126          30847       1957                     4                 
+I, [19-07-19 11:43:39#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:43:39#40578]  INFO -- : Chris_Reed              2019-07-19     2019-07-19       45           13377       2351                     4                 
+I, [19-07-19 11:43:53#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:43:53#40578]  INFO -- : Clark_Zhang             2019-07-01     2019-01-10       20           5863        41                       4                 
+I, [19-07-19 11:44:03#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:44:03#40578]  INFO -- : Curt_Haynes             2019-06-08     2018-05-02       17           3750        0                        3                 
+I, [19-07-19 11:44:10#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:44:10#40578]  INFO -- : Dainuri                 2019-06-03     2019-04-20       8            14454       481                      30                
+I, [19-07-19 11:44:17#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:44:17#40578]  INFO -- : Dave_Lloyd              2019-07-13     2019-07-09       40           21780       2416                     9                 
+I, [19-07-19 11:44:24#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:44:24#40578]  INFO -- : Dave_Mussoff            2019-07-02     2019-06-11       22           15400       747                      11                
+I, [19-07-19 11:44:47#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:44:47#40578]  INFO -- : David_Montagna          2019-07-14     2019-07-09       10           8286        181                      13                
+I, [19-07-19 11:45:04#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:45:04#40578]  INFO -- : Doug_Greig              2019-06-22     2019-07-18       32           10707       586                      5                 
+I, [19-07-19 11:45:21#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:45:21#40578]  INFO -- : Flint_Thorne            2019-07-06     2019-06-28       24           4572        496                      3                 
+I, [19-07-19 11:45:25#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:45:25#40578]  INFO -- : Francis_daCosta         2019-07-16     2018-12-14       5            14025       1053                     46                
+I, [19-07-19 11:45:35#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:45:35#40578]  INFO -- : Gary_Kraemer            2019-06-19     2019-06-09       1            1258        851                      20                
+I, [19-07-19 11:45:45#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:45:45#40578]  INFO -- : Gene_Sussli             2018-12-14     2019-02-09       28           13261       0                        7                 
+I, [19-07-19 11:46:16#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:46:16#40578]  INFO -- : James_Fitzgerald        2019-06-08     2019-04-20       0            34469       182                                        
+I, [19-07-19 11:46:39#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:46:39#40578]  INFO -- : Jeff_Klay               2019-07-01     2019-06-04       7            3722        0                        8                 
+I, [19-07-19 11:46:42#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:46:42#40578]  INFO -- : Jerry_Raitzer           2019-06-05     2019-05-27       4            5744        405                      23                
+I, [19-07-19 11:46:59#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:46:59#40578]  INFO -- : Jim_Leney               2019-02-16     2019-04-26       26           6219        0                        3                 
+I, [19-07-19 11:47:13#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:47:13#40578]  INFO -- : John_Doodokyan          2019-07-13     2019-02-04       0            2268        1042                                       
+I, [19-07-19 11:47:27#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:47:27#40578]  INFO -- : John_Nadler             2019-05-15     2019-05-15       71           25578       0                        6                 
+I, [19-07-19 11:47:37#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:47:37#40578]  INFO -- : Joseph_Kuo              2019-07-17     2019-06-30       6            5916        2122                     16                
+I, [19-07-19 11:47:40#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:47:40#40578]  INFO -- : Juergen_Weltz           2019-06-20     2018-12-05       5            5382        0                        17                
+I, [19-07-19 11:47:44#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:47:44#40578]  INFO -- : Keerti_Narayan          2019-06-21     2019-06-21       11           5354        1985                     8                 
+I, [19-07-19 11:48:21#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:48:21#40578]  INFO -- : Marco_Milletti          2019-06-13     2018-10-11       0            13121       381                                        
+I, [19-07-19 11:48:28#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:48:28#40578]  INFO -- : Mark_Reinheimer         2019-05-29     2019-05-31       53           32914       68                       10                
+I, [19-07-19 11:48:34#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:48:34#40578]  INFO -- : Marton_Toth             2019-06-27     2019-06-27       4            1030        827                      4                 
+I, [19-07-19 11:48:48#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:48:48#40578]  INFO -- : Michael_Kahn            2019-07-19     2019-07-08       30           20553       1546                     11                
+I, [19-07-19 11:48:55#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:48:55#40578]  INFO -- : Michael_Skowronek       2019-07-14     2019-06-09       11           19367       2873                     29                
+I, [19-07-19 11:48:58#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:48:58#40578]  INFO -- : Michael_Wilson          2019-05-29     2019-04-27       29           12441       21                       7                 
+I, [19-07-19 11:49:08#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:49:08#40578]  INFO -- : Mike_Ehlers             2019-07-19     2019-07-17       13           14022       1324                     17                
+I, [19-07-19 11:49:36#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:49:36#40578]  INFO -- : Patrick_Morin           2019-07-13     2018-06-21       1            4283        60                       71                
+I, [19-07-19 11:49:43#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:49:43#40578]  INFO -- : Pete_Rabbitt            2019-07-19     2019-07-19       11           9526        1417                     14                
+I, [19-07-19 11:49:49#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:49:49#40578]  INFO -- : Peter_Montana           2019-06-28     2018-08-18       19           6150        0                        5                 
+I, [19-07-19 11:49:53#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:49:53#40578]  INFO -- : Philip_Brouwer          2019-07-19     2019-07-17       0            2513        2513                                       
+I, [19-07-19 11:50:00#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:50:00#40578]  INFO -- : Ravi_Narra              2018-01-09     2017-12-31       11           7130        0                        10                
+I, [19-07-19 11:50:14#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:50:14#40578]  INFO -- : Robbie_Bow              2019-07-17     2019-07-17       45           31459       1426                     11                
+I, [19-07-19 11:50:41#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:50:41#40578]  INFO -- : Sanjeev_Sanghera        2019-07-18     2019-05-01       20           30240       1523                     25                
+I, [19-07-19 11:50:54#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:50:54#40578]  INFO -- : S_James_Biggs           2019-07-14     2019-07-15       58           14938       422                      4                 
+I, [19-07-19 11:50:58#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:50:58#40578]  INFO -- : Sridhar_Ramanathan      2019-07-19     2019-07-19       38           14482       1007                     6                 
+I, [19-07-19 11:51:29#40578]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:51:29#40578]  INFO -- : Tony_Christopher        2019-07-17     2019-05-30       44           27130       646                      10                
+I, [19-07-19 11:51:39#40578]  INFO -- : Discourse Men                                           
+I, [19-07-19 11:51:39#40578]  INFO -- : Processed Users                     167                 
+I, [19-07-19 11:51:39#40578]  INFO -- : Skipped Users                       0                   
+I, [19-07-19 11:51:39#40578]  INFO -- : Messages Sent                       0                   
+I, [19-07-19 11:51:39#40578]  INFO -- : Activity Groupping                                      
+I, [19-07-19 11:51:39#40578]  INFO -- : User Activity Groupping             167                 
+I, [19-07-19 11:51:39#40578]  INFO -- : time_read                           9315526             
+I, [19-07-19 11:51:39#40578]  INFO -- : time_read Count                     167                 
+I, [19-07-19 11:51:39#40578]  INFO -- : Active User Count                   0                   
+I, [19-07-19 11:51:39#40578]  INFO -- : Average User Count                  47                  
+I, [19-07-19 11:51:39#40578]  INFO -- : Email User Count                    0                   
+I, [19-07-19 11:51:39#40578]  INFO -- : Inactive User Count                 0                   
+I, [19-07-19 11:51:39#40578]  INFO -- : User Group Updated                  0                   
+I, [19-07-19 11:51:39#40578]  INFO -- : User Removed from Group             0                   
+I, [19-07-19 11:56:58#41280]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-19 11:56:58#41280]  INFO -- : Al_Dorji                 2019-05-11     2019-05-11       0            31          0                           
+I, [19-07-19 11:57:01#41280]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-19 11:57:01#41280]  INFO -- : Alfonso_Benavides      2019-07-19     2019-07-17       194          249840      38717                       
+I, [19-07-19 11:57:05#41280]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:57:05#41280]  INFO -- : Andrew_M_Webster        2019-04-28     2019-04-28       29           8563        0                        4                 
+I, [19-07-19 11:57:08#41280]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:57:08#41280]  INFO -- : Andrew_Webster          2019-07-12     2019-04-13       56           21148       559                      6                 
+I, [19-07-19 11:57:12#41280]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-19 11:57:12#41280]  INFO -- : Anshu_Sanghi           2019-05-29     2019-05-22       72           46621       369                         
+I, [19-07-19 11:57:15#41280]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:57:15#41280]  INFO -- : Antonio_Martinez        2019-07-15     2019-07-01       21           7376        692                      5                 
+I, [19-07-19 11:57:19#41280]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:57:19#41280]  INFO -- : Art_Muir                2019-07-19     2019-07-19       34           20314       1850                     9                 
+I, [19-07-19 11:57:22#41280]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-19 11:57:22#41280]  INFO -- : Barry_Finkelstein      2019-07-17     2019-07-12       32           55092       7093                        
+I, [19-07-19 11:57:25#41280]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-19 11:57:25#41280]  INFO -- : Benjamin_Berman        2019-07-03     2019-05-28       46           37332       226                         
+I, [19-07-19 11:57:29#41280]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:57:29#41280]  INFO -- : Bill_Herndon            2019-07-19     2019-07-16       23           14652       3054                     10                
+I, [19-07-19 11:57:32#41280]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:57:32#41280]  INFO -- : Bill_Sprague            2019-07-15                      0            4481        2165                                       
+I, [19-07-19 11:57:35#41280]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-19 11:57:35#41280]  INFO -- : Bill_Zabor             2019-07-19     2019-07-17       112          101015      14536                       
+I, [19-07-19 11:57:39#41280]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-19 11:57:39#41280]  INFO -- : Bob_Richards          2019-04-24     2018-10-14       8            386         0                           
+I, [19-07-19 11:57:42#41280]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-19 11:57:42#41280]  INFO -- : Bob_Silver               2019-07-01     2019-07-02       5            935         21                          
+I, [19-07-19 11:57:46#41280]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-19 11:57:46#41280]  INFO -- : Bo_Zhou               2019-03-13     2019-01-18       6            2569        0                           
+I, [19-07-19 11:57:49#41280]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-19 11:57:49#41280]  INFO -- : Brad_Milliken         2019-05-20     2019-07-09       7            181         0                           
+I, [19-07-19 11:57:52#41280]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:57:52#41280]  INFO -- : Brad_Peppard            2019-07-09     2019-07-18       31           12460       647                      6                 
+I, [19-07-19 11:57:56#41280]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-19 11:57:56#41280]  INFO -- : Bran_Scott               2019-01-28                      0            0           0                           
+I, [19-07-19 11:57:59#41280]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-19 11:57:59#41280]  INFO -- : Brian_Haskin           2019-07-19     2019-06-19       48           50328       1908                        
+I, [19-07-19 11:58:03#41280]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-19 11:58:03#41280]  INFO -- : Brian_Ruthruff           2019-07-15     2019-02-13       3            451         0                           
+I, [19-07-19 11:58:06#41280]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:58:06#41280]  INFO -- : Bruce_Scheer            2019-03-13     2019-03-30       5            5762        0                        19                
+I, [19-07-19 11:58:09#41280]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-07-19 11:58:09#41280]  INFO -- : Butch_Dority             2018-08-13                      0            1196        0                           
+I, [19-07-19 11:58:18#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:58:18#41734]  INFO -- : Al_Dorji                 2019-05-11     2019-05-11       0            31          0                                          
+I, [19-07-19 11:58:21#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:58:21#41734]  INFO -- : Alfonso_Benavides      2019-07-19     2019-07-17       194          249840      38717                    21                
+I, [19-07-19 11:58:25#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:58:25#41734]  INFO -- : Andrew_M_Webster        2019-04-28     2019-04-28       29           8563        0                        4                 
+I, [19-07-19 11:58:28#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:58:28#41734]  INFO -- : Andrew_Webster          2019-07-12     2019-04-13       56           21148       559                      6                 
+I, [19-07-19 11:58:31#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:58:31#41734]  INFO -- : Anshu_Sanghi           2019-05-29     2019-05-22       72           46621       369                      10                
+I, [19-07-19 11:58:35#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:58:35#41734]  INFO -- : Antonio_Martinez        2019-07-15     2019-07-01       21           7376        692                      5                 
+I, [19-07-19 11:58:38#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:58:38#41734]  INFO -- : Art_Muir                2019-07-19     2019-07-19       34           20314       1850                     9                 
+I, [19-07-19 11:58:42#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:58:42#41734]  INFO -- : Barry_Finkelstein      2019-07-17     2019-07-12       32           55092       7093                     28                
+I, [19-07-19 11:58:45#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:58:45#41734]  INFO -- : Benjamin_Berman        2019-07-03     2019-05-28       46           37332       226                      13                
+I, [19-07-19 11:58:48#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:58:48#41734]  INFO -- : Bill_Herndon            2019-07-19     2019-07-16       23           14652       3054                     10                
+I, [19-07-19 11:58:52#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:58:52#41734]  INFO -- : Bill_Sprague            2019-07-15                      0            4481        2165                                       
+I, [19-07-19 11:58:55#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:58:55#41734]  INFO -- : Bill_Zabor             2019-07-19     2019-07-17       112          101015      14536                    15                
+I, [19-07-19 11:58:59#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:58:59#41734]  INFO -- : Bob_Richards          2019-04-24     2018-10-14       8            386         0                        0                 
+I, [19-07-19 11:59:02#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:59:02#41734]  INFO -- : Bob_Silver               2019-07-01     2019-07-02       5            935         21                       3                 
+I, [19-07-19 11:59:05#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:59:05#41734]  INFO -- : Bo_Zhou               2019-03-13     2019-01-18       6            2569        0                        7                 
+I, [19-07-19 11:59:09#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:59:09#41734]  INFO -- : Brad_Milliken         2019-05-20     2019-07-09       7            181         0                        0                 
+I, [19-07-19 11:59:12#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:59:12#41734]  INFO -- : Brad_Peppard            2019-07-09     2019-07-18       31           12460       647                      6                 
+I, [19-07-19 11:59:16#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:59:16#41734]  INFO -- : Bran_Scott               2019-01-28                      0            0           0                                          
+I, [19-07-19 11:59:19#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:59:19#41734]  INFO -- : Brian_Haskin           2019-07-19     2019-06-19       48           50328       1908                     17                
+I, [19-07-19 11:59:22#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:59:22#41734]  INFO -- : Brian_Ruthruff           2019-07-15     2019-02-13       3            451         0                        2                 
+I, [19-07-19 11:59:26#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:59:26#41734]  INFO -- : Bruce_Scheer            2019-03-13     2019-03-30       5            5762        0                        19                
+I, [19-07-19 11:59:29#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:59:29#41734]  INFO -- : Butch_Dority             2018-08-13                      0            1196        0                                          
+I, [19-07-19 11:59:33#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:59:33#41734]  INFO -- : Charlie_Bedard        2019-07-16     2019-07-17       78           12769       1909                     2                 
+I, [19-07-19 11:59:36#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:59:36#41734]  INFO -- : Charlie_Ohanlon         2019-07-19     2019-07-19       126          30847       1957                     4                 
+I, [19-07-19 11:59:39#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:59:39#41734]  INFO -- : Chris_Edgar              2019-02-11     2018-11-12       0            68          0                                          
+I, [19-07-19 11:59:43#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:59:43#41734]  INFO -- : Chris_Reed              2019-07-19     2019-07-19       45           13377       2351                     4                 
+I, [19-07-19 11:59:46#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:59:46#41734]  INFO -- : Chris_Steck            2019-07-19     2019-07-19       122          207898      10199                    28                
+I, [19-07-19 11:59:50#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:59:50#41734]  INFO -- : Chris_Sulek            2019-07-19     2019-07-18       161          349302      40198                    36                
+I, [19-07-19 11:59:53#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:59:53#41734]  INFO -- : Christian_Agardi      2017-08-18     2018-12-20       15           1736        0                        1                 
+I, [19-07-19 11:59:57#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 11:59:57#41734]  INFO -- : Clark_Zhang             2019-07-01     2019-01-10       20           5863        41                       4                 
+I, [19-07-19 12:00:00#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:00#41734]  INFO -- : Clay_Campbell          2019-07-18     2019-07-15       45           60389       2641                     22                
+I, [19-07-19 12:00:03#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:03#41734]  INFO -- : Cory_Harasha           2019-07-19     2019-07-18       25           6985        5259                     4                 
+I, [19-07-19 12:00:07#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:07#41734]  INFO -- : Curt_Haynes             2019-06-08     2018-05-02       17           3750        0                        3                 
+I, [19-07-19 12:00:10#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:10#41734]  INFO -- : Curt_Weil             2019-07-18     2019-07-04       122          11970       1203                     1                 
+I, [19-07-19 12:00:14#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:14#41734]  INFO -- : Dainuri                 2019-06-03     2019-04-20       8            14454       481                      30                
+I, [19-07-19 12:00:17#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:17#41734]  INFO -- : Dan_Ollendorff         2019-07-15     2019-07-15       23           43197       1222                     31                
+I, [19-07-19 12:00:20#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:20#41734]  INFO -- : Dave_Lloyd              2019-07-13     2019-07-09       40           21780       2416                     9                 
+I, [19-07-19 12:00:24#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:24#41734]  INFO -- : Dave_Mahal               2019-04-22                      0            303         0                                          
+I, [19-07-19 12:00:27#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:27#41734]  INFO -- : Dave_Mussoff            2019-07-02     2019-06-11       22           15400       747                      11                
+I, [19-07-19 12:00:30#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:30#41734]  INFO -- : Dave_Strigler          2019-07-15     2019-04-21       9            66546       2613                     123               
+I, [19-07-19 12:00:34#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:34#41734]  INFO -- : David_Ashby            2019-07-19     2019-07-19       114          60625       20283                    8                 
+I, [19-07-19 12:00:37#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:37#41734]  INFO -- : David_Coleman            2019-07-03     2019-06-05       1            997         536                      16                
+I, [19-07-19 12:00:41#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:41#41734]  INFO -- : David_Hohl             2019-07-18     2019-05-25       9            26301       3954                     48                
+I, [19-07-19 12:00:44#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:44#41734]  INFO -- : David_Kirk             2019-07-18     2019-07-18       275          233400      19336                    14                
+I, [19-07-19 12:00:47#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:47#41734]  INFO -- : David_Mock            2019-07-02     2019-05-13       9            3043        21                       5                 
+I, [19-07-19 12:00:51#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:51#41734]  INFO -- : David_Montagna          2019-07-14     2019-07-09       10           8286        181                      13                
+I, [19-07-19 12:00:54#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:54#41734]  INFO -- : Dennis_Adsit             2019-07-01     2019-07-01       0            713         0                                          
+I, [19-07-19 12:00:58#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:00:58#41734]  INFO -- : Dennis_Sorensen       2018-04-13     2019-04-08       7            1644        0                        3                 
+I, [19-07-19 12:01:01#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:01#41734]  INFO -- : Deven_Kalra              2018-10-31     2018-10-30       1            423         0                        7                 
+I, [19-07-19 12:01:04#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:04#41734]  INFO -- : Don_Morgan            2019-06-11     2019-07-03       6            730         213                      2                 
+I, [19-07-19 12:01:08#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:08#41734]  INFO -- : Doug_Greig              2019-06-22     2019-07-18       32           10707       586                      5                 
+I, [19-07-19 12:01:11#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:11#41734]  INFO -- : Eamon_Rooney             2019-03-19                      0            605         0                                          
+I, [19-07-19 12:01:14#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:14#41734]  INFO -- : Edmond_Cote            2019-07-17     2019-07-14       231          99496       5722                     7                 
+I, [19-07-19 12:01:18#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:18#41734]  INFO -- : EO_Rojas               2019-07-03     2019-06-20       135          102001      1061                     12                
+I, [19-07-19 12:01:21#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:21#41734]  INFO -- : Eric_Nitzberg            2019-07-05     2019-03-02       0            110         52                                         
+I, [19-07-19 12:01:25#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:25#41734]  INFO -- : Flint_Thorne            2019-07-06     2019-06-28       24           4572        496                      3                 
+I, [19-07-19 12:01:28#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:28#41734]  INFO -- : Francis_daCosta         2019-07-16     2018-12-14       5            14025       1053                     46                
+I, [19-07-19 12:01:31#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:31#41734]  INFO -- : Garry_Cheney          2019-07-04     2019-07-11       90           2061        350                      0                 
+I, [19-07-19 12:01:35#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:35#41734]  INFO -- : Gary_Koerzendorfer       2019-06-09     2019-07-12       2            481         481                      4                 
+I, [19-07-19 12:01:38#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:38#41734]  INFO -- : Gary_Kraemer            2019-06-19     2019-06-09       1            1258        851                      20                
+I, [19-07-19 12:01:42#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:42#41734]  INFO -- : Gary_Merrick           2019-07-19     2019-07-19       345          314042      33888                    15                
+I, [19-07-19 12:01:45#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:45#41734]  INFO -- : Gary_Plep                2019-06-29     2019-06-29       2            2063        678                      17                
+I, [19-07-19 12:01:48#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:48#41734]  INFO -- : Gene_Sussli             2018-12-14     2019-02-09       28           13261       0                        7                 
+I, [19-07-19 12:01:52#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:52#41734]  INFO -- : Geoff_Wright             2019-01-20     2019-01-13       3            760         0                        4                 
+I, [19-07-19 12:01:55#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:55#41734]  INFO -- : Graham_Howe              2018-09-24                      0            80          0                                          
+I, [19-07-19 12:01:58#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:01:58#41734]  INFO -- : Greg_Thayer              2019-03-15     2019-07-09       5            626         0                        2                 
+I, [19-07-19 12:02:02#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:02#41734]  INFO -- : Howard_Bailey            2019-01-18     2019-01-11       0            252         0                                          
+I, [19-07-19 12:02:05#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:05#41734]  INFO -- : How_Shaw                 2017-09-13     2019-02-08       0            0           0                                          
+I, [19-07-19 12:02:08#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:08#41734]  INFO -- : Ian_Wilkes             2019-07-19     2019-07-15       34           26105       8741                     12                
+I, [19-07-19 12:02:12#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:12#41734]  INFO -- : Jack_McInerney         2019-07-19     2019-07-19       206          308187      36223                    24                
+I, [19-07-19 12:02:15#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:15#41734]  INFO -- : Jack_Shannon             2018-02-18     2019-07-12       2            42          0                        0                 
+I, [19-07-19 12:02:19#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:19#41734]  INFO -- : James_Fitzgerald        2019-06-08     2019-04-20       0            34469       182                                        
+I, [19-07-19 12:02:22#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:22#41734]  INFO -- : James_Grubinskas       2019-07-19     2019-07-15       106          51328       20213                    8                 
+I, [19-07-19 12:02:25#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:25#41734]  INFO -- : James_McKeefery          2019-03-02                      0            625         0                                          
+I, [19-07-19 12:02:29#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:29#41734]  INFO -- : Janos_Keresztes          2019-03-23     2019-05-04       0            21          0                                          
+I, [19-07-19 12:02:32#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:32#41734]  INFO -- : Jay_Larrick           2019-07-03     2019-07-01       13           3587        0                        4                 
+I, [19-07-19 12:02:36#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:36#41734]  INFO -- : Jeff_Cintas            2019-04-11     2019-01-31       37           40372       0                        18                
+I, [19-07-19 12:02:39#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:39#41734]  INFO -- : Jeff_Colvin              2019-03-15     2019-04-08       5            1727        0                        5                 
+I, [19-07-19 12:02:42#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:42#41734]  INFO -- : Jeff_Klay               2019-07-01     2019-06-04       7            3722        0                        8                 
+I, [19-07-19 12:02:46#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:46#41734]  INFO -- : Jerry_Raitzer           2019-06-05     2019-05-27       4            5744        405                      23                
+I, [19-07-19 12:02:49#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:49#41734]  INFO -- : Jerry_Strebig          2019-07-16     2019-07-18       222          12944       4915                     0                 
+I, [19-07-19 12:02:52#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:52#41734]  INFO -- : Jim_Charley            2019-07-14     2019-07-14       339          168943      112                      8                 
+I, [19-07-19 12:02:56#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:56#41734]  INFO -- : Jim_Georgiou           2019-06-20     2019-04-22       89           93839       101                      17                
+I, [19-07-19 12:02:59#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:02:59#41734]  INFO -- : Jim_Knapp             2019-07-02     2019-07-18       184          5250        1213                     0                 
+I, [19-07-19 12:03:03#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:03:03#41734]  INFO -- : Jim_Leney               2019-02-16     2019-04-26       26           6219        0                        3                 
+I, [19-07-19 12:03:06#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:03:06#41734]  INFO -- : Joe_Sabolefski         2019-07-19     2019-07-19       201          319565      11794                    26                
+I, [19-07-19 12:03:09#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:03:09#41734]  INFO -- : John_Bodeau           2019-06-25     2019-06-24       41           3881        264                      1                 
+I, [19-07-19 12:03:13#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:03:13#41734]  INFO -- : John_Butler           2019-07-17     2019-07-18       153          6384        197                      0                 
+I, [19-07-19 12:03:16#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:03:16#41734]  INFO -- : John_Doodokyan          2019-07-13     2019-02-04       0            2268        1042                                       
+I, [19-07-19 12:03:20#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:03:20#41734]  INFO -- : John_Jeffs               2019-04-16                      0            325         0                                          
+I, [19-07-19 12:03:23#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:03:23#41734]  INFO -- : John_Lasersohn         2019-07-17     2019-07-17       174          36402       2613                     3                 
+I, [19-07-19 12:03:26#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:03:26#41734]  INFO -- : John_Mansperger        2019-07-19     2019-07-18       172          72457       6370                     7                 
+I, [19-07-19 12:03:30#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:03:30#41734]  INFO -- : John_Nadler             2019-05-15     2019-05-15       71           25578       0                        6                 
+I, [19-07-19 12:03:33#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:03:33#41734]  INFO -- : John_Oberstar          2019-07-19     2019-07-19       41           30291       9352                     12                
+I, [19-07-19 12:03:36#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:03:36#41734]  INFO -- : John_Piggott             2019-06-05     2016-07-22       1            607         355                      10                
+I, [19-07-19 12:03:40#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:03:40#41734]  INFO -- : Joseph_Kuo              2019-07-17     2019-06-30       6            5916        2122                     16                
+I, [19-07-19 12:03:43#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:03:43#41734]  INFO -- : Juergen_Weltz           2019-06-20     2018-12-05       5            5382        0                        17                
+I, [19-07-19 12:03:47#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:03:47#41734]  INFO -- : Keerti_Narayan          2019-06-21     2019-06-21       11           5354        1985                     8                 
+I, [19-07-19 12:03:50#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:03:50#41734]  INFO -- : Keith_Britany         2019-03-04     2019-06-17       16           2538        0                        2                 
+I, [19-07-19 12:03:53#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:03:53#41734]  INFO -- : Ken_Cahill             2019-07-18     2019-07-18       74           111463      2771                     25                
+I, [19-07-19 12:03:57#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:03:57#41734]  INFO -- : Ken_Krantz               2019-04-21     2018-10-19       0            1048        0                                          
+I, [19-07-19 12:04:00#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:00#41734]  INFO -- : Kim_Miller             2019-07-19     2019-07-19       1794         790491      66403                    7                 
+I, [19-07-19 12:04:04#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:04#41734]  INFO -- : Konrad_Thaler          2019-07-15     2019-07-15       90           45842       6289                     8                 
+I, [19-07-19 12:04:07#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:07#41734]  INFO -- : Krishna_Yetchina       2019-07-18     2019-06-27       116          155644      2443                     22                
+I, [19-07-19 12:04:11#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:11#41734]  INFO -- : Lars_Rider            2018-01-05     2019-07-13       170          7014        0                        0                 
+I, [19-07-19 12:04:14#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:14#41734]  INFO -- : Laurence_Kuhn          2019-07-15     2019-07-01       118          17524       5237                     2                 
+I, [19-07-19 12:04:18#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:18#41734]  INFO -- : Lee_Wheeler            2019-07-16     2019-07-19       97           58122       2522                     9                 
+I, [19-07-19 12:04:21#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:21#41734]  INFO -- : Madon_Snell              2019-06-04     2019-05-20       0            1416        41                                         
+I, [19-07-19 12:04:25#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:25#41734]  INFO -- : Marco_Milletti          2019-06-13     2018-10-11       0            13121       381                                        
+I, [19-07-19 12:04:28#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:28#41734]  INFO -- : Mark_Habberley           2019-06-04     2018-04-25       3            1021        0                        5                 
+I, [19-07-19 12:04:31#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:31#41734]  INFO -- : Mark_Reinheimer         2019-05-29     2019-05-31       53           32914       68                       10                
+I, [19-07-19 12:04:35#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:35#41734]  INFO -- : Mark_Thorpe            2019-07-18     2019-07-16       374          238364      10045                    10                
+I, [19-07-19 12:04:38#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:38#41734]  INFO -- : Marton_Toth             2019-06-27     2019-06-27       4            1030        827                      4                 
+I, [19-07-19 12:04:41#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:41#41734]  INFO -- : Marty_Fauth            2019-07-19     2019-07-18       366          145330      18729                    6                 
+I, [19-07-19 12:04:45#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:45#41734]  INFO -- : Matthew_Lewsadder      2019-07-05     2019-07-01       122          76394       2828                     10                
+I, [19-07-19 12:04:48#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:48#41734]  INFO -- : Matt_Hill                                                0            0           0                                          
+I, [19-07-19 12:04:51#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:51#41734]  INFO -- : Michael_Kahn            2019-07-19     2019-07-08       30           20553       1546                     11                
+I, [19-07-19 12:04:55#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:55#41734]  INFO -- : Michael_Orr            2019-07-19     2019-06-06       106          93803       572                      14                
+I, [19-07-19 12:04:58#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:04:58#41734]  INFO -- : Michael_Skowronek       2019-07-14     2019-06-09       11           19367       2873                     29                
+I, [19-07-19 12:05:02#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:02#41734]  INFO -- : Michael_Wilson          2019-05-29     2019-04-27       29           12441       21                       7                 
+I, [19-07-19 12:05:05#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:05#41734]  INFO -- : Mike_Drilling          2019-07-18     2019-07-18       413          148477      9986                     5                 
+I, [19-07-19 12:05:09#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:09#41734]  INFO -- : Mike_Druke            2019-07-08     2019-03-12       6            1137        234                      3                 
+I, [19-07-19 12:05:12#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:12#41734]  INFO -- : Mike_Ehlers             2019-07-19     2019-07-17       13           14022       1324                     17                
+I, [19-07-19 12:05:15#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:15#41734]  INFO -- : Mike_Weston            2019-07-09     2019-07-04       37           32882       4854                     14                
+I, [19-07-19 12:05:19#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:19#41734]  INFO -- : Mike_Wilkins                                             0            0           0                                          
+I, [19-07-19 12:05:22#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:22#41734]  INFO -- : Mikhail_Zhidko         2019-07-12     2019-06-20       88           81559       801                      15                
+I, [19-07-19 12:05:25#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:25#41734]  INFO -- : Miles_Bradley          2019-07-02     2019-07-19       252          51957       1214                     3                 
+I, [19-07-19 12:05:29#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:29#41734]  INFO -- : Mitch_Slomiak         2019-07-18     2019-07-14       158          6018        633                      0                 
+I, [19-07-19 12:05:32#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:32#41734]  INFO -- : Moe_Rubenzahl          2019-07-19     2019-07-19       951          453182      70441                    7                 
+I, [19-07-19 12:05:36#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:36#41734]  INFO -- : Noah_Salzman           2019-07-13     2019-06-20       1            3798        3798                     63                
+I, [19-07-19 12:05:39#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:39#41734]  INFO -- : Patrick_Morin           2019-07-13     2018-06-21       1            4283        60                       71                
+I, [19-07-19 12:05:42#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:42#41734]  INFO -- : Paul_Tyner             2019-07-12     2019-06-28       40           43461       2440                     18                
+I, [19-07-19 12:05:46#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:46#41734]  INFO -- : Pete_Rabbitt            2019-07-19     2019-07-19       11           9526        1417                     14                
+I, [19-07-19 12:05:49#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:49#41734]  INFO -- : Peter_Johnson            2019-03-26     2019-03-25       4            805         0                        3                 
+I, [19-07-19 12:05:52#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:52#41734]  INFO -- : Peter_Montana           2019-06-28     2018-08-18       19           6150        0                        5                 
+I, [19-07-19 12:05:56#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:56#41734]  INFO -- : Philip_Brouwer          2019-07-19     2019-07-17       0            2513        2513                                       
+I, [19-07-19 12:05:59#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:05:59#41734]  INFO -- : Randy_Horton          2019-07-14     2019-07-17       315          20583       1802                     1                 
+I, [19-07-19 12:06:03#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:06:03#41734]  INFO -- : Ravi_Narra              2018-01-09     2017-12-31       11           7130        0                        10                
+I, [19-07-19 12:06:06#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:06:06#41734]  INFO -- : Raymond_Miller           2019-02-12                      0            355         0                                          
+I, [19-07-19 12:06:09#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:06:09#41734]  INFO -- : Rich_Worthington       2019-07-18     2019-07-18       99           46236       1536                     7                 
+I, [19-07-19 12:06:13#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:06:13#41734]  INFO -- : Rick_Kananen          2019-02-16     2019-07-06       30           534         0                        0                 
+I, [19-07-19 12:06:16#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:06:16#41734]  INFO -- : Robbie_Bow              2019-07-17     2019-07-17       45           31459       1426                     11                
+I, [19-07-19 12:06:20#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:06:20#41734]  INFO -- : Roger_Chapman         2019-03-08     2019-02-10       11           1864        0                        2                 
+I, [19-07-19 12:06:23#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:06:23#41734]  INFO -- : Ron_McDowell             2018-11-20     2019-03-13       2            274         0                        2                 
+I, [19-07-19 12:06:26#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:06:26#41734]  INFO -- : Ron_Tugender           2019-07-19     2018-12-09       68           38792       1032                     9                 
+I, [19-07-19 12:06:30#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:06:30#41734]  INFO -- : Russ_Towne            2019-07-11     2019-07-15       159          17168       3440                     1                 
+I, [19-07-19 12:06:33#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:06:33#41734]  INFO -- : Ryan_Hyer              2019-07-18     2019-07-18       611          420208      28525                    11                
+I, [19-07-19 12:06:36#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:06:36#41734]  INFO -- : Samyeer_Metrani       2019-07-15     2019-07-19       16           777         336                      0                 
+I, [19-07-19 12:06:40#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:06:40#41734]  INFO -- : Sanjeev_Balarajan      2019-07-18     2019-07-18       141          126457      3413                     14                
+I, [19-07-19 12:06:43#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:06:43#41734]  INFO -- : Sanjeev_Sanghera        2019-07-18     2019-05-01       20           30240       1523                     25                
+I, [19-07-19 12:06:46#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:06:46#41734]  INFO -- : Save_Torquato         2019-07-01     2019-07-15       14           2330        1565                     2                 
+I, [19-07-19 12:06:50#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:06:50#41734]  INFO -- : Scott_StGermain        2019-07-16     2019-07-16       123          62296       4153                     8                 
+I, [19-07-19 12:06:53#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:06:53#41734]  INFO -- : Shane_Reed               2019-07-12                      0            1025        261                                        
+I, [19-07-19 12:06:57#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:06:57#41734]  INFO -- : S_James_Biggs           2019-07-14     2019-07-15       58           14938       422                      4                 
+I, [19-07-19 12:07:00#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:07:00#41734]  INFO -- : Sridhar_Ramanathan      2019-07-19     2019-07-19       38           14482       1007                     6                 
+I, [19-07-19 12:07:04#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:07:04#41734]  INFO -- : Stefan_Schmitz         2019-07-19     2019-07-19       84           130828      17643                    25                
+I, [19-07-19 12:07:07#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:07:07#41734]  INFO -- : Steve_Cross           2019-07-19     2019-07-18       77           6277        707                      1                 
+I, [19-07-19 12:07:10#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:07:10#41734]  INFO -- : Steve_Fitzsimons      2019-07-01     2019-07-19       181          3859        20                       0                 
+I, [19-07-19 12:07:14#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:07:14#41734]  INFO -- : Steve_Scott            2019-07-19     2019-07-19       2011         1849243     75042                    15                
+I, [19-07-19 12:07:17#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:07:17#41734]  INFO -- : Suhas_Chelian          2019-07-19     2019-07-19       54           24535       11562                    7                 
+I, [19-07-19 12:07:20#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:07:20#41734]  INFO -- : Tesh_Tesfaye             2018-09-13     2019-05-20       2            567         0                        4                 
+I, [19-07-19 12:07:24#41734]  INFO -- : Active Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:07:24#41734]  INFO -- : Tim_Tannatt            2019-07-19     2019-07-19       13           12234       5050                     15                
+I, [19-07-19 12:07:27#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:07:27#41734]  INFO -- : Tom_Feasby            2019-07-04     2019-07-16       198          27744       2381                     2                 
+I, [19-07-19 12:07:31#41734]  INFO -- : Average Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:07:31#41734]  INFO -- : Tony_Christopher        2019-07-17     2019-05-30       44           27130       646                      10                
+I, [19-07-19 12:07:34#41734]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:07:34#41734]  INFO -- : Tony_Pogue               2019-06-10     2018-03-13       0            394         394                                        
+I, [19-07-19 12:07:37#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:07:37#41734]  INFO -- : Vern_Mcgeorge         2019-03-21     2018-11-14       11           2032        0                        3                 
+I, [19-07-19 12:07:41#41734]  INFO -- : Email Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:07:41#41734]  INFO -- : William_Burton        2019-03-15     2019-06-07       26           1089        0                        0                 
+I, [19-07-19 12:07:41#41734]  INFO -- : Discourse Men                                           
+I, [19-07-19 12:07:41#41734]  INFO -- : Processed Users                     167                 
+I, [19-07-19 12:07:41#41734]  INFO -- : Skipped Users                       0                   
+I, [19-07-19 12:07:41#41734]  INFO -- : Messages Sent                       0                   
+I, [19-07-19 12:07:41#41734]  INFO -- : Activity Groupping                                      
+I, [19-07-19 12:07:41#41734]  INFO -- : User Activity Groupping             167                 
+I, [19-07-19 12:07:41#41734]  INFO -- : time_read                           9315753             
+I, [19-07-19 12:07:41#41734]  INFO -- : time_read Count                     167                 
+I, [19-07-19 12:07:41#41734]  INFO -- : Active User Count                   55                  
+I, [19-07-19 12:07:41#41734]  INFO -- : Average User Count                  47                  
+I, [19-07-19 12:07:41#41734]  INFO -- : Email User Count                    29                  
+I, [19-07-19 12:07:41#41734]  INFO -- : Inactive User Count                 36                  
+I, [19-07-19 12:07:41#41734]  INFO -- : User Group Updated                  0                   
+I, [19-07-19 12:07:41#41734]  INFO -- : User Removed from Group             0                   

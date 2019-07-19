@@ -2,9 +2,9 @@ require_relative 'log/utility'
 require '../lib/momentum_api'
 
 discourse_options = {
-    do_live_updates:        true,
-    target_username:        'William_Burton',     # David_Kirk Steve_Scott John_Butler Kim_Miller Jerry_Strebig Lee_Wheeler
-    target_groups:          %w(trust_level_1),       # Mods GreatX BraveHearts trust_level_1
+    do_live_updates:        false,
+    # target_username:        'William_Burton',     # David_Kirk Steve_Scott John_Butler Kim_Miller Jerry_Strebig Lee_Wheeler
+    target_groups:          %w(BraveHearts),       # Mods GreatX BraveHearts trust_level_1
     instance:               'live',
     api_username:           'KM_Admin',
     exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
@@ -22,7 +22,7 @@ schedule_options = {
                 excludes:               %w()
             },
             average_user: {
-                do_task_update:         false,
+                do_task_update:         true,
                 allowed_levels:          133,
                 set_level:               133,
                 excludes:               %w()
@@ -34,7 +34,7 @@ schedule_options = {
                 excludes:               %w()
             },
             inactive_user: {
-                do_task_update:         false,
+                do_task_update:         true,
                 allowed_levels:          132,
                 set_level:               132,
                 excludes:               %w()
