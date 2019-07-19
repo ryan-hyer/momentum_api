@@ -3,7 +3,7 @@ require '../lib/momentum_api'
 
 discourse_options = {
     do_live_updates:        true,
-    target_username:        'David_Kirk',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Jerry_Strebig Lee_Wheeler
+    target_username:        'William_Burton',     # David_Kirk Steve_Scott John_Butler Kim_Miller Jerry_Strebig Lee_Wheeler
     target_groups:          %w(trust_level_1),       # Mods GreatX BraveHearts trust_level_1
     instance:               'live',
     api_username:           'KM_Admin',
@@ -14,23 +14,29 @@ discourse_options = {
 
 schedule_options = {
     user:{
-        activity:                              {
-            recent_time_read: {
+        activity_groupping:                              {
+            active_user: {
                 do_task_update:         true,
-                allowed_levels:         nil,
-                set_level:              nil,
+                allowed_levels:          130,
+                set_level:               130,
                 excludes:               %w()
             },
-            activity_groupping: {
-                do_task_update:         true,
-                allowed_levels:         nil,
-                set_level:              nil,
+            average_user: {
+                do_task_update:         false,
+                allowed_levels:          133,
+                set_level:               133,
                 excludes:               %w()
             },
-            post_count: {
+            email_user: {
                 do_task_update:         true,
-                allowed_levels:         nil,
-                set_level:              nil,
+                allowed_levels:          131,
+                set_level:               131,
+                excludes:               %w()
+            },
+            inactive_user: {
+                do_task_update:         false,
+                allowed_levels:          132,
+                set_level:               132,
                 excludes:               %w()
             }
         }
