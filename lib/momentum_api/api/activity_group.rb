@@ -40,6 +40,10 @@ module MomentumApi
 
       if @options       # Active Users (60 * 60) = 1 hour   recent_time_read = last 60 days
 
+        if @schedule.discourse.options[:issue_users].include?(man.user_details['username'])
+          puts "#{man.user_details['username']} in ActivityGroup"
+        end
+
         user_label = nil
 
         read_post_ratio = nil
@@ -63,7 +67,7 @@ module MomentumApi
           if @options[:average_user][:do_task_update]
             user_label = 'Average Momentum User '
             # man.print_user_options(man.user_details, user_label: user_label, hash: {'Read-Post Ratio': read_post_ratio})
-            target_activity_groups            = [@options[:active_user][:set_level]]
+            target_activity_groups            = [@options[:average_user][:set_level]]
             counters[:'Average User Count']   += 1
           end
 
@@ -98,14 +102,16 @@ module MomentumApi
             mans_current_activity_groups.each do |current_group_id|
               remove_response = @schedule.discourse.admin_client.group_remove(current_group_id, username: man.user_details['username'])
               @mock ? sleep(0) : sleep(1)
-              man.discourse.options[:logger].warn "Removed man from Group #{current_group_id}: #{remove_response.body['success']}"
+              man.discourse.options[:logger].warn "Removed man from Group #{current_group_id}: #{remove_response['success']}"
+              # man.discourse.options[:logger].warn "Removed man from Group #{current_group_id}: #{remove_response.body['success']}"
               @counters[:'User Removed from Group'] += 1
             end
           end
 
           update_response = @schedule.discourse.admin_client.group_add(target_activity_groups[0], username: man.user_details['username'])
           @mock ? sleep(0) : sleep(1)
-          man.discourse.options[:logger].warn "Added man to Group #{target_activity_groups[0]}: #{update_response.body['success']}"
+          man.discourse.options[:logger].warn "Added man to Group #{target_activity_groups[0]}: #{update_response['success']}"
+          # man.discourse.options[:logger].warn "Added man to Group #{target_activity_groups[0]}: #{update_response.body['success']}"
           @counters[:'User Group Updated'] += 1
 
           # check if update happened ... or ... comment out for no check after update

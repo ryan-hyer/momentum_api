@@ -9341,3 +9341,49 @@ I, [19-07-19 14:15:50#46528]  INFO -- : Email User Count                    0
 I, [19-07-19 14:15:50#46528]  INFO -- : Inactive User Count                 0                   
 I, [19-07-19 14:15:50#46528]  INFO -- : User Group Updated                  1                   
 I, [19-07-19 14:15:50#46528]  INFO -- : User Removed from Group             1                   
+I, [19-07-19 14:26:16#47198]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 14:26:16#47198]  INFO -- : Moe_Rubenzahl            2019-07-19     2019-07-19       951          453182      70441                    7                 
+W, [19-07-19 14:26:18#47198]  WARN -- : Added man to Group 130: OK
+W, [19-07-19 14:26:19#47198]  WARN -- : Moe_Rubenzahl added to z_Activity_Active
+I, [19-07-19 14:26:22#47198]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 14:26:22#47198]  INFO -- : Bob_Silver               2019-07-01     2019-07-02       5            935         21                       3                 
+W, [19-07-19 14:26:23#47198]  WARN -- : Added man to Group 132: OK
+W, [19-07-19 14:26:25#47198]  WARN -- : Bob_Silver added to z_Activity_Inactive
+I, [19-07-19 14:26:28#47198]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 14:26:28#47198]  INFO -- : Brad_Milliken            2019-05-20     2019-07-09       7            181         0                        0                 
+W, [19-07-19 14:26:29#47198]  WARN -- : Added man to Group 131: OK
+W, [19-07-19 14:26:30#47198]  WARN -- : Brad_Milliken added to z_Activity_Email
+I, [19-07-19 14:26:34#47198]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 14:26:34#47198]  INFO -- : Brad_Peppard             2019-07-09     2019-07-18       31           12460       647                      6                 
+W, [19-07-19 14:26:35#47198]  WARN -- : Added man to Group 130: OK
+W, [19-07-19 14:26:36#47198]  WARN -- : Brad_Peppard added to z_Activity_Active
+I, [19-07-19 14:26:39#47198]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 14:26:39#47198]  INFO -- : Dave_Mahal               2019-04-22                      0            303         0                                          
+W, [19-07-19 14:26:41#47198]  WARN -- : Added man to Group 132: OK
+W, [19-07-19 14:26:42#47198]  WARN -- : Dave_Mahal added to z_Activity_Inactive
+I, [19-07-19 14:26:45#47198]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 14:26:45#47198]  INFO -- : Geoff_Wright             2019-01-20     2019-01-13       3            760         0                        4                 
+W, [19-07-19 14:26:46#47198]  WARN -- : Added man to Group 132: OK
+W, [19-07-19 14:26:48#47198]  WARN -- : Geoff_Wright added to z_Activity_Inactive
+I, [19-07-19 14:26:51#47198]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 14:26:51#47198]  INFO -- : Howard_Bailey            2019-01-18     2019-01-11       0            252         0                                          
+W, [19-07-19 14:26:52#47198]  WARN -- : Added man to Group 132: OK
+W, [19-07-19 14:26:53#47198]  WARN -- : Howard_Bailey added to z_Activity_Inactive
+I, [19-07-19 14:26:57#47198]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 14:26:57#47198]  INFO -- : Joe_Sabolefski           2019-07-19     2019-07-19       201          319565      11794                    26                
+W, [19-07-19 14:26:58#47198]  WARN -- : Added man to Group 130: OK
+W, [19-07-19 14:26:59#47198]  WARN -- : Joe_Sabolefski added to z_Activity_Active
+I, [19-07-19 14:26:59#47198]  INFO -- : Discourse Men                                           
+I, [19-07-19 14:26:59#47198]  INFO -- : Processed Users                     8                   
+I, [19-07-19 14:26:59#47198]  INFO -- : Skipped Users                       0                   
+I, [19-07-19 14:26:59#47198]  INFO -- : Messages Sent                       0                   
+I, [19-07-19 14:26:59#47198]  INFO -- : Activity Groupping                                      
+I, [19-07-19 14:26:59#47198]  INFO -- : User Activity Groupping             8                   
+I, [19-07-19 14:26:59#47198]  INFO -- : time_read                           787638              
+I, [19-07-19 14:26:59#47198]  INFO -- : time_read Count                     8                   
+I, [19-07-19 14:26:59#47198]  INFO -- : Active User Count                   2                   
+I, [19-07-19 14:26:59#47198]  INFO -- : Average User Count                  1                   
+I, [19-07-19 14:26:59#47198]  INFO -- : Email User Count                    1                   
+I, [19-07-19 14:26:59#47198]  INFO -- : Inactive User Count                 4                   
+I, [19-07-19 14:26:59#47198]  INFO -- : User Group Updated                  8                   
+I, [19-07-19 14:26:59#47198]  INFO -- : User Removed from Group             0                   

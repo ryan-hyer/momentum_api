@@ -185,7 +185,7 @@ describe MomentumApi::Schedule do
     
     let(:mock_dependencies) do
       mock_dependencies = instance_double('mock_dependencies')
-      expect(mock_dependencies).to receive(:run).twice
+      expect(mock_dependencies).to receive(:run).exactly(3).times
       mock_dependencies
     end
 
