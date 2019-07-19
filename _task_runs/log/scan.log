@@ -9195,3 +9195,149 @@ I, [19-07-19 12:07:41#41734]  INFO -- : Email User Count                    29
 I, [19-07-19 12:07:41#41734]  INFO -- : Inactive User Count                 36                  
 I, [19-07-19 12:07:41#41734]  INFO -- : User Group Updated                  0                   
 I, [19-07-19 12:07:41#41734]  INFO -- : User Removed from Group             0                   
+I, [19-07-19 12:09:26#42654]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:09:26#42654]  INFO -- : James_Grubinskas         2019-07-19     2019-07-15       106          51328       20213                    8                 
+I, [19-07-19 12:09:30#42654]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:09:30#42654]  INFO -- : Kim_Miller               2019-07-19     2019-07-19       1789         790491      66403                    7                 
+I, [19-07-19 12:09:33#42654]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:09:33#42654]  INFO -- : Cory_Harasha             2019-07-19     2019-07-18       25           6985        5259                     4                 
+I, [19-07-19 12:09:37#42654]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:09:37#42654]  INFO -- : Gary_Koerzendorfer       2019-06-09     2019-07-12       2            481         481                      4                 
+I, [19-07-19 12:09:42#42654]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:09:42#42654]  INFO -- : Noah_Salzman             2019-07-13     2019-06-20       1            3798        3798                     63                
+I, [19-07-19 12:09:46#42654]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:09:46#42654]  INFO -- : Samyeer_Metrani          2019-07-15     2019-07-19       16           777         336                      0                 
+I, [19-07-19 12:09:49#42654]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:09:49#42654]  INFO -- : Save_Torquato            2019-07-01     2019-07-15       14           2330        1565                     2                 
+I, [19-07-19 12:09:53#42654]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:09:53#42654]  INFO -- : Steve_Fitzsimons         2019-07-01     2019-07-19       181          3859        20                       0                 
+I, [19-07-19 12:09:56#42654]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:09:56#42654]  INFO -- : Suhas_Chelian            2019-07-19     2019-07-19       54           24535       11562                    7                 
+I, [19-07-19 12:10:00#42654]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:10:00#42654]  INFO -- : Tim_Tannatt              2019-07-19     2019-07-19       13           12234       5050                     15                
+I, [19-07-19 12:10:00#42654]  INFO -- : Discourse Men                                           
+I, [19-07-19 12:10:00#42654]  INFO -- : Processed Users                     10                  
+I, [19-07-19 12:10:00#42654]  INFO -- : Skipped Users                       1                   
+I, [19-07-19 12:10:00#42654]  INFO -- : Messages Sent                       0                   
+I, [19-07-19 12:10:00#42654]  INFO -- : Activity Groupping                                      
+I, [19-07-19 12:10:00#42654]  INFO -- : User Activity Groupping             10                  
+I, [19-07-19 12:10:00#42654]  INFO -- : time_read                           896818              
+I, [19-07-19 12:10:00#42654]  INFO -- : time_read Count                     10                  
+I, [19-07-19 12:10:00#42654]  INFO -- : Active User Count                   6                   
+I, [19-07-19 12:10:00#42654]  INFO -- : Average User Count                  0                   
+I, [19-07-19 12:10:00#42654]  INFO -- : Email User Count                    3                   
+I, [19-07-19 12:10:00#42654]  INFO -- : Inactive User Count                 1                   
+I, [19-07-19 12:10:00#42654]  INFO -- : User Group Updated                  0                   
+I, [19-07-19 12:10:00#42654]  INFO -- : User Removed from Group             0                   
+I, [19-07-19 12:13:05#43146]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:13:05#43146]  INFO -- : James_Grubinskas         2019-07-19     2019-07-15       106          51328       20213                    8                 
+W, [19-07-19 12:13:06#43146]  WARN -- : Removed man: OK
+W, [19-07-19 12:13:08#43146]  WARN -- : OK
+W, [19-07-19 12:13:09#43146]  WARN -- : James_Grubinskas added to z_Activity_Active
+I, [19-07-19 12:13:13#43146]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:13:13#43146]  INFO -- : Kim_Miller               2019-07-19     2019-07-19       1789         790491      66403                    7                 
+W, [19-07-19 12:13:14#43146]  WARN -- : Removed man: OK
+W, [19-07-19 12:13:15#43146]  WARN -- : OK
+W, [19-07-19 12:13:16#43146]  WARN -- : Kim_Miller added to z_Activity_Active
+I, [19-07-19 12:13:19#43146]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:13:19#43146]  INFO -- : Cory_Harasha             2019-07-19     2019-07-18       25           6985        5259                     4                 
+W, [19-07-19 12:13:21#43146]  WARN -- : Removed man: OK
+W, [19-07-19 12:13:22#43146]  WARN -- : OK
+W, [19-07-19 12:13:23#43146]  WARN -- : Cory_Harasha added to z_Activity_Active
+I, [19-07-19 12:13:26#43146]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:13:26#43146]  INFO -- : Gary_Koerzendorfer       2019-06-09     2019-07-12       2            481         481                      4                 
+W, [19-07-19 12:13:27#43146]  WARN -- : Removed man: OK
+W, [19-07-19 12:13:28#43146]  WARN -- : OK
+W, [19-07-19 12:13:30#43146]  WARN -- : Gary_Koerzendorfer added to z_Activity_Inactive
+I, [19-07-19 12:13:35#43146]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:13:35#43146]  INFO -- : Noah_Salzman             2019-07-13     2019-06-20       1            3798        3798                     63                
+W, [19-07-19 12:13:37#43146]  WARN -- : OK
+W, [19-07-19 12:13:38#43146]  WARN -- : Noah_Salzman added to z_Activity_Active
+I, [19-07-19 12:13:41#43146]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:13:41#43146]  INFO -- : Samyeer_Metrani          2019-07-15     2019-07-19       16           777         336                      0                 
+W, [19-07-19 12:13:42#43146]  WARN -- : OK
+W, [19-07-19 12:13:43#43146]  WARN -- : Samyeer_Metrani added to z_Activity_Email
+I, [19-07-19 12:13:47#43146]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:13:47#43146]  INFO -- : Save_Torquato            2019-07-01     2019-07-15       14           2330        1565                     2                 
+W, [19-07-19 12:13:48#43146]  WARN -- : OK
+W, [19-07-19 12:13:49#43146]  WARN -- : Save_Torquato added to z_Activity_Email
+I, [19-07-19 12:13:53#43146]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:13:53#43146]  INFO -- : Steve_Fitzsimons         2019-07-01     2019-07-19       181          3859        20                       0                 
+W, [19-07-19 12:13:54#43146]  WARN -- : OK
+W, [19-07-19 12:13:55#43146]  WARN -- : Steve_Fitzsimons added to z_Activity_Email
+I, [19-07-19 12:13:58#43146]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:13:58#43146]  INFO -- : Suhas_Chelian            2019-07-19     2019-07-19       54           24535       11562                    7                 
+W, [19-07-19 12:14:00#43146]  WARN -- : OK
+W, [19-07-19 12:14:01#43146]  WARN -- : Suhas_Chelian added to z_Activity_Active
+I, [19-07-19 12:14:04#43146]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 12:14:04#43146]  INFO -- : Tim_Tannatt              2019-07-19     2019-07-19       13           12234       5050                     15                
+W, [19-07-19 12:14:05#43146]  WARN -- : OK
+W, [19-07-19 12:14:06#43146]  WARN -- : Tim_Tannatt added to z_Activity_Active
+I, [19-07-19 12:14:06#43146]  INFO -- : Discourse Men                                           
+I, [19-07-19 12:14:06#43146]  INFO -- : Processed Users                     10                  
+I, [19-07-19 12:14:06#43146]  INFO -- : Skipped Users                       1                   
+I, [19-07-19 12:14:06#43146]  INFO -- : Messages Sent                       0                   
+I, [19-07-19 12:14:06#43146]  INFO -- : Activity Groupping                                      
+I, [19-07-19 12:14:06#43146]  INFO -- : User Activity Groupping             10                  
+I, [19-07-19 12:14:06#43146]  INFO -- : time_read                           896818              
+I, [19-07-19 12:14:06#43146]  INFO -- : time_read Count                     10                  
+I, [19-07-19 12:14:06#43146]  INFO -- : Active User Count                   6                   
+I, [19-07-19 12:14:06#43146]  INFO -- : Average User Count                  0                   
+I, [19-07-19 12:14:06#43146]  INFO -- : Email User Count                    3                   
+I, [19-07-19 12:14:06#43146]  INFO -- : Inactive User Count                 1                   
+I, [19-07-19 12:14:06#43146]  INFO -- : User Group Updated                  10                  
+I, [19-07-19 12:14:06#43146]  INFO -- : User Removed from Group             4                   
+I, [19-07-19 14:14:04#45645]  INFO -- : Discourse Men                                           
+I, [19-07-19 14:14:04#45645]  INFO -- : Processed Users                     0                   
+I, [19-07-19 14:14:04#45645]  INFO -- : Skipped Users                       0                   
+I, [19-07-19 14:14:04#45645]  INFO -- : Messages Sent                       0                   
+I, [19-07-19 14:14:04#45645]  INFO -- : Activity Groupping                                      
+I, [19-07-19 14:14:04#45645]  INFO -- : User Activity Groupping             0                   
+I, [19-07-19 14:14:04#45645]  INFO -- : time_read                           0                   
+I, [19-07-19 14:14:04#45645]  INFO -- : time_read Count                     0                   
+I, [19-07-19 14:14:04#45645]  INFO -- : Active User Count                   0                   
+I, [19-07-19 14:14:04#45645]  INFO -- : Average User Count                  0                   
+I, [19-07-19 14:14:04#45645]  INFO -- : Email User Count                    0                   
+I, [19-07-19 14:14:04#45645]  INFO -- : Inactive User Count                 0                   
+I, [19-07-19 14:14:04#45645]  INFO -- : User Group Updated                  0                   
+I, [19-07-19 14:14:04#45645]  INFO -- : User Removed from Group             0                   
+I, [19-07-19 14:14:24#46078]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 14:14:24#46078]  INFO -- : William_Burton           2019-03-15     2019-06-07       26           1089        0                        0                 
+W, [19-07-19 14:14:26#46078]  WARN -- : Removed man from Group 133: OK
+W, [19-07-19 14:14:27#46078]  WARN -- : Added man to Group 131: OK
+W, [19-07-19 14:14:28#46078]  WARN -- : William_Burton added to z_Activity_Email
+I, [19-07-19 14:14:28#46078]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 14:14:28#46078]  INFO -- : William_Burton           2019-03-15     2019-06-07       26           1089        0                        0                 
+I, [19-07-19 14:14:28#46078]  INFO -- : Discourse Men                                           
+I, [19-07-19 14:14:28#46078]  INFO -- : Processed Users                     1                   
+I, [19-07-19 14:14:28#46078]  INFO -- : Skipped Users                       0                   
+I, [19-07-19 14:14:28#46078]  INFO -- : Messages Sent                       0                   
+I, [19-07-19 14:14:28#46078]  INFO -- : Activity Groupping                                      
+I, [19-07-19 14:14:28#46078]  INFO -- : User Activity Groupping             1                   
+I, [19-07-19 14:14:28#46078]  INFO -- : time_read                           1089                
+I, [19-07-19 14:14:28#46078]  INFO -- : time_read Count                     1                   
+I, [19-07-19 14:14:28#46078]  INFO -- : Active User Count                   0                   
+I, [19-07-19 14:14:28#46078]  INFO -- : Average User Count                  0                   
+I, [19-07-19 14:14:28#46078]  INFO -- : Email User Count                    1                   
+I, [19-07-19 14:14:28#46078]  INFO -- : Inactive User Count                 0                   
+I, [19-07-19 14:14:28#46078]  INFO -- : User Group Updated                  1                   
+I, [19-07-19 14:14:28#46078]  INFO -- : User Removed from Group             1                   
+I, [19-07-19 14:15:47#46528]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-19 14:15:47#46528]  INFO -- : Steve_Scott              2019-07-19     2019-07-19       2012         1849897     75696                    15                
+W, [19-07-19 14:15:48#46528]  WARN -- : Removed man from Group 131: OK
+W, [19-07-19 14:15:49#46528]  WARN -- : Added man to Group 130: OK
+W, [19-07-19 14:15:50#46528]  WARN -- : Steve_Scott added to z_Activity_Active
+I, [19-07-19 14:15:50#46528]  INFO -- : Discourse Men                                           
+I, [19-07-19 14:15:50#46528]  INFO -- : Processed Users                     1                   
+I, [19-07-19 14:15:50#46528]  INFO -- : Skipped Users                       0                   
+I, [19-07-19 14:15:50#46528]  INFO -- : Messages Sent                       0                   
+I, [19-07-19 14:15:50#46528]  INFO -- : Activity Groupping                                      
+I, [19-07-19 14:15:50#46528]  INFO -- : User Activity Groupping             1                   
+I, [19-07-19 14:15:50#46528]  INFO -- : time_read                           1849897             
+I, [19-07-19 14:15:50#46528]  INFO -- : time_read Count                     1                   
+I, [19-07-19 14:15:50#46528]  INFO -- : Active User Count                   1                   
+I, [19-07-19 14:15:50#46528]  INFO -- : Average User Count                  0                   
+I, [19-07-19 14:15:50#46528]  INFO -- : Email User Count                    0                   
+I, [19-07-19 14:15:50#46528]  INFO -- : Inactive User Count                 0                   
+I, [19-07-19 14:15:50#46528]  INFO -- : User Group Updated                  1                   
+I, [19-07-19 14:15:50#46528]  INFO -- : User Removed from Group             1                   
