@@ -9470,3 +9470,670 @@ I, [19-07-20 11:27:20#91701]  INFO -- : Chad_Starkey       LaunchpadVI          
 W, [19-07-20 11:27:21#91701]  WARN -- : {"success"=>"OK"}
 W, [19-07-20 11:27:22#91701]  WARN -- : Updated Category: LaunchpadVI    Notification Level: 3
 I, [19-07-20 11:45:51#91701]  INFO -- : Pass 45 complete for 208 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-20 12:08:53#31194]  INFO -- : Discourse Men                                           
+I, [19-07-20 12:08:53#31194]  INFO -- : Processed Users                     167                 
+I, [19-07-20 12:08:53#31194]  INFO -- : Skipped Users                       0                   
+I, [19-07-20 12:08:53#31194]  INFO -- : Messages Sent                       0                   
+I, [19-07-20 12:08:53#31194]  INFO -- : Activity Groupping                                      
+I, [19-07-20 12:08:53#31194]  INFO -- : User Activity Groupping             167                 
+I, [19-07-20 12:08:53#31194]  INFO -- : time_read                           9329276             
+I, [19-07-20 12:08:53#31194]  INFO -- : time_read Count                     167                 
+I, [19-07-20 12:08:53#31194]  INFO -- : Active User Count                   55                  
+I, [19-07-20 12:08:53#31194]  INFO -- : Average User Count                  47                  
+I, [19-07-20 12:08:53#31194]  INFO -- : Email User Count                    29                  
+I, [19-07-20 12:08:53#31194]  INFO -- : Inactive User Count                 36                  
+I, [19-07-20 12:08:53#31194]  INFO -- : User Group Updated                  0                   
+I, [19-07-20 12:08:53#31194]  INFO -- : User Removed from Group             0                   
+I, [19-07-20 12:20:00#31957]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:20:00#31957]  INFO -- : Jerry_Strebig            2019-07-16     2019-07-18       222          12944       4915                     0                 
+W, [19-07-20 12:20:01#31957]  WARN -- : Added man to Group 130: 
+W, [19-07-20 12:20:02#31957]  WARN -- : Jerry_Strebig added to z_Activity_Active
+I, [19-07-20 12:20:02#31957]  INFO -- : Discourse Men                                           
+I, [19-07-20 12:20:02#31957]  INFO -- : Processed Users                     1                   
+I, [19-07-20 12:20:02#31957]  INFO -- : Skipped Users                       0                   
+I, [19-07-20 12:20:02#31957]  INFO -- : Messages Sent                       0                   
+I, [19-07-20 12:20:02#31957]  INFO -- : Activity Groupping                                      
+I, [19-07-20 12:20:02#31957]  INFO -- : User Activity Groupping             1                   
+I, [19-07-20 12:20:02#31957]  INFO -- : time_read                           12944               
+I, [19-07-20 12:20:02#31957]  INFO -- : Active User Count                   1                   
+I, [19-07-20 12:20:02#31957]  INFO -- : Average User Count                  0                   
+I, [19-07-20 12:20:02#31957]  INFO -- : Email User Count                    0                   
+I, [19-07-20 12:20:02#31957]  INFO -- : Inactive User Count                 0                   
+I, [19-07-20 12:20:02#31957]  INFO -- : User Group Updated                  1                   
+I, [19-07-20 12:20:02#31957]  INFO -- : User Removed from Group             0                   
+I, [19-07-20 12:43:09#36460]  INFO -- : Discourse Men                                           
+I, [19-07-20 12:43:09#36460]  INFO -- : Processed Users                     207                 
+I, [19-07-20 12:43:09#36460]  INFO -- : Skipped Users                       0                   
+I, [19-07-20 12:43:09#36460]  INFO -- : Messages Sent                       0                   
+I, [19-07-20 12:43:09#36460]  INFO -- : Activity Groupping                                      
+I, [19-07-20 12:43:09#36460]  INFO -- : User Activity Groupping             167                 
+I, [19-07-20 12:43:09#36460]  INFO -- : time_read                           9329276             
+I, [19-07-20 12:43:09#36460]  INFO -- : Active User Count                   55                  
+I, [19-07-20 12:43:09#36460]  INFO -- : Average User Count                  47                  
+I, [19-07-20 12:43:09#36460]  INFO -- : Email User Count                    29                  
+I, [19-07-20 12:43:09#36460]  INFO -- : Inactive User Count                 36                  
+I, [19-07-20 12:43:09#36460]  INFO -- : User Group Updated                  0                   
+I, [19-07-20 12:43:09#36460]  INFO -- : User Removed from Group             0                   
+I, [19-07-20 12:56:07#37308]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-07-20 12:56:21#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:56:21#37308]  INFO -- : Al_Dorji                 2019-05-11     2019-05-11       0            31          0                                          
+W, [19-07-20 12:56:22#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 12:56:23#37308]  WARN -- : Al_Dorji added to z_Activity_Inactive
+I, [19-07-20 12:56:30#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:56:30#37308]  INFO -- : Alfonso_Benavides        2019-07-20     2019-07-20       195          252648      41525                    21                
+W, [19-07-20 12:56:31#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 12:56:32#37308]  WARN -- : Alfonso_Benavides added to z_Activity_Active
+I, [19-07-20 12:56:39#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:56:39#37308]  INFO -- : Andrew_M_Webster         2019-04-28     2019-04-28       29           8563        0                        4                 
+W, [19-07-20 12:56:40#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 12:56:41#37308]  WARN -- : Andrew_M_Webster added to Z_Activity_Average
+I, [19-07-20 12:56:48#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:56:48#37308]  INFO -- : Andrew_Webster           2019-07-12     2019-04-13       56           21148       559                      6                 
+W, [19-07-20 12:56:49#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 12:56:51#37308]  WARN -- : Andrew_Webster added to Z_Activity_Average
+I, [19-07-20 12:56:57#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:56:57#37308]  INFO -- : Anshu_Sanghi             2019-05-29     2019-05-22       72           46621       369                      10                
+W, [19-07-20 12:56:59#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 12:57:00#37308]  WARN -- : Anshu_Sanghi added to z_Activity_Active
+I, [19-07-20 12:57:07#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:57:07#37308]  INFO -- : Antonio_Martinez         2019-07-20     2019-07-01       21           7376        692                      5                 
+W, [19-07-20 12:57:08#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 12:57:09#37308]  WARN -- : Antonio_Martinez added to Z_Activity_Average
+I, [19-07-20 12:57:16#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:57:16#37308]  INFO -- : Art_Muir                 2019-07-19     2019-07-20       34           20314       1850                     9                 
+W, [19-07-20 12:57:17#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 12:57:18#37308]  WARN -- : Art_Muir added to Z_Activity_Average
+I, [19-07-20 12:57:28#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:57:28#37308]  INFO -- : Barry_Finkelstein        2019-07-17     2019-07-12       32           55092       7093                     28                
+W, [19-07-20 12:57:29#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 12:57:31#37308]  WARN -- : Barry_Finkelstein added to z_Activity_Active
+I, [19-07-20 12:57:38#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:57:38#37308]  INFO -- : Benjamin_Berman          2019-07-20     2019-05-28       46           37454       348                      13                
+W, [19-07-20 12:57:39#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 12:57:40#37308]  WARN -- : Benjamin_Berman added to z_Activity_Active
+I, [19-07-20 12:57:50#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:57:50#37308]  INFO -- : Bill_Herndon             2019-07-19     2019-07-16       23           14722       3124                     10                
+W, [19-07-20 12:57:51#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 12:57:53#37308]  WARN -- : Bill_Herndon added to Z_Activity_Average
+I, [19-07-20 12:58:00#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:58:00#37308]  INFO -- : Bill_Sprague             2019-07-20                      0            4514        2198                                       
+W, [19-07-20 12:58:01#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 12:58:02#37308]  WARN -- : Bill_Sprague added to Z_Activity_Average
+I, [19-07-20 12:58:12#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:58:12#37308]  INFO -- : Bill_Zabor               2019-07-20     2019-07-17       112          101015      14103                    15                
+W, [19-07-20 12:58:13#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 12:58:15#37308]  WARN -- : Bill_Zabor added to z_Activity_Active
+I, [19-07-20 12:58:21#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:58:21#37308]  INFO -- : Bob_Richards             2019-04-24     2018-10-14       8            386         0                        0                 
+W, [19-07-20 12:58:23#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 12:58:24#37308]  WARN -- : Bob_Richards added to z_Activity_Email
+I, [19-07-20 12:58:31#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:58:31#37308]  INFO -- : Bob_Silver               2019-07-01     2019-07-02       5            935         21                       3                 
+W, [19-07-20 12:58:32#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 12:58:33#37308]  WARN -- : Bob_Silver added to z_Activity_Inactive
+I, [19-07-20 12:58:40#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:58:40#37308]  INFO -- : Bo_Zhou                  2019-03-13     2019-01-18       6            2569        0                        7                 
+W, [19-07-20 12:58:41#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 12:58:42#37308]  WARN -- : Bo_Zhou added to z_Activity_Email
+I, [19-07-20 12:58:52#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:58:52#37308]  INFO -- : Brad_Milliken            2019-05-20     2019-07-09       7            181         0                        0                 
+W, [19-07-20 12:58:53#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 12:58:55#37308]  WARN -- : Brad_Milliken added to z_Activity_Email
+I, [19-07-20 12:59:01#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:59:01#37308]  INFO -- : Brad_Peppard             2019-07-09     2019-07-18       31           12460       647                      6                 
+W, [19-07-20 12:59:03#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 12:59:04#37308]  WARN -- : Brad_Peppard added to Z_Activity_Average
+I, [19-07-20 12:59:11#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:59:11#37308]  INFO -- : Bran_Scott               2019-01-28                      0            0           0                                          
+W, [19-07-20 12:59:12#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 12:59:13#37308]  WARN -- : Bran_Scott added to z_Activity_Inactive
+I, [19-07-20 12:59:20#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:59:20#37308]  INFO -- : Brian_Haskin             2019-07-20     2019-06-19       48           50389       1969                     17                
+W, [19-07-20 12:59:21#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 12:59:22#37308]  WARN -- : Brian_Haskin added to z_Activity_Active
+I, [19-07-20 12:59:29#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:59:29#37308]  INFO -- : Brian_Ruthruff           2019-07-15     2019-02-13       3            451         0                        2                 
+W, [19-07-20 12:59:30#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 12:59:32#37308]  WARN -- : Brian_Ruthruff added to z_Activity_Inactive
+I, [19-07-20 12:59:39#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:59:39#37308]  INFO -- : Bruce_Scheer             2019-03-13     2019-03-30       5            5762        0                        19                
+W, [19-07-20 12:59:40#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 12:59:41#37308]  WARN -- : Bruce_Scheer added to Z_Activity_Average
+I, [19-07-20 12:59:48#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:59:48#37308]  INFO -- : Butch_Dority             2018-08-13                      0            1196        0                                          
+W, [19-07-20 12:59:49#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 12:59:50#37308]  WARN -- : Butch_Dority added to z_Activity_Inactive
+I, [19-07-20 12:59:57#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 12:59:57#37308]  INFO -- : Charlie_Bedard           2019-07-19     2019-07-17       78           12769       1909                     2                 
+W, [19-07-20 12:59:58#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:00:00#37308]  WARN -- : Charlie_Bedard added to z_Activity_Email
+I, [19-07-20 13:00:07#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:00:07#37308]  INFO -- : Charlie_Ohanlon          2019-07-20     2019-07-20       126          30847       1957                     4                 
+W, [19-07-20 13:00:08#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:00:09#37308]  WARN -- : Charlie_Ohanlon added to Z_Activity_Average
+I, [19-07-20 13:00:16#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:00:16#37308]  INFO -- : Chris_Edgar              2019-02-11     2018-11-12       0            68          0                                          
+W, [19-07-20 13:00:17#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:00:18#37308]  WARN -- : Chris_Edgar added to z_Activity_Inactive
+I, [19-07-20 13:00:26#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:00:26#37308]  INFO -- : Chris_Reed               2019-07-19     2019-07-20       45           13377       2351                     4                 
+W, [19-07-20 13:00:27#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:00:28#37308]  WARN -- : Chris_Reed added to Z_Activity_Average
+I, [19-07-20 13:00:35#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:00:35#37308]  INFO -- : Chris_Steck              2019-07-20     2019-07-19       122          208047      10285                    28                
+W, [19-07-20 13:00:36#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:00:37#37308]  WARN -- : Chris_Steck added to z_Activity_Active
+I, [19-07-20 13:00:44#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:00:44#37308]  INFO -- : Chris_Sulek              2019-07-20     2019-07-18       161          349892      40545                    36                
+W, [19-07-20 13:00:46#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:00:47#37308]  WARN -- : Chris_Sulek added to z_Activity_Active
+I, [19-07-20 13:00:54#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:00:54#37308]  INFO -- : Christian_Agardi         2017-08-18     2018-12-20       15           1736        0                        1                 
+W, [19-07-20 13:00:55#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:00:56#37308]  WARN -- : Christian_Agardi added to z_Activity_Email
+I, [19-07-20 13:01:06#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:01:06#37308]  INFO -- : Clark_Zhang              2019-07-01     2019-01-10       20           5863        41                       4                 
+W, [19-07-20 13:01:07#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:01:09#37308]  WARN -- : Clark_Zhang added to Z_Activity_Average
+I, [19-07-20 13:01:16#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:01:16#37308]  INFO -- : Clay_Campbell            2019-07-18     2019-07-15       45           60389       2641                     22                
+W, [19-07-20 13:01:17#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:01:18#37308]  WARN -- : Clay_Campbell added to z_Activity_Active
+I, [19-07-20 13:01:28#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:01:28#37308]  INFO -- : Cory_Harasha             2019-07-20     2019-07-18       25           6989        5119                     4                 
+W, [19-07-20 13:01:29#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:01:30#37308]  WARN -- : Cory_Harasha added to z_Activity_Active
+I, [19-07-20 13:01:37#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:01:37#37308]  INFO -- : Curt_Haynes              2019-06-08     2018-05-02       17           3750        0                        3                 
+W, [19-07-20 13:01:38#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:01:39#37308]  WARN -- : Curt_Haynes added to Z_Activity_Average
+I, [19-07-20 13:01:46#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:01:46#37308]  INFO -- : Curt_Weil                2019-07-19     2019-07-20       123          12092       1325                     1                 
+W, [19-07-20 13:01:48#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:01:49#37308]  WARN -- : Curt_Weil added to z_Activity_Email
+I, [19-07-20 13:01:56#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:01:56#37308]  INFO -- : Dainuri                  2019-06-03     2019-04-20       8            14454       481                      30                
+W, [19-07-20 13:01:57#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:01:58#37308]  WARN -- : Dainuri added to Z_Activity_Average
+I, [19-07-20 13:02:05#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:02:05#37308]  INFO -- : Dan_Ollendorff           2019-07-20     2019-07-15       23           43197       1222                     31                
+W, [19-07-20 13:02:06#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:02:07#37308]  WARN -- : Dan_Ollendorff added to z_Activity_Active
+I, [19-07-20 13:02:14#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:02:14#37308]  INFO -- : Dave_Lloyd               2019-07-13     2019-07-09       40           21780       2416                     9                 
+W, [19-07-20 13:02:15#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:02:17#37308]  WARN -- : Dave_Lloyd added to Z_Activity_Average
+I, [19-07-20 13:02:23#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:02:23#37308]  INFO -- : Dave_Mahal               2019-04-22                      0            303         0                                          
+W, [19-07-20 13:02:24#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:02:26#37308]  WARN -- : Dave_Mahal added to z_Activity_Inactive
+I, [19-07-20 13:02:32#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:02:32#37308]  INFO -- : Dave_Mussoff             2019-07-02     2019-06-11       22           15400       747                      11                
+W, [19-07-20 13:02:34#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:02:35#37308]  WARN -- : Dave_Mussoff added to Z_Activity_Average
+I, [19-07-20 13:02:45#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:02:45#37308]  INFO -- : Dave_Strigler            2019-07-15     2019-04-21       9            66546       2613                     123               
+W, [19-07-20 13:02:46#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:02:47#37308]  WARN -- : Dave_Strigler added to z_Activity_Active
+I, [19-07-20 13:02:54#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:02:54#37308]  INFO -- : David_Ashby              2019-07-20     2019-07-19       116          61460       21072                    8                 
+W, [19-07-20 13:02:56#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:02:57#37308]  WARN -- : David_Ashby added to z_Activity_Active
+I, [19-07-20 13:03:04#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:03:04#37308]  INFO -- : David_Coleman            2019-07-03     2019-06-05       1            997         536                      16                
+W, [19-07-20 13:03:05#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:03:06#37308]  WARN -- : David_Coleman added to z_Activity_Inactive
+I, [19-07-20 13:03:13#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:03:13#37308]  INFO -- : David_Hohl               2019-07-18     2019-05-25       9            26301       3954                     48                
+W, [19-07-20 13:03:14#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:03:15#37308]  WARN -- : David_Hohl added to z_Activity_Active
+I, [19-07-20 13:03:22#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:03:22#37308]  INFO -- : David_Kirk               2019-07-20     2019-07-20       276          234242      20178                    14                
+W, [19-07-20 13:03:24#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:03:25#37308]  WARN -- : David_Kirk added to z_Activity_Active
+I, [19-07-20 13:03:31#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:03:31#37308]  INFO -- : David_Mock               2019-07-02     2019-07-19       10           3043        21                       5                 
+W, [19-07-20 13:03:33#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:03:34#37308]  WARN -- : David_Mock added to z_Activity_Email
+I, [19-07-20 13:03:41#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:03:41#37308]  INFO -- : David_Montagna           2019-07-14     2019-07-09       10           8286        181                      13                
+W, [19-07-20 13:03:42#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:03:43#37308]  WARN -- : David_Montagna added to Z_Activity_Average
+I, [19-07-20 13:03:53#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:03:53#37308]  INFO -- : Dennis_Adsit             2019-07-01     2019-07-01       0            713         0                                          
+W, [19-07-20 13:03:54#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:03:55#37308]  WARN -- : Dennis_Adsit added to z_Activity_Inactive
+I, [19-07-20 13:04:02#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:04:02#37308]  INFO -- : Dennis_Sorensen          2018-04-13     2019-04-08       7            1644        0                        3                 
+W, [19-07-20 13:04:03#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:04:04#37308]  WARN -- : Dennis_Sorensen added to z_Activity_Email
+I, [19-07-20 13:04:11#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:04:11#37308]  INFO -- : Deven_Kalra              2018-10-31     2018-10-30       1            423         0                        7                 
+W, [19-07-20 13:04:12#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:04:14#37308]  WARN -- : Deven_Kalra added to z_Activity_Inactive
+I, [19-07-20 13:04:20#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:04:20#37308]  INFO -- : Don_Morgan               2019-06-11     2019-07-03       6            730         213                      2                 
+W, [19-07-20 13:04:21#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:04:23#37308]  WARN -- : Don_Morgan added to z_Activity_Email
+I, [19-07-20 13:04:30#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:04:30#37308]  INFO -- : Doug_Greig               2019-06-22     2019-07-18       32           10707       586                      5                 
+W, [19-07-20 13:04:31#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:04:32#37308]  WARN -- : Doug_Greig added to Z_Activity_Average
+I, [19-07-20 13:04:39#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:04:39#37308]  INFO -- : Eamon_Rooney             2019-03-19                      0            605         0                                          
+W, [19-07-20 13:04:40#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:04:41#37308]  WARN -- : Eamon_Rooney added to z_Activity_Inactive
+I, [19-07-20 13:04:48#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:04:48#37308]  INFO -- : Edmond_Cote              2019-07-17     2019-07-14       231          99496       5650                     7                 
+W, [19-07-20 13:04:49#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:04:50#37308]  WARN -- : Edmond_Cote added to z_Activity_Active
+I, [19-07-20 13:04:57#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:04:57#37308]  INFO -- : EO_Rojas                 2019-07-03     2019-06-20       135          102001      1061                     12                
+W, [19-07-20 13:04:59#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:05:00#37308]  WARN -- : EO_Rojas added to z_Activity_Active
+I, [19-07-20 13:05:07#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:05:07#37308]  INFO -- : Eric_Nitzberg            2019-07-05     2019-03-02       0            110         52                                         
+W, [19-07-20 13:05:08#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:05:09#37308]  WARN -- : Eric_Nitzberg added to z_Activity_Inactive
+I, [19-07-20 13:05:16#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:05:16#37308]  INFO -- : Flint_Thorne             2019-07-06     2019-06-28       24           4572        496                      3                 
+W, [19-07-20 13:05:17#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:05:18#37308]  WARN -- : Flint_Thorne added to Z_Activity_Average
+I, [19-07-20 13:05:25#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:05:25#37308]  INFO -- : Francis_daCosta          2019-07-16     2018-12-14       5            14025       1053                     46                
+W, [19-07-20 13:05:26#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:05:27#37308]  WARN -- : Francis_daCosta added to Z_Activity_Average
+I, [19-07-20 13:05:34#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:05:34#37308]  INFO -- : Garry_Cheney             2019-07-04     2019-07-11       90           2061        350                      0                 
+W, [19-07-20 13:05:35#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:05:37#37308]  WARN -- : Garry_Cheney added to z_Activity_Email
+I, [19-07-20 13:05:47#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:05:47#37308]  INFO -- : Gary_Koerzendorfer       2019-06-09     2019-07-12       2            481         481                      4                 
+W, [19-07-20 13:05:48#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:05:49#37308]  WARN -- : Gary_Koerzendorfer added to z_Activity_Inactive
+I, [19-07-20 13:05:56#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:05:56#37308]  INFO -- : Gary_Kraemer             2019-06-19     2019-06-09       1            1258        851                      20                
+W, [19-07-20 13:05:57#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:05:58#37308]  WARN -- : Gary_Kraemer added to Z_Activity_Average
+I, [19-07-20 13:06:05#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:06:05#37308]  INFO -- : Gary_Merrick             2019-07-19     2019-07-19       347          314669      33884                    15                
+W, [19-07-20 13:06:06#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:06:07#37308]  WARN -- : Gary_Merrick added to z_Activity_Active
+I, [19-07-20 13:06:14#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:06:14#37308]  INFO -- : Gary_Plep                2019-06-29     2019-06-29       2            2063        678                      17                
+W, [19-07-20 13:06:15#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:06:16#37308]  WARN -- : Gary_Plep added to z_Activity_Inactive
+I, [19-07-20 13:06:23#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:06:23#37308]  INFO -- : Gene_Sussli              2018-12-14     2019-02-09       28           13261       0                        7                 
+W, [19-07-20 13:06:24#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:06:25#37308]  WARN -- : Gene_Sussli added to Z_Activity_Average
+I, [19-07-20 13:06:32#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:06:32#37308]  INFO -- : Geoff_Wright             2019-01-20     2019-01-13       3            760         0                        4                 
+W, [19-07-20 13:06:33#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:06:35#37308]  WARN -- : Geoff_Wright added to z_Activity_Inactive
+I, [19-07-20 13:06:45#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:06:45#37308]  INFO -- : Graham_Howe              2018-09-24                      0            80          0                                          
+W, [19-07-20 13:06:46#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:06:47#37308]  WARN -- : Graham_Howe added to z_Activity_Inactive
+I, [19-07-20 13:06:54#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:06:54#37308]  INFO -- : Greg_Thayer              2019-03-15     2019-07-09       5            626         0                        2                 
+W, [19-07-20 13:06:55#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:06:56#37308]  WARN -- : Greg_Thayer added to z_Activity_Inactive
+I, [19-07-20 13:07:03#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:07:03#37308]  INFO -- : Howard_Bailey            2019-01-18     2019-01-11       0            252         0                                          
+W, [19-07-20 13:07:04#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:07:05#37308]  WARN -- : Howard_Bailey added to z_Activity_Inactive
+I, [19-07-20 13:07:12#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:07:12#37308]  INFO -- : How_Shaw                 2017-09-13     2019-02-08       0            0           0                                          
+W, [19-07-20 13:07:13#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:07:14#37308]  WARN -- : How_Shaw added to z_Activity_Inactive
+I, [19-07-20 13:07:21#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:07:21#37308]  INFO -- : Ian_Wilkes               2019-07-19     2019-07-15       34           26105       8610                     12                
+W, [19-07-20 13:07:22#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:07:23#37308]  WARN -- : Ian_Wilkes added to z_Activity_Active
+I, [19-07-20 13:07:34#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:07:34#37308]  INFO -- : Jack_McInerney           2019-07-20     2019-07-19       206          308770      36786                    24                
+W, [19-07-20 13:07:35#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:07:36#37308]  WARN -- : Jack_McInerney added to z_Activity_Active
+I, [19-07-20 13:07:43#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:07:43#37308]  INFO -- : Jack_Shannon             2018-02-18     2019-07-12       2            42          0                        0                 
+W, [19-07-20 13:07:44#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:07:45#37308]  WARN -- : Jack_Shannon added to z_Activity_Inactive
+I, [19-07-20 13:07:52#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:07:52#37308]  INFO -- : James_Fitzgerald         2019-06-08     2019-04-20       0            34469       182                                        
+W, [19-07-20 13:07:53#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:07:54#37308]  WARN -- : James_Fitzgerald added to Z_Activity_Average
+I, [19-07-20 13:08:01#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:08:01#37308]  INFO -- : James_Grubinskas         2019-07-19     2019-07-15       106          51714       20166                    8                 
+W, [19-07-20 13:08:02#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:08:04#37308]  WARN -- : James_Grubinskas added to z_Activity_Active
+I, [19-07-20 13:08:10#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:08:10#37308]  INFO -- : James_McKeefery          2019-03-02                      0            625         0                                          
+W, [19-07-20 13:08:11#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:08:13#37308]  WARN -- : James_McKeefery added to z_Activity_Inactive
+W, [19-07-20 13:08:18#37308]  WARN -- : TooManyRequests: Sleeping for 30 seconds ....
+I, [19-07-20 13:08:51#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:08:51#37308]  INFO -- : Janos_Keresztes          2019-03-23     2019-05-04       0            21          0                                          
+W, [19-07-20 13:08:52#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:08:53#37308]  WARN -- : Janos_Keresztes added to z_Activity_Inactive
+I, [19-07-20 13:09:03#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:09:03#37308]  INFO -- : Jay_Larrick              2019-07-03     2019-07-01       13           3587        0                        4                 
+W, [19-07-20 13:09:04#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:09:05#37308]  WARN -- : Jay_Larrick added to z_Activity_Email
+I, [19-07-20 13:09:12#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:09:12#37308]  INFO -- : Jeff_Cintas              2019-04-11     2019-01-31       37           40372       0                        18                
+W, [19-07-20 13:09:13#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:09:15#37308]  WARN -- : Jeff_Cintas added to z_Activity_Active
+I, [19-07-20 13:09:21#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:09:21#37308]  INFO -- : Jeff_Colvin              2019-03-15     2019-04-08       5            1727        0                        5                 
+W, [19-07-20 13:09:23#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:09:24#37308]  WARN -- : Jeff_Colvin added to z_Activity_Inactive
+I, [19-07-20 13:09:31#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:09:31#37308]  INFO -- : Jeff_Klay                2019-07-20     2019-06-04       7            3844        122                      9                 
+W, [19-07-20 13:09:32#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:09:33#37308]  WARN -- : Jeff_Klay added to Z_Activity_Average
+I, [19-07-20 13:09:43#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:09:43#37308]  INFO -- : Jerry_Raitzer            2019-06-05     2019-05-27       4            5744        405                      23                
+W, [19-07-20 13:09:44#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:09:46#37308]  WARN -- : Jerry_Raitzer added to Z_Activity_Average
+I, [19-07-20 13:09:53#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:09:53#37308]  INFO -- : Jerry_Strebig            2019-07-16     2019-07-18       222          12944       4915                     0                 
+W, [19-07-20 13:09:54#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:09:55#37308]  WARN -- : Jerry_Strebig added to z_Activity_Active
+I, [19-07-20 13:10:02#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:10:02#37308]  INFO -- : Jim_Charley              2019-07-20     2019-07-20       339          168943      112                      8                 
+W, [19-07-20 13:10:03#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:10:04#37308]  WARN -- : Jim_Charley added to z_Activity_Active
+I, [19-07-20 13:10:11#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:10:11#37308]  INFO -- : Jim_Georgiou             2019-06-20     2019-04-22       89           93839       101                      17                
+W, [19-07-20 13:10:12#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:10:13#37308]  WARN -- : Jim_Georgiou added to z_Activity_Active
+I, [19-07-20 13:10:20#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:10:20#37308]  INFO -- : Jim_Knapp                2019-07-02     2019-07-20       185          5250        1213                     0                 
+W, [19-07-20 13:10:21#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:10:23#37308]  WARN -- : Jim_Knapp added to z_Activity_Email
+I, [19-07-20 13:10:30#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:10:30#37308]  INFO -- : Jim_Leney                2019-02-16     2019-04-26       26           6219        0                        3                 
+W, [19-07-20 13:10:31#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:10:32#37308]  WARN -- : Jim_Leney added to Z_Activity_Average
+I, [19-07-20 13:10:42#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:10:42#37308]  INFO -- : Joe_Sabolefski           2019-07-20     2019-07-19       201          319997      12024                    26                
+W, [19-07-20 13:10:43#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:10:45#37308]  WARN -- : Joe_Sabolefski added to z_Activity_Active
+I, [19-07-20 13:10:55#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:10:55#37308]  INFO -- : John_Bodeau              2019-06-25     2019-06-24       41           3881        264                      1                 
+W, [19-07-20 13:10:56#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:10:57#37308]  WARN -- : John_Bodeau added to z_Activity_Email
+I, [19-07-20 13:11:04#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:11:04#37308]  INFO -- : John_Butler              2019-07-17     2019-07-18       153          6384        197                      0                 
+W, [19-07-20 13:11:05#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:11:06#37308]  WARN -- : John_Butler added to z_Activity_Email
+I, [19-07-20 13:11:13#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:11:13#37308]  INFO -- : John_Doodokyan           2019-07-20     2019-02-04       0            2835        1609                                       
+W, [19-07-20 13:11:14#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:11:16#37308]  WARN -- : John_Doodokyan added to Z_Activity_Average
+I, [19-07-20 13:11:22#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:11:22#37308]  INFO -- : John_Jeffs               2019-04-16                      0            325         0                                          
+W, [19-07-20 13:11:24#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:11:25#37308]  WARN -- : John_Jeffs added to z_Activity_Inactive
+I, [19-07-20 13:11:32#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:11:32#37308]  INFO -- : John_Lasersohn           2019-07-17     2019-07-17       174          36402       2613                     3                 
+W, [19-07-20 13:11:33#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:11:34#37308]  WARN -- : John_Lasersohn added to z_Activity_Active
+I, [19-07-20 13:11:41#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:11:41#37308]  INFO -- : John_Mansperger          2019-07-20     2019-07-19       173          72457       6040                     6                 
+W, [19-07-20 13:11:42#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:11:43#37308]  WARN -- : John_Mansperger added to z_Activity_Active
+I, [19-07-20 13:11:50#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:11:50#37308]  INFO -- : John_Nadler              2019-05-15     2019-05-15       71           25578       0                        6                 
+W, [19-07-20 13:11:51#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:11:53#37308]  WARN -- : John_Nadler added to Z_Activity_Average
+I, [19-07-20 13:12:03#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:12:03#37308]  INFO -- : John_Oberstar            2019-07-20     2019-07-19       41           30511       9339                     12                
+W, [19-07-20 13:12:04#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:12:05#37308]  WARN -- : John_Oberstar added to z_Activity_Active
+I, [19-07-20 13:12:12#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:12:12#37308]  INFO -- : John_Piggott             2019-06-05     2016-07-22       1            607         355                      10                
+W, [19-07-20 13:12:13#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:12:14#37308]  WARN -- : John_Piggott added to z_Activity_Inactive
+I, [19-07-20 13:12:25#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:12:25#37308]  INFO -- : Joseph_Kuo               2019-07-17     2019-06-30       6            5916        2122                     16                
+W, [19-07-20 13:12:26#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:12:27#37308]  WARN -- : Joseph_Kuo added to Z_Activity_Average
+I, [19-07-20 13:12:34#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:12:34#37308]  INFO -- : Juergen_Weltz            2019-06-20     2018-12-05       5            5382        0                        17                
+W, [19-07-20 13:12:35#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:12:36#37308]  WARN -- : Juergen_Weltz added to Z_Activity_Average
+I, [19-07-20 13:12:43#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:12:43#37308]  INFO -- : Keerti_Narayan           2019-06-21     2019-06-21       11           5354        1667                     8                 
+W, [19-07-20 13:12:44#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:12:45#37308]  WARN -- : Keerti_Narayan added to Z_Activity_Average
+I, [19-07-20 13:12:52#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:12:52#37308]  INFO -- : Keith_Britany            2019-03-04     2019-06-17       16           2538        0                        2                 
+W, [19-07-20 13:12:53#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:12:54#37308]  WARN -- : Keith_Britany added to z_Activity_Email
+I, [19-07-20 13:13:01#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:13:01#37308]  INFO -- : Ken_Cahill               2019-07-20     2019-07-18       74           111492      2800                     25                
+W, [19-07-20 13:13:02#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:13:04#37308]  WARN -- : Ken_Cahill added to z_Activity_Active
+I, [19-07-20 13:13:14#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:13:14#37308]  INFO -- : Ken_Krantz               2019-04-21     2018-10-19       0            1048        0                                          
+W, [19-07-20 13:13:15#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:13:16#37308]  WARN -- : Ken_Krantz added to z_Activity_Inactive
+I, [19-07-20 13:13:27#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:13:27#37308]  INFO -- : Kim_Miller               2019-07-20     2019-07-20       1792         790818      63166                    7                 
+W, [19-07-20 13:13:28#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:13:29#37308]  WARN -- : Kim_Miller added to z_Activity_Active
+I, [19-07-20 13:13:36#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:13:36#37308]  INFO -- : Konrad_Thaler            2019-07-20     2019-07-20       90           45842       4591                     8                 
+W, [19-07-20 13:13:37#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:13:38#37308]  WARN -- : Konrad_Thaler added to z_Activity_Active
+I, [19-07-20 13:13:45#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:13:45#37308]  INFO -- : Krishna_Yetchina         2019-07-18     2019-06-27       116          155644      2443                     22                
+W, [19-07-20 13:13:47#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:13:48#37308]  WARN -- : Krishna_Yetchina added to z_Activity_Active
+I, [19-07-20 13:13:58#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:13:58#37308]  INFO -- : Lars_Rider               2018-01-05     2019-07-13       170          7014        0                        0                 
+W, [19-07-20 13:13:59#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:14:00#37308]  WARN -- : Lars_Rider added to z_Activity_Email
+I, [19-07-20 13:14:07#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:14:07#37308]  INFO -- : Laurence_Kuhn            2019-07-20     2019-07-01       118          17831       5544                     2                 
+W, [19-07-20 13:14:08#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:14:10#37308]  WARN -- : Laurence_Kuhn added to z_Activity_Active
+I, [19-07-20 13:14:16#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:14:16#37308]  INFO -- : Lee_Wheeler              2019-07-16     2019-07-19       97           58122       2502                     9                 
+W, [19-07-20 13:14:18#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:14:19#37308]  WARN -- : Lee_Wheeler added to z_Activity_Active
+I, [19-07-20 13:14:29#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:14:29#37308]  INFO -- : Madon_Snell              2019-06-04     2019-05-20       0            1416        41                                         
+W, [19-07-20 13:14:30#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:14:31#37308]  WARN -- : Madon_Snell added to z_Activity_Inactive
+I, [19-07-20 13:14:38#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:14:38#37308]  INFO -- : Marco_Milletti           2019-06-13     2018-10-11       0            13121       381                                        
+W, [19-07-20 13:14:39#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:14:40#37308]  WARN -- : Marco_Milletti added to Z_Activity_Average
+I, [19-07-20 13:14:47#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:14:47#37308]  INFO -- : Mark_Habberley           2019-06-04     2018-04-25       3            1021        0                        5                 
+W, [19-07-20 13:14:48#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:14:49#37308]  WARN -- : Mark_Habberley added to z_Activity_Inactive
+I, [19-07-20 13:14:56#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:14:56#37308]  INFO -- : Mark_Reinheimer          2019-05-29     2019-05-31       53           32914       68                       10                
+W, [19-07-20 13:14:57#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:14:58#37308]  WARN -- : Mark_Reinheimer added to Z_Activity_Average
+I, [19-07-20 13:15:05#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:15:05#37308]  INFO -- : Mark_Thorpe              2019-07-19     2019-07-19       375          238485      10166                    10                
+W, [19-07-20 13:15:07#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:15:08#37308]  WARN -- : Mark_Thorpe added to z_Activity_Active
+I, [19-07-20 13:15:14#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:15:14#37308]  INFO -- : Marton_Toth              2019-06-27     2019-06-27       4            1030        827                      4                 
+W, [19-07-20 13:15:16#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:15:17#37308]  WARN -- : Marton_Toth added to Z_Activity_Average
+I, [19-07-20 13:15:24#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:15:24#37308]  INFO -- : Marty_Fauth              2019-07-20     2019-07-20       367          145490      18885                    6                 
+W, [19-07-20 13:15:25#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:15:26#37308]  WARN -- : Marty_Fauth added to z_Activity_Active
+I, [19-07-20 13:15:33#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:15:33#37308]  INFO -- : Matthew_Lewsadder        2019-07-05     2019-07-01       122          76394       2828                     10                
+W, [19-07-20 13:15:34#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:15:35#37308]  WARN -- : Matthew_Lewsadder added to z_Activity_Active
+I, [19-07-20 13:15:42#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:15:42#37308]  INFO -- : Matt_Hill                                                0            0           0                                          
+W, [19-07-20 13:15:43#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:15:45#37308]  WARN -- : Matt_Hill added to z_Activity_Inactive
+I, [19-07-20 13:15:58#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:15:58#37308]  INFO -- : Michael_Kahn             2019-07-19     2019-07-08       30           20553       1454                     11                
+W, [19-07-20 13:15:59#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:16:00#37308]  WARN -- : Michael_Kahn added to Z_Activity_Average
+I, [19-07-20 13:16:07#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:16:07#37308]  INFO -- : Michael_Orr              2019-07-19     2019-06-06       106          93803       572                      14                
+W, [19-07-20 13:16:08#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:16:10#37308]  WARN -- : Michael_Orr added to z_Activity_Active
+I, [19-07-20 13:16:16#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:16:16#37308]  INFO -- : Michael_Skowronek        2019-07-14     2019-06-09       11           19367       2873                     29                
+W, [19-07-20 13:16:18#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:16:19#37308]  WARN -- : Michael_Skowronek added to Z_Activity_Average
+I, [19-07-20 13:16:29#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:16:29#37308]  INFO -- : Michael_Wilson           2019-05-29     2019-04-27       29           12441       21                       7                 
+W, [19-07-20 13:16:30#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:16:31#37308]  WARN -- : Michael_Wilson added to Z_Activity_Average
+I, [19-07-20 13:16:38#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:16:38#37308]  INFO -- : Mike_Drilling            2019-07-20     2019-07-19       414          148963      10361                    5                 
+W, [19-07-20 13:16:39#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:16:41#37308]  WARN -- : Mike_Drilling added to z_Activity_Active
+I, [19-07-20 13:16:48#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:16:48#37308]  INFO -- : Mike_Druke               2019-07-08     2019-03-12       6            1137        234                      3                 
+W, [19-07-20 13:16:49#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:16:50#37308]  WARN -- : Mike_Druke added to z_Activity_Email
+I, [19-07-20 13:16:53#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:16:53#37308]  INFO -- : Mike_Ehlers              2019-07-19     2019-07-17       13           14022       1324                     17                
+W, [19-07-20 13:16:54#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:16:56#37308]  WARN -- : Mike_Ehlers added to Z_Activity_Average
+I, [19-07-20 13:17:03#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:17:03#37308]  INFO -- : Mike_Weston              2019-07-09     2019-07-04       37           32882       4854                     14                
+W, [19-07-20 13:17:04#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:17:05#37308]  WARN -- : Mike_Weston added to z_Activity_Active
+I, [19-07-20 13:17:12#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:17:12#37308]  INFO -- : Mike_Wilkins                                             0            0           0                                          
+W, [19-07-20 13:17:13#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:17:14#37308]  WARN -- : Mike_Wilkins added to z_Activity_Inactive
+I, [19-07-20 13:17:21#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:17:21#37308]  INFO -- : Mikhail_Zhidko           2019-07-12     2019-06-20       88           81559       801                      15                
+W, [19-07-20 13:17:22#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:17:23#37308]  WARN -- : Mikhail_Zhidko added to z_Activity_Active
+I, [19-07-20 13:17:30#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:17:30#37308]  INFO -- : Miles_Bradley            2019-07-19     2019-07-19       252          51957       1214                     3                 
+W, [19-07-20 13:17:31#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:17:33#37308]  WARN -- : Miles_Bradley added to z_Activity_Active
+I, [19-07-20 13:17:39#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:17:39#37308]  INFO -- : Mitch_Slomiak            2019-07-18     2019-07-19       159          6018        633                      0                 
+W, [19-07-20 13:17:41#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:17:42#37308]  WARN -- : Mitch_Slomiak added to z_Activity_Email
+I, [19-07-20 13:17:49#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:17:49#37308]  INFO -- : Moe_Rubenzahl            2019-07-20     2019-07-19       951          453306      67810                    7                 
+W, [19-07-20 13:17:50#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:17:51#37308]  WARN -- : Moe_Rubenzahl added to z_Activity_Active
+I, [19-07-20 13:18:05#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:18:05#37308]  INFO -- : Noah_Salzman             2019-07-13     2019-06-20       1            3798        3798                     63                
+W, [19-07-20 13:18:06#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:18:07#37308]  WARN -- : Noah_Salzman added to z_Activity_Active
+I, [19-07-20 13:18:14#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:18:14#37308]  INFO -- : Patrick_Morin            2019-07-13     2018-06-21       1            4283        60                       71                
+W, [19-07-20 13:18:15#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:18:16#37308]  WARN -- : Patrick_Morin added to Z_Activity_Average
+I, [19-07-20 13:18:23#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:18:23#37308]  INFO -- : Paul_Tyner               2019-07-12     2019-06-28       40           43461       2440                     18                
+W, [19-07-20 13:18:24#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:18:25#37308]  WARN -- : Paul_Tyner added to z_Activity_Active
+I, [19-07-20 13:18:32#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:18:32#37308]  INFO -- : Pete_Rabbitt             2019-07-19     2019-07-19       11           9526        1417                     14                
+W, [19-07-20 13:18:33#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:18:35#37308]  WARN -- : Pete_Rabbitt added to Z_Activity_Average
+I, [19-07-20 13:18:41#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:18:41#37308]  INFO -- : Peter_Johnson            2019-03-26     2019-03-25       4            805         0                        3                 
+W, [19-07-20 13:18:42#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:18:44#37308]  WARN -- : Peter_Johnson added to z_Activity_Inactive
+I, [19-07-20 13:18:50#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:18:50#37308]  INFO -- : Peter_Montana            2019-06-28     2018-08-18       19           6150        0                        5                 
+W, [19-07-20 13:18:52#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:18:53#37308]  WARN -- : Peter_Montana added to Z_Activity_Average
+I, [19-07-20 13:19:03#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:19:03#37308]  INFO -- : Philip_Brouwer           2019-07-20     2019-07-17       0            2732        2732                                       
+W, [19-07-20 13:19:04#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:19:05#37308]  WARN -- : Philip_Brouwer added to Z_Activity_Average
+I, [19-07-20 13:19:15#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:19:15#37308]  INFO -- : Randy_Horton             2019-07-19     2019-07-17       315          20583       1797                     1                 
+W, [19-07-20 13:19:17#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:19:18#37308]  WARN -- : Randy_Horton added to z_Activity_Email
+I, [19-07-20 13:19:25#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:19:25#37308]  INFO -- : Ravi_Narra               2018-01-09     2017-12-31       11           7130        0                        10                
+W, [19-07-20 13:19:26#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:19:27#37308]  WARN -- : Ravi_Narra added to Z_Activity_Average
+I, [19-07-20 13:19:34#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:19:34#37308]  INFO -- : Raymond_Miller           2019-02-12                      0            355         0                                          
+W, [19-07-20 13:19:35#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:19:36#37308]  WARN -- : Raymond_Miller added to z_Activity_Inactive
+I, [19-07-20 13:19:43#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:19:43#37308]  INFO -- : Rich_Worthington         2019-07-20     2019-07-18       99           46497       1797                     7                 
+W, [19-07-20 13:19:44#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:19:45#37308]  WARN -- : Rich_Worthington added to z_Activity_Active
+I, [19-07-20 13:19:52#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:19:52#37308]  INFO -- : Rick_Kananen             2019-02-16     2019-07-06       30           534         0                        0                 
+W, [19-07-20 13:19:53#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:19:54#37308]  WARN -- : Rick_Kananen added to z_Activity_Email
+I, [19-07-20 13:20:02#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:20:02#37308]  INFO -- : Robbie_Bow               2019-07-17     2019-07-19       46           31459       1426                     11                
+W, [19-07-20 13:20:03#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:20:04#37308]  WARN -- : Robbie_Bow added to Z_Activity_Average
+I, [19-07-20 13:20:14#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:20:14#37308]  INFO -- : Roger_Chapman            2019-03-08     2019-02-10       11           1864        0                        2                 
+W, [19-07-20 13:20:15#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:20:16#37308]  WARN -- : Roger_Chapman added to z_Activity_Email
+I, [19-07-20 13:20:23#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:20:23#37308]  INFO -- : Ron_McDowell             2018-11-20     2019-03-13       2            274         0                        2                 
+W, [19-07-20 13:20:24#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:20:25#37308]  WARN -- : Ron_McDowell added to z_Activity_Inactive
+I, [19-07-20 13:20:32#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:20:32#37308]  INFO -- : Ron_Tugender             2019-07-19     2018-12-09       68           38792       1032                     9                 
+W, [19-07-20 13:20:33#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:20:35#37308]  WARN -- : Ron_Tugender added to z_Activity_Active
+I, [19-07-20 13:20:42#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:20:42#37308]  INFO -- : Russ_Towne               2019-07-19     2019-07-15       159          17168       3440                     1                 
+W, [19-07-20 13:20:43#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:20:44#37308]  WARN -- : Russ_Towne added to z_Activity_Email
+I, [19-07-20 13:20:51#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:20:51#37308]  INFO -- : Ryan_Hyer                2019-07-19     2019-07-19       611          420753      28240                    11                
+W, [19-07-20 13:20:52#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:20:53#37308]  WARN -- : Ryan_Hyer added to z_Activity_Active
+I, [19-07-20 13:21:00#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:21:00#37308]  INFO -- : Samyeer_Metrani          2019-07-15     2019-07-19       16           777         336                      0                 
+W, [19-07-20 13:21:01#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:21:02#37308]  WARN -- : Samyeer_Metrani added to z_Activity_Email
+I, [19-07-20 13:21:09#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:21:09#37308]  INFO -- : Sanjeev_Balarajan        2019-07-18     2019-07-18       141          126457      3389                     14                
+W, [19-07-20 13:21:10#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:21:12#37308]  WARN -- : Sanjeev_Balarajan added to z_Activity_Active
+I, [19-07-20 13:21:18#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:21:18#37308]  INFO -- : Sanjeev_Sanghera         2019-07-18     2019-05-01       20           30240       1523                     25                
+W, [19-07-20 13:21:19#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:21:21#37308]  WARN -- : Sanjeev_Sanghera added to Z_Activity_Average
+I, [19-07-20 13:21:28#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:21:28#37308]  INFO -- : Save_Torquato            2019-07-01     2019-07-15       14           2330        1565                     2                 
+W, [19-07-20 13:21:29#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:21:30#37308]  WARN -- : Save_Torquato added to z_Activity_Email
+I, [19-07-20 13:21:37#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:21:37#37308]  INFO -- : Scott_StGermain          2019-07-16     2019-07-16       123          62296       4153                     8                 
+W, [19-07-20 13:21:38#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:21:39#37308]  WARN -- : Scott_StGermain added to z_Activity_Active
+I, [19-07-20 13:21:46#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:21:46#37308]  INFO -- : Shane_Reed               2019-07-12                      0            1025        261                                        
+W, [19-07-20 13:21:47#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:21:48#37308]  WARN -- : Shane_Reed added to z_Activity_Inactive
+I, [19-07-20 13:21:55#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:21:55#37308]  INFO -- : S_James_Biggs            2019-07-14     2019-07-15       58           14938       422                      4                 
+W, [19-07-20 13:21:56#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:21:57#37308]  WARN -- : S_James_Biggs added to Z_Activity_Average
+I, [19-07-20 13:22:04#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:22:04#37308]  INFO -- : Sridhar_Ramanathan       2019-07-19     2019-07-19       38           14482       1007                     6                 
+W, [19-07-20 13:22:05#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:22:07#37308]  WARN -- : Sridhar_Ramanathan added to Z_Activity_Average
+I, [19-07-20 13:22:14#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   

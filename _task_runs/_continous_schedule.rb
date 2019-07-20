@@ -51,6 +51,32 @@ schedule_options = {
             allowed_levels:         0,                # Default: 0
             set_level:              0,                # Default: 0
             excludes:               %w()
+        },
+        activity_groupping:                              {
+            active_user: {
+                do_task_update:         true,
+                allowed_levels:          130,
+                set_level:               130,
+                excludes:               %w()
+            },
+            average_user: {
+                do_task_update:         true,
+                allowed_levels:          133,
+                set_level:               133,
+                excludes:               %w()
+            },
+            email_user: {
+                do_task_update:         true,
+                allowed_levels:          131,
+                set_level:               131,
+                excludes:               %w()
+            },
+            inactive_user: {
+                do_task_update:         true,
+                allowed_levels:          132,
+                set_level:               132,
+                excludes:               %w()
+            }
         }
     },
     user_scores: {
