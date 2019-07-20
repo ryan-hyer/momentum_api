@@ -46,6 +46,16 @@ schedule_options = {
         }
     },
     user:{
+        preferences:                              {
+            user_option: {
+                email_messages_level: {
+                    do_task_update:         true,
+                    allowed_levels:         0,
+                    set_level:              0,
+                    excludes:               %w()
+                }
+            }
+        },
         downgrade_non_owner_trust:                {
             do_task_update:         false,            # false = list but do not downgrade trust level
             allowed_levels:         0,                # Default: 0
@@ -116,45 +126,3 @@ end
 
 scan_hourly
 @discourse.scan_summary
-
-# Jun 25, 2019
-# Scanning ["trust_level_1"] Users for Tasks
-# Scanning ["trust_level_1"] Users for Tasks
-# CategoryUser       Group                Category             Level      Status
-# Andrew_Webster     Owner                Meta                   1        NOT Watching
-# {"success"=>"OK"}
-# Updated Category: Meta    Notification Level: 4
-# Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level
-# Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 1
-# Brad_Fino Updated
-# Non Owner          last_seen_at   last_posted_at   post_count   time_read    recent_time_read  trust_level
-# Brad_Fino          2018-03-09     2018-01-08       16           4936         0                 0
-# CategoryUser       Group                Category             Level      Status
-# Clay_Campbell      RightStuff           RightStuff             1        NOT Watching
-# {"success"=>"OK"}
-# Updated Category: RightStuff    Notification Level: 3
-# GroupUser          Group                Category             Level      Status
-# David_Ashby        moderators           na                     2        NOT Group Default of 3
-# {"success"=>"OK"}
-# Updated Group: moderators    Notification Level: 3    Set Level: 3
-# GroupUser          Group                Category             Level      Status
-# David_Ashby        staff                na                     2        NOT Group Default of 3
-# {"success"=>"OK"}
-# Updated Group: staff    Notification Level: 3    Set Level: 3
-# CategoryUser       Group                Category             Level      Status
-# Ian_Wilkes         Council25            Council25              1        NOT Watching
-# {"success"=>"OK"}
-# Updated Category: Council25    Notification Level: 3
-# GroupUser          Group                Category             Level      Status
-# Mike_Drilling      admins               na                     2        NOT Group Default of 3
-# {"success"=>"OK"}
-# Updated Group: admins    Notification Level: 3    Set Level: 3
-# GroupUser          Group                Category             Level      Status
-# Mike_Drilling      staff                na                     2        NOT Group Default of 3
-# {"success"=>"OK"}
-# Updated Group: staff    Notification Level: 3    Set Level: 3
-# GroupUser          Group                Category             Level      Status
-# Tim_Tannatt        BraveHearts          na                     2        NOT Group Default of 3
-# {"success"=>"OK"}
-# Updated Group: BraveHearts    Notification Level: 3    Set Level: 3
-# Scanning User:  166 
