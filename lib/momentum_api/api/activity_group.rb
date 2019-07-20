@@ -38,7 +38,7 @@ module MomentumApi
         end
       end
 
-      if @options       # Active Users (60 * 60) = 1 hour   recent_time_read = last 60 days
+      if @options
 
         if @schedule.discourse.options[:issue_users].include?(man.user_details['username'])
           puts "#{man.user_details['username']} in ActivityGroup"
@@ -51,7 +51,7 @@ module MomentumApi
           read_post_ratio = (man.user_details['time_read'] / 60) / man.user_details['post_count']
         end
 
-        if @options[:active_user] and
+        if @options[:active_user] and        # Active Users (60 * 60) = 1 hour   recent_time_read = last 60 days
             (man.user_details['time_read'] > 10 * (60 * 60) or man.user_details['recent_time_read'] > 1 * (60 * 60))
 
           if @options[:active_user][:do_task_update]
