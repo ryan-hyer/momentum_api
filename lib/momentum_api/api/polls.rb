@@ -108,7 +108,7 @@ module MomentumApi
       # message_body = eval(message_body('not_voted_message.txt'))
       message_body = eval(message_body('not_voted_message_3.txt'))
       @message_client.send_private_message(@man, message_body, message_subject)
-      sleep 2   # mass emails can easily trigger TooManyRequests
+      @mock ? sleep(0) : sleep(2) # mass emails can easily trigger TooManyRequests
     end
 
     def score_voter(poll, poll_option_votes)

@@ -10137,3 +10137,55 @@ I, [19-07-20 13:22:04#37308]  INFO -- : Sridhar_Ramanathan       2019-07-19     
 W, [19-07-20 13:22:05#37308]  WARN -- : Added man to Group 133: 
 W, [19-07-20 13:22:07#37308]  WARN -- : Sridhar_Ramanathan added to Z_Activity_Average
 I, [19-07-20 13:22:14#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:22:14#37308]  INFO -- : Stefan_Schmitz           2019-07-20     2019-07-20       84           131196      18011                    26                
+W, [19-07-20 13:22:15#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:22:16#37308]  WARN -- : Stefan_Schmitz added to z_Activity_Active
+I, [19-07-20 13:22:30#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:22:30#37308]  INFO -- : Steve_Cross              2019-07-20     2019-07-19       77           6277        707                      1                 
+W, [19-07-20 13:22:31#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:22:32#37308]  WARN -- : Steve_Cross added to z_Activity_Email
+I, [19-07-20 13:22:39#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:22:39#37308]  INFO -- : Steve_Fitzsimons         2019-07-01     2019-07-19       181          3859        20                       0                 
+W, [19-07-20 13:22:40#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:22:41#37308]  WARN -- : Steve_Fitzsimons added to z_Activity_Email
+I, [19-07-20 13:22:55#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:22:55#37308]  INFO -- : Steve_Scott              2019-07-20     2019-07-20       2014         1851246     77045                    15                
+W, [19-07-20 13:22:56#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:22:57#37308]  WARN -- : Steve_Scott added to z_Activity_Active
+I, [19-07-20 13:23:04#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:23:04#37308]  INFO -- : Suhas_Chelian            2019-07-19     2019-07-19       54           24535       11498                    7                 
+W, [19-07-20 13:23:05#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:23:06#37308]  WARN -- : Suhas_Chelian added to z_Activity_Active
+I, [19-07-20 13:23:13#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:23:13#37308]  INFO -- : Tesh_Tesfaye             2018-09-13     2019-05-20       2            567         0                        4                 
+W, [19-07-20 13:23:14#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:23:16#37308]  WARN -- : Tesh_Tesfaye added to z_Activity_Inactive
+I, [19-07-20 13:23:26#37308]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:23:26#37308]  INFO -- : Tim_Tannatt              2019-07-20     2019-07-19       13           12234       4908                     15                
+W, [19-07-20 13:23:27#37308]  WARN -- : Added man to Group 130: 
+W, [19-07-20 13:23:28#37308]  WARN -- : Tim_Tannatt added to z_Activity_Active
+I, [19-07-20 13:23:38#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:23:38#37308]  INFO -- : Tom_Feasby               2019-07-04     2019-07-16       198          27744       2381                     2                 
+W, [19-07-20 13:23:40#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:23:41#37308]  WARN -- : Tom_Feasby added to z_Activity_Email
+I, [19-07-20 13:23:51#37308]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:23:51#37308]  INFO -- : Tony_Christopher         2019-07-20     2019-05-30       44           27130       646                      10                
+W, [19-07-20 13:23:52#37308]  WARN -- : Added man to Group 133: 
+W, [19-07-20 13:23:53#37308]  WARN -- : Tony_Christopher added to Z_Activity_Average
+I, [19-07-20 13:24:00#37308]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:24:00#37308]  INFO -- : Tony_Pogue               2019-06-10     2018-03-13       0            394         394                                        
+W, [19-07-20 13:24:01#37308]  WARN -- : Added man to Group 132: 
+W, [19-07-20 13:24:02#37308]  WARN -- : Tony_Pogue added to z_Activity_Inactive
+I, [19-07-20 13:24:16#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:24:16#37308]  INFO -- : Vern_Mcgeorge            2019-03-21     2018-11-14       11           2032        0                        3                 
+W, [19-07-20 13:24:17#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:24:18#37308]  WARN -- : Vern_Mcgeorge added to z_Activity_Email
+I, [19-07-20 13:24:25#37308]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-20 13:24:25#37308]  INFO -- : William_Burton           2019-03-15     2019-06-07       26           1089        0                        0                 
+W, [19-07-20 13:24:26#37308]  WARN -- : Added man to Group 131: 
+W, [19-07-20 13:24:27#37308]  WARN -- : William_Burton added to z_Activity_Email
+I, [19-07-20 13:24:27#37308]  INFO -- : Pass 1 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-20 13:50:47#37308]  INFO -- : Pass 2 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-20 14:17:07#37308]  INFO -- : Pass 3 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-20 14:43:27#37308]  INFO -- : Pass 4 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-20 15:09:48#37308]  INFO -- : Pass 5 complete for 207 users, 0 skipped. Waiting 5 minutes ...
