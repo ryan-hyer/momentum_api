@@ -4,6 +4,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([SimpleCov::Forma
 
 SimpleCov.start do
   add_filter "/spec/"
+  add_filter "/lib/momentum_api/api/activity.rb"  # changes constantly
 end
 
 require 'momentum_api'

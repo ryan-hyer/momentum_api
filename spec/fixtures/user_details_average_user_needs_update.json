@@ -399,7 +399,7 @@
     {
       "id": 130,
       "automatic": false,
-      "name": "z_Activity_Active",
+      "name": "z_Activity_A",
       "user_count": 11,
       "mentionable_level": 0,
       "messageable_level": 0,
@@ -407,7 +407,7 @@
       "automatic_membership_email_domains": "",
       "automatic_membership_retroactive": false,
       "primary_group": false,
-      "title": "z_Activity_Active",
+      "title": "z_Activity_A",
       "grant_trust_level": null,
       "incoming_email": null,
       "has_messages": false,
@@ -420,7 +420,7 @@
       "public_admission": false,
       "public_exit": false,
       "allow_membership_requests": false,
-      "full_name": "z_Activity_Active",
+      "full_name": "z_Activity_A",
       "default_notification_level": 3,
       "membership_request_template": ""
     }

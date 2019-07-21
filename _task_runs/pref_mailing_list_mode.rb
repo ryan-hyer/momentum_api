@@ -20,7 +20,7 @@ schedule_options = {
                     do_task_update:         true,
                     allowed_levels:         false,
                     set_level:              false,
-                    excludes:               %w()
+                    excludes:               %w(David_Kirk)
                 }
             }
         }

@@ -52,7 +52,7 @@ schedule_options = {
                     do_task_update:         true,
                     allowed_levels:         0,
                     set_level:              0,
-                    excludes:               %w()
+                    excludes:               %w(Steve_Scott David_Kirk)
                 }
             }
         },

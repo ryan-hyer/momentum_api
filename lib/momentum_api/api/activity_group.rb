@@ -62,7 +62,7 @@ module MomentumApi
           end
 
         elsif @options[:average_user] and (read_post_ratio ? read_post_ratio > 2 : true) and
-            (man.user_details['time_read'] > 1 * (60 * 60) or man.user_details['recent_time_read'] > 0.2 * (60 * 60))
+            (man.user_details['time_read'] > 1 * (60 * 60) or man.user_details['recent_time_read'] > 0.25 * (60 * 60))
 
           if @options[:average_user][:do_task_update]
             user_label = 'Average Momentum User '
