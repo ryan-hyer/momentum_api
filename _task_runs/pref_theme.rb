@@ -1,10 +1,11 @@
 require_relative 'log/utility'
 require '../lib/momentum_api'
 
-discourse_options = {                         # todo 1. Stamp just acitive group with [4], then 2. Turn Dark to Default
-    do_live_updates:        true,
-    # target_username:        'Jerry_Strebig',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Jerry_Strebig Lee_Wheeler
-    target_groups:          %w(trust_level_1),       # Mods GreatX BraveHearts trust_level_1
+discourse_options = {
+    do_live_updates:        false,
+    # target_username:        'Brad_Peppard',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Jerry_Strebig Lee_Wheeler
+    target_groups:          %w(LaunchpadVI),       # Mods GreatX BraveHearts trust_level_1 z_Activity_A Z_Activity_B z_Activity_C
+    include_staged_users:    true,
     instance:               'live',
     api_username:           'KM_Admin',
     exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
@@ -17,11 +18,17 @@ schedule_options = {
         preferences:                              {
             user_option: {
                 theme_ids: {
-                    do_task_update:         false,
+                    do_task_update:         true,
                     allowed_levels:         [10],  # [10] = Dark, [4] = Light
                     set_level:              [4],  # [10] = Dark, [4] = Light
                     excludes:               %w(Ryan_Hyer Steve_Scott David_Kirk)
-                }
+                },
+                # theme_key_seq: {            # does not seem to allow update even when turned on in the update_user method
+                #     do_task_update:         false,
+                #     allowed_levels:         [1,2,3,4,5,6,7,8,9,10],  # [0] = Use Default, > 0 = Lock to existing
+                #     set_level:              99,
+                #     excludes:               %w(Ryan_Hyer Steve_Scott David_Kirk)
+                # }
             }
         }
     }

@@ -125,10 +125,7 @@ module MomentumApi
         end
 
       end
-
       counters[:time_read]          += man.user_details['time_read']
-      # counters[:'time_read Count']  += 1
-
     end
 
     private
@@ -136,7 +133,6 @@ module MomentumApi
     def zero_notifications_counters
       counters[:'User Activity Groupping']                  =   0
       counters[:time_read]                                  =   0
-      # counters[:'time_read Count']                          =   0
       counters[:'Active User Count']                        =   0
       counters[:'Average User Count']                       =   0
       counters[:'Email User Count']                         =   0

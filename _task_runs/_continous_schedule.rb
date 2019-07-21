@@ -121,7 +121,6 @@ end
 
 @discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
 
-# printf "\n%s\n\n", "#{Time.now.strftime('%y%m%d%H%M')} Starting Scan ..."
 @discourse.options[:logger].info "Scanning #{@discourse.options[:target_groups]} Users for Tasks"
 
 scan_hourly
