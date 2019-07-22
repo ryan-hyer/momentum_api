@@ -8,6 +8,7 @@ discourse_options = {
     # target_username:                'Kim_Miller',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby KM_Admin
     target_groups:                  %w(trust_level_0),   # Mods GreatX BraveHearts trust_level_0 trust_level_1
     include_staged_users:           true,
+    minutes_between_scans:          5,
     instance:                       'live',
     api_username:                   'KM_Admin',
     exclude_users:                  %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
@@ -95,7 +96,7 @@ schedule_options = {
         # target_polls:             %w(poll),  # testing was version_two
         poll_url:                   'https://discourse.gomomentum.org/t/what-s-your-score/7104',
         messages_from:              'Kim_Miller',
-        excludes:                   %w(Mike_Ehlers)
+        excludes:                   %w()
     }
 }
 
@@ -106,16 +107,15 @@ def scan_hourly
 
   @discourse.apply_to_users
   @scan_passes += 1
-  sleep_minutes = 5
-  @discourse.options[:logger].info "Pass #{@scan_passes} complete for #{@discourse.counters[:'Processed Users']} users, #{@discourse.counters[:'Skipped Users']} skipped. Waiting #{sleep_minutes} minutes ..."
-  sleep sleep_minutes * 60
+  @discourse.options[:logger].info "Pass #{@scan_passes} complete for #{@discourse.counters[:'Processed Users']} users, #{@discourse.counters[:'Skipped Users']} skipped. Waiting #{@discourse.options[:minutes_between_scans]} minutes ..."
+  sleep @discourse.options[:minutes_between_scans] * 60
 
   if @scan_passes < @scan_passes_end or @scan_passes_end < 0
     @discourse.counters[:'Processed Users'], @discourse.counters[:'Skipped Users'] = 0, 0
     begin
       scan_hourly
-    rescue          # Recovers from any crash?
-      @discourse.options[:logger].warn 'Scan Level Rescue: Sleeping for 90 minutes ....'
+    rescue Exception => exception       # Recovers from any crash since Jul 22, 2019?
+      @discourse.options[:logger].warn "Scan Level Exception Rescue type #{exception.class}, #{exception.message}: Sleeping for 90 minutes ...."
       sleep 90 * 60
       scan_hourly
     end
