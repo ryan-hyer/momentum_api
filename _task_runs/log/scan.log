@@ -11116,3 +11116,282 @@ I, [19-07-21 14:15:36#78671]  INFO -- : Messages Sent                       0
 I, [19-07-21 14:15:36#78671]  INFO -- : User Preferences                    0                   
 I, [19-07-21 14:15:36#78671]  INFO -- : User Preference Targets             1                   
 I, [19-07-21 14:15:36#78671]  INFO -- : User Preference Updated             0                   
+I, [19-07-21 14:08:00#77708]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-07-21 14:08:28#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:08:28#77708]  INFO -- : Andrew_M_Webster         2019-04-28     2019-04-28       29           8563        0                        4                 
+W, [19-07-21 14:08:29#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:08:30#77708]  WARN -- : Andrew_M_Webster added to Z_Activity_B
+I, [19-07-21 14:08:38#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:08:38#77708]  INFO -- : Andrew_Webster           2019-07-12     2019-04-13       56           21148       559                      6                 
+W, [19-07-21 14:08:39#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:08:40#77708]  WARN -- : Andrew_Webster added to Z_Activity_B
+I, [19-07-21 14:08:54#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:08:54#77708]  INFO -- : Antonio_Martinez         2019-07-20     2019-07-01       21           7376        692                      5                 
+W, [19-07-21 14:08:55#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:08:56#77708]  WARN -- : Antonio_Martinez added to Z_Activity_B
+I, [19-07-21 14:09:31#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:09:31#77708]  INFO -- : Bill_Herndon             2019-07-21     2019-07-16       23           14722       2978                     10                
+W, [19-07-21 14:09:32#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:09:33#77708]  WARN -- : Bill_Herndon added to Z_Activity_B
+I, [19-07-21 14:09:40#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:09:40#77708]  INFO -- : Bill_Sprague             2019-07-21                      0            4631        2315                                       
+W, [19-07-21 14:09:41#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:09:43#77708]  WARN -- : Bill_Sprague added to Z_Activity_B
+I, [19-07-21 14:11:34#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:11:34#77708]  INFO -- : Chris_Reed               2019-07-19     2019-07-21       45           13377       2351                     4                 
+W, [19-07-21 14:11:35#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:11:36#77708]  WARN -- : Chris_Reed added to Z_Activity_B
+I, [19-07-21 14:12:08#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:12:08#77708]  INFO -- : Clark_Zhang              2019-07-21     2019-01-10       20           5924        102                      4                 
+W, [19-07-21 14:12:09#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:12:10#77708]  WARN -- : Clark_Zhang added to Z_Activity_B
+I, [19-07-21 14:12:35#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:12:35#77708]  INFO -- : Curt_Haynes              2019-06-08     2018-05-02       17           3750        0                        3                 
+W, [19-07-21 14:12:36#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:12:37#77708]  WARN -- : Curt_Haynes added to Z_Activity_B
+I, [19-07-21 14:12:51#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:12:51#77708]  INFO -- : Dainuri                  2019-06-03     2019-04-20       8            14454       481                      30                
+W, [19-07-21 14:12:52#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:12:54#77708]  WARN -- : Dainuri added to Z_Activity_B
+I, [19-07-21 14:13:22#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:13:22#77708]  INFO -- : Dave_Mussoff             2019-07-02     2019-06-11       22           15400       747                      11                
+W, [19-07-21 14:13:23#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:13:24#77708]  WARN -- : Dave_Mussoff added to Z_Activity_B
+I, [19-07-21 14:14:54#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:14:54#77708]  INFO -- : Doug_Greig               2019-06-22     2019-07-18       32           10707       586                      5                 
+W, [19-07-21 14:14:55#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:14:56#77708]  WARN -- : Doug_Greig added to Z_Activity_B
+W, [19-07-21 14:15:17#77708]  WARN -- : TooManyRequests: Sleeping for 20 seconds ....
+I, [19-07-21 14:16:41#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:16:41#77708]  INFO -- : Gene_Sussli              2018-12-14     2019-02-09       28           13261       0                        7                 
+W, [19-07-21 14:16:42#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:16:43#77708]  WARN -- : Gene_Sussli added to Z_Activity_B
+I, [19-07-21 14:17:52#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:17:52#77708]  INFO -- : James_Fitzgerald         2019-06-08     2019-04-20       0            34469       182                                        
+W, [19-07-21 14:17:53#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:17:54#77708]  WARN -- : James_Fitzgerald added to Z_Activity_B
+I, [19-07-21 14:18:46#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:18:46#77708]  INFO -- : Jeff_Klay                2019-07-20     2019-06-04       7            3844        122                      9                 
+W, [19-07-21 14:18:47#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:18:48#77708]  WARN -- : Jeff_Klay added to Z_Activity_B
+I, [19-07-21 14:18:58#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:18:58#77708]  INFO -- : Jerry_Raitzer            2019-06-05     2019-05-27       4            5744        405                      23                
+W, [19-07-21 14:18:59#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:19:00#77708]  WARN -- : Jerry_Raitzer added to Z_Activity_B
+I, [19-07-21 14:19:35#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:19:35#77708]  INFO -- : Jim_Leney                2019-02-16     2019-04-26       26           6219        0                        3                 
+W, [19-07-21 14:19:36#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:19:38#77708]  WARN -- : Jim_Leney added to Z_Activity_B
+I, [19-07-21 14:20:12#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:20:12#77708]  INFO -- : John_Doodokyan           2019-07-20     2019-02-04       0            2835        1609                                       
+W, [19-07-21 14:20:14#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:20:15#77708]  WARN -- : John_Doodokyan added to Z_Activity_B
+I, [19-07-21 14:21:10#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:21:10#77708]  INFO -- : Joseph_Kuo               2019-07-17     2019-06-30       6            5916        2122                     16                
+W, [19-07-21 14:21:11#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:21:13#77708]  WARN -- : Joseph_Kuo added to Z_Activity_B
+I, [19-07-21 14:21:20#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:21:20#77708]  INFO -- : Juergen_Weltz            2019-06-20     2018-12-05       5            5382        0                        17                
+W, [19-07-21 14:21:21#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:21:22#77708]  WARN -- : Juergen_Weltz added to Z_Activity_B
+I, [19-07-21 14:21:29#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:21:29#77708]  INFO -- : Keerti_Narayan           2019-06-21     2019-06-21       11           5354        1667                     8                 
+W, [19-07-21 14:21:30#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:21:31#77708]  WARN -- : Keerti_Narayan added to Z_Activity_B
+I, [19-07-21 14:23:01#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:23:01#77708]  INFO -- : Marco_Milletti           2019-06-13     2018-10-11       0            13121       381                                        
+W, [19-07-21 14:23:02#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:23:03#77708]  WARN -- : Marco_Milletti added to Z_Activity_B
+I, [19-07-21 14:26:03#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:26:03#77708]  INFO -- : Pete_Rabbitt             2019-07-19     2019-07-19       11           9526        1349                     14                
+W, [19-07-21 14:26:04#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:26:05#77708]  WARN -- : Pete_Rabbitt added to Z_Activity_B
+I, [19-07-21 14:26:29#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:26:29#77708]  INFO -- : Philip_Brouwer           2019-07-21     2019-07-17       0            2883        2883                                       
+W, [19-07-21 14:26:30#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:26:31#77708]  WARN -- : Philip_Brouwer added to Z_Activity_B
+I, [19-07-21 14:26:48#77708]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 14:26:48#77708]  INFO -- : Ravi_Narra               2018-01-09     2017-12-31       11           7130        0                        10                
+W, [19-07-21 14:26:49#77708]  WARN -- : Added man to Group 133: 
+W, [19-07-21 14:26:50#77708]  WARN -- : Ravi_Narra added to Z_Activity_B
+I, [19-07-21 14:30:46#77708]  INFO -- : Pass 1 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 14:57:17#77708]  INFO -- : Pass 2 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 15:23:46#77708]  INFO -- : Pass 3 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 15:50:16#77708]  INFO -- : Pass 4 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 16:16:30#81546]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:16:30#81546]  INFO -- : Charlie_Bedard       2019-07-19     2019-07-17       78           12769       1909                  [4]     
+I, [19-07-21 16:16:33#81546]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:16:33#81546]  INFO -- : Christian_Agardi     2017-08-18     2018-12-20       15           1736        0                     [4]     
+I, [19-07-21 16:16:37#81546]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:16:37#81546]  INFO -- : Curt_Weil            2019-07-19     2019-07-20       123          12092       1325                  [4]     
+I, [19-07-21 16:16:40#81546]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:16:40#81546]  INFO -- : Jim_Knapp            2019-07-02     2019-07-20       185          5250        1213                  [4]     
+I, [19-07-21 16:16:43#81546]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:16:43#81546]  INFO -- : John_Butler          2019-07-21     2019-07-21       153          6384        197                   [4]     
+I, [19-07-21 16:16:47#81546]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:16:47#81546]  INFO -- : Mitch_Slomiak        2019-07-18     2019-07-19       159          6018        633                   [4]     
+I, [19-07-21 16:16:50#81546]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:16:50#81546]  INFO -- : Randy_Horton         2019-07-19     2019-07-17       315          20583       1797                  [4]     
+I, [19-07-21 16:16:54#81546]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:16:54#81546]  INFO -- : Russ_Towne           2019-07-19     2019-07-15       159          17168       3440                  [4]     
+I, [19-07-21 16:16:57#81546]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:16:57#81546]  INFO -- : Steve_Cross          2019-07-20     2019-07-19       77           6277        654                   [4]     
+I, [19-07-21 16:17:04#81546]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:17:04#81546]  INFO -- : Tom_Feasby           2019-07-04     2019-07-16       198          27744       2381                  [4]     
+I, [19-07-21 16:17:04#81546]  INFO -- : Discourse Men                                           
+I, [19-07-21 16:17:04#81546]  INFO -- : Processed Users                     11                  
+I, [19-07-21 16:17:04#81546]  INFO -- : Skipped Users                       0                   
+I, [19-07-21 16:17:04#81546]  INFO -- : Messages Sent                       0                   
+I, [19-07-21 16:17:04#81546]  INFO -- : User Preferences                    0                   
+I, [19-07-21 16:17:04#81546]  INFO -- : User Preference Targets             10                  
+I, [19-07-21 16:17:04#81546]  INFO -- : User Preference Updated             0                   
+I, [19-07-21 16:17:20#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:17:20#81985]  INFO -- : Charlie_Bedard       2019-07-19     2019-07-17       78           12769       1909                  [4]     
+W, [19-07-21 16:17:21#81985]  WARN -- : OK
+I, [19-07-21 16:17:21#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:17:21#81985]  INFO -- : Charlie_Bedard       2019-07-19     2019-07-17       78           12769       1909                  [4]     
+I, [19-07-21 16:17:25#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:17:25#81985]  INFO -- : Curt_Weil            2019-07-19     2019-07-20       123          12092       1325                  [4]     
+W, [19-07-21 16:17:26#81985]  WARN -- : OK
+I, [19-07-21 16:17:26#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:17:26#81985]  INFO -- : Curt_Weil            2019-07-19     2019-07-20       123          12092       1325                  [4]     
+I, [19-07-21 16:17:30#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:17:30#81985]  INFO -- : Jim_Knapp            2019-07-02     2019-07-20       185          5250        1213                  [4]     
+W, [19-07-21 16:17:30#81985]  WARN -- : OK
+I, [19-07-21 16:17:31#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:17:31#81985]  INFO -- : Jim_Knapp            2019-07-02     2019-07-20       185          5250        1213                  [4]     
+I, [19-07-21 16:17:35#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:17:35#81985]  INFO -- : John_Butler          2019-07-21     2019-07-21       153          6384        197                   [4]     
+W, [19-07-21 16:17:35#81985]  WARN -- : OK
+I, [19-07-21 16:17:36#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:17:36#81985]  INFO -- : John_Butler          2019-07-21     2019-07-21       153          6384        197                   [4]     
+I, [19-07-21 16:17:40#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:17:40#81985]  INFO -- : Mitch_Slomiak        2019-07-18     2019-07-19       159          6018        633                   [4]     
+W, [19-07-21 16:17:40#81985]  WARN -- : OK
+I, [19-07-21 16:17:41#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:17:41#81985]  INFO -- : Mitch_Slomiak        2019-07-18     2019-07-19       159          6018        633                   [4]     
+I, [19-07-21 16:17:45#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:17:45#81985]  INFO -- : Randy_Horton         2019-07-19     2019-07-17       315          20583       1797                  [4]     
+W, [19-07-21 16:17:45#81985]  WARN -- : OK
+I, [19-07-21 16:17:46#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:17:46#81985]  INFO -- : Randy_Horton         2019-07-19     2019-07-17       315          20583       1797                  [4]     
+I, [19-07-21 16:17:50#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:17:50#81985]  INFO -- : Russ_Towne           2019-07-19     2019-07-15       159          17168       3440                  [4]     
+W, [19-07-21 16:17:50#81985]  WARN -- : OK
+I, [19-07-21 16:17:50#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:17:50#81985]  INFO -- : Russ_Towne           2019-07-19     2019-07-15       159          17168       3440                  [4]     
+I, [19-07-21 16:17:55#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:17:55#81985]  INFO -- : Steve_Cross          2019-07-20     2019-07-19       77           6277        654                   [4]     
+W, [19-07-21 16:17:55#81985]  WARN -- : OK
+I, [19-07-21 16:17:55#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:17:55#81985]  INFO -- : Steve_Cross          2019-07-20     2019-07-19       77           6277        654                   [4]     
+I, [19-07-21 16:18:03#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:18:03#81985]  INFO -- : Tom_Feasby           2019-07-04     2019-07-16       198          27744       2381                  [4]     
+W, [19-07-21 16:18:03#81985]  WARN -- : OK
+I, [19-07-21 16:18:04#81985]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_option", "theme_ids"]    
+I, [19-07-21 16:18:04#81985]  INFO -- : Tom_Feasby           2019-07-04     2019-07-16       198          27744       2381                  [4]     
+I, [19-07-21 16:18:05#81985]  INFO -- : Discourse Men                                           
+I, [19-07-21 16:18:05#81985]  INFO -- : Processed Users                     10                  
+I, [19-07-21 16:18:05#81985]  INFO -- : Skipped Users                       0                   
+I, [19-07-21 16:18:05#81985]  INFO -- : Messages Sent                       0                   
+I, [19-07-21 16:18:05#81985]  INFO -- : User Preferences                    0                   
+I, [19-07-21 16:18:05#81985]  INFO -- : User Preference Targets             9                   
+I, [19-07-21 16:18:05#81985]  INFO -- : User Preference Updated             9                   
+I, [19-07-21 16:19:26#82445]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-07-21 16:21:14#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:21:14#82445]  INFO -- : Bob_Richards             2019-04-24     2018-10-14       8            386         0                        0                 
+W, [19-07-21 16:21:15#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:21:16#82445]  WARN -- : Bob_Richards added to z_Activity_Email
+I, [19-07-21 16:21:30#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:21:30#82445]  INFO -- : Bo_Zhou                  2019-03-13     2019-01-18       6            2569        0                        7                 
+W, [19-07-21 16:21:31#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:21:32#82445]  WARN -- : Bo_Zhou added to z_Activity_Email
+I, [19-07-21 16:21:42#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:21:42#82445]  INFO -- : Brad_Milliken            2019-05-20     2019-07-09       7            181         0                        0                 
+W, [19-07-21 16:21:43#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:21:45#82445]  WARN -- : Brad_Milliken added to z_Activity_Email
+I, [19-07-21 16:23:15#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:23:15#82445]  INFO -- : Christian_Agardi         2017-08-18     2018-12-20       15           1736        0                        1                 
+W, [19-07-21 16:23:16#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:23:17#82445]  WARN -- : Christian_Agardi added to z_Activity_Email
+I, [19-07-21 16:25:18#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:25:18#82445]  INFO -- : David_Mock               2019-07-02     2019-07-19       10           3043        21                       5                 
+W, [19-07-21 16:25:20#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:25:21#82445]  WARN -- : David_Mock added to z_Activity_Email
+I, [19-07-21 16:25:45#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:25:45#82445]  INFO -- : Dennis_Sorensen          2018-04-13     2019-04-08       7            1644        0                        3                 
+W, [19-07-21 16:25:46#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:25:47#82445]  WARN -- : Dennis_Sorensen added to z_Activity_Email
+I, [19-07-21 16:26:01#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:26:01#82445]  INFO -- : Don_Morgan               2019-06-11     2019-07-03       6            730         213                      2                 
+W, [19-07-21 16:26:02#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:26:03#82445]  WARN -- : Don_Morgan added to z_Activity_Email
+I, [19-07-21 16:26:58#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:26:58#82445]  INFO -- : Garry_Cheney             2019-07-04     2019-07-11       90           2061        350                      0                 
+W, [19-07-21 16:26:59#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:27:00#82445]  WARN -- : Garry_Cheney added to z_Activity_Email
+I, [19-07-21 16:29:17#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:29:17#82445]  INFO -- : Jay_Larrick              2019-07-03     2019-07-01       13           3587        0                        4                 
+W, [19-07-21 16:29:18#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:29:20#82445]  WARN -- : Jay_Larrick added to z_Activity_Email
+I, [19-07-21 16:30:47#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:30:47#82445]  INFO -- : John_Bodeau              2019-06-25     2019-06-24       41           3881        264                      1                 
+W, [19-07-21 16:30:48#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:30:49#82445]  WARN -- : John_Bodeau added to z_Activity_Email
+I, [19-07-21 16:32:20#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:32:20#82445]  INFO -- : Keith_Britany            2019-03-04     2019-06-17       16           2538        0                        2                 
+W, [19-07-21 16:32:21#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:32:22#82445]  WARN -- : Keith_Britany added to z_Activity_Email
+I, [19-07-21 16:33:14#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:33:14#82445]  INFO -- : Lars_Rider               2018-01-05     2019-07-13       170          7014        0                        0                 
+W, [19-07-21 16:33:15#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:33:17#82445]  WARN -- : Lars_Rider added to z_Activity_Email
+I, [19-07-21 16:35:28#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:35:28#82445]  INFO -- : Mike_Druke               2019-07-08     2019-03-12       6            1137        234                      3                 
+W, [19-07-21 16:35:30#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:35:31#82445]  WARN -- : Mike_Druke added to z_Activity_Email
+I, [19-07-21 16:37:52#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:37:52#82445]  INFO -- : Rick_Kananen             2019-02-16     2019-07-06       30           534         0                        0                 
+W, [19-07-21 16:37:53#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:37:55#82445]  WARN -- : Rick_Kananen added to z_Activity_Email
+I, [19-07-21 16:38:12#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:38:12#82445]  INFO -- : Roger_Chapman            2019-03-08     2019-02-10       11           1864        0                        2                 
+W, [19-07-21 16:38:13#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:38:14#82445]  WARN -- : Roger_Chapman added to z_Activity_Email
+I, [19-07-21 16:38:49#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:38:49#82445]  INFO -- : Samyeer_Metrani          2019-07-15     2019-07-19       16           777         336                      0                 
+W, [19-07-21 16:38:50#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:38:51#82445]  WARN -- : Samyeer_Metrani added to z_Activity_Email
+I, [19-07-21 16:39:12#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:39:12#82445]  INFO -- : Save_Torquato            2019-07-01     2019-07-15       14           2330        1565                     2                 
+W, [19-07-21 16:39:13#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:39:15#82445]  WARN -- : Save_Torquato added to z_Activity_Email
+I, [19-07-21 16:41:30#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:41:30#82445]  INFO -- : Vern_Mcgeorge            2019-03-21     2018-11-14       11           2032        0                        3                 
+W, [19-07-21 16:41:31#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:41:32#82445]  WARN -- : Vern_Mcgeorge added to z_Activity_Email
+I, [19-07-21 16:41:39#82445]  INFO -- : Email Momentum User      last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-07-21 16:41:39#82445]  INFO -- : William_Burton           2019-03-15     2019-06-07       26           1089        0                        0                 
+W, [19-07-21 16:41:40#82445]  WARN -- : Added man to Group 131: 
+W, [19-07-21 16:41:41#82445]  WARN -- : William_Burton added to z_Activity_Email
+I, [19-07-21 16:41:41#82445]  INFO -- : Pass 1 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 17:08:20#82445]  INFO -- : Pass 2 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 17:35:03#82445]  INFO -- : Pass 3 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 18:01:47#82445]  INFO -- : Pass 4 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 18:28:30#82445]  INFO -- : Pass 5 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 18:55:18#82445]  INFO -- : Pass 6 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 19:22:01#82445]  INFO -- : Pass 7 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 19:48:48#82445]  INFO -- : Pass 8 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 20:15:25#82445]  INFO -- : Pass 9 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 20:42:01#82445]  INFO -- : Pass 10 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 21:08:38#82445]  INFO -- : Pass 11 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 21:35:13#82445]  INFO -- : Pass 12 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 22:01:48#82445]  INFO -- : Pass 13 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 22:28:21#82445]  INFO -- : Pass 14 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 22:54:49#82445]  INFO -- : Pass 15 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 23:21:19#82445]  INFO -- : Pass 16 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-21 23:47:49#82445]  INFO -- : Pass 17 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-22 00:14:11#82445]  INFO -- : Pass 18 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-22 00:40:34#82445]  INFO -- : Pass 19 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-22 01:06:56#82445]  INFO -- : Pass 20 complete for 207 users, 0 skipped. Waiting 5 minutes ...
+I, [19-07-22 01:33:18#82445]  INFO -- : Pass 21 complete for 207 users, 0 skipped. Waiting 5 minutes ...

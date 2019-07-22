@@ -4,7 +4,7 @@ require '../lib/momentum_api'
 discourse_options = {
     do_live_updates:        false,
     # target_username:        'Brad_Peppard',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller Jerry_Strebig Lee_Wheeler
-    target_groups:          %w(LaunchpadVI),       # Mods GreatX BraveHearts trust_level_1 z_Activity_A Z_Activity_B z_Activity_C
+    target_groups:          %w(z_Activity_Email),       # Mods GreatX BraveHearts trust_level_1 z_Activity_A Z_Activity_B z_Activity_C
     include_staged_users:    true,
     instance:               'live',
     api_username:           'KM_Admin',

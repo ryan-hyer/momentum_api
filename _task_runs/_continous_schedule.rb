@@ -112,7 +112,13 @@ def scan_hourly
 
   if @scan_passes < @scan_passes_end or @scan_passes_end < 0
     @discourse.counters[:'Processed Users'], @discourse.counters[:'Skipped Users'] = 0, 0
-    scan_hourly
+    begin
+      scan_hourly
+    rescue          # Recovers from any crash?
+      @discourse.options[:logger].warn 'Scan Level Rescue: Sleeping for 90 minutes ....'
+      sleep 90 * 60
+      scan_hourly
+    end
   else
     @discourse.options[:logger].info "... Exiting ..."
   end
