@@ -105,21 +105,29 @@ schedule_options = {
 
 def scan_hourly
 
-  @discourse.apply_to_users
-  @scan_passes += 1
-  @discourse.options[:logger].info "Pass #{@scan_passes} complete for #{@discourse.counters[:'Processed Users']} users, #{@discourse.counters[:'Skipped Users']} skipped. Waiting #{@discourse.options[:minutes_between_scans]} minutes ..."
-  sleep @discourse.options[:minutes_between_scans] * 60
+  begin
+    @discourse.counters[:'Processed Users'], @discourse.counters[:'Skipped Users'] = 0, 0
+    @discourse.apply_to_users
+    @scan_passes += 1
+
+    @discourse.options[:logger].info "Pass #{@scan_passes} complete for #{@discourse.counters[:'Processed Users']} users, #{@discourse.counters[:'Skipped Users']} skipped. Waiting #{@discourse.options[:minutes_between_scans]} minutes ..."
+    sleep @discourse.options[:minutes_between_scans] * 60
+
+  rescue Exception => exception       # Recovers from any crash since Jul 22, 2019?
+    @discourse.options[:logger].warn "Scan Level Exception Rescue type #{exception.class}, #{exception.message}: Sleeping for 90 minutes ...."
+    sleep 90 * 60
+    scan_hourly
+  end
 
   if @scan_passes < @scan_passes_end or @scan_passes_end < 0
-    @discourse.counters[:'Processed Users'], @discourse.counters[:'Skipped Users'] = 0, 0
-    begin
-      scan_hourly
-    rescue Exception => exception       # Recovers from any crash since Jul 22, 2019?
-      @discourse.options[:logger].warn "Scan Level Exception Rescue type #{exception.class}, #{exception.message}: Sleeping for 90 minutes ...."
-      sleep 90 * 60
-      scan_hourly
-    end
-  else
+    scan_hourly
+    # begin
+    # rescue Exception => exception       # Recovers from any crash since Jul 22, 2019?
+    #   @discourse.options[:logger].warn "Scan Level Exception Rescue type #{exception.class}, #{exception.message}: Sleeping for 90 minutes ...."
+    #   sleep 90 * 60
+    #   scan_hourly
+    # end
+  # else
     @discourse.options[:logger].info "... Exiting ..."
   end
 
