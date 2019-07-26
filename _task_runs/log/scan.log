@@ -11408,3 +11408,24 @@ I, [19-07-22 15:25:09#7772]  INFO -- : Scanning ["trust_level_0"] Users for Task
 I, [19-07-22 15:25:18#8206]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
 I, [19-07-22 15:25:49#8646]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
 I, [19-07-22 15:26:07#9085]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-07-23 09:43:29#27486]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-07-23 09:43:29#27486]  INFO -- : Bill_Heller          2017-12-28     2019-02-07       9            1529        0                             
+I, [19-07-23 09:43:29#27486]  INFO -- : Discourse Men                                           
+I, [19-07-23 09:43:29#27486]  INFO -- : Processed Users                     1                   
+I, [19-07-23 09:43:29#27486]  INFO -- : Skipped Users                       0                   
+I, [19-07-23 09:43:29#27486]  INFO -- : Messages Sent                       0                   
+I, [19-07-23 09:43:29#27486]  INFO -- : User Preferences                    0                   
+I, [19-07-23 09:43:29#27486]  INFO -- : User Preference Targets             1                   
+I, [19-07-23 09:43:29#27486]  INFO -- : User Preference Updated             0                   
+I, [19-07-23 09:43:52#27927]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-07-23 09:43:52#27927]  INFO -- : Bill_Heller          2017-12-28     2019-02-07       9            1529        0                             
+W, [19-07-23 09:43:53#27927]  WARN -- : OK
+I, [19-07-23 09:43:53#27927]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-07-23 09:43:53#27927]  INFO -- : Bill_Heller          2017-12-28     2019-02-07       9            1529        0                     4/1/2019    
+I, [19-07-23 09:43:54#27927]  INFO -- : Discourse Men                                           
+I, [19-07-23 09:43:54#27927]  INFO -- : Processed Users                     1                   
+I, [19-07-23 09:43:54#27927]  INFO -- : Skipped Users                       0                   
+I, [19-07-23 09:43:54#27927]  INFO -- : Messages Sent                       0                   
+I, [19-07-23 09:43:54#27927]  INFO -- : User Preferences                    0                   
+I, [19-07-23 09:43:54#27927]  INFO -- : User Preference Targets             1                   
+I, [19-07-23 09:43:54#27927]  INFO -- : User Preference Updated             1                   

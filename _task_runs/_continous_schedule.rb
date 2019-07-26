@@ -121,13 +121,6 @@ def scan_hourly
 
   if @scan_passes < @scan_passes_end or @scan_passes_end < 0
     scan_hourly
-    # begin
-    # rescue Exception => exception       # Recovers from any crash since Jul 22, 2019?
-    #   @discourse.options[:logger].warn "Scan Level Exception Rescue type #{exception.class}, #{exception.message}: Sleeping for 90 minutes ...."
-    #   sleep 90 * 60
-    #   scan_hourly
-    # end
-  # else
     @discourse.options[:logger].info "... Exiting ..."
   end
 

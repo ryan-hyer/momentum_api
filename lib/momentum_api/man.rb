@@ -17,7 +17,7 @@ module MomentumApi
 
       begin
         @users_categories = @user_client.categories
-        @mock ? sleep(0) : sleep(1)
+        @mock ? sleep(0) : sleep(2) # Jul 25, 2019 set to 2 due to RateLimiter::LimitExceeded seen in D console emails
       rescue DiscourseApi::UnauthenticatedError
         @users_categories = nil
         @discourse.options[:logger].warn "#{user_details['username']} : DiscourseApi::UnauthenticatedError - Not permitted to view resource."

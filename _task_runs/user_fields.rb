@@ -3,8 +3,8 @@ require '../lib/momentum_api'
 
 discourse_options = {
     do_live_updates:        true,
-    target_username:        'Kim_Miller',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby
-    target_groups:          %w(trust_level_1),       # Mods GreatX BraveHearts trust_level_1
+    target_username:        'Bill_Heller',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby
+    target_groups:          %w(trust_level_0),       # Mods GreatX BraveHearts trust_level_0 trust_level_1
     instance:               'live',
     api_username:           'KM_Admin',
     exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
@@ -18,8 +18,8 @@ schedule_options = {
             user_fields:                              {
                 user_fields: {
                   do_task_update:         true,
-                  allowed_levels:         '1',
-                  set_level:              {'5':'0'},
+                  allowed_levels:         '4/1/2019',
+                  set_level:              {'6':'4/1/2019'},
                   excludes:               %w()
               }
           }

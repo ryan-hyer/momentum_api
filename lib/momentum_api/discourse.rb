@@ -54,7 +54,16 @@ module MomentumApi
         user_details = @admin_client.user(group_member['username'])
       end
 
-      if user_details['staged'] and not @options[:include_staged_users]
+      user_active = true
+      if user_details['staged']
+        # todo /admin/users/478.json?  method users
+        @mock ? sleep(0) : sleep(1)
+        if false
+          user_active = false
+        end
+      end
+
+      if user_details['staged'] and user_details['staged'] and not @options[:include_staged_users] or not user_active
         @counters[:'Skipped Users'] += 1
       else
         user_client = @mock || connect_to_instance(user_details['username'], @options[:instance])
