@@ -20,7 +20,7 @@ module MomentumApi
       if @options[:user_scores]
         @owner_queue          <<  ( mock || MomentumApi::Poll.new(self, @options[:user_scores]) )
       end
-      if @options[:user][:activity_groupping]
+      if @options[:user] and @options[:user][:activity_groupping]
         @owner_queue << (mock || MomentumApi::ActivityGroup.new(self, @options[:user][:activity_groupping]))
       end
 

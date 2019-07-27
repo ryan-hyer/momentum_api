@@ -110,8 +110,9 @@ def scan_hourly
     @discourse.apply_to_users
     @scan_passes += 1
 
-    @discourse.options[:logger].info "Pass #{@scan_passes} complete for #{@discourse.counters[:'Processed Users']} users, #{@discourse.counters[:'Skipped Users']} skipped. Waiting #{@discourse.options[:minutes_between_scans]} minutes ..."
-    sleep @discourse.options[:minutes_between_scans] * 60
+    wait = @discourse.options[:minutes_between_scans] || 5
+    @discourse.options[:logger].info "Pass #{@scan_passes} complete for #{@discourse.counters[:'Processed Users']} users, #{@discourse.counters[:'Skipped Users']} skipped. Waiting #{wait} minutes ..."
+    sleep wait * 60
 
   rescue Exception => exception       # Recovers from any crash since Jul 22, 2019?
     @discourse.options[:logger].warn "Scan Level Exception Rescue type #{exception.class}, #{exception.message}: Sleeping for 90 minutes ...."
