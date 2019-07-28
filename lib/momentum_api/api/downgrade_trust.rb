@@ -36,6 +36,8 @@ module MomentumApi
         # what to update
         if man.user_details['trust_level'] == @options[:allowed_levels]
           # man.print_user_options(man.user_details, user_option_print, 'Correct Trust')
+        elsif @options[:excludes].include?(man.user_details['username'])
+          # puts "#{man.user_details['username']} is Excluded from this task."
         else
           man.print_user_options(man.user_details, user_label: 'Non Owner', user_field: 'trust_level')
           @counters[:'User Trust Targets'] += 1

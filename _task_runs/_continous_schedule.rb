@@ -61,7 +61,7 @@ schedule_options = {
             do_task_update:         false,            # false = list but do not downgrade trust level
             allowed_levels:         0,                # Default: 0
             set_level:              0,                # Default: 0
-            excludes:               %w()
+            excludes:               %w(David_Mock)    # todo Ryan done?
         },
         activity_groupping:                              {
             active_user: {

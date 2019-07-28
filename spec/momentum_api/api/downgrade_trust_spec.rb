@@ -73,7 +73,7 @@ describe MomentumApi::DowngradeTrust do
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(3).times.and_return(user_details_owner)
+        expect(mock_man).to receive(:user_details).exactly(4).times.and_return(user_details_owner)
         expect(mock_man).to receive(:is_owner).exactly(1).times.and_return false
         expect(mock_man).to receive(:print_user_options).exactly(1).times
         mock_man
@@ -99,7 +99,7 @@ describe MomentumApi::DowngradeTrust do
       let(:mock_man) do
         mock_man = instance_double('man')
         expect(mock_man).to receive(:discourse).exactly(1).times.and_return(mock_discourse)
-        expect(mock_man).to receive(:user_details).exactly(5).times.and_return(user_details_owner)
+        expect(mock_man).to receive(:user_details).exactly(6).times.and_return(user_details_owner)
         expect(mock_man).to receive(:is_owner).exactly(1).times.and_return false
         expect(mock_man).to receive(:print_user_options).exactly(2).times
         mock_man
@@ -141,7 +141,7 @@ describe MomentumApi::DowngradeTrust do
       let(:mock_man) do
         mock_man = instance_double('man')
         expect(mock_man).to receive(:discourse).exactly(1).times.and_return(mock_discourse)
-        expect(mock_man).to receive(:user_details).exactly(5).times.and_return(user_details_owner)
+        expect(mock_man).to receive(:user_details).exactly(6).times.and_return(user_details_owner)
         expect(mock_man).to receive(:is_owner).exactly(1).times.and_return false
         expect(mock_man).to receive(:print_user_options).exactly(2).times
         mock_man
@@ -177,7 +177,7 @@ describe MomentumApi::DowngradeTrust do
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(4).times.and_return(user_details_owner)
+        expect(mock_man).to receive(:user_details).exactly(5).times.and_return(user_details_owner)
         expect(mock_man).to receive(:is_owner).exactly(1).times.and_return false
         expect(mock_man).to receive(:print_user_options).exactly(1).times
         mock_man
