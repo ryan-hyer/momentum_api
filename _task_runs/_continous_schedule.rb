@@ -58,10 +58,10 @@ schedule_options = {
             }
         },
         downgrade_non_owner_trust:                {
-            do_task_update:         false,            # false = list but do not downgrade trust level
+            do_task_update:         true,            # false = list but do not downgrade trust level
             allowed_levels:         0,                # Default: 0
             set_level:              0,                # Default: 0
-            excludes:               %w(David_Mock)    # todo Ryan done?
+            excludes:               %w()
         },
         activity_groupping:                              {
             active_user: {
@@ -112,6 +112,8 @@ def scan_hourly
 
     wait = @discourse.options[:minutes_between_scans] || 5
     @discourse.options[:logger].info "Pass #{@scan_passes} complete for #{@discourse.counters[:'Processed Users']} users, #{@discourse.counters[:'Skipped Users']} skipped. Waiting #{wait} minutes ..."
+    @discourse.options[:logger].close
+    @discourse.options[:logger] = momentum_api_logger
     sleep wait * 60
 
   rescue Exception => exception       # Recovers from any crash since Jul 22, 2019?

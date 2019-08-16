@@ -10,13 +10,18 @@ class MultiIO
   end
 
   def close
-    @targets.each(&:close)
+    @targets.each do |t|
+      if t.is_a?(File)
+        t.send(:close)
+      end
+    end
   end
 end
 
+
 def momentum_api_logger
   log_file = File.open("log/scan.log", "a")
-  logger = Logger.new MultiIO.new(STDOUT, log_file)
+  logger = Logger.new MultiIO.new(log_file, STDOUT)
   logger.datetime_format = "%y-%m-%d %H:%M:%S"
   logger
 end
