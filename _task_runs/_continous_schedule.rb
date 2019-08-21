@@ -1,5 +1,7 @@
+#!/usr/bin/env ruby
+
 require_relative 'log/utility'
-require '../lib/momentum_api'
+require_relative '../lib/momentum_api'
 
 @scan_passes_end                =   -1
 
