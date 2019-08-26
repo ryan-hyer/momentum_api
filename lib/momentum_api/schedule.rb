@@ -62,8 +62,8 @@ module MomentumApi
       end
 
       # for certain groups
-      case
-      when group['name'] == 'Owner'
+      case group['name']
+      when 'Owner', 'Owner_Manual'
 
         # Set Owner status
         man.is_owner = true
@@ -75,9 +75,9 @@ module MomentumApi
           end
         end
 
-      when group['name'] == 'trust_level_1'
+      when 'trust_level_1'
 
-      when group['name'] == 'trust_level_0'
+      when 'trust_level_0'
         
       else
         # puts 'No Group Case'

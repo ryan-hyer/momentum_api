@@ -1,0 +1,39 @@
+I, [19-08-26 12:54:33#74810]  INFO -- : Discourse Men                                           
+I, [19-08-26 12:54:33#74810]  INFO -- : Processed Users                     0                   
+I, [19-08-26 12:54:33#74810]  INFO -- : Skipped Users                       0                   
+I, [19-08-26 12:54:33#74810]  INFO -- : Messages Sent                       0                   
+I, [19-08-26 12:54:33#74810]  INFO -- : Downgrade Trust                                         
+I, [19-08-26 12:54:33#74810]  INFO -- : Users                               0                   
+I, [19-08-26 12:54:33#74810]  INFO -- : User Trust Targets                  0                   
+I, [19-08-26 12:54:33#74810]  INFO -- : User Trust Updated                  0                   
+I, [19-08-26 12:55:21#75253]  INFO -- : Non Owner   last_seen_at   last_posted_at   post_count   time_read   recent_time_read   trust_level         
+I, [19-08-26 12:55:21#75253]  INFO -- : Brad_Fino   2018-03-09     2018-01-08       16           4936        0                  1                   
+I, [19-08-26 12:55:21#75253]  INFO -- : Discourse Men                                           
+I, [19-08-26 12:55:21#75253]  INFO -- : Processed Users                     1                   
+I, [19-08-26 12:55:21#75253]  INFO -- : Skipped Users                       0                   
+I, [19-08-26 12:55:21#75253]  INFO -- : Messages Sent                       0                   
+I, [19-08-26 12:55:21#75253]  INFO -- : Downgrade Trust                                         
+I, [19-08-26 12:55:21#75253]  INFO -- : Users                               0                   
+I, [19-08-26 12:55:21#75253]  INFO -- : User Trust Targets                  1                   
+I, [19-08-26 12:55:21#75253]  INFO -- : User Trust Updated                  0                   
+I, [19-08-26 12:55:47#75694]  INFO -- : Non Owner   last_seen_at   last_posted_at   post_count   time_read   recent_time_read   trust_level         
+I, [19-08-26 12:55:47#75694]  INFO -- : Brad_Fino   2018-03-09     2018-01-08       16           4936        0                  1                   
+W, [19-08-26 12:55:48#75694]  WARN -- : Brad_Fino Downgraded
+I, [19-08-26 12:55:48#75694]  INFO -- : Non Owner   last_seen_at   last_posted_at   post_count   time_read   recent_time_read   trust_level         
+I, [19-08-26 12:55:48#75694]  INFO -- : Brad_Fino   2018-03-09     2018-01-08       16           4936        0                  0                   
+I, [19-08-26 12:55:49#75694]  INFO -- : Discourse Men                                           
+I, [19-08-26 12:55:49#75694]  INFO -- : Processed Users                     1                   
+I, [19-08-26 12:55:49#75694]  INFO -- : Skipped Users                       0                   
+I, [19-08-26 12:55:49#75694]  INFO -- : Messages Sent                       0                   
+I, [19-08-26 12:55:49#75694]  INFO -- : Downgrade Trust                                         
+I, [19-08-26 12:55:49#75694]  INFO -- : Users                               0                   
+I, [19-08-26 12:55:49#75694]  INFO -- : User Trust Targets                  1                   
+I, [19-08-26 12:55:49#75694]  INFO -- : User Trust Updated                  1                   
+I, [19-08-26 12:56:00#76128]  INFO -- : Discourse Men                                           
+I, [19-08-26 12:56:00#76128]  INFO -- : Processed Users                     0                   
+I, [19-08-26 12:56:00#76128]  INFO -- : Skipped Users                       0                   
+I, [19-08-26 12:56:00#76128]  INFO -- : Messages Sent                       0                   
+I, [19-08-26 12:56:00#76128]  INFO -- : Downgrade Trust                                         
+I, [19-08-26 12:56:00#76128]  INFO -- : Users                               0                   
+I, [19-08-26 12:56:00#76128]  INFO -- : User Trust Targets                  0                   
+I, [19-08-26 12:56:00#76128]  INFO -- : User Trust Updated                  0                   
