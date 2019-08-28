@@ -33,6 +33,9 @@ module MomentumApi
       when 'live'
         client = DiscourseApi::Client.new('https://discourse.gomomentum.org/')
         client.api_key = ENV['REMOTE_DISCOURSE_API']
+      when 'staging'
+        client = DiscourseApi::Client.new('https://staging.gomomentum.org/')
+        client.api_key = ENV['REMOTE_DISCOURSE_API']
       when 'local'
         client = DiscourseApi::Client.new('http://localhost:3000')
         client.api_key = ENV['LOCAL_DISCOURSE_API']

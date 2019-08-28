@@ -37,3 +37,11 @@ I, [19-08-26 12:56:00#76128]  INFO -- : Downgrade Trust
 I, [19-08-26 12:56:00#76128]  INFO -- : Users                               0                   
 I, [19-08-26 12:56:00#76128]  INFO -- : User Trust Targets                  0                   
 I, [19-08-26 12:56:00#76128]  INFO -- : User Trust Updated                  0                   
+I, [19-08-26 13:09:48#76585]  INFO -- : Discourse Men                                           
+I, [19-08-26 13:09:48#76585]  INFO -- : Processed Users                     169                 
+I, [19-08-26 13:09:48#76585]  INFO -- : Skipped Users                       0                   
+I, [19-08-26 13:09:48#76585]  INFO -- : Messages Sent                       0                   
+I, [19-08-26 13:09:48#76585]  INFO -- : Downgrade Trust                                         
+I, [19-08-26 13:09:48#76585]  INFO -- : Users                               0                   
+I, [19-08-26 13:09:48#76585]  INFO -- : User Trust Targets                  0                   
+I, [19-08-26 13:09:48#76585]  INFO -- : User Trust Updated                  0                   
