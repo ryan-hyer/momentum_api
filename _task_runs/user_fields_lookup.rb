@@ -4,9 +4,9 @@ require 'csv'
 
 discourse_options = {
     do_live_updates:        true,
-    target_username:        'Bill_Heller',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby
+    target_username:        'Kim_Miller',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby
     target_groups:          %w(trust_level_0),       # Mods GreatX BraveHearts trust_level_0 trust_level_1
-    instance:               'live',
+    instance:               'staging',
     api_username:           'KM_Admin',
     exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
     issue_users:             %w(),
@@ -22,7 +22,7 @@ schedule_options = {
             user_fields:                              {
                 user_fields: {
                   do_task_update:         true,
-                  allowed_levels:         '4/1/2019',
+                  allowed_levels:         '9999-99-99',
                   set_level:              {'6':lookup_table},
                   excludes:               %w()
               }

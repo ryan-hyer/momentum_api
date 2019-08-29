@@ -45,3 +45,139 @@ I, [19-08-26 13:09:48#76585]  INFO -- : Downgrade Trust
 I, [19-08-26 13:09:48#76585]  INFO -- : Users                               0                   
 I, [19-08-26 13:09:48#76585]  INFO -- : User Trust Targets                  0                   
 I, [19-08-26 13:09:48#76585]  INFO -- : User Trust Updated                  0                   
+I, [19-08-29 13:23:04#98621]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-29 13:23:04#98621]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      50329                 2019-08-20 R2    
+I, [19-08-29 13:23:04#98621]  INFO -- : Discourse Men                                           
+I, [19-08-29 13:23:04#98621]  INFO -- : Processed Users                     1                   
+I, [19-08-29 13:23:04#98621]  INFO -- : Skipped Users                       0                   
+I, [19-08-29 13:23:04#98621]  INFO -- : Messages Sent                       0                   
+I, [19-08-29 13:23:04#98621]  INFO -- : User Preferences                    0                   
+I, [19-08-29 13:23:04#98621]  INFO -- : User Preference Targets             1                   
+I, [19-08-29 13:23:04#98621]  INFO -- : User Preference Updated             0                   
+I, [19-08-29 13:32:58#99476]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-29 13:32:58#99476]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      50329                 2019-08-20 R2    
+I, [19-08-29 13:32:58#99476]  INFO -- : Discourse Men                                           
+I, [19-08-29 13:32:58#99476]  INFO -- : Processed Users                     1                   
+I, [19-08-29 13:32:58#99476]  INFO -- : Skipped Users                       0                   
+I, [19-08-29 13:32:58#99476]  INFO -- : Messages Sent                       0                   
+I, [19-08-29 13:32:58#99476]  INFO -- : User Preferences                    0                   
+I, [19-08-29 13:32:58#99476]  INFO -- : User Preference Targets             1                   
+I, [19-08-29 13:32:58#99476]  INFO -- : User Preference Updated             0                   
+I, [19-08-29 15:08:24#13174]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-29 15:08:24#13174]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      50329                 2019-08-20 R2    
+I, [19-08-29 15:08:24#13174]  INFO -- : Discourse Men                                           
+I, [19-08-29 15:08:24#13174]  INFO -- : Processed Users                     1                   
+I, [19-08-29 15:08:24#13174]  INFO -- : Skipped Users                       0                   
+I, [19-08-29 15:08:24#13174]  INFO -- : Messages Sent                       0                   
+I, [19-08-29 15:08:24#13174]  INFO -- : User Preferences                    0                   
+I, [19-08-29 15:08:24#13174]  INFO -- : User Preference Targets             1                   
+I, [19-08-29 15:08:24#13174]  INFO -- : User Preference Updated             0                   
+I, [19-08-29 15:10:36#13633]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-29 15:10:36#13633]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      50329                 2019-08-20 R2    
+I, [19-08-29 15:10:37#13633]  INFO -- : Discourse Men                                           
+I, [19-08-29 15:10:37#13633]  INFO -- : Processed Users                     1                   
+I, [19-08-29 15:10:37#13633]  INFO -- : Skipped Users                       0                   
+I, [19-08-29 15:10:37#13633]  INFO -- : Messages Sent                       0                   
+I, [19-08-29 15:10:37#13633]  INFO -- : User Preferences                    0                   
+I, [19-08-29 15:10:37#13633]  INFO -- : User Preference Targets             1                   
+I, [19-08-29 15:10:37#13633]  INFO -- : User Preference Updated             0                   
+I, [19-08-29 15:13:06#14116]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-29 15:13:06#14116]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      50329                 2019-08-20 R2    
+I, [19-08-29 15:13:06#14116]  INFO -- : Discourse Men                                           
+I, [19-08-29 15:13:06#14116]  INFO -- : Processed Users                     1                   
+I, [19-08-29 15:13:06#14116]  INFO -- : Skipped Users                       0                   
+I, [19-08-29 15:13:06#14116]  INFO -- : Messages Sent                       0                   
+I, [19-08-29 15:13:06#14116]  INFO -- : User Preferences                    0                   
+I, [19-08-29 15:13:06#14116]  INFO -- : User Preference Targets             1                   
+I, [19-08-29 15:13:06#14116]  INFO -- : User Preference Updated             0                   
+I, [19-08-29 15:13:57#14565]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-29 15:13:57#14565]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      50329                 2019-08-20 R2    
+I, [19-08-29 15:15:27#14565]  INFO -- : Discourse Men                                           
+I, [19-08-29 15:15:27#14565]  INFO -- : Processed Users                     1                   
+I, [19-08-29 15:15:27#14565]  INFO -- : Skipped Users                       0                   
+I, [19-08-29 15:15:27#14565]  INFO -- : Messages Sent                       0                   
+I, [19-08-29 15:15:27#14565]  INFO -- : User Preferences                    0                   
+I, [19-08-29 15:15:27#14565]  INFO -- : User Preference Targets             1                   
+I, [19-08-29 15:15:27#14565]  INFO -- : User Preference Updated             0                   
+I, [19-08-29 15:15:34#15042]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-29 15:15:34#15042]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      50329                 2019-08-20 R2    
+I, [19-08-29 15:21:15#15042]  INFO -- : Discourse Men                                           
+I, [19-08-29 15:21:15#15042]  INFO -- : Processed Users                     1                   
+I, [19-08-29 15:21:15#15042]  INFO -- : Skipped Users                       0                   
+I, [19-08-29 15:21:15#15042]  INFO -- : Messages Sent                       0                   
+I, [19-08-29 15:21:15#15042]  INFO -- : User Preferences                    0                   
+I, [19-08-29 15:21:15#15042]  INFO -- : User Preference Targets             1                   
+I, [19-08-29 15:21:15#15042]  INFO -- : User Preference Updated             0                   
+I, [19-08-29 15:21:22#15566]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-29 15:21:22#15566]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      50329                 2019-08-20 R2    
+I, [19-08-29 15:22:56#15566]  INFO -- : Discourse Men                                           
+I, [19-08-29 15:22:56#15566]  INFO -- : Processed Users                     1                   
+I, [19-08-29 15:22:56#15566]  INFO -- : Skipped Users                       0                   
+I, [19-08-29 15:22:56#15566]  INFO -- : Messages Sent                       0                   
+I, [19-08-29 15:22:56#15566]  INFO -- : User Preferences                    0                   
+I, [19-08-29 15:22:56#15566]  INFO -- : User Preference Targets             1                   
+I, [19-08-29 15:22:56#15566]  INFO -- : User Preference Updated             0                   
+I, [19-08-29 15:25:08#16072]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-29 15:25:08#16072]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      50329                 2019-08-20 R2    
+I, [19-08-29 15:25:53#16072]  INFO -- : Discourse Men                                           
+I, [19-08-29 15:25:53#16072]  INFO -- : Processed Users                     1                   
+I, [19-08-29 15:25:53#16072]  INFO -- : Skipped Users                       0                   
+I, [19-08-29 15:25:53#16072]  INFO -- : Messages Sent                       0                   
+I, [19-08-29 15:25:53#16072]  INFO -- : User Preferences                    0                   
+I, [19-08-29 15:25:53#16072]  INFO -- : User Preference Targets             1                   
+I, [19-08-29 15:25:53#16072]  INFO -- : User Preference Updated             0                   
+I, [19-08-29 15:27:25#16532]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-29 15:27:25#16532]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      50329                 2019-08-20 R2    
+I, [19-08-29 15:28:45#16532]  INFO -- : Discourse Men                                           
+I, [19-08-29 15:28:45#16532]  INFO -- : Processed Users                     1                   
+I, [19-08-29 15:28:45#16532]  INFO -- : Skipped Users                       0                   
+I, [19-08-29 15:28:45#16532]  INFO -- : Messages Sent                       0                   
+I, [19-08-29 15:28:45#16532]  INFO -- : User Preferences                    0                   
+I, [19-08-29 15:28:45#16532]  INFO -- : User Preference Targets             1                   
+I, [19-08-29 15:28:45#16532]  INFO -- : User Preference Updated             0                   
+I, [19-08-29 15:29:09#16987]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-29 15:29:09#16987]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      50329                 2019-08-20 R2    
+I, [19-08-29 15:29:09#16987]  INFO -- : Discourse Men                                           
+I, [19-08-29 15:29:09#16987]  INFO -- : Processed Users                     1                   
+I, [19-08-29 15:29:09#16987]  INFO -- : Skipped Users                       0                   
+I, [19-08-29 15:29:09#16987]  INFO -- : Messages Sent                       0                   
+I, [19-08-29 15:29:09#16987]  INFO -- : User Preferences                    0                   
+I, [19-08-29 15:29:09#16987]  INFO -- : User Preference Targets             1                   
+I, [19-08-29 15:29:09#16987]  INFO -- : User Preference Updated             0                   
+I, [19-08-29 15:31:01#17455]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-29 15:31:01#17455]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      50329                 2019-08-20 R2    
+I, [19-08-29 15:31:01#17455]  INFO -- : Discourse Men                                           
+I, [19-08-29 15:31:01#17455]  INFO -- : Processed Users                     1                   
+I, [19-08-29 15:31:01#17455]  INFO -- : Skipped Users                       0                   
+I, [19-08-29 15:31:01#17455]  INFO -- : Messages Sent                       0                   
+I, [19-08-29 15:31:01#17455]  INFO -- : User Preferences                    0                   
+I, [19-08-29 15:31:01#17455]  INFO -- : User Preference Targets             1                   
+I, [19-08-29 15:31:01#17455]  INFO -- : User Preference Updated             0                   
+I, [19-08-29 15:32:10#17905]  INFO -- : Discourse Men                                           
+I, [19-08-29 15:32:10#17905]  INFO -- : Processed Users                     1                   
+I, [19-08-29 15:32:10#17905]  INFO -- : Skipped Users                       0                   
+I, [19-08-29 15:32:10#17905]  INFO -- : Messages Sent                       0                   
+I, [19-08-29 15:32:10#17905]  INFO -- : User Preferences                    0                   
+I, [19-08-29 15:32:10#17905]  INFO -- : User Preference Targets             0                   
+I, [19-08-29 15:32:10#17905]  INFO -- : User Preference Updated             0                   
+I, [19-08-29 15:32:27#18338]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-29 15:32:27#18338]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      50329                 9999-99-98    
+I, [19-08-29 15:32:27#18338]  INFO -- : Discourse Men                                           
+I, [19-08-29 15:32:27#18338]  INFO -- : Processed Users                     1                   
+I, [19-08-29 15:32:27#18338]  INFO -- : Skipped Users                       0                   
+I, [19-08-29 15:32:27#18338]  INFO -- : Messages Sent                       0                   
+I, [19-08-29 15:32:27#18338]  INFO -- : User Preferences                    0                   
+I, [19-08-29 15:32:27#18338]  INFO -- : User Preference Targets             1                   
+I, [19-08-29 15:32:27#18338]  INFO -- : User Preference Updated             0                   
+I, [19-08-29 15:32:53#18772]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-29 15:32:53#18772]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      50329                 9999-99-98    
+W, [19-08-29 15:32:53#18772]  WARN -- : OK
+I, [19-08-29 15:32:54#18772]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-29 15:32:54#18772]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      50329                 2019-12-20    
+I, [19-08-29 15:32:55#18772]  INFO -- : Discourse Men                                           
+I, [19-08-29 15:32:55#18772]  INFO -- : Processed Users                     1                   
+I, [19-08-29 15:32:55#18772]  INFO -- : Skipped Users                       0                   
+I, [19-08-29 15:32:55#18772]  INFO -- : Messages Sent                       0                   
+I, [19-08-29 15:32:55#18772]  INFO -- : User Preferences                    0                   
+I, [19-08-29 15:32:55#18772]  INFO -- : User Preference Targets             1                   
+I, [19-08-29 15:32:55#18772]  INFO -- : User Preference Updated             1                   
