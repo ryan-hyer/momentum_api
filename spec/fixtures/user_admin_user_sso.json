@@ -1,0 +1,13 @@
+{
+        "user_id": 308,
+        "external_id": "9962569786863095",
+        "last_payload": "admin=false&email=albenavides%40hotmail.com&external_id=9962569786863095&name=Alfonso+G+Benavides&nonce=27a793d8110769dfa376cf8e747a5e2f&return_sso_url=https%3A%2F%2Fdiscourse.gomomentum.org%2Fsession%2Fsso_login",
+        "created_at": "2018-03-26T16:08:03.691Z",
+        "updated_at": "2019-07-26T16:21:33.229Z",
+        "external_username": null,
+        "external_email": "albenavides@hotmail.com",
+        "external_name": "Alfonso G Benavides",
+        "external_avatar_url": null,
+        "external_profile_background_url": null,
+        "external_card_background_url": null
+}

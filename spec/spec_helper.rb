@@ -1,4 +1,5 @@
 require 'simplecov'
+require 'csv'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([SimpleCov::Formatter::HTMLFormatter])
 
@@ -153,6 +154,10 @@ end
 def json_fixture(json_file)
   json_object = File.read(fixture_path + '/' + json_file)
   JSON.parse(json_object)
+end
+
+def csv_fixture(csv_file)
+  CSV.read(fixture_path + '/' + csv_file, headers: true)
 end
 
 def man_is_owner(mock_discourse, mock_dependencies, user_details, mock: mock_dependencies)

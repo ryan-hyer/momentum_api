@@ -61,9 +61,9 @@ module MomentumApi
       if user_details['staged']
         # todo /admin/users/478.json?  method users
         @mock ? sleep(0) : sleep(1)
-        if false
-          user_active = false
-        end
+        # if false       # future use ?
+        #   user_active = false
+        # end
       end
 
       if user_details['staged'] and user_details['staged'] and not @options[:include_staged_users] or not user_active

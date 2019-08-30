@@ -189,6 +189,11 @@ describe MomentumApi::Discourse do
         expect(subject).to respond_to(:connect_to_instance)
       end
 
+      it "responds to staging .connect_to_instance" do
+        subject.connect_to_instance('KM_Admin', 'staging')
+        expect(subject).to respond_to(:connect_to_instance)
+      end
+
       it "responds to local .connect_to_instance" do
         subject.connect_to_instance('KM_Admin', 'local')
         expect(subject).to respond_to(:connect_to_instance)
