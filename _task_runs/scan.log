@@ -181,3 +181,153 @@ I, [19-08-29 15:32:55#18772]  INFO -- : Messages Sent                       0
 I, [19-08-29 15:32:55#18772]  INFO -- : User Preferences                    0                   
 I, [19-08-29 15:32:55#18772]  INFO -- : User Preference Targets             1                   
 I, [19-08-29 15:32:55#18772]  INFO -- : User Preference Updated             1                   
+I, [19-08-30 10:09:24#69892]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:09:24#69892]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      49204                 2019-12-20    
+I, [19-08-30 10:09:29#69892]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:09:29#69892]  INFO -- : David_Ashby          2019-08-21     2019-08-20       124          67766       12533                         
+I, [19-08-30 10:09:33#69892]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:09:33#69892]  INFO -- : David_Kirk           2019-08-20     2019-08-20       289          246727      20732                         
+I, [19-08-30 10:09:38#69892]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:09:38#69892]  INFO -- : Moe_Rubenzahl        2019-08-18     2019-08-18       988          487418      62419                         
+I, [19-08-30 10:09:43#69892]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:09:43#69892]  INFO -- : Ryan_Hyer            2019-08-26     2019-08-21       634          432413      24571                         
+I, [19-08-30 10:09:48#69892]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:09:48#69892]  INFO -- : Stefan_Schmitz       2019-08-20     2019-08-20       86           137277      11025                         
+I, [19-08-30 10:09:53#69892]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:09:53#69892]  INFO -- : Steve_Scott          2019-08-25     2019-08-20       2094         1899502     74565                         
+I, [19-08-30 10:09:53#69892]  INFO -- : Discourse Men                                           
+I, [19-08-30 10:09:53#69892]  INFO -- : Processed Users                     7                   
+I, [19-08-30 10:09:53#69892]  INFO -- : Skipped Users                       0                   
+I, [19-08-30 10:09:53#69892]  INFO -- : Messages Sent                       0                   
+I, [19-08-30 10:09:53#69892]  INFO -- : User Preferences                    0                   
+I, [19-08-30 10:09:53#69892]  INFO -- : User Preference Targets             7                   
+I, [19-08-30 10:09:53#69892]  INFO -- : User Preference Updated             0                   
+I, [19-08-30 10:12:27#71227]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:12:27#71227]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      49204                 2019-12-20    
+I, [19-08-30 10:12:27#71227]  INFO -- : Discourse Men                                           
+I, [19-08-30 10:12:27#71227]  INFO -- : Processed Users                     1                   
+I, [19-08-30 10:12:27#71227]  INFO -- : Skipped Users                       0                   
+I, [19-08-30 10:12:27#71227]  INFO -- : Messages Sent                       0                   
+I, [19-08-30 10:12:27#71227]  INFO -- : User Preferences                    0                   
+I, [19-08-30 10:12:27#71227]  INFO -- : User Preference Targets             1                   
+I, [19-08-30 10:12:27#71227]  INFO -- : User Preference Updated             0                   
+I, [19-08-30 10:12:52#71661]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:12:52#71661]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      49204                 2019-12-20    
+W, [19-08-30 10:12:53#71661]  WARN -- : OK
+I, [19-08-30 10:12:53#71661]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:12:53#71661]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      49204                 2019-12-20 MF    
+I, [19-08-30 10:12:54#71661]  INFO -- : Discourse Men                                           
+I, [19-08-30 10:12:54#71661]  INFO -- : Processed Users                     1                   
+I, [19-08-30 10:12:54#71661]  INFO -- : Skipped Users                       0                   
+I, [19-08-30 10:12:54#71661]  INFO -- : Messages Sent                       0                   
+I, [19-08-30 10:12:54#71661]  INFO -- : User Preferences                    0                   
+I, [19-08-30 10:12:54#71661]  INFO -- : User Preference Targets             1                   
+I, [19-08-30 10:12:54#71661]  INFO -- : User Preference Updated             1                   
+I, [19-08-30 10:13:23#72103]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:13:23#72103]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      49204                 2019-12-20 MF    
+W, [19-08-30 10:13:26#72103]  WARN -- : OK
+I, [19-08-30 10:13:26#72103]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:13:26#72103]  INFO -- : Kim_Miller           2019-08-29     2019-08-26       1876         816273      49204                 2019-12-20 MF    
+I, [19-08-30 10:13:32#72103]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:13:32#72103]  INFO -- : David_Ashby          2019-08-21     2019-08-20       124          67766       12533                         
+W, [19-08-30 10:13:32#72103]  WARN -- : OK
+I, [19-08-30 10:13:33#72103]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:13:33#72103]  INFO -- : David_Ashby          2019-08-21     2019-08-20       124          67766       12533                 2019-10-01 MF    
+I, [19-08-30 10:13:38#72103]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:13:38#72103]  INFO -- : David_Kirk           2019-08-20     2019-08-20       289          246727      20732                         
+W, [19-08-30 10:13:39#72103]  WARN -- : OK
+I, [19-08-30 10:13:39#72103]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:13:39#72103]  INFO -- : David_Kirk           2019-08-20     2019-08-20       289          246727      20732                 2020-12-19 MF    
+I, [19-08-30 10:13:44#72103]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:13:44#72103]  INFO -- : Moe_Rubenzahl        2019-08-18     2019-08-18       988          487418      62419                         
+W, [19-08-30 10:13:45#72103]  WARN -- : OK
+I, [19-08-30 10:13:47#72103]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:13:47#72103]  INFO -- : Moe_Rubenzahl        2019-08-18     2019-08-18       988          487418      62419                 2019-12-20 MF    
+I, [19-08-30 10:13:52#72103]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:13:52#72103]  INFO -- : Ryan_Hyer            2019-08-26     2019-08-21       634          432413      24571                         
+W, [19-08-30 10:13:54#72103]  WARN -- : OK
+I, [19-08-30 10:13:54#72103]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:13:54#72103]  INFO -- : Ryan_Hyer            2019-08-26     2019-08-21       634          432413      24571                 2020-01-13 MF    
+I, [19-08-30 10:14:00#72103]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:14:00#72103]  INFO -- : Stefan_Schmitz       2019-08-20     2019-08-20       86           137277      11025                         
+W, [19-08-30 10:14:00#72103]  WARN -- : OK
+I, [19-08-30 10:14:01#72103]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:14:01#72103]  INFO -- : Stefan_Schmitz       2019-08-20     2019-08-20       86           137277      11025                 2019-12-20 MF    
+I, [19-08-30 10:14:06#72103]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:14:06#72103]  INFO -- : Steve_Scott          2019-08-25     2019-08-20       2094         1899502     74565                         
+W, [19-08-30 10:14:07#72103]  WARN -- : OK
+I, [19-08-30 10:14:07#72103]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:14:07#72103]  INFO -- : Steve_Scott          2019-08-25     2019-08-20       2094         1899502     74565                 2019-12-19 MF    
+I, [19-08-30 10:14:08#72103]  INFO -- : Discourse Men                                           
+I, [19-08-30 10:14:08#72103]  INFO -- : Processed Users                     7                   
+I, [19-08-30 10:14:08#72103]  INFO -- : Skipped Users                       0                   
+I, [19-08-30 10:14:08#72103]  INFO -- : Messages Sent                       0                   
+I, [19-08-30 10:14:08#72103]  INFO -- : User Preferences                    0                   
+I, [19-08-30 10:14:08#72103]  INFO -- : User Preference Targets             7                   
+I, [19-08-30 10:14:08#72103]  INFO -- : User Preference Updated             7                   
+I, [19-08-30 10:18:54#72635]  INFO -- : Discourse Men                                           
+I, [19-08-30 10:18:54#72635]  INFO -- : Processed Users                     0                   
+I, [19-08-30 10:18:54#72635]  INFO -- : Skipped Users                       0                   
+I, [19-08-30 10:18:54#72635]  INFO -- : Messages Sent                       0                   
+I, [19-08-30 10:18:54#72635]  INFO -- : User Preferences                    0                   
+I, [19-08-30 10:18:54#72635]  INFO -- : User Preference Targets             0                   
+I, [19-08-30 10:18:54#72635]  INFO -- : User Preference Updated             0                   
+I, [19-08-30 10:20:07#73091]  INFO -- : Discourse Men                                           
+I, [19-08-30 10:20:07#73091]  INFO -- : Processed Users                     0                   
+I, [19-08-30 10:20:07#73091]  INFO -- : Skipped Users                       0                   
+I, [19-08-30 10:20:07#73091]  INFO -- : Messages Sent                       0                   
+I, [19-08-30 10:20:07#73091]  INFO -- : User Preferences                    0                   
+I, [19-08-30 10:20:07#73091]  INFO -- : User Preference Targets             0                   
+I, [19-08-30 10:20:07#73091]  INFO -- : User Preference Updated             0                   
+I, [19-08-30 10:20:38#73531]  INFO -- : Discourse Men                                           
+I, [19-08-30 10:20:38#73531]  INFO -- : Processed Users                     0                   
+I, [19-08-30 10:20:38#73531]  INFO -- : Skipped Users                       0                   
+I, [19-08-30 10:20:38#73531]  INFO -- : Messages Sent                       0                   
+I, [19-08-30 10:20:38#73531]  INFO -- : User Preferences                    0                   
+I, [19-08-30 10:20:38#73531]  INFO -- : User Preference Targets             0                   
+I, [19-08-30 10:20:38#73531]  INFO -- : User Preference Updated             0                   
+I, [19-08-30 10:26:02#74052]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:26:02#74052]  INFO -- : Brad_Fino            2018-03-09     2018-01-08       16           4936        0                             
+W, [19-08-30 10:26:02#74052]  WARN -- : OK
+I, [19-08-30 10:26:02#74052]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:26:02#74052]  INFO -- : Brad_Fino            2018-03-09     2018-01-08       16           4936        0                             
+I, [19-08-30 10:26:03#74052]  INFO -- : Discourse Men                                           
+I, [19-08-30 10:26:03#74052]  INFO -- : Processed Users                     1                   
+I, [19-08-30 10:26:03#74052]  INFO -- : Skipped Users                       0                   
+I, [19-08-30 10:26:03#74052]  INFO -- : Messages Sent                       0                   
+I, [19-08-30 10:26:03#74052]  INFO -- : User Preferences                    0                   
+I, [19-08-30 10:26:03#74052]  INFO -- : User Preference Targets             1                   
+I, [19-08-30 10:26:03#74052]  INFO -- : User Preference Updated             1                   
+I, [19-08-30 10:36:25#76498]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:36:25#76498]  INFO -- : Brad_Fino            2018-03-09     2018-01-08       16           4936        0                             
+I, [19-08-30 10:36:25#76498]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:36:25#76498]  INFO -- : Brad_Fino            2018-03-09     2018-01-08       16           4936        0                             
+I, [19-08-30 10:36:26#76498]  INFO -- : Discourse Men                                           
+I, [19-08-30 10:36:26#76498]  INFO -- : Processed Users                     1                   
+I, [19-08-30 10:36:26#76498]  INFO -- : Skipped Users                       0                   
+I, [19-08-30 10:36:26#76498]  INFO -- : Messages Sent                       0                   
+I, [19-08-30 10:36:26#76498]  INFO -- : User Preferences                    0                   
+I, [19-08-30 10:36:26#76498]  INFO -- : User Preference Targets             1                   
+I, [19-08-30 10:36:26#76498]  INFO -- : User Preference Updated             0                   
+I, [19-08-30 10:37:28#76940]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:37:28#76940]  INFO -- : Brad_Fino            2018-03-09     2018-01-08       16           4936        0                             
+I, [19-08-30 10:37:28#76940]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:37:28#76940]  INFO -- : Brad_Fino           2018-03-09     2018-01-08       16           4936        0                             
+I, [19-08-30 10:37:29#76940]  INFO -- : Discourse Men                                           
+I, [19-08-30 10:37:29#76940]  INFO -- : Processed Users                     1                   
+I, [19-08-30 10:37:29#76940]  INFO -- : Skipped Users                       0                   
+I, [19-08-30 10:37:29#76940]  INFO -- : Messages Sent                       0                   
+I, [19-08-30 10:37:29#76940]  INFO -- : User Preferences                    0                   
+I, [19-08-30 10:37:29#76940]  INFO -- : User Preference Targets             1                   
+I, [19-08-30 10:37:29#76940]  INFO -- : User Preference Updated             0                   
+I, [19-08-30 10:38:07#77385]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:38:07#77385]  INFO -- : Brad_Fino            2018-03-09     2018-01-08       16           4936        0                     1234    
+I, [19-08-30 10:38:08#77385]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-08-30 10:38:08#77385]  INFO -- : Brad_Fino           2018-03-09     2018-01-08       16           4936        0                     1234    
+I, [19-08-30 10:38:09#77385]  INFO -- : Discourse Men                                           
+I, [19-08-30 10:38:09#77385]  INFO -- : Processed Users                     1                   
+I, [19-08-30 10:38:09#77385]  INFO -- : Skipped Users                       0                   
+I, [19-08-30 10:38:09#77385]  INFO -- : Messages Sent                       0                   
+I, [19-08-30 10:38:09#77385]  INFO -- : User Preferences                    0                   
+I, [19-08-30 10:38:09#77385]  INFO -- : User Preference Targets             1                   
+I, [19-08-30 10:38:09#77385]  INFO -- : User Preference Updated             0                   

@@ -73,29 +73,34 @@ module MomentumApi
 
       if @schedule.discourse.options[:do_live_updates] and preference[1][:do_task_update]
 
-        update_response = @schedule.discourse.admin_client.update_user(man.user_details['username'],
-                                                                       "#{preference[0]}": find_set_level(man, preference))
-        man.discourse.options[:logger].warn "#{update_response[:body]['success']}"
-        @counters[:'User Preference Updated'] += 1
+        update_set_value = find_set_value(man, preference)
+
+        if update_set_value
+          update_response = @schedule.discourse.admin_client.update_user(man.user_details['username'],
+                                                                         "#{preference[0]}": update_set_value)
+          man.discourse.options[:logger].warn "#{update_response[:body]['success']}"
+          @counters[:'User Preference Updated'] += 1
+        end
 
         # check if update happened
         user_option_after_update = @schedule.discourse.admin_client.user(man.user_details['username'])
-        man.print_user_options(user_option_after_update, user_label: 'User to be Updated', nested_user_field: updated_option)
+        man.print_user_options(user_option_after_update, user_label: 'User After Update', nested_user_field: updated_option)
         @mock ? sleep(0) : sleep(1)
 
       end
       # end
     end
 
-    def find_set_level(man, preference)
+    def find_set_value(man, preference)
       hashback = nil
       if preference[1][:set_level].is_a? Hash and preference[1][:set_level].values[0].respond_to? :each
         sso_user = @schedule.discourse.admin_client.user_sso(man.user_details['user_option']['user_id'])
         preference[1][:set_level].values[0].each do |row|
           # built for Memberful import; dependent on 'Email' field link
           if row['Email']
+            update_watermark = ' MF'
             if row['Email'] == sso_user['external_email']
-              hashback = {"#{preference[1][:set_level].keys[0]}": row['Expiration date']}
+              hashback = {"#{preference[1][:set_level].keys[0]}": row['Expiration date'] + update_watermark}
             end
           end
         end
