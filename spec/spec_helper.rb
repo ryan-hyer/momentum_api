@@ -139,6 +139,21 @@ def schedule_options
           poll_url:                 'https://discourse.gomomentum.org/t/what-s-your-score',
           messages_from:            'Kim_Miller',
           excludes:                 %w()
+      },
+      ownership:{
+          manual:                              {
+              memberful: {
+                  expire_message: {
+                      do_task_update:         false,
+                      profile_code:           'MM',
+                      days_until_expires:     -7,
+                      remove_from_group:      'Owner_Manual',
+                      message:                'R3',
+                      message_from:          'Kim_Miller',
+                      excludes:               %w()
+                  }
+              }
+          }
       }
   }
 end

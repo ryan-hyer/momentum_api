@@ -1,19 +1,19 @@
 module MomentumApi
-  class Preferences
+  class Ownership
 
     attr_accessor :counters
 
-    def initialize(schedule, user_preferences, mock: nil)
+    def initialize(schedule, owner_options, mock: nil)
       raise ArgumentError, 'schedule needs to be defined' if schedule.nil?
-      raise ArgumentError, 'options needs to be defined' if user_preferences.nil? or user_preferences.empty?
+      raise ArgumentError, 'options needs to be defined' if owner_options.nil? or owner_options.empty?
 
       # parameter setting
       @schedule               =   schedule
-      @options                =   user_preferences
+      @options                =   owner_options
       @mock                   =   mock
 
       # counter init
-      @counters               =   {'User Preferences': ''}
+      @counters               =   {'Ownership': ''}
       schedule.discourse.scan_pass_counters << @counters
 
       zero_notifications_counters
@@ -33,13 +33,13 @@ module MomentumApi
             target_update_field = nil
 
             case preference_type[0].to_s
-            
+
             when 'user_option'
               target_update_field = preference[0].to_s
 
             when 'user_fields'
               target_update_field = preference[1][:set_level].keys[0].to_s
-              
+
             else
               # field_update(man, preference_option)
             end
@@ -109,9 +109,9 @@ module MomentumApi
     end
 
     def zero_notifications_counters
-      counters[:'User Preferences']             =   0
-      counters[:'User Preference Targets']      =   0
-      counters[:'User Preference Updated']      =   0
+      counters[:'Ownership']              =   0
+      counters[:'Ownership Targets']      =   0
+      counters[:'Ownership Updated']      =   0
     end
 
   end

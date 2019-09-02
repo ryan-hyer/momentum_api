@@ -12,4 +12,5 @@ require_relative 'momentum_api/api/preferences'
 require_relative 'momentum_api/api/activity'
 require_relative 'momentum_api/api/activity_group'
 require_relative 'momentum_api/api/downgrade_trust'
+require_relative 'momentum_api/api/ownership'
 
