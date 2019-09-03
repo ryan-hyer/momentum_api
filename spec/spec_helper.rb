@@ -149,7 +149,7 @@ def schedule_options
                       days_until_expires:     -7,
                       remove_from_group:      'Owner_Manual',
                       message:                'R3',
-                      message_from:          'Kim_Miller',
+                      message_from:           'Kim_Miller',
                       excludes:               %w()
                   }
               }
