@@ -3,13 +3,13 @@ module MomentumApi
 
     attr_accessor :counters
 
-    def initialize(schedule, owner_options, mock: nil)
+    def initialize(schedule, ownership_options, mock: nil)
       raise ArgumentError, 'schedule needs to be defined' if schedule.nil?
-      raise ArgumentError, 'options needs to be defined' if owner_options.nil? or owner_options.empty?
+      raise ArgumentError, 'options needs to be defined' if ownership_options.nil? or ownership_options.empty?
 
       # parameter setting
       @schedule               =   schedule
-      @options                =   owner_options
+      @options                =   ownership_options
       @mock                   =   mock
 
       # counter init
@@ -22,37 +22,58 @@ module MomentumApi
 
     def run(man)
 
-      @options.each do |preference_type|
+      @options.each do |ownership_type|
 
-        preference_type[1].each do |preference|
+        case ownership_type[0].to_s
 
-          if preference[1][:excludes].include?(man.user_details['username'])
-            # puts "#{man.user_details['username']} is Excluded from this Task."
-          else
-
-            target_update_field = nil
-
-            case preference_type[0].to_s
-
-            when 'user_option'
-              target_update_field = preference[0].to_s
-
-            when 'user_fields'
-              target_update_field = preference[1][:set_level].keys[0].to_s
-
+        when 'manual'
+          puts ownership_type[0].to_s
+          puts Date.today.strftime("%Y-%m-%d")
+          ownership_type[1].each do |action|
+            if action[1][:excludes].include?(man.user_details['username'])
+              # puts "#{man.user_details['username']} is Excluded from this Task."
             else
-              # field_update(man, preference_option)
+              puts action[1][:days_until_expires]
+              target_date = Date.today + action[1][:days_until_expires]
+              puts target_date
+              target_update_field = '6'
+              puts man.user_details['user_fields'][target_update_field]
             end
-
-            if man.user_details[preference_type[0].to_s][target_update_field] == preference[1][:allowed_levels]
-              # man.print_user_options(man.user_details, user_option_print, 'Correct Preference')
-            else
-              field_update(man, preference,%W(#{preference_type[0]} #{target_update_field}))
-            end
-
-
+            
           end
+        else
+          puts ''
         end
+
+        # ownership_type[1].each eachdo |preference|
+        #
+        #   if preference[1][:excludes].include?(man.user_details['username'])
+        #     # puts "#{man.user_details['username']} is Excluded from this Task."
+        #   else
+        #
+        #     target_update_field = nil
+        #
+        #     case ownership_type[0].to_s
+        #
+        #     when 'user_option'
+        #       target_update_field = preference[0].to_s
+        #
+        #     when 'user_fields'
+        #       target_update_field = preference[1][:set_level].keys[0].to_s
+        #
+        #     else
+        #       # field_update(man, preference_option)
+        #     end
+        #
+        #     if man.user_details[ownership_type[0].to_s][target_update_field] == preference[1][:allowed_levels]
+        #       # man.print_user_options(man.user_details, user_option_print, 'Correct Preference')
+        #     else
+        #       field_update(man, preference,%W(#{ownership_type[0]} #{target_update_field}))
+        #     end
+        #
+        #
+        #   end
+        # end
 
       end
 

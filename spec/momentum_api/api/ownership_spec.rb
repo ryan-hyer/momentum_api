@@ -2,11 +2,11 @@ require_relative '../../spec_helper'
 
 describe MomentumApi::Ownership do
 
-  let(:user_details_preference_correct) { json_fixture("user_details.json") }
+  let(:user_details_ownership_mm_1week) { json_fixture("user_details_ownership_mm_1week.json") }
   let(:user_details_preference_wrong) { json_fixture("user_details_preference_wrong.json") }
   let(:user_admin_user_sso) { json_fixture("user_admin_user_sso.json") }
 
-  user_preference_tasks = schedule_options[:user][:preferences]
+  ownership_tasks = schedule_options[:ownership]
 
   let(:mock_discourse) do
     mock_discourse = instance_double('discourse')
@@ -23,18 +23,18 @@ describe MomentumApi::Ownership do
 
   let(:mock_man) do
     mock_man = instance_double('man')
-    expect(mock_man).to receive(:user_details).exactly(4).times.and_return(user_details_preference_correct)
+    expect(mock_man).to receive(:user_details).exactly(4).times.and_return(user_details_ownership_mm_1week)
     mock_man
   end
 
-  describe '.preference' do
+  describe '.run' do
 
     let(:mock_dependencies) do
       mock_dependencies = instance_double('mock_dependencies')
       mock_dependencies
     end
 
-    let(:ownership) { MomentumApi::Ownership.new(mock_schedule, user_preference_tasks, mock: mock_dependencies) }
+    let(:ownership) { MomentumApi::Ownership.new(mock_schedule, ownership_tasks, mock: mock_dependencies) }
 
     context "init" do
 
@@ -46,17 +46,16 @@ describe MomentumApi::Ownership do
     end
 
 
-    context "user already at correct preference setting" do
-
+    # context "user already at correct preference setting" do
       # it "user leaves Update Preference Targets" do
       #   expect(ownership).to respond_to(:run)
       #   ownership.run(mock_man)
       #   expect(ownership.instance_variable_get(:@counters)[:'User Preference Targets']).to eql(0)
       # end
-    end
+    # end
 
 
-    context "user needs to be updated" do
+    context "manual ownership user expering in the next week" do
 
       let(:mock_discourse) do
         mock_discourse = instance_double('discourse')
@@ -127,7 +126,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
-        expect(mock_admin_client).to receive(:user).twice.and_return user_details_preference_correct
+        expect(mock_admin_client).to receive(:user).twice.and_return user_details_ownership_mm_1week
         expect(mock_admin_client).to receive(:update_user).twice.and_return({"body": {"success": "OK"}})
         mock_admin_client
       end
@@ -175,7 +174,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
-        expect(mock_admin_client).to receive(:user).twice.and_return user_details_preference_correct
+        expect(mock_admin_client).to receive(:user).twice.and_return user_details_ownership_mm_1week
         expect(mock_admin_client).to receive(:user_sso).once.and_return user_admin_user_sso
         expect(mock_admin_client).to receive(:update_user).twice.and_return({"body": {"success": "OK"}})
         mock_admin_client
