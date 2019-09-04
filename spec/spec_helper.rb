@@ -144,23 +144,25 @@ def schedule_options
           manual: {
               memberful_expires_next_week: {
                   do_task_update:         false,
-                  profile_code:           'MM',
-                  days_until_expires:     7,
+                  renews_field:           '6',
+                  ownership_code:         'MM',
+                  days_until_renews:      7,
+                  action_sequence:        'R1',
                   add_to_group:           nil,
                   remove_from_group:      nil,
-                  message:                'R1',
                   message_from:           'Kim_Miller',
                   excludes:               %w()
               },
               memberful_final: {
-                  do_task_update:         false,         
-                  profile_code:           'MM',
-                  days_until_expires:     -7,
+                  do_task_update:         false,
+                  renews_field:           '6',
+                  ownership_code:         'MM',
+                  days_until_renews:      -7,
                   add_to_group:           nil,
                   remove_from_group:      'Owner_Manual',
-                  message:                'R3',
+                  action_sequence:        'R3',
                   message_from:           'Kim_Miller',
-                  excludes:               %w()
+                  excludes:                 %w()
               }
           }
       }

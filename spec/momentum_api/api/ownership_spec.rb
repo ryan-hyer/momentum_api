@@ -2,8 +2,8 @@ require_relative '../../spec_helper'
 
 describe MomentumApi::Ownership do
 
-  let(:user_details_ownership_mm_1week) { json_fixture("user_details_ownership_mm_1week.json") }
-  let(:user_details_preference_wrong) { json_fixture("user_details_preference_wrong.json") }
+  let(:user_details_ownership_2020_01_02_MM_R0) { json_fixture("user_details_ownership_2020_01_02_MM_R0.json") }
+  let(:user_details_ownership_renews_value_invalid) { json_fixture("user_details_ownership_renews_value_invalid.json") }
   let(:user_admin_user_sso) { json_fixture("user_admin_user_sso.json") }
 
   ownership_tasks = schedule_options[:ownership]
@@ -23,28 +23,67 @@ describe MomentumApi::Ownership do
 
   let(:mock_man) do
     mock_man = instance_double('man')
-    expect(mock_man).to receive(:user_details).exactly(4).times.and_return(user_details_ownership_mm_1week)
+    expect(mock_man).to receive(:user_details).exactly(4).times.and_return(user_details_ownership_2020_01_02_MM_R0)
     mock_man
+  end
+
+  let(:mock_dependencies) do
+    mock_dependencies = instance_double('mock_dependencies')
+    mock_dependencies
   end
 
   describe '.run' do
 
-    let(:mock_dependencies) do
-      mock_dependencies = instance_double('mock_dependencies')
-      mock_dependencies
-    end
-
     let(:ownership) { MomentumApi::Ownership.new(mock_schedule, ownership_tasks, mock: mock_dependencies) }
 
-    context "init" do
 
-      it ".run inits and responds" do
+    context '2 Ownership actions against a valid, non-expiring user renews_value' do
+
+      let(:mock_dependencies) do
+        mock_dependencies = instance_double('mock_dependencies')
+        expect(mock_dependencies).to receive(:today).twice.and_return(Date.new(2019,12,3))
+        mock_dependencies
+      end
+
+      it "inits and finds 2 Ownership actions and a valid user renews_value" do
+        expect(ownership).to respond_to(:run)
+        ownership.run(mock_man)
+      end
+
+    end
+    
+
+    context 'invalid user renews_value' do
+
+      let(:mock_man) do
+        mock_man = instance_double('man')
+        expect(mock_man).to receive(:user_details).exactly(4).times.and_return(user_details_ownership_renews_value_invalid)
+        mock_man
+      end
+
+      it "inits and finds 2 Ownership actions and a valid renews_value" do
         expect(ownership).to respond_to(:run)
         ownership.run(mock_man)
       end
 
     end
 
+
+    context 'Memberful Manual user expiring next week' do
+
+      let(:mock_dependencies) do
+        mock_dependencies = instance_double('mock_dependencies')
+        expect(mock_dependencies).to receive(:today).twice.and_return(Date.new(2019,12,26))
+        expect(mock_dependencies).to receive(:send_private_message)
+        mock_dependencies
+      end
+
+      it 'sends PM asking user to renew and sets user to R1' do
+        expect(ownership).to respond_to(:run)
+        ownership.run(mock_man)
+      end
+
+    end
 
     # context "user already at correct preference setting" do
       # it "user leaves Update Preference Targets" do
@@ -72,7 +111,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(8).times.and_return(user_details_preference_wrong)
+        expect(mock_man).to receive(:user_details).exactly(8).times.and_return(user_details_ownership_renews_value_invalid)
         expect(mock_man).to receive(:print_user_options).exactly(2).times
         mock_man
       end
@@ -94,7 +133,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(8).times.and_return(user_details_preference_wrong)
+        expect(mock_man).to receive(:user_details).exactly(8).times.and_return(user_details_ownership_renews_value_invalid)
         expect(mock_man).to receive(:print_user_options).exactly(2).times
         mock_man
       end
@@ -134,7 +173,7 @@ describe MomentumApi::Ownership do
       let(:mock_man) do
         mock_man = instance_double('man')
         expect(mock_man).to receive(:discourse).exactly(2).times.and_return(mock_discourse)
-        expect(mock_man).to receive(:user_details).exactly(12).times.and_return(user_details_preference_wrong)
+        expect(mock_man).to receive(:user_details).exactly(12).times.and_return(user_details_ownership_renews_value_invalid)
         expect(mock_man).to receive(:print_user_options).exactly(4).times
         mock_man
       end
@@ -183,7 +222,7 @@ describe MomentumApi::Ownership do
       let(:mock_man) do
         mock_man = instance_double('man')
         expect(mock_man).to receive(:discourse).exactly(2).times.and_return(mock_discourse)
-        expect(mock_man).to receive(:user_details).exactly(13).times.and_return(user_details_preference_wrong)
+        expect(mock_man).to receive(:user_details).exactly(13).times.and_return(user_details_ownership_renews_value_invalid)
         expect(mock_man).to receive(:print_user_options).exactly(4).times
         mock_man
       end
@@ -231,7 +270,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(10).times.and_return(user_details_preference_wrong)
+        expect(mock_man).to receive(:user_details).exactly(10).times.and_return(user_details_ownership_renews_value_invalid)
         expect(mock_man).to receive(:print_user_options).exactly(2).times
         mock_man
       end

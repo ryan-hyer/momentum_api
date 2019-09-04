@@ -12,6 +12,8 @@ module MomentumApi
       @options                =   ownership_options
       @mock                   =   mock
 
+      @message_client         =   mock || MomentumApi::Messages.new(self, 'Kim_Miller')
+
       # counter init
       @counters               =   {'Ownership': ''}
       schedule.discourse.scan_pass_counters << @counters
@@ -22,64 +24,87 @@ module MomentumApi
 
     def run(man)
 
+      clock = @mock || Date
+
       @options.each do |ownership_type|
+        ownership_type[1].each do |action|
+          renews_value = man.user_details['user_fields'][action[1][:renews_field]]
+          if action[1][:excludes].include?(man.user_details['username'])
+            # puts "#{man.user_details['username']} is Excluded from this Task."
+          elsif renews_value  and
+              Date.valid_date?(renews_value[0..3].to_i, renews_value[5..6].to_i, renews_value[8..9].to_i)
 
-        case ownership_type[0].to_s
+            renew_ownership_code = renews_value[11..12]
+            action_ownership_code_match = renew_ownership_code == action[1][:ownership_code]
 
-        when 'manual'
-          puts ownership_type[0].to_s
-          puts Date.today.strftime("%Y-%m-%d")
-          ownership_type[1].each do |action|
-            if action[1][:excludes].include?(man.user_details['username'])
-              # puts "#{man.user_details['username']} is Excluded from this Task."
-            else
-              puts action[1][:days_until_expires]
-              target_date = Date.today + action[1][:days_until_expires]
-              puts target_date
-              target_update_field = '6'
-              puts man.user_details['user_fields'][target_update_field]
+            renew_date = Date.parse(renews_value[0..9])
+            action_date_qualifies = clock.today >= renew_date - action[1][:days_until_renews]
+
+            if action_date_qualifies and action_ownership_code_match
+              
+              case ownership_type[0].to_s
+
+              when 'manual'
+
+                if renews_value[14] == 'R' and renews_value[15] =~ /^\d+$/
+
+                  action_sequence_last = renews_value[15].to_i
+                  action_sequence_qualifies = action_sequence_last + 1 == action[1][:action_sequence][1].to_i
+
+                  if action_sequence_qualifies
+
+                    send_renewal_message(renew_ownership_code, action_sequence_last)
+                    # todo 1. update renews_value with R code or 2.
+                    # puts Date.today.strftime("%Y-%m-%d")
+                    puts ownership_type[0].to_s
+                    puts action[1][:days_until_renews]
+                    puts action_date_qualifies
+                    puts renew_date
+                    puts action_sequence_qualifies
+                    
+                  end
+                else
+                  puts 'Needs R value set'  # todo set R value to R0
+                end
+                
+              when 'auto'
+
+              else
+                puts 'No recognized ownership_type'
+              end
+
             end
-            
+
+          elsif renews_value and 
+              Date.valid_date?(renews_value[0..3].to_i, renews_value[5..6].to_i, renews_value[8..9].to_i)
+
+            puts 'Adding R value'
+
+          else
+            # puts 'Invalid renews_value'
           end
-        else
-          puts ''
+          
         end
-
-        # ownership_type[1].each eachdo |preference|
-        #
-        #   if preference[1][:excludes].include?(man.user_details['username'])
-        #     # puts "#{man.user_details['username']} is Excluded from this Task."
-        #   else
-        #
-        #     target_update_field = nil
-        #
-        #     case ownership_type[0].to_s
-        #
-        #     when 'user_option'
-        #       target_update_field = preference[0].to_s
-        #
-        #     when 'user_fields'
-        #       target_update_field = preference[1][:set_level].keys[0].to_s
-        #
-        #     else
-        #       # field_update(man, preference_option)
-        #     end
-        #
-        #     if man.user_details[ownership_type[0].to_s][target_update_field] == preference[1][:allowed_levels]
-        #       # man.print_user_options(man.user_details, user_option_print, 'Correct Preference')
-        #     else
-        #       field_update(man, preference,%W(#{ownership_type[0]} #{target_update_field}))
-        #     end
-        #
-        #
-        #   end
-        # end
-
       end
-
     end
 
+    
     private
+
+    def message_path
+      File.expand_path("../../../../ownership/messages", __FILE__)
+    end
+
+    def message_body(text_file)
+      File.read(message_path + '/' + text_file)
+    end
+    
+    def send_renewal_message(renew_ownership_code, action_sequence_last)
+      message_file = renew_ownership_code + '_R' + action_sequence_last.to_s + '.txt'
+      message_subject = "Thank You for Owning Momentum!"
+      message_body = eval(message_body(message_file))
+      @message_client.send_private_message(@man, message_body, message_subject)
+    end
 
     def field_update(man, preference, updated_option)
 
@@ -119,7 +144,7 @@ module MomentumApi
           if row['Email']
             update_watermark = ' MF'
             if row['Email'] == sso_user['external_email']
-              hashback = {"#{preference[1][:set_level].keys[0]}": row['Expiration date'] + update_watermark}
+              hashback = {"#{preference[1][:set_level].keys[0]}": row['Expiration clock'] + update_watermark}
             end
           end
         end
