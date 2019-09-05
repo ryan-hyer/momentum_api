@@ -86,7 +86,6 @@ module MomentumApi
         @mock ? sleep(0) : sleep(1)
 
       end
-      # end
     end
 
     def find_set_value(man, preference)

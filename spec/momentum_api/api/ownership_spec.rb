@@ -10,20 +10,20 @@ describe MomentumApi::Ownership do
 
   let(:mock_discourse) do
     mock_discourse = instance_double('discourse')
-    # expect(mock_discourse).to receive(:options).once.and_return(discourse_options)
+    expect(mock_discourse).to receive(:options).once.and_return(discourse_options)
     expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
     mock_discourse
   end
 
   let(:mock_schedule) do
     mock_schedule = instance_double('schedule')
-    expect(mock_schedule).to receive(:discourse).exactly(1).times.and_return(mock_discourse)
+    expect(mock_schedule).to receive(:discourse).exactly(2).times.and_return(mock_discourse)
     mock_schedule
   end
 
   let(:mock_man) do
     mock_man = instance_double('man')
-    expect(mock_man).to receive(:user_details).exactly(4).times.and_return(user_details_ownership_2020_01_02_MM_R0)
+    expect(mock_man).to receive(:user_details).exactly(5).times.and_return(user_details_ownership_2020_01_02_MM_R0)
     mock_man
   end
 
@@ -57,7 +57,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(4).times.and_return(user_details_ownership_renews_value_invalid)
+        expect(mock_man).to receive(:user_details).exactly(5).times.and_return(user_details_ownership_renews_value_invalid)
         mock_man
       end
 
@@ -71,16 +71,40 @@ describe MomentumApi::Ownership do
 
     context 'Memberful Manual user expiring next week' do
 
+      let(:mock_discourse) do
+        mock_discourse = instance_double('discourse')
+        expect(mock_discourse).to receive(:options).twice.and_return(discourse_options)
+        expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
+        mock_discourse
+      end
+
+      let(:mock_schedule) do
+        mock_schedule = instance_double('schedule')
+        expect(mock_schedule).to receive(:discourse).exactly(3).times.and_return(mock_discourse)
+        mock_schedule
+      end
+
+      let(:mock_man) do
+        mock_man = instance_double('man')
+        expect(mock_man).to receive(:user_details).exactly(6).times.and_return(user_details_ownership_2020_01_02_MM_R0)
+        expect(mock_man).to receive(:print_user_options).exactly(1).times
+        mock_man
+      end
+
       let(:mock_dependencies) do
         mock_dependencies = instance_double('mock_dependencies')
         expect(mock_dependencies).to receive(:today).twice.and_return(Date.new(2019,12,26))
         expect(mock_dependencies).to receive(:send_private_message)
+                                         .with(mock_man, any_args, /Thank You for Owning Momentum!/)
+        # expect(mock_dependencies).to receive(:run).with(mock_man)
         mock_dependencies
       end
 
       it 'sends PM asking user to renew and sets user to R1' do
         expect(ownership).to respond_to(:run)
         ownership.run(mock_man)
+        # expect(ownership.instance_variable_get(:@user_update)[:user_fields][:user_fields][:set_level][:'6'])
+        #     .to eql('2020-01-02 MM R1')
       end
 
     end

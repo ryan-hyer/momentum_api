@@ -12,8 +12,6 @@ module MomentumApi
       @options                =   ownership_options
       @mock                   =   mock
 
-      @message_client         =   mock || MomentumApi::Messages.new(self, 'Kim_Miller')
-
       # counter init
       @counters               =   {'Ownership': ''}
       schedule.discourse.scan_pass_counters << @counters
@@ -24,11 +22,16 @@ module MomentumApi
 
     def run(man)
 
+      if @schedule.discourse.options[:issue_users].include?(man.user_details['username'])
+        puts "#{man.user_details['username']} in Ownership"
+      end
+
+      @man = man
       clock = @mock || Date
 
       @options.each do |ownership_type|
         ownership_type[1].each do |action|
-          renews_value = man.user_details['user_fields'][action[1][:renews_field]]
+          renews_value = man.user_details['user_fields'][action[1][:user_fields]]
           if action[1][:excludes].include?(man.user_details['username'])
             # puts "#{man.user_details['username']} is Excluded from this Task."
           elsif renews_value  and
@@ -53,8 +56,24 @@ module MomentumApi
 
                   if action_sequence_qualifies
 
-                    send_renewal_message(renew_ownership_code, action_sequence_last)
-                    # todo 1. update renews_value with R code or 2.
+                    send_renewal_message(action[1][:message_from], renew_ownership_code, action_sequence_last)
+
+                    user_update_value = renews_value[0..12] + ' ' + action[1][:action_sequence]
+                    update_ownership(man, action, user_update_value)
+                    
+                    # @user_update =  {
+                    #     user_fields:                              {
+                    #         user_fields: {
+                    #             do_task_update:         true,
+                    #             allowed_levels:         user_update_value,
+                    #             set_level:              {"#{action[1][:renews_field]}":user_update_value},
+                    #             excludes:               %w()
+                    #         }
+                    #     }
+                    # }
+                    # update_target = @mock || MomentumApi::Preferences.new(self, @user_update)
+                    # update_target.run(@man)
+                    
                     # puts Date.today.strftime("%Y-%m-%d")
                     puts ownership_type[0].to_s
                     puts action[1][:days_until_renews]
@@ -99,60 +118,61 @@ module MomentumApi
       File.read(message_path + '/' + text_file)
     end
     
-    def send_renewal_message(renew_ownership_code, action_sequence_last)
+    def send_renewal_message(message_from, renew_ownership_code, action_sequence_last)
       message_file = renew_ownership_code + '_R' + action_sequence_last.to_s + '.txt'
       message_subject = "Thank You for Owning Momentum!"
       message_body = eval(message_body(message_file))
-      @message_client.send_private_message(@man, message_body, message_subject)
+      message_client = @mock || MomentumApi::Messages.new(self, message_from)
+      message_client.send_private_message(@man, message_body, message_subject)
     end
 
-    def field_update(man, preference, updated_option)
+    def update_ownership(man, action, user_update_value)
 
-      if @schedule.discourse.options[:issue_users].include?(man.user_details['username'])
-        puts "#{man.user_details['username']} in Preferences"
-      end
+      # if @schedule.discourse.options[:issue_users].include?(man.user_details['username'])
+      #   puts "#{man.user_details['username']} in Ownership"
+      # end
 
       # user_option_print = %w(last_seen_at last_posted_at post_count time_read recent_time_read)
-      man.print_user_options(man.user_details, user_label: 'User to be Updated', nested_user_field: updated_option)
-      @counters[:'User Preference Targets'] += 1
+      man.print_user_options(man.user_details, user_label: 'Ownership Update', nested_user_field: "#{action[1][:user_fields]}")
+      @counters[:'Ownership Targets'] += 1
       # puts 'User to be updated'
 
-      update_set_value = find_set_value(man, preference)
+      update_set_value = {"#{action[1][:user_fields]}": user_update_value}
 
-      if @schedule.discourse.options[:do_live_updates] and preference[1][:do_task_update] and update_set_value
+      if @schedule.discourse.options[:do_live_updates] and action[1][:do_task_update]
 
         update_response = @schedule.discourse.admin_client.update_user(man.user_details['username'],
-                                                                         "#{preference[0]}": update_set_value)
+                                                                       user_fields: update_set_value)
         man.discourse.options[:logger].warn "#{update_response[:body]['success']}"
-        @counters[:'User Preference Updated'] += 1
+        @counters[:'Ownership Updated'] += 1
 
         # check if update happened
         user_option_after_update = @schedule.discourse.admin_client.user(man.user_details['username'])
-        man.print_user_options(user_option_after_update, user_label: 'User After Update', nested_user_field: updated_option)
+        man.print_user_options(user_option_after_update, user_label: 'User After Update', nested_user_field: "#{action[1][:user_fields]}")
         @mock ? sleep(0) : sleep(1)
 
       end
       # end
     end
 
-    def find_set_value(man, preference)
-      hashback = nil
-      if preference[1][:set_level].is_a? Hash and preference[1][:set_level].values[0].respond_to? :each
-        sso_user = @schedule.discourse.admin_client.user_sso(man.user_details['user_option']['user_id'])
-        preference[1][:set_level].values[0].each do |row|
-          # built for Memberful import; dependent on 'Email' field link
-          if row['Email']
-            update_watermark = ' MF'
-            if row['Email'] == sso_user['external_email']
-              hashback = {"#{preference[1][:set_level].keys[0]}": row['Expiration clock'] + update_watermark}
-            end
-          end
-        end
-        hashback
-      else
-        preference[1][:set_level]
-      end
-    end
+    # def find_set_value(man, preference)
+    #   hashback = nil
+    #   if preference[1][:set_level].is_a? Hash and preference[1][:set_level].values[0].respond_to? :each
+    #     sso_user = @schedule.discourse.admin_client.user_sso(man.user_details['user_option']['user_id'])
+    #     preference[1][:set_level].values[0].each do |row|
+    #       # built for Memberful import; dependent on 'Email' field link
+    #       if row['Email']
+    #         update_watermark = ' MF'
+    #         if row['Email'] == sso_user['external_email']
+    #           hashback = {"#{preference[1][:set_level].keys[0]}": row['Expiration clock'] + update_watermark}
+    #         end
+    #       end
+    #     end
+    #     hashback
+    #   else
+    #     preference[1][:set_level]
+    #   end
+    # end
 
     def zero_notifications_counters
       counters[:'Ownership']              =   0

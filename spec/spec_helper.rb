@@ -144,7 +144,7 @@ def schedule_options
           manual: {
               memberful_expires_next_week: {
                   do_task_update:         false,
-                  renews_field:           '6',
+                  user_fields:            '6',
                   ownership_code:         'MM',
                   days_until_renews:      7,
                   action_sequence:        'R1',
@@ -155,7 +155,7 @@ def schedule_options
               },
               memberful_final: {
                   do_task_update:         false,
-                  renews_field:           '6',
+                  user_fields:            '6',
                   ownership_code:         'MM',
                   days_until_renews:      -7,
                   add_to_group:           nil,

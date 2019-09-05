@@ -552,8 +552,7 @@ describe MomentumApi::Poll do
 
       let(:mock_dependencies) do
         mock_dependencies = instance_double('mock_dependencies')
-        expect(mock_dependencies).to receive(:send_private_message).once
-                                         .with(mock_man, any_args)
+        expect(mock_dependencies).to receive(:send_private_message).once.with(mock_man, any_args)
         mock_dependencies
       end
 
