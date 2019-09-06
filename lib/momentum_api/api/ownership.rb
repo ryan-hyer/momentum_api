@@ -12,6 +12,8 @@ module MomentumApi
       @options                =   ownership_options
       @mock                   =   mock
 
+      @message_client = @mock || MomentumApi::Messages.new(self, 'KM_Admin')
+
       # counter init
       @counters               =   {'Ownership': ''}
       schedule.discourse.scan_pass_counters << @counters
@@ -43,61 +45,48 @@ module MomentumApi
             renew_date = Date.parse(renews_value[0..9])
             action_date_qualifies = clock.today >= renew_date - action[1][:days_until_renews]
 
-            if action_date_qualifies and action_ownership_code_match
-              
-              case ownership_type[0].to_s
+            if action_ownership_code_match
 
-              when 'manual'
+              if renews_value[14] == 'R' and renews_value[15] =~ /^\d+$/
 
-                if renews_value[14] == 'R' and renews_value[15] =~ /^\d+$/
+                case ownership_type[0].to_s
 
-                  action_sequence_last = renews_value[15].to_i
-                  action_sequence_qualifies = action_sequence_last + 1 == action[1][:action_sequence][1].to_i
+                when 'manual'
 
-                  if action_sequence_qualifies
+                  if action_date_qualifies
 
-                    send_renewal_message(action[1][:message_from], renew_ownership_code, action_sequence_last)
+                    action_sequence_last = renews_value[15].to_i
+                    action_sequence_qualifies = action_sequence_last + 1 == action[1][:action_sequence][1].to_i
 
-                    user_update_value = renews_value[0..12] + ' ' + action[1][:action_sequence]
-                    update_ownership(man, action, user_update_value)
-                    
-                    # @user_update =  {
-                    #     user_fields:                              {
-                    #         user_fields: {
-                    #             do_task_update:         true,
-                    #             allowed_levels:         user_update_value,
-                    #             set_level:              {"#{action[1][:renews_field]}":user_update_value},
-                    #             excludes:               %w()
-                    #         }
-                    #     }
-                    # }
-                    # update_target = @mock || MomentumApi::Preferences.new(self, @user_update)
-                    # update_target.run(@man)
-                    
-                    # puts Date.today.strftime("%Y-%m-%d")
-                    puts ownership_type[0].to_s
-                    puts action[1][:days_until_renews]
-                    puts action_date_qualifies
-                    puts renew_date
-                    puts action_sequence_qualifies
-                    
+                    if action_sequence_qualifies
+
+                      user_update_value = renews_value[0..12] + ' ' + action[1][:action_sequence]
+                      update_ownership(man, action, user_update_value, renew_ownership_code, action[1][:action_sequence])
+
+                      # puts Date.today.strftime("%Y-%m-%d")
+                      puts ownership_type[0].to_s
+                      puts action[1][:days_until_renews]
+                      puts action_date_qualifies
+                      puts renew_date
+                      puts action_sequence_qualifies
+
+                    end
+
                   end
+
+                when 'auto'
+
                 else
-                  puts 'Needs R value set'  # todo set R value to R0
+                  # puts 'No recognized ownership_type'
                 end
-                
-              when 'auto'
 
-              else
-                puts 'No recognized ownership_type'
+              elsif action[1][:flag_new]
+                # puts "Needs R value set #{action[0]} #{renews_value}"
+                user_update_value = renews_value[0..12] + ' R0'
+                update_ownership(man, action, user_update_value, renew_ownership_code, 'R0', to_username: 'Kim_Miller')
               end
-
+              
             end
-
-          elsif renews_value and 
-              Date.valid_date?(renews_value[0..3].to_i, renews_value[5..6].to_i, renews_value[8..9].to_i)
-
-            puts 'Adding R value'
 
           else
             # puts 'Invalid renews_value'
@@ -109,41 +98,30 @@ module MomentumApi
 
     
     private
-
-    def message_path
-      File.expand_path("../../../../ownership/messages", __FILE__)
-    end
-
-    def message_body(text_file)
-      File.read(message_path + '/' + text_file)
-    end
     
-    def send_renewal_message(message_from, renew_ownership_code, action_sequence_last)
-      message_file = renew_ownership_code + '_R' + action_sequence_last.to_s + '.txt'
-      message_subject = "Thank You for Owning Momentum!"
-      message_body = eval(message_body(message_file))
-      message_client = @mock || MomentumApi::Messages.new(self, message_from)
-      message_client.send_private_message(@man, message_body, message_subject)
+    def send_renewal_message(renew_ownership_code, current_action_seq, from_username, to_username: nil)
+      message_file = renew_ownership_code + '_' + current_action_seq.to_s
+      message_subject = eval(message_body(message_file + '_subject.txt'))
+      message_body = eval(message_body(message_file + '_body.txt'))
+      # message_client = @mock || MomentumApi::Messages.new(self, from_username) # can be moved to init
+      @message_client.send_private_message(@man, message_body, message_subject, from_username: from_username, to_username: to_username)
     end
 
-    def update_ownership(man, action, user_update_value)
-
-      # if @schedule.discourse.options[:issue_users].include?(man.user_details['username'])
-      #   puts "#{man.user_details['username']} in Ownership"
-      # end
+    def update_ownership(man, action, user_update_value, renew_ownership_code, current_action_seq, to_username: nil)
 
       # user_option_print = %w(last_seen_at last_posted_at post_count time_read recent_time_read)
       man.print_user_options(man.user_details, user_label: 'Ownership Update', nested_user_field: "#{action[1][:user_fields]}")
       @counters[:'Ownership Targets'] += 1
-      # puts 'User to be updated'
 
       update_set_value = {"#{action[1][:user_fields]}": user_update_value}
 
       if @schedule.discourse.options[:do_live_updates] and action[1][:do_task_update]
 
+        send_renewal_message(renew_ownership_code, current_action_seq, action[1][:message_from], to_username: to_username)
+
         update_response = @schedule.discourse.admin_client.update_user(man.user_details['username'],
                                                                        user_fields: update_set_value)
-        man.discourse.options[:logger].warn "#{update_response[:body]['success']}"
+        @schedule.discourse.options[:logger].warn "#{update_response[:body]['success']}"
         @counters[:'Ownership Updated'] += 1
 
         # check if update happened
@@ -155,24 +133,13 @@ module MomentumApi
       # end
     end
 
-    # def find_set_value(man, preference)
-    #   hashback = nil
-    #   if preference[1][:set_level].is_a? Hash and preference[1][:set_level].values[0].respond_to? :each
-    #     sso_user = @schedule.discourse.admin_client.user_sso(man.user_details['user_option']['user_id'])
-    #     preference[1][:set_level].values[0].each do |row|
-    #       # built for Memberful import; dependent on 'Email' field link
-    #       if row['Email']
-    #         update_watermark = ' MF'
-    #         if row['Email'] == sso_user['external_email']
-    #           hashback = {"#{preference[1][:set_level].keys[0]}": row['Expiration clock'] + update_watermark}
-    #         end
-    #       end
-    #     end
-    #     hashback
-    #   else
-    #     preference[1][:set_level]
-    #   end
-    # end
+    def message_path
+      File.expand_path("../../../../ownership/messages", __FILE__)
+    end
+
+    def message_body(text_file)
+      File.read(message_path + '/' + text_file)
+    end
 
     def zero_notifications_counters
       counters[:'Ownership']              =   0

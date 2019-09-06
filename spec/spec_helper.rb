@@ -151,6 +151,7 @@ def schedule_options
                   add_to_group:           nil,
                   remove_from_group:      nil,
                   message_from:           'Kim_Miller',
+                  flag_new:               true,
                   excludes:               %w()
               },
               memberful_final: {

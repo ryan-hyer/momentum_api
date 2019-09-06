@@ -14,26 +14,25 @@ module MomentumApi
 
     end
 
-    def send_private_message(man, message_body, message_subject=nil, from_username: nil)
+    def send_private_message(man, message_body, message_subject=nil, from_username: nil, to_username: nil)
       raise ArgumentError, 'man needs to be defined' if man.nil?
       raise ArgumentError, 'message_body needs to be defined' if message_body.nil?
       raise ArgumentError, 'message_subject needs to be defined' if message_subject.nil?
 
-      @from_username = from_username || @from_username
-      to_username = man.user_details['username']
+      from_username = from_username || @from_username
+      to_username = to_username || man.user_details['username']
 
       # for testing only
-      if @from_username == to_username # and @from_username != 'KM_Admin'
-        @from_username = 'KM_Admin'
+      if from_username == to_username # and @from_username != 'KM_Admin'
+        from_username = 'KM_Admin'
       end
 
       field_settings = "%-18s %-20s %-20s %-55s %-25s %-25s"
-      # field_settings = "%-18s %-20s %-20s %-55s %-25s %-25s\n"
-      message_detail = sprintf field_settings, '  Message From:', @from_username, to_username, message_subject, message_body[0..20], 'Pending'
+      message_detail = sprintf field_settings, '  Message From:', from_username, to_username, message_subject, message_body[0..20], 'Pending'
       man.discourse.options[:logger].info message_detail
 
       if man.discourse.options[:do_live_updates]
-        from_client = man.discourse.connect_to_instance(@from_username)
+        from_client = man.discourse.connect_to_instance(from_username)
 
         response = from_client.create_private_message(
             title: message_subject,
@@ -48,7 +47,6 @@ module MomentumApi
         man.discourse.options[:logger].info sent_message_detail
 
         @requestor.counters[:'Messages Sent'] += 1
-        # man.discourse.scan_pass_counters.discourse_counters[:'Messages Sent'] += 1
         @mock ? sleep(0) : sleep(1)
       end
     end
