@@ -2221,3 +2221,964 @@ I, [19-08-30 11:29:26#80524]  INFO -- : Messages Sent                       0
 I, [19-08-30 11:29:26#80524]  INFO -- : User Preferences                    0                   
 I, [19-08-30 11:29:26#80524]  INFO -- : User Preference Targets             210                 
 I, [19-08-30 11:29:26#80524]  INFO -- : User Preference Updated             170                 
+I, [19-09-06 09:47:12#51975]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:47:12#51975]  INFO -- : Kim_Miller           2019-09-06     2019-08-26       1876         816273      46207                 2019-12-20 MF    
+W, [19-09-06 09:47:13#51975]  WARN -- : OK
+I, [19-09-06 09:47:13#51975]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:47:13#51975]  INFO -- : Kim_Miller          2019-09-06     2019-08-26       1876         816273      46207                 2019-12-20 MM R0    
+I, [19-09-06 09:47:14#51975]  INFO -- : Discourse Men                                           
+I, [19-09-06 09:47:14#51975]  INFO -- : Processed Users                     1                   
+I, [19-09-06 09:47:14#51975]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 09:47:14#51975]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 09:47:14#51975]  INFO -- : User Preferences                    0                   
+I, [19-09-06 09:47:14#51975]  INFO -- : User Preference Targets             1                   
+I, [19-09-06 09:47:14#51975]  INFO -- : User Preference Updated             1                   
+I, [19-09-06 09:56:20#52566]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:56:20#52566]  INFO -- : Steve_Scott          2019-08-25     2019-08-20       2094         1899502     70968                 2019-12-19 MF    
+W, [19-09-06 09:56:22#52566]  WARN -- : OK
+I, [19-09-06 09:56:22#52566]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:56:22#52566]  INFO -- : Steve_Scott         2019-08-25     2019-08-20       2094         1899502     70968                 2019-12-19 MM R0    
+I, [19-09-06 09:56:23#52566]  INFO -- : Discourse Men                                           
+I, [19-09-06 09:56:23#52566]  INFO -- : Processed Users                     1                   
+I, [19-09-06 09:56:23#52566]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 09:56:23#52566]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 09:56:23#52566]  INFO -- : User Preferences                    0                   
+I, [19-09-06 09:56:23#52566]  INFO -- : User Preference Targets             1                   
+I, [19-09-06 09:56:23#52566]  INFO -- : User Preference Updated             1                   
+I, [19-09-06 09:56:59#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:56:59#53010]  INFO -- : Aaron_Jenkins        2018-02-05     2017-09-30       1            6581        0                             
+I, [19-09-06 09:57:03#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:03#53010]  INFO -- : Alan_Schoen          2018-04-23     2018-09-25       0            925         0                             
+I, [19-09-06 09:57:08#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:08#53010]  INFO -- : Al_Dorji             2019-07-24     2019-07-24       4            532         501                   2020-05-07 MF    
+W, [19-09-06 09:57:08#53010]  WARN -- : OK
+I, [19-09-06 09:57:09#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:09#53010]  INFO -- : Al_Dorji            2019-07-24     2019-07-24       4            532         501                   2020-05-07 MM R0    
+I, [19-09-06 09:57:14#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:14#53010]  INFO -- : Alfonso_Benavides    2019-08-21     2019-08-21       280          299422      57049                 2020-03-26 MF    
+W, [19-09-06 09:57:15#53010]  WARN -- : OK
+I, [19-09-06 09:57:15#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:15#53010]  INFO -- : Alfonso_Benavides   2019-08-21     2019-08-21       280          299422      57049                 2020-03-26 MM R0    
+I, [19-09-06 09:57:20#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:20#53010]  INFO -- : Andrew_M_Webster     2019-08-03     2019-04-28       29           8585        22                    2019-09-16 MF    
+W, [19-09-06 09:57:21#53010]  WARN -- : OK
+I, [19-09-06 09:57:21#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:21#53010]  INFO -- : Andrew_M_Webster    2019-08-03     2019-04-28       29           8585        22                    2019-09-16 MM R0    
+I, [19-09-06 09:57:26#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:26#53010]  INFO -- : Andrew_Webster       2019-08-07     2019-04-13       56           21305       157                   2020-02-02 MF    
+W, [19-09-06 09:57:27#53010]  WARN -- : OK
+I, [19-09-06 09:57:27#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:27#53010]  INFO -- : Andrew_Webster      2019-08-07     2019-04-13       56           21305       157                   2020-02-02 MM R0    
+I, [19-09-06 09:57:32#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:32#53010]  INFO -- : Anshu_Sanghi         2019-08-07     2019-07-22       72           47697       1076                  2020-01-23 MF    
+W, [19-09-06 09:57:33#53010]  WARN -- : OK
+I, [19-09-06 09:57:33#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:33#53010]  INFO -- : Anshu_Sanghi        2019-08-07     2019-07-22       72           47697       1076                  2020-01-23 MM R0    
+I, [19-09-06 09:57:38#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:38#53010]  INFO -- : Antonio_Martinez     2019-07-20     2019-08-06       22           7376        195                   2020-01-19 MF    
+W, [19-09-06 09:57:39#53010]  WARN -- : OK
+I, [19-09-06 09:57:39#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:39#53010]  INFO -- : Antonio_Martinez    2019-07-20     2019-08-06       22           7376        195                   2020-01-19 MM R0    
+I, [19-09-06 09:57:44#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:44#53010]  INFO -- : Art_Muir             2019-08-17     2019-08-17       39           20763       449                   2019-12-20 MF    
+W, [19-09-06 09:57:45#53010]  WARN -- : OK
+I, [19-09-06 09:57:45#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:45#53010]  INFO -- : Art_Muir            2019-08-17     2019-08-17       39           20763       449                   2019-12-20 MM R0    
+I, [19-09-06 09:57:50#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:50#53010]  INFO -- : Barry_Dobyns         2018-08-25     2018-02-08       2            2152        0                             
+I, [19-09-06 09:57:55#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:55#53010]  INFO -- : Barry_Finkelstein    2019-08-20     2019-07-27       32           57673       3579                  2020-01-13 MF    
+W, [19-09-06 09:57:55#53010]  WARN -- : OK
+I, [19-09-06 09:57:55#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:57:55#53010]  INFO -- : Barry_Finkelstein   2019-08-20     2019-07-27       32           57673       3579                  2020-01-13 MM R0    
+I, [19-09-06 09:58:01#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:01#53010]  INFO -- : Benjamin_Berman      2019-08-21     2019-08-19       53           38498       1166                  2020-01-18 MF    
+W, [19-09-06 09:58:01#53010]  WARN -- : OK
+I, [19-09-06 09:58:02#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:02#53010]  INFO -- : Benjamin_Berman     2019-08-21     2019-08-19       53           38498       1166                  2020-01-18 MM R0    
+I, [19-09-06 09:58:07#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:07#53010]  INFO -- : Bill_Heller          2017-12-28     2019-02-07       9            1529        0                     4/1/2019    
+I, [19-09-06 09:58:11#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:11#53010]  INFO -- : Bill_Herndon         2019-08-18     2019-07-16       23           15784       2209                  2019-12-19 MF    
+W, [19-09-06 09:58:12#53010]  WARN -- : OK
+I, [19-09-06 09:58:12#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:12#53010]  INFO -- : Bill_Herndon        2019-08-18     2019-07-16       23           15784       2209                  2019-12-19 MM R0    
+I, [19-09-06 09:58:17#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:17#53010]  INFO -- : Bill_Sprague         2019-08-16                      0            5313        832                   2019-12-09 MF    
+W, [19-09-06 09:58:18#53010]  WARN -- : OK
+I, [19-09-06 09:58:18#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:18#53010]  INFO -- : Bill_Sprague        2019-08-16                      0            5313        832                   2019-12-09 MM R0    
+I, [19-09-06 09:58:23#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:23#53010]  INFO -- : Bill_Strahm          2016-11-24     2018-10-10       6            1562        0                             
+I, [19-09-06 09:58:28#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:28#53010]  INFO -- : Bill_Zabor           2019-08-21     2019-08-17       121          105151      8236                  2019-12-26 MF    
+W, [19-09-06 09:58:28#53010]  WARN -- : OK
+I, [19-09-06 09:58:28#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:28#53010]  INFO -- : Bill_Zabor          2019-08-21     2019-08-17       121          105151      8236                  2019-12-26 MM R0    
+I, [19-09-06 09:58:34#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:34#53010]  INFO -- : Bob_Richards         2019-07-31     2019-07-29       8            386         0                     2020-01-14 MF    
+W, [19-09-06 09:58:34#53010]  WARN -- : OK
+I, [19-09-06 09:58:34#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:34#53010]  INFO -- : Bob_Richards        2019-07-31     2019-07-29       8            386         0                     2020-01-14 MM R0    
+I, [19-09-06 09:58:40#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:40#53010]  INFO -- : Bob_Silver           2019-08-06     2019-07-02       5            935         0                     2020-02-09 MF    
+W, [19-09-06 09:58:40#53010]  WARN -- : OK
+I, [19-09-06 09:58:40#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:40#53010]  INFO -- : Bob_Silver          2019-08-06     2019-07-02       5            935         0                     2020-02-09 MM R0    
+I, [19-09-06 09:58:46#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:46#53010]  INFO -- : Bo_Zhou              2019-03-13     2019-01-18       6            2569        0                     2019-09-22 MF    
+W, [19-09-06 09:58:46#53010]  WARN -- : OK
+I, [19-09-06 09:58:46#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:46#53010]  INFO -- : Bo_Zhou             2019-03-13     2019-01-18       6            2569        0                     2019-09-22 MM R0    
+I, [19-09-06 09:58:52#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:52#53010]  INFO -- : Brad_Fino            2018-03-09     2018-01-08       16           4936        0                     1234    
+I, [19-09-06 09:58:56#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:56#53010]  INFO -- : Brad_Milliken        2019-08-15     2019-08-20       9            181         0                     2019-12-23 MF    
+W, [19-09-06 09:58:56#53010]  WARN -- : OK
+I, [19-09-06 09:58:57#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:58:57#53010]  INFO -- : Brad_Milliken       2019-08-15     2019-08-20       9            181         0                     2019-12-23 MM R0    
+I, [19-09-06 09:59:02#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:02#53010]  INFO -- : Brad_Peppard         2019-07-09     2019-08-12       33           12460       193                   2020-01-13 MF    
+W, [19-09-06 09:59:03#53010]  WARN -- : OK
+I, [19-09-06 09:59:03#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:03#53010]  INFO -- : Brad_Peppard        2019-07-09     2019-08-12       33           12460       193                   2020-01-13 MM R0    
+I, [19-09-06 09:59:08#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:08#53010]  INFO -- : Bran_Scott           2019-01-28                      0            0           0                     2020-01-12 MF    
+W, [19-09-06 09:59:08#53010]  WARN -- : OK
+I, [19-09-06 09:59:09#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:09#53010]  INFO -- : Bran_Scott          2019-01-28                      0            0           0                     2020-01-12 MM R0    
+I, [19-09-06 09:59:14#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:14#53010]  INFO -- : Brian_Haskin         2019-08-10     2019-06-19       48           50510       182                   2019-12-23 MF    
+W, [19-09-06 09:59:14#53010]  WARN -- : OK
+I, [19-09-06 09:59:15#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:15#53010]  INFO -- : Brian_Haskin        2019-08-10     2019-06-19       48           50510       182                   2019-12-23 MM R0    
+I, [19-09-06 09:59:20#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:20#53010]  INFO -- : Brian_Ruthruff       2019-08-14     2019-02-13       3            451         0                     2019-10-16 MF    
+W, [19-09-06 09:59:20#53010]  WARN -- : OK
+I, [19-09-06 09:59:21#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:21#53010]  INFO -- : Brian_Ruthruff      2019-08-14     2019-02-13       3            451         0                     2019-10-16 MM R0    
+I, [19-09-06 09:59:26#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:26#53010]  INFO -- : Bruce_Scheer         2019-03-13     2019-03-30       5            5762        0                     2019-12-27 MF    
+W, [19-09-06 09:59:26#53010]  WARN -- : OK
+I, [19-09-06 09:59:27#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:27#53010]  INFO -- : Bruce_Scheer        2019-03-13     2019-03-30       5            5762        0                     2019-12-27 MM R0    
+I, [19-09-06 09:59:32#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:32#53010]  INFO -- : Butch_Dority         2018-08-13                      0            1196        0                     2020-02-12 MF    
+W, [19-09-06 09:59:32#53010]  WARN -- : OK
+I, [19-09-06 09:59:33#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:33#53010]  INFO -- : Butch_Dority        2018-08-13                      0            1196        0                     2020-02-12 MM R0    
+I, [19-09-06 09:59:38#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:38#53010]  INFO -- : Charlie_Bedard       2019-08-07     2019-08-21       83           13257       1142                  2019-12-19 MF    
+W, [19-09-06 09:59:38#53010]  WARN -- : OK
+I, [19-09-06 09:59:39#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:39#53010]  INFO -- : Charlie_Bedard      2019-08-07     2019-08-21       83           13257       1142                  2019-12-19 MM R0    
+I, [19-09-06 09:59:44#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:44#53010]  INFO -- : Charlie_Ohanlon      2019-08-20     2019-08-03       135          31761       1163                  2019-12-19 MF    
+W, [19-09-06 09:59:44#53010]  WARN -- : OK
+I, [19-09-06 09:59:44#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:44#53010]  INFO -- : Charlie_Ohanlon     2019-08-20     2019-08-03       135          31761       1163                  2019-12-19 MM R0    
+I, [19-09-06 09:59:50#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:50#53010]  INFO -- : Chris_Edgar          2019-02-11     2018-11-12       0            68          0                     2020-01-14 MF    
+W, [19-09-06 09:59:50#53010]  WARN -- : OK
+I, [19-09-06 09:59:50#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:50#53010]  INFO -- : Chris_Edgar         2019-02-11     2018-11-12       0            68          0                     2020-01-14 MM R0    
+I, [19-09-06 09:59:56#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:56#53010]  INFO -- : Chris_Reed           2019-08-20     2019-08-20       49           14757       2032                  2019-12-29 MF    
+W, [19-09-06 09:59:56#53010]  WARN -- : OK
+I, [19-09-06 09:59:57#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 09:59:57#53010]  INFO -- : Chris_Reed          2019-08-20     2019-08-20       49           14757       2032                  2019-12-29 MM R0    
+I, [19-09-06 10:00:02#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:02#53010]  INFO -- : Chris_Steck          2019-08-20     2019-08-11       132          219585      14365                 2020-04-21 MF    
+W, [19-09-06 10:00:03#53010]  WARN -- : OK
+I, [19-09-06 10:00:03#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:03#53010]  INFO -- : Chris_Steck         2019-08-20     2019-08-11       132          219585      14365                 2020-04-21 MM R0    
+I, [19-09-06 10:00:08#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:08#53010]  INFO -- : Chris_Sulek          2019-08-20     2019-08-19       169          364689      19988                 2020-01-14 MF    
+W, [19-09-06 10:00:09#53010]  WARN -- : OK
+I, [19-09-06 10:00:09#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:09#53010]  INFO -- : Chris_Sulek         2019-08-20     2019-08-19       169          364689      19988                 2020-01-14 MM R0    
+I, [19-09-06 10:00:14#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:14#53010]  INFO -- : Christian_Agardi     2017-08-18     2018-12-20       15           1736        0                     2020-01-31 MF    
+W, [19-09-06 10:00:15#53010]  WARN -- : OK
+I, [19-09-06 10:00:15#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:15#53010]  INFO -- : Christian_Agardi    2017-08-18     2018-12-20       15           1736        0                     2020-01-31 MM R0    
+I, [19-09-06 10:00:20#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:20#53010]  INFO -- : Chris_Wilke          2018-01-05     2018-02-16       1            598         0                             
+I, [19-09-06 10:00:25#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:25#53010]  INFO -- : Clark_Zhang          2019-07-23     2019-07-23       20           5924        61                    2020-06-09 MF    
+W, [19-09-06 10:00:25#53010]  WARN -- : OK
+I, [19-09-06 10:00:25#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:25#53010]  INFO -- : Clark_Zhang         2019-07-23     2019-07-23       20           5924        61                    2020-06-09 MM R0    
+I, [19-09-06 10:00:31#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:31#53010]  INFO -- : Clay_Campbell        2019-08-14     2019-08-14       47           61195       1760                  2019-12-27 MF    
+W, [19-09-06 10:00:31#53010]  WARN -- : OK
+I, [19-09-06 10:00:31#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:31#53010]  INFO -- : Clay_Campbell       2019-08-14     2019-08-14       47           61195       1760                  2019-12-27 MM R0    
+I, [19-09-06 10:00:37#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:37#53010]  INFO -- : Cole_Cameron         2019-05-06     2019-05-17       20           10133       0                             
+I, [19-09-06 10:00:41#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:41#53010]  INFO -- : Cory_Harasha         2019-08-15     2019-08-16       27           7355        2255                  2020-03-21 MF    
+W, [19-09-06 10:00:41#53010]  WARN -- : OK
+I, [19-09-06 10:00:42#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:42#53010]  INFO -- : Cory_Harasha        2019-08-15     2019-08-16       27           7355        2255                  2020-03-21 MM R0    
+I, [19-09-06 10:00:47#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:47#53010]  INFO -- : Curt_Haynes          2019-06-08     2018-05-02       17           3750        0                     2020-06-05 MF    
+W, [19-09-06 10:00:47#53010]  WARN -- : OK
+I, [19-09-06 10:00:48#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:48#53010]  INFO -- : Curt_Haynes         2019-06-08     2018-05-02       17           3750        0                     2020-06-05 MM R0    
+I, [19-09-06 10:00:53#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:53#53010]  INFO -- : Curt_Weil            2019-08-02     2019-08-19       126          12366       591                   2019-12-20 MF    
+W, [19-09-06 10:00:53#53010]  WARN -- : OK
+I, [19-09-06 10:00:54#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:54#53010]  INFO -- : Curt_Weil           2019-08-02     2019-08-19       126          12366       591                   2019-12-20 MM R0    
+I, [19-09-06 10:00:59#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:00:59#53010]  INFO -- : Dainuri              2019-07-22     2019-04-20       8            14454       0                     2020-02-11 MF    
+W, [19-09-06 10:00:59#53010]  WARN -- : OK
+I, [19-09-06 10:01:00#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:00#53010]  INFO -- : Dainuri             2019-07-22     2019-04-20       8            14454       0                     2020-02-11 MM R0    
+I, [19-09-06 10:01:05#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:05#53010]  INFO -- : Dan_Ollendorff       2019-08-20     2019-08-17       26           43275       1229                  2020-03-25 MF    
+W, [19-09-06 10:01:05#53010]  WARN -- : OK
+I, [19-09-06 10:01:06#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:06#53010]  INFO -- : Dan_Ollendorff      2019-08-20     2019-08-17       26           43275       1229                  2020-03-25 MM R0    
+I, [19-09-06 10:01:11#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:11#53010]  INFO -- : Dave_Lloyd           2019-08-20     2019-08-10       44           24245       2983                  2019-12-19 MF    
+W, [19-09-06 10:01:11#53010]  WARN -- : OK
+I, [19-09-06 10:01:12#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:12#53010]  INFO -- : Dave_Lloyd          2019-08-20     2019-08-10       44           24245       2983                  2019-12-19 MM R0    
+I, [19-09-06 10:01:17#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:17#53010]  INFO -- : Dave_Mahal           2019-04-22                      0            303         0                     2020-01-15 MF    
+W, [19-09-06 10:01:17#53010]  WARN -- : OK
+I, [19-09-06 10:01:17#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:17#53010]  INFO -- : Dave_Mahal          2019-04-22                      0            303         0                     2020-01-15 MM R0    
+I, [19-09-06 10:01:23#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:23#53010]  INFO -- : Dave_Mussoff         2019-08-20     2019-08-20       25           16693       1293                  2020-01-30 MF    
+W, [19-09-06 10:01:24#53010]  WARN -- : OK
+I, [19-09-06 10:01:24#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:24#53010]  INFO -- : Dave_Mussoff        2019-08-20     2019-08-20       25           16693       1293                  2020-01-30 MM R0    
+I, [19-09-06 10:01:29#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:29#53010]  INFO -- : Dave_Reid            2018-09-18                      0            20          0                             
+I, [19-09-06 10:01:34#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:34#53010]  INFO -- : Dave_Strigler        2019-08-19     2019-04-21       9            67504       1880                  2020-01-11 MF    
+W, [19-09-06 10:01:34#53010]  WARN -- : OK
+I, [19-09-06 10:01:34#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:34#53010]  INFO -- : Dave_Strigler       2019-08-19     2019-04-21       9            67504       1880                  2020-01-11 MM R0    
+I, [19-09-06 10:01:40#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:40#53010]  INFO -- : David_Ashby          2019-08-21     2019-08-20       124          67766       10640                 2019-10-01 MF    
+W, [19-09-06 10:01:40#53010]  WARN -- : OK
+I, [19-09-06 10:01:40#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:40#53010]  INFO -- : David_Ashby         2019-08-21     2019-08-20       124          67766       10640                 2019-10-01 MM R0    
+I, [19-09-06 10:01:46#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:46#53010]  INFO -- : David_Coleman        2019-07-28     2019-07-28       2            1104        107                   2020-05-17 MF    
+W, [19-09-06 10:01:46#53010]  WARN -- : OK
+I, [19-09-06 10:01:46#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:46#53010]  INFO -- : David_Coleman       2019-07-28     2019-07-28       2            1104        107                   2020-05-17 MM R0    
+I, [19-09-06 10:01:52#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:52#53010]  INFO -- : David_Hohl           2019-08-14     2019-05-25       9            26682       808                   2019-12-29 MF    
+W, [19-09-06 10:01:52#53010]  WARN -- : OK
+I, [19-09-06 10:01:52#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:52#53010]  INFO -- : David_Hohl          2019-08-14     2019-05-25       9            26682       808                   2019-12-29 MM R0    
+I, [19-09-06 10:01:57#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:57#53010]  INFO -- : David_Kirk           2019-08-20     2019-08-20       289          246727      18355                 2020-12-19 MF    
+W, [19-09-06 10:01:58#53010]  WARN -- : OK
+I, [19-09-06 10:01:58#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:01:58#53010]  INFO -- : David_Kirk          2019-08-20     2019-08-20       289          246727      18355                 2020-12-19 MM R0    
+I, [19-09-06 10:02:04#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:04#53010]  INFO -- : David_Mock           2019-08-01     2019-08-01       11           3061        18                    2020-08-20 MF    
+W, [19-09-06 10:02:04#53010]  WARN -- : OK
+I, [19-09-06 10:02:04#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:04#53010]  INFO -- : David_Mock          2019-08-01     2019-08-01       11           3061        18                    2020-08-20 MM R0    
+I, [19-09-06 10:02:09#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:09#53010]  INFO -- : David_Montagna       2019-07-27     2019-07-09       10           8483        378                   2019-12-28 MF    
+W, [19-09-06 10:02:10#53010]  WARN -- : OK
+I, [19-09-06 10:02:10#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:10#53010]  INFO -- : David_Montagna      2019-07-27     2019-07-09       10           8483        378                   2019-12-28 MM R0    
+I, [19-09-06 10:02:15#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:15#53010]  INFO -- : David_Nickerson      2019-08-20     2019-08-20       2            4776        0                             
+I, [19-09-06 10:02:20#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:20#53010]  INFO -- : Dennis_Adsit         2019-07-01     2019-07-01       0            713         0                     2019-12-31 MF    
+W, [19-09-06 10:02:20#53010]  WARN -- : OK
+I, [19-09-06 10:02:20#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:20#53010]  INFO -- : Dennis_Adsit        2019-07-01     2019-07-01       0            713         0                     2019-12-31 MM R0    
+I, [19-09-06 10:02:26#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:26#53010]  INFO -- : Dennis_Sorensen      2018-04-13     2019-04-08       7            1644        0                     2019-12-21 MF    
+W, [19-09-06 10:02:26#53010]  WARN -- : OK
+I, [19-09-06 10:02:26#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:26#53010]  INFO -- : Dennis_Sorensen     2018-04-13     2019-04-08       7            1644        0                     2019-12-21 MM R0    
+I, [19-09-06 10:02:31#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:31#53010]  INFO -- : Deven_Kalra          2018-10-31     2018-10-30       1            423         0                     2019-10-25 MF    
+W, [19-09-06 10:02:32#53010]  WARN -- : OK
+I, [19-09-06 10:02:32#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:32#53010]  INFO -- : Deven_Kalra         2018-10-31     2018-10-30       1            423         0                     2019-10-25 MM R0    
+I, [19-09-06 10:02:37#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:37#53010]  INFO -- : Don_Morgan           2019-06-11     2019-07-03       6            730         0                     2020-01-23 MF    
+W, [19-09-06 10:02:38#53010]  WARN -- : OK
+I, [19-09-06 10:02:38#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:38#53010]  INFO -- : Don_Morgan          2019-06-11     2019-07-03       6            730         0                     2020-01-23 MM R0    
+I, [19-09-06 10:02:43#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:43#53010]  INFO -- : Doug_Greig           2019-06-22     2019-07-18       32           10707       0                     2019-12-22 MF    
+W, [19-09-06 10:02:44#53010]  WARN -- : OK
+I, [19-09-06 10:02:44#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:44#53010]  INFO -- : Doug_Greig          2019-06-22     2019-07-18       32           10707       0                     2019-12-22 MM R0    
+I, [19-09-06 10:02:49#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:49#53010]  INFO -- : Eamon_Rooney         2019-03-19                      0            605         0                     2020-03-23 MF    
+W, [19-09-06 10:02:50#53010]  WARN -- : OK
+I, [19-09-06 10:02:50#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:50#53010]  INFO -- : Eamon_Rooney        2019-03-19                      0            605         0                     2020-03-23 MM R0    
+I, [19-09-06 10:02:55#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:55#53010]  INFO -- : Edmond_Cote          2019-08-21     2019-08-21       241          104171      6220                  2019-12-19 MF    
+W, [19-09-06 10:02:56#53010]  WARN -- : OK
+I, [19-09-06 10:02:57#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:02:57#53010]  INFO -- : Edmond_Cote         2019-08-21     2019-08-21       241          104171      6220                  2019-12-19 MM R0    
+I, [19-09-06 10:03:02#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:02#53010]  INFO -- : EO_Rojas             2019-08-10     2019-06-20       135          102062      61                    2019-12-21 MF    
+W, [19-09-06 10:03:03#53010]  WARN -- : OK
+I, [19-09-06 10:03:03#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:03#53010]  INFO -- : EO_Rojas            2019-08-10     2019-06-20       135          102062      61                    2019-12-21 MM R0    
+I, [19-09-06 10:03:09#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:09#53010]  INFO -- : Eric_Nitzberg        2019-07-05     2019-03-02       0            110         0                     2019-12-27 MF    
+W, [19-09-06 10:03:09#53010]  WARN -- : OK
+I, [19-09-06 10:03:09#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:09#53010]  INFO -- : Eric_Nitzberg       2019-07-05     2019-03-02       0            110         0                     2019-12-27 MM R0    
+I, [19-09-06 10:03:14#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:14#53010]  INFO -- : Flint_Thorne         2019-08-15     2019-06-28       24           4970        398                   2020-02-01 MF    
+W, [19-09-06 10:03:15#53010]  WARN -- : OK
+I, [19-09-06 10:03:15#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:15#53010]  INFO -- : Flint_Thorne        2019-08-15     2019-06-28       24           4970        398                   2020-02-01 MM R0    
+I, [19-09-06 10:03:20#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:20#53010]  INFO -- : Francis_daCosta      2019-08-20     2019-08-20       10           28753       15769                 2019-12-27 MF    
+W, [19-09-06 10:03:21#53010]  WARN -- : OK
+I, [19-09-06 10:03:21#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:21#53010]  INFO -- : Francis_daCosta     2019-08-20     2019-08-20       10           28753       15769                 2019-12-27 MM R0    
+I, [19-09-06 10:03:26#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:26#53010]  INFO -- : Garry_Cheney         2019-07-04     2019-07-29       91           2061        0                     2020-01-27 MF    
+W, [19-09-06 10:03:27#53010]  WARN -- : OK
+I, [19-09-06 10:03:27#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:27#53010]  INFO -- : Garry_Cheney        2019-07-04     2019-07-29       91           2061        0                     2020-01-27 MM R0    
+I, [19-09-06 10:03:32#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:32#53010]  INFO -- : Gary_Chan            2018-07-11     2017-11-10       4            4507        0                             
+I, [19-09-06 10:03:37#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:37#53010]  INFO -- : Gary_Koerzendorfer   2019-08-01     2019-08-01       3            787         306                   2020-06-05 MF    
+W, [19-09-06 10:03:37#53010]  WARN -- : OK
+I, [19-09-06 10:03:37#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:37#53010]  INFO -- : Gary_Koerzendorfer  2019-08-01     2019-08-01       3            787         306                   2020-06-05 MM R0    
+I, [19-09-06 10:03:43#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:43#53010]  INFO -- : Gary_Kraemer         2019-06-19     2019-06-09       1            1258        0                     2020-03-09 MF    
+W, [19-09-06 10:03:43#53010]  WARN -- : OK
+I, [19-09-06 10:03:43#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:43#53010]  INFO -- : Gary_Kraemer        2019-06-19     2019-06-09       1            1258        0                     2020-03-09 MM R0    
+I, [19-09-06 10:03:49#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:49#53010]  INFO -- : Gary_Merrick         2019-08-20     2019-08-20       378          332765      28964                 2020-01-13 MF    
+W, [19-09-06 10:03:49#53010]  WARN -- : OK
+I, [19-09-06 10:03:49#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:49#53010]  INFO -- : Gary_Merrick        2019-08-20     2019-08-20       378          332765      28964                 2020-01-13 MM R0    
+I, [19-09-06 10:03:55#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:55#53010]  INFO -- : Gary_Plep            2019-06-29     2019-06-29       2            2063        0                     2019-12-31 MF    
+W, [19-09-06 10:03:55#53010]  WARN -- : OK
+I, [19-09-06 10:03:55#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:03:55#53010]  INFO -- : Gary_Plep           2019-06-29     2019-06-29       2            2063        0                     2019-12-31 MM R0    
+I, [19-09-06 10:04:00#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:00#53010]  INFO -- : Gene_Sussli          2018-12-14     2019-02-09       28           13261       0                     2020-05-05 MF    
+W, [19-09-06 10:04:01#53010]  WARN -- : OK
+I, [19-09-06 10:04:01#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:01#53010]  INFO -- : Gene_Sussli         2018-12-14     2019-02-09       28           13261       0                     2020-05-05 MM R0    
+I, [19-09-06 10:04:06#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:06#53010]  INFO -- : Geoff_Wright         2019-01-20     2019-01-13       3            760         0                     2020-01-11 MF    
+W, [19-09-06 10:04:07#53010]  WARN -- : OK
+I, [19-09-06 10:04:07#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:07#53010]  INFO -- : Geoff_Wright        2019-01-20     2019-01-13       3            760         0                     2020-01-11 MM R0    
+I, [19-09-06 10:04:12#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:12#53010]  INFO -- : George_Kotsovolos    2019-08-19     2019-07-19       2            876         876                   2020-08-02 MF    
+W, [19-09-06 10:04:13#53010]  WARN -- : OK
+I, [19-09-06 10:04:13#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:13#53010]  INFO -- : George_Kotsovolos   2019-08-19     2019-07-19       2            876         876                   2020-08-02 MM R0    
+I, [19-09-06 10:04:18#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:18#53010]  INFO -- : Glenn_Davis          2018-01-24     2016-12-14       0            230         0                             
+I, [19-09-06 10:04:23#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:23#53010]  INFO -- : Graham_Howe          2018-09-24                      0            80          0                     2019-08-10 MF    
+W, [19-09-06 10:04:23#53010]  WARN -- : OK
+I, [19-09-06 10:04:23#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:23#53010]  INFO -- : Graham_Howe         2018-09-24                      0            80          0                     2019-08-10 MM R0    
+I, [19-09-06 10:04:29#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:29#53010]  INFO -- : Greg_Thayer          2019-03-15     2019-07-09       5            626         0                     2020-03-15 MF    
+W, [19-09-06 10:04:29#53010]  WARN -- : OK
+I, [19-09-06 10:04:29#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:29#53010]  INFO -- : Greg_Thayer         2019-03-15     2019-07-09       5            626         0                     2020-03-15 MM R0    
+I, [19-09-06 10:04:34#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:34#53010]  INFO -- : Howard_Bailey        2019-01-18     2019-01-11       0            252         0                     2020-01-11 MF    
+W, [19-09-06 10:04:35#53010]  WARN -- : OK
+I, [19-09-06 10:04:35#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:35#53010]  INFO -- : Howard_Bailey       2019-01-18     2019-01-11       0            252         0                     2020-01-11 MM R0    
+I, [19-09-06 10:04:40#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:40#53010]  INFO -- : How_Shaw             2017-09-13     2019-02-08       0            0           0                     2019-12-27 MF    
+W, [19-09-06 10:04:41#53010]  WARN -- : OK
+I, [19-09-06 10:04:41#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:41#53010]  INFO -- : How_Shaw            2017-09-13     2019-02-08       0            0           0                     2019-12-27 MM R0    
+I, [19-09-06 10:04:46#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:46#53010]  INFO -- : Ian_Wilkes           2019-08-19     2019-08-12       43           31142       7161                  2020-01-11 MF    
+W, [19-09-06 10:04:47#53010]  WARN -- : OK
+I, [19-09-06 10:04:47#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:47#53010]  INFO -- : Ian_Wilkes          2019-08-19     2019-08-12       43           31142       7161                  2020-01-11 MM R0    
+I, [19-09-06 10:04:52#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:52#53010]  INFO -- : Igor_Ukrainczyk      2017-12-08                      0            23          0                             
+I, [19-09-06 10:04:57#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:57#53010]  INFO -- : Jack_McInerney       2019-08-21     2019-08-19       228          329564      30123                 2020-05-19 MF    
+W, [19-09-06 10:04:57#53010]  WARN -- : OK
+I, [19-09-06 10:04:57#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:04:57#53010]  INFO -- : Jack_McInerney      2019-08-21     2019-08-19       228          329564      30123                 2020-05-19 MM R0    
+I, [19-09-06 10:05:03#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:03#53010]  INFO -- : Jack_Shannon         2018-02-18     2019-07-12       2            42          0                     2019-12-19 MF    
+W, [19-09-06 10:05:03#53010]  WARN -- : OK
+I, [19-09-06 10:05:03#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:03#53010]  INFO -- : Jack_Shannon        2018-02-18     2019-07-12       2            42          0                     2019-12-19 MM R0    
+I, [19-09-06 10:05:09#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:09#53010]  INFO -- : Jake_Whiting         2019-08-13     2019-08-20       1            259         259                   2020-08-11 MF    
+W, [19-09-06 10:05:09#53010]  WARN -- : OK
+I, [19-09-06 10:05:09#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:09#53010]  INFO -- : Jake_Whiting        2019-08-13     2019-08-20       1            259         259                   2020-08-11 MM R0    
+I, [19-09-06 10:05:15#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:15#53010]  INFO -- : James_Fitzgerald     2019-07-29     2019-07-29       1            34649       180                   2020-01-29 MF    
+W, [19-09-06 10:05:15#53010]  WARN -- : OK
+I, [19-09-06 10:05:15#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:15#53010]  INFO -- : James_Fitzgerald    2019-07-29     2019-07-29       1            34649       180                   2020-01-29 MM R0    
+I, [19-09-06 10:05:21#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:21#53010]  INFO -- : James_Grubinskas     2019-08-20     2019-08-19       124          60512       10265                 2020-02-22 MF    
+W, [19-09-06 10:05:21#53010]  WARN -- : OK
+I, [19-09-06 10:05:21#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:21#53010]  INFO -- : James_Grubinskas    2019-08-20     2019-08-19       124          60512       10265                 2020-02-22 MM R0    
+I, [19-09-06 10:05:26#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:26#53010]  INFO -- : James_McKeefery      2019-03-02                      0            625         0                     2020-03-12 MF    
+W, [19-09-06 10:05:27#53010]  WARN -- : OK
+I, [19-09-06 10:05:27#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:27#53010]  INFO -- : James_McKeefery     2019-03-02                      0            625         0                     2020-03-12 MM R0    
+I, [19-09-06 10:05:32#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:32#53010]  INFO -- : Janos_Keresztes      2019-03-23     2019-05-04       0            21          0                     2020-03-23 MF    
+W, [19-09-06 10:05:33#53010]  WARN -- : OK
+I, [19-09-06 10:05:33#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:33#53010]  INFO -- : Janos_Keresztes     2019-03-23     2019-05-04       0            21          0                     2020-03-23 MM R0    
+I, [19-09-06 10:05:38#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:38#53010]  INFO -- : Jason_Heimann        2016-12-26     2016-10-10       2            797         0                             
+I, [19-09-06 10:05:43#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:43#53010]  INFO -- : Jay_Larrick          2019-08-20     2019-08-21       17           6177        2590                  2020-02-01 MF    
+W, [19-09-06 10:05:43#53010]  WARN -- : OK
+I, [19-09-06 10:05:43#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:43#53010]  INFO -- : Jay_Larrick         2019-08-20     2019-08-21       17           6177        2590                  2020-02-01 MM R0    
+I, [19-09-06 10:05:49#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:49#53010]  INFO -- : Jeff_Cintas          2019-08-15     2019-08-14       38           41307       935                   2020-01-08 MF    
+W, [19-09-06 10:05:49#53010]  WARN -- : OK
+I, [19-09-06 10:05:49#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:49#53010]  INFO -- : Jeff_Cintas         2019-08-15     2019-08-14       38           41307       935                   2020-01-08 MM R0    
+I, [19-09-06 10:05:55#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:55#53010]  INFO -- : Jeff_Colvin          2019-03-15     2019-04-08       5            1727        0                     2019-12-29 MF    
+W, [19-09-06 10:05:55#53010]  WARN -- : OK
+I, [19-09-06 10:05:55#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:05:55#53010]  INFO -- : Jeff_Colvin         2019-03-15     2019-04-08       5            1727        0                     2019-12-29 MM R0    
+I, [19-09-06 10:06:01#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:01#53010]  INFO -- : Jeff_Klay            2019-08-15     2019-06-04       7            3953        231                   2019-12-21 MF    
+W, [19-09-06 10:06:01#53010]  WARN -- : OK
+I, [19-09-06 10:06:01#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:01#53010]  INFO -- : Jeff_Klay           2019-08-15     2019-06-04       7            3953        231                   2019-12-21 MM R0    
+I, [19-09-06 10:06:07#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:07#53010]  INFO -- : Jerry_Bowes          2017-06-02     2016-12-30       7            4366        0                             
+I, [19-09-06 10:06:11#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:11#53010]  INFO -- : Jerry_Raitzer        2019-08-13     2019-05-27       4            6621        877                   2019-12-24 MF    
+W, [19-09-06 10:06:12#53010]  WARN -- : OK
+I, [19-09-06 10:06:12#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:12#53010]  INFO -- : Jerry_Raitzer       2019-08-13     2019-05-27       4            6621        877                   2019-12-24 MM R0    
+I, [19-09-06 10:06:17#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:17#53010]  INFO -- : Jerry_Strebig        2019-08-21     2019-08-21       240          15766       3537                  2019-12-23 MF    
+W, [19-09-06 10:06:18#53010]  WARN -- : OK
+I, [19-09-06 10:06:18#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:18#53010]  INFO -- : Jerry_Strebig       2019-08-21     2019-08-21       240          15766       3537                  2019-12-23 MM R0    
+I, [19-09-06 10:06:23#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:23#53010]  INFO -- : Jim_Charley          2019-08-20     2019-08-20       342          170833      1924                  2019-12-23 MF    
+W, [19-09-06 10:06:24#53010]  WARN -- : OK
+I, [19-09-06 10:06:24#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:24#53010]  INFO -- : Jim_Charley         2019-08-20     2019-08-20       342          170833      1924                  2019-12-23 MM R0    
+I, [19-09-06 10:06:29#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:29#53010]  INFO -- : Jim_Georgiou         2019-08-19     2019-08-19       90           94162       323                   2020-01-13 MF    
+W, [19-09-06 10:06:30#53010]  WARN -- : OK
+I, [19-09-06 10:06:30#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:30#53010]  INFO -- : Jim_Georgiou        2019-08-19     2019-08-19       90           94162       323                   2020-01-13 MM R0    
+I, [19-09-06 10:06:35#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:35#53010]  INFO -- : Jim_Knapp            2019-07-02     2019-08-20       192          5250        0                     2020-02-01 MF    
+W, [19-09-06 10:06:36#53010]  WARN -- : OK
+I, [19-09-06 10:06:36#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:36#53010]  INFO -- : Jim_Knapp           2019-07-02     2019-08-20       192          5250        0                     2020-02-01 MM R0    
+I, [19-09-06 10:06:41#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:41#53010]  INFO -- : Jim_Leney            2019-02-16     2019-04-26       26           6219        0                     2019-12-19 MF    
+W, [19-09-06 10:06:42#53010]  WARN -- : OK
+I, [19-09-06 10:06:42#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:42#53010]  INFO -- : Jim_Leney           2019-02-16     2019-04-26       26           6219        0                     2019-12-19 MM R0    
+I, [19-09-06 10:06:47#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:47#53010]  INFO -- : Jim_LoConte          2018-02-18     2018-02-14       4            863         0                             
+I, [19-09-06 10:06:52#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:52#53010]  INFO -- : Joe_Sabolefski       2019-08-21     2019-07-26       202          326797      9987                  2019-12-20 MF    
+W, [19-09-06 10:06:52#53010]  WARN -- : OK
+I, [19-09-06 10:06:52#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:52#53010]  INFO -- : Joe_Sabolefski      2019-08-21     2019-07-26       202          326797      9987                  2019-12-20 MM R0    
+I, [19-09-06 10:06:58#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:06:58#53010]  INFO -- : Johan_Knall          2018-08-07     2018-10-11       1            2896        0                             
+I, [19-09-06 10:07:02#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:02#53010]  INFO -- : John_Bodeau          2019-06-25     2019-08-16       42           3881        0                     2020-01-02 MF    
+W, [19-09-06 10:07:03#53010]  WARN -- : OK
+I, [19-09-06 10:07:03#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:03#53010]  INFO -- : John_Bodeau         2019-06-25     2019-08-16       42           3881        0                     2020-01-02 MM R0    
+I, [19-09-06 10:07:08#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:08#53010]  INFO -- : John_Butler          2019-08-19     2019-08-13       163          6816        432                   2019-12-19 MF    
+W, [19-09-06 10:07:09#53010]  WARN -- : OK
+I, [19-09-06 10:07:09#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:09#53010]  INFO -- : John_Butler         2019-08-19     2019-08-13       163          6816        432                   2019-12-19 MM R0    
+I, [19-09-06 10:07:14#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:14#53010]  INFO -- : John_Doodokyan       2019-08-18     2019-02-04       0            3425        1157                  2019-10-22 MF    
+W, [19-09-06 10:07:15#53010]  WARN -- : OK
+I, [19-09-06 10:07:15#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:15#53010]  INFO -- : John_Doodokyan      2019-08-18     2019-02-04       0            3425        1157                  2019-10-22 MM R0    
+I, [19-09-06 10:07:20#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:20#53010]  INFO -- : John_Jeffs           2019-04-16                      0            325         0                     2019-11-12 MF    
+W, [19-09-06 10:07:21#53010]  WARN -- : OK
+I, [19-09-06 10:07:21#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:21#53010]  INFO -- : John_Jeffs          2019-04-16                      0            325         0                     2019-11-12 MM R0    
+I, [19-09-06 10:07:26#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:26#53010]  INFO -- : John_Lasersohn       2019-08-20     2019-08-20       190          39667       3882                  2019-12-19 MF    
+W, [19-09-06 10:07:27#53010]  WARN -- : OK
+I, [19-09-06 10:07:27#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:27#53010]  INFO -- : John_Lasersohn      2019-08-20     2019-08-20       190          39667       3882                  2019-12-19 MM R0    
+I, [19-09-06 10:07:32#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:32#53010]  INFO -- : John_Mansperger      2019-08-20     2019-08-20       212          77839       6553                  2019-12-19 MF    
+W, [19-09-06 10:07:33#53010]  WARN -- : OK
+I, [19-09-06 10:07:33#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:33#53010]  INFO -- : John_Mansperger     2019-08-20     2019-08-20       212          77839       6553                  2019-12-19 MM R0    
+I, [19-09-06 10:07:38#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:38#53010]  INFO -- : John_Nadler          2019-08-02     2019-07-29       71           25604       26                    2019-12-28 MF    
+W, [19-09-06 10:07:39#53010]  WARN -- : OK
+I, [19-09-06 10:07:39#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:39#53010]  INFO -- : John_Nadler         2019-08-02     2019-07-29       71           25604       26                    2019-12-28 MM R0    
+I, [19-09-06 10:07:44#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:44#53010]  INFO -- : Johnny_Alexander     2017-05-13     2017-08-05       1            6022        0                             
+I, [19-09-06 10:07:49#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:49#53010]  INFO -- : John_Oberstar        2019-08-20     2019-08-17       44           38876       11834                 2019-12-26 MF    
+W, [19-09-06 10:07:49#53010]  WARN -- : OK
+I, [19-09-06 10:07:49#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:49#53010]  INFO -- : John_Oberstar       2019-08-20     2019-08-17       44           38876       11834                 2019-12-26 MM R0    
+I, [19-09-06 10:07:55#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:55#53010]  INFO -- : John_Piggott         2019-06-05     2016-07-22       1            607         0                     2019-12-22 MF    
+W, [19-09-06 10:07:55#53010]  WARN -- : OK
+I, [19-09-06 10:07:55#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:07:55#53010]  INFO -- : John_Piggott        2019-06-05     2016-07-22       1            607         0                     2019-12-22 MM R0    
+I, [19-09-06 10:08:00#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:00#53010]  INFO -- : John_Thompson        2019-05-10     2018-11-26       91           94985       0                             
+I, [19-09-06 10:08:05#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:05#53010]  INFO -- : Joseph_Kuo           2019-08-15     2019-08-07       6            6964        1265                  2019-10-13 MF    
+W, [19-09-06 10:08:05#53010]  WARN -- : OK
+I, [19-09-06 10:08:06#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:06#53010]  INFO -- : Joseph_Kuo          2019-08-15     2019-08-07       6            6964        1265                  2019-10-13 MM R0    
+I, [19-09-06 10:08:11#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:11#53010]  INFO -- : Juergen_Weltz        2019-06-20     2018-12-05       5            5382        0                     2020-02-20 MF    
+W, [19-09-06 10:08:11#53010]  WARN -- : OK
+I, [19-09-06 10:08:12#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:12#53010]  INFO -- : Juergen_Weltz       2019-06-20     2018-12-05       5            5382        0                     2020-02-20 MM R0    
+I, [19-09-06 10:08:17#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:17#53010]  INFO -- : Keerti_Narayan       2019-07-27     2019-07-27       12           5371        17                    2019-12-26 MF    
+W, [19-09-06 10:08:17#53010]  WARN -- : OK
+I, [19-09-06 10:08:18#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:18#53010]  INFO -- : Keerti_Narayan      2019-07-27     2019-07-27       12           5371        17                    2019-12-26 MM R0    
+I, [19-09-06 10:08:23#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:23#53010]  INFO -- : Keith_Britany        2019-03-04     2019-06-17       16           2538        0                     2019-12-19 MF    
+W, [19-09-06 10:08:23#53010]  WARN -- : OK
+I, [19-09-06 10:08:23#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:23#53010]  INFO -- : Keith_Britany       2019-03-04     2019-06-17       16           2538        0                     2019-12-19 MM R0    
+I, [19-09-06 10:08:29#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:29#53010]  INFO -- : Ken_Cahill           2019-08-09     2019-07-18       74           111637      2032                  2019-12-21 MF    
+W, [19-09-06 10:08:29#53010]  WARN -- : OK
+I, [19-09-06 10:08:29#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:29#53010]  INFO -- : Ken_Cahill          2019-08-09     2019-07-18       74           111637      2032                  2019-12-21 MM R0    
+I, [19-09-06 10:08:35#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:35#53010]  INFO -- : Ken_Hartman          2017-11-29     2016-11-17       0            601         0                             
+I, [19-09-06 10:08:39#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:39#53010]  INFO -- : Ken_Krantz           2019-04-21     2018-10-19       0            1048        0                     2020-01-15 MF    
+W, [19-09-06 10:08:40#53010]  WARN -- : OK
+I, [19-09-06 10:08:40#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:40#53010]  INFO -- : Ken_Krantz          2019-04-21     2018-10-19       0            1048        0                     2020-01-15 MM R0    
+I, [19-09-06 10:08:45#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:45#53010]  INFO -- : Kevin_Shutta         2018-05-26     2018-03-18       1            776         0                             
+I, [19-09-06 10:08:50#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:50#53010]  INFO -- : Kim_Miller           2019-09-06     2019-08-26       1876         816273      46207                 2019-12-20 MM R0    
+W, [19-09-06 10:08:50#53010]  WARN -- : OK
+I, [19-09-06 10:08:50#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:50#53010]  INFO -- : Kim_Miller          2019-09-06     2019-08-26       1876         816273      46207                 2019-12-20 MM R0    
+I, [19-09-06 10:08:56#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:56#53010]  INFO -- : Konrad_Thaler        2019-08-19     2019-08-21       91           45968       126                   2020-01-15 MF    
+W, [19-09-06 10:08:56#53010]  WARN -- : OK
+I, [19-09-06 10:08:56#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:08:56#53010]  INFO -- : Konrad_Thaler       2019-08-19     2019-08-21       91           45968       126                   2020-01-15 MM R0    
+I, [19-09-06 10:09:02#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:02#53010]  INFO -- : Krishna_Yetchina     2019-08-21     2019-08-20       123          161753      6109                  2020-01-13 MF    
+W, [19-09-06 10:09:02#53010]  WARN -- : OK
+I, [19-09-06 10:09:02#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:02#53010]  INFO -- : Krishna_Yetchina    2019-08-21     2019-08-20       123          161753      6109                  2020-01-13 MM R0    
+I, [19-09-06 10:09:08#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:08#53010]  INFO -- : Larry_Shanahan       2019-02-19     2018-12-19       1            2631        0                             
+I, [19-09-06 10:09:13#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:13#53010]  INFO -- : Lars_Rider           2018-01-05     2019-08-21       175          7014        0                     2020-04-07 MF    
+W, [19-09-06 10:09:13#53010]  WARN -- : OK
+I, [19-09-06 10:09:13#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:13#53010]  INFO -- : Lars_Rider          2018-01-05     2019-08-21       175          7014        0                     2020-04-07 MM R0    
+I, [19-09-06 10:09:19#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:19#53010]  INFO -- : Laurence_Kuhn        2019-08-09     2019-07-01       118          17892       1199                  2020-01-30 MF    
+W, [19-09-06 10:09:19#53010]  WARN -- : OK
+I, [19-09-06 10:09:19#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:19#53010]  INFO -- : Laurence_Kuhn       2019-08-09     2019-07-01       118          17892       1199                  2020-01-30 MM R0    
+I, [19-09-06 10:09:25#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:25#53010]  INFO -- : Lee_Wheeler          2019-08-19     2019-08-16       107          59243       3135                  2020-01-16 MF    
+W, [19-09-06 10:09:25#53010]  WARN -- : OK
+I, [19-09-06 10:09:25#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:25#53010]  INFO -- : Lee_Wheeler         2019-08-19     2019-08-16       107          59243       3135                  2020-01-16 MM R0    
+I, [19-09-06 10:09:31#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:31#53010]  INFO -- : Maarten_Korringa     2018-01-06     2017-01-20       1            3712        0                             
+I, [19-09-06 10:09:35#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:35#53010]  INFO -- : Madon_Snell          2019-06-04     2019-05-20       0            1416        0                     2020-03-29 MF    
+W, [19-09-06 10:09:36#53010]  WARN -- : OK
+I, [19-09-06 10:09:36#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:36#53010]  INFO -- : Madon_Snell         2019-06-04     2019-05-20       0            1416        0                     2020-03-29 MM R0    
+I, [19-09-06 10:09:41#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:41#53010]  INFO -- : Mahan_Harirsaz       2019-08-19     2019-08-14       1            831         831                           
+I, [19-09-06 10:09:46#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:46#53010]  INFO -- : Marco_Milletti       2019-06-13     2018-10-11       0            13121       0                     2020-01-05 MF    
+W, [19-09-06 10:09:46#53010]  WARN -- : OK
+I, [19-09-06 10:09:46#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:46#53010]  INFO -- : Marco_Milletti      2019-06-13     2018-10-11       0            13121       0                     2020-01-05 MM R0    
+I, [19-09-06 10:09:52#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:52#53010]  INFO -- : Mark_Habberley       2019-06-04     2018-04-25       3            1021        0                     2020-01-16 MF    
+W, [19-09-06 10:09:52#53010]  WARN -- : OK
+I, [19-09-06 10:09:52#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:52#53010]  INFO -- : Mark_Habberley      2019-06-04     2018-04-25       3            1021        0                     2020-01-16 MM R0    
+I, [19-09-06 10:09:57#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:57#53010]  INFO -- : Mark_Reinheimer      2019-05-29     2019-08-13       54           32914       0                     2020-01-09 MF    
+W, [19-09-06 10:09:58#53010]  WARN -- : OK
+I, [19-09-06 10:09:58#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:09:58#53010]  INFO -- : Mark_Reinheimer     2019-05-29     2019-08-13       54           32914       0                     2020-01-09 MM R0    
+I, [19-09-06 10:10:03#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:03#53010]  INFO -- : Mark_Thorpe          2019-08-18     2019-08-15       377          239585      4581                  2019-12-27 MF    
+W, [19-09-06 10:10:04#53010]  WARN -- : OK
+I, [19-09-06 10:10:04#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:04#53010]  INFO -- : Mark_Thorpe         2019-08-18     2019-08-15       377          239585      4581                  2019-12-27 MM R0    
+I, [19-09-06 10:10:10#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:10#53010]  INFO -- : Marton_Toth          2019-06-27     2019-06-27       4            1030        0                     2020-02-06 MF    
+W, [19-09-06 10:10:10#53010]  WARN -- : OK
+I, [19-09-06 10:10:10#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:10#53010]  INFO -- : Marton_Toth         2019-06-27     2019-06-27       4            1030        0                     2020-02-06 MM R0    
+I, [19-09-06 10:10:16#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:16#53010]  INFO -- : Marty_Fauth          2019-08-20     2019-08-20       372          149157      6778                  2019-12-21 MF    
+W, [19-09-06 10:10:16#53010]  WARN -- : OK
+I, [19-09-06 10:10:16#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:16#53010]  INFO -- : Marty_Fauth         2019-08-20     2019-08-20       372          149157      6778                  2019-12-21 MM R0    
+I, [19-09-06 10:10:21#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:21#53010]  INFO -- : Matthew_Lewsadder    2019-08-17     2019-08-07       125          77837       1443                  2020-12-23 MF    
+W, [19-09-06 10:10:22#53010]  WARN -- : OK
+I, [19-09-06 10:10:22#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:22#53010]  INFO -- : Matthew_Lewsadder   2019-08-17     2019-08-07       125          77837       1443                  2020-12-23 MM R0    
+I, [19-09-06 10:10:27#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:27#53010]  INFO -- : Matthew_Raines       2019-08-07     2019-07-15       1            62          62                    2020-08-04 MF    
+W, [19-09-06 10:10:28#53010]  WARN -- : OK
+I, [19-09-06 10:10:28#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:28#53010]  INFO -- : Matthew_Raines      2019-08-07     2019-07-15       1            62          62                    2020-08-04 MM R0    
+I, [19-09-06 10:10:33#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:33#53010]  INFO -- : Matt_Hill                                            0            0           0                     2019-12-16 MF    
+W, [19-09-06 10:10:34#53010]  WARN -- : OK
+I, [19-09-06 10:10:34#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:34#53010]  INFO -- : Matt_Hill                                           0            0           0                     2019-12-16 MM R0    
+I, [19-09-06 10:10:39#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:39#53010]  INFO -- : MD_Admin                                             0            0           0                             
+I, [19-09-06 10:10:43#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:43#53010]  INFO -- : Michael_Hayes        2019-02-28     2018-10-16       16           3805        0                             
+I, [19-09-06 10:10:48#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:48#53010]  INFO -- : Michael_Kahn         2019-08-13     2019-08-13       31           20963       448                   2019-12-22 MF    
+W, [19-09-06 10:10:48#53010]  WARN -- : OK
+I, [19-09-06 10:10:49#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:49#53010]  INFO -- : Michael_Kahn        2019-08-13     2019-08-13       31           20963       448                   2019-12-22 MM R0    
+I, [19-09-06 10:10:54#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:54#53010]  INFO -- : Michael_Orr          2019-07-27     2019-07-24       107          94331       528                   2020-02-05 MF    
+W, [19-09-06 10:10:54#53010]  WARN -- : OK
+I, [19-09-06 10:10:54#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:10:54#53010]  INFO -- : Michael_Orr         2019-07-27     2019-07-24       107          94331       528                   2020-02-05 MM R0    
+I, [19-09-06 10:11:00#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:00#53010]  INFO -- : Michael_Skowronek    2019-07-14     2019-06-09       11           19367       50                    2020-04-02 MF    
+W, [19-09-06 10:11:00#53010]  WARN -- : OK
+I, [19-09-06 10:11:00#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:00#53010]  INFO -- : Michael_Skowronek   2019-07-14     2019-06-09       11           19367       50                    2020-04-02 MM R0    
+I, [19-09-06 10:11:06#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:06#53010]  INFO -- : Michael_Wilkins      2019-07-22                      0            0           0                             
+I, [19-09-06 10:11:10#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:10#53010]  INFO -- : Michael_Wilson       2019-07-23     2019-04-27       29           12441       0                     2019-09-17 MF    
+W, [19-09-06 10:11:11#53010]  WARN -- : OK
+I, [19-09-06 10:11:11#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:11#53010]  INFO -- : Michael_Wilson      2019-07-23     2019-04-27       29           12441       0                     2019-09-17 MM R0    
+I, [19-09-06 10:11:16#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:16#53010]  INFO -- : Mike_Drilling        2019-08-20     2019-08-20       423          156995      11750                 2019-12-19 MF    
+W, [19-09-06 10:11:17#53010]  WARN -- : OK
+I, [19-09-06 10:11:17#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:17#53010]  INFO -- : Mike_Drilling       2019-08-20     2019-08-20       423          156995      11750                 2019-12-19 MM R0    
+I, [19-09-06 10:11:22#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:22#53010]  INFO -- : Mike_Druke           2019-07-08     2019-03-12       6            1137        0                     2020-03-10 MF    
+W, [19-09-06 10:11:23#53010]  WARN -- : OK
+I, [19-09-06 10:11:23#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:23#53010]  INFO -- : Mike_Druke          2019-07-08     2019-03-12       6            1137        0                     2020-03-10 MM R0    
+I, [19-09-06 10:11:28#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:28#53010]  INFO -- : Mike_Ehlers          2019-07-30     2019-08-01       13           14083       398                   2019-12-20 MF    
+W, [19-09-06 10:11:28#53010]  WARN -- : OK
+I, [19-09-06 10:11:29#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:29#53010]  INFO -- : Mike_Ehlers         2019-07-30     2019-08-01       13           14083       398                   2019-12-20 MM R0    
+I, [19-09-06 10:11:34#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:34#53010]  INFO -- : Mike_Weston          2019-08-17     2019-08-17       40           33609       988                   2019-12-22 MF    
+W, [19-09-06 10:11:34#53010]  WARN -- : OK
+I, [19-09-06 10:11:34#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:34#53010]  INFO -- : Mike_Weston         2019-08-17     2019-08-17       40           33609       988                   2019-12-22 MM R0    
+I, [19-09-06 10:11:40#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:40#53010]  INFO -- : Mike_Wilkins                                         0            0           0                     2020-01-13 MF    
+W, [19-09-06 10:11:40#53010]  WARN -- : OK
+I, [19-09-06 10:11:40#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:40#53010]  INFO -- : Mike_Wilkins                                        0            0           0                     2020-01-13 MM R0    
+I, [19-09-06 10:11:46#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:46#53010]  INFO -- : Mikhail_Zhidko       2019-08-13     2019-08-13       90           82395       836                   2020-01-03 MF    
+W, [19-09-06 10:11:46#53010]  WARN -- : OK
+I, [19-09-06 10:11:46#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:46#53010]  INFO -- : Mikhail_Zhidko      2019-08-13     2019-08-13       90           82395       836                   2020-01-03 MM R0    
+I, [19-09-06 10:11:52#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:52#53010]  INFO -- : Miles_Bradley        2019-08-09     2019-08-09       255          52043       86                    2019-12-19 MF    
+W, [19-09-06 10:11:52#53010]  WARN -- : OK
+I, [19-09-06 10:11:52#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:52#53010]  INFO -- : Miles_Bradley       2019-08-09     2019-08-09       255          52043       86                    2019-12-19 MM R0    
+I, [19-09-06 10:11:58#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:58#53010]  INFO -- : Mitch_Slomiak        2019-08-15     2019-08-20       167          6141        126                   2019-12-22 MF    
+W, [19-09-06 10:11:58#53010]  WARN -- : OK
+I, [19-09-06 10:11:58#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:11:58#53010]  INFO -- : Mitch_Slomiak       2019-08-15     2019-08-20       167          6141        126                   2019-12-22 MM R0    
+I, [19-09-06 10:12:04#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:04#53010]  INFO -- : Moe_Rubenzahl        2019-08-18     2019-08-18       988          487418      56470                 2019-12-20 MF    
+W, [19-09-06 10:12:04#53010]  WARN -- : OK
+I, [19-09-06 10:12:05#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:05#53010]  INFO -- : Moe_Rubenzahl       2019-08-18     2019-08-18       988          487418      56470                 2019-12-20 MM R0    
+I, [19-09-06 10:12:10#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:10#53010]  INFO -- : Mohamed_Abdelhay     2016-09-23     2016-09-23       2            668         0                             
+I, [19-09-06 10:12:14#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:14#53010]  INFO -- : Narjit_Chadha        2018-09-19     2016-10-12       0            40          0                             
+I, [19-09-06 10:12:19#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:19#53010]  INFO -- : Noah_Salzman         2019-08-16     2019-06-20       1            5442        1904                  2020-06-06 MF    
+W, [19-09-06 10:12:19#53010]  WARN -- : OK
+I, [19-09-06 10:12:19#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:19#53010]  INFO -- : Noah_Salzman        2019-08-16     2019-06-20       1            5442        1904                  2020-06-06 MM R0    
+I, [19-09-06 10:12:25#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:25#53010]  INFO -- : Patrick_Morin        2019-07-13     2018-06-21       1            4283        60                    2019-12-27 MF    
+W, [19-09-06 10:12:25#53010]  WARN -- : OK
+I, [19-09-06 10:12:25#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:25#53010]  INFO -- : Patrick_Morin       2019-07-13     2018-06-21       1            4283        60                    2019-12-27 MM R0    
+I, [19-09-06 10:12:31#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:31#53010]  INFO -- : Paul_Tyner           2019-08-18     2019-06-28       40           43582       121                   2020-01-19 MF    
+W, [19-09-06 10:12:31#53010]  WARN -- : OK
+I, [19-09-06 10:12:31#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:31#53010]  INFO -- : Paul_Tyner          2019-08-18     2019-06-28       40           43582       121                   2020-01-19 MM R0    
+I, [19-09-06 10:12:37#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:37#53010]  INFO -- : Pete_Rabbitt         2019-08-18     2019-07-19       11           9614        587                   2019-09-30 MF    
+W, [19-09-06 10:12:37#53010]  WARN -- : OK
+I, [19-09-06 10:12:37#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:37#53010]  INFO -- : Pete_Rabbitt        2019-08-18     2019-07-19       11           9614        587                   2019-09-30 MM R0    
+I, [19-09-06 10:12:43#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:43#53010]  INFO -- : Peter_Johnson        2019-03-26     2019-03-25       4            805         0                     2020-08-22 MF    
+W, [19-09-06 10:12:43#53010]  WARN -- : OK
+I, [19-09-06 10:12:43#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:43#53010]  INFO -- : Peter_Johnson       2019-03-26     2019-03-25       4            805         0                     2020-08-22 MM R0    
+I, [19-09-06 10:12:49#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:49#53010]  INFO -- : Peter_Montana        2019-06-28     2018-08-18       19           6150        0                     2020-04-19 MF    
+W, [19-09-06 10:12:49#53010]  WARN -- : OK
+I, [19-09-06 10:12:49#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:49#53010]  INFO -- : Peter_Montana       2019-06-28     2018-08-18       19           6150        0                     2020-04-19 MM R0    
+I, [19-09-06 10:12:54#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:54#53010]  INFO -- : Peter_Sanchez        2018-03-21                      0            611         0                             
+I, [19-09-06 10:12:59#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:59#53010]  INFO -- : Philip_Brouwer       2019-08-20     2019-08-03       1            5433        5433                  2020-07-17 MF    
+W, [19-09-06 10:12:59#53010]  WARN -- : OK
+I, [19-09-06 10:12:59#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:12:59#53010]  INFO -- : Philip_Brouwer      2019-08-20     2019-08-03       1            5433        5433                  2020-07-17 MM R0    
+I, [19-09-06 10:13:05#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:05#53010]  INFO -- : Praveen_Rangu        2017-01-30     2017-01-02       1            293         0                             
+I, [19-09-06 10:13:09#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:09#53010]  INFO -- : Randy_Horton         2019-08-14     2019-08-20       338          21912       1556                  2019-12-22 MF    
+W, [19-09-06 10:13:10#53010]  WARN -- : OK
+I, [19-09-06 10:13:10#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:10#53010]  INFO -- : Randy_Horton        2019-08-14     2019-08-20       338          21912       1556                  2019-12-22 MM R0    
+I, [19-09-06 10:13:15#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:15#53010]  INFO -- : Ravi_Narra           2018-01-09     2017-12-31       11           7130        0                     2020-01-13 MF    
+W, [19-09-06 10:13:16#53010]  WARN -- : OK
+I, [19-09-06 10:13:16#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:16#53010]  INFO -- : Ravi_Narra          2018-01-09     2017-12-31       11           7130        0                     2020-01-13 MM R0    
+I, [19-09-06 10:13:21#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:21#53010]  INFO -- : Raymond_Miller       2019-02-12                      0            355         0                     2019-12-12 MF    
+W, [19-09-06 10:13:22#53010]  WARN -- : OK
+I, [19-09-06 10:13:22#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:22#53010]  INFO -- : Raymond_Miller      2019-02-12                      0            355         0                     2019-12-12 MM R0    
+I, [19-09-06 10:13:28#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:28#53010]  INFO -- : Rich_Worthington     2019-08-18     2019-08-18       104          47332       1636                  2019-12-30 MF    
+W, [19-09-06 10:13:28#53010]  WARN -- : OK
+I, [19-09-06 10:13:28#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:28#53010]  INFO -- : Rich_Worthington    2019-08-18     2019-08-18       104          47332       1636                  2019-12-30 MM R0    
+I, [19-09-06 10:13:33#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:33#53010]  INFO -- : Rick_Kananen         2019-07-26     2019-08-13       31           595         61                    2019-12-26 MF    
+W, [19-09-06 10:13:34#53010]  WARN -- : OK
+I, [19-09-06 10:13:34#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:34#53010]  INFO -- : Rick_Kananen        2019-07-26     2019-08-13       31           595         61                    2019-12-26 MM R0    
+I, [19-09-06 10:13:39#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:39#53010]  INFO -- : Robbie_Bow           2019-08-19     2019-08-18       49           32046       816                   2019-12-22 MF    
+W, [19-09-06 10:13:40#53010]  WARN -- : OK
+I, [19-09-06 10:13:40#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:40#53010]  INFO -- : Robbie_Bow          2019-08-19     2019-08-18       49           32046       816                   2019-12-22 MM R0    
+I, [19-09-06 10:13:45#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:45#53010]  INFO -- : Robert_Nelson        2017-01-03     2018-10-11       0            0           0                             
+I, [19-09-06 10:13:50#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:50#53010]  INFO -- : Roger_Chapman        2019-03-08     2019-02-10       11           1864        0                     2020-01-06 MF    
+W, [19-09-06 10:13:50#53010]  WARN -- : OK
+I, [19-09-06 10:13:50#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:50#53010]  INFO -- : Roger_Chapman       2019-03-08     2019-02-10       11           1864        0                     2020-01-06 MM R0    
+I, [19-09-06 10:13:56#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:56#53010]  INFO -- : Ron_McDowell         2018-11-20     2019-03-13       2            274         0                     2020-01-10 MF    
+W, [19-09-06 10:13:56#53010]  WARN -- : OK
+I, [19-09-06 10:13:56#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:13:56#53010]  INFO -- : Ron_McDowell        2018-11-20     2019-03-13       2            274         0                     2020-01-10 MM R0    
+I, [19-09-06 10:14:02#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:02#53010]  INFO -- : Ron_Tugender         2019-08-13     2018-12-09       68           40736       2676                  2019-12-31 MF    
+W, [19-09-06 10:14:02#53010]  WARN -- : OK
+I, [19-09-06 10:14:02#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:02#53010]  INFO -- : Ron_Tugender        2019-08-13     2018-12-09       68           40736       2676                  2019-12-31 MM R0    
+I, [19-09-06 10:14:08#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:08#53010]  INFO -- : Russ_Towne           2019-08-19     2019-08-20       168          17312       144                   2019-12-27 MF    
+W, [19-09-06 10:14:08#53010]  WARN -- : OK
+I, [19-09-06 10:14:08#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:08#53010]  INFO -- : Russ_Towne          2019-08-19     2019-08-20       168          17312       144                   2019-12-27 MM R0    
+I, [19-09-06 10:14:14#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:14#53010]  INFO -- : Ryan_Hyer            2019-08-30     2019-08-21       634          432667      20211                 2020-01-13 MF    
+W, [19-09-06 10:14:14#53010]  WARN -- : OK
+I, [19-09-06 10:14:14#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:14#53010]  INFO -- : Ryan_Hyer           2019-08-30     2019-08-21       634          432667      20211                 2020-01-13 MM R0    
+I, [19-09-06 10:14:20#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:20#53010]  INFO -- : Samyeer_Metrani      2019-08-11     2019-08-16       19           1871        1430                  2020-01-27 MF    
+W, [19-09-06 10:14:20#53010]  WARN -- : OK
+I, [19-09-06 10:14:20#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:20#53010]  INFO -- : Samyeer_Metrani     2019-08-11     2019-08-16       19           1871        1430                  2020-01-27 MM R0    
+I, [19-09-06 10:14:26#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:26#53010]  INFO -- : Sanjeev_Balarajan    2019-08-21     2019-08-21       146          130275      7061                  2019-12-27 MF    
+W, [19-09-06 10:14:26#53010]  WARN -- : OK
+I, [19-09-06 10:14:26#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:26#53010]  INFO -- : Sanjeev_Balarajan   2019-08-21     2019-08-21       146          130275      7061                  2019-12-27 MM R0    
+I, [19-09-06 10:14:31#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:31#53010]  INFO -- : Sanjeev_Sanghera     2019-08-19     2019-08-08       24           34476       4307                  2020-08-20 MF    
+W, [19-09-06 10:14:32#53010]  WARN -- : OK
+I, [19-09-06 10:14:32#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:32#53010]  INFO -- : Sanjeev_Sanghera    2019-08-19     2019-08-08       24           34476       4307                  2020-08-20 MM R0    
+I, [19-09-06 10:14:37#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:37#53010]  INFO -- : Save_Torquato        2019-07-01     2019-07-22       14           2330        0                     2020-04-26 MF    
+W, [19-09-06 10:14:38#53010]  WARN -- : OK
+I, [19-09-06 10:14:38#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:38#53010]  INFO -- : Save_Torquato       2019-07-01     2019-07-22       14           2330        0                     2020-04-26 MM R0    
+I, [19-09-06 10:14:43#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:43#53010]  INFO -- : Scott_StGermain      2019-08-19     2019-08-19       124          62600       920                   2020-01-02 MF    
+W, [19-09-06 10:14:44#53010]  WARN -- : OK
+I, [19-09-06 10:14:44#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:44#53010]  INFO -- : Scott_StGermain     2019-08-19     2019-08-19       124          62600       920                   2020-01-02 MM R0    
+I, [19-09-06 10:14:49#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:49#53010]  INFO -- : Shane_Reed           2019-08-14                      0            1063        299                   2020-03-10 MF    
+W, [19-09-06 10:14:50#53010]  WARN -- : OK
+I, [19-09-06 10:14:50#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:50#53010]  INFO -- : Shane_Reed          2019-08-14                      0            1063        299                   2020-03-10 MM R0    
+I, [19-09-06 10:14:55#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:55#53010]  INFO -- : S_James_Biggs        2019-08-16     2019-07-29       60           15583       645                   2020-03-08 MF    
+W, [19-09-06 10:14:56#53010]  WARN -- : OK
+I, [19-09-06 10:14:56#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:14:56#53010]  INFO -- : S_James_Biggs       2019-08-16     2019-07-29       60           15583       645                   2020-03-08 MM R0    
+I, [19-09-06 10:15:01#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:01#53010]  INFO -- : Sridhar_Ramanathan   2019-07-19     2019-07-19       38           14482       569                   2020-01-02 MF    
+W, [19-09-06 10:15:02#53010]  WARN -- : OK
+I, [19-09-06 10:15:02#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:02#53010]  INFO -- : Sridhar_Ramanathan  2019-07-19     2019-07-19       38           14482       569                   2020-01-02 MM R0    
+I, [19-09-06 10:15:07#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:07#53010]  INFO -- : Stefan_Schmitz       2019-08-20     2019-08-20       86           137277      10327                 2019-12-20 MF    
+W, [19-09-06 10:15:08#53010]  WARN -- : OK
+I, [19-09-06 10:15:08#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:08#53010]  INFO -- : Stefan_Schmitz      2019-08-20     2019-08-20       86           137277      10327                 2019-12-20 MM R0    
+I, [19-09-06 10:15:13#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:13#53010]  INFO -- : Stephen_Gorman       2017-07-19     2019-05-11       3            2507        0                             
+I, [19-09-06 10:15:18#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:18#53010]  INFO -- : Steve_Benjamin       2017-11-16     2016-11-26       0            857         0                             
+I, [19-09-06 10:15:22#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:22#53010]  INFO -- : Steve_Cross          2019-08-19     2019-08-18       82           6569        861                   2020-01-14 MF    
+W, [19-09-06 10:15:23#53010]  WARN -- : OK
+I, [19-09-06 10:15:23#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:23#53010]  INFO -- : Steve_Cross         2019-08-19     2019-08-18       82           6569        861                   2020-01-14 MM R0    
+I, [19-09-06 10:15:28#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:28#53010]  INFO -- : Steve_Fitzsimons     2019-08-08     2019-08-20       191          3872        13                    2020-01-11 MF    
+W, [19-09-06 10:15:29#53010]  WARN -- : OK
+I, [19-09-06 10:15:29#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:29#53010]  INFO -- : Steve_Fitzsimons    2019-08-08     2019-08-20       191          3872        13                    2020-01-11 MM R0    
+I, [19-09-06 10:15:34#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:34#53010]  INFO -- : Steve_Lang           2017-07-01     2017-06-12       41           35305       0                             
+I, [19-09-06 10:15:39#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:39#53010]  INFO -- : Steve_Scott          2019-08-25     2019-08-20       2094         1899502     70968                 2019-12-19 MM R0    
+W, [19-09-06 10:15:40#53010]  WARN -- : OK
+I, [19-09-06 10:15:40#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:40#53010]  INFO -- : Steve_Scott         2019-08-25     2019-08-20       2094         1899502     70968                 2019-12-19 MM R0    
+I, [19-09-06 10:15:45#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:45#53010]  INFO -- : Suhas_Chelian        2019-08-21     2019-08-18       60           26898       5796                  2020-02-02 MF    
+W, [19-09-06 10:15:46#53010]  WARN -- : OK
+I, [19-09-06 10:15:46#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:46#53010]  INFO -- : Suhas_Chelian       2019-08-21     2019-08-18       60           26898       5796                  2020-02-02 MM R0    
+I, [19-09-06 10:15:51#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:51#53010]  INFO -- : Tesh_Tesfaye         2018-09-13     2019-05-20       2            567         0                     2019-09-11 MF    
+W, [19-09-06 10:15:51#53010]  WARN -- : OK
+I, [19-09-06 10:15:52#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:52#53010]  INFO -- : Tesh_Tesfaye        2018-09-13     2019-05-20       2            567         0                     2019-09-11 MM R0    
+I, [19-09-06 10:15:57#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:15:57#53010]  INFO -- : Timothy_Plantikow    2017-12-21                      0            149         0                             
+I, [19-09-06 10:16:01#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:16:01#53010]  INFO -- : Tim_Tannatt          2019-08-16     2019-08-08       14           13065       1473                  2020-04-21 MF    
+W, [19-09-06 10:16:02#53010]  WARN -- : OK
+I, [19-09-06 10:16:02#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:16:02#53010]  INFO -- : Tim_Tannatt         2019-08-16     2019-08-08       14           13065       1473                  2020-04-21 MM R0    
+I, [19-09-06 10:16:07#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:16:07#53010]  INFO -- : Toby_Ward            2017-11-02     2017-11-02       0            129         0                             
+I, [19-09-06 10:16:12#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:16:12#53010]  INFO -- : Tom_Feasby           2019-08-14     2019-08-19       203          29381       1637                  2019-12-27 MF    
+W, [19-09-06 10:16:12#53010]  WARN -- : OK
+I, [19-09-06 10:16:12#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:16:12#53010]  INFO -- : Tom_Feasby          2019-08-14     2019-08-19       203          29381       1637                  2019-12-27 MM R0    
+I, [19-09-06 10:16:18#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:16:18#53010]  INFO -- : Tonio_Schutze        2019-01-09                      0            351         0                             
+I, [19-09-06 10:16:22#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:16:22#53010]  INFO -- : Tony_Christopher     2019-08-10     2019-08-10       44           27251       121                   2020-01-02 MF    
+W, [19-09-06 10:16:23#53010]  WARN -- : OK
+I, [19-09-06 10:16:23#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:16:23#53010]  INFO -- : Tony_Christopher    2019-08-10     2019-08-10       44           27251       121                   2020-01-02 MM R0    
+I, [19-09-06 10:16:28#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:16:28#53010]  INFO -- : Tony_Pogue           2019-06-10     2018-03-13       0            394         0                     2020-03-13 MF    
+W, [19-09-06 10:16:29#53010]  WARN -- : OK
+I, [19-09-06 10:16:29#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:16:29#53010]  INFO -- : Tony_Pogue          2019-06-10     2018-03-13       0            394         0                     2020-03-13 MM R0    
+I, [19-09-06 10:16:34#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:16:34#53010]  INFO -- : Tshombe_Moore        2016-11-22     2016-12-30       4            1142        0                             
+I, [19-09-06 10:16:39#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:16:39#53010]  INFO -- : Udy_Gold             2017-01-13     2017-01-20       12           1023        0                             
+I, [19-09-06 10:16:43#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:16:43#53010]  INFO -- : Vern_Mcgeorge        2019-03-21     2018-11-14       11           2032        0                     2019-10-04 MF    
+W, [19-09-06 10:16:43#53010]  WARN -- : OK
+I, [19-09-06 10:16:43#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:16:43#53010]  INFO -- : Vern_Mcgeorge       2019-03-21     2018-11-14       11           2032        0                     2019-10-04 MM R0    
+I, [19-09-06 10:16:49#53010]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:16:49#53010]  INFO -- : William_Burton       2019-03-15     2019-06-07       26           1089        0                     2019-12-19 MF    
+W, [19-09-06 10:16:49#53010]  WARN -- : OK
+I, [19-09-06 10:16:49#53010]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 10:16:49#53010]  INFO -- : William_Burton      2019-03-15     2019-06-07       26           1089        0                     2019-12-19 MM R0    
+I, [19-09-06 10:16:50#53010]  INFO -- : Discourse Men                                           
+I, [19-09-06 10:16:50#53010]  INFO -- : Processed Users                     210                 
+I, [19-09-06 10:16:50#53010]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 10:16:50#53010]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 10:16:50#53010]  INFO -- : User Preferences                    0                   
+I, [19-09-06 10:16:50#53010]  INFO -- : User Preference Targets             210                 
+I, [19-09-06 10:16:50#53010]  INFO -- : User Preference Updated             170                 

@@ -1,4 +1,5 @@
-"Momentum has a new member...
+"Momentum has a new member... #{@man.user_details['username']} with the memberhip #{@man.user_details['user_fields']['6']}.
 
+If anyting looks off about this new membership, please contact #tech.
 
   -- Your Momentum Moderators"

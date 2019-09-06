@@ -193,7 +193,7 @@ describe MomentumApi::Ownership do
         mock_dependencies = instance_double('mock_dependencies')
         expect(mock_dependencies).to receive(:today).twice.and_return(Date.new(2019,12,26))
         expect(mock_dependencies).to receive(:send_private_message)
-                                         .with(mock_man, /Congratulations on another/, /Thank You for Owning Momentum!/,
+                                         .with(mock_man, /Momentum has a new membership system/, /Thank You for Owning Momentum!/,
                                                from_username: 'Kim_Miller', to_username: nil)
         mock_dependencies
       end
@@ -243,7 +243,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(8).times.and_return(user_details_ownership_2020_01_02_MM)
+        expect(mock_man).to receive(:user_details).exactly(10).times.and_return(user_details_ownership_2020_01_02_MM)
         expect(mock_man).to receive(:print_user_options).exactly(2).times
         mock_man
       end
