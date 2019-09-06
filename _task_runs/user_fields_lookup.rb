@@ -4,7 +4,7 @@ require 'csv'
 
 discourse_options = {
     do_live_updates:        true,
-    # target_username:        'Steven_Lang_Test',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby Fernando_Venegas
+    target_username:        'Kim_Miller',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby Fernando_Venegas
     target_groups:          %w(trust_level_0),       # Mods GreatX BraveHearts trust_level_0 trust_level_1
     instance:               'staging',
     api_username:           'KM_Admin',
@@ -24,6 +24,7 @@ schedule_options = {
                   do_task_update:         true,
                   allowed_levels:         '9999-99-99',
                   set_level:              {'6':lookup_table},
+                  set_append:             ' MM R0',
                   excludes:               %w()
               }
           }

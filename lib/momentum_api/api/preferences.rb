@@ -95,7 +95,7 @@ module MomentumApi
         preference[1][:set_level].values[0].each do |row|
           # built for Memberful import; dependent on 'Email' field link
           if row['Email']
-            update_watermark = ' MF'
+            update_watermark = preference[1][:set_append].to_s
             if row['Email'] == sso_user['external_email']
               hashback = {"#{preference[1][:set_level].keys[0]}": row['Expiration date'] + update_watermark}
             end

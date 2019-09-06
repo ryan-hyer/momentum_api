@@ -170,21 +170,23 @@ describe MomentumApi::Preferences do
     end
 
 
-    context "do_live_updates and do_task_update for user_option" do
+    context "do_live_updates and do_task_update lookup for user_fields" do
 
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
-        expect(mock_admin_client).to receive(:user).twice.and_return user_details_preference_correct
+        expect(mock_admin_client).to receive(:user).once.and_return user_details_preference_correct
         expect(mock_admin_client).to receive(:user_sso).once.and_return user_admin_user_sso
-        expect(mock_admin_client).to receive(:update_user).twice.and_return({"body": {"success": "OK"}})
+        expect(mock_admin_client).to receive(:update_user).once
+                                         .with('Tony_Christopher', user_fields: {:'6'=>'2020-03-26 MM R0'})
+                                         .and_return({"body": {"success": "OK"}})
         mock_admin_client
       end
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:discourse).exactly(2).times.and_return(mock_discourse)
-        expect(mock_man).to receive(:user_details).exactly(13).times.and_return(user_details_preference_wrong)
-        expect(mock_man).to receive(:print_user_options).exactly(4).times
+        expect(mock_man).to receive(:discourse).exactly(1).times.and_return(mock_discourse)
+        expect(mock_man).to receive(:user_details).exactly(7).times.and_return(user_details_preference_wrong)
+        expect(mock_man).to receive(:print_user_options).exactly(2).times
         mock_man
       end
       
@@ -197,25 +199,36 @@ describe MomentumApi::Preferences do
 
       let(:mock_discourse) do
         mock_discourse = instance_double('discourse')
-        expect(mock_discourse).to receive(:admin_client).exactly(5).times.and_return(mock_admin_client)
-        expect(mock_discourse).to receive(:options).exactly(6).times.and_return(options_do_live_updates)
+        expect(mock_discourse).to receive(:admin_client).exactly(3).times.and_return(mock_admin_client)
+        expect(mock_discourse).to receive(:options).exactly(3).times.and_return(options_do_live_updates)
         expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
         mock_discourse
       end
 
       let(:mock_schedule) do
         mock_schedule = instance_double('schedule')
-        expect(mock_schedule).to receive(:discourse).exactly(10).times.and_return(mock_discourse)
+        expect(mock_schedule).to receive(:discourse).exactly(6).times.and_return(mock_discourse)
         mock_schedule
       end
 
+      memberful_test_export = csv_fixture("memberful_test_export.csv")
+      user_fields_tasks_update = {
+          user_fields: {
+              user_fields: {
+                  do_task_update:         true,
+                  allowed_levels:         '0',
+                  set_level:              {'6': memberful_test_export},
+                  set_append:             ' MM R0',
+                  excludes:               %w()
+              }
+          }
+      }
 
-      let(:user_perference) { MomentumApi::Preferences.new(mock_schedule, user_pref_tasks_do_task_update, mock: mock_dependencies) }
+      let(:user_perference) { MomentumApi::Preferences.new(mock_schedule, user_fields_tasks_update, mock: mock_dependencies) }
       
       describe '.find_set_level' do
 
-        memberful_test_export = csv_fixture("memberful_test_export.csv")
-        user_pref_tasks_do_task_update[:user_fields][:user_fields][:set_level] = {'6': memberful_test_export}
+        # user_pref_tasks_do_task_update[:user_fields][:user_fields][:set_level] = {'6': memberful_test_export}
 
         it "find lookup value to update" do
           expect(user_perference).to respond_to(:run)
