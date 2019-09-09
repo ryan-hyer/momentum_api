@@ -1,0 +1,28 @@
+[
+  {
+    "id": null,
+    "product": {
+      "id": 4015,
+      "name": "Owner Auto Renewing",
+      "enabled": true,
+      "group": 136,
+      "trust_level": 1,
+      "initial_payment": "80",
+      "recurring": true,
+      "recurring_payment": "80",
+      "recurring_payment_period": "12",
+      "trial": null,
+      "trial_period": null,
+      "description_raw": "Momentum Owner",
+      "description_cooked": "<p>Momentum Owner</p>",
+      "welcome_message": "Welcome to Momentum\n\nGreat to see you become a Momentum Owner and on Discourse! We are confident you will find Discourse to greatly improve your general sense of connection within Momentum, not just in your team but also among the almost 200 men of Momentum.\n\nA great next step is to upload a photo to your profile and add any other details like phone number, where you live, etc, so guys can put a face and location with the name they see on Discourse. [Here’s how that’s done](https://discourse.gomomentum.org/t/video-tutorial-how-to-upload-a-profile-picture/180) and [here's another tutorial](https://discourse.gomomentum.org/t/how-to-complete-your-discourse-profile/2530). While you are in there, filling in some background on yourself for men to get to know you better is a great idea as well. A phone number really helps for when things come up, like last-minute meeting place changes, etc.\n\nFinally, [here is some general help to get you started on Discourse](https://discourse.gomomentum.org/t/new-user-wiki/1867)\nThere is also the [help desk with many helpful tutorials](https://discourse.gomomentum.org/c/help)\nAnd the [Momentum Youtube channel also has some helpful videos](https://www.youtube.com/channel/UCv4IrdYFOLW6pYpXbpfj-Ng)\n\nJust hit Reply if you have any questions!\n\nKim Miller\nDiscourse Moderator",
+      "braintree_plan_id": "",
+      "stripe_product_id": "prod_FgrbcOnvABvXzF",
+      "stripe_plan_id": "plan_FgrbZB7z8wmd7P"
+    },
+    "subscription_id": "sub_FgsCiGghfIE2O7",
+    "subscription_end_date": "2020-08-25 22:44:36 +0000",
+    "created_at": "2019-08-25T22:44:38.109+00:00",
+    "active": true
+  }
+]

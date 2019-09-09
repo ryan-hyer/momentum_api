@@ -51,6 +51,9 @@ module MomentumApi
 
                 case ownership_type[0].to_s
 
+                when 'auto'
+                  #todo pull subscriptions via {{base_url}}/memberships/subscriptions/17.json?api_key={{api_key}}&api_username=Kim_Miller
+
                 when 'manual'
 
                   if action_date_qualifies
@@ -64,17 +67,15 @@ module MomentumApi
                       update_ownership(man, action, user_update_value, renew_ownership_code, action[1][:action_sequence])
 
                       # puts Date.today.strftime("%Y-%m-%d")
-                      puts ownership_type[0].to_s
-                      puts action[1][:days_until_renews]
-                      puts action_date_qualifies
-                      puts renew_date
-                      puts action_sequence_qualifies
+                      # puts ownership_type[0].to_s
+                      # puts action[1][:days_until_renews]
+                      # puts action_date_qualifies
+                      # puts renew_date
+                      # puts action_sequence_qualifies
 
                     end
 
                   end
-
-                when 'auto'
 
                 else
                   # puts 'No recognized ownership_type'
@@ -110,7 +111,8 @@ module MomentumApi
     def update_ownership(man, action, user_update_value, renew_ownership_code, current_action_seq, to_username: nil)
 
       # user_option_print = %w(last_seen_at last_posted_at post_count time_read recent_time_read)
-      man.print_user_options(man.user_details, user_label: 'Ownership Update', nested_user_field: "#{action[1][:user_fields]}")
+      man.print_user_options(man.user_details, user_label: "#{action[0]}",
+                             nested_user_field: %W(#{'user_fields'} #{action[1][:user_fields]}))
       @counters[:'Ownership Targets'] += 1
 
       update_set_value = {"#{action[1][:user_fields]}": user_update_value}
@@ -126,7 +128,8 @@ module MomentumApi
 
         # check if update happened
         user_option_after_update = @schedule.discourse.admin_client.user(man.user_details['username'])
-        man.print_user_options(user_option_after_update, user_label: 'User After Update', nested_user_field: "#{action[1][:user_fields]}")
+        man.print_user_options(user_option_after_update, user_label: 'User After Update',
+                               nested_user_field: %W(#{'user_fields'} #{action[1][:user_fields]}))
         @mock ? sleep(0) : sleep(1)
 
       end
@@ -145,6 +148,7 @@ module MomentumApi
       counters[:'Ownership']              =   0
       counters[:'Ownership Targets']      =   0
       counters[:'Ownership Updated']      =   0
+      counters[:'Messages Sent']          =   0
     end
 
   end

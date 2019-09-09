@@ -47,6 +47,10 @@ module MomentumApi
         # end
       end
 
+      if @options[:ownership]
+        @user_queue << (mock || MomentumApi::Ownership.new(self, @options[:ownership]))
+      end
+
     end
 
     def group_cases(man, group)

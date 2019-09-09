@@ -3182,3 +3182,175 @@ I, [19-09-06 10:16:50#53010]  INFO -- : Messages Sent                       0
 I, [19-09-06 10:16:50#53010]  INFO -- : User Preferences                    0                   
 I, [19-09-06 10:16:50#53010]  INFO -- : User Preference Targets             210                 
 I, [19-09-06 10:16:50#53010]  INFO -- : User Preference Updated             170                 
+I, [19-09-06 10:33:20#64606]  INFO -- : Discourse Men                                           
+I, [19-09-06 10:33:20#64606]  INFO -- : Processed Users                     1                   
+I, [19-09-06 10:33:20#64606]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 10:33:20#64606]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 10:34:17#65057]  INFO -- : Discourse Men                                           
+I, [19-09-06 10:34:17#65057]  INFO -- : Processed Users                     1                   
+I, [19-09-06 10:34:17#65057]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 10:34:17#65057]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 10:36:59#65599]  INFO -- : Discourse Men                                           
+I, [19-09-06 10:36:59#65599]  INFO -- : Processed Users                     1                   
+I, [19-09-06 10:36:59#65599]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 10:36:59#65599]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 10:37:35#66041]  INFO -- : Discourse Men                                           
+I, [19-09-06 10:37:35#66041]  INFO -- : Processed Users                     1                   
+I, [19-09-06 10:37:35#66041]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 10:37:35#66041]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 10:40:23#66528]  INFO -- : Discourse Men                                           
+I, [19-09-06 10:40:23#66528]  INFO -- : Processed Users                     1                   
+I, [19-09-06 10:40:23#66528]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 10:40:23#66528]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 10:41:07#66973]  INFO -- : Discourse Men                                           
+I, [19-09-06 10:41:07#66973]  INFO -- : Processed Users                     1                   
+I, [19-09-06 10:41:07#66973]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 10:41:07#66973]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 10:41:29#67405]  INFO -- : Discourse Men                                           
+I, [19-09-06 10:41:29#67405]  INFO -- : Processed Users                     1                   
+I, [19-09-06 10:41:29#67405]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 10:41:29#67405]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 10:42:30#67851]  INFO -- : Discourse Men                                           
+I, [19-09-06 10:42:30#67851]  INFO -- : Processed Users                     1                   
+I, [19-09-06 10:42:30#67851]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 10:42:30#67851]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 10:42:30#67851]  INFO -- : Ownership                           0                   
+I, [19-09-06 10:42:30#67851]  INFO -- : Ownership Targets                   0                   
+I, [19-09-06 10:42:30#67851]  INFO -- : Ownership Updated                   0                   
+I, [19-09-06 10:43:11#68292]  INFO -- : Discourse Men                                           
+I, [19-09-06 10:43:11#68292]  INFO -- : Processed Users                     1                   
+I, [19-09-06 10:43:11#68292]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 10:43:11#68292]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 10:43:11#68292]  INFO -- : Ownership                           0                   
+I, [19-09-06 10:43:11#68292]  INFO -- : Ownership Targets                   0                   
+I, [19-09-06 10:43:11#68292]  INFO -- : Ownership Updated                   0                   
+I, [19-09-06 10:45:01#68746]  INFO -- : Discourse Men                                           
+I, [19-09-06 10:45:01#68746]  INFO -- : Processed Users                     1                   
+I, [19-09-06 10:45:01#68746]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 10:45:01#68746]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 10:45:01#68746]  INFO -- : Ownership                           0                   
+I, [19-09-06 10:45:01#68746]  INFO -- : Ownership Targets                   0                   
+I, [19-09-06 10:45:01#68746]  INFO -- : Ownership Updated                   0                   
+I, [19-09-06 11:07:19#72620]  INFO -- : Ownership Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:07:19#72620]  INFO -- : Kim_Miller         2019-09-06     2019-08-26       1876         816273      46207                 2019-09-10 MM R0    
+I, [19-09-06 11:07:19#72620]  INFO -- : Discourse Men                                           
+I, [19-09-06 11:07:19#72620]  INFO -- : Processed Users                     1                   
+I, [19-09-06 11:07:19#72620]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 11:07:19#72620]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 11:07:19#72620]  INFO -- : Ownership                           0                   
+I, [19-09-06 11:07:19#72620]  INFO -- : Ownership Targets                   1                   
+I, [19-09-06 11:07:19#72620]  INFO -- : Ownership Updated                   0                   
+I, [19-09-06 11:10:43#73107]  INFO -- : Ownership Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:10:43#73107]  INFO -- : Kim_Miller         2019-09-06     2019-08-26       1876         816273      46207                 2019-05-10 MM R0    
+I, [19-09-06 11:10:43#73107]  INFO -- : Ownership Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:10:43#73107]  INFO -- : Kim_Miller         2019-09-06     2019-08-26       1876         816273      46207                 2019-05-10 MM R0    
+I, [19-09-06 11:10:43#73107]  INFO -- : Discourse Men                                           
+I, [19-09-06 11:10:43#73107]  INFO -- : Processed Users                     1                   
+I, [19-09-06 11:10:43#73107]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 11:10:43#73107]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 11:10:43#73107]  INFO -- : Ownership                           0                   
+I, [19-09-06 11:10:43#73107]  INFO -- : Ownership Targets                   2                   
+I, [19-09-06 11:10:43#73107]  INFO -- : Ownership Updated                   0                   
+I, [19-09-06 11:12:51#73567]  INFO -- : memberful_expires_next_week   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:12:51#73567]  INFO -- : Kim_Miller                    2019-09-06     2019-08-26       1876         816273      46207                 2019-05-10 MM R0    
+I, [19-09-06 11:12:51#73567]  INFO -- : memberful_expires_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:12:51#73567]  INFO -- : Kim_Miller                2019-09-06     2019-08-26       1876         816273      46207                 2019-05-10 MM R0    
+I, [19-09-06 11:12:51#73567]  INFO -- : Discourse Men                                           
+I, [19-09-06 11:12:51#73567]  INFO -- : Processed Users                     1                   
+I, [19-09-06 11:12:51#73567]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 11:12:51#73567]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 11:12:51#73567]  INFO -- : Ownership                           0                   
+I, [19-09-06 11:12:51#73567]  INFO -- : Ownership Targets                   2                   
+I, [19-09-06 11:12:51#73567]  INFO -- : Ownership Updated                   0                   
+I, [19-09-06 11:15:52#74054]  INFO -- : Discourse Men                                           
+I, [19-09-06 11:15:52#74054]  INFO -- : Processed Users                     1                   
+I, [19-09-06 11:15:52#74054]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 11:15:52#74054]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 11:15:52#74054]  INFO -- : Ownership                           0                   
+I, [19-09-06 11:15:52#74054]  INFO -- : Ownership Targets                   0                   
+I, [19-09-06 11:15:52#74054]  INFO -- : Ownership Updated                   0                   
+I, [19-09-06 11:16:36#74494]  INFO -- : memberful_expires_next_week   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:16:36#74494]  INFO -- : Kim_Miller                    2019-09-06     2019-08-26       1876         816273      46207                 2019-09-10 MM R0    
+I, [19-09-06 11:16:36#74494]  INFO -- : Discourse Men                                           
+I, [19-09-06 11:16:36#74494]  INFO -- : Processed Users                     1                   
+I, [19-09-06 11:16:36#74494]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 11:16:36#74494]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 11:16:36#74494]  INFO -- : Ownership                           0                   
+I, [19-09-06 11:16:36#74494]  INFO -- : Ownership Targets                   1                   
+I, [19-09-06 11:16:36#74494]  INFO -- : Ownership Updated                   0                   
+I, [19-09-06 11:17:00#74928]  INFO -- : memberful_expires_next_week   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:17:00#74928]  INFO -- : Kim_Miller                    2019-09-06     2019-08-26       1876         816273      46207                 2019-09-10 MM R0    
+I, [19-09-06 11:17:00#74928]  INFO -- : Discourse Men                                           
+I, [19-09-06 11:17:00#74928]  INFO -- : Processed Users                     1                   
+I, [19-09-06 11:17:00#74928]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 11:17:00#74928]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 11:17:00#74928]  INFO -- : Ownership                           0                   
+I, [19-09-06 11:17:00#74928]  INFO -- : Ownership Targets                   1                   
+I, [19-09-06 11:17:00#74928]  INFO -- : Ownership Updated                   0                   
+I, [19-09-06 11:17:31#75366]  INFO -- : memberful_expires_next_week   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:17:31#75366]  INFO -- : Kim_Miller                    2019-09-06     2019-08-26       1876         816273      46207                 2019-09-10 MM R0    
+I, [19-09-06 11:17:31#75366]  INFO -- :   Message From:    KM_Admin             Kim_Miller           Thank You for Owning Momentum!                          Momentum has a new me     Pending                  
+I, [19-09-06 11:17:34#75366]  INFO -- :   Message From:    KM_Admin             Kim_Miller           thank-you-for-owning-momentum                           Momentum has a new me     Sent                     
+I, [19-09-06 11:19:58#75840]  INFO -- : memberful_expires_next_week   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:19:58#75840]  INFO -- : Kim_Miller                    2019-09-06     2019-08-26       1876         816273      46207                 2019-09-10 MM R0    
+I, [19-09-06 11:19:58#75840]  INFO -- :   Message From:    KM_Admin             Kim_Miller           Thank You for Owning Momentum!                          Momentum has a new me     Pending                  
+I, [19-09-06 11:20:00#75840]  INFO -- :   Message From:    KM_Admin             Kim_Miller           thank-you-for-owning-momentum                           Momentum has a new me     Sent                     
+W, [19-09-06 11:20:03#75840]  WARN -- : OK
+I, [19-09-06 11:20:03#75840]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:20:03#75840]  INFO -- : Kim_Miller          2019-09-06     2019-08-26       1876         816273      46207                 2019-09-10 MM R1    
+I, [19-09-06 11:20:04#75840]  INFO -- : Discourse Men                                           
+I, [19-09-06 11:20:04#75840]  INFO -- : Processed Users                     1                   
+I, [19-09-06 11:20:04#75840]  INFO -- : Skipped Users                       0                   
+I, [19-09-06 11:20:04#75840]  INFO -- : Messages Sent                       0                   
+I, [19-09-06 11:20:04#75840]  INFO -- : Ownership                           0                   
+I, [19-09-06 11:20:04#75840]  INFO -- : Ownership Targets                   1                   
+I, [19-09-06 11:20:04#75840]  INFO -- : Ownership Updated                   1                   
+I, [19-09-06 11:20:04#75840]  INFO -- : Messages Sent                       1                   
+I, [19-09-06 11:35:27#76762]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-09-06 11:35:32#76762]  INFO -- : Pass 1 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-06 11:35:37#76762]  INFO -- : Pass 2 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-06 11:35:41#76762]  INFO -- : Pass 3 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-06 11:35:46#76762]  INFO -- : Pass 4 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-06 11:35:53#76762]  INFO -- : Pass 5 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-06 11:37:30#77233]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-09-06 11:37:35#77233]  INFO -- : memberful_expires_next_week   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:37:35#77233]  INFO -- : Kim_Miller                    2019-09-06     2019-08-26       1876         816273      46207                 2019-09-10 MM R0    
+I, [19-09-06 11:37:35#77233]  INFO -- : Pass 1 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-06 11:37:40#77233]  INFO -- : memberful_expires_next_week   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:37:40#77233]  INFO -- : Kim_Miller                    2019-09-06     2019-08-26       1876         816273      46207                 2019-09-10 MM R0    
+I, [19-09-06 11:37:40#77233]  INFO -- : Pass 2 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-06 11:37:45#77233]  INFO -- : memberful_expires_next_week   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:37:45#77233]  INFO -- : Kim_Miller                    2019-09-06     2019-08-26       1876         816273      46207                 2019-09-10 MM R0    
+I, [19-09-06 11:37:45#77233]  INFO -- : Pass 3 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-06 11:37:50#77233]  INFO -- : memberful_expires_next_week   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:37:50#77233]  INFO -- : Kim_Miller                    2019-09-06     2019-08-26       1876         816273      46207                 2019-09-10 MM R0    
+I, [19-09-06 11:37:50#77233]  INFO -- : Pass 4 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-06 11:38:23#77676]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-09-06 11:38:28#77676]  INFO -- : memberful_expires_next_week   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:38:28#77676]  INFO -- : Kim_Miller                    2019-09-06     2019-08-26       1876         816273      46207                 2019-09-10 MM R0    
+I, [19-09-06 11:38:28#77676]  INFO -- :   Message From:    KM_Admin             Kim_Miller           Thank You for Owning Momentum!                          Momentum has a new me     Pending                  
+I, [19-09-06 11:38:30#77676]  INFO -- :   Message From:    KM_Admin             Kim_Miller           thank-you-for-owning-momentum                           Momentum has a new me     Sent                     
+W, [19-09-06 11:38:32#77676]  WARN -- : OK
+I, [19-09-06 11:38:32#77676]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:38:32#77676]  INFO -- : Kim_Miller          2019-09-06     2019-08-26       1876         816273      46207                 2019-09-10 MM R1    
+I, [19-09-06 11:38:33#77676]  INFO -- : Pass 1 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-06 11:38:38#77676]  INFO -- : Pass 2 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-06 11:38:43#77676]  INFO -- : Pass 3 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-06 11:38:55#78119]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-09-06 11:44:39#78119]  INFO -- : memberful_expires_next_week   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:44:39#78119]  INFO -- : Graham_Howe                   2018-09-24                      0            80          0                     2019-08-10 MM R0    
+I, [19-09-06 11:44:39#78119]  INFO -- : memberful_expires_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:44:39#78119]  INFO -- : Graham_Howe               2018-09-24                      0            80          0                     2019-08-10 MM R0    
+I, [19-09-06 11:53:29#78119]  INFO -- : memberful_expires_next_week   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:53:29#78119]  INFO -- : Tesh_Tesfaye                  2018-09-13     2019-05-20       2            567         0                     2019-09-11 MM R0    
+I, [19-09-06 11:54:17#78119]  INFO -- : Pass 1 complete for 210 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-06 11:57:27#78856]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-09-06 11:57:32#78856]  INFO -- : memberful_expires_next_week   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:57:32#78856]  INFO -- : Kim_Miller                    2019-09-06     2019-08-26       1876         816273      46207                 2019-09-10 MM R0    
+I, [19-09-06 11:57:32#78856]  INFO -- :   Message From:    KM_Admin             Kim_Miller           Thank You for Owning Momentum!                          Momentum has a new me     Pending                  
+I, [19-09-06 11:57:34#78856]  INFO -- :   Message From:    KM_Admin             Kim_Miller           thank-you-for-owning-momentum                           Momentum has a new me     Sent                     
+W, [19-09-06 11:57:36#78856]  WARN -- : OK
+I, [19-09-06 11:57:36#78856]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-06 11:57:36#78856]  INFO -- : Kim_Miller          2019-09-06     2019-08-26       1876         816273      46207                 2019-09-10 MM R1    
+I, [19-09-06 11:57:37#78856]  INFO -- : Pass 1 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-06 11:57:42#78856]  INFO -- : Pass 2 complete for 1 users, 0 skipped. Waiting 0 minutes ...

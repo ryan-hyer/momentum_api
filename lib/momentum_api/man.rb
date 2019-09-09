@@ -58,9 +58,10 @@ module MomentumApi
       end
 
       # Once per User Cases
-      if @discourse.schedule.options[:user]
-        @discourse.schedule.user_cases(self)
-      end
+      @discourse.schedule.user_cases(self)
+      # if @discourse.schedule.options[:user]
+      #   @discourse.schedule.user_cases(self)
+      # end
 
     end
 

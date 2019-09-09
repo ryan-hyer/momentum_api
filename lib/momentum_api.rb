@@ -1,5 +1,6 @@
 # require_relative 'momentum_api/api/params'
 # require_relative 'momentum_api/error'
+require 'date'
 require_relative 'momentum_api/version'
 require_relative 'momentum_api/discourse'
 require_relative 'momentum_api/schedule'
