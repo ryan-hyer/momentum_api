@@ -52,8 +52,8 @@ module MomentumApi
                 case ownership_type[0].to_s
 
                 when 'auto'
-                  #todo pull subscriptions via {{base_url}}/memberships/subscriptions/17.json?api_key={{api_key}}&api_username=Kim_Miller
-
+                  #todo pull subscriptions via {{base_url}}/memberships/subscriptions/17.json
+                  # subscriptions = @man.user_client.membership_subscriptions(17)
                 when 'manual'
 
                   if action_date_qualifies

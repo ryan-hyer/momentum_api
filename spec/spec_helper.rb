@@ -142,6 +142,40 @@ def schedule_options
       },
       ownership:{
           manual: {
+              card_auto_renew_expires_next_week: {
+                  do_task_update:         false,
+                  user_fields:            '6',
+                  ownership_code:         'CA',
+                  days_until_renews:      7,
+                  action_sequence:        'R1',
+                  add_to_group:           nil,
+                  remove_from_group:      nil,
+                  message_from:           'Kim_Miller',
+                  flag_new:               true,
+                  excludes:               %w()
+              },
+              card_auto_renew_expires_today: {
+                  do_task_update:         false,
+                  user_fields:            '6',
+                  ownership_code:         'CA',
+                  days_until_renews:      0,
+                  action_sequence:        'R2',
+                  add_to_group:           nil,
+                  remove_from_group:      nil,
+                  message_from:           'Kim_Miller',
+                  excludes:               %w()
+              },
+              card_auto_renew_expired_last_week_final: {
+                  do_task_update:         false,
+                  user_fields:            '6',
+                  ownership_code:         'CA',
+                  days_until_renews:      7,
+                  action_sequence:        'R3',
+                  add_to_group:           nil,
+                  remove_from_group:      nil,
+                  message_from:           'Kim_Miller',
+                  excludes:               %w()
+              },
               memberful_expires_next_week: {
                   do_task_update:         false,
                   user_fields:            '6',
@@ -152,6 +186,17 @@ def schedule_options
                   remove_from_group:      nil,
                   message_from:           'Kim_Miller',
                   flag_new:               true,
+                  excludes:               %w()
+              },
+              memberful_expired_today: {
+                  do_task_update:         false,
+                  user_fields:            '6',
+                  ownership_code:         'MM',
+                  days_until_renews:      0,
+                  action_sequence:        'R2',
+                  add_to_group:           nil,
+                  remove_from_group:      nil,
+                  message_from:           'Kim_Miller',
                   excludes:               %w()
               },
               memberful_final: {
