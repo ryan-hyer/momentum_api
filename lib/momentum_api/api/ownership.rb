@@ -28,18 +28,21 @@ module MomentumApi
         puts "#{man.user_details['username']} in Ownership"
       end
 
-      @man = man
       clock = @mock || Date
+      @man = man
+      subscriptions = @man.user_client.membership_subscriptions(17)
 
       @options.each do |ownership_type|
         ownership_type[1].each do |action|
+
           renews_value = man.user_details['user_fields'][action[1][:user_fields]]
+          renew_ownership_code = renews_value ? renews_value[11..12] : nil
           if action[1][:excludes].include?(man.user_details['username'])
             # puts "#{man.user_details['username']} is Excluded from this Task."
-          elsif renews_value  and
+
+          elsif renews_value and
               Date.valid_date?(renews_value[0..3].to_i, renews_value[5..6].to_i, renews_value[8..9].to_i)
 
-            renew_ownership_code = renews_value[11..12]
             action_ownership_code_match = renew_ownership_code == action[1][:ownership_code]
 
             renew_date = Date.parse(renews_value[0..9])
@@ -49,36 +52,18 @@ module MomentumApi
 
               if renews_value[14] == 'R' and renews_value[15] =~ /^\d+$/
 
-                case ownership_type[0].to_s
+                if action_date_qualifies
 
-                when 'auto'
-                  #todo pull subscriptions via {{base_url}}/memberships/subscriptions/17.json
-                  # subscriptions = @man.user_client.membership_subscriptions(17)
-                when 'manual'
+                  action_sequence_last = renews_value[15].to_i
+                  action_sequence_qualifies = action_sequence_last + 1 == action[1][:action_sequence][1].to_i
 
-                  if action_date_qualifies
+                  if action_sequence_qualifies
 
-                    action_sequence_last = renews_value[15].to_i
-                    action_sequence_qualifies = action_sequence_last + 1 == action[1][:action_sequence][1].to_i
-
-                    if action_sequence_qualifies
-
-                      user_update_value = renews_value[0..12] + ' ' + action[1][:action_sequence]
-                      update_ownership(man, action, user_update_value, renew_ownership_code, action[1][:action_sequence])
-
-                      # puts Date.today.strftime("%Y-%m-%d")
-                      # puts ownership_type[0].to_s
-                      # puts action[1][:days_until_renews]
-                      # puts action_date_qualifies
-                      # puts renew_date
-                      # puts action_sequence_qualifies
-
-                    end
+                    user_update_value = renews_value[0..12] + ' ' + action[1][:action_sequence]
+                    update_ownership(man, action, user_update_value, renew_ownership_code, action[1][:action_sequence])
 
                   end
 
-                else
-                  # puts 'No recognized ownership_type'
                 end
 
               elsif action[1][:flag_new]
@@ -86,13 +71,28 @@ module MomentumApi
                 user_update_value = renews_value[0..12] + ' R0'
                 update_ownership(man, action, user_update_value, renew_ownership_code, 'R0', to_username: 'Kim_Miller')
               end
-              
+
             end
 
-          else
-            # puts 'Invalid renews_value'
+          elsif ownership_type[0].to_s == 'auto' and not subscriptions.empty? and action[1][:flag_new]
+            latest = nil
+            subscriptions.each do |subscription|
+              if subscription['subscription_end_date']
+                latest = subscription['subscription_end_date'][0..9]
+                if subscription['subscription_end_date'] > latest and subscription['product'] and
+                    subscription['product']['name'] == 'Owner Auto Renewing'
+                  latest = subscription['subscription_end_date'][0..9]
+                end
+              end
+            end
+            puts 'Invalid renews_value check for auto renew'
+            # add renew_date, renew_ownership_code & R value
+            user_update_value = latest + ' ' + action[1][:ownership_code] + ' R0'
+            puts user_update_value
+            update_ownership(man, action, user_update_value, action[1][:ownership_code],
+                             'R0', to_username: 'Kim_Miller')
           end
-          
+
         end
       end
     end
@@ -104,13 +104,11 @@ module MomentumApi
       message_file = renew_ownership_code + '_' + current_action_seq.to_s
       message_subject = eval(message_body(message_file + '_subject.txt'))
       message_body = eval(message_body(message_file + '_body.txt'))
-      # message_client = @mock || MomentumApi::Messages.new(self, from_username) # can be moved to init
       @message_client.send_private_message(@man, message_body, message_subject, from_username: from_username, to_username: to_username)
     end
 
     def update_ownership(man, action, user_update_value, renew_ownership_code, current_action_seq, to_username: nil)
 
-      # user_option_print = %w(last_seen_at last_posted_at post_count time_read recent_time_read)
       man.print_user_options(man.user_details, user_label: "#{action[0]}",
                              nested_user_field: %W(#{'user_fields'} #{action[1][:user_fields]}))
       @counters[:'Ownership Targets'] += 1

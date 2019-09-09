@@ -141,7 +141,7 @@ def schedule_options
           excludes:                 %w()
       },
       ownership:{
-          manual: {
+          auto: {
               card_auto_renew_expires_next_week: {
                   do_task_update:         false,
                   user_fields:            '6',
@@ -175,7 +175,9 @@ def schedule_options
                   remove_from_group:      nil,
                   message_from:           'Kim_Miller',
                   excludes:               %w()
-              },
+              }
+          },
+          manual: {
               memberful_expires_next_week: {
                   do_task_update:         false,
                   user_fields:            '6',
