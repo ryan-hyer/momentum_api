@@ -30,69 +30,93 @@ module MomentumApi
 
       clock = @mock || Date
       @man = man
-      subscriptions = @man.user_client.membership_subscriptions(17)
+      subscriptions = @man.user_client.membership_subscriptions(man.user_details['id'])
 
       @options.each do |ownership_type|
         ownership_type[1].each do |action|
 
           renews_value = man.user_details['user_fields'][action[1][:user_fields]]
           renew_ownership_code = renews_value ? renews_value[11..12] : nil
+
           if action[1][:excludes].include?(man.user_details['username'])
             # puts "#{man.user_details['username']} is Excluded from this Task."
+          else
 
-          elsif renews_value and
-              Date.valid_date?(renews_value[0..3].to_i, renews_value[5..6].to_i, renews_value[8..9].to_i)
+            # if user is on auto renewal, get latest_auto_renew_date
+            latest_auto_renew_date = nil
+            if ownership_type[0].to_s == 'auto' and not subscriptions.empty? and action[1][:flag_new]
+              subscriptions.each do |subscription|
+                if action[1][:subscrption_name] and subscription['product'] and subscription['subscription_end_date'] and
+                    subscription['product']['name'] == action[1][:subscrption_name] and
+                    Date.valid_date?(subscription['subscription_end_date'][0..3].to_i,
+                                     subscription['subscription_end_date'][5..6].to_i,
+                                     subscription['subscription_end_date'][8..9].to_i)
+                  subscription_renew_date = Date.parse(subscription['subscription_end_date'][0..9])
+                  if latest_auto_renew_date
+                    if subscription_renew_date > latest_auto_renew_date
+                      latest_auto_renew_date = subscription_renew_date
+                    end
+                  else
+                    latest_auto_renew_date = subscription_renew_date
+                  end
+                end
+              end
+            end
+            
+            # see if user has a valid renews date on his prfile
+            if renews_value and Date.valid_date?(renews_value[0..3].to_i, renews_value[5..6].to_i, renews_value[8..9].to_i)
 
-            action_ownership_code_match = renew_ownership_code == action[1][:ownership_code]
+              profile_renew_date = Date.parse(renews_value[0..9])
 
-            renew_date = Date.parse(renews_value[0..9])
-            action_date_qualifies = clock.today >= renew_date - action[1][:days_until_renews]
+              if latest_auto_renew_date and latest_auto_renew_date > profile_renew_date     # todo build test case
+                effective_renew_date = latest_auto_renew_date
+                effective_renews_value = latest_auto_renew_date.strftime("%Y-%m-%d") + ' ' + action[1][:ownership_code] + ' R0'
+                update_ownership(man, action, effective_renews_value, action[1][:ownership_code],
+                                 'R0', to_username: 'Kim_Miller')
+              else
+                effective_renew_date = profile_renew_date
+                effective_renews_value = renews_value
+              end
 
-            if action_ownership_code_match
+              action_date_qualifies = clock.today >= effective_renew_date - action[1][:days_until_renews]
+              action_ownership_code_match = renew_ownership_code == action[1][:ownership_code]
 
-              if renews_value[14] == 'R' and renews_value[15] =~ /^\d+$/
+              if action_ownership_code_match
 
-                if action_date_qualifies
+                if effective_renews_value[14] == 'R' and effective_renews_value[15] =~ /^\d+$/
 
-                  action_sequence_last = renews_value[15].to_i
-                  action_sequence_qualifies = action_sequence_last + 1 == action[1][:action_sequence][1].to_i
+                  if action_date_qualifies
 
-                  if action_sequence_qualifies
+                    action_sequence_last = effective_renews_value[15].to_i
+                    action_sequence_qualifies = action_sequence_last + 1 == action[1][:action_sequence][1].to_i
 
-                    user_update_value = renews_value[0..12] + ' ' + action[1][:action_sequence]
-                    update_ownership(man, action, user_update_value, renew_ownership_code, action[1][:action_sequence])
+                    if action_sequence_qualifies
+
+                      user_update_value = effective_renews_value[0..12] + ' ' + action[1][:action_sequence]
+                      update_ownership(man, action, user_update_value, renew_ownership_code, action[1][:action_sequence])
+
+                    end
 
                   end
 
+                # alert manual renewal is present
+                elsif action[1][:flag_new]
+                  user_update_value = effective_renews_value[0..12] + ' R0'
+                  update_ownership(man, action, user_update_value, renew_ownership_code, 'R0', to_username: 'Kim_Miller')
                 end
 
-              elsif action[1][:flag_new]
-                # puts "Needs R value set #{action[0]} #{renews_value}"
-                user_update_value = renews_value[0..12] + ' R0'
-                update_ownership(man, action, user_update_value, renew_ownership_code, 'R0', to_username: 'Kim_Miller')
               end
+
+            # alert auto renewal is present
+            elsif latest_auto_renew_date and action[1][:ownership_code] == 'CA' and action[1][:flag_new] == true
+              user_update_value = latest_auto_renew_date.strftime("%Y-%m-%d") + ' ' + action[1][:ownership_code] + ' R0'
+              update_ownership(man, action, user_update_value, action[1][:ownership_code],
+                               'R0', to_username: 'Kim_Miller')
+              # puts "user_update_value #{user_update_value}"
 
             end
 
-          elsif ownership_type[0].to_s == 'auto' and not subscriptions.empty? and action[1][:flag_new]
-            latest = nil
-            subscriptions.each do |subscription|
-              if subscription['subscription_end_date']
-                latest = subscription['subscription_end_date'][0..9]
-                if subscription['subscription_end_date'] > latest and subscription['product'] and
-                    subscription['product']['name'] == 'Owner Auto Renewing'
-                  latest = subscription['subscription_end_date'][0..9]
-                end
-              end
-            end
-            puts 'Invalid renews_value check for auto renew'
-            # add renew_date, renew_ownership_code & R value
-            user_update_value = latest + ' ' + action[1][:ownership_code] + ' R0'
-            puts user_update_value
-            update_ownership(man, action, user_update_value, action[1][:ownership_code],
-                             'R0', to_username: 'Kim_Miller')
           end
-
         end
       end
     end
@@ -121,6 +145,9 @@ module MomentumApi
 
         update_response = @schedule.discourse.admin_client.update_user(man.user_details['username'],
                                                                        user_fields: update_set_value)
+
+        # todo move groups
+        
         @schedule.discourse.options[:logger].warn "#{update_response[:body]['success']}"
         @counters[:'Ownership Updated'] += 1
 

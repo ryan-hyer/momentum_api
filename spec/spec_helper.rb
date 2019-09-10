@@ -41,7 +41,7 @@ def discourse_options
       target_username:              nil,
       target_groups:                %w(trust_level_1),
       include_staged_users:         false,
-      instance:                     'live',
+      instance:                     'live',   # todo revise to actual url
       api_username:                 'KM_Admin',
       exclude_users:                %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
       issue_users:                  %w(),
@@ -152,30 +152,31 @@ def schedule_options
                   remove_from_group:      nil,
                   message_from:           'Kim_Miller',
                   flag_new:               true,
-                  excludes:               %w()
-              },
-              card_auto_renew_expires_today: {
-                  do_task_update:         false,
-                  user_fields:            '6',
-                  ownership_code:         'CA',
-                  days_until_renews:      0,
-                  action_sequence:        'R2',
-                  add_to_group:           nil,
-                  remove_from_group:      nil,
-                  message_from:           'Kim_Miller',
-                  excludes:               %w()
-              },
-              card_auto_renew_expired_last_week_final: {
-                  do_task_update:         false,
-                  user_fields:            '6',
-                  ownership_code:         'CA',
-                  days_until_renews:      7,
-                  action_sequence:        'R3',
-                  add_to_group:           nil,
-                  remove_from_group:      nil,
-                  message_from:           'Kim_Miller',
+                  subscrption_name:       'Owner Auto Renewing',
                   excludes:               %w()
               }
+              # card_auto_renew_expires_today: {
+              #     do_task_update:         false,
+              #     user_fields:            '6',
+              #     ownership_code:         'CA',
+              #     days_until_renews:      0,
+              #     action_sequence:        'R2',
+              #     add_to_group:           nil,
+              #     remove_from_group:      nil,
+              #     message_from:           'Kim_Miller',
+              #     excludes:               %w()
+              # },
+              # card_auto_renew_expired_last_week_final: {
+              #     do_task_update:         false,
+              #     user_fields:            '6',
+              #     ownership_code:         'CA',
+              #     days_until_renews:      7,
+              #     action_sequence:        'R3',
+              #     add_to_group:           nil,
+              #     remove_from_group:      nil,
+              #     message_from:           'Kim_Miller',
+              #     excludes:               %w()
+              # }
           },
           manual: {
               memberful_expires_next_week: {
