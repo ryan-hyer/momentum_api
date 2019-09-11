@@ -30,11 +30,11 @@ module MomentumApi
     def connect_to_instance(api_username, instance=@options[:instance])
       client = ''
       case instance
-      when 'live'
-        client = DiscourseApi::Client.new('https://discourse.gomomentum.org/')
+      when 'https://discourse.gomomentum.org'
+        client = DiscourseApi::Client.new('https://discourse.gomomentum.org')
         client.api_key = ENV['REMOTE_DISCOURSE_API']
-      when 'staging'
-        client = DiscourseApi::Client.new('https://staging.gomomentum.org/')
+      when 'https://staging.gomomentum.org'
+        client = DiscourseApi::Client.new('https://staging.gomomentum.org')
         client.api_key = ENV['REMOTE_DISCOURSE_API']
       when 'local'
         client = DiscourseApi::Client.new('http://localhost:3000')

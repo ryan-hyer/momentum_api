@@ -1,5 +1,5 @@
 "Momentum has a new membership system making renewal easier than ever!
 
-Simply go [here to renew your membership as an Owner of Momentum.](https://staging.gomomentum.org/page/ownership/3/)
+Simply go [here to renew your membership as an Owner of Momentum.](#{@schedule.discourse.options[:instance]}/page/ownership/3/)
 
   -- Your Momentum Moderators"

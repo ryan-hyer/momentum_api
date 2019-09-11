@@ -103,7 +103,6 @@ module MomentumApi
               remove_response = @schedule.discourse.admin_client.group_remove(current_group_id, username: man.user_details['username'])
               @mock ? sleep(0) : sleep(1)
               man.discourse.options[:logger].warn "Removed man from Group #{current_group_id}: #{remove_response['success']}"
-              # man.discourse.options[:logger].warn "Removed man from Group #{current_group_id}: #{remove_response.body['success']}"
               @counters[:'User Removed from Group'] += 1
             end
           end
@@ -111,7 +110,6 @@ module MomentumApi
           update_response = @schedule.discourse.admin_client.group_add(target_activity_groups[0], username: man.user_details['username'])
           @mock ? sleep(0) : sleep(1)
           man.discourse.options[:logger].warn "Added man to Group #{target_activity_groups[0]}: #{update_response['success']}"
-          # man.discourse.options[:logger].warn "Added man to Group #{target_activity_groups[0]}: #{update_response.body['success']}"
           @counters[:'User Group Updated'] += 1
 
           # check if update happened ... or ... comment out for no check after update

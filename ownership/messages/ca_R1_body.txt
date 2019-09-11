@@ -1,5 +1,5 @@
 "Just a friendly reminder, your Momentum Ownership will automatically renew next week. There is nothing you need to do but fasten your seatbelt and get ready for another awesome year in Momentum!
 
-If you need to make any changes to your Momentum Ownership, you can do so [here.](https://staging.gomomentum.org/my/billing)
+If you need to make any changes to your Momentum Ownership, you can do so [here.](#{@schedule.discourse.options[:instance]}/my/billing)
 
-  -- Your Momentum Moderators"  # todo trobleshoot Procourse base url bug
+  -- Your Momentum Moderators"  # todo debug Procourse base url bug

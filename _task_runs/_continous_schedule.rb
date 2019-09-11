@@ -11,7 +11,7 @@ discourse_options = {
     target_groups:                  %w(trust_level_0),   # Mods GreatX BraveHearts trust_level_0 trust_level_1
     include_staged_users:           true,
     minutes_between_scans:          5,
-    instance:                       'live',
+    instance:                       'https://discourse.gomomentum.org',
     api_username:                   'KM_Admin',
     exclude_users:                  %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
     issue_users:                    %w(),

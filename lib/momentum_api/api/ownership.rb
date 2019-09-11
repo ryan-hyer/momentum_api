@@ -44,7 +44,7 @@ module MomentumApi
 
             # if user is on auto renewal, get latest_auto_renew_date
             latest_auto_renew_date = nil
-            if ownership_type[0].to_s == 'auto' and not subscriptions.empty? and action[1][:flag_new]
+            if ownership_type[0].to_s == 'auto' and not subscriptions.empty?
               subscriptions.each do |subscription|
                 if action[1][:subscrption_name] and subscription['product'] and subscription['subscription_end_date'] and
                     subscription['product']['name'] == action[1][:subscrption_name] and
@@ -68,11 +68,14 @@ module MomentumApi
 
               profile_renew_date = Date.parse(renews_value[0..9])
 
-              if latest_auto_renew_date and latest_auto_renew_date > profile_renew_date     # todo build test case
+              # alert renewing auto renewal is present
+              if latest_auto_renew_date and latest_auto_renew_date > profile_renew_date and
+                  action[1][:ownership_code] == 'CA' and action[1][:action_sequence] == 'R0'
                 effective_renew_date = latest_auto_renew_date
-                effective_renews_value = latest_auto_renew_date.strftime("%Y-%m-%d") + ' ' + action[1][:ownership_code] + ' R0'
-                update_ownership(man, action, effective_renews_value, action[1][:ownership_code],
-                                 'R0', to_username: 'Kim_Miller')
+                effective_renews_value = latest_auto_renew_date.strftime("%Y-%m-%d") + ' ' +
+                    action[1][:ownership_code] + ' ' + action[1][:action_sequence]
+                update_ownership(man, action, effective_renews_value)
+                break
               else
                 effective_renew_date = profile_renew_date
                 effective_renews_value = renews_value
@@ -93,27 +96,25 @@ module MomentumApi
                     if action_sequence_qualifies
 
                       user_update_value = effective_renews_value[0..12] + ' ' + action[1][:action_sequence]
-                      update_ownership(man, action, user_update_value, renew_ownership_code, action[1][:action_sequence])
+                      update_ownership(man, action, user_update_value)
 
                     end
 
                   end
 
                 # alert manual renewal is present
-                elsif action[1][:flag_new]
-                  user_update_value = effective_renews_value[0..12] + ' R0'
-                  update_ownership(man, action, user_update_value, renew_ownership_code, 'R0', to_username: 'Kim_Miller')
+                elsif ownership_type[0].to_s == 'manual' and action[1][:action_sequence] == 'R0'
+                  user_update_value = effective_renews_value[0..12] + ' ' + action[1][:action_sequence]
+                  update_ownership(man, action, user_update_value)
                 end
 
               end
 
-            # alert auto renewal is present
-            elsif latest_auto_renew_date and action[1][:ownership_code] == 'CA' and action[1][:flag_new] == true
-              user_update_value = latest_auto_renew_date.strftime("%Y-%m-%d") + ' ' + action[1][:ownership_code] + ' R0'
-              update_ownership(man, action, user_update_value, action[1][:ownership_code],
-                               'R0', to_username: 'Kim_Miller')
-              # puts "user_update_value #{user_update_value}"
-
+            # alert first time auto renewal is present
+            elsif latest_auto_renew_date and action[1][:ownership_code] == 'CA' and action[1][:action_sequence] == 'R0'
+              user_update_value = latest_auto_renew_date.strftime("%Y-%m-%d") + ' ' + 
+                  action[1][:ownership_code] + ' ' + action[1][:action_sequence]
+              update_ownership(man, action, user_update_value)
             end
 
           end
@@ -124,14 +125,15 @@ module MomentumApi
     
     private
     
-    def send_renewal_message(renew_ownership_code, current_action_seq, from_username, to_username: nil)
-      message_file = renew_ownership_code + '_' + current_action_seq.to_s
+    def send_renewal_message(action)
+      message_file = action[1][:ownership_code] + '_' + action[1][:action_sequence].to_s
       message_subject = eval(message_body(message_file + '_subject.txt'))
       message_body = eval(message_body(message_file + '_body.txt'))
-      @message_client.send_private_message(@man, message_body, message_subject, from_username: from_username, to_username: to_username)
+      @message_client.send_private_message(@man, message_body, message_subject,
+                                           from_username: action[1][:message_from], to_username: action[1][:message_to])
     end
 
-    def update_ownership(man, action, user_update_value, renew_ownership_code, current_action_seq, to_username: nil)
+    def update_ownership(man, action, user_update_value)
 
       man.print_user_options(man.user_details, user_label: "#{action[0]}",
                              nested_user_field: %W(#{'user_fields'} #{action[1][:user_fields]}))
@@ -141,13 +143,11 @@ module MomentumApi
 
       if @schedule.discourse.options[:do_live_updates] and action[1][:do_task_update]
 
-        send_renewal_message(renew_ownership_code, current_action_seq, action[1][:message_from], to_username: to_username)
+        send_renewal_message(action)
 
         update_response = @schedule.discourse.admin_client.update_user(man.user_details['username'],
                                                                        user_fields: update_set_value)
 
-        # todo move groups
-        
         @schedule.discourse.options[:logger].warn "#{update_response[:body]['success']}"
         @counters[:'Ownership Updated'] += 1
 
@@ -157,8 +157,47 @@ module MomentumApi
                                nested_user_field: %W(#{'user_fields'} #{action[1][:user_fields]}))
         @mock ? sleep(0) : sleep(1)
 
+        # todo create auto case where admins are alerted, but not group moves happen
+        if action[1][:add_to_group]
+          update_response = @schedule.discourse.admin_client.group_add(action[1][:add_to_group],
+                                                                       username: man.user_details['username'])
+          @mock ? sleep(0) : sleep(1)
+          @schedule.discourse.options[:logger].warn "Added man to Group #{action[1][:add_to_group]}: #{update_response['success']}"
+          @counters[:'Users Added to Group'] += 1
+
+          check_users_groups(man, action[1][:add_to_group])
+        end
+
+        if action[1][:remove_from_group]
+          remove_response = @schedule.discourse.admin_client.group_remove(action[1][:remove_from_group],
+                                                                          username: man.user_details['username'])
+          @mock ? sleep(0) : sleep(1)
+          @schedule.discourse.options[:logger].warn "Removed man from Group #{action[1][:remove_from_group]}: #{remove_response['success']}"
+          @counters[:'Users Removed from Group'] += 1
+
+          check_users_groups(man, action[1][:remove_from_group])
+        end
+
       end
-      # end
+    end
+
+    # check if group moves  happened ... or ... comment out for no check after update
+    def check_users_groups(man, related_group)
+      user_details_after_update = @schedule.discourse.admin_client.user(man.user_details['username'])
+      @mock ? sleep(0) : sleep(1)
+      related_group_found = false
+      user_details_after_update['groups'].each do |user_group_after_update|
+        if user_group_after_update['id'] == related_group
+          @schedule.discourse.options[:logger]
+              .warn "#{user_details_after_update['username']} now in Group: #{user_group_after_update['name']}"
+          related_group_found = true
+        end
+      end
+      if related_group_found
+        puts 'There was an error'
+      else
+        @schedule.discourse.options[:logger].warn "#{user_details_after_update['username']} not currently not in #{related_group} Ownership group."
+      end
     end
 
     def message_path
@@ -170,10 +209,12 @@ module MomentumApi
     end
 
     def zero_notifications_counters
-      counters[:'Ownership']              =   0
-      counters[:'Ownership Targets']      =   0
-      counters[:'Ownership Updated']      =   0
-      counters[:'Messages Sent']          =   0
+      counters[:'Ownership']                  =   0
+      counters[:'Ownership Targets']          =   0
+      counters[:'Ownership Updated']          =   0
+      counters[:'Messages Sent']              =   0
+      counters[:'Users Added to Group']       =   0
+      counters[:'Users Removed from Group']   =   0
     end
 
   end

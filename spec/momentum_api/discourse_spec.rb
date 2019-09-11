@@ -185,12 +185,12 @@ describe MomentumApi::Discourse do
       subject { MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies) }
 
       it "responds to live .connect_to_instance" do
-        subject.connect_to_instance('KM_Admin', 'live')
+        subject.connect_to_instance('KM_Admin', 'https://discourse.gomomentum.org')
         expect(subject).to respond_to(:connect_to_instance)
       end
 
       it "responds to staging .connect_to_instance" do
-        subject.connect_to_instance('KM_Admin', 'staging')
+        subject.connect_to_instance('KM_Admin', 'https://staging.gomomentum.org')
         expect(subject).to respond_to(:connect_to_instance)
       end
 

@@ -6,7 +6,7 @@ discourse_options = {
     target_username:        'Matthew_Raines',       # Tshombe_Moore David_Kirk Steve_Scott Kim_Miller Andrew_Webster
     target_groups:          %w(trust_level_0),  # Mods GreatX BraveHearts trust_level_0 trust_level_1
     include_staged_users:   true,
-    instance:               'live',
+    instance:               'https://discourse.gomomentum.org',
     api_username:           'KM_Admin',
     exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
     issue_users:             %w(),

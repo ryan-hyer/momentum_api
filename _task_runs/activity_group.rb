@@ -5,7 +5,7 @@ discourse_options = {
     do_live_updates:        false,
     # target_username:        'Jerry_Strebig',     # David_Kirk Steve_Scott John_Butler Kim_Miller Jerry_Strebig Lee_Wheeler Brad_Peppard
     target_groups:          %w(trust_level_0),       # Mods GreatX BraveHearts trust_level_0 trust_level_1
-    instance:               'live',
+    instance:               'https://discourse.gomomentum.org',
     api_username:           'KM_Admin',
     exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
     issue_users:             %w(),
