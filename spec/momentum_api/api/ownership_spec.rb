@@ -264,7 +264,7 @@ describe MomentumApi::Ownership do
         expect(mock_dependencies).to receive(:today).exactly(date_today_calls).times.and_return Date.new(2020,8,20)
         expect(mock_dependencies).to receive(:send_private_message)
                                          .with(mock_man, /Just a friendly reminder/, /Thank You for Owning Momentum!/,
-                                               from_username: 'Kim_Miller', to_username: nil)
+                                               from_username: 'Kim_Miller', to_username: nil, cc_username: nil)
         mock_dependencies
       end
 
@@ -330,7 +330,7 @@ describe MomentumApi::Ownership do
         expect(mock_dependencies).to receive(:today).exactly(date_today_calls).times.and_return Date.new(2020,8,26)
         expect(mock_dependencies).to receive(:send_private_message)
                                          .with(mock_man, /The men don't want to see you go/, /Wait, Your Momentum Ownership Has Expired!/,
-                                               from_username: 'Kim_Miller', to_username: nil)
+                                               from_username: 'Kim_Miller', to_username: nil, cc_username: nil)
         mock_dependencies
       end
 
@@ -346,7 +346,7 @@ describe MomentumApi::Ownership do
     end
 
     
-    context 'Card Auto Renewing user expired a week ago, do_live_updates and do_task_update' do
+    context 'Card Auto Renewing user expired a week ago final, do_live_updates and do_task_update' do
 
       options_do_live_updates = discourse_options
       options_do_live_updates[:do_live_updates] = true
@@ -396,7 +396,7 @@ describe MomentumApi::Ownership do
         expect(mock_dependencies).to receive(:today).exactly(date_today_calls).times.and_return Date.new(2020,9,2)
         expect(mock_dependencies).to receive(:send_private_message)
                                          .with(mock_man, /It's not too late to renew/, /Momentum Does Not Want to See You Go!/,
-                                               from_username: 'Kim_Miller', to_username: nil)
+                                               from_username: 'Kim_Miller', to_username: nil, cc_username: 'Kim_Miller,KM_Admin')
         mock_dependencies
       end
 
@@ -457,7 +457,7 @@ describe MomentumApi::Ownership do
         expect(mock_dependencies).to receive(:today).exactly(date_today_calls).times.and_return Date.new(2019,12,26)
         expect(mock_dependencies).to receive(:send_private_message)
                                          .with(mock_man, /Momentum has a new membership system/, /Thank You for Owning Momentum!/,
-                                               from_username: 'Kim_Miller', to_username: nil)
+                                               from_username: 'Kim_Miller', to_username: nil, cc_username: nil)
         mock_dependencies
       end
 
@@ -523,7 +523,7 @@ describe MomentumApi::Ownership do
         expect(mock_dependencies).to receive(:send_private_message)
                                          .with(mock_man, /We sent you a couple messages about your expired/,
                                                /We are sorry to see you go!/,
-                                               from_username: 'Kim_Miller', to_username: nil)
+                                               from_username: 'Kim_Miller', to_username: nil, cc_username: 'Kim_Miller,KM_Admin')
         mock_dependencies
       end
 
@@ -587,9 +587,9 @@ describe MomentumApi::Ownership do
       let(:mock_dependencies) do
         mock_dependencies = instance_double('mock_dependencies')
         expect(mock_dependencies).to receive(:send_private_message)
-                                         .with(mock_man, /Momentum has a new member.../,
-                                               /Momentum Has a new Annually Subscribing Owner/,
-                                               from_username: 'Kim_Miller', to_username: %w(Kim_Miller KM_Admin))
+                                         .with(mock_man, /Thank you for your ownership of Momentum, Tony Christopher/,
+                                               /Thank you for Owning Momentum!/,
+                                               from_username: 'Kim_Miller', to_username: nil, cc_username: 'Kim_Miller,KM_Admin')
         mock_dependencies
       end
 
@@ -653,9 +653,9 @@ describe MomentumApi::Ownership do
         mock_dependencies = instance_double('mock_dependencies')
         expect(mock_dependencies).to receive(:today).exactly(date_today_calls).times.and_return Date.new(2019,10,03)
         expect(mock_dependencies).to receive(:send_private_message)
-                                         .with(mock_man, /Momentum has a new member.../,
-                                               /Momentum Has a new Manually Entered Owner/,
-                                               from_username: 'Kim_Miller', to_username: %w(Kim_Miller KM_Admin))
+                                         .with(mock_man, /Thank you for your ownership of Momentum, Tony Christopher/,
+                                               /Thank you for Owning Momentum!/,
+                                               from_username: 'Kim_Miller', to_username: nil, cc_username: 'Kim_Miller,KM_Admin')
         mock_dependencies
       end
 
@@ -721,9 +721,10 @@ describe MomentumApi::Ownership do
         mock_dependencies = instance_double('mock_dependencies')
         expect(mock_dependencies).to receive(:today).exactly(4).times.and_return(Date.new(2020,8,23))
         expect(mock_dependencies).to receive(:send_private_message)
-                                         .with(mock_man, /Momentum has a new member.../,
-                                               /Momentum Has a new Annually Subscribing Owner/,
-                                               from_username: 'Kim_Miller', to_username: %w(Kim_Miller KM_Admin))
+                                         .with(mock_man, /Thank you for your ownership of Momentum, Tony Christopher/,
+                                               /Thank you for Owning Momentum!/,
+                                               from_username: 'Kim_Miller', to_username: nil,
+                                               cc_username: 'Kim_Miller,KM_Admin')
         mock_dependencies
       end
 

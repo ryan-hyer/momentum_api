@@ -2,4 +2,4 @@
 
 Simply go [here to renew your membership as an Owner of Momentum.](#{@schedule.discourse.options[:instance]}/page/ownership/3/)
 
-  -- Your Momentum Moderators"
+  -- Your Momentum Leadership"

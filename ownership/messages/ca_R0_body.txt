@@ -1,5 +1,5 @@
-"Momentum has a new member... #{@man.user_details['username']} with the memberhip #{@man.user_details['user_fields']['6']}.
+"Thank you for your ownership of Momentum, #{@man.user_details['name']}, and welcome to another year of awesome growth, comradery, and fun!
 
-If anyting looks off about this new membership, please contact #tech.
+  -- Your Momentum Leadership
 
-  -- Your Momentum Moderators"
+Ownership Type: #{@man.user_details['user_fields']['6']}"

@@ -115,8 +115,11 @@ module MomentumApi
               user_update_value = latest_auto_renew_date.strftime("%Y-%m-%d") + ' ' + 
                   action[1][:ownership_code] + ' ' + action[1][:action_sequence]
               update_ownership(man, action, user_update_value)
-            end
 
+            # todo remove use from Onwership groups as he does not appear to have any memberships
+            else
+
+            end
           end
         end
       end
@@ -129,8 +132,8 @@ module MomentumApi
       message_file = action[1][:ownership_code] + '_' + action[1][:action_sequence].to_s
       message_subject = eval(message_body(message_file + '_subject.txt'))
       message_body = eval(message_body(message_file + '_body.txt'))
-      @message_client.send_private_message(@man, message_body, message_subject,
-                                           from_username: action[1][:message_from], to_username: action[1][:message_to])
+      @message_client.send_private_message(@man, message_body, message_subject, from_username: action[1][:message_from],
+                                           to_username: action[1][:message_to], cc_username: action[1][:message_cc])
     end
 
     def update_ownership(man, action, user_update_value)
@@ -158,7 +161,6 @@ module MomentumApi
         @mock ? sleep(0) : sleep(1)
 
         # todo create auto case where admins are alerted, but not group moves happen
-        # todo check for presence in group before adding
         if action[1][:add_to_group]
           user_already_in_group = false
           man.user_details['groups'].each do |group|

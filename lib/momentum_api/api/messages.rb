@@ -14,13 +14,14 @@ module MomentumApi
 
     end
 
-    def send_private_message(man, message_body, message_subject=nil, from_username: nil, to_username: nil)
+    def send_private_message(man, message_body, message_subject=nil, from_username: nil, to_username: nil, cc_username: nil)
       raise ArgumentError, 'man needs to be defined' if man.nil?
       raise ArgumentError, 'message_body needs to be defined' if message_body.nil?
       raise ArgumentError, 'message_subject needs to be defined' if message_subject.nil?
 
       from_username = from_username || @from_username
-      to_username = to_username || man.user_details['username']
+      cc_username = cc_username || ''
+      to_username = to_username || man.user_details['username'] + cc_username
 
       # for testing only
       if from_username == to_username # and @from_username != 'KM_Admin'
