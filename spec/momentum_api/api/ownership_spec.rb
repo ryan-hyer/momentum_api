@@ -642,7 +642,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(25).times
+        expect(mock_man).to receive(:user_details).exactly(26).times
                                 .and_return user_details_ownership_2021_10_02_ZM
         expect(mock_man).to receive(:user_client).exactly(1).times.and_return mock_user_client
         expect(mock_man).to receive(:print_user_options).exactly(2).times

@@ -4323,3 +4323,145 @@ I, [19-09-11 16:46:19#65214]  INFO -- : Pass 16 complete for 1 users, 0 skipped.
 I, [19-09-11 16:46:24#65214]  INFO -- : Pass 17 complete for 1 users, 0 skipped. Waiting 0 minutes ...
 I, [19-09-11 16:46:28#65214]  INFO -- : Pass 18 complete for 1 users, 0 skipped. Waiting 0 minutes ...
 I, [19-09-11 16:46:33#65214]  INFO -- : Pass 19 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-11 22:50:35#78712]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-09-11 22:50:40#78712]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 22:50:40#78712]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 22:50:40#78712]  INFO -- : Pass 1 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-11 22:50:45#78712]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 22:50:45#78712]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 22:50:45#78712]  INFO -- : Pass 2 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-11 22:50:50#78712]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 22:50:50#78712]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 22:50:50#78712]  INFO -- : Pass 3 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-11 22:50:55#78712]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 22:50:55#78712]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 22:50:55#78712]  INFO -- : Pass 4 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-11 22:51:00#78712]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 22:51:00#78712]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 22:51:00#78712]  INFO -- : Pass 5 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-11 22:52:14#79169]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-09-11 22:52:19#79169]  INFO -- : Pass 1 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-11 22:52:24#79169]  INFO -- : Pass 2 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-11 22:52:29#79169]  INFO -- : Pass 3 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-11 22:52:33#79169]  INFO -- : Pass 4 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-11 22:52:39#79169]  INFO -- : Pass 5 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-11 22:52:44#79169]  INFO -- : Pass 6 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-09-11 22:52:49#79169]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 22:52:49#79169]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 22:52:49#79169]  INFO -- :   Message From:    Kim_Miller           ["Kim_Miller", "KM_Admin"] Momentum Has a new Manually Entered Owner               Momentum has a new me     Pending                  
+W, [19-09-11 22:52:49#79169]  WARN -- : Scan Level Exception Rescue type DiscourseApi::UnprocessableEntity, {"action"=>"create_post", "errors"=>["You must select a valid user."]}: Sleeping for 90 minutes ....
+I, [19-09-11 22:58:02#79685]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 22:58:02#79685]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 22:58:02#79685]  INFO -- :   Message From:    Kim_Miller           ["Kim_Miller", "KM_Admin"] Momentum Has a new Manually Entered Owner               Momentum has a new me     Pending                  
+I, [19-09-11 23:00:02#80142]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 23:00:02#80142]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 23:00:02#80142]  INFO -- :   Message From:    Kim_Miller           ["Kim_Miller", "KM_Admin"] Momentum Has a new Manually Entered Owner               Momentum has a new me     Pending                  
+I, [19-09-11 23:06:08#80692]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 23:06:08#80692]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 23:06:08#80692]  INFO -- :   Message From:    Kim_Miller           ["KM_Admin"]         Momentum Has a new Manually Entered Owner               Momentum has a new me     Pending                  
+I, [19-09-11 23:09:14#81176]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 23:09:14#81176]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 23:09:14#81176]  INFO -- :   Message From:    Kim_Miller           ["KM_Admin"]         Momentum Has a new Manually Entered Owner               Momentum has a new me     Pending                  
+I, [19-09-11 23:16:58#81724]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 23:16:58#81724]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 23:16:58#81724]  INFO -- :   Message From:    Kim_Miller           ["KM_Admin"]         Momentum Has a new Manually Entered Owner               Momentum has a new me     Pending                  
+I, [19-09-11 23:20:02#82201]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 23:20:02#82201]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 23:20:02#82201]  INFO -- :   Message From:    Kim_Miller           ["KM_Admin"]         Momentum Has a new Manually Entered Owner               Momentum has a new me     Pending                  
+I, [19-09-11 23:21:51#82662]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 23:21:51#82662]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 23:21:51#82662]  INFO -- :   Message From:    Kim_Miller           ["KM_Admin"]         Momentum Has a new Manually Entered Owner               Momentum has a new me     Pending                  
+I, [19-09-11 23:22:17#83099]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 23:22:17#83099]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 23:22:17#83099]  INFO -- :   Message From:    Kim_Miller           KM_Admin             Momentum Has a new Manually Entered Owner               Momentum has a new me     Pending                  
+I, [19-09-11 23:22:19#83099]  INFO -- :   Message From:    Kim_Miller           KM_Admin             momentum-has-a-new-manually-entered-owner               Momentum has a new me     Sent                     
+W, [19-09-11 23:22:20#83099]  WARN -- : OK
+I, [19-09-11 23:22:21#83099]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 23:22:21#83099]  INFO -- : Kim_Miller          2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM R0    
+W, [19-09-11 23:22:23#83099]  WARN -- : Added man to Group 45: 
+W, [19-09-11 23:22:24#83099]  WARN -- : Kim_Miller now in Group: Owner_Manual
+I, [19-09-11 23:22:24#83099]  INFO -- : Discourse Men                                           
+I, [19-09-11 23:22:24#83099]  INFO -- : Processed Users                     1                   
+I, [19-09-11 23:22:24#83099]  INFO -- : Skipped Users                       0                   
+I, [19-09-11 23:22:24#83099]  INFO -- : Messages Sent                       0                   
+I, [19-09-11 23:22:24#83099]  INFO -- : Ownership                           0                   
+I, [19-09-11 23:22:24#83099]  INFO -- : Ownership Targets                   1                   
+I, [19-09-11 23:22:24#83099]  INFO -- : Ownership Updated                   1                   
+I, [19-09-11 23:22:24#83099]  INFO -- : Messages Sent                       1                   
+I, [19-09-11 23:22:24#83099]  INFO -- : Users Added to Group                1                   
+I, [19-09-11 23:22:24#83099]  INFO -- : Users Removed from Group            0                   
+I, [19-09-11 23:34:56#83730]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 23:34:56#83730]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 23:34:56#83730]  INFO -- :   Message From:    Kim_Miller           KM_Admin%2CKim_Miller Momentum Has a new Manually Entered Owner               Momentum has a new me     Pending                  
+I, [19-09-11 23:35:45#84175]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 23:35:45#84175]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 23:35:45#84175]  INFO -- :   Message From:    Kim_Miller           KM_Admin,Kim_Miller  Momentum Has a new Manually Entered Owner               Momentum has a new me     Pending                  
+I, [19-09-11 23:35:47#84175]  INFO -- :   Message From:    Kim_Miller           KM_Admin,Kim_Miller  momentum-has-a-new-manually-entered-owner               Momentum has a new me     Sent                     
+W, [19-09-11 23:35:50#84175]  WARN -- : OK
+I, [19-09-11 23:35:50#84175]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 23:35:50#84175]  INFO -- : Kim_Miller          2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM R0    
+I, [19-09-11 23:39:26#84666]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 23:39:26#84666]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 23:39:26#84666]  INFO -- :   Message From:    Kim_Miller           KM_Admin,Kim_Miller  Momentum Has a new Manually Entered Owner               Momentum has a new me     Pending                  
+I, [19-09-11 23:39:28#84666]  INFO -- :   Message From:    Kim_Miller           KM_Admin,Kim_Miller  momentum-has-a-new-manually-entered-owner               Momentum has a new me     Sent                     
+W, [19-09-11 23:39:29#84666]  WARN -- : OK
+I, [19-09-11 23:39:30#84666]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 23:39:30#84666]  INFO -- : Kim_Miller          2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM R0    
+W, [19-09-11 23:39:32#84666]  WARN -- : Added man to Group 45: 
+W, [19-09-11 23:39:33#84666]  WARN -- : Kim_Miller now in Group: Owner_Manual
+I, [19-09-11 23:39:33#84666]  INFO -- : Discourse Men                                           
+I, [19-09-11 23:39:33#84666]  INFO -- : Processed Users                     1                   
+I, [19-09-11 23:39:33#84666]  INFO -- : Skipped Users                       0                   
+I, [19-09-11 23:39:33#84666]  INFO -- : Messages Sent                       0                   
+I, [19-09-11 23:39:33#84666]  INFO -- : Ownership                           0                   
+I, [19-09-11 23:39:33#84666]  INFO -- : Ownership Targets                   1                   
+I, [19-09-11 23:39:33#84666]  INFO -- : Ownership Updated                   1                   
+I, [19-09-11 23:39:33#84666]  INFO -- : Messages Sent                       1                   
+I, [19-09-11 23:39:33#84666]  INFO -- : Users Added to Group                1                   
+I, [19-09-11 23:39:33#84666]  INFO -- : Users Removed from Group            0                   
+I, [19-09-11 23:39:51#85101]  INFO -- : Discourse Men                                           
+I, [19-09-11 23:39:51#85101]  INFO -- : Processed Users                     1                   
+I, [19-09-11 23:39:51#85101]  INFO -- : Skipped Users                       0                   
+I, [19-09-11 23:39:51#85101]  INFO -- : Messages Sent                       0                   
+I, [19-09-11 23:39:51#85101]  INFO -- : Ownership                           0                   
+I, [19-09-11 23:39:51#85101]  INFO -- : Ownership Targets                   0                   
+I, [19-09-11 23:39:51#85101]  INFO -- : Ownership Updated                   0                   
+I, [19-09-11 23:39:51#85101]  INFO -- : Messages Sent                       0                   
+I, [19-09-11 23:39:51#85101]  INFO -- : Users Added to Group                0                   
+I, [19-09-11 23:39:51#85101]  INFO -- : Users Removed from Group            0                   
+I, [19-09-11 23:50:16#86566]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 23:50:16#86566]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 23:50:16#86566]  INFO -- :   Message From:    Kim_Miller           KM_Admin,Kim_Miller  Momentum Has a new Manually Entered Owner               Momentum has a new me     Pending                  
+I, [19-09-11 23:50:18#86566]  INFO -- :   Message From:    Kim_Miller           KM_Admin,Kim_Miller  momentum-has-a-new-manually-entered-owner               Momentum has a new me     Sent                     
+W, [19-09-11 23:50:20#86566]  WARN -- : OK
+I, [19-09-11 23:50:20#86566]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 23:50:20#86566]  INFO -- : Kim_Miller          2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM R0    
+I, [19-09-11 23:50:21#86566]  INFO -- : Discourse Men                                           
+I, [19-09-11 23:50:21#86566]  INFO -- : Processed Users                     1                   
+I, [19-09-11 23:50:21#86566]  INFO -- : Skipped Users                       0                   
+I, [19-09-11 23:50:21#86566]  INFO -- : Messages Sent                       0                   
+I, [19-09-11 23:50:21#86566]  INFO -- : Ownership                           0                   
+I, [19-09-11 23:50:21#86566]  INFO -- : Ownership Targets                   1                   
+I, [19-09-11 23:50:21#86566]  INFO -- : Ownership Updated                   1                   
+I, [19-09-11 23:50:21#86566]  INFO -- : Messages Sent                       1                   
+I, [19-09-11 23:50:21#86566]  INFO -- : Users Added to Group                0                   
+I, [19-09-11 23:50:21#86566]  INFO -- : Users Removed from Group            0                   
+I, [19-09-11 23:50:54#87000]  INFO -- : zelle_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 23:50:54#87000]  INFO -- : Kim_Miller        2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM    
+I, [19-09-11 23:50:54#87000]  INFO -- :   Message From:    Kim_Miller           KM_Admin,Kim_Miller  Momentum Has a new Manually Entered Owner               Momentum has a new me     Pending                  
+I, [19-09-11 23:50:56#87000]  INFO -- :   Message From:    Kim_Miller           KM_Admin,Kim_Miller  momentum-has-a-new-manually-entered-owner               Momentum has a new me     Sent                     
+W, [19-09-11 23:50:57#87000]  WARN -- : OK
+I, [19-09-11 23:50:58#87000]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-11 23:50:58#87000]  INFO -- : Kim_Miller          2019-09-12     2019-09-12       1876         816273      38596                 2020-09-01 ZM R0    
+W, [19-09-11 23:51:00#87000]  WARN -- : Added man to Group 45: 
+W, [19-09-11 23:51:01#87000]  WARN -- : Kim_Miller now in Group: Owner_Manual
+I, [19-09-11 23:51:01#87000]  INFO -- : Discourse Men                                           
+I, [19-09-11 23:51:01#87000]  INFO -- : Processed Users                     1                   
+I, [19-09-11 23:51:01#87000]  INFO -- : Skipped Users                       0                   
+I, [19-09-11 23:51:01#87000]  INFO -- : Messages Sent                       0                   
+I, [19-09-11 23:51:01#87000]  INFO -- : Ownership                           0                   
+I, [19-09-11 23:51:01#87000]  INFO -- : Ownership Targets                   1                   
+I, [19-09-11 23:51:01#87000]  INFO -- : Ownership Updated                   1                   
+I, [19-09-11 23:51:01#87000]  INFO -- : Messages Sent                       1                   
+I, [19-09-11 23:51:01#87000]  INFO -- : Users Added to Group                1                   
+I, [19-09-11 23:51:01#87000]  INFO -- : Users Removed from Group            0                   

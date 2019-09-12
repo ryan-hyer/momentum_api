@@ -158,14 +158,25 @@ module MomentumApi
         @mock ? sleep(0) : sleep(1)
 
         # todo create auto case where admins are alerted, but not group moves happen
+        # todo check for presence in group before adding
         if action[1][:add_to_group]
-          update_response = @schedule.discourse.admin_client.group_add(action[1][:add_to_group],
-                                                                       username: man.user_details['username'])
-          @mock ? sleep(0) : sleep(1)
-          @schedule.discourse.options[:logger].warn "Added man to Group #{action[1][:add_to_group]}: #{update_response['success']}"
-          @counters[:'Users Added to Group'] += 1
+          user_already_in_group = false
+          man.user_details['groups'].each do |group|
+            if group['id'] == action[1][:add_to_group]
+              user_already_in_group = true
+            end
+          end
 
-          check_users_groups(man, action[1][:add_to_group])
+          if user_already_in_group
+            puts 'User already in group'
+          else  
+            update_response = @schedule.discourse.admin_client.group_add(action[1][:add_to_group],
+                                                                         username: man.user_details['username'])
+            @mock ? sleep(0) : sleep(1)
+            @schedule.discourse.options[:logger].warn "Added man to Group #{action[1][:add_to_group]}: #{update_response['success']}"
+            @counters[:'Users Added to Group'] += 1
+            check_users_groups(man, action[1][:add_to_group])
+          end
         end
 
         if action[1][:remove_from_group]
@@ -174,7 +185,6 @@ module MomentumApi
           @mock ? sleep(0) : sleep(1)
           @schedule.discourse.options[:logger].warn "Removed man from Group #{action[1][:remove_from_group]}: #{remove_response['success']}"
           @counters[:'Users Removed from Group'] += 1
-
           check_users_groups(man, action[1][:remove_from_group])
         end
 
