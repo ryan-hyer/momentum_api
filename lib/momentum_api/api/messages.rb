@@ -20,8 +20,10 @@ module MomentumApi
       raise ArgumentError, 'message_subject needs to be defined' if message_subject.nil?
 
       from_username = from_username || @from_username
-      cc_username = cc_username || ''
-      to_username = to_username || man.user_details['username'] + cc_username
+      to_username = to_username || man.user_details['username']
+      if cc_username  # todo add logic to removed any dupes?
+        to_username = to_username + ',' + cc_username
+      end
 
       # for testing only
       if from_username == to_username # and @from_username != 'KM_Admin'

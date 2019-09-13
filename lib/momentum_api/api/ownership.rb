@@ -195,14 +195,10 @@ module MomentumApi
     def remove_from_owner_group(action, man)
       if action[1][:remove_from_group] and @schedule.discourse.options[:do_live_updates] and action[1][:do_task_update]
         user_in_target_group = false
-        user_in_any_owner_group = false
         man.user_details['groups'].each do |group|
           if group['id'] == action[1][:remove_from_group]
             user_in_target_group = true
           end
-          # if @schedule.discourse.options[:owner_groups].include?(group['id'])
-          #   user_in_any_owner_group = true
-          # end
         end
 
         if user_in_target_group
@@ -211,11 +207,18 @@ module MomentumApi
           @mock ? sleep(0) : sleep(1)
           @schedule.discourse.options[:logger].warn "Removed man from Group #{action[1][:remove_from_group]}: #{remove_response['success']}"
           @counters[:'Users Removed from Group'] += 1
-          check_users_groups(man, action[1][:remove_from_group])
+          user_in_any_owner_group = check_users_groups(man, action[1][:remove_from_group])
+          if user_in_any_owner_group
+            # puts 'User still in an ownership group'
+          elsif man.user_details['moderator']
+            @schedule.discourse.admin_client.revoke_moderation(man.user_details['id'])
+            @schedule.discourse.options[:logger].warn "#{man.user_details['username']}'s moderation revoked."
+          end
         else
           # puts 'User not in target group'
         end
       end
+      
     end
 
     # check if group moves  happened ... or ... comment out for no check after update
@@ -223,11 +226,15 @@ module MomentumApi
       user_details_after_update = @schedule.discourse.admin_client.user(man.user_details['username'])
       @mock ? sleep(0) : sleep(1)
       related_group_found = false
+      user_in_any_owner_group = false
       user_details_after_update['groups'].each do |user_group_after_update|
         if user_group_after_update['id'] == related_group
           @schedule.discourse.options[:logger]
               .warn "#{user_details_after_update['username']} now in Group: #{user_group_after_update['name']}"
           related_group_found = true
+          if @options[:settings][:all_ownership_group_ids].include?(user_group_after_update['id'])
+            user_in_any_owner_group = true
+          end
         end
       end
       if related_group_found
@@ -235,6 +242,7 @@ module MomentumApi
       else
         @schedule.discourse.options[:logger].warn "#{user_details_after_update['username']} not currently not in #{related_group} Ownership group."
       end
+      user_in_any_owner_group
     end
 
     def message_path

@@ -20,6 +20,9 @@ discourse_options = {
 
 schedule_options = {
     ownership:{
+        settings: {
+            all_ownership_group_ids: [45, 136]
+        },
         auto: {
             card_auto_renew_new_subscription_found: {
                 do_task_update:         true,
@@ -81,7 +84,7 @@ schedule_options = {
                 add_to_group:           45,
                 remove_from_group:      nil,
                 message_to:             nil,
-                message_cc:             'Kim_Miller,KM_Admin',
+                message_cc:             'KM_Admin',
                 message_from:           'Kim_Miller',
                 excludes:               %w()
             },
