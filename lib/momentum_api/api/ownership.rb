@@ -116,8 +116,9 @@ module MomentumApi
                   action[1][:ownership_code] + ' ' + action[1][:action_sequence]
               update_ownership(man, action, user_update_value)
 
-            # todo remove use from Onwership groups as he does not appear to have any memberships
-            else
+            # remove user from Onwership groups as he does not appear to have any memberships
+            elsif action[1][:remove_from_group] and not latest_auto_renew_date
+              remove_from_owner_group(action, man)
 
             end
           end
@@ -161,35 +162,54 @@ module MomentumApi
         @mock ? sleep(0) : sleep(1)
 
         # todo create auto case where admins are alerted, but not group moves happen
-        if action[1][:add_to_group]
-          user_already_in_group = false
-          man.user_details['groups'].each do |group|
-            if group['id'] == action[1][:add_to_group]
-              user_already_in_group = true
-            end
-          end
+        add_to_owner_group(action, man)
 
-          if user_already_in_group
-            puts 'User already in group'
-          else  
-            update_response = @schedule.discourse.admin_client.group_add(action[1][:add_to_group],
-                                                                         username: man.user_details['username'])
-            @mock ? sleep(0) : sleep(1)
-            @schedule.discourse.options[:logger].warn "Added man to Group #{action[1][:add_to_group]}: #{update_response['success']}"
-            @counters[:'Users Added to Group'] += 1
-            check_users_groups(man, action[1][:add_to_group])
+        remove_from_owner_group(action, man)
+
+      end
+    end
+
+    def add_to_owner_group(action, man)
+      if action[1][:add_to_group]
+        user_already_in_group = false
+        man.user_details['groups'].each do |group|
+          if group['id'] == action[1][:add_to_group]
+            user_already_in_group = true
           end
         end
 
-        if action[1][:remove_from_group]
+        if user_already_in_group
+          # puts 'User already in group'
+        else
+          update_response = @schedule.discourse.admin_client.group_add(action[1][:add_to_group],
+                                                                       username: man.user_details['username'])
+          @mock ? sleep(0) : sleep(1)
+          @schedule.discourse.options[:logger].warn "Added man to Group #{action[1][:add_to_group]}: #{update_response['success']}"
+          @counters[:'Users Added to Group'] += 1
+          check_users_groups(man, action[1][:add_to_group])
+        end
+      end
+    end
+
+    def remove_from_owner_group(action, man)
+      if action[1][:remove_from_group] and @schedule.discourse.options[:do_live_updates] and action[1][:do_task_update]
+        user_in_target_group = false
+        man.user_details['groups'].each do |group|
+          if group['id'] == action[1][:remove_from_group]
+            user_in_target_group = true
+          end
+        end
+
+        if user_in_target_group
           remove_response = @schedule.discourse.admin_client.group_remove(action[1][:remove_from_group],
                                                                           username: man.user_details['username'])
           @mock ? sleep(0) : sleep(1)
           @schedule.discourse.options[:logger].warn "Removed man from Group #{action[1][:remove_from_group]}: #{remove_response['success']}"
           @counters[:'Users Removed from Group'] += 1
           check_users_groups(man, action[1][:remove_from_group])
+        else
+          # puts 'User not in target group'
         end
-
       end
     end
 
