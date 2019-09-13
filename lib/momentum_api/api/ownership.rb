@@ -33,6 +33,7 @@ module MomentumApi
       subscriptions = @man.user_client.membership_subscriptions(man.user_details['id'])
 
       @options.each do |ownership_type|
+        next if ownership_type[0] == :settings
         ownership_type[1].each do |action|
 
           renews_value = man.user_details['user_fields'][action[1][:user_fields]]
@@ -194,10 +195,14 @@ module MomentumApi
     def remove_from_owner_group(action, man)
       if action[1][:remove_from_group] and @schedule.discourse.options[:do_live_updates] and action[1][:do_task_update]
         user_in_target_group = false
+        user_in_any_owner_group = false
         man.user_details['groups'].each do |group|
           if group['id'] == action[1][:remove_from_group]
             user_in_target_group = true
           end
+          # if @schedule.discourse.options[:owner_groups].include?(group['id'])
+          #   user_in_any_owner_group = true
+          # end
         end
 
         if user_in_target_group

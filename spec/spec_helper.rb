@@ -141,6 +141,9 @@ def schedule_options
           excludes:                 %w()
       },
       ownership:{
+          settings: {
+              all_ownership_group_ids: [45, 136]
+          },
           auto: {
               card_auto_renew_new_subscription_found: {
                   do_task_update:         false,
@@ -179,7 +182,8 @@ def schedule_options
                   message_from:           'Kim_Miller',
                   excludes:               %w()
               },
-              card_auto_renew_expired_last_week_final: {      # todo add_to_group and remove_from_group 
+              # todo add_to_group and remove_from_group
+              card_auto_renew_expired_last_week_final: {
                   do_task_update:         false,
                   user_fields:            '6',
                   ownership_code:         'CA',

@@ -29,7 +29,8 @@ schedule_options = {
                 action_sequence:        'R0',
                 add_to_group:           nil,
                 remove_from_group:      nil,
-                message_to:             %w(Kim_Miller KM_Admin),
+                message_to:             nil,
+                message_cc:             'Kim_Miller,KM_Admin',
                 message_from:           'Kim_Miller',
                 subscrption_name:       'Owner Auto Renewing',
                 excludes:               %w()
@@ -64,6 +65,7 @@ schedule_options = {
                 days_until_renews:      -7,
                 action_sequence:        'R3',
                 add_to_group:           nil,
+                message_cc:             'Kim_Miller,KM_Admin',
                 remove_from_group:      nil,
                 message_from:           'Kim_Miller',
                 excludes:               %w()
@@ -78,7 +80,8 @@ schedule_options = {
                 action_sequence:        'R0',
                 add_to_group:           45,
                 remove_from_group:      nil,
-                message_to:             %w(Kim_Miller KM_Admin),
+                message_to:             nil,
+                message_cc:             'Kim_Miller,KM_Admin',
                 message_from:           'Kim_Miller',
                 excludes:               %w()
             },
@@ -112,6 +115,7 @@ schedule_options = {
                 add_to_group:           nil,
                 remove_from_group:      45,
                 action_sequence:        'R3',
+                message_cc:             'Kim_Miller,KM_Admin',
                 message_from:           'Kim_Miller',
                 excludes:                 %w()
             }

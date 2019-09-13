@@ -753,6 +753,55 @@ describe MomentumApi::Ownership do
     end
 
 
+    context 'blank renews profile non-owner moved from Owner_Manual group' do
+
+      let(:mock_man) do
+        mock_man = instance_double('man')
+        expect(mock_man).to receive(:user_details).exactly(21).times.and_return user_details_ownership_blank
+        expect(mock_man).to receive(:user_client).exactly(1).times.and_return mock_user_client
+        mock_man
+      end
+
+      options_do_live_updates = discourse_options
+      options_do_live_updates[:do_live_updates] = true
+
+      ownership_do_task_update = schedule_options[:ownership]
+      ownership_do_task_update[:manual][:memberful_final][:do_task_update] = true
+
+      let(:mock_admin_client) do
+        mock_admin_client = instance_double('admin_client')
+        expect(mock_admin_client).to receive(:user).once.and_return user_details_ownership_blank
+        expect(mock_admin_client).to receive(:group_remove).once
+                                         .with(45, username: 'Tony_Christopher')
+                                         .and_return({'body': {'success': 'OK'}})
+        mock_admin_client
+      end
+
+      let(:mock_discourse) do
+        mock_discourse = instance_double('discourse')
+        expect(mock_discourse).to receive(:options).exactly(4).times.and_return options_do_live_updates
+        expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
+        expect(mock_discourse).to receive(:admin_client).exactly(2).times.and_return mock_admin_client
+        mock_discourse
+      end
+
+      let(:mock_schedule) do
+        mock_schedule = instance_double('schedule')
+        expect(mock_schedule).to receive(:discourse).exactly(7).times.and_return mock_discourse
+        mock_schedule
+      end
+
+      let(:ownership) { MomentumApi::Ownership.new(mock_schedule, ownership_do_task_update, mock: mock_dependencies) }
+
+      it 'removes user from Owner_Manual group' do
+        expect(ownership).to respond_to(:run)
+        ownership.run(mock_man)
+        # expect(ownership.instance_variable_get(:@counters)[:'Ownership Targets']).to eql(1)
+        # expect(ownership.instance_variable_get(:@counters)[:'Ownership Updated']).to eql(1)
+      end
+    end
+
+    
     context '.ownership sees issue user' do
 
       let(:mock_man) do
@@ -778,7 +827,6 @@ describe MomentumApi::Ownership do
         mock_discourse = instance_double('discourse')
         expect(mock_discourse).to receive(:options).exactly(2).times.and_return discourse_options_issue_user
         expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
-        # expect(mock_discourse).to receive(:admin_client).exactly(2).times.and_return mock_admin_client
         mock_discourse
       end
 
