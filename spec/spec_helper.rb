@@ -182,14 +182,14 @@ def schedule_options
                   message_from:           'Kim_Miller',
                   excludes:               %w()
               },
-              # todo add_to_group and remove_from_group
+              # todo alert admin if man is in remove_from_group
               card_auto_renew_expired_last_week_final: {
                   do_task_update:         false,
                   user_fields:            '6',
                   ownership_code:         'CA',
                   days_until_renews:      -7,
                   action_sequence:        'R3',
-                  add_to_group:           nil,
+                  add_to_group:           107,
                   message_cc:             'KM_Admin',
                   remove_from_group:      nil,
                   message_from:           'Kim_Miller',
@@ -204,7 +204,7 @@ def schedule_options
                   days_until_renews:      9999,
                   action_sequence:        'R0',
                   add_to_group:           45,
-                  remove_from_group:      nil,
+                  remove_from_group:      107,
                   message_to:             nil,
                   message_cc:             'KM_Admin',
                   message_from:           'Kim_Miller',
@@ -238,7 +238,7 @@ def schedule_options
                   user_fields:            '6',
                   ownership_code:         'MM',
                   days_until_renews:      -7,
-                  add_to_group:           nil,
+                  add_to_group:           107,
                   remove_from_group:      45,
                   action_sequence:        'R3',
                   message_cc:             'KM_Admin',

@@ -11,6 +11,7 @@ describe MomentumApi::Ownership do
   let(:user_details_ownership_2020_08_25_CA_R0) { json_fixture("user_details_ownership_2020_08_25_CA_R0.json") }
   let(:user_details_ownership_2020_08_25_CA_R1) { json_fixture("user_details_ownership_2020_08_25_CA_R1.json") }
   let(:user_details_ownership_2020_08_25_CA_R2) { json_fixture("user_details_ownership_2020_08_25_CA_R2.json") }
+  let(:user_details_ownership_2020_08_25_CA_R3) { json_fixture("user_details_ownership_2020_08_25_CA_R3.json") }
 
   let(:user_details_ownership_2021_10_02_ZM) { json_fixture("user_details_ownership_2021_10_02_ZM.json") }
   let(:user_details_ownership_2021_10_02_ZM_R0) { json_fixture("user_details_ownership_2021_10_02_ZM_R0.json") }
@@ -91,14 +92,14 @@ describe MomentumApi::Ownership do
 
       let(:mock_discourse) do
         mock_discourse = instance_double('discourse')
-        expect(mock_discourse).to receive(:options).twice.and_return discourse_options
+        expect(mock_discourse).to receive(:options).exactly(3).times.and_return discourse_options
         expect(mock_discourse).to receive(:scan_pass_counters).once.and_return []
         mock_discourse
       end
 
       let(:mock_schedule) do
         mock_schedule = instance_double('schedule')
-        expect(mock_schedule).to receive(:discourse).exactly(3).times.and_return mock_discourse
+        expect(mock_schedule).to receive(:discourse).exactly(4).times.and_return mock_discourse
         mock_schedule
       end
 
@@ -140,7 +141,7 @@ describe MomentumApi::Ownership do
         mock_dependencies
       end
 
-      it 'sends PM asking user to renew and sets user to R1' do
+      it 'sends PM asking user to renew and sets user profile Renews value to R1' do
         expect(ownership).to respond_to(:run)
         ownership.run(mock_man)
         expect(ownership.instance_variable_get(:@counters)[:'Ownership Targets']).to eql(1)
@@ -371,24 +372,27 @@ describe MomentumApi::Ownership do
 
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
-        expect(mock_admin_client).to receive(:user).once
+        expect(mock_admin_client).to receive(:user).twice.and_return user_details_ownership_2020_08_25_CA_R3
         expect(mock_admin_client).to receive(:update_user).once
                                          .with("Tony_Christopher", {user_fields: {'6': '2020-08-25 CA R3'}})
                                          .and_return({"body": {"success": "OK"}})
+        expect(mock_admin_client).to receive(:group_add).once
+                                         .with(107, {username: 'Tony_Christopher'})
+                                         .and_return({'body': {'success': 'OK'}})
         mock_admin_client
       end
 
       let(:mock_discourse) do
         mock_discourse = instance_double('discourse')
-        expect(mock_discourse).to receive(:options).exactly(4).and_return options_do_live_updates
+        expect(mock_discourse).to receive(:options).exactly(6).and_return options_do_live_updates
         expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
-        expect(mock_discourse).to receive(:admin_client).exactly(2).times.and_return mock_admin_client
+        expect(mock_discourse).to receive(:admin_client).exactly(4).times.and_return mock_admin_client
         mock_discourse
       end
 
       let(:mock_schedule) do
         mock_schedule = instance_double('schedule')
-        expect(mock_schedule).to receive(:discourse).exactly(7).times.and_return mock_discourse
+        expect(mock_schedule).to receive(:discourse).exactly(11).times.and_return mock_discourse
         mock_schedule
       end
 
@@ -400,7 +404,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(update_user_detail_calls).times.and_return user_details_ownership_2020_08_25_CA_R2
+        expect(mock_man).to receive(:user_details).exactly(24).times.and_return user_details_ownership_2020_08_25_CA_R2
         expect(mock_man).to receive(:user_client).exactly(1).times.and_return mock_user_client
         expect(mock_man).to receive(:print_user_options).exactly(2).times
         mock_man
@@ -411,7 +415,7 @@ describe MomentumApi::Ownership do
         expect(mock_dependencies).to receive(:today).exactly(date_today_calls).times.and_return Date.new(2020,9,2)
         expect(mock_dependencies).to receive(:send_private_message)
                                          .with(mock_man, /It's not too late to renew/, /Momentum Does Not Want to See You Go!/,
-                                               from_username: 'Kim_Miller', to_username: nil, cc_username: 'Kim_Miller,KM_Admin')
+                                               from_username: 'Kim_Miller', to_username: nil, cc_username: 'KM_Admin')
         mock_dependencies
       end
 
@@ -499,33 +503,36 @@ describe MomentumApi::Ownership do
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
         expect(mock_admin_client).to receive(:user).once.and_return user_details_ownership_2020_01_02_MM_R2
-        expect(mock_admin_client).to receive(:user).once.and_return user_details_ownership_2020_01_02_MM_R3_group_removed
+        expect(mock_admin_client).to receive(:user).twice.and_return user_details_ownership_2020_01_02_MM_R3_group_removed
         expect(mock_admin_client).to receive(:update_user).once
                                          .with('Tony_Christopher', {user_fields: {'6': '2020-01-02 MM R3'}})
                                          .and_return({'body': {'success': 'OK'}})
         expect(mock_admin_client).to receive(:group_remove).once
                                          .with(45, username: 'Tony_Christopher')
                                          .and_return({'body': {'success': 'OK'}})
+        expect(mock_admin_client).to receive(:group_add).once
+                                         .with(107, {username: 'Tony_Christopher'})
+                                         .and_return({'body': {'success': 'OK'}})
         mock_admin_client
       end
 
       let(:mock_discourse) do
         mock_discourse = instance_double('discourse')
-        expect(mock_discourse).to receive(:options).exactly(7).and_return options_do_live_updates
+        expect(mock_discourse).to receive(:options).exactly(9).and_return options_do_live_updates
         expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
-        expect(mock_discourse).to receive(:admin_client).exactly(4).times.and_return mock_admin_client
+        expect(mock_discourse).to receive(:admin_client).exactly(6).times.and_return mock_admin_client
         mock_discourse
       end
 
       let(:mock_schedule) do
         mock_schedule = instance_double('schedule')
-        expect(mock_schedule).to receive(:discourse).exactly(12).times.and_return mock_discourse
+        expect(mock_schedule).to receive(:discourse).exactly(16).times.and_return mock_discourse
         mock_schedule
       end
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(25).times
+        expect(mock_man).to receive(:user_details).exactly(28).times
                                 .and_return user_details_ownership_2020_01_02_MM_R2
         expect(mock_man).to receive(:user_client).exactly(1).times.and_return mock_user_client
         expect(mock_man).to receive(:print_user_options).exactly(2).times
@@ -538,7 +545,7 @@ describe MomentumApi::Ownership do
         expect(mock_dependencies).to receive(:send_private_message)
                                          .with(mock_man, /We sent you a couple messages about your expired/,
                                                /We are sorry to see you go!/,
-                                               from_username: 'Kim_Miller', to_username: nil, cc_username: 'Kim_Miller,KM_Admin')
+                                               from_username: 'Kim_Miller', to_username: nil, cc_username: 'KM_Admin')
         mock_dependencies
       end
 
@@ -573,7 +580,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_discourse) do
         mock_discourse = instance_double('discourse')
-        expect(mock_discourse).to receive(:options).exactly(4).and_return options_do_live_updates
+        expect(mock_discourse).to receive(:options).exactly(5).and_return options_do_live_updates
         expect(mock_discourse).to receive(:scan_pass_counters).once.and_return []
         expect(mock_discourse).to receive(:admin_client).exactly(2).times.and_return mock_admin_client
         mock_discourse
@@ -581,7 +588,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_schedule) do
         mock_schedule = instance_double('schedule')
-        expect(mock_schedule).to receive(:discourse).exactly(7).times.and_return mock_discourse
+        expect(mock_schedule).to receive(:discourse).exactly(8).times.and_return mock_discourse
         mock_schedule
       end
 
@@ -604,7 +611,7 @@ describe MomentumApi::Ownership do
         expect(mock_dependencies).to receive(:send_private_message)
                                          .with(mock_man, /Thank you for your ownership of Momentum, Tony Christopher/,
                                                /Thank you for Owning Momentum!/,
-                                               from_username: 'Kim_Miller', to_username: nil, cc_username: 'Kim_Miller,KM_Admin')
+                                               from_username: 'Kim_Miller', to_username: nil, cc_username: 'KM_Admin')
         mock_dependencies
       end
 
@@ -643,7 +650,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_discourse) do
         mock_discourse = instance_double('discourse')
-        expect(mock_discourse).to receive(:options).exactly(5).and_return options_do_live_updates
+        expect(mock_discourse).to receive(:options).exactly(6).and_return options_do_live_updates
         expect(mock_discourse).to receive(:scan_pass_counters).once.and_return []
         expect(mock_discourse).to receive(:admin_client).exactly(4).times.and_return mock_admin_client
         mock_discourse
@@ -651,13 +658,13 @@ describe MomentumApi::Ownership do
 
       let(:mock_schedule) do
         mock_schedule = instance_double('schedule')
-        expect(mock_schedule).to receive(:discourse).exactly(10).times.and_return mock_discourse
+        expect(mock_schedule).to receive(:discourse).exactly(11).times.and_return mock_discourse
         mock_schedule
       end
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(26).times
+        expect(mock_man).to receive(:user_details).exactly(27).times
                                 .and_return user_details_ownership_2021_10_02_ZM
         expect(mock_man).to receive(:user_client).exactly(1).times.and_return mock_user_client
         expect(mock_man).to receive(:print_user_options).exactly(2).times
@@ -670,7 +677,7 @@ describe MomentumApi::Ownership do
         expect(mock_dependencies).to receive(:send_private_message)
                                          .with(mock_man, /Thank you for your ownership of Momentum, Tony Christopher/,
                                                /Thank you for Owning Momentum!/,
-                                               from_username: 'Kim_Miller', to_username: nil, cc_username: 'Kim_Miller,KM_Admin')
+                                               from_username: 'Kim_Miller', to_username: nil, cc_username: 'KM_Admin')
         mock_dependencies
       end
 
@@ -739,7 +746,7 @@ describe MomentumApi::Ownership do
                                          .with(mock_man, /Thank you for your ownership of Momentum, Tony Christopher/,
                                                /Thank you for Owning Momentum!/,
                                                from_username: 'Kim_Miller', to_username: nil,
-                                               cc_username: 'Kim_Miller,KM_Admin')
+                                               cc_username: 'KM_Admin')
         mock_dependencies
       end
 
@@ -782,7 +789,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_discourse) do
         mock_discourse = instance_double('discourse')
-        expect(mock_discourse).to receive(:options).exactly(5).times.and_return options_do_live_updates
+        expect(mock_discourse).to receive(:options).exactly(6).times.and_return options_do_live_updates
         expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
         expect(mock_discourse).to receive(:admin_client).exactly(3).times.and_return mock_admin_client
         mock_discourse
@@ -790,7 +797,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_schedule) do
         mock_schedule = instance_double('schedule')
-        expect(mock_schedule).to receive(:discourse).exactly(9).times.and_return mock_discourse
+        expect(mock_schedule).to receive(:discourse).exactly(10).times.and_return mock_discourse
         mock_schedule
       end
 
@@ -828,14 +835,14 @@ describe MomentumApi::Ownership do
 
       let(:mock_discourse) do
         mock_discourse = instance_double('discourse')
-        expect(mock_discourse).to receive(:options).exactly(2).times.and_return discourse_options_issue_user
+        expect(mock_discourse).to receive(:options).exactly(3).times.and_return discourse_options_issue_user
         expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
         mock_discourse
       end
 
       let(:mock_schedule) do
         mock_schedule = instance_double('schedule')
-        expect(mock_schedule).to receive(:discourse).exactly(3).times.and_return mock_discourse
+        expect(mock_schedule).to receive(:discourse).exactly(4).times.and_return mock_discourse
         mock_schedule
       end
 

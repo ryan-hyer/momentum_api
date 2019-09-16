@@ -28,7 +28,8 @@ module MomentumApi
     end
 
     def connect_to_instance(api_username, instance=@options[:instance])
-      client = ''
+      add_momentum_api_endpoints
+
       case instance
       when 'https://discourse.gomomentum.org'
         client = DiscourseApi::Client.new('https://discourse.gomomentum.org')
@@ -47,6 +48,30 @@ module MomentumApi
       client
     end
 
+    def apply_to_users(skip_staged_user=true)      # move to schedule_options
+      if @options[:target_groups] and not @options[:target_groups].empty?
+        @options[:target_groups].each(&method(:group_applied))
+      else
+        group_applied('trust_level_1')
+      end
+    end
+
+    def scan_summary
+
+      field_settings = "%-35s %-20s"
+
+      @scan_pass_counters.each do |score|
+        # @options[:logger].info "\n"
+        score.each do |key, value|
+          summary_detail = sprintf field_settings, key.to_s, value
+          @options[:logger].info summary_detail
+        end
+      end
+    end
+
+
+    private
+    
     def apply_call(group_member)
       begin
         user_details = @admin_client.user(group_member['username'])
@@ -75,21 +100,13 @@ module MomentumApi
       end
     end
 
-    def apply_to_users(skip_staged_user=true)      # move to schedule_options
-      if @options[:target_groups] and not @options[:target_groups].empty?
-        @options[:target_groups].each(&method(:group_applied))
-      else
-        group_applied('trust_level_1')
-      end
-    end
-
     def apply_to_group_users(group_name)      # 10000 not allowed in 2.4
       group_members = @admin_client.group_members(group_name, limit: 1000) # todo add errors rescues
       group_members.each do |group_member|
         if @options[:issue_users].include?(group_member['username'])
           puts "#{group_member['username']} in apply_to_group_users method"
         end
-        
+
         if @options[:target_username]
           if group_member['username'] == @options[:target_username]
             apply_call(group_member)
@@ -102,36 +119,24 @@ module MomentumApi
       end
     end
 
+    def add_momentum_api_endpoints
+     DiscourseApi::Client.class_eval do
+       def membership_subscriptions(user_id)
+         response = get("/memberships/subscriptions/#{user_id}.json")
+         response[:body]
+       end
+     end
+   end
 
+    def group_applied(group_name)
+      apply_to_group_users(group_name)
+    end
 
     def zero_discourse_counters
       @counters[:'Processed Users']    =   0
       @counters[:'Skipped Users']      =   0
       @counters[:'Messages Sent']      =   0
     end
-
-
-    def scan_summary
-
-      field_settings = "%-35s %-20s"
-
-      @scan_pass_counters.each do |score|
-        # @options[:logger].info "\n"
-        score.each do |key, value|
-          summary_detail = sprintf field_settings, key.to_s, value
-          @options[:logger].info summary_detail
-        end
-      end
-    end
-
-
-    private
-
-    def group_applied(group_name)
-      apply_to_group_users(group_name)
-    end
-
-
     # def handle_error(response)
     #   case response.status
     #   when 403

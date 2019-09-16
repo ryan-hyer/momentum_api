@@ -7,8 +7,8 @@ require_relative '../lib/momentum_api'
 
 discourse_options = {
     do_live_updates:                true,
-    target_username:                'Kim_Miller',     # Ryan_Hyer Steve_Scott Moe_Rubenzahl Kim_Miller David_Ashby KM_Admin
-    target_groups:                  %w(trust_level_0),   # Mods GreatX BraveHearts trust_level_0 trust_level_1
+    # target_username:                'Kim_Miller',     # Ryan_Hyer Steve_Scott Moe_Rubenzahl Kim_Miller David_Ashby KM_Admin
+    target_groups:                  %w(Tech),   # Mods GreatX BraveHearts trust_level_0 trust_level_1
     include_staged_users:           true,
     minutes_between_scans:          0,
     instance:                       'https://staging.gomomentum.org',
@@ -33,7 +33,7 @@ schedule_options = {
                 add_to_group:           nil,
                 remove_from_group:      nil,
                 message_to:             nil,
-                message_cc:             'Kim_Miller,KM_Admin',
+                message_cc:             'KM_Admin',
                 message_from:           'Kim_Miller',
                 subscrption_name:       'Owner Auto Renewing',
                 excludes:               %w()
@@ -68,7 +68,7 @@ schedule_options = {
                 days_until_renews:      -7,
                 action_sequence:        'R3',
                 add_to_group:           nil,
-                message_cc:             'Kim_Miller,KM_Admin',
+                message_cc:             'KM_Admin',
                 remove_from_group:      nil,
                 message_from:           'Kim_Miller',
                 excludes:               %w()
@@ -82,11 +82,45 @@ schedule_options = {
                 days_until_renews:      9999,
                 action_sequence:        'R0',
                 add_to_group:           45,
-                remove_from_group:      nil,
+                remove_from_group:      107,
                 message_to:             nil,
                 message_cc:             'KM_Admin',
                 message_from:           'Kim_Miller',
                 excludes:               %w()
+            },
+            zelle_expires_next_week: {
+                do_task_update:         true,
+                user_fields:            '6',
+                ownership_code:         'ZM',
+                days_until_renews:      7,
+                action_sequence:        'R1',
+                add_to_group:           nil,
+                remove_from_group:      nil,
+                message_from:           'Kim_Miller',
+                excludes:               %w()
+            },
+            zelle_expired_today: {
+                do_task_update:         true,
+                user_fields:            '6',
+                ownership_code:         'ZM',
+                days_until_renews:      0,
+                action_sequence:        'R2',
+                add_to_group:           nil,
+                remove_from_group:      nil,
+                message_from:           'Kim_Miller',
+                excludes:               %w()
+            },
+            zelle_final: {
+                do_task_update:         true,
+                user_fields:            '6',
+                ownership_code:         'ZM',
+                days_until_renews:      -7,
+                add_to_group:           107,
+                remove_from_group:      45,
+                action_sequence:        'R3',
+                message_cc:             'KM_Admin',
+                message_from:           'Kim_Miller',
+                excludes:                 %w()
             },
             memberful_expires_next_week: {
                 do_task_update:         true,
@@ -115,10 +149,10 @@ schedule_options = {
                 user_fields:            '6',
                 ownership_code:         'MM',
                 days_until_renews:      -7,
-                add_to_group:           nil,
+                add_to_group:           107,
                 remove_from_group:      45,
                 action_sequence:        'R3',
-                message_cc:             'Kim_Miller,KM_Admin',
+                message_cc:             'KM_Admin',
                 message_from:           'Kim_Miller',
                 excludes:                 %w()
             }
