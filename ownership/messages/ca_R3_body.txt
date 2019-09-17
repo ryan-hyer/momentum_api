@@ -1,3 +1,5 @@
-"It's not too late to renew your Momentum Ownership! Simply go [here to maintain your status as an Owner of Momentum.](#{@schedule.discourse.options[:instance]}/page/ownership/3/)
+"It's not too late to renew your Momentum Ownership!
+
+Simply go [here to maintain your status as an Owner of Momentum.](#{@schedule.discourse.options[:instance]}/page/ownership/3/)
 
   -- Your Momentum Leadership"

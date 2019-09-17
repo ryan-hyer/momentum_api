@@ -23,7 +23,7 @@ schedule_options = {
                 action_sequence:        'R0',
                 add_to_group:           nil,
                 remove_from_group:      nil,
-                message_to:             'KM_Admin,Kim_Miller',     # todo add Ryan
+                message_to:             'KM_Admin,Kim_Miller',
                 message_from:           'Kim_Miller',
                 subscrption_name:       'Owner Auto Renewing',
                 excludes:               %w()
@@ -72,7 +72,7 @@ schedule_options = {
                 action_sequence:        'R0',
                 add_to_group:           45,
                 remove_from_group:      nil,
-                message_to:             'KM_Admin,Kim_Miller',             # todo add Ryan
+                message_to:             'KM_Admin,Kim_Miller',
                 message_from:           'Kim_Miller',
                 excludes:               %w()
             },

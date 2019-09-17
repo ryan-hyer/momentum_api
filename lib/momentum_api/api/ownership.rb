@@ -72,7 +72,7 @@ module MomentumApi
               # alert renewing auto renewal is present
               if latest_auto_renew_date and latest_auto_renew_date > profile_renew_date and
                   action[1][:ownership_code] == 'CA' and action[1][:action_sequence] == 'R0'
-                effective_renew_date = latest_auto_renew_date
+                # effective_renew_date = latest_auto_renew_date
                 effective_renews_value = latest_auto_renew_date.strftime("%Y-%m-%d") + ' ' +
                     action[1][:ownership_code] + ' ' + action[1][:action_sequence]
                 update_ownership(man, action, effective_renews_value)
@@ -162,7 +162,7 @@ module MomentumApi
                                nested_user_field: %W(#{'user_fields'} #{action[1][:user_fields]}))
         @mock ? sleep(0) : sleep(1)
 
-        # todo create auto case where admins are alerted, but not group moves happen
+        # todo stay with current group remove w/auto or create auto case where admins are alerted, but not group moves happen
         add_to_owner_group(action, man)
 
         remove_from_owner_group(action, man)

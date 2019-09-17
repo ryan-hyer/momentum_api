@@ -21,7 +21,7 @@ module MomentumApi
 
       from_username = from_username || @from_username
       to_username = to_username || man.user_details['username']
-      if cc_username  # todo add logic to removed any dupes?
+      if cc_username  # todo add logic to remove any dupes between to_ and cc_
         to_username = to_username + ',' + cc_username
       end
 

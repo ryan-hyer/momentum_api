@@ -38,7 +38,7 @@ discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
 discourse.apply_to_users
 discourse.scan_summary
 
-# Jul 10, 2019 Light Mode users  todo Flag expired users Matt_Hill Jim_Leney
+# Jul 10, 2019 Light Mode users
 #
 # I, [19-07-10 14:26:56#45508]  INFO -- : Updated User       last_seen_at   last_posted_at   post_count   time_read    recent_time_read                 ["user_option", "theme_ids"]
 # I, [19-07-10 14:26:56#45508]  INFO -- : Al_Dorji           2019-05-11     2019-05-11       0            31           0                                [4]

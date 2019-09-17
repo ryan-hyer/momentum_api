@@ -18,6 +18,7 @@ discourse_options = {
     logger:                         momentum_api_logger
 }
 
+# groups are 45: Onwers_Manual, 136: Owners (auto), 107: FormerOwners (expired)
 schedule_options = {
     ownership:{
         settings: {

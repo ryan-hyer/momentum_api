@@ -1,7 +1,6 @@
-"We sent you a couple messages about your expired Momentum membership asking you to either:
+"We sent you a couple messages about your expired Momentum membership asking you to either.
 
-- [Re-join online here.](#{@schedule.discourse.options[:instance]}/page/ownership/3/)
-    or
+- [Re-join online here, or](#{@schedule.discourse.options[:instance]}/page/ownership/3/)
 - Take [Momentum's exit survey here](https://goo.gl/forms/10AslBf1jpR5X6aP2) to help us learn more about your choice to leave Momentum.
 
 If money is an issue, remember that Momentum provides scholarships where needed. Please [contact Momentum's Chief privately here](https://discourse.gomomentum.org/g/Chief) to make arrangements.
