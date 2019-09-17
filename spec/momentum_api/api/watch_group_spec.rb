@@ -90,7 +90,7 @@ describe MomentumApi::WatchGroup do
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
         expect(mock_admin_client).to receive(:user).once.and_return user_details_group_watching
-        expect(mock_admin_client).to receive(:group_set_user_notify_level).once
+        expect(mock_admin_client).to receive(:group_set_user_notification_level).once
         mock_admin_client
       end
 

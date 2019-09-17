@@ -31,7 +31,7 @@ schedule_options = {
                 days_until_renews:      9999,
                 action_sequence:        'R0',
                 add_to_group:           nil,
-                remove_from_group:      nil,
+                remove_from_group:      107,
                 message_to:             nil,
                 message_cc:             'KM_Admin',
                 message_from:           'Kim_Miller',
@@ -67,9 +67,9 @@ schedule_options = {
                 ownership_code:         'CA',
                 days_until_renews:      -7,
                 action_sequence:        'R3',
-                add_to_group:           nil,
+                add_to_group:           107,
+                remove_from_group:      136,
                 message_cc:             'KM_Admin',
-                remove_from_group:      nil,
                 message_from:           'Kim_Miller',
                 excludes:               %w()
             }

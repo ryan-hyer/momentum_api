@@ -121,10 +121,22 @@ module MomentumApi
 
     def add_momentum_api_endpoints
      DiscourseApi::Client.class_eval do
+
        def membership_subscriptions(user_id)
          response = get("/memberships/subscriptions/#{user_id}.json")
          response[:body]
        end
+
+       def grant_moderation(user_id)
+         response = put("admin/users/#{user_id}/revoke_admin")
+         response[:body]
+       end
+
+       def revoke_moderation(user_id)
+         response = put("admin/users/#{user_id}/revoke_moderation")
+         response[:body]
+       end
+
      end
    end
 

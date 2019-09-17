@@ -41,7 +41,7 @@ module MomentumApi
               @counters[:'Group Update Targets'] += 1
 
               if @schedule.discourse.options[:do_live_updates]
-                response = @schedule.discourse.admin_client.group_set_user_notify_level(group['name'], man.user_details['id'], set_notification_level)
+                response = @schedule.discourse.admin_client.group_set_user_notification_level(group['name'], man.user_details['id'], set_notification_level)
                 @mock ? sleep(0) : sleep(1)
                 man.discourse.options[:logger].info response
                 # puts response
