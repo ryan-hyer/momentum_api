@@ -1,5 +1,5 @@
-"Thank you for your ownership of Momentum, #{@man.user_details['name']}, and welcome to another year of awesome growth, comradery, and fun!
+"Thank you for your ownership of Momentum, #{@man.user_details['name']}, and welcome to another year of awesome growth, @camaraderie, and fun!
 
   -- Your Momentum Leadership
 
-Ownership Type: #{@man.user_details['user_fields']['6']}"
+Ownership Type: #{variable_hash['user_fields']['6']}"

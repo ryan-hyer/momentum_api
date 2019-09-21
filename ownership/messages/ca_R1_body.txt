@@ -1,5 +1,9 @@
-"Just a friendly reminder, your Momentum Ownership will automatically renew next week. There is nothing you need to do but fasten your seatbelt and get ready for another awesome year in Momentum!
+"Hi #{variable_hash['name']},
+
+Just a friendly reminder, your Momentum Ownership will automatically renew next week. There is nothing you need to do but fasten your seatbelt and get ready for another awesome year in Momentum!
 
 If you need to make any changes to your Momentum Ownership, you can do so [here.](#{@schedule.discourse.options[:instance]}/my/billing)
 
-  -- Your Momentum Leadership"  # todo debug Procourse base url bug
+  -- Your Momentum Leadership
+
+Ownership Type: #{variable_hash['user_fields']['6']}" # todo debug Procourse base url bug

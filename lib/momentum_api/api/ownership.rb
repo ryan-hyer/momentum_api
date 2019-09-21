@@ -130,7 +130,7 @@ module MomentumApi
     
     private
     
-    def send_renewal_message(action)
+    def send_renewal_message(action, variable_hash: nil)
       message_file = action[1][:ownership_code] + '_' + action[1][:action_sequence].to_s
       message_subject = eval(message_body(message_file + '_subject.txt'))
       message_body = eval(message_body(message_file + '_body.txt'))
@@ -148,8 +148,6 @@ module MomentumApi
 
       if @schedule.discourse.options[:do_live_updates] and action[1][:do_task_update]
 
-        send_renewal_message(action)
-
         update_response = @schedule.discourse.admin_client.update_user(man.user_details['username'],
                                                                        user_fields: update_set_value)
 
@@ -157,8 +155,8 @@ module MomentumApi
         @counters[:'Ownership Updated'] += 1
 
         # check if update happened
-        user_option_after_update = @schedule.discourse.admin_client.user(man.user_details['username'])
-        man.print_user_options(user_option_after_update, user_label: 'User After Update',
+        user_details_after_update = @schedule.discourse.admin_client.user(man.user_details['username'])
+        man.print_user_options(user_details_after_update, user_label: 'User After Update',
                                nested_user_field: %W(#{'user_fields'} #{action[1][:user_fields]}))
         @mock ? sleep(0) : sleep(1)
 
@@ -166,6 +164,8 @@ module MomentumApi
         add_to_owner_group(action, man)
 
         remove_from_owner_group(action, man)
+
+        send_renewal_message(action, variable_hash: user_details_after_update)
 
       end
     end

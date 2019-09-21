@@ -12,6 +12,7 @@ describe MomentumApi::Ownership do
   let(:user_details_ownership_2020_08_25_CA_R1) { json_fixture("user_details_ownership_2020_08_25_CA_R1.json") }
   let(:user_details_ownership_2020_08_25_CA_R2) { json_fixture("user_details_ownership_2020_08_25_CA_R2.json") }
   let(:user_details_ownership_2020_08_25_CA_R3) { json_fixture("user_details_ownership_2020_08_25_CA_R3.json") }
+  let(:user_details_ownership_2021_08_23_CA_R0) { json_fixture("user_details_ownership_2021_08_23_CA_R0.json") }
 
   let(:user_details_ownership_2021_10_02_ZM) { json_fixture("user_details_ownership_2021_10_02_ZM.json") }
   let(:user_details_ownership_2021_10_02_ZM_R0) { json_fixture("user_details_ownership_2021_10_02_ZM_R0.json") }
@@ -291,10 +292,11 @@ describe MomentumApi::Ownership do
 
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
-        expect(mock_admin_client).to receive(:user).once
         expect(mock_admin_client).to receive(:update_user).once
                                          .with("Tony_Christopher", {user_fields: {'6': '2020-08-25 CA R1'}})
                                          .and_return({"body": {"success": "OK"}})
+        expect(mock_admin_client).to receive(:user).once
+                                         .and_return user_details_ownership_2020_08_25_CA_R1
         mock_admin_client
       end
 
@@ -357,10 +359,11 @@ describe MomentumApi::Ownership do
 
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
-        expect(mock_admin_client).to receive(:user).once
         expect(mock_admin_client).to receive(:update_user).once
                                          .with("Tony_Christopher", {user_fields: {'6': '2020-08-25 CA R2'}})
                                          .and_return({"body": {"success": "OK"}})
+        expect(mock_admin_client).to receive(:user).once
+                                         .and_return user_details_ownership_2020_08_25_CA_R2
         mock_admin_client
       end
 
@@ -423,13 +426,14 @@ describe MomentumApi::Ownership do
 
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
-        expect(mock_admin_client).to receive(:user).twice.and_return user_details_ownership_2020_08_25_CA_R3
         expect(mock_admin_client).to receive(:update_user).once
                                          .with("Tony_Christopher", {user_fields: {'6': '2020-08-25 CA R3'}})
                                          .and_return({"body": {"success": "OK"}})
         expect(mock_admin_client).to receive(:group_add).once
                                          .with(107, {username: 'Tony_Christopher'})
                                          .and_return({'body': {'success': 'OK'}})
+        expect(mock_admin_client).to receive(:user).twice
+                                         .and_return user_details_ownership_2020_08_25_CA_R3
         mock_admin_client
       end
 
@@ -542,10 +546,11 @@ describe MomentumApi::Ownership do
 
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
-        expect(mock_admin_client).to receive(:user).once
         expect(mock_admin_client).to receive(:update_user).once
                                          .with("Tony_Christopher", {user_fields: {"6": "2020-01-02 MM R1"}})
                                          .and_return({"body": {"success": "OK"}})
+        expect(mock_admin_client).to receive(:user).once
+                                         .and_return user_details_ownership_2020_01_02_MM_R1
         mock_admin_client
       end
 
@@ -603,17 +608,17 @@ describe MomentumApi::Ownership do
 
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
-        expect(mock_admin_client).to receive(:user).once.and_return user_details_ownership_2020_01_02_MM_R2
-        expect(mock_admin_client).to receive(:user).twice.and_return user_details_ownership_2020_01_02_MM_R3_group_removed
         expect(mock_admin_client).to receive(:update_user).once
                                          .with('Tony_Christopher', {user_fields: {'6': '2020-01-02 MM R3'}})
                                          .and_return({'body': {'success': 'OK'}})
+        expect(mock_admin_client).to receive(:user).once.and_return user_details_ownership_2020_01_02_MM_R2
         expect(mock_admin_client).to receive(:group_remove).once
                                          .with(45, username: 'Tony_Christopher')
                                          .and_return({'body': {'success': 'OK'}})
         expect(mock_admin_client).to receive(:group_add).once
                                          .with(107, {username: 'Tony_Christopher'})
                                          .and_return({'body': {'success': 'OK'}})
+        expect(mock_admin_client).to receive(:user).twice.and_return user_details_ownership_2020_01_02_MM_R3_group_removed
         mock_admin_client
       end
 
@@ -777,10 +782,10 @@ describe MomentumApi::Ownership do
 
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
-        expect(mock_admin_client).to receive(:user).once
         expect(mock_admin_client).to receive(:update_user).once
                                          .with("Tony_Christopher", {user_fields: {'6': '2020-08-25 CA R0'}})
                                          .and_return({"body": {"success": "OK"}})
+        expect(mock_admin_client).to receive(:user).once.and_return user_details_ownership_2020_08_25_CA_R0
         mock_admin_client
       end
 
@@ -806,7 +811,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(30).times.and_return user_details_ownership_blank
+        expect(mock_man).to receive(:user_details).exactly(29).times.and_return user_details_ownership_blank
         expect(mock_man).to receive(:user_client).exactly(1).times.and_return mock_user_client
         expect(mock_man).to receive(:print_user_options).exactly(2).times
         mock_man
@@ -843,14 +848,14 @@ describe MomentumApi::Ownership do
 
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
-        expect(mock_admin_client).to receive(:user).once.and_return user_details_ownership_2021_10_02_ZM
-        expect(mock_admin_client).to receive(:user).once.and_return user_details_ownership_2021_10_02_ZM_R0
         expect(mock_admin_client).to receive(:group_add).once
                                          .with(45, {username: 'Tony_Christopher'})
                                          .and_return({'body': {'success': 'OK'}})
         expect(mock_admin_client).to receive(:update_user).once
                                          .with("Tony_Christopher", {user_fields: {'6': '2021-10-02 ZM R0'}})
                                          .and_return({'body': {'success': 'OK'}})
+        expect(mock_admin_client).to receive(:user).twice
+                                         .and_return user_details_ownership_2021_10_02_ZM_R0
         mock_admin_client
       end
 
@@ -870,7 +875,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(33).times
+        expect(mock_man).to receive(:user_details).exactly(32).times
                                 .and_return user_details_ownership_2021_10_02_ZM
         expect(mock_man).to receive(:user_client).exactly(1).times.and_return mock_user_client
         expect(mock_man).to receive(:print_user_options).exactly(2).times
@@ -910,10 +915,11 @@ describe MomentumApi::Ownership do
 
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
-        expect(mock_admin_client).to receive(:user).once
         expect(mock_admin_client).to receive(:update_user).once
                                          .with("Tony_Christopher", {user_fields: {'6': '2021-08-23 CA R0'}})
                                          .and_return({"body": {"success": "OK"}})
+        expect(mock_admin_client).to receive(:user).once
+                                         .and_return user_details_ownership_2021_08_23_CA_R0
         mock_admin_client
       end
 
@@ -939,7 +945,7 @@ describe MomentumApi::Ownership do
       
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(24).times.and_return user_details_ownership_2020_08_25_CA_R1
+        expect(mock_man).to receive(:user_details).exactly(23).times.and_return user_details_ownership_2020_08_25_CA_R1
         expect(mock_man).to receive(:user_client).exactly(1).times.and_return mock_user_client
         expect(mock_man).to receive(:print_user_options).exactly(2).times
         mock_man
@@ -951,8 +957,7 @@ describe MomentumApi::Ownership do
         expect(mock_dependencies).to receive(:send_private_message)
                                          .with(mock_man, /Thank you for your ownership of Momentum, Tony Christopher/,
                                                /Thank you for Owning Momentum!/,
-                                               from_username: 'Kim_Miller', to_username: nil,
-                                               cc_username: 'KM_Admin')
+                                               from_username: 'Kim_Miller', to_username: nil, cc_username: 'KM_Admin')
         mock_dependencies
       end
 
@@ -985,7 +990,8 @@ describe MomentumApi::Ownership do
 
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
-        expect(mock_admin_client).to receive(:user).once.and_return user_details_ownership_blank_group_removed
+        expect(mock_admin_client).to receive(:user).once
+                                         .and_return user_details_ownership_blank_group_removed
         expect(mock_admin_client).to receive(:group_remove).once
                                          .with(45, username: 'Tony_Christopher')
                                          .and_return({'body': {'success': 'OK'}})
@@ -1032,7 +1038,8 @@ describe MomentumApi::Ownership do
 
       let(:mock_admin_client) do
         mock_admin_client = instance_double('admin_client')
-        expect(mock_admin_client).to receive(:user).once.and_return user_details_ownership_renews_value_invalid
+        expect(mock_admin_client).to receive(:user).once
+                                         .and_return user_details_ownership_renews_value_invalid
         expect(mock_admin_client).to receive(:group_remove).once
                                          .with(45, username: 'Tony_Christopher')
                                          .and_return({'body': {'success': 'OK'}})

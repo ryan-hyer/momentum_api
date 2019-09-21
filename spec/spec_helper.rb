@@ -11,8 +11,6 @@ end
 require 'momentum_api'
 require 'rspec'
 require 'json'
-# require 'webmock/rspec'
-
 
 class MockLogger
   def initialize(*targets)

@@ -127,15 +127,16 @@ module MomentumApi
          response[:body]
        end
 
-       def grant_moderation(user_id)
-         response = put("admin/users/#{user_id}/revoke_admin")
-         response[:body]
-       end
-
-       def revoke_moderation(user_id)
-         response = put("admin/users/#{user_id}/revoke_moderation")
-         response[:body]
-       end
+       # discourse_api PR Sep 18, 2019`
+       # def grant_moderation(user_id)
+       #   response = put("admin/users/#{user_id}/revoke_admin")
+       #   response[:body]
+       # end
+       #
+       # def revoke_moderation(user_id)
+       #   response = put("admin/users/#{user_id}/revoke_moderation")
+       #   response[:body]
+       # end
 
      end
    end

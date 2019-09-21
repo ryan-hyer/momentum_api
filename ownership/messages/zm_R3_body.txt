@@ -1,4 +1,6 @@
-"We sent you a couple messages about your expired Momentum membership asking you to either.
+"Hi #{variable_hash['name']},
+
+We sent you a couple messages about your expired Momentum membership asking you to either.
 
 - [Re-join online here, or](#{@schedule.discourse.options[:instance]}/page/ownership/3/)
 - Take [Momentum's exit survey here](https://goo.gl/forms/10AslBf1jpR5X6aP2) to help us learn more about your choice to leave Momentum.
@@ -7,4 +9,6 @@ If money is an issue, remember that Momentum provides scholarships where needed.
 
 Thank you for spending time with Momentum, and thank you for going the final mile so we may have a proper completion if that is your intention.
 
-  -- Your Momentum Leadership"
+  -- Your Momentum Leadership
+
+Ownership Type: #{variable_hash['user_fields']['6']}"

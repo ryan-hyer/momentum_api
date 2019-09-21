@@ -1,15 +1,21 @@
+#!/usr/bin/env ruby
+
 require_relative 'log/utility'
-require '../lib/momentum_api'
+require_relative '../lib/momentum_api'
+
+@scan_passes_end                =   -1
 
 discourse_options = {
-    do_live_updates:        false,
-    # target_username:        'Scott_StGermain',         # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby Fernando_Venegas
-    target_groups:          %w(trust_level_0),      # OpenKimono TechMods GreatX BraveHearts trust_level_0 trust_level_1
-    instance:               'https://discourse.gomomentum.org',
-    api_username:           'KM_Admin',
-    exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
-    issue_users:             %w(Scott_StGermain),
-    logger:                  momentum_api_logger
+    do_live_updates:                false,
+    # target_username:                'Kim_Miller',     # Ryan_Hyer 2 Steve_Scott 9 Moe_Rubenzahl Kim_Miller David_Ashby KM_Admin
+    target_groups:                  %w(trust_level_0),   # Mods GreatX BraveHearts trust_level_0 trust_level_1
+    include_staged_users:           true,
+    minutes_between_scans:          0,
+    instance:                       'https://discourse.gomomentum.org',
+    api_username:                   'KM_Admin',
+    exclude_users:                  %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
+    issue_users:                    %w(Scott_StGermain),
+    logger:                         momentum_api_logger
 }
 
 # groups are 45: Onwers_Manual, 136: Owners (auto), 107: FormerOwners (expired)
@@ -155,6 +161,38 @@ schedule_options = {
     }
 }
 
-discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
-discourse.apply_to_users
-discourse.scan_summary
+# init
+@scan_passes                    =   0
+
+def scan_hourly
+
+  begin
+    @discourse.counters[:'Processed Users'], @discourse.counters[:'Skipped Users'] = 0, 0
+    @discourse.apply_to_users
+    @scan_passes += 1
+
+    wait = @discourse.options[:minutes_between_scans] || 5
+    @discourse.options[:logger].info "Pass #{@scan_passes} complete for #{@discourse.counters[:'Processed Users']} users, #{@discourse.counters[:'Skipped Users']} skipped. Waiting #{wait} minutes ..."
+    @discourse.options[:logger].close
+    @discourse.options[:logger] = momentum_api_logger
+    sleep wait * 60
+
+  rescue Exception => exception       # Recovers from any crash since Jul 22, 2019?
+    @discourse.options[:logger].warn "Scan Level Exception Rescue type #{exception.class}, #{exception.message}: Sleeping for 90 minutes ...."
+    sleep 90 * 60
+    scan_hourly
+  end
+
+  if @scan_passes < @scan_passes_end or @scan_passes_end < 0
+    scan_hourly
+    @discourse.options[:logger].info "... Exiting ..."
+  end
+
+end
+
+@discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
+
+@discourse.options[:logger].info "Scanning #{@discourse.options[:target_groups]} Users for Tasks"
+
+scan_hourly
+@discourse.scan_summary
