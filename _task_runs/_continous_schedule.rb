@@ -13,152 +13,154 @@ discourse_options = {
     minutes_between_scans:          5,
     instance:                       'https://discourse.gomomentum.org',
     api_username:                   'KM_Admin',
-    exclude_users:                  %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
-    issue_users:                    %w(),
+    exclude_users:                  %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin Scott_StGermain),
+    issue_users:                    %w(Scott_StGermain),
     logger:                         momentum_api_logger
 }
 
 schedule_options = {
 # groups are 45: Onwers_Manual, 136: Owners (auto), 107: FormerOwners (expired)
-#     ownership:{
-#         settings: {
-#             all_ownership_group_ids: [45, 136]
-#         },
-#         auto: {
-#             card_auto_renew_new_subscription_found: {
-#                 do_task_update:         true,
-#                 user_fields:            '6',
-#                 ownership_code:         'CA',
-#                 days_until_renews:      9999,
-#                 action_sequence:        'R0',
-#                 add_to_group:           nil,
-#                 remove_from_group:      107,
-#                 message_to:             nil,
-#                 message_cc:             'KM_Admin',
-#                 message_from:           'Kim_Miller',
-#                 subscrption_name:       'Owner Auto Renewing',
-#                 excludes:               %w()
-#             },
-#             card_auto_renew_expires_next_week: {
-#                 do_task_update:         true,
-#                 user_fields:            '6',
-#                 ownership_code:         'CA',
-#                 days_until_renews:      7,
-#                 action_sequence:        'R1',
-#                 add_to_group:           nil,
-#                 remove_from_group:      nil,
-#                 message_from:           'Kim_Miller',
-#                 subscrption_name:       'Owner Auto Renewing',
-#                 excludes:               %w()
-#             },
-#             card_auto_renew_expired_yesterday: {
-#                 do_task_update:         true,
-#                 user_fields:            '6',
-#                 ownership_code:         'CA',
-#                 days_until_renews:      -1,
-#                 action_sequence:        'R2',
-#                 add_to_group:           nil,
-#                 remove_from_group:      nil,
-#                 message_from:           'Kim_Miller',
-#                 excludes:               %w()
-#             },
-#             card_auto_renew_expired_last_week_final: {
-#                 do_task_update:         true,
-#                 user_fields:            '6',
-#                 ownership_code:         'CA',
-#                 days_until_renews:      -7,
-#                 action_sequence:        'R3',
-#                 add_to_group:           107,
-#                 remove_from_group:      136,
-#                 message_cc:             'KM_Admin',
-#                 message_from:           'Kim_Miller',
-#                 excludes:               %w()
-#             }
-#         },
-#         manual: {
-#             zelle_new_found: {
-#                 do_task_update:         true,
-#                 user_fields:            '6',
-#                 ownership_code:         'ZM',
-#                 days_until_renews:      9999,
-#                 action_sequence:        'R0',
-#                 add_to_group:           45,
-#                 remove_from_group:      107,
-#                 message_to:             nil,
-#                 message_cc:             'KM_Admin',
-#                 message_from:           'Kim_Miller',
-#                 excludes:               %w()
-#             },
-#             zelle_expires_next_week: {
-#                 do_task_update:         true,
-#                 user_fields:            '6',
-#                 ownership_code:         'ZM',
-#                 days_until_renews:      7,
-#                 action_sequence:        'R1',
-#                 add_to_group:           nil,
-#                 remove_from_group:      nil,
-#                 message_from:           'Kim_Miller',
-#                 excludes:               %w()
-#             },
-#             zelle_expired_today: {
-#                 do_task_update:         true,
-#                 user_fields:            '6',
-#                 ownership_code:         'ZM',
-#                 days_until_renews:      0,
-#                 action_sequence:        'R2',
-#                 add_to_group:           nil,
-#                 remove_from_group:      nil,
-#                 message_from:           'Kim_Miller',
-#                 excludes:               %w()
-#             },
-#             zelle_final: {
-#                 do_task_update:         true,
-#                 user_fields:            '6',
-#                 ownership_code:         'ZM',
-#                 days_until_renews:      -7,
-#                 add_to_group:           107,
-#                 remove_from_group:      45,
-#                 action_sequence:        'R3',
-#                 message_cc:             'KM_Admin',
-#                 message_from:           'Kim_Miller',
-#                 excludes:                 %w()
-#             },
-#             memberful_expires_next_week: {
-#                 do_task_update:         true,
-#                 user_fields:            '6',
-#                 ownership_code:         'MM',
-#                 days_until_renews:      7,
-#                 action_sequence:        'R1',
-#                 add_to_group:           nil,
-#                 remove_from_group:      nil,
-#                 message_from:           'Kim_Miller',
-#                 excludes:               %w()
-#             },
-#             memberful_expired_today: {
-#                 do_task_update:         true,
-#                 user_fields:            '6',
-#                 ownership_code:         'MM',
-#                 days_until_renews:      0,
-#                 action_sequence:        'R2',
-#                 add_to_group:           nil,
-#                 remove_from_group:      nil,
-#                 message_from:           'Kim_Miller',
-#                 excludes:               %w()
-#             },
-#             memberful_final: {
-#                 do_task_update:         true,
-#                 user_fields:            '6',
-#                 ownership_code:         'MM',
-#                 days_until_renews:      -7,
-#                 add_to_group:           107,
-#                 remove_from_group:      45,
-#                 action_sequence:        'R3',
-#                 message_cc:             'KM_Admin',
-#                 message_from:           'Kim_Miller',
-#                 excludes:                 %w()
-#             }
-#         }
-#     },
+ownership:{
+    settings: {
+        all_ownership_group_ids: [45, 136]
+    },
+    auto: {
+        card_auto_renew_new_subscription_found: {
+            do_task_update:         true,
+            user_fields:            '6',
+            ownership_code:         'CA',
+            days_until_renews:      9999,
+            action_sequence:        'R0',
+            add_to_group:           nil,
+            remove_from_group:      107,
+            message_to:             nil,
+            message_cc:             'KM_Admin',
+            message_from:           'Kim_Miller',
+            subscrption_name:       'Owner Auto Renewing',
+            excludes:               %w()
+        },
+        card_auto_renew_expires_next_week: {
+            do_task_update:         true,
+            user_fields:            '6',
+            ownership_code:         'CA',
+            days_until_renews:      7,
+            action_sequence:        'R1',
+            add_to_group:           nil,
+            remove_from_group:      nil,
+            message_from:           'Kim_Miller',
+            subscrption_name:       'Owner Auto Renewing',
+            excludes:               %w()
+        },
+        card_auto_renew_expired_yesterday: {
+            do_task_update:         true,
+            user_fields:            '6',
+            ownership_code:         'CA',
+            days_until_renews:      -1,
+            action_sequence:        'R2',
+            add_to_group:           nil,
+            remove_from_group:      nil,
+            message_from:           'Kim_Miller',
+            excludes:               %w()
+        },
+        card_auto_renew_expired_last_week_final: {
+            do_task_update:         true,
+            user_fields:            '6',
+            ownership_code:         'CA',
+            days_until_renews:      -7,
+            action_sequence:        'R3',
+            add_to_group:           107,
+            remove_from_group:      136,
+            message_cc:             'KM_Admin',
+            message_from:           'Kim_Miller',
+            excludes:               %w()
+        }
+    },
+    manual: {
+        zelle_new_found: {
+            do_task_update:         true,
+            user_fields:            '6',
+            ownership_code:         'ZM',
+            days_until_renews:      9999,
+            action_sequence:        'R0',
+            add_to_group:           45,
+            remove_from_group:      107,
+            message_to:             nil,
+            message_cc:             'KM_Admin',
+            message_from:           'Kim_Miller',
+            excludes:               %w()
+        },
+        zelle_expires_next_week: {
+            do_task_update:         true,
+            user_fields:            '6',
+            ownership_code:         'ZM',
+            days_until_renews:      7,
+            action_sequence:        'R1',
+            add_to_group:           nil,
+            remove_from_group:      nil,
+            message_from:           'Kim_Miller',
+            excludes:               %w()
+        },
+        zelle_expired_today: {
+            do_task_update:         true,
+            user_fields:            '6',
+            ownership_code:         'ZM',
+            days_until_renews:      0,
+            action_sequence:        'R2',
+            add_to_group:           nil,
+            remove_from_group:      nil,
+            message_from:           'Kim_Miller',
+            excludes:               %w()
+        },
+        zelle_final: {
+            do_task_update:         true,
+            user_fields:            '6',
+            ownership_code:         'ZM',
+            days_until_renews:      -7,
+            add_to_group:           107,
+            remove_from_group:      45,
+            action_sequence:        'R3',
+            message_cc:             'KM_Admin',
+            message_from:           'Kim_Miller',
+            excludes:                 %w()
+        },
+        memberful_expires_next_week: {
+            do_task_update:         true,
+            user_fields:            '6',
+            ownership_code:         'MM',
+            days_until_renews:      7,
+            action_sequence:        'R1',
+            add_to_group:           nil,
+            remove_from_group:      nil,
+            message_cc:             'KM_Admin',
+            message_from:           'Kim_Miller',
+            excludes:               %w()
+        },
+        memberful_expired_today: {
+            do_task_update:         true,
+            user_fields:            '6',
+            ownership_code:         'MM',
+            days_until_renews:      0,
+            action_sequence:        'R2',
+            add_to_group:           nil,
+            remove_from_group:      nil,
+            message_cc:             'KM_Admin',
+            message_from:           'Kim_Miller',
+            excludes:               %w()
+        },
+        memberful_final: {
+            do_task_update:         true,
+            user_fields:            '6',
+            ownership_code:         'MM',
+            days_until_renews:      -7,
+            add_to_group:           107,
+            remove_from_group:      45,
+            action_sequence:        'R3',
+            message_cc:             'KM_Admin',
+            message_from:           'Kim_Miller',
+            excludes:                 %w()
+        }
+    }
+},
     category:{
         matching_team:              {
             allowed_levels:         [3],

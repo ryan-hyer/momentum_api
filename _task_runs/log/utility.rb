@@ -20,8 +20,8 @@ end
 
 
 def momentum_api_logger
-  log_file = File.open("log/scan.log", "a")
-  # log_file = File.open("log/scan.log", "a")
+  log_file = File.open(File.expand_path('../scan.log', __FILE__), 'a')
+  # log_file = File.open("_task_runs/log/scan.log", "a")
   logger = Logger.new MultiIO.new(log_file, STDOUT)
   logger.datetime_format = "%y-%m-%d %H:%M:%S"
   logger

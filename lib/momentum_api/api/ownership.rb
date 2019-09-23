@@ -118,8 +118,9 @@ module MomentumApi
               update_ownership(man, action, user_update_value)
 
             # remove user from Onwership groups as he does not appear to have any memberships
-            elsif action[1][:remove_from_group] and not latest_auto_renew_date
-              remove_from_owner_group(action, man)
+            elsif action[1][:remove_from_group] and not latest_auto_renew_date and
+                @options[:settings][:all_ownership_group_ids].include?(action[1][:remove_from_group])
+              remove_from_group(action, man)
 
             end
           end
@@ -163,7 +164,7 @@ module MomentumApi
         # todo stay with current group remove w/auto or create auto case where admins are alerted, but not group moves happen
         add_to_owner_group(action, man)
 
-        remove_from_owner_group(action, man)
+        remove_from_group(action, man)
 
         send_renewal_message(action, variable_hash: user_details_after_update)
 
@@ -192,7 +193,7 @@ module MomentumApi
       end
     end
 
-    def remove_from_owner_group(action, man)
+    def remove_from_group(action, man)
       if action[1][:remove_from_group] and @schedule.discourse.options[:do_live_updates] and action[1][:do_task_update]
         user_in_target_group = false
         man.user_details['groups'].each do |group|

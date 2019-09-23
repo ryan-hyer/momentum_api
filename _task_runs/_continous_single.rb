@@ -13,7 +13,7 @@ discourse_options = {
     minutes_between_scans:          0,
     instance:                       'https://discourse.gomomentum.org',
     api_username:                   'KM_Admin',
-    exclude_users:                  %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
+    exclude_users:                  %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin Scott_StGermain),
     issue_users:                    %w(Scott_StGermain),
     logger:                         momentum_api_logger
 }
@@ -131,6 +131,7 @@ schedule_options = {
                 action_sequence:        'R1',
                 add_to_group:           nil,
                 remove_from_group:      nil,
+                message_cc:             'KM_Admin',
                 message_from:           'Kim_Miller',
                 excludes:               %w()
             },
@@ -142,6 +143,7 @@ schedule_options = {
                 action_sequence:        'R2',
                 add_to_group:           nil,
                 remove_from_group:      nil,
+                message_cc:             'KM_Admin',
                 message_from:           'Kim_Miller',
                 excludes:               %w()
             },
