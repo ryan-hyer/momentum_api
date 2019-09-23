@@ -210,7 +210,7 @@ module MomentumApi
           user_in_any_owner_group = check_users_groups(man, action[1][:remove_from_group])
           if user_in_any_owner_group
             # puts 'User still in an ownership group'
-          elsif man.user_details['moderator']
+          elsif man.user_details['moderator']  
             @schedule.discourse.admin_client.revoke_moderation(man.user_details['id'])
             @schedule.discourse.options[:logger].warn "#{man.user_details['username']}'s moderation revoked."
           end
@@ -238,7 +238,7 @@ module MomentumApi
         end
       end
       if related_group_found
-        puts 'There was an error'
+        # puts 'related_group_found is true'
       else
         @schedule.discourse.options[:logger].warn "#{user_details_after_update['username']} not currently not in #{related_group} Ownership group."
       end

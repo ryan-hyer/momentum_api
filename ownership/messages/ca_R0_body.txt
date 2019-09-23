@@ -1,4 +1,4 @@
-"Thank you for your ownership of Momentum, #{@man.user_details['name']}, and welcome to another year of awesome growth, @camaraderie, and fun!
+"Thank you for your ownership of Momentum, #{@man.user_details['name']}, and welcome to another year of awesome growth, camaraderie, and fun!
 
   -- Your Momentum Leadership
 
