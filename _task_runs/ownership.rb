@@ -3,7 +3,7 @@ require '../lib/momentum_api'
 
 discourse_options = {
     do_live_updates:        false,
-    # target_username:        'Scott_StGermain',         # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby Fernando_Venegas
+    target_username:        'Kim_Miller',         # David_Kirk Steve_Scott Scott_StGermain Kim_Miller David_Ashby Fernando_Venegas
     target_groups:          %w(trust_level_0),      # OpenKimono TechMods GreatX BraveHearts trust_level_0 trust_level_1
     instance:               'https://discourse.gomomentum.org',
     api_username:           'KM_Admin',
@@ -125,6 +125,7 @@ schedule_options = {
                 action_sequence:        'R1',
                 add_to_group:           nil,
                 remove_from_group:      nil,
+                message_cc:             'KM_Admin',
                 message_from:           'Kim_Miller',
                 excludes:               %w()
             },
@@ -136,6 +137,7 @@ schedule_options = {
                 action_sequence:        'R2',
                 add_to_group:           nil,
                 remove_from_group:      nil,
+                message_cc:             'KM_Admin',
                 message_from:           'Kim_Miller',
                 excludes:               %w()
             },

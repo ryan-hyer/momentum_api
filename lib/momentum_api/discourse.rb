@@ -73,12 +73,18 @@ module MomentumApi
     private
     
     def apply_call(group_member)
+      # puts group_member['username']
       begin
         user_details = @admin_client.user(group_member['username'])
         @mock ? sleep(0) : sleep(2)
       rescue DiscourseApi::TooManyRequests
         @options[:logger].warn 'TooManyRequests: Sleeping for 20 seconds ....'
         @mock ? sleep(0) : sleep(20)
+        user_details = @admin_client.user(group_member['username'])
+      rescue DiscourseApi::NotFoundError => exception
+        @users_categories = nil
+        @discourse.options[:logger].warn "#{group_member['username']} : DiscourseApi::NotFoundError -- #{exception.class}, #{exception.message}:"
+        @mock ? sleep(0) : sleep(10 * 60)
         user_details = @admin_client.user(group_member['username'])
       end
 
@@ -126,17 +132,6 @@ module MomentumApi
          response = get("/memberships/subscriptions/#{user_id}.json")
          response[:body]
        end
-
-       # discourse_api PR Sep 18, 2019`
-       # def grant_moderation(user_id)
-       #   response = put("admin/users/#{user_id}/revoke_admin")
-       #   response[:body]
-       # end
-       #
-       # def revoke_moderation(user_id)
-       #   response = put("admin/users/#{user_id}/revoke_moderation")
-       #   response[:body]
-       # end
 
      end
    end
