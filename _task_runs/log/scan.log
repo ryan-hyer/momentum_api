@@ -28955,3 +28955,242 @@ W, [19-09-25 11:19:07#44657]  WARN -- : Kim_Miller's moderation revoked.
 I, [19-09-25 11:19:07#44657]  INFO -- :   Message From:    Kim_Miller           Kim_Miller,KM_Admin  Thank you for Owning Momentum!                          Thank you for your ow     Pending                  
 I, [19-09-25 11:19:08#44657]  INFO -- :   Message From:    Kim_Miller           Kim_Miller,KM_Admin  thank-you-for-owning-momentum                           Thank you for your ow     Sent                     
 I, [19-09-25 11:29:32#44657]  INFO -- : Pass 1 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 11:45:12#44657]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-09-25 11:45:12#44657]  INFO -- : Jake_Whiting       MidPen               MidPen                 1        NOT Watching                  
+W, [19-09-25 11:45:13#44657]  WARN -- : {"success"=>"OK"}
+W, [19-09-25 11:45:14#44657]  WARN -- : Updated Category: MidPen    Notification Level: 3
+I, [19-09-25 12:00:25#44657]  INFO -- : Pass 2 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 12:31:06#44657]  INFO -- : Pass 3 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 13:01:51#44657]  INFO -- : Pass 4 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 13:32:34#44657]  INFO -- : Pass 5 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 14:03:09#44657]  INFO -- : Pass 6 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 14:24:39#44657]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-09-25 14:24:39#44657]  INFO -- : Mahan_Harirsaz           2019-09-25     2019-09-25       4            1085        1085                     4                 
+W, [19-09-25 14:24:40#44657]  WARN -- : Removed man from Group 132: 
+W, [19-09-25 14:24:42#44657]  WARN -- : Added man to Group 133: 
+W, [19-09-25 14:24:43#44657]  WARN -- : Mahan_Harirsaz added to Z_Activity_B
+I, [19-09-25 14:33:49#44657]  INFO -- : Pass 7 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 15:04:24#44657]  INFO -- : Pass 8 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 15:35:03#44657]  INFO -- : Pass 9 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 16:05:43#44657]  INFO -- : Pass 10 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 16:36:22#44657]  INFO -- : Pass 11 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 17:07:08#44657]  INFO -- : Pass 12 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 17:37:51#44657]  INFO -- : Pass 13 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 18:08:30#44657]  INFO -- : Pass 14 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 18:39:13#44657]  INFO -- : Pass 15 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 19:09:53#44657]  INFO -- : Pass 16 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 19:40:38#44657]  INFO -- : Pass 17 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 20:11:31#44657]  INFO -- : Pass 18 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 20:42:32#44657]  INFO -- : Pass 19 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 21:13:34#44657]  INFO -- : Pass 20 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 21:44:28#44657]  INFO -- : Pass 21 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 22:15:22#44657]  INFO -- : Pass 22 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 22:46:10#44657]  INFO -- : Pass 23 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 23:17:01#44657]  INFO -- : Pass 24 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-25 23:47:45#44657]  INFO -- : Pass 25 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 00:18:30#44657]  INFO -- : Pass 26 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 00:49:18#44657]  INFO -- : Pass 27 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 01:20:02#44657]  INFO -- : Pass 28 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 01:50:49#44657]  INFO -- : Pass 29 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 02:21:34#44657]  INFO -- : Pass 30 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 02:52:19#44657]  INFO -- : Pass 31 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 03:22:57#44657]  INFO -- : Pass 32 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 03:53:33#44657]  INFO -- : Pass 33 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 04:24:11#44657]  INFO -- : Pass 34 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 04:54:49#44657]  INFO -- : Pass 35 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 05:25:25#44657]  INFO -- : Pass 36 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 05:56:22#44657]  INFO -- : Pass 37 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 06:27:17#44657]  INFO -- : Pass 38 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 06:58:02#44657]  INFO -- : Pass 39 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 07:29:11#44657]  INFO -- : Pass 40 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 08:00:32#44657]  INFO -- : Pass 41 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 08:31:21#44657]  INFO -- : Pass 42 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 09:02:11#44657]  INFO -- : Pass 43 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 09:33:31#44657]  INFO -- : Pass 44 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 10:04:28#44657]  INFO -- : Pass 45 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 10:39:11#961]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-09-26 10:39:13#961]  WARN -- : Scan Level Exception Rescue type NoMethodError, undefined method `each' for "members":String: Sleeping for 90 minutes ....
+I, [19-09-26 10:39:39#1316]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-09-26 10:39:40#1316]  WARN -- : Scan Level Exception Rescue type NoMethodError, undefined method `each' for "members":String: Sleeping for 90 minutes ....
+I, [19-09-26 10:56:49#9103]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-09-26 10:56:50#9103]  WARN -- : Scan Level Exception Rescue type NoMethodError, undefined method `each' for "members":String: Sleeping for 90 minutes ....
+I, [19-09-26 10:57:16#9432]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-09-26 10:57:16#9432]  WARN -- : Scan Level Exception Rescue type NoMethodError, undefined method `each' for "members":String: Sleeping for 90 minutes ....
+I, [19-09-26 10:58:50#9936]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-09-26 11:05:58#9936]  WARN -- : Scan Level Exception Rescue type NoMethodError, undefined method `each' for "members":String: Sleeping for 90 minutes ....
+I, [19-09-26 11:16:31#1242]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-09-26 11:42:24#1242]  INFO -- : Pass 1 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 12:13:14#1242]  INFO -- : Pass 2 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 12:43:54#1242]  INFO -- : Pass 3 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 13:14:29#1242]  INFO -- : Pass 4 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 13:45:17#1242]  INFO -- : Pass 5 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 14:05:51#1242]  INFO -- : GroupUser          Group                Category             Level      Status                        
+I, [19-09-26 14:05:51#1242]  INFO -- : Kim_Miller         moderators           na                     2        NOT Group Default of 3        
+I, [19-09-26 14:05:52#1242]  INFO -- : {"success"=>"OK"}
+I, [19-09-26 14:05:54#1242]  INFO -- : UpdatedUser        Group                Category             Level      Status                        
+I, [19-09-26 14:05:54#1242]  INFO -- : Kim_Miller         moderators           na                     3        User set to 3                 
+I, [19-09-26 14:05:54#1242]  INFO -- : GroupUser          Group                Category             Level      Status                        
+I, [19-09-26 14:05:54#1242]  INFO -- : Kim_Miller         staff                na                     2        NOT Group Default of 3        
+I, [19-09-26 14:05:55#1242]  INFO -- : {"success"=>"OK"}
+I, [19-09-26 14:05:56#1242]  INFO -- : UpdatedUser        Group                Category             Level      Status                        
+I, [19-09-26 14:05:56#1242]  INFO -- : Kim_Miller         staff                na                     3        User set to 3                 
+I, [19-09-26 14:16:30#1242]  INFO -- : Pass 6 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 14:47:14#1242]  INFO -- : Pass 7 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 15:17:56#1242]  INFO -- : Pass 8 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 15:43:55#52501]  INFO -- : Discourse Men                                           
+I, [19-09-26 15:43:55#52501]  INFO -- : Processed Users                     0                   
+I, [19-09-26 15:43:55#52501]  INFO -- : Skipped Users                       0                   
+I, [19-09-26 15:43:55#52501]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 15:43:55#52501]  INFO -- : Message Send                        0                   
+I, [19-09-26 15:43:55#52501]  INFO -- : Message Send Targets                0                   
+I, [19-09-26 15:43:55#52501]  INFO -- : Message Send Updated                0                   
+I, [19-09-26 15:43:55#52501]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 15:43:55#52501]  INFO -- : Users Added to Group                0                   
+I, [19-09-26 15:43:55#52501]  INFO -- : Users Removed from Group            0                   
+I, [19-09-26 15:48:36#1242]  INFO -- : Pass 9 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 15:52:13#53063]  INFO -- : Discourse Men                                           
+I, [19-09-26 15:52:13#53063]  INFO -- : Processed Users                     0                   
+I, [19-09-26 15:52:13#53063]  INFO -- : Skipped Users                       0                   
+I, [19-09-26 15:52:13#53063]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 15:52:13#53063]  INFO -- : Message Send                        0                   
+I, [19-09-26 15:52:13#53063]  INFO -- : Message Send Targets                0                   
+I, [19-09-26 15:52:13#53063]  INFO -- : Message Send Updated                0                   
+I, [19-09-26 15:52:13#53063]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 15:52:13#53063]  INFO -- : Users Added to Group                0                   
+I, [19-09-26 15:52:13#53063]  INFO -- : Users Removed from Group            0                   
+I, [19-09-26 15:52:34#53494]  INFO -- : Discourse Men                                           
+I, [19-09-26 15:52:34#53494]  INFO -- : Processed Users                     0                   
+I, [19-09-26 15:52:34#53494]  INFO -- : Skipped Users                       0                   
+I, [19-09-26 15:52:34#53494]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 15:52:34#53494]  INFO -- : Message Send                        0                   
+I, [19-09-26 15:52:34#53494]  INFO -- : Message Send Targets                0                   
+I, [19-09-26 15:52:34#53494]  INFO -- : Message Send Updated                0                   
+I, [19-09-26 15:52:34#53494]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 15:52:34#53494]  INFO -- : Users Added to Group                0                   
+I, [19-09-26 15:52:34#53494]  INFO -- : Users Removed from Group            0                   
+I, [19-09-26 15:55:22#53943]  INFO -- : Discourse Men                                           
+I, [19-09-26 15:55:22#53943]  INFO -- : Processed Users                     0                   
+I, [19-09-26 15:55:22#53943]  INFO -- : Skipped Users                       0                   
+I, [19-09-26 15:55:22#53943]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 15:55:22#53943]  INFO -- : Message Send                        0                   
+I, [19-09-26 15:55:22#53943]  INFO -- : Message Send Targets                0                   
+I, [19-09-26 15:55:22#53943]  INFO -- : Message Send Updated                0                   
+I, [19-09-26 15:55:22#53943]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 15:55:22#53943]  INFO -- : Users Added to Group                0                   
+I, [19-09-26 15:55:22#53943]  INFO -- : Users Removed from Group            0                   
+I, [19-09-26 15:56:26#54408]  INFO -- : Discourse Men                                           
+I, [19-09-26 15:56:26#54408]  INFO -- : Processed Users                     0                   
+I, [19-09-26 15:56:26#54408]  INFO -- : Skipped Users                       0                   
+I, [19-09-26 15:56:26#54408]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 15:56:26#54408]  INFO -- : Message Send                        0                   
+I, [19-09-26 15:56:26#54408]  INFO -- : Message Send Targets                0                   
+I, [19-09-26 15:56:26#54408]  INFO -- : Message Send Updated                0                   
+I, [19-09-26 15:56:26#54408]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 15:56:26#54408]  INFO -- : Users Added to Group                0                   
+I, [19-09-26 15:56:26#54408]  INFO -- : Users Removed from Group            0                   
+I, [19-09-26 15:56:35#54839]  INFO -- : Discourse Men                                           
+I, [19-09-26 15:56:35#54839]  INFO -- : Processed Users                     0                   
+I, [19-09-26 15:56:35#54839]  INFO -- : Skipped Users                       0                   
+I, [19-09-26 15:56:35#54839]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 15:56:35#54839]  INFO -- : Message Send                        0                   
+I, [19-09-26 15:56:35#54839]  INFO -- : Message Send Targets                0                   
+I, [19-09-26 15:56:35#54839]  INFO -- : Message Send Updated                0                   
+I, [19-09-26 15:56:35#54839]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 15:56:35#54839]  INFO -- : Users Added to Group                0                   
+I, [19-09-26 15:56:35#54839]  INFO -- : Users Removed from Group            0                   
+I, [19-09-26 15:57:05#55278]  INFO -- : Discourse Men                                           
+I, [19-09-26 15:57:05#55278]  INFO -- : Processed Users                     0                   
+I, [19-09-26 15:57:05#55278]  INFO -- : Skipped Users                       0                   
+I, [19-09-26 15:57:05#55278]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 15:57:05#55278]  INFO -- : Message Send                        0                   
+I, [19-09-26 15:57:05#55278]  INFO -- : Message Send Targets                0                   
+I, [19-09-26 15:57:05#55278]  INFO -- : Message Send Updated                0                   
+I, [19-09-26 15:57:05#55278]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 15:57:05#55278]  INFO -- : Users Added to Group                0                   
+I, [19-09-26 15:57:05#55278]  INFO -- : Users Removed from Group            0                   
+I, [19-09-26 16:06:55#57139]  INFO -- : message   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", ""]    
+I, [19-09-26 16:06:55#57139]  INFO -- : Kim_Miller 2019-09-26     2019-09-26       2036         850912      50372                         
+I, [19-09-26 16:06:55#57139]  INFO -- : Discourse Men                                           
+I, [19-09-26 16:06:55#57139]  INFO -- : Processed Users                     1                   
+I, [19-09-26 16:06:55#57139]  INFO -- : Skipped Users                       0                   
+I, [19-09-26 16:06:55#57139]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 16:06:55#57139]  INFO -- : Message Send                        0                   
+I, [19-09-26 16:06:55#57139]  INFO -- : Message Send Targets                1                   
+I, [19-09-26 16:06:55#57139]  INFO -- : Message Send Updated                0                   
+I, [19-09-26 16:06:55#57139]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 16:06:55#57139]  INFO -- : Users Added to Group                0                   
+I, [19-09-26 16:06:55#57139]  INFO -- : Users Removed from Group            0                   
+I, [19-09-26 16:08:30#58039]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-26 16:08:30#58039]  INFO -- : Kim_Miller               2019-09-26     2019-09-26       2036         850912      50372                       
+I, [19-09-26 16:08:30#58039]  INFO -- : Discourse Men                                           
+I, [19-09-26 16:08:30#58039]  INFO -- : Processed Users                     1                   
+I, [19-09-26 16:08:30#58039]  INFO -- : Skipped Users                       0                   
+I, [19-09-26 16:08:30#58039]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 16:08:30#58039]  INFO -- : Message Send                        0                   
+I, [19-09-26 16:08:30#58039]  INFO -- : Message Send Targets                1                   
+I, [19-09-26 16:08:30#58039]  INFO -- : Message Send Updated                0                   
+I, [19-09-26 16:08:30#58039]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 16:08:30#58039]  INFO -- : Users Added to Group                0                   
+I, [19-09-26 16:08:30#58039]  INFO -- : Users Removed from Group            0                   
+I, [19-09-26 16:14:41#59001]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-26 16:14:41#59001]  INFO -- : Kim_Miller               2019-09-26     2019-09-26       2036         850912      50372                       
+I, [19-09-26 16:14:41#59001]  INFO -- : Discourse Men                                           
+I, [19-09-26 16:14:41#59001]  INFO -- : Processed Users                     1                   
+I, [19-09-26 16:14:41#59001]  INFO -- : Skipped Users                       0                   
+I, [19-09-26 16:14:41#59001]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 16:14:41#59001]  INFO -- : Message Send                        0                   
+I, [19-09-26 16:14:41#59001]  INFO -- : Message Send Targets                1                   
+I, [19-09-26 16:14:41#59001]  INFO -- : Message Send Updated                0                   
+I, [19-09-26 16:14:41#59001]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 16:14:41#59001]  INFO -- : Users Added to Group                0                   
+I, [19-09-26 16:14:41#59001]  INFO -- : Users Removed from Group            0                   
+I, [19-09-26 16:14:57#59431]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-26 16:14:57#59431]  INFO -- : Kim_Miller               2019-09-26     2019-09-26       2036         850912      50372                       
+I, [19-09-26 16:19:25#59939]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-26 16:19:25#59939]  INFO -- : Kim_Miller               2019-09-26     2019-09-26       2036         850912      50372                       
+W, [19-09-26 16:19:25#59939]  WARN -- : Sending Private Message.
+I, [19-09-26 16:19:25#59939]  INFO -- :   Message From:    KM_Admin             Kim_Miller,Kim_Miller Coming Email Notification Change - Unless You Opt Out   Hi Kim Miller,
+
+There     Pending                  
+I, [19-09-26 16:13:16#1242]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-09-26 16:13:16#1242]  INFO -- : Mitch_Slomiak      Summit19             Summit19               1        NOT Watching                  
+W, [19-09-26 16:13:17#1242]  WARN -- : {"success"=>"OK"}
+W, [19-09-26 16:13:18#1242]  WARN -- : Updated Category: Summit19    Notification Level: 3
+I, [19-09-26 16:13:27#1242]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-09-26 16:13:27#1242]  INFO -- : Moe_Rubenzahl      Summit19             Summit19               1        NOT Watching                  
+W, [19-09-26 16:13:28#1242]  WARN -- : {"success"=>"OK"}
+W, [19-09-26 16:13:29#1242]  WARN -- : Updated Category: Summit19    Notification Level: 3
+I, [19-09-26 16:14:51#1242]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-09-26 16:14:51#1242]  INFO -- : Randy_Horton       Summit19             Summit19               1        NOT Watching                  
+W, [19-09-26 16:14:52#1242]  WARN -- : {"success"=>"OK"}
+W, [19-09-26 16:14:54#1242]  WARN -- : Updated Category: Summit19    Notification Level: 3
+I, [19-09-26 16:17:55#1242]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-09-26 16:17:55#1242]  INFO -- : Steve_Fitzsimons   Summit19             Summit19               1        NOT Watching                  
+W, [19-09-26 16:17:56#1242]  WARN -- : {"success"=>"OK"}
+W, [19-09-26 16:17:57#1242]  WARN -- : Updated Category: Summit19    Notification Level: 3
+I, [19-09-26 16:19:38#1242]  INFO -- : Pass 10 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 16:20:08#60378]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-26 16:20:08#60378]  INFO -- : Kim_Miller               2019-09-26     2019-09-26       2036         850912      50372                       
+W, [19-09-26 16:20:08#60378]  WARN -- : Sending Private Message.
+I, [19-09-26 16:21:48#60378]  INFO -- :   Message From:    KM_Admin             Kim_Miller,Kim_Miller Coming Email Notification Change - Unless You Opt Out   Hi Kim Miller,
+
+There     Pending                  
+I, [19-09-26 16:22:16#60844]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-26 16:22:16#60844]  INFO -- : Kim_Miller               2019-09-26     2019-09-26       2036         850912      50372                       
+W, [19-09-26 16:22:16#60844]  WARN -- : Sending Private Message.
+I, [19-09-26 16:22:16#60844]  INFO -- :   Message From:    KM_Admin             Kim_Miller           Coming Email Notification Change - Unless You Opt Out   Hi Kim Miller,
+
+There     Pending                  
+I, [19-09-26 16:22:18#60844]  INFO -- :   Message From:    KM_Admin             Kim_Miller           coming-email-notification-change-unless-you-opt-out     Hi Kim Miller,
+
+There     Sent                     
+I, [19-09-26 16:22:19#60844]  INFO -- : Discourse Men                                           
+I, [19-09-26 16:22:19#60844]  INFO -- : Processed Users                     1                   
+I, [19-09-26 16:22:19#60844]  INFO -- : Skipped Users                       0                   
+I, [19-09-26 16:22:19#60844]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 16:22:19#60844]  INFO -- : Message Send                        0                   
+I, [19-09-26 16:22:19#60844]  INFO -- : Message Send Targets                1                   
+I, [19-09-26 16:22:19#60844]  INFO -- : Message Send Updated                1                   
+I, [19-09-26 16:22:19#60844]  INFO -- : Messages Sent                       1                   
+I, [19-09-26 16:22:19#60844]  INFO -- : Users Added to Group                0                   
+I, [19-09-26 16:22:19#60844]  INFO -- : Users Removed from Group            0                   
