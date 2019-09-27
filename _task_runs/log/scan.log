@@ -29194,3 +29194,360 @@ I, [19-09-26 16:22:19#60844]  INFO -- : Message Send Updated                1
 I, [19-09-26 16:22:19#60844]  INFO -- : Messages Sent                       1                   
 I, [19-09-26 16:22:19#60844]  INFO -- : Users Added to Group                0                   
 I, [19-09-26 16:22:19#60844]  INFO -- : Users Removed from Group            0                   
+I, [19-09-26 16:23:55#61327]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-26 16:23:55#61327]  INFO -- : Kim_Miller               2019-09-26     2019-09-26       2036         850912      50372                       
+I, [19-09-26 16:23:55#61327]  INFO -- : Discourse Men                                           
+I, [19-09-26 16:23:55#61327]  INFO -- : Processed Users                     1                   
+I, [19-09-26 16:23:55#61327]  INFO -- : Skipped Users                       0                   
+I, [19-09-26 16:23:55#61327]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 16:23:55#61327]  INFO -- : Message Send                        0                   
+I, [19-09-26 16:23:55#61327]  INFO -- : Message Send Targets                1                   
+I, [19-09-26 16:23:55#61327]  INFO -- : Message Send Updated                0                   
+I, [19-09-26 16:23:55#61327]  INFO -- : Messages Sent                       0                   
+I, [19-09-26 16:23:55#61327]  INFO -- : Users Added to Group                0                   
+I, [19-09-26 16:23:55#61327]  INFO -- : Users Removed from Group            0                   
+I, [19-09-26 16:25:41#1242]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-09-26 16:25:41#1242]  INFO -- : Art_Muir           Summit19             Summit19               1        NOT Watching                  
+W, [19-09-26 16:25:42#1242]  WARN -- : {"success"=>"OK"}
+W, [19-09-26 16:25:43#1242]  WARN -- : Updated Category: Summit19    Notification Level: 3
+I, [19-09-26 16:36:48#1242]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-09-26 16:36:48#1242]  INFO -- : Jerry_Strebig      Summit19             Summit19               1        NOT Watching                  
+W, [19-09-26 16:36:49#1242]  WARN -- : {"success"=>"OK"}
+W, [19-09-26 16:36:51#1242]  WARN -- : Updated Category: Summit19    Notification Level: 3
+I, [19-09-26 16:37:56#1242]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-09-26 16:37:56#1242]  INFO -- : John_Butler        Summit19             Summit19               1        NOT Watching                  
+W, [19-09-26 16:37:57#1242]  WARN -- : {"success"=>"OK"}
+W, [19-09-26 16:37:58#1242]  WARN -- : Updated Category: Summit19    Notification Level: 3
+I, [19-09-26 16:38:30#1242]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-09-26 16:38:30#1242]  INFO -- : John_Mansperger    Summit19             Summit19               1        NOT Watching                  
+W, [19-09-26 16:38:32#1242]  WARN -- : {"success"=>"OK"}
+W, [19-09-26 16:38:33#1242]  WARN -- : Updated Category: Summit19    Notification Level: 3
+I, [19-09-26 16:38:53#1242]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-09-26 16:38:53#1242]  INFO -- : John_Oberstar      Summit19             Summit19               1        NOT Watching                  
+W, [19-09-26 16:38:54#1242]  WARN -- : {"success"=>"OK"}
+W, [19-09-26 16:38:56#1242]  WARN -- : Updated Category: Summit19    Notification Level: 3
+I, [19-09-26 16:40:13#1242]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-09-26 16:40:13#1242]  INFO -- : Kim_Miller         Summit19             Summit19               1        NOT Watching                  
+W, [19-09-26 16:40:15#1242]  WARN -- : {"success"=>"OK"}
+W, [19-09-26 16:40:16#1242]  WARN -- : Updated Category: Summit19    Notification Level: 3
+I, [19-09-26 16:50:34#1242]  INFO -- : Pass 11 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 17:05:45#1242]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-09-26 17:05:45#1242]  INFO -- : Ian_Wilkes               2019-09-25     2019-09-25       44           31376       2816                     11                
+W, [19-09-26 17:05:46#1242]  WARN -- : Removed man from Group 130: 
+W, [19-09-26 17:05:47#1242]  WARN -- : Added man to Group 133: 
+W, [19-09-26 17:05:48#1242]  WARN -- : Ian_Wilkes added to Z_Activity_B
+I, [19-09-26 17:21:40#1242]  INFO -- : Pass 12 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 17:52:21#1242]  INFO -- : Pass 13 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 18:23:04#1242]  INFO -- : Pass 14 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 18:53:49#1242]  INFO -- : Pass 15 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 19:24:34#1242]  INFO -- : Pass 16 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 19:55:21#1242]  INFO -- : Pass 17 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 20:26:33#1242]  INFO -- : Pass 18 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 21:01:26#1242]  INFO -- : Pass 19 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 21:32:42#1242]  INFO -- : Pass 20 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 22:03:35#1242]  INFO -- : Pass 21 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 22:34:36#1242]  INFO -- : Pass 22 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 23:05:33#1242]  INFO -- : Pass 23 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-26 23:36:28#1242]  INFO -- : Pass 24 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 00:07:03#1242]  INFO -- : memberful_expires_next_week   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-27 00:07:03#1242]  INFO -- : Vern_Mcgeorge                 2019-09-10     2019-08-25       11           3136        1104                  2019-10-04 MM R0    
+W, [19-09-27 00:07:03#1242]  WARN -- : OK
+I, [19-09-27 00:07:03#1242]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-27 00:07:03#1242]  INFO -- : Vern_Mcgeorge       2019-09-10     2019-08-25       11           3136        1104                  2019-10-04 MM R1    
+I, [19-09-27 00:07:04#1242]  INFO -- :   Message From:    Kim_Miller           Vern_Mcgeorge,KM_Admin Thank You for Owning Momentum!                          Hi Vern McGeorge,
+
+Mo     Pending                  
+I, [19-09-27 00:07:06#1242]  INFO -- :   Message From:    Kim_Miller           Vern_Mcgeorge,KM_Admin thank-you-for-owning-momentum                           Hi Vern McGeorge,
+
+Mo     Sent                     
+I, [19-09-27 00:07:15#1242]  INFO -- : Pass 25 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 00:38:01#1242]  INFO -- : Pass 26 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 01:08:53#1242]  INFO -- : Pass 27 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 01:39:47#1242]  INFO -- : Pass 28 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 02:10:35#1242]  INFO -- : Pass 29 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 02:41:30#1242]  INFO -- : Pass 30 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 03:12:09#1242]  INFO -- : Pass 31 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 03:42:48#1242]  INFO -- : Pass 32 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 04:13:25#1242]  INFO -- : Pass 33 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 04:44:02#1242]  INFO -- : Pass 34 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 05:14:39#1242]  INFO -- : Pass 35 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 05:45:24#1242]  INFO -- : Pass 36 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 06:16:16#1242]  INFO -- : Pass 37 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 06:47:06#1242]  INFO -- : Pass 38 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 07:18:03#1242]  INFO -- : Pass 39 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 07:48:59#1242]  INFO -- : Pass 40 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 08:19:52#1242]  INFO -- : Pass 41 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 08:50:52#1242]  INFO -- : Pass 42 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 09:21:59#1242]  INFO -- : Pass 43 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 09:53:10#1242]  INFO -- : Pass 44 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 10:24:07#1242]  INFO -- : Pass 45 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 10:54:56#1242]  INFO -- : Pass 46 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 11:25:55#1242]  INFO -- : Pass 47 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-27 11:56:49#1242]  INFO -- : Pass 48 complete for 211 users, 0 skipped. Waiting 5 minutes ...
+W, [19-09-27 12:10:43#1242]  WARN -- : Scan Level Exception Rescue type Interrupt, : Sleeping for 90 minutes ....
+I, [19-09-27 12:12:55#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:12:55#80912]  INFO -- : Charlie_Bedard           2019-09-19     2019-09-26       87           13681       911                         
+I, [19-09-27 12:12:59#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:12:59#80912]  INFO -- : Curt_Weil                2019-09-15     2019-09-25       129          12366       190                         
+I, [19-09-27 12:13:04#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:13:04#80912]  INFO -- : Dennis_Sorensen          2018-04-13     2019-09-25       7            1644        0                           
+I, [19-09-27 12:13:08#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:13:08#80912]  INFO -- : Jay_Larrick              2019-09-25     2019-09-20       18           6177        103                         
+I, [19-09-27 12:13:13#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:13:13#80912]  INFO -- : Jim_Knapp                2019-09-22     2019-09-26       201          5250        0                           
+I, [19-09-27 12:13:17#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:13:17#80912]  INFO -- : John_Butler              2019-09-24     2019-09-17       171          6816        432                         
+I, [19-09-27 12:13:22#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:13:22#80912]  INFO -- : Keith_Britany            2019-03-04     2019-06-17       16           2538        0                           
+I, [19-09-27 12:13:26#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:13:26#80912]  INFO -- : Lars_Rider               2018-01-05     2019-08-21       175          7014        0                           
+I, [19-09-27 12:13:31#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:13:31#80912]  INFO -- : Mike_Druke               2019-07-08     2019-03-12       6            1137        0                           
+I, [19-09-27 12:13:35#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:13:35#80912]  INFO -- : Mitch_Slomiak            2019-09-26     2019-09-27       179          7095        1015                        
+I, [19-09-27 12:13:40#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:13:40#80912]  INFO -- : Randy_Horton             2019-09-25     2019-09-24       350          23624       2214                        
+I, [19-09-27 12:13:44#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:13:44#80912]  INFO -- : Roger_Chapman            2019-03-08     2019-02-10       11           1864        0                           
+I, [19-09-27 12:13:49#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:13:49#80912]  INFO -- : Russ_Towne               2019-09-26     2019-09-25       184          18363       1195                        
+I, [19-09-27 12:13:53#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:13:53#80912]  INFO -- : Steve_Cross              2019-09-24     2019-09-11       88           7505        1228                        
+I, [19-09-27 12:13:58#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:13:58#80912]  INFO -- : Steve_Fitzsimons         2019-09-03     2019-09-25       200          4054        195                         
+I, [19-09-27 12:14:02#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:14:02#80912]  INFO -- : Tom_Feasby               2019-09-19     2019-09-19       212          30628       2519                        
+I, [19-09-27 12:14:07#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:14:07#80912]  INFO -- : Vern_Mcgeorge            2019-09-10     2019-08-25       11           3136        1104                        
+I, [19-09-27 12:14:11#80912]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:14:11#80912]  INFO -- : William_Burton           2019-03-15     2019-06-07       26           1089        0                           
+I, [19-09-27 12:14:11#80912]  INFO -- : Discourse Men                                           
+I, [19-09-27 12:14:11#80912]  INFO -- : Processed Users                     18                  
+I, [19-09-27 12:14:11#80912]  INFO -- : Skipped Users                       0                   
+I, [19-09-27 12:14:11#80912]  INFO -- : Messages Sent                       0                   
+I, [19-09-27 12:14:11#80912]  INFO -- : Message Send                        0                   
+I, [19-09-27 12:14:11#80912]  INFO -- : Message Send Targets                18                  
+I, [19-09-27 12:14:11#80912]  INFO -- : Message Send Updated                0                   
+I, [19-09-27 12:14:11#80912]  INFO -- : Messages Sent                       0                   
+I, [19-09-27 12:14:11#80912]  INFO -- : Users Added to Group                0                   
+I, [19-09-27 12:14:11#80912]  INFO -- : Users Removed from Group            0                   
+I, [19-09-27 12:22:09#81542]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:22:09#81542]  INFO -- : KM_Admin                 2019-09-27     2019-09-26       5            31106       333                         
+I, [19-09-27 12:22:09#81542]  INFO -- : Discourse Men                                           
+I, [19-09-27 12:22:09#81542]  INFO -- : Processed Users                     1                   
+I, [19-09-27 12:22:09#81542]  INFO -- : Skipped Users                       0                   
+I, [19-09-27 12:22:09#81542]  INFO -- : Messages Sent                       0                   
+I, [19-09-27 12:22:09#81542]  INFO -- : Message Send                        0                   
+I, [19-09-27 12:22:09#81542]  INFO -- : Message Send Targets                1                   
+I, [19-09-27 12:22:09#81542]  INFO -- : Message Send Updated                0                   
+I, [19-09-27 12:22:09#81542]  INFO -- : Messages Sent                       0                   
+I, [19-09-27 12:22:09#81542]  INFO -- : Users Added to Group                0                   
+I, [19-09-27 12:22:09#81542]  INFO -- : Users Removed from Group            0                   
+I, [19-09-27 12:22:18#81978]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 12:22:18#81978]  INFO -- : KM_Admin                 2019-09-27     2019-09-26       5            31106       333                         
+W, [19-09-27 12:22:18#81978]  WARN -- : Sending Private Message.
+I, [19-09-27 12:22:18#81978]  INFO -- :   Message From:    Moe_Rubenzahl        KM_Admin,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi Kim Miller,
+
+There     Pending                  
+I, [19-09-27 12:22:20#81978]  INFO -- :   Message From:    Moe_Rubenzahl        KM_Admin,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi Kim Miller,
+
+There     Sent                     
+I, [19-09-27 12:22:21#81978]  INFO -- : Discourse Men                                           
+I, [19-09-27 12:22:21#81978]  INFO -- : Processed Users                     1                   
+I, [19-09-27 12:22:21#81978]  INFO -- : Skipped Users                       0                   
+I, [19-09-27 12:22:21#81978]  INFO -- : Messages Sent                       0                   
+I, [19-09-27 12:22:21#81978]  INFO -- : Message Send                        0                   
+I, [19-09-27 12:22:21#81978]  INFO -- : Message Send Targets                1                   
+I, [19-09-27 12:22:21#81978]  INFO -- : Message Send Updated                1                   
+I, [19-09-27 12:22:21#81978]  INFO -- : Messages Sent                       1                   
+I, [19-09-27 12:22:21#81978]  INFO -- : Users Added to Group                0                   
+I, [19-09-27 12:22:21#81978]  INFO -- : Users Removed from Group            0                   
+I, [19-09-27 14:18:54#84494]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:18:54#84494]  INFO -- : KM_Admin                 2019-09-27     2019-09-26       5            31106       333                         
+W, [19-09-27 14:18:54#84494]  WARN -- : Sending Private Message.
+I, [19-09-27 14:18:54#84494]  INFO -- :   Message From:    Moe_Rubenzahl        KM_Admin             Coming Email Notification Change - Unless You Opt Out   Hi Kim Miller,
+
+There     Pending                  
+I, [19-09-27 14:18:56#84494]  INFO -- :   Message From:    Moe_Rubenzahl        KM_Admin             coming-email-notification-change-unless-you-opt-out     Hi Kim Miller,
+
+There     Sent                     
+I, [19-09-27 14:18:57#84494]  INFO -- : Discourse Men                                           
+I, [19-09-27 14:18:57#84494]  INFO -- : Processed Users                     1                   
+I, [19-09-27 14:18:57#84494]  INFO -- : Skipped Users                       0                   
+I, [19-09-27 14:18:57#84494]  INFO -- : Messages Sent                       0                   
+I, [19-09-27 14:18:57#84494]  INFO -- : Message Send                        0                   
+I, [19-09-27 14:18:57#84494]  INFO -- : Message Send Targets                1                   
+I, [19-09-27 14:18:57#84494]  INFO -- : Message Send Updated                1                   
+I, [19-09-27 14:18:57#84494]  INFO -- : Messages Sent                       1                   
+I, [19-09-27 14:18:57#84494]  INFO -- : Users Added to Group                0                   
+I, [19-09-27 14:18:57#84494]  INFO -- : Users Removed from Group            0                   
+I, [19-09-27 14:25:45#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:25:45#85045]  INFO -- : Charlie_Bedard           2019-09-19     2019-09-26       87           13681       911                         
+W, [19-09-27 14:25:45#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:25:45#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Charlie_Bedard,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi Charlie Bedard,
+
+T     Pending                  
+I, [19-09-27 14:25:46#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Charlie_Bedard,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi Charlie Bedard,
+
+T     Sent                     
+I, [19-09-27 14:25:52#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:25:52#85045]  INFO -- : Curt_Weil                2019-09-15     2019-09-25       129          12366       190                         
+W, [19-09-27 14:25:52#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:25:52#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Curt_Weil,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi Curt Weil,
+
+There      Pending                  
+I, [19-09-27 14:25:54#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Curt_Weil,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi Curt Weil,
+
+There      Sent                     
+I, [19-09-27 14:25:59#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:25:59#85045]  INFO -- : Dennis_Sorensen          2018-04-13     2019-09-25       7            1644        0                           
+W, [19-09-27 14:25:59#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:25:59#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Dennis_Sorensen,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi Dennis Sorensen,
+
+     Pending                  
+I, [19-09-27 14:26:01#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Dennis_Sorensen,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi Dennis Sorensen,
+
+     Sent                     
+I, [19-09-27 14:26:06#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:26:06#85045]  INFO -- : Jay_Larrick              2019-09-25     2019-09-20       18           6177        103                         
+W, [19-09-27 14:26:06#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:26:06#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Jay_Larrick,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi Jay Larrick,
+
+Ther     Pending                  
+I, [19-09-27 14:26:08#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Jay_Larrick,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi Jay Larrick,
+
+Ther     Sent                     
+I, [19-09-27 14:26:13#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:26:13#85045]  INFO -- : Jim_Knapp                2019-09-22     2019-09-27       202          5250        0                           
+W, [19-09-27 14:26:13#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:26:13#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Jim_Knapp,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi JimKnapp,
+
+There i     Pending                  
+I, [19-09-27 14:26:15#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Jim_Knapp,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi JimKnapp,
+
+There i     Sent                     
+I, [19-09-27 14:26:20#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:26:20#85045]  INFO -- : John_Butler              2019-09-24     2019-09-27       173          6816        432                         
+W, [19-09-27 14:26:20#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:26:20#85045]  INFO -- :   Message From:    Moe_Rubenzahl        John_Butler,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi John Butler III,
+
+     Pending                  
+I, [19-09-27 14:26:22#85045]  INFO -- :   Message From:    Moe_Rubenzahl        John_Butler,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi John Butler III,
+
+     Sent                     
+I, [19-09-27 14:26:27#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:26:27#85045]  INFO -- : Keith_Britany            2019-03-04     2019-06-17       16           2538        0                           
+W, [19-09-27 14:26:27#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:26:27#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Keith_Britany,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi Keith Britany,
+
+Th     Pending                  
+I, [19-09-27 14:26:29#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Keith_Britany,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi Keith Britany,
+
+Th     Sent                     
+I, [19-09-27 14:26:35#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:26:35#85045]  INFO -- : Lars_Rider               2018-01-05     2019-08-21       175          7014        0                           
+W, [19-09-27 14:26:35#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:26:35#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Lars_Rider,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi Larson Rider,
+
+The     Pending                  
+I, [19-09-27 14:26:36#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Lars_Rider,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi Larson Rider,
+
+The     Sent                     
+I, [19-09-27 14:26:42#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:26:42#85045]  INFO -- : Mike_Druke               2019-07-08     2019-03-12       6            1137        0                           
+W, [19-09-27 14:26:42#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:26:42#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Mike_Druke,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi Mike Druke,
+
+There     Pending                  
+I, [19-09-27 14:26:43#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Mike_Druke,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi Mike Druke,
+
+There     Sent                     
+I, [19-09-27 14:26:49#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:26:49#85045]  INFO -- : Mitch_Slomiak            2019-09-26     2019-09-27       180          7095        1015                        
+W, [19-09-27 14:26:49#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:26:49#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Mitch_Slomiak,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi Mitch Slomiak,
+
+Th     Pending                  
+I, [19-09-27 14:26:51#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Mitch_Slomiak,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi Mitch Slomiak,
+
+Th     Sent                     
+I, [19-09-27 14:26:56#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:26:56#85045]  INFO -- : Randy_Horton             2019-09-25     2019-09-24       350          23624       2214                        
+W, [19-09-27 14:26:56#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:26:56#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Randy_Horton,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi Randy Horton,
+
+The     Pending                  
+I, [19-09-27 14:26:58#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Randy_Horton,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi Randy Horton,
+
+The     Sent                     
+I, [19-09-27 14:27:03#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:27:03#85045]  INFO -- : Roger_Chapman            2019-03-08     2019-02-10       11           1864        0                           
+W, [19-09-27 14:27:03#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:27:03#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Roger_Chapman,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi Roger Chapman,
+
+Th     Pending                  
+I, [19-09-27 14:27:05#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Roger_Chapman,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi Roger Chapman,
+
+Th     Sent                     
+I, [19-09-27 14:27:11#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:27:11#85045]  INFO -- : Russ_Towne               2019-09-27     2019-09-27       185          18363       1195                        
+W, [19-09-27 14:27:11#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:27:11#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Russ_Towne,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi Russ Towne,
+
+There     Pending                  
+I, [19-09-27 14:27:12#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Russ_Towne,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi Russ Towne,
+
+There     Sent                     
+I, [19-09-27 14:27:18#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:27:18#85045]  INFO -- : Steve_Cross              2019-09-24     2019-09-11       88           7505        1228                        
+W, [19-09-27 14:27:18#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:27:18#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Steve_Cross,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi Steve Cross,
+
+Ther     Pending                  
+I, [19-09-27 14:27:19#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Steve_Cross,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi Steve Cross,
+
+Ther     Sent                     
+I, [19-09-27 14:27:25#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:27:25#85045]  INFO -- : Steve_Fitzsimons         2019-09-03     2019-09-25       200          4054        195                         
+W, [19-09-27 14:27:25#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:27:25#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Steve_Fitzsimons,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi Steve Fitzsimons,
+     Pending                  
+I, [19-09-27 14:27:27#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Steve_Fitzsimons,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi Steve Fitzsimons,
+     Sent                     
+I, [19-09-27 14:27:32#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:27:32#85045]  INFO -- : Tom_Feasby               2019-09-19     2019-09-19       212          30628       2519                        
+W, [19-09-27 14:27:32#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:27:32#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Tom_Feasby,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi Tom Feasby,
+
+There     Pending                  
+I, [19-09-27 14:27:34#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Tom_Feasby,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi Tom Feasby,
+
+There     Sent                     
+I, [19-09-27 14:27:39#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:27:39#85045]  INFO -- : Vern_Mcgeorge            2019-09-10     2019-08-25       11           3136        1104                        
+W, [19-09-27 14:27:39#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:27:39#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Vern_Mcgeorge,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi Vern McGeorge,
+
+Th     Pending                  
+I, [19-09-27 14:27:41#85045]  INFO -- :   Message From:    Moe_Rubenzahl        Vern_Mcgeorge,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi Vern McGeorge,
+
+Th     Sent                     
+I, [19-09-27 14:27:46#85045]  INFO -- : Legacy to Watching All   last_seen_at   last_posted_at   post_count   time_read   recent_time_read            
+I, [19-09-27 14:27:46#85045]  INFO -- : William_Burton           2019-03-15     2019-06-07       26           1089        0                           
+W, [19-09-27 14:27:46#85045]  WARN -- : Sending Private Message.
+I, [19-09-27 14:27:46#85045]  INFO -- :   Message From:    Moe_Rubenzahl        William_Burton,Kim_Miller,Steve_Scott Coming Email Notification Change - Unless You Opt Out   Hi Burton Burton,
+
+Th     Pending                  
+I, [19-09-27 14:27:48#85045]  INFO -- :   Message From:    Moe_Rubenzahl        William_Burton,Kim_Miller,Steve_Scott coming-email-notification-change-unless-you-opt-out     Hi Burton Burton,
+
+Th     Sent                     
+I, [19-09-27 14:27:49#85045]  INFO -- : Discourse Men                                           
+I, [19-09-27 14:27:49#85045]  INFO -- : Processed Users                     18                  
+I, [19-09-27 14:27:49#85045]  INFO -- : Skipped Users                       0                   
+I, [19-09-27 14:27:49#85045]  INFO -- : Messages Sent                       0                   
+I, [19-09-27 14:27:49#85045]  INFO -- : Message Send                        0                   
+I, [19-09-27 14:27:49#85045]  INFO -- : Message Send Targets                18                  
+I, [19-09-27 14:27:49#85045]  INFO -- : Message Send Updated                18                  
+I, [19-09-27 14:27:49#85045]  INFO -- : Messages Sent                       18                  
+I, [19-09-27 14:27:49#85045]  INFO -- : Users Added to Group                0                   
+I, [19-09-27 14:27:49#85045]  INFO -- : Users Removed from Group            0                   

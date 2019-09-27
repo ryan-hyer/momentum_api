@@ -1,12 +1,13 @@
 "Hi #{@man.user_details['name']},
 
-There is a tradeoff in how we manage our Momentum communications (originally Yahoo Groups and now Discourse): We can just let everyone see everything and risk complaints of *“too much mail!!”*; or we can try to regulate and get complaints of *“I get the feeling I am missing things.”*
+There is a tradeoff in how we manage our Momentum communications (originally Yahoo Groups and now Discourse): We can just let everyone see everything and risk complaints of *“too much mail!!”*; or we can try to regulate what they see and get complaints of *“I get the feeling I am missing things.”*
 
-We are not all comfortable with the defaults we are using now, and am asking a number of men who don’t use Discourse a whole lot – including you – to try something. I am asking you to let us change a default for you and see how it works for you.
+We are not entirely comfortable with the defaults we are using now, and are asking a number of men who don’t use Discourse a whole lot – including you – to try something. I am asking you to let us change a default for you and see how it works for you.
 
-The present default is that unless you do otherwise, you get only the FIRST message in a thread. This results in the feeling some of you have expressed that you might be missing messages. We want to switch it so you get every message in whatever categories you receive (e.g. Routine). If it’s too much, you can just shout “uncle” and we will change it back.
+The present default is that unless you do otherwise, you get only the FIRST message in a thread. You do not see replies to that message. This results in the feeling some of you have expressed that you might be missing messages. We want to switch it so you get every message in whatever categories you receive (e.g. Routine). If it’s too much, you can just shout “uncle” and we will change it back.
 
 If you do NOT want to try this, please reply and tell us. Otherwise, we will make the switch next week and see how it goes.
 
 Here to serve you,
+
 @Moe_Rubenzahl, @Kim_Miller, @Steve_Scott"
