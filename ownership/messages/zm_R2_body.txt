@@ -6,8 +6,6 @@ As of today your membership expired, but we want to give you a few more days bef
 
 If money is an issue, remember that Momentum provides scholarships where needed. [Contact the Chief privately here to make arrangements.](#{@schedule.discourse.options[:instance]}/g/Chief)
 
-Thank you for spending time with Momentum, and thank you for going the final mile so we may have a proper completion if that is your intention.
-
   -- Your Momentum Leadership
 
 Ownership Type: #{variable_hash['user_fields']['6']}"
