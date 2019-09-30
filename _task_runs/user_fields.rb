@@ -2,8 +2,8 @@ require_relative 'log/utility'
 require '../lib/momentum_api'
 
 discourse_options = {
-    do_live_updates:        true,
-    target_username:        'Bill_Heller',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby
+    do_live_updates:        false,
+    target_username:        'Samartha_Swaroop',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby
     target_groups:          %w(trust_level_0),       # Mods GreatX BraveHearts trust_level_0 trust_level_1
     instance:               'https://discourse.gomomentum.org',
     api_username:           'KM_Admin',

@@ -29701,3 +29701,475 @@ I, [19-09-30 06:10:24#54722]  INFO -- : Pass 71 complete for 212 users, 0 skippe
 I, [19-09-30 06:41:18#54722]  INFO -- : Pass 72 complete for 212 users, 0 skipped. Waiting 5 minutes ...
 I, [19-09-30 07:12:20#54722]  INFO -- : Pass 73 complete for 212 users, 0 skipped. Waiting 5 minutes ...
 I, [19-09-30 07:43:21#54722]  INFO -- : Pass 74 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 08:14:26#54722]  INFO -- : Pass 75 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 08:45:37#54722]  INFO -- : Pass 76 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 09:10:18#4505]  INFO -- : Discourse Men                                           
+I, [19-09-30 09:10:18#4505]  INFO -- : Processed Users                     0                   
+I, [19-09-30 09:10:18#4505]  INFO -- : Skipped Users                       0                   
+I, [19-09-30 09:10:18#4505]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 09:10:18#4505]  INFO -- : User Preferences                    0                   
+I, [19-09-30 09:10:18#4505]  INFO -- : User Preference Targets             0                   
+I, [19-09-30 09:10:18#4505]  INFO -- : User Preference Updated             0                   
+I, [19-09-30 09:10:57#4942]  INFO -- : User to be Updated   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 09:10:57#4942]  INFO -- : Samartha_Swaroop     2019-09-30     2019-09-26       1            251         251                   2019-10-08 MM    
+I, [19-09-30 09:10:57#4942]  INFO -- : Discourse Men                                           
+I, [19-09-30 09:10:57#4942]  INFO -- : Processed Users                     1                   
+I, [19-09-30 09:10:57#4942]  INFO -- : Skipped Users                       0                   
+I, [19-09-30 09:10:57#4942]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 09:10:57#4942]  INFO -- : User Preferences                    0                   
+I, [19-09-30 09:10:57#4942]  INFO -- : User Preference Targets             1                   
+I, [19-09-30 09:10:57#4942]  INFO -- : User Preference Updated             0                   
+I, [19-09-30 09:17:08#54722]  INFO -- : Pass 77 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 09:48:32#54722]  INFO -- : Pass 78 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 10:19:45#54722]  INFO -- : Pass 79 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 10:50:45#54722]  INFO -- : Pass 80 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 11:01:11#11529]  INFO -- : Discourse Men                                           
+I, [19-09-30 11:01:11#11529]  INFO -- : Processed Users                     1                   
+I, [19-09-30 11:01:11#11529]  INFO -- : Skipped Users                       0                   
+I, [19-09-30 11:01:11#11529]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 11:01:11#11529]  INFO -- : Ownership                           0                   
+I, [19-09-30 11:01:11#11529]  INFO -- : Ownership Targets                   0                   
+I, [19-09-30 11:01:11#11529]  INFO -- : Ownership Updated                   0                   
+I, [19-09-30 11:01:11#11529]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 11:01:11#11529]  INFO -- : Users Added to Group                0                   
+I, [19-09-30 11:01:11#11529]  INFO -- : Users Removed from Group            0                   
+I, [19-09-30 11:01:59#11965]  INFO -- : Discourse Men                                           
+I, [19-09-30 11:01:59#11965]  INFO -- : Processed Users                     1                   
+I, [19-09-30 11:01:59#11965]  INFO -- : Skipped Users                       0                   
+I, [19-09-30 11:01:59#11965]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 11:01:59#11965]  INFO -- : Ownership                           0                   
+I, [19-09-30 11:01:59#11965]  INFO -- : Ownership Targets                   0                   
+I, [19-09-30 11:01:59#11965]  INFO -- : Ownership Updated                   0                   
+I, [19-09-30 11:01:59#11965]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 11:01:59#11965]  INFO -- : Users Added to Group                0                   
+I, [19-09-30 11:01:59#11965]  INFO -- : Users Removed from Group            0                   
+I, [19-09-30 11:02:17#12402]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:02:17#12402]  INFO -- : Samartha_Swaroop  2019-09-30     2019-09-26       1            251         251                           
+I, [19-09-30 11:02:17#12402]  INFO -- : Discourse Men                                           
+I, [19-09-30 11:02:17#12402]  INFO -- : Processed Users                     1                   
+I, [19-09-30 11:02:17#12402]  INFO -- : Skipped Users                       0                   
+I, [19-09-30 11:02:17#12402]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 11:02:17#12402]  INFO -- : Ownership                           0                   
+I, [19-09-30 11:02:17#12402]  INFO -- : Ownership Targets                   0                   
+I, [19-09-30 11:02:17#12402]  INFO -- : Ownership Updated                   0                   
+I, [19-09-30 11:02:17#12402]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 11:02:17#12402]  INFO -- : Users Added to Group                0                   
+I, [19-09-30 11:02:17#12402]  INFO -- : Users Removed from Group            0                   
+I, [19-09-30 11:02:57#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:02:57#12842]  INFO -- : Aaron_Jenkins     2018-02-05     2017-09-30       1            6581        0                             
+I, [19-09-30 11:03:02#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:03:02#12842]  INFO -- : Alan_Schoen       2018-04-23     2018-09-25       0            925         0                             
+I, [19-09-30 11:03:16#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:03:16#12842]  INFO -- : Andrew_M_Webster  2019-08-03     2019-04-28       29           8585        22                            
+W, [19-09-30 11:03:29#12842]  WARN -- : TooManyRequests: Sleeping for 20 seconds ....
+I, [19-09-30 11:03:56#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:03:56#12842]  INFO -- : Barry_Dobyns      2018-08-25     2018-02-08       2            2152        0                             
+I, [19-09-30 11:04:10#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:04:10#12842]  INFO -- : Bill_Heller       2017-12-28     2019-02-07       9            1529        0                     4/1/2019    
+I, [19-09-30 11:04:23#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:04:23#12842]  INFO -- : Bill_Strahm       2016-11-24     2018-10-10       6            1562        0                             
+I, [19-09-30 11:04:46#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:04:46#12842]  INFO -- : Brad_Fino         2018-03-09     2018-01-08       16           4936        0                             
+I, [19-09-30 11:05:54#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:05:54#12842]  INFO -- : Chris_Wilke       2018-01-05     2018-02-16       1            598         0                             
+I, [19-09-30 11:06:08#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:06:08#12842]  INFO -- : Cole_Cameron      2019-05-06     2019-05-17       20           10133       0                             
+I, [19-09-30 11:06:49#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:06:49#12842]  INFO -- : Dave_Reid         2018-09-18                      0            20          0                             
+I, [19-09-30 11:07:25#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:07:25#12842]  INFO -- : David_Nickerson   2019-08-21     2019-08-20       2            4776        0                             
+I, [19-09-30 11:08:24#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:08:24#12842]  INFO -- : Gary_Chan         2018-07-11     2017-11-10       4            4507        0                             
+I, [19-09-30 11:09:00#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:09:00#12842]  INFO -- : Glenn_Davis       2018-01-24     2016-12-14       0            230         0                             
+I, [19-09-30 11:09:05#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:09:05#12842]  INFO -- : Graham_Howe       2018-09-24                      0            80          0                             
+I, [19-09-30 11:09:28#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:09:28#12842]  INFO -- : Igor_Ukrainczyk   2017-12-08                      0            23          0                             
+I, [19-09-30 11:10:05#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:10:05#12842]  INFO -- : Jason_Heimann     2016-12-26     2016-10-10       2            797         0                             
+I, [19-09-30 11:10:28#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:10:28#12842]  INFO -- : Jerry_Bowes       2017-06-02     2016-12-30       7            4366        0                             
+I, [19-09-30 11:11:00#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:11:00#12842]  INFO -- : Jim_LoConte       2018-02-18     2018-02-14       4            863         0                             
+I, [19-09-30 11:11:09#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:11:09#12842]  INFO -- : Johan_Knall       2018-08-07     2018-10-11       1            2896        0                             
+I, [19-09-30 11:11:45#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:11:45#12842]  INFO -- : Johnny_Alexander  2017-05-13     2017-08-05       1            6022        0                             
+I, [19-09-30 11:11:59#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:11:59#12842]  INFO -- : John_Thompson     2019-05-10     2018-11-26       91           94985       0                             
+I, [19-09-30 11:12:26#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:12:26#12842]  INFO -- : Ken_Hartman       2017-11-29     2016-11-17       0            601         0                             
+I, [19-09-30 11:12:35#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:12:35#12842]  INFO -- : Kevin_Shutta      2018-05-26     2018-03-18       1            776         0                             
+I, [19-09-30 11:12:44#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:12:44#12842]  INFO -- : Kim_test_Staged   2019-09-23     2018-10-26       1            0           0                             
+I, [19-09-30 11:12:58#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:12:58#12842]  INFO -- : Larry_Shanahan    2019-02-19     2018-12-19       1            2631        0                             
+I, [19-09-30 11:13:16#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:13:16#12842]  INFO -- : Maarten_Korringa  2018-01-06     2017-01-20       1            3712        0                             
+I, [19-09-30 11:14:11#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:14:11#12842]  INFO -- : MD_Admin                                          0            0           0                             
+I, [19-09-30 11:14:15#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:14:15#12842]  INFO -- : Michael_Hayes     2019-02-28     2018-10-16       16           3805        0                             
+I, [19-09-30 11:14:33#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:14:33#12842]  INFO -- : Michael_Wilkins   2019-07-22                      0            0           0                             
+I, [19-09-30 11:14:38#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:14:38#12842]  INFO -- : Michael_Wilson    2019-07-23     2019-04-27       29           12441       0                             
+I, [19-09-30 11:15:23#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:15:23#12842]  INFO -- : Mohamed_Abdelhay  2016-09-23     2016-09-23       2            668         0                             
+I, [19-09-30 11:15:28#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:15:28#12842]  INFO -- : Narjit_Chadha     2018-09-19     2016-10-12       0            40          0                             
+I, [19-09-30 11:15:59#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:15:59#12842]  INFO -- : Peter_Sanchez     2018-03-21                      0            611         0                             
+I, [19-09-30 11:16:08#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:16:08#12842]  INFO -- : Praveen_Rangu     2017-01-30     2017-01-02       1            293         0                             
+I, [19-09-30 11:16:41#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:16:41#12842]  INFO -- : Robert_Nelson     2017-01-03     2018-10-11       0            0           0                             
+I, [19-09-30 11:17:08#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:17:08#12842]  INFO -- : Samartha_Swaroop  2019-09-30     2019-09-26       1            251         251                           
+I, [19-09-30 11:17:54#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:17:54#12842]  INFO -- : Stephen_Gorman    2017-07-19     2019-05-11       3            2507        0                             
+I, [19-09-30 11:17:58#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:17:58#12842]  INFO -- : Steve_Benjamin    2017-11-16     2016-11-26       0            857         0                             
+I, [19-09-30 11:18:12#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:18:12#12842]  INFO -- : Steve_Lang        2017-07-01     2017-06-12       41           35305       0                             
+I, [19-09-30 11:18:30#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:18:30#12842]  INFO -- : Timothy_Plantikow 2017-12-21                      0            149         0                             
+I, [19-09-30 11:18:39#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:18:39#12842]  INFO -- : Toby_Ward         2017-11-02     2017-11-02       0            129         0                             
+I, [19-09-30 11:18:48#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:18:48#12842]  INFO -- : Tonio_Schutze     2019-01-09                      0            351         0                             
+I, [19-09-30 11:19:02#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:19:02#12842]  INFO -- : Tshombe_Moore     2016-11-22     2016-12-30       4            1142        0                             
+I, [19-09-30 11:19:06#12842]  INFO -- : trial_new_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 11:19:06#12842]  INFO -- : Udy_Gold          2017-01-13     2017-01-20       12           1023        0                             
+I, [19-09-30 11:19:16#12842]  INFO -- : Discourse Men                                           
+I, [19-09-30 11:19:16#12842]  INFO -- : Processed Users                     212                 
+I, [19-09-30 11:19:16#12842]  INFO -- : Skipped Users                       0                   
+I, [19-09-30 11:19:16#12842]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 11:19:16#12842]  INFO -- : Ownership                           0                   
+I, [19-09-30 11:19:16#12842]  INFO -- : Ownership Targets                   0                   
+I, [19-09-30 11:19:16#12842]  INFO -- : Ownership Updated                   0                   
+I, [19-09-30 11:19:16#12842]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 11:19:16#12842]  INFO -- : Users Added to Group                0                   
+I, [19-09-30 11:19:16#12842]  INFO -- : Users Removed from Group            0                   
+W, [19-09-30 11:03:25#54722]  WARN -- : Scan Level Exception Rescue type DiscourseApi::TooManyRequests, {"errors"=>["You’ve performed this action too many times. Please wait a few seconds before trying again."], "error_type"=>"rate_limit", "extras"=>{"wait_seconds"=>1}}: Sleeping for 90 minutes ....
+I, [19-09-30 12:59:23#54722]  INFO -- : Pass 81 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 13:02:26#15606]  INFO -- : Discourse Men                                           
+I, [19-09-30 13:02:26#15606]  INFO -- : Processed Users                     1                   
+I, [19-09-30 13:02:26#15606]  INFO -- : Skipped Users                       0                   
+I, [19-09-30 13:02:26#15606]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 13:02:26#15606]  INFO -- : Ownership                           0                   
+I, [19-09-30 13:02:26#15606]  INFO -- : Ownership Targets                   0                   
+I, [19-09-30 13:02:26#15606]  INFO -- : Ownership Updated                   0                   
+I, [19-09-30 13:02:26#15606]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 13:02:26#15606]  INFO -- : Users Added to Group                0                   
+I, [19-09-30 13:02:26#15606]  INFO -- : Users Removed from Group            0                   
+I, [19-09-30 13:03:50#16062]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:03:50#16062]  INFO -- : Kim_Miller            2019-09-30     2019-09-30       2040         856942      55306                         
+I, [19-09-30 13:03:50#16062]  INFO -- : Discourse Men                                           
+I, [19-09-30 13:03:50#16062]  INFO -- : Processed Users                     1                   
+I, [19-09-30 13:03:50#16062]  INFO -- : Skipped Users                       0                   
+I, [19-09-30 13:03:50#16062]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 13:03:50#16062]  INFO -- : Ownership                           0                   
+I, [19-09-30 13:03:50#16062]  INFO -- : Ownership Targets                   1                   
+I, [19-09-30 13:03:50#16062]  INFO -- : Ownership Updated                   0                   
+I, [19-09-30 13:03:50#16062]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 13:03:50#16062]  INFO -- : Users Added to Group                0                   
+I, [19-09-30 13:03:50#16062]  INFO -- : Users Removed from Group            0                   
+I, [19-09-30 13:04:14#16505]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:04:14#16505]  INFO -- : Kim_Miller            2019-09-30     2019-09-30       2040         856942      55306                         
+W, [19-09-30 13:04:15#16505]  WARN -- : OK
+I, [19-09-30 13:04:15#16505]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:04:15#16505]  INFO -- : Kim_Miller          2019-09-30     2019-09-30       2040         856942      55306                 2019-09-30 MM R1    
+W, [19-09-30 13:04:17#16505]  WARN -- : Removed man from Group 45: 
+W, [19-09-30 13:04:19#16505]  WARN -- : Kim_Miller not currently not in 45 Ownership group.
+W, [19-09-30 13:04:19#16505]  WARN -- : Kim_Miller's moderation revoked.
+I, [19-09-30 13:04:19#16505]  INFO -- : Discourse Men                                           
+I, [19-09-30 13:04:19#16505]  INFO -- : Processed Users                     1                   
+I, [19-09-30 13:04:19#16505]  INFO -- : Skipped Users                       0                   
+I, [19-09-30 13:04:19#16505]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 13:04:19#16505]  INFO -- : Ownership                           0                   
+I, [19-09-30 13:04:19#16505]  INFO -- : Ownership Targets                   1                   
+I, [19-09-30 13:04:19#16505]  INFO -- : Ownership Updated                   1                   
+I, [19-09-30 13:04:19#16505]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 13:04:19#16505]  INFO -- : Users Added to Group                0                   
+I, [19-09-30 13:04:19#16505]  INFO -- : Users Removed from Group            1                   
+I, [19-09-30 13:09:28#17003]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:09:28#17003]  INFO -- : Tshombe_Moore         2016-11-22     2016-12-30       4            1142        0                             
+I, [19-09-30 13:09:28#17003]  INFO -- : Discourse Men                                           
+I, [19-09-30 13:09:28#17003]  INFO -- : Processed Users                     1                   
+I, [19-09-30 13:09:28#17003]  INFO -- : Skipped Users                       0                   
+I, [19-09-30 13:09:28#17003]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 13:09:28#17003]  INFO -- : Ownership                           0                   
+I, [19-09-30 13:09:28#17003]  INFO -- : Ownership Targets                   1                   
+I, [19-09-30 13:09:28#17003]  INFO -- : Ownership Updated                   0                   
+I, [19-09-30 13:09:28#17003]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 13:09:28#17003]  INFO -- : Users Added to Group                0                   
+I, [19-09-30 13:09:28#17003]  INFO -- : Users Removed from Group            0                   
+I, [19-09-30 13:09:54#17439]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:09:54#17439]  INFO -- : Tshombe_Moore         2016-11-22     2016-12-30       4            1142        0                             
+W, [19-09-30 13:09:54#17439]  WARN -- : OK
+I, [19-09-30 13:09:54#17439]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:09:54#17439]  INFO -- : Tshombe_Moore       2016-11-22     2016-12-30       4            1142        0                     2019-09-30 MM R1    
+I, [19-09-30 13:09:55#17439]  INFO -- : Discourse Men                                           
+I, [19-09-30 13:09:55#17439]  INFO -- : Processed Users                     1                   
+I, [19-09-30 13:09:55#17439]  INFO -- : Skipped Users                       0                   
+I, [19-09-30 13:09:55#17439]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 13:09:55#17439]  INFO -- : Ownership                           0                   
+I, [19-09-30 13:09:55#17439]  INFO -- : Ownership Targets                   1                   
+I, [19-09-30 13:09:55#17439]  INFO -- : Ownership Updated                   1                   
+I, [19-09-30 13:09:55#17439]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 13:09:55#17439]  INFO -- : Users Added to Group                0                   
+I, [19-09-30 13:09:55#17439]  INFO -- : Users Removed from Group            0                   
+I, [19-09-30 13:19:42#54722]  INFO -- : Non Owner   last_seen_at   last_posted_at   post_count   time_read   recent_time_read   trust_level         
+I, [19-09-30 13:19:42#54722]  INFO -- : Kim_Miller  2019-09-30     2019-09-30       2040         856942      55306              4                   
+W, [19-09-30 13:19:43#54722]  WARN -- : Kim_Miller Downgraded
+I, [19-09-30 13:19:43#54722]  INFO -- : Non Owner   last_seen_at   last_posted_at   post_count   time_read   recent_time_read   trust_level         
+I, [19-09-30 13:19:43#54722]  INFO -- : Kim_Miller  2019-09-30     2019-09-30       2040         856942      55306              0                   
+I, [19-09-30 13:29:50#54722]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:29:50#54722]  INFO -- : Tshombe_Moore             2016-11-22     2016-12-30       4            1142        0                     2019-09-30 MM R1    
+W, [19-09-30 13:29:51#54722]  WARN -- : OK
+I, [19-09-30 13:29:51#54722]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:29:51#54722]  INFO -- : Tshombe_Moore       2016-11-22     2016-12-30       4            1142        0                     2019-09-30 MM R2    
+I, [19-09-30 13:29:52#54722]  INFO -- :   Message From:    Kim_Miller           Tshombe_Moore,KM_Admin You Are an Important Momentum Owner!                    Hi Tshombe Moore,
+
+We     Pending                  
+I, [19-09-30 13:29:54#54722]  INFO -- :   Message From:    Kim_Miller           Tshombe_Moore,KM_Admin you-are-an-important-momentum-owner                     Hi Tshombe Moore,
+
+We     Sent                     
+I, [19-09-30 13:30:15#54722]  INFO -- : Pass 82 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 13:48:55#18526]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:48:55#18526]  INFO -- : Aaron_Jenkins         2018-02-05     2017-09-30       1            6581        0                             
+I, [19-09-30 13:48:59#18526]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:48:59#18526]  INFO -- : Alan_Schoen           2018-04-23     2018-09-25       0            925         0                             
+I, [19-09-30 13:49:13#18526]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:49:13#18526]  INFO -- : Andrew_M_Webster      2019-08-03     2019-04-28       29           8585        22                            
+W, [19-09-30 13:49:18#18526]  WARN -- : TooManyRequests: Sleeping for 20 seconds ....
+I, [19-09-30 13:49:54#18526]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:49:54#18526]  INFO -- : Barry_Dobyns          2018-08-25     2018-02-08       2            2152        0                             
+I, [19-09-30 13:50:07#18526]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:50:07#18526]  INFO -- : Bill_Heller           2017-12-28     2019-02-07       9            1529        0                     4/1/2019    
+I, [19-09-30 13:50:21#18526]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:50:21#18526]  INFO -- : Bill_Strahm           2016-11-24     2018-10-10       6            1562        0                             
+I, [19-09-30 13:51:06#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:51:06#18987]  INFO -- : Aaron_Jenkins         2018-02-05     2017-09-30       1            6581        0                             
+W, [19-09-30 13:51:06#18987]  WARN -- : OK
+I, [19-09-30 13:51:06#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:51:06#18987]  INFO -- : Aaron_Jenkins       2018-02-05     2017-09-30       1            6581        0                     2019-09-30 MM R1    
+I, [19-09-30 13:51:11#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:51:11#18987]  INFO -- : Alan_Schoen           2018-04-23     2018-09-25       0            925         0                             
+W, [19-09-30 13:51:12#18987]  WARN -- : OK
+I, [19-09-30 13:51:12#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:51:12#18987]  INFO -- : Alan_Schoen         2018-04-23     2018-09-25       0            925         0                     2019-09-30 MM R1    
+I, [19-09-30 13:51:26#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:51:26#18987]  INFO -- : Andrew_M_Webster      2019-08-03     2019-04-28       29           8585        22                            
+W, [19-09-30 13:51:27#18987]  WARN -- : OK
+I, [19-09-30 13:51:27#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:51:27#18987]  INFO -- : Andrew_M_Webster    2019-08-03     2019-04-28       29           8585        22                    2019-09-30 MM R1    
+I, [19-09-30 13:51:50#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:51:50#18987]  INFO -- : Barry_Dobyns          2018-08-25     2018-02-08       2            2152        0                             
+W, [19-09-30 13:51:50#18987]  WARN -- : OK
+I, [19-09-30 13:51:51#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:51:51#18987]  INFO -- : Barry_Dobyns        2018-08-25     2018-02-08       2            2152        0                     2019-09-30 MM R1    
+I, [19-09-30 13:52:05#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:52:05#18987]  INFO -- : Bill_Heller           2017-12-28     2019-02-07       9            1529        0                     4/1/2019    
+W, [19-09-30 13:52:05#18987]  WARN -- : OK
+I, [19-09-30 13:52:06#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:52:06#18987]  INFO -- : Bill_Heller         2017-12-28     2019-02-07       9            1529        0                     2019-09-30 MM R1    
+I, [19-09-30 13:52:20#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:52:20#18987]  INFO -- : Bill_Strahm           2016-11-24     2018-10-10       6            1562        0                             
+W, [19-09-30 13:52:20#18987]  WARN -- : OK
+I, [19-09-30 13:52:21#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:52:21#18987]  INFO -- : Bill_Strahm         2016-11-24     2018-10-10       6            1562        0                     2019-09-30 MM R1    
+I, [19-09-30 13:52:44#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:52:44#18987]  INFO -- : Brad_Fino             2018-03-09     2018-01-08       16           4936        0                             
+W, [19-09-30 13:52:44#18987]  WARN -- : OK
+I, [19-09-30 13:52:45#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:52:45#18987]  INFO -- : Brad_Fino           2018-03-09     2018-01-08       16           4936        0                     2019-09-30 MM R1    
+I, [19-09-30 13:53:54#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:53:54#18987]  INFO -- : Chris_Wilke           2018-01-05     2018-02-16       1            598         0                             
+W, [19-09-30 13:53:54#18987]  WARN -- : OK
+I, [19-09-30 13:53:54#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:53:54#18987]  INFO -- : Chris_Wilke         2018-01-05     2018-02-16       1            598         0                     2019-09-30 MM R1    
+I, [19-09-30 13:54:09#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:54:09#18987]  INFO -- : Cole_Cameron          2019-05-06     2019-05-17       20           10133       0                             
+W, [19-09-30 13:54:09#18987]  WARN -- : OK
+I, [19-09-30 13:54:09#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:54:09#18987]  INFO -- : Cole_Cameron        2019-05-06     2019-05-17       20           10133       0                     2019-09-30 MM R1    
+I, [19-09-30 13:54:51#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:54:51#18987]  INFO -- : Dave_Reid             2018-09-18                      0            20          0                             
+W, [19-09-30 13:54:51#18987]  WARN -- : OK
+I, [19-09-30 13:54:51#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:54:51#18987]  INFO -- : Dave_Reid           2018-09-18                      0            20          0                     2019-09-30 MM R1    
+I, [19-09-30 13:55:29#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:55:29#18987]  INFO -- : David_Nickerson       2019-08-21     2019-08-20       2            4776        0                             
+W, [19-09-30 13:55:29#18987]  WARN -- : OK
+I, [19-09-30 13:55:29#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:55:29#18987]  INFO -- : David_Nickerson     2019-08-21     2019-08-20       2            4776        0                     2019-09-30 MM R1    
+I, [19-09-30 13:56:29#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:56:29#18987]  INFO -- : Gary_Chan             2018-07-11     2017-11-10       4            4507        0                             
+W, [19-09-30 13:56:29#18987]  WARN -- : OK
+I, [19-09-30 13:56:29#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:56:29#18987]  INFO -- : Gary_Chan           2018-07-11     2017-11-10       4            4507        0                     2019-09-30 MM R1    
+I, [19-09-30 13:57:06#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:57:06#18987]  INFO -- : Glenn_Davis           2018-01-24     2016-12-14       0            230         0                             
+W, [19-09-30 13:57:07#18987]  WARN -- : OK
+I, [19-09-30 13:57:07#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:57:07#18987]  INFO -- : Glenn_Davis         2018-01-24     2016-12-14       0            230         0                     2019-09-30 MM R1    
+I, [19-09-30 13:57:12#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:57:12#18987]  INFO -- : Graham_Howe           2018-09-24                      0            80          0                             
+W, [19-09-30 13:57:12#18987]  WARN -- : OK
+I, [19-09-30 13:57:13#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:57:13#18987]  INFO -- : Graham_Howe         2018-09-24                      0            80          0                     2019-09-30 MM R1    
+I, [19-09-30 13:57:36#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:57:36#18987]  INFO -- : Igor_Ukrainczyk       2017-12-08                      0            23          0                             
+W, [19-09-30 13:57:36#18987]  WARN -- : OK
+I, [19-09-30 13:57:36#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:57:36#18987]  INFO -- : Igor_Ukrainczyk     2017-12-08                      0            23          0                     2019-09-30 MM R1    
+I, [19-09-30 13:58:13#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:58:13#18987]  INFO -- : Jason_Heimann         2016-12-26     2016-10-10       2            797         0                             
+W, [19-09-30 13:58:14#18987]  WARN -- : OK
+I, [19-09-30 13:58:14#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:58:14#18987]  INFO -- : Jason_Heimann       2016-12-26     2016-10-10       2            797         0                     2019-09-30 MM R1    
+I, [19-09-30 13:58:37#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:58:37#18987]  INFO -- : Jerry_Bowes           2017-06-02     2016-12-30       7            4366        0                             
+W, [19-09-30 13:58:37#18987]  WARN -- : OK
+I, [19-09-30 13:58:38#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:58:38#18987]  INFO -- : Jerry_Bowes         2017-06-02     2016-12-30       7            4366        0                     2019-09-30 MM R1    
+I, [19-09-30 13:59:10#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:59:10#18987]  INFO -- : Jim_LoConte           2018-02-18     2018-02-14       4            863         0                             
+W, [19-09-30 13:59:11#18987]  WARN -- : OK
+I, [19-09-30 13:59:11#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:59:11#18987]  INFO -- : Jim_LoConte         2018-02-18     2018-02-14       4            863         0                     2019-09-30 MM R1    
+I, [19-09-30 13:59:21#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:59:21#18987]  INFO -- : Johan_Knall           2018-08-07     2018-10-11       1            2896        0                             
+W, [19-09-30 13:59:21#18987]  WARN -- : OK
+I, [19-09-30 13:59:21#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:59:21#18987]  INFO -- : Johan_Knall         2018-08-07     2018-10-11       1            2896        0                     2019-09-30 MM R1    
+I, [19-09-30 13:59:59#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:59:59#18987]  INFO -- : Johnny_Alexander      2017-05-13     2017-08-05       1            6022        0                             
+W, [19-09-30 13:59:59#18987]  WARN -- : OK
+I, [19-09-30 13:59:59#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 13:59:59#18987]  INFO -- : Johnny_Alexander    2017-05-13     2017-08-05       1            6022        0                     2019-09-30 MM R1    
+I, [19-09-30 14:00:14#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:00:14#18987]  INFO -- : John_Thompson         2019-05-10     2018-11-26       91           94985       0                             
+W, [19-09-30 14:00:14#18987]  WARN -- : OK
+I, [19-09-30 14:00:14#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:00:14#18987]  INFO -- : John_Thompson       2019-05-10     2018-11-26       91           94985       0                     2019-09-30 MM R1    
+I, [19-09-30 14:00:43#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:00:43#18987]  INFO -- : Ken_Hartman           2017-11-29     2016-11-17       0            601         0                             
+W, [19-09-30 14:00:44#18987]  WARN -- : OK
+I, [19-09-30 14:00:44#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:00:44#18987]  INFO -- : Ken_Hartman         2017-11-29     2016-11-17       0            601         0                     2019-09-30 MM R1    
+I, [19-09-30 14:00:54#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:00:54#18987]  INFO -- : Kevin_Shutta          2018-05-26     2018-03-18       1            776         0                             
+W, [19-09-30 14:00:54#18987]  WARN -- : OK
+I, [19-09-30 14:00:54#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:00:54#18987]  INFO -- : Kevin_Shutta        2018-05-26     2018-03-18       1            776         0                     2019-09-30 MM R1    
+I, [19-09-30 14:01:04#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:01:04#18987]  INFO -- : Kim_test_Staged       2019-09-23     2018-10-26       1            0           0                             
+W, [19-09-30 14:01:04#18987]  WARN -- : OK
+I, [19-09-30 14:01:05#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:01:05#18987]  INFO -- : Kim_test_Staged     2019-09-23     2018-10-26       1            0           0                     2019-09-30 MM R1    
+I, [19-09-30 14:01:19#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:01:19#18987]  INFO -- : Larry_Shanahan        2019-02-19     2018-12-19       1            2631        0                             
+W, [19-09-30 14:01:19#18987]  WARN -- : OK
+I, [19-09-30 14:01:19#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:01:19#18987]  INFO -- : Larry_Shanahan      2019-02-19     2018-12-19       1            2631        0                     2019-09-30 MM R1    
+I, [19-09-30 14:01:39#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:01:39#18987]  INFO -- : Maarten_Korringa      2018-01-06     2017-01-20       1            3712        0                             
+W, [19-09-30 14:01:39#18987]  WARN -- : OK
+I, [19-09-30 14:01:39#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:01:39#18987]  INFO -- : Maarten_Korringa    2018-01-06     2017-01-20       1            3712        0                     2019-09-30 MM R1    
+I, [19-09-30 14:02:35#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:02:35#18987]  INFO -- : MD_Admin                                              0            0           0                             
+W, [19-09-30 14:02:35#18987]  WARN -- : OK
+I, [19-09-30 14:02:35#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:02:35#18987]  INFO -- : MD_Admin                                            0            0           0                     2019-09-30 MM R1    
+I, [19-09-30 14:02:40#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:02:40#18987]  INFO -- : Michael_Hayes         2019-02-28     2018-10-16       16           3805        0                             
+W, [19-09-30 14:02:41#18987]  WARN -- : OK
+I, [19-09-30 14:02:41#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:02:41#18987]  INFO -- : Michael_Hayes       2019-02-28     2018-10-16       16           3805        0                     2019-09-30 MM R1    
+I, [19-09-30 14:03:00#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:03:00#18987]  INFO -- : Michael_Wilkins       2019-07-22                      0            0           0                             
+W, [19-09-30 14:03:00#18987]  WARN -- : OK
+I, [19-09-30 14:03:00#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:03:00#18987]  INFO -- : Michael_Wilkins     2019-07-22                      0            0           0                     2019-09-30 MM R1    
+I, [19-09-30 14:03:06#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:03:06#18987]  INFO -- : Michael_Wilson        2019-07-23     2019-04-27       29           12441       0                             
+W, [19-09-30 14:03:06#18987]  WARN -- : OK
+I, [19-09-30 14:03:06#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:03:06#18987]  INFO -- : Michael_Wilson      2019-07-23     2019-04-27       29           12441       0                     2019-09-30 MM R1    
+I, [19-09-30 14:03:52#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:03:52#18987]  INFO -- : Mohamed_Abdelhay      2016-09-23     2016-09-23       2            668         0                             
+W, [19-09-30 14:03:53#18987]  WARN -- : OK
+I, [19-09-30 14:03:53#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:03:53#18987]  INFO -- : Mohamed_Abdelhay    2016-09-23     2016-09-23       2            668         0                     2019-09-30 MM R1    
+I, [19-09-30 14:03:58#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:03:58#18987]  INFO -- : Narjit_Chadha         2018-09-19     2016-10-12       0            40          0                             
+W, [19-09-30 14:03:59#18987]  WARN -- : OK
+I, [19-09-30 14:03:59#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:03:59#18987]  INFO -- : Narjit_Chadha       2018-09-19     2016-10-12       0            40          0                     2019-09-30 MM R1    
+I, [19-09-30 14:04:31#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:04:31#18987]  INFO -- : Peter_Sanchez         2018-03-21                      0            611         0                             
+W, [19-09-30 14:04:31#18987]  WARN -- : OK
+I, [19-09-30 14:04:32#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:04:32#18987]  INFO -- : Peter_Sanchez       2018-03-21                      0            611         0                     2019-09-30 MM R1    
+I, [19-09-30 14:04:42#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:04:42#18987]  INFO -- : Praveen_Rangu         2017-01-30     2017-01-02       1            293         0                             
+W, [19-09-30 14:04:42#18987]  WARN -- : OK
+I, [19-09-30 14:04:42#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:04:42#18987]  INFO -- : Praveen_Rangu       2017-01-30     2017-01-02       1            293         0                     2019-09-30 MM R1    
+I, [19-09-30 14:05:15#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:05:15#18987]  INFO -- : Robert_Nelson         2017-01-03     2018-10-11       0            0           0                             
+W, [19-09-30 14:05:15#18987]  WARN -- : OK
+I, [19-09-30 14:05:15#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:05:15#18987]  INFO -- : Robert_Nelson       2017-01-03     2018-10-11       0            0           0                     2019-09-30 MM R1    
+I, [19-09-30 14:06:29#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:06:29#18987]  INFO -- : Stephen_Gorman        2017-07-19     2019-05-11       3            2507        0                             
+W, [19-09-30 14:06:29#18987]  WARN -- : OK
+I, [19-09-30 14:06:29#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:06:29#18987]  INFO -- : Stephen_Gorman      2017-07-19     2019-05-11       3            2507        0                     2019-09-30 MM R1    
+I, [19-09-30 14:06:35#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:06:35#18987]  INFO -- : Steve_Benjamin        2017-11-16     2016-11-26       0            857         0                             
+W, [19-09-30 14:06:35#18987]  WARN -- : OK
+I, [19-09-30 14:06:35#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:06:35#18987]  INFO -- : Steve_Benjamin      2017-11-16     2016-11-26       0            857         0                     2019-09-30 MM R1    
+I, [19-09-30 14:06:50#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:06:50#18987]  INFO -- : Steve_Lang            2017-07-01     2017-06-12       41           35305       0                             
+W, [19-09-30 14:06:50#18987]  WARN -- : OK
+I, [19-09-30 14:06:50#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:06:50#18987]  INFO -- : Steve_Lang          2017-07-01     2017-06-12       41           35305       0                     2019-09-30 MM R1    
+I, [19-09-30 14:07:09#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:07:09#18987]  INFO -- : Timothy_Plantikow     2017-12-21                      0            149         0                             
+W, [19-09-30 14:07:10#18987]  WARN -- : OK
+I, [19-09-30 14:07:10#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:07:10#18987]  INFO -- : Timothy_Plantikow   2017-12-21                      0            149         0                     2019-09-30 MM R1    
+I, [19-09-30 14:07:20#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:07:20#18987]  INFO -- : Toby_Ward             2017-11-02     2017-11-02       0            129         0                             
+W, [19-09-30 14:07:20#18987]  WARN -- : OK
+I, [19-09-30 14:07:20#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:07:20#18987]  INFO -- : Toby_Ward           2017-11-02     2017-11-02       0            129         0                     2019-09-30 MM R1    
+I, [19-09-30 14:07:30#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:07:30#18987]  INFO -- : Tonio_Schutze         2019-01-09                      0            351         0                             
+W, [19-09-30 14:07:30#18987]  WARN -- : OK
+I, [19-09-30 14:07:30#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:07:30#18987]  INFO -- : Tonio_Schutze       2019-01-09                      0            351         0                     2019-09-30 MM R1    
+I, [19-09-30 14:07:49#18987]  INFO -- : old_memberful_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:07:49#18987]  INFO -- : Udy_Gold              2017-01-13     2017-01-20       12           1023        0                             
+W, [19-09-30 14:07:50#18987]  WARN -- : OK
+I, [19-09-30 14:07:50#18987]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:07:50#18987]  INFO -- : Udy_Gold            2017-01-13     2017-01-20       12           1023        0                     2019-09-30 MM R1    
+I, [19-09-30 14:08:00#18987]  INFO -- : Discourse Men                                           
+I, [19-09-30 14:08:00#18987]  INFO -- : Processed Users                     212                 
+I, [19-09-30 14:08:00#18987]  INFO -- : Skipped Users                       0                   
+I, [19-09-30 14:08:00#18987]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 14:08:00#18987]  INFO -- : Ownership                           0                   
+I, [19-09-30 14:08:00#18987]  INFO -- : Ownership Targets                   42                  
+I, [19-09-30 14:08:00#18987]  INFO -- : Ownership Updated                   42                  
+I, [19-09-30 14:08:00#18987]  INFO -- : Messages Sent                       0                   
+I, [19-09-30 14:08:00#18987]  INFO -- : Users Added to Group                0                   
+I, [19-09-30 14:08:00#18987]  INFO -- : Users Removed from Group            0                   
