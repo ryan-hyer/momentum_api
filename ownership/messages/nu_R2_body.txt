@@ -1,0 +1,12 @@
+"Hi #{variable_hash['name']},
+
+Becoming an Owner of Momentum is just clicks away. In addition to your team experience, Momentum has vast resources to promote your growth, many of which are posted in the Momentum Library on our Community Forum.
+
+[Become an Owner of Momentum today by clicking here](#{@schedule.discourse.options[:instance]}/page/ownership/3/), while getting to know the other 200 men in Momentum. The possibilities for growth, camaraderie, and fun are limitless!
+
+If money is an issue, remember that Momentum provides scholarships where needed. [Contact the Chief privately here to make arrangements.](#{@schedule.discourse.options[:instance]}/g/Chief)
+
+Kim Miller
+New Men
+
+Ownership Type: #{variable_hash['user_fields']['6']}"

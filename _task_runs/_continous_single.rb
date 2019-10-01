@@ -13,8 +13,8 @@ discourse_options = {
     minutes_between_scans:          0,
     instance:                       'https://discourse.gomomentum.org',
     api_username:                   'KM_Admin',
-    exclude_users:                  %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin Scott_StGermain),
-    issue_users:                    %w(Scott_StGermain),
+    exclude_users:                  %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin MD_Admin),
+    issue_users:                    %w(),
     logger:                         momentum_api_logger
 }
 

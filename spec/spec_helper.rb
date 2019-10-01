@@ -41,7 +41,7 @@ def discourse_options
       include_staged_users:         false,
       instance:                     'https://discourse.gomomentum.org',
       api_username:                 'KM_Admin',
-      exclude_users:                %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
+      exclude_users:                %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin MD_Admin),
       issue_users:                  %w(),
       logger:                       MockLogger.new
   }

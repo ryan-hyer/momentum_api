@@ -122,10 +122,16 @@ module MomentumApi
             #   user_update_value = '2019-09-30 MM R1'
             #   update_ownership(man, action, user_update_value)
 
+            # find and stamp new_user with today's date and NU R0 codes
+            elsif action[1][:ownership_code] == 'NU' and action[1][:action_sequence] == 'R0'
+              user_update_value = Date.today.strftime("%Y-%m-%d") + ' ' +
+                  action[1][:ownership_code] + ' ' + action[1][:action_sequence]
+                update_ownership(man, action, user_update_value)
+
               # print trial candidates Samartha_Swaroop 2019-10-08 MM
-            elsif action[1][:ownership_code] == 'TM' and action[1][:action_sequence] == 'R0'
-              man.print_user_options(man.user_details, user_label: "#{action[0]}",
-                                     nested_user_field: %W(#{'user_fields'} #{action[1][:user_fields]}))
+            # elsif action[1][:ownership_code] == 'TM' and action[1][:action_sequence] == 'R0'
+            #   man.print_user_options(man.user_details, user_label: "#{action[0]}",
+            #                          nested_user_field: %W(#{'user_fields'} #{action[1][:user_fields]}))
 
             # remove user from Onwership groups as he does not appear to have any memberships
             elsif action[1][:remove_from_group] and not latest_auto_renew_date and
@@ -172,11 +178,11 @@ module MomentumApi
         @mock ? sleep(0) : sleep(1)
 
         # todo stay with current group remove w/auto or create auto case where admins are alerted, but not group moves happen
-        # add_to_owner_group(action, man)
-        #
-        # remove_from_group(action, man)
-        #
-        # send_renewal_message(action, variable_hash: user_details_after_update)
+        add_to_owner_group(action, man)
+
+        remove_from_group(action, man)
+
+        send_renewal_message(action, variable_hash: user_details_after_update)
 
       end
     end

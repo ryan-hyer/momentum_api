@@ -30173,3 +30173,778 @@ I, [19-09-30 14:08:00#18987]  INFO -- : Ownership Updated                   42
 I, [19-09-30 14:08:00#18987]  INFO -- : Messages Sent                       0                   
 I, [19-09-30 14:08:00#18987]  INFO -- : Users Added to Group                0                   
 I, [19-09-30 14:08:00#18987]  INFO -- : Users Removed from Group            0                   
+W, [19-09-30 13:49:31#54722]  WARN -- : TooManyRequests: Sleeping for 20 seconds ....
+W, [19-09-30 13:50:34#54722]  WARN -- : Scan Level Exception Rescue type DiscourseApi::TooManyRequests, {"errors"=>["You’ve performed this action too many times. Please wait 4 seconds before trying again."], "error_type"=>"rate_limit", "extras"=>{"wait_seconds"=>4}}: Sleeping for 90 minutes ....
+I, [19-09-30 14:18:37#19943]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-09-30 14:18:42#19943]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:18:42#19943]  INFO -- : Aaron_Jenkins             2018-02-05     2017-09-30       1            6581        0                     2019-09-30 MM R1    
+W, [19-09-30 14:18:42#19943]  WARN -- : OK
+I, [19-09-30 14:18:42#19943]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:18:42#19943]  INFO -- : Aaron_Jenkins       2018-02-05     2017-09-30       1            6581        0                     2019-09-30 MM R2    
+I, [19-09-30 14:18:48#19943]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:18:48#19943]  INFO -- : Alan_Schoen               2018-04-23     2018-09-25       0            925         0                     2019-09-30 MM R1    
+W, [19-09-30 14:18:48#19943]  WARN -- : OK
+I, [19-09-30 14:18:48#19943]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:18:48#19943]  INFO -- : Alan_Schoen         2018-04-23     2018-09-25       0            925         0                     2019-09-30 MM R2    
+W, [19-09-30 14:18:58#19943]  WARN -- : Scan Level Exception Rescue type Interrupt, : Sleeping for 90 minutes ....
+I, [19-09-30 14:21:22#21645]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-09-30 14:21:27#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:21:27#21645]  INFO -- : Aaron_Jenkins             2018-02-05     2017-09-30       1            6581        0                     2019-09-30 MM R1    
+W, [19-09-30 14:21:27#21645]  WARN -- : OK
+I, [19-09-30 14:21:27#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:21:27#21645]  INFO -- : Aaron_Jenkins       2018-02-05     2017-09-30       1            6581        0                     2019-09-30 MM R2    
+I, [19-09-30 14:21:28#21645]  INFO -- :   Message From:    Kim_Miller           Aaron_Jenkins,KM_Admin You Are an Important Momentum Owner!                    Hi Aaron Jenkins,
+
+We     Pending                  
+I, [19-09-30 14:21:30#21645]  INFO -- :   Message From:    Kim_Miller           Aaron_Jenkins,KM_Admin you-are-an-important-momentum-owner                     Hi Aaron Jenkins,
+
+We     Sent                     
+I, [19-09-30 14:21:35#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:21:35#21645]  INFO -- : Alan_Schoen               2018-04-23     2018-09-25       0            925         0                     2019-09-30 MM R1    
+W, [19-09-30 14:21:35#21645]  WARN -- : OK
+I, [19-09-30 14:21:36#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:21:36#21645]  INFO -- : Alan_Schoen         2018-04-23     2018-09-25       0            925         0                     2019-09-30 MM R2    
+I, [19-09-30 14:21:37#21645]  INFO -- :   Message From:    Kim_Miller           Alan_Schoen,KM_Admin You Are an Important Momentum Owner!                    Hi Alan Schoen,
+
+We d     Pending                  
+I, [19-09-30 14:21:38#21645]  INFO -- :   Message From:    Kim_Miller           Alan_Schoen,KM_Admin you-are-an-important-momentum-owner                     Hi Alan Schoen,
+
+We d     Sent                     
+I, [19-09-30 14:22:01#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:22:01#21645]  INFO -- : Andrew_M_Webster          2019-08-03     2019-04-28       29           8585        22                    2019-09-30 MM R1    
+W, [19-09-30 14:22:01#21645]  WARN -- : OK
+I, [19-09-30 14:22:02#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:22:02#21645]  INFO -- : Andrew_M_Webster    2019-08-03     2019-04-28       29           8585        22                    2019-09-30 MM R2    
+I, [19-09-30 14:22:03#21645]  INFO -- :   Message From:    Kim_Miller           Andrew_M_Webster,KM_Admin You Are an Important Momentum Owner!                    Hi Andrew M Webster,
+     Pending                  
+I, [19-09-30 14:22:04#21645]  INFO -- :   Message From:    Kim_Miller           Andrew_M_Webster,KM_Admin you-are-an-important-momentum-owner                     Hi Andrew M Webster,
+     Sent                     
+I, [19-09-30 14:22:42#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:22:42#21645]  INFO -- : Barry_Dobyns              2018-08-25     2018-02-08       2            2152        0                     2019-09-30 MM R1    
+W, [19-09-30 14:22:42#21645]  WARN -- : OK
+I, [19-09-30 14:22:42#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:22:42#21645]  INFO -- : Barry_Dobyns        2018-08-25     2018-02-08       2            2152        0                     2019-09-30 MM R2    
+I, [19-09-30 14:22:43#21645]  INFO -- :   Message From:    Kim_Miller           Barry_Dobyns,KM_Admin You Are an Important Momentum Owner!                    Hi Barry Dobyns,
+
+We      Pending                  
+I, [19-09-30 14:22:45#21645]  INFO -- :   Message From:    Kim_Miller           Barry_Dobyns,KM_Admin you-are-an-important-momentum-owner                     Hi Barry Dobyns,
+
+We      Sent                     
+I, [19-09-30 14:23:07#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:23:07#21645]  INFO -- : Bill_Heller               2017-12-28     2019-02-07       9            1529        0                     2019-09-30 MM R1    
+W, [19-09-30 14:23:07#21645]  WARN -- : OK
+I, [19-09-30 14:23:07#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:23:07#21645]  INFO -- : Bill_Heller         2017-12-28     2019-02-07       9            1529        0                     2019-09-30 MM R2    
+I, [19-09-30 14:23:08#21645]  INFO -- :   Message From:    Kim_Miller           Bill_Heller,KM_Admin You Are an Important Momentum Owner!                    Hi Bill Heller,
+
+We d     Pending                  
+I, [19-09-30 14:23:10#21645]  INFO -- :   Message From:    Kim_Miller           Bill_Heller,KM_Admin you-are-an-important-momentum-owner                     Hi Bill Heller,
+
+We d     Sent                     
+I, [19-09-30 14:23:31#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:23:31#21645]  INFO -- : Bill_Strahm               2016-11-24     2018-10-10       6            1562        0                     2019-09-30 MM R1    
+W, [19-09-30 14:23:32#21645]  WARN -- : OK
+I, [19-09-30 14:23:32#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:23:32#21645]  INFO -- : Bill_Strahm         2016-11-24     2018-10-10       6            1562        0                     2019-09-30 MM R2    
+I, [19-09-30 14:23:33#21645]  INFO -- :   Message From:    Kim_Miller           Bill_Strahm,KM_Admin You Are an Important Momentum Owner!                    Hi Bill Strahm,
+
+We d     Pending                  
+I, [19-09-30 14:23:34#21645]  INFO -- :   Message From:    Kim_Miller           Bill_Strahm,KM_Admin you-are-an-important-momentum-owner                     Hi Bill Strahm,
+
+We d     Sent                     
+I, [19-09-30 14:24:12#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:24:12#21645]  INFO -- : Brad_Fino                 2018-03-09     2018-01-08       16           4936        0                     2019-09-30 MM R1    
+W, [19-09-30 14:24:12#21645]  WARN -- : OK
+I, [19-09-30 14:24:12#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:24:12#21645]  INFO -- : Brad_Fino           2018-03-09     2018-01-08       16           4936        0                     2019-09-30 MM R2    
+I, [19-09-30 14:24:13#21645]  INFO -- :   Message From:    Kim_Miller           Brad_Fino,KM_Admin   You Are an Important Momentum Owner!                    Hi Brad Fino,
+
+We do      Pending                  
+I, [19-09-30 14:24:15#21645]  INFO -- :   Message From:    Kim_Miller           Brad_Fino,KM_Admin   you-are-an-important-momentum-owner                     Hi Brad Fino,
+
+We do      Sent                     
+I, [19-09-30 14:26:13#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:26:13#21645]  INFO -- : Chris_Wilke               2018-01-05     2018-02-16       1            598         0                     2019-09-30 MM R1    
+W, [19-09-30 14:26:13#21645]  WARN -- : OK
+I, [19-09-30 14:26:14#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:26:14#21645]  INFO -- : Chris_Wilke         2018-01-05     2018-02-16       1            598         0                     2019-09-30 MM R2    
+I, [19-09-30 14:26:15#21645]  INFO -- :   Message From:    Kim_Miller           Chris_Wilke,KM_Admin You Are an Important Momentum Owner!                    Hi Chris Wilke,
+
+We d     Pending                  
+I, [19-09-30 14:26:16#21645]  INFO -- :   Message From:    Kim_Miller           Chris_Wilke,KM_Admin you-are-an-important-momentum-owner                     Hi Chris Wilke,
+
+We d     Sent                     
+I, [19-09-30 14:26:38#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:26:38#21645]  INFO -- : Cole_Cameron              2019-05-06     2019-05-17       20           10133       0                     2019-09-30 MM R1    
+W, [19-09-30 14:26:38#21645]  WARN -- : OK
+I, [19-09-30 14:26:38#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:26:38#21645]  INFO -- : Cole_Cameron        2019-05-06     2019-05-17       20           10133       0                     2019-09-30 MM R2    
+I, [19-09-30 14:26:39#21645]  INFO -- :   Message From:    Kim_Miller           Cole_Cameron,KM_Admin You Are an Important Momentum Owner!                    Hi Cole Cameron,
+
+We      Pending                  
+I, [19-09-30 14:26:41#21645]  INFO -- :   Message From:    Kim_Miller           Cole_Cameron,KM_Admin you-are-an-important-momentum-owner                     Hi Cole Cameron,
+
+We      Sent                     
+I, [19-09-30 14:27:50#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:27:50#21645]  INFO -- : Dave_Reid                 2018-09-18                      0            20          0                     2019-09-30 MM R1    
+W, [19-09-30 14:27:50#21645]  WARN -- : OK
+I, [19-09-30 14:27:51#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:27:51#21645]  INFO -- : Dave_Reid           2018-09-18                      0            20          0                     2019-09-30 MM R2    
+I, [19-09-30 14:27:52#21645]  INFO -- :   Message From:    Kim_Miller           Dave_Reid,KM_Admin   You Are an Important Momentum Owner!                    Hi Dave Reid,
+
+We do      Pending                  
+I, [19-09-30 14:27:53#21645]  INFO -- :   Message From:    Kim_Miller           Dave_Reid,KM_Admin   you-are-an-important-momentum-owner                     Hi Dave Reid,
+
+We do      Sent                     
+I, [19-09-30 14:28:51#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:28:51#21645]  INFO -- : David_Nickerson           2019-08-21     2019-08-20       2            4776        0                     2019-09-30 MM R1    
+W, [19-09-30 14:28:52#21645]  WARN -- : OK
+I, [19-09-30 14:28:52#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:28:52#21645]  INFO -- : David_Nickerson     2019-08-21     2019-08-20       2            4776        0                     2019-09-30 MM R2    
+I, [19-09-30 14:28:53#21645]  INFO -- :   Message From:    Kim_Miller           David_Nickerson,KM_Admin You Are an Important Momentum Owner!                    Hi David Nickerson,
+
+     Pending                  
+I, [19-09-30 14:28:55#21645]  INFO -- :   Message From:    Kim_Miller           David_Nickerson,KM_Admin you-are-an-important-momentum-owner                     Hi David Nickerson,
+
+     Sent                     
+I, [19-09-30 14:30:36#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:30:36#21645]  INFO -- : Gary_Chan                 2018-07-11     2017-11-10       4            4507        0                     2019-09-30 MM R1    
+W, [19-09-30 14:30:36#21645]  WARN -- : OK
+I, [19-09-30 14:30:36#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:30:36#21645]  INFO -- : Gary_Chan           2018-07-11     2017-11-10       4            4507        0                     2019-09-30 MM R2    
+I, [19-09-30 14:30:37#21645]  INFO -- :   Message From:    Kim_Miller           Gary_Chan,KM_Admin   You Are an Important Momentum Owner!                    Hi Gary Chan,
+
+We do      Pending                  
+I, [19-09-30 14:30:39#21645]  INFO -- :   Message From:    Kim_Miller           Gary_Chan,KM_Admin   you-are-an-important-momentum-owner                     Hi Gary Chan,
+
+We do      Sent                     
+I, [19-09-30 14:31:40#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:31:40#21645]  INFO -- : Glenn_Davis               2018-01-24     2016-12-14       0            230         0                     2019-09-30 MM R1    
+W, [19-09-30 14:31:40#21645]  WARN -- : OK
+I, [19-09-30 14:31:41#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:31:41#21645]  INFO -- : Glenn_Davis         2018-01-24     2016-12-14       0            230         0                     2019-09-30 MM R2    
+I, [19-09-30 14:31:42#21645]  INFO -- :   Message From:    Kim_Miller           Glenn_Davis,KM_Admin You Are an Important Momentum Owner!                    Hi Glenn Davis,
+
+We d     Pending                  
+I, [19-09-30 14:31:43#21645]  INFO -- :   Message From:    Kim_Miller           Glenn_Davis,KM_Admin you-are-an-important-momentum-owner                     Hi Glenn Davis,
+
+We d     Sent                     
+I, [19-09-30 14:31:49#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:31:49#21645]  INFO -- : Graham_Howe               2018-09-24                      0            80          0                     2019-09-30 MM R1    
+W, [19-09-30 14:31:49#21645]  WARN -- : OK
+I, [19-09-30 14:31:49#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:31:49#21645]  INFO -- : Graham_Howe         2018-09-24                      0            80          0                     2019-09-30 MM R2    
+I, [19-09-30 14:31:50#21645]  INFO -- :   Message From:    Kim_Miller           Graham_Howe,KM_Admin You Are an Important Momentum Owner!                    Hi Graham Howe,
+
+We d     Pending                  
+I, [19-09-30 14:31:52#21645]  INFO -- :   Message From:    Kim_Miller           Graham_Howe,KM_Admin you-are-an-important-momentum-owner                     Hi Graham Howe,
+
+We d     Sent                     
+I, [19-09-30 14:32:29#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:32:29#21645]  INFO -- : Igor_Ukrainczyk           2017-12-08                      0            23          0                     2019-09-30 MM R1    
+W, [19-09-30 14:32:29#21645]  WARN -- : OK
+I, [19-09-30 14:32:30#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:32:30#21645]  INFO -- : Igor_Ukrainczyk     2017-12-08                      0            23          0                     2019-09-30 MM R2    
+I, [19-09-30 14:32:31#21645]  INFO -- :   Message From:    Kim_Miller           Igor_Ukrainczyk,KM_Admin You Are an Important Momentum Owner!                    Hi Igor Ukrainczyk,
+
+     Pending                  
+I, [19-09-30 14:32:32#21645]  INFO -- :   Message From:    Kim_Miller           Igor_Ukrainczyk,KM_Admin you-are-an-important-momentum-owner                     Hi Igor Ukrainczyk,
+
+     Sent                     
+I, [19-09-30 14:33:34#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:33:34#21645]  INFO -- : Jason_Heimann             2016-12-26     2016-10-10       2            797         0                     2019-09-30 MM R1    
+W, [19-09-30 14:33:34#21645]  WARN -- : OK
+I, [19-09-30 14:33:34#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:33:34#21645]  INFO -- : Jason_Heimann       2016-12-26     2016-10-10       2            797         0                     2019-09-30 MM R2    
+I, [19-09-30 14:33:35#21645]  INFO -- :   Message From:    Kim_Miller           Jason_Heimann,KM_Admin You Are an Important Momentum Owner!                    Hi Jason Heimann,
+
+We     Pending                  
+I, [19-09-30 14:33:37#21645]  INFO -- :   Message From:    Kim_Miller           Jason_Heimann,KM_Admin you-are-an-important-momentum-owner                     Hi Jason Heimann,
+
+We     Sent                     
+I, [19-09-30 14:34:14#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:34:14#21645]  INFO -- : Jerry_Bowes               2017-06-02     2016-12-30       7            4366        0                     2019-09-30 MM R1    
+W, [19-09-30 14:34:15#21645]  WARN -- : OK
+I, [19-09-30 14:34:15#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:34:15#21645]  INFO -- : Jerry_Bowes         2017-06-02     2016-12-30       7            4366        0                     2019-09-30 MM R2    
+I, [19-09-30 14:34:16#21645]  INFO -- :   Message From:    Kim_Miller           Jerry_Bowes,KM_Admin You Are an Important Momentum Owner!                    Hi Jerry Bowes,
+
+We d     Pending                  
+I, [19-09-30 14:34:18#21645]  INFO -- :   Message From:    Kim_Miller           Jerry_Bowes,KM_Admin you-are-an-important-momentum-owner                     Hi Jerry Bowes,
+
+We d     Sent                     
+I, [19-09-30 14:35:11#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:35:11#21645]  INFO -- : Jim_LoConte               2018-02-18     2018-02-14       4            863         0                     2019-09-30 MM R1    
+W, [19-09-30 14:35:11#21645]  WARN -- : OK
+I, [19-09-30 14:35:11#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:35:11#21645]  INFO -- : Jim_LoConte         2018-02-18     2018-02-14       4            863         0                     2019-09-30 MM R2    
+I, [19-09-30 14:35:12#21645]  INFO -- :   Message From:    Kim_Miller           Jim_LoConte,KM_Admin You Are an Important Momentum Owner!                    Hi James LoConte,
+
+We     Pending                  
+I, [19-09-30 14:35:14#21645]  INFO -- :   Message From:    Kim_Miller           Jim_LoConte,KM_Admin you-are-an-important-momentum-owner                     Hi James LoConte,
+
+We     Sent                     
+I, [19-09-30 14:35:28#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:35:28#21645]  INFO -- : Johan_Knall               2018-08-07     2018-10-11       1            2896        0                     2019-09-30 MM R1    
+W, [19-09-30 14:35:28#21645]  WARN -- : OK
+I, [19-09-30 14:35:28#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:35:28#21645]  INFO -- : Johan_Knall         2018-08-07     2018-10-11       1            2896        0                     2019-09-30 MM R2    
+I, [19-09-30 14:35:29#21645]  INFO -- :   Message From:    Kim_Miller           Johan_Knall,KM_Admin You Are an Important Momentum Owner!                    Hi Johan Knall,
+
+We d     Pending                  
+I, [19-09-30 14:35:30#21645]  INFO -- :   Message From:    Kim_Miller           Johan_Knall,KM_Admin you-are-an-important-momentum-owner                     Hi Johan Knall,
+
+We d     Sent                     
+I, [19-09-30 14:36:32#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:36:32#21645]  INFO -- : Johnny_Alexander          2017-05-13     2017-08-05       1            6022        0                     2019-09-30 MM R1    
+W, [19-09-30 14:36:33#21645]  WARN -- : OK
+I, [19-09-30 14:36:33#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:36:33#21645]  INFO -- : Johnny_Alexander    2017-05-13     2017-08-05       1            6022        0                     2019-09-30 MM R2    
+I, [19-09-30 14:36:34#21645]  INFO -- :   Message From:    Kim_Miller           Johnny_Alexander,KM_Admin You Are an Important Momentum Owner!                    Hi Johnny Alexander,
+     Pending                  
+I, [19-09-30 14:36:36#21645]  INFO -- :   Message From:    Kim_Miller           Johnny_Alexander,KM_Admin you-are-an-important-momentum-owner                     Hi Johnny Alexander,
+     Sent                     
+I, [19-09-30 14:36:57#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:36:57#21645]  INFO -- : John_Thompson             2019-05-10     2018-11-26       91           94985       0                     2019-09-30 MM R1    
+W, [19-09-30 14:36:57#21645]  WARN -- : OK
+I, [19-09-30 14:36:57#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:36:57#21645]  INFO -- : John_Thompson       2019-05-10     2018-11-26       91           94985       0                     2019-09-30 MM R2    
+I, [19-09-30 14:36:58#21645]  INFO -- :   Message From:    Kim_Miller           John_Thompson,KM_Admin You Are an Important Momentum Owner!                    Hi John Thompson,
+
+We     Pending                  
+I, [19-09-30 14:37:00#21645]  INFO -- :   Message From:    Kim_Miller           John_Thompson,KM_Admin you-are-an-important-momentum-owner                     Hi John Thompson,
+
+We     Sent                     
+I, [19-09-30 14:37:45#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:37:45#21645]  INFO -- : Ken_Hartman               2017-11-29     2016-11-17       0            601         0                     2019-09-30 MM R1    
+W, [19-09-30 14:37:46#21645]  WARN -- : OK
+I, [19-09-30 14:37:46#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:37:46#21645]  INFO -- : Ken_Hartman         2017-11-29     2016-11-17       0            601         0                     2019-09-30 MM R2    
+I, [19-09-30 14:37:47#21645]  INFO -- :   Message From:    Kim_Miller           Ken_Hartman,KM_Admin You Are an Important Momentum Owner!                    Hi Ken Hartman,
+
+We d     Pending                  
+I, [19-09-30 14:37:49#21645]  INFO -- :   Message From:    Kim_Miller           Ken_Hartman,KM_Admin you-are-an-important-momentum-owner                     Hi Ken Hartman,
+
+We d     Sent                     
+I, [19-09-30 14:38:02#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:38:02#21645]  INFO -- : Kevin_Shutta              2018-05-26     2018-03-18       1            776         0                     2019-09-30 MM R1    
+W, [19-09-30 14:38:02#21645]  WARN -- : OK
+I, [19-09-30 14:38:02#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:38:02#21645]  INFO -- : Kevin_Shutta        2018-05-26     2018-03-18       1            776         0                     2019-09-30 MM R2    
+I, [19-09-30 14:38:03#21645]  INFO -- :   Message From:    Kim_Miller           Kevin_Shutta,KM_Admin You Are an Important Momentum Owner!                    Hi Kevin Shutta,
+
+We      Pending                  
+I, [19-09-30 14:38:05#21645]  INFO -- :   Message From:    Kim_Miller           Kevin_Shutta,KM_Admin you-are-an-important-momentum-owner                     Hi Kevin Shutta,
+
+We      Sent                     
+I, [19-09-30 14:38:11#21645]  INFO -- : GroupUser          Group                Category             Level      Status                        
+I, [19-09-30 14:38:11#21645]  INFO -- : Kim_Miller         moderators           na                     2        NOT Group Default of 3        
+I, [19-09-30 14:38:12#21645]  INFO -- : {"success"=>"OK"}
+I, [19-09-30 14:38:13#21645]  INFO -- : UpdatedUser        Group                Category             Level      Status                        
+I, [19-09-30 14:38:13#21645]  INFO -- : Kim_Miller         moderators           na                     3        User set to 3                 
+I, [19-09-30 14:38:13#21645]  INFO -- : GroupUser          Group                Category             Level      Status                        
+I, [19-09-30 14:38:13#21645]  INFO -- : Kim_Miller         staff                na                     2        NOT Group Default of 3        
+I, [19-09-30 14:38:14#21645]  INFO -- : {"success"=>"OK"}
+I, [19-09-30 14:38:15#21645]  INFO -- : UpdatedUser        Group                Category             Level      Status                        
+I, [19-09-30 14:38:15#21645]  INFO -- : Kim_Miller         staff                na                     3        User set to 3                 
+I, [19-09-30 14:38:24#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:38:24#21645]  INFO -- : Kim_test_Staged           2019-09-23     2018-10-26       1            0           0                     2019-09-30 MM R1    
+W, [19-09-30 14:38:24#21645]  WARN -- : OK
+I, [19-09-30 14:38:24#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:38:24#21645]  INFO -- : Kim_test_Staged     2019-09-23     2018-10-26       1            0           0                     2019-09-30 MM R2    
+I, [19-09-30 14:38:25#21645]  INFO -- :   Message From:    Kim_Miller           Kim_test_Staged,KM_Admin You Are an Important Momentum Owner!                    Hi Kim_test_Staged,
+
+     Pending                  
+I, [19-09-30 14:38:27#21645]  INFO -- :   Message From:    Kim_Miller           Kim_test_Staged,KM_Admin you-are-an-important-momentum-owner                     Hi Kim_test_Staged,
+
+     Sent                     
+I, [19-09-30 14:38:49#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:38:49#21645]  INFO -- : Larry_Shanahan            2019-02-19     2018-12-19       1            2631        0                     2019-09-30 MM R1    
+W, [19-09-30 14:38:49#21645]  WARN -- : OK
+I, [19-09-30 14:38:49#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:38:49#21645]  INFO -- : Larry_Shanahan      2019-02-19     2018-12-19       1            2631        0                     2019-09-30 MM R2    
+I, [19-09-30 14:38:50#21645]  INFO -- :   Message From:    Kim_Miller           Larry_Shanahan,KM_Admin You Are an Important Momentum Owner!                    Hi Larry Shanahan,
+
+W     Pending                  
+I, [19-09-30 14:38:52#21645]  INFO -- :   Message From:    Kim_Miller           Larry_Shanahan,KM_Admin you-are-an-important-momentum-owner                     Hi Larry Shanahan,
+
+W     Sent                     
+I, [19-09-30 14:39:21#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:39:21#21645]  INFO -- : Maarten_Korringa          2018-01-06     2017-01-20       1            3712        0                     2019-09-30 MM R1    
+W, [19-09-30 14:39:22#21645]  WARN -- : OK
+I, [19-09-30 14:39:22#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:39:22#21645]  INFO -- : Maarten_Korringa    2018-01-06     2017-01-20       1            3712        0                     2019-09-30 MM R2    
+I, [19-09-30 14:39:23#21645]  INFO -- :   Message From:    Kim_Miller           Maarten_Korringa,KM_Admin You Are an Important Momentum Owner!                    Hi Maarten Korringa,
+     Pending                  
+I, [19-09-30 14:39:25#21645]  INFO -- :   Message From:    Kim_Miller           Maarten_Korringa,KM_Admin you-are-an-important-momentum-owner                     Hi Maarten Korringa,
+     Sent                     
+I, [19-09-30 14:40:58#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:40:58#21645]  INFO -- : MD_Admin                                                  0            0           0                     2019-09-30 MM R1    
+W, [19-09-30 14:40:58#21645]  WARN -- : OK
+I, [19-09-30 14:40:59#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:40:59#21645]  INFO -- : MD_Admin                                            0            0           0                     2019-09-30 MM R2    
+I, [19-09-30 14:41:00#21645]  INFO -- :   Message From:    Kim_Miller           MD_Admin,KM_Admin    You Are an Important Momentum Owner!                    Hi Mike Drilling Admi     Pending                  
+I, [19-09-30 14:41:01#21645]  INFO -- :   Message From:    Kim_Miller           MD_Admin,KM_Admin    you-are-an-important-momentum-owner                     Hi Mike Drilling Admi     Sent                     
+I, [19-09-30 14:41:07#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:41:07#21645]  INFO -- : Michael_Hayes             2019-02-28     2018-10-16       16           3805        0                     2019-09-30 MM R1    
+W, [19-09-30 14:41:07#21645]  WARN -- : OK
+I, [19-09-30 14:41:07#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:41:07#21645]  INFO -- : Michael_Hayes       2019-02-28     2018-10-16       16           3805        0                     2019-09-30 MM R2    
+I, [19-09-30 14:41:08#21645]  INFO -- :   Message From:    Kim_Miller           Michael_Hayes,KM_Admin You Are an Important Momentum Owner!                    Hi Michael Hayes,
+
+We     Pending                  
+I, [19-09-30 14:41:10#21645]  INFO -- :   Message From:    Kim_Miller           Michael_Hayes,KM_Admin you-are-an-important-momentum-owner                     Hi Michael Hayes,
+
+We     Sent                     
+I, [19-09-30 14:41:39#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:41:39#21645]  INFO -- : Michael_Wilkins           2019-07-22                      0            0           0                     2019-09-30 MM R1    
+W, [19-09-30 14:41:39#21645]  WARN -- : OK
+I, [19-09-30 14:41:40#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:41:40#21645]  INFO -- : Michael_Wilkins     2019-07-22                      0            0           0                     2019-09-30 MM R2    
+I, [19-09-30 14:41:41#21645]  INFO -- :   Message From:    Kim_Miller           Michael_Wilkins,KM_Admin You Are an Important Momentum Owner!                    Hi Michael Wilkins,
+
+     Pending                  
+I, [19-09-30 14:41:42#21645]  INFO -- :   Message From:    Kim_Miller           Michael_Wilkins,KM_Admin you-are-an-important-momentum-owner                     Hi Michael Wilkins,
+
+     Sent                     
+I, [19-09-30 14:41:48#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:41:48#21645]  INFO -- : Michael_Wilson            2019-07-23     2019-04-27       29           12441       0                     2019-09-30 MM R1    
+W, [19-09-30 14:41:48#21645]  WARN -- : OK
+I, [19-09-30 14:41:48#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:41:48#21645]  INFO -- : Michael_Wilson      2019-07-23     2019-04-27       29           12441       0                     2019-09-30 MM R2    
+I, [19-09-30 14:41:49#21645]  INFO -- :   Message From:    Kim_Miller           Michael_Wilson,KM_Admin You Are an Important Momentum Owner!                    Hi Michael K Wilson,
+     Pending                  
+I, [19-09-30 14:41:51#21645]  INFO -- :   Message From:    Kim_Miller           Michael_Wilson,KM_Admin you-are-an-important-momentum-owner                     Hi Michael K Wilson,
+     Sent                     
+I, [19-09-30 14:43:10#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:43:10#21645]  INFO -- : Mohamed_Abdelhay          2016-09-23     2016-09-23       2            668         0                     2019-09-30 MM R1    
+W, [19-09-30 14:43:10#21645]  WARN -- : OK
+I, [19-09-30 14:43:10#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:43:10#21645]  INFO -- : Mohamed_Abdelhay    2016-09-23     2016-09-23       2            668         0                     2019-09-30 MM R2    
+I, [19-09-30 14:43:11#21645]  INFO -- :   Message From:    Kim_Miller           Mohamed_Abdelhay,KM_Admin You Are an Important Momentum Owner!                    Hi Mohamed Abdelhay,
+     Pending                  
+I, [19-09-30 14:43:13#21645]  INFO -- :   Message From:    Kim_Miller           Mohamed_Abdelhay,KM_Admin you-are-an-important-momentum-owner                     Hi Mohamed Abdelhay,
+     Sent                     
+I, [19-09-30 14:43:18#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:43:18#21645]  INFO -- : Narjit_Chadha             2018-09-19     2016-10-12       0            40          0                     2019-09-30 MM R1    
+W, [19-09-30 14:43:18#21645]  WARN -- : OK
+I, [19-09-30 14:43:18#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:43:18#21645]  INFO -- : Narjit_Chadha       2018-09-19     2016-10-12       0            40          0                     2019-09-30 MM R2    
+I, [19-09-30 14:43:19#21645]  INFO -- :   Message From:    Kim_Miller           Narjit_Chadha,KM_Admin You Are an Important Momentum Owner!                    Hi Narjit Chadha,
+
+We     Pending                  
+I, [19-09-30 14:43:21#21645]  INFO -- :   Message From:    Kim_Miller           Narjit_Chadha,KM_Admin you-are-an-important-momentum-owner                     Hi Narjit Chadha,
+
+We     Sent                     
+I, [19-09-30 14:44:14#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:44:14#21645]  INFO -- : Peter_Sanchez             2018-03-21                      0            611         0                     2019-09-30 MM R1    
+W, [19-09-30 14:44:15#21645]  WARN -- : OK
+I, [19-09-30 14:44:15#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:44:15#21645]  INFO -- : Peter_Sanchez       2018-03-21                      0            611         0                     2019-09-30 MM R2    
+I, [19-09-30 14:44:16#21645]  INFO -- :   Message From:    Kim_Miller           Peter_Sanchez,KM_Admin You Are an Important Momentum Owner!                    Hi PETER SANCHEZ,
+
+We     Pending                  
+I, [19-09-30 14:44:17#21645]  INFO -- :   Message From:    Kim_Miller           Peter_Sanchez,KM_Admin you-are-an-important-momentum-owner                     Hi PETER SANCHEZ,
+
+We     Sent                     
+I, [19-09-30 14:44:31#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:44:31#21645]  INFO -- : Praveen_Rangu             2017-01-30     2017-01-02       1            293         0                     2019-09-30 MM R1    
+W, [19-09-30 14:44:31#21645]  WARN -- : OK
+I, [19-09-30 14:44:31#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:44:31#21645]  INFO -- : Praveen_Rangu       2017-01-30     2017-01-02       1            293         0                     2019-09-30 MM R2    
+I, [19-09-30 14:44:32#21645]  INFO -- :   Message From:    Kim_Miller           Praveen_Rangu,KM_Admin You Are an Important Momentum Owner!                    Hi Praveen Rangu,
+
+We     Pending                  
+I, [19-09-30 14:44:34#21645]  INFO -- :   Message From:    Kim_Miller           Praveen_Rangu,KM_Admin you-are-an-important-momentum-owner                     Hi Praveen Rangu,
+
+We     Sent                     
+I, [19-09-30 14:45:27#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:45:27#21645]  INFO -- : Robert_Nelson             2017-01-03     2018-10-11       0            0           0                     2019-09-30 MM R1    
+W, [19-09-30 14:45:27#21645]  WARN -- : OK
+I, [19-09-30 14:45:28#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:45:28#21645]  INFO -- : Robert_Nelson       2017-01-03     2018-10-11       0            0           0                     2019-09-30 MM R2    
+I, [19-09-30 14:45:29#21645]  INFO -- :   Message From:    Kim_Miller           Robert_Nelson,KM_Admin You Are an Important Momentum Owner!                    Hi Robert Nelson,
+
+We     Pending                  
+I, [19-09-30 14:45:30#21645]  INFO -- :   Message From:    Kim_Miller           Robert_Nelson,KM_Admin you-are-an-important-momentum-owner                     Hi Robert Nelson,
+
+We     Sent                     
+I, [19-09-30 14:47:36#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:47:36#21645]  INFO -- : Stephen_Gorman            2017-07-19     2019-05-11       3            2507        0                     2019-09-30 MM R1    
+W, [19-09-30 14:47:36#21645]  WARN -- : OK
+I, [19-09-30 14:47:36#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:47:36#21645]  INFO -- : Stephen_Gorman      2017-07-19     2019-05-11       3            2507        0                     2019-09-30 MM R2    
+I, [19-09-30 14:47:37#21645]  INFO -- :   Message From:    Kim_Miller           Stephen_Gorman,KM_Admin You Are an Important Momentum Owner!                    Hi Stephen Gorman,
+
+W     Pending                  
+I, [19-09-30 14:47:39#21645]  INFO -- :   Message From:    Kim_Miller           Stephen_Gorman,KM_Admin you-are-an-important-momentum-owner                     Hi Stephen Gorman,
+
+W     Sent                     
+I, [19-09-30 14:47:44#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:47:44#21645]  INFO -- : Steve_Benjamin            2017-11-16     2016-11-26       0            857         0                     2019-09-30 MM R1    
+W, [19-09-30 14:47:44#21645]  WARN -- : OK
+I, [19-09-30 14:47:45#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:47:45#21645]  INFO -- : Steve_Benjamin      2017-11-16     2016-11-26       0            857         0                     2019-09-30 MM R2    
+I, [19-09-30 14:47:46#21645]  INFO -- :   Message From:    Kim_Miller           Steve_Benjamin,KM_Admin You Are an Important Momentum Owner!                    Hi Steve Benjamin,
+
+W     Pending                  
+I, [19-09-30 14:47:47#21645]  INFO -- :   Message From:    Kim_Miller           Steve_Benjamin,KM_Admin you-are-an-important-momentum-owner                     Hi Steve Benjamin,
+
+W     Sent                     
+I, [19-09-30 14:48:09#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:48:09#21645]  INFO -- : Steve_Lang                2017-07-01     2017-06-12       41           35305       0                     2019-09-30 MM R1    
+W, [19-09-30 14:48:09#21645]  WARN -- : OK
+I, [19-09-30 14:48:09#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:48:09#21645]  INFO -- : Steve_Lang          2017-07-01     2017-06-12       41           35305       0                     2019-09-30 MM R2    
+I, [19-09-30 14:48:10#21645]  INFO -- :   Message From:    Kim_Miller           Steve_Lang,KM_Admin  You Are an Important Momentum Owner!                    Hi Steve Lang,
+
+We do     Pending                  
+I, [19-09-30 14:48:12#21645]  INFO -- :   Message From:    Kim_Miller           Steve_Lang,KM_Admin  you-are-an-important-momentum-owner                     Hi Steve Lang,
+
+We do     Sent                     
+I, [19-09-30 14:48:42#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:48:42#21645]  INFO -- : Timothy_Plantikow         2017-12-21                      0            149         0                     2019-09-30 MM R1    
+W, [19-09-30 14:48:42#21645]  WARN -- : OK
+I, [19-09-30 14:48:42#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:48:42#21645]  INFO -- : Timothy_Plantikow   2017-12-21                      0            149         0                     2019-09-30 MM R2    
+I, [19-09-30 14:48:43#21645]  INFO -- :   Message From:    Kim_Miller           Timothy_Plantikow,KM_Admin You Are an Important Momentum Owner!                    Hi Timothy Plantikow,     Pending                  
+I, [19-09-30 14:48:45#21645]  INFO -- :   Message From:    Kim_Miller           Timothy_Plantikow,KM_Admin you-are-an-important-momentum-owner                     Hi Timothy Plantikow,     Sent                     
+I, [19-09-30 14:48:59#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:48:59#21645]  INFO -- : Toby_Ward                 2017-11-02     2017-11-02       0            129         0                     2019-09-30 MM R1    
+W, [19-09-30 14:48:59#21645]  WARN -- : OK
+I, [19-09-30 14:48:59#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:48:59#21645]  INFO -- : Toby_Ward           2017-11-02     2017-11-02       0            129         0                     2019-09-30 MM R2    
+I, [19-09-30 14:49:00#21645]  INFO -- :   Message From:    Kim_Miller           Toby_Ward,KM_Admin   You Are an Important Momentum Owner!                    Hi Toby Ward,
+
+We do      Pending                  
+I, [19-09-30 14:49:02#21645]  INFO -- :   Message From:    Kim_Miller           Toby_Ward,KM_Admin   you-are-an-important-momentum-owner                     Hi Toby Ward,
+
+We do      Sent                     
+I, [19-09-30 14:49:15#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:49:15#21645]  INFO -- : Tonio_Schutze             2019-01-09                      0            351         0                     2019-09-30 MM R1    
+W, [19-09-30 14:49:15#21645]  WARN -- : OK
+I, [19-09-30 14:49:16#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:49:16#21645]  INFO -- : Tonio_Schutze       2019-01-09                      0            351         0                     2019-09-30 MM R2    
+I, [19-09-30 14:49:17#21645]  INFO -- :   Message From:    Kim_Miller           Tonio_Schutze,KM_Admin You Are an Important Momentum Owner!                    Hi Tonio Schuetze,
+
+W     Pending                  
+I, [19-09-30 14:49:18#21645]  INFO -- :   Message From:    Kim_Miller           Tonio_Schutze,KM_Admin you-are-an-important-momentum-owner                     Hi Tonio Schuetze,
+
+W     Sent                     
+I, [19-09-30 14:49:44#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:49:44#21645]  INFO -- : Udy_Gold                  2017-01-13     2017-01-20       12           1023        0                     2019-09-30 MM R1    
+W, [19-09-30 14:49:44#21645]  WARN -- : OK
+I, [19-09-30 14:49:44#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-09-30 14:49:44#21645]  INFO -- : Udy_Gold            2017-01-13     2017-01-20       12           1023        0                     2019-09-30 MM R2    
+I, [19-09-30 14:49:45#21645]  INFO -- :   Message From:    Kim_Miller           Udy_Gold,KM_Admin    You Are an Important Momentum Owner!                    Hi Udy Gold,
+
+We do h     Pending                  
+I, [19-09-30 14:49:47#21645]  INFO -- :   Message From:    Kim_Miller           Udy_Gold,KM_Admin    you-are-an-important-momentum-owner                     Hi Udy Gold,
+
+We do h     Sent                     
+I, [19-09-30 14:50:04#21645]  INFO -- : Pass 1 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 15:20:52#21645]  INFO -- : Pass 2 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 15:51:40#21645]  INFO -- : Pass 3 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 16:22:31#21645]  INFO -- : Pass 4 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 16:53:19#21645]  INFO -- : Pass 5 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 17:18:15#21645]  INFO -- : Average Momentum User    last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-09-30 17:18:15#21645]  INFO -- : Noah_Salzman             2019-09-30     2019-09-12       1            8051        3256                     134               
+W, [19-09-30 17:18:16#21645]  WARN -- : Removed man from Group 130: 
+W, [19-09-30 17:18:18#21645]  WARN -- : Added man to Group 133: 
+W, [19-09-30 17:18:19#21645]  WARN -- : Noah_Salzman added to Z_Activity_B
+I, [19-09-30 17:24:12#21645]  INFO -- : Pass 6 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 17:55:08#21645]  INFO -- : Pass 7 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 18:26:15#21645]  INFO -- : Pass 8 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 18:57:15#21645]  INFO -- : Pass 9 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 19:28:14#21645]  INFO -- : Pass 10 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 19:59:11#21645]  INFO -- : Pass 11 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 20:30:10#21645]  INFO -- : Pass 12 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 21:01:44#21645]  INFO -- : Pass 13 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 21:32:42#21645]  INFO -- : Pass 14 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 22:03:46#21645]  INFO -- : Pass 15 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 22:34:45#21645]  INFO -- : Pass 16 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 23:05:42#21645]  INFO -- : Pass 17 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-09-30 23:36:45#21645]  INFO -- : Pass 18 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 00:08:05#21645]  INFO -- : Pass 19 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 00:19:23#21645]  INFO -- : memberful_expired_today   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 00:19:23#21645]  INFO -- : David_Ashby               2019-09-28     2019-09-30       129          74549       11622                 2019-10-01 MM R1    
+W, [19-10-01 00:19:23#21645]  WARN -- : OK
+I, [19-10-01 00:19:23#21645]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 00:19:23#21645]  INFO -- : David_Ashby         2019-09-28     2019-09-30       129          74549       11622                 2019-10-01 MM R2    
+I, [19-10-01 00:19:24#21645]  INFO -- :   Message From:    Kim_Miller           David_Ashby,KM_Admin You Are an Important Momentum Owner!                    Hi David Ashby,
+
+We d     Pending                  
+I, [19-10-01 00:19:26#21645]  INFO -- :   Message From:    Kim_Miller           David_Ashby,KM_Admin you-are-an-important-momentum-owner                     Hi David Ashby,
+
+We d     Sent                     
+I, [19-10-01 00:39:13#21645]  INFO -- : Pass 20 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 01:10:07#21645]  INFO -- : Pass 21 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 01:26:18#21645]  INFO -- : UserName   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "5"]    
+I, [19-10-01 01:26:18#21645]  INFO -- : Janos_Keresztes 2019-10-01     2019-05-04       0            665         644                           
+W, [19-10-01 01:26:18#21645]  WARN -- : Success: OK
+I, [19-10-01 01:26:18#21645]  INFO -- : UserName   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "5"]    
+I, [19-10-01 01:26:18#21645]  INFO -- : Janos_Keresztes 2019-10-01     2019-05-04       0            665         644                   2       
+I, [19-10-01 01:26:19#21645]  INFO -- : User               Poll                 Last Saved Score                    Score /  Max     Badge               
+I, [19-10-01 01:26:19#21645]  INFO -- : Janos_Keresztes    poll                 0                                   2     /  1146                        
+I, [19-10-01 01:26:19#21645]  INFO -- :   Message From:    Kim_Miller           Janos_Keresztes      Thank You for Taking Momentum's Discourse User Quiz     Congratulations! Your     Pending                  
+I, [19-10-01 01:26:21#21645]  INFO -- :   Message From:    Kim_Miller           Janos_Keresztes      thank-you-for-taking-momentums-discourse-user-quiz      Congratulations! Your     Sent                     
+I, [19-10-01 01:41:04#21645]  INFO -- : Pass 22 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 02:11:55#21645]  INFO -- : Pass 23 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 02:42:45#21645]  INFO -- : Pass 24 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 03:13:34#21645]  INFO -- : Pass 25 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 03:44:24#21645]  INFO -- : Pass 26 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 04:15:11#21645]  INFO -- : Pass 27 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 04:45:57#21645]  INFO -- : Pass 28 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 05:16:45#21645]  INFO -- : Pass 29 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 05:47:34#21645]  INFO -- : Pass 30 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 06:18:23#21645]  INFO -- : Pass 31 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 06:49:17#21645]  INFO -- : Pass 32 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 07:20:08#21645]  INFO -- : Pass 33 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 07:51:06#21645]  INFO -- : Pass 34 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 08:22:19#21645]  INFO -- : Pass 35 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 08:53:31#21645]  INFO -- : Pass 36 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 09:24:51#21645]  INFO -- : Pass 37 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 09:56:04#21645]  INFO -- : Pass 38 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 10:27:09#21645]  INFO -- : Pass 39 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 10:58:16#21645]  INFO -- : Pass 40 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 11:29:15#21645]  INFO -- : Pass 41 complete for 212 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-01 11:32:24#76668]  INFO -- : new_user_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 11:32:24#76668]  INFO -- : Samartha_Swaroop 2019-09-30     2019-09-26       1            251         251                           
+I, [19-10-01 11:32:24#76668]  INFO -- : Discourse Men                                           
+I, [19-10-01 11:32:24#76668]  INFO -- : Processed Users                     1                   
+I, [19-10-01 11:32:24#76668]  INFO -- : Skipped Users                       0                   
+I, [19-10-01 11:32:24#76668]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 11:32:24#76668]  INFO -- : Ownership                           0                   
+I, [19-10-01 11:32:24#76668]  INFO -- : Ownership Targets                   0                   
+I, [19-10-01 11:32:24#76668]  INFO -- : Ownership Updated                   0                   
+I, [19-10-01 11:32:24#76668]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 11:32:24#76668]  INFO -- : Users Added to Group                0                   
+I, [19-10-01 11:32:24#76668]  INFO -- : Users Removed from Group            0                   
+I, [19-10-01 11:34:05#77985]  INFO -- : new_user_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 11:34:05#77985]  INFO -- : Samartha_Swaroop 2019-09-30     2019-09-26       1            251         251                           
+I, [19-10-01 11:34:10#77985]  INFO -- : Discourse Men                                           
+I, [19-10-01 11:34:10#77985]  INFO -- : Processed Users                     6                   
+I, [19-10-01 11:34:10#77985]  INFO -- : Skipped Users                       9                   
+I, [19-10-01 11:34:10#77985]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 11:34:10#77985]  INFO -- : Ownership                           0                   
+I, [19-10-01 11:34:10#77985]  INFO -- : Ownership Targets                   0                   
+I, [19-10-01 11:34:10#77985]  INFO -- : Ownership Updated                   0                   
+I, [19-10-01 11:34:10#77985]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 11:34:10#77985]  INFO -- : Users Added to Group                0                   
+I, [19-10-01 11:34:10#77985]  INFO -- : Users Removed from Group            0                   
+W, [19-10-01 11:51:37#82786]  WARN -- : TooManyRequests: Sleeping for 20 seconds ....
+I, [19-10-01 11:52:03#82786]  INFO -- : new_user_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 11:52:03#82786]  INFO -- : Samartha_Swaroop 2019-09-30     2019-09-26       1            251         251                           
+I, [19-10-01 11:52:07#82786]  INFO -- : Discourse Men                                           
+I, [19-10-01 11:52:07#82786]  INFO -- : Processed Users                     6                   
+I, [19-10-01 11:52:07#82786]  INFO -- : Skipped Users                       9                   
+I, [19-10-01 11:52:07#82786]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 11:52:07#82786]  INFO -- : Ownership                           0                   
+I, [19-10-01 11:52:07#82786]  INFO -- : Ownership Targets                   1                   
+I, [19-10-01 11:52:07#82786]  INFO -- : Ownership Updated                   0                   
+I, [19-10-01 11:52:07#82786]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 11:52:07#82786]  INFO -- : Users Added to Group                0                   
+I, [19-10-01 11:52:07#82786]  INFO -- : Users Removed from Group            0                   
+I, [19-10-01 12:07:58#98081]  INFO -- : new_user_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 12:07:58#98081]  INFO -- : Kim_Miller       2019-10-01     2019-10-01       2042         857538      55841                         
+I, [19-10-01 12:07:58#98081]  INFO -- : Discourse Men                                           
+I, [19-10-01 12:07:58#98081]  INFO -- : Processed Users                     1                   
+I, [19-10-01 12:07:58#98081]  INFO -- : Skipped Users                       0                   
+I, [19-10-01 12:07:58#98081]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 12:07:58#98081]  INFO -- : Ownership                           0                   
+I, [19-10-01 12:07:58#98081]  INFO -- : Ownership Targets                   1                   
+I, [19-10-01 12:07:58#98081]  INFO -- : Ownership Updated                   0                   
+I, [19-10-01 12:07:58#98081]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 12:07:58#98081]  INFO -- : Users Added to Group                0                   
+I, [19-10-01 12:07:58#98081]  INFO -- : Users Removed from Group            0                   
+I, [19-10-01 12:08:52#99240]  INFO -- : new_user_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 12:08:52#99240]  INFO -- : Kim_Miller       2019-10-01     2019-10-01       2042         857538      55841                         
+W, [19-10-01 12:08:53#99240]  WARN -- : OK
+I, [19-10-01 12:08:53#99240]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 12:08:53#99240]  INFO -- : Kim_Miller          2019-10-01     2019-10-01       2042         857538      55841                 2019-10-01 NU R0    
+I, [19-10-01 12:08:54#99240]  INFO -- :   Message From:    Kim_Miller           Kim_Miller,KM_Admin  Thank you for Your Interest in Momentum!                Thank you for your in     Pending                  
+I, [19-10-01 12:08:56#99240]  INFO -- :   Message From:    Kim_Miller           Kim_Miller,KM_Admin  thank-you-for-your-interest-in-momentum                 Thank you for your in     Sent                     
+I, [19-10-01 12:08:57#99240]  INFO -- : Discourse Men                                           
+I, [19-10-01 12:08:57#99240]  INFO -- : Processed Users                     1                   
+I, [19-10-01 12:08:57#99240]  INFO -- : Skipped Users                       0                   
+I, [19-10-01 12:08:57#99240]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 12:08:57#99240]  INFO -- : Ownership                           0                   
+I, [19-10-01 12:08:57#99240]  INFO -- : Ownership Targets                   1                   
+I, [19-10-01 12:08:57#99240]  INFO -- : Ownership Updated                   1                   
+I, [19-10-01 12:08:57#99240]  INFO -- : Messages Sent                       1                   
+I, [19-10-01 12:08:57#99240]  INFO -- : Users Added to Group                0                   
+I, [19-10-01 12:08:57#99240]  INFO -- : Users Removed from Group            0                   
+I, [19-10-01 12:12:41#170]  INFO -- : Discourse Men                                           
+I, [19-10-01 12:12:41#170]  INFO -- : Processed Users                     1                   
+I, [19-10-01 12:12:41#170]  INFO -- : Skipped Users                       0                   
+I, [19-10-01 12:12:41#170]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 12:12:41#170]  INFO -- : Ownership                           0                   
+I, [19-10-01 12:12:41#170]  INFO -- : Ownership Targets                   0                   
+I, [19-10-01 12:12:41#170]  INFO -- : Ownership Updated                   0                   
+I, [19-10-01 12:12:41#170]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 12:12:41#170]  INFO -- : Users Added to Group                0                   
+I, [19-10-01 12:12:41#170]  INFO -- : Users Removed from Group            0                   
+I, [19-10-01 12:19:15#2087]  INFO -- : new_user_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 12:19:15#2087]  INFO -- : Kim_Miller       2019-10-01     2019-10-01       2042         857538      55841                         
+W, [19-10-01 12:19:16#2087]  WARN -- : OK
+I, [19-10-01 12:19:16#2087]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 12:19:16#2087]  INFO -- : Kim_Miller          2019-10-01     2019-10-01       2042         857538      55841                 2019-10-01 NU R0    
+I, [19-10-01 12:19:17#2087]  INFO -- :   Message From:    Kim_Miller           Kim_Miller,KM_Admin  Thank you for Your Interest in Momentum!                Thank you for your in     Pending                  
+I, [19-10-01 12:19:20#2087]  INFO -- :   Message From:    Kim_Miller           Kim_Miller,KM_Admin  thank-you-for-your-interest-in-momentum                 Thank you for your in     Sent                     
+I, [19-10-01 12:19:21#2087]  INFO -- : Discourse Men                                           
+I, [19-10-01 12:19:21#2087]  INFO -- : Processed Users                     1                   
+I, [19-10-01 12:19:21#2087]  INFO -- : Skipped Users                       0                   
+I, [19-10-01 12:19:21#2087]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 12:19:21#2087]  INFO -- : Ownership                           0                   
+I, [19-10-01 12:19:21#2087]  INFO -- : Ownership Targets                   1                   
+I, [19-10-01 12:19:21#2087]  INFO -- : Ownership Updated                   1                   
+I, [19-10-01 12:19:21#2087]  INFO -- : Messages Sent                       1                   
+I, [19-10-01 12:19:21#2087]  INFO -- : Users Added to Group                0                   
+I, [19-10-01 12:19:21#2087]  INFO -- : Users Removed from Group            0                   
+I, [19-10-01 12:21:21#2976]  INFO -- : new_user_one_week_ago   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 12:21:21#2976]  INFO -- : Kim_Miller              2019-10-01     2019-10-01       2042         857538      55841                 2019-09-20 NU R0    
+W, [19-10-01 12:21:21#2976]  WARN -- : OK
+I, [19-10-01 12:21:22#2976]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 12:21:22#2976]  INFO -- : Kim_Miller          2019-10-01     2019-10-01       2042         857538      55841                 2019-09-20 NU R1    
+I, [19-10-01 12:29:06#13458]  INFO -- : Discourse Men                                           
+I, [19-10-01 12:29:06#13458]  INFO -- : Processed Users                     1                   
+I, [19-10-01 12:29:06#13458]  INFO -- : Skipped Users                       0                   
+I, [19-10-01 12:29:06#13458]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 12:29:06#13458]  INFO -- : Ownership                           0                   
+I, [19-10-01 12:29:06#13458]  INFO -- : Ownership Targets                   0                   
+I, [19-10-01 12:29:06#13458]  INFO -- : Ownership Updated                   0                   
+I, [19-10-01 12:29:06#13458]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 12:29:06#13458]  INFO -- : Users Added to Group                0                   
+I, [19-10-01 12:29:06#13458]  INFO -- : Users Removed from Group            0                   
+I, [19-10-01 12:30:53#13915]  INFO -- : new_user_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 12:30:53#13915]  INFO -- : Kim_Miller       2019-10-01     2019-10-01       2042         857538      55841                         
+W, [19-10-01 12:30:53#13915]  WARN -- : OK
+I, [19-10-01 12:30:54#13915]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 12:30:54#13915]  INFO -- : Kim_Miller          2019-10-01     2019-10-01       2042         857538      55841                 2019-10-01 NU R0    
+I, [19-10-01 12:30:55#13915]  INFO -- :   Message From:    Kim_Miller           Kim_Miller,KM_Admin  Thank you for Your Interest in Momentum!                Thank you for your in     Pending                  
+I, [19-10-01 12:30:57#13915]  INFO -- :   Message From:    Kim_Miller           Kim_Miller,KM_Admin  thank-you-for-your-interest-in-momentum                 Thank you for your in     Sent                     
+I, [19-10-01 12:30:58#13915]  INFO -- : Discourse Men                                           
+I, [19-10-01 12:30:58#13915]  INFO -- : Processed Users                     1                   
+I, [19-10-01 12:30:58#13915]  INFO -- : Skipped Users                       0                   
+I, [19-10-01 12:30:58#13915]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 12:30:58#13915]  INFO -- : Ownership                           0                   
+I, [19-10-01 12:30:58#13915]  INFO -- : Ownership Targets                   1                   
+I, [19-10-01 12:30:58#13915]  INFO -- : Ownership Updated                   1                   
+I, [19-10-01 12:30:58#13915]  INFO -- : Messages Sent                       1                   
+I, [19-10-01 12:30:58#13915]  INFO -- : Users Added to Group                0                   
+I, [19-10-01 12:30:58#13915]  INFO -- : Users Removed from Group            0                   
+I, [19-10-01 12:31:23#14357]  INFO -- : new_user_one_week_ago   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 12:31:23#14357]  INFO -- : Kim_Miller              2019-10-01     2019-10-01       2042         857538      55841                 2019-09-20 NU R0    
+W, [19-10-01 12:31:23#14357]  WARN -- : OK
+I, [19-10-01 12:31:23#14357]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 12:31:23#14357]  INFO -- : Kim_Miller          2019-10-01     2019-10-01       2042         857538      55841                 2019-09-20 NU R1    
+I, [19-10-01 12:31:24#14357]  INFO -- :   Message From:    KM_Admin             Kim_Miller           Become an Owner of Momentum!                            Hi Kim Miller,
+
+We do     Pending                  
+I, [19-10-01 12:31:26#14357]  INFO -- :   Message From:    KM_Admin             Kim_Miller           become-an-owner-of-momentum                             Hi Kim Miller,
+
+We do     Sent                     
+I, [19-10-01 12:31:27#14357]  INFO -- : Discourse Men                                           
+I, [19-10-01 12:31:27#14357]  INFO -- : Processed Users                     1                   
+I, [19-10-01 12:31:27#14357]  INFO -- : Skipped Users                       0                   
+I, [19-10-01 12:31:27#14357]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 12:31:27#14357]  INFO -- : Ownership                           0                   
+I, [19-10-01 12:31:27#14357]  INFO -- : Ownership Targets                   1                   
+I, [19-10-01 12:31:27#14357]  INFO -- : Ownership Updated                   1                   
+I, [19-10-01 12:31:27#14357]  INFO -- : Messages Sent                       1                   
+I, [19-10-01 12:31:27#14357]  INFO -- : Users Added to Group                0                   
+I, [19-10-01 12:31:27#14357]  INFO -- : Users Removed from Group            0                   
+I, [19-10-01 13:12:02#26475]  INFO -- : Discourse Men                                           
+I, [19-10-01 13:12:02#26475]  INFO -- : Processed Users                     1                   
+I, [19-10-01 13:12:02#26475]  INFO -- : Skipped Users                       0                   
+I, [19-10-01 13:12:02#26475]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 13:12:02#26475]  INFO -- : Ownership                           0                   
+I, [19-10-01 13:12:02#26475]  INFO -- : Ownership Targets                   0                   
+I, [19-10-01 13:12:02#26475]  INFO -- : Ownership Updated                   0                   
+I, [19-10-01 13:12:02#26475]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 13:12:02#26475]  INFO -- : Users Added to Group                0                   
+I, [19-10-01 13:12:02#26475]  INFO -- : Users Removed from Group            0                   
+I, [19-10-01 13:12:32#26914]  INFO -- : new_user_two_weeks_ago   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 13:12:32#26914]  INFO -- : Kim_Miller               2019-10-01     2019-10-01       2042         857538      55841                 2019-09-10 NU R1    
+W, [19-10-01 13:12:33#26914]  WARN -- : OK
+I, [19-10-01 13:12:33#26914]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 13:12:33#26914]  INFO -- : Kim_Miller          2019-10-01     2019-10-01       2042         857538      55841                 2019-09-10 NU R2    
+I, [19-10-01 13:12:34#26914]  INFO -- :   Message From:    KM_Admin             Kim_Miller           Momentum - Make Your Move!                              Hi Kim Miller,
+
+Becom     Pending                  
+I, [19-10-01 13:12:36#26914]  INFO -- :   Message From:    KM_Admin             Kim_Miller           momentum-make-your-move                                 Hi Kim Miller,
+
+Becom     Sent                     
+I, [19-10-01 13:12:37#26914]  INFO -- : Discourse Men                                           
+I, [19-10-01 13:12:37#26914]  INFO -- : Processed Users                     1                   
+I, [19-10-01 13:12:37#26914]  INFO -- : Skipped Users                       0                   
+I, [19-10-01 13:12:37#26914]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 13:12:37#26914]  INFO -- : Ownership                           0                   
+I, [19-10-01 13:12:37#26914]  INFO -- : Ownership Targets                   1                   
+I, [19-10-01 13:12:37#26914]  INFO -- : Ownership Updated                   1                   
+I, [19-10-01 13:12:37#26914]  INFO -- : Messages Sent                       1                   
+I, [19-10-01 13:12:37#26914]  INFO -- : Users Added to Group                0                   
+I, [19-10-01 13:12:37#26914]  INFO -- : Users Removed from Group            0                   
+I, [19-10-01 13:20:22#27487]  INFO -- : new_user_three_weeks_ago   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 13:20:22#27487]  INFO -- : Kim_Miller                 2019-10-01     2019-10-01       2042         857538      55841                 2019-09-01 NU R2    
+W, [19-10-01 13:20:22#27487]  WARN -- : OK
+I, [19-10-01 13:20:22#27487]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 13:20:22#27487]  INFO -- : Kim_Miller          2019-10-01     2019-10-01       2042         857538      55841                 2019-09-01 NU R3    
+I, [19-10-01 13:20:23#27487]  INFO -- :   Message From:    Kim_Miller           Kim_Miller,KM_Admin  It's Not Too Late! -- One Last Thought to Leave You With Kim Miller, don't let     Pending                  
+I, [19-10-01 13:20:25#27487]  INFO -- :   Message From:    Kim_Miller           Kim_Miller,KM_Admin  its-not-too-late-one-last-thought-to-leave-you-with     Kim Miller, don't let     Sent                     
+I, [19-10-01 13:20:26#27487]  INFO -- : Discourse Men                                           
+I, [19-10-01 13:20:26#27487]  INFO -- : Processed Users                     1                   
+I, [19-10-01 13:20:26#27487]  INFO -- : Skipped Users                       0                   
+I, [19-10-01 13:20:26#27487]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 13:20:26#27487]  INFO -- : Ownership                           0                   
+I, [19-10-01 13:20:26#27487]  INFO -- : Ownership Targets                   1                   
+I, [19-10-01 13:20:26#27487]  INFO -- : Ownership Updated                   1                   
+I, [19-10-01 13:20:26#27487]  INFO -- : Messages Sent                       1                   
+I, [19-10-01 13:20:26#27487]  INFO -- : Users Added to Group                0                   
+I, [19-10-01 13:20:26#27487]  INFO -- : Users Removed from Group            0                   
+I, [19-10-01 13:40:43#28671]  INFO -- : new_user_three_weeks_ago   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 13:40:43#28671]  INFO -- : Kim_Miller                 2019-10-01     2019-10-01       2042         857538      55841                 2019-09-01 NU R2    
+W, [19-10-01 13:40:43#28671]  WARN -- : OK
+I, [19-10-01 13:40:44#28671]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 13:40:44#28671]  INFO -- : Kim_Miller          2019-10-01     2019-10-01       2042         857538      55841                 2019-09-01 NU R3    
+I, [19-10-01 13:40:45#28671]  INFO -- :   Message From:    Kim_Miller           Kim_Miller,KM_Admin  It's Not Too Late! -- One Last Thought to Leave You With Don't let Momentum ge     Pending                  
+I, [19-10-01 13:40:46#28671]  INFO -- :   Message From:    Kim_Miller           Kim_Miller,KM_Admin  its-not-too-late-one-last-thought-to-leave-you-with     Don't let Momentum ge     Sent                     
+I, [19-10-01 13:40:47#28671]  INFO -- : Discourse Men                                           
+I, [19-10-01 13:40:47#28671]  INFO -- : Processed Users                     1                   
+I, [19-10-01 13:40:47#28671]  INFO -- : Skipped Users                       0                   
+I, [19-10-01 13:40:47#28671]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 13:40:47#28671]  INFO -- : Ownership                           0                   
+I, [19-10-01 13:40:47#28671]  INFO -- : Ownership Targets                   1                   
+I, [19-10-01 13:40:47#28671]  INFO -- : Ownership Updated                   1                   
+I, [19-10-01 13:40:47#28671]  INFO -- : Messages Sent                       1                   
+I, [19-10-01 13:40:47#28671]  INFO -- : Users Added to Group                0                   
+I, [19-10-01 13:40:47#28671]  INFO -- : Users Removed from Group            0                   
+W, [19-10-01 13:41:54#29103]  WARN -- : Sleeping for 20 seconds ....
+W, [19-10-01 13:42:57#29103]  WARN -- : Sleeping for 20 seconds ....
+W, [19-10-01 13:44:07#29103]  WARN -- : TooManyRequests: Sleeping for 20 seconds ....
+W, [19-10-01 13:45:17#29103]  WARN -- : Sleeping for 20 seconds ....
+W, [19-10-01 13:46:20#29103]  WARN -- : Sleeping for 20 seconds ....
+W, [19-10-01 13:47:24#29103]  WARN -- : Sleeping for 20 seconds ....
+W, [19-10-01 11:51:36#21645]  WARN -- : Scan Level Exception Rescue type DiscourseApi::TooManyRequests, {"errors"=>["You’ve performed this action too many times. Please wait a few seconds before trying again."], "error_type"=>"rate_limit", "extras"=>{"wait_seconds"=>1}}: Sleeping for 90 minutes ....
+W, [19-10-01 13:40:45#21645]  WARN -- : Sleeping for 20 seconds ....
+W, [19-10-01 13:41:11#21645]  WARN -- : Sleeping for 20 seconds ....
+W, [19-10-01 13:41:52#21645]  WARN -- : TooManyRequests: Sleeping for 20 seconds ....
+W, [19-10-01 13:42:58#21645]  WARN -- : TooManyRequests: Sleeping for 30 seconds ....
+W, [19-10-01 13:44:07#21645]  WARN -- : TooManyRequests: Sleeping for 30 seconds ....
+W, [19-10-01 13:45:17#21645]  WARN -- : Sleeping for 20 seconds ....
+W, [19-10-01 13:46:19#21645]  WARN -- : Sleeping for 20 seconds ....
+W, [19-10-01 13:47:25#21645]  WARN -- : TooManyRequests: Sleeping for 30 seconds ....
+W, [19-10-01 13:48:35#21645]  WARN -- : Sleeping for 20 seconds ....
+W, [19-10-01 13:48:46#21645]  WARN -- : Scan Level Exception Rescue type Interrupt, : Sleeping for 90 minutes ....
+I, [19-10-01 14:02:41#29686]  INFO -- : new_user_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-01 14:02:41#29686]  INFO -- : Samartha_Swaroop 2019-09-30     2019-09-26       1            251         251                           
+I, [19-10-01 14:04:47#29686]  INFO -- : Discourse Men                                           
+I, [19-10-01 14:04:47#29686]  INFO -- : Processed Users                     211                 
+I, [19-10-01 14:04:47#29686]  INFO -- : Skipped Users                       0                   
+I, [19-10-01 14:04:47#29686]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 14:04:47#29686]  INFO -- : Ownership                           0                   
+I, [19-10-01 14:04:47#29686]  INFO -- : Ownership Targets                   1                   
+I, [19-10-01 14:04:47#29686]  INFO -- : Ownership Updated                   0                   
+I, [19-10-01 14:04:47#29686]  INFO -- : Messages Sent                       0                   
+I, [19-10-01 14:04:47#29686]  INFO -- : Users Added to Group                0                   
+I, [19-10-01 14:04:47#29686]  INFO -- : Users Removed from Group            0                   

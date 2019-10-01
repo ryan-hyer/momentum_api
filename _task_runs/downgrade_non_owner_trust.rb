@@ -7,7 +7,7 @@ discourse_options = {
     # target_groups:          %w(Mods),       # Mods GreatX BraveHearts trust_level_0
     instance:               'https://discourse.gomomentum.org',
     api_username:           'KM_Admin',
-    exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin),
+    exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin MD_Admin),
     issue_users:             %w(),
     logger:                         momentum_api_logger
 }
