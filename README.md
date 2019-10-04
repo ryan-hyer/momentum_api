@@ -19,7 +19,7 @@ And then execute:
 
 ## Usage
 
-Over time this project intends to add many features, including membership management.
+Including membership management and many other functions to keep Momentum Owners informed.
 
 - _master/scan_hourly.rb controls auto run of all tasks.
 
@@ -47,4 +47,4 @@ Unit Tests are designed to run without a Discourse instance, but you may also te
 
 ## Issues
 
-Issues moved from [Discourse location](https://discourse.gomomentum.org/t/development-priority-list/6086) to here May 25, 2019.
+Issues are active, so feel free to submit on the Issues tab above.
