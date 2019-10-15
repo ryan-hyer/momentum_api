@@ -48,7 +48,7 @@ module MomentumApi
             if ownership_type[0].to_s == 'auto' and not subscriptions.empty?
               subscriptions.each do |subscription|
                 if action[1][:subscrption_name] and subscription['product'] and subscription['subscription_end_date'] and
-                    subscription['product']['name'][0..4] == action[1][:subscrption_name][0..4] and
+                    subscription['product']['name'].include? action[1][:subscrption_name][0..9] and
                     Date.valid_date?(subscription['subscription_end_date'][0..3].to_i,
                                      subscription['subscription_end_date'][5..6].to_i,
                                      subscription['subscription_end_date'][8..9].to_i)

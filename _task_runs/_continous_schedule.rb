@@ -34,7 +34,7 @@ schedule_options = {
                 add_to_group:           nil,
                 remove_from_group:      107,
                 message_to:             nil,
-                message_cc:             'KM_Admin',
+                message_cc:             'KM_Admin,Mike_Drilling',
                 message_from:           'Kim_Miller',
                 subscrption_name:       'Owner Auto Renewing',
                 excludes:               %w()
@@ -70,7 +70,7 @@ schedule_options = {
                 action_sequence:        'R3',
                 add_to_group:           107,
                 remove_from_group:      136,
-                message_cc:             'KM_Admin',
+                message_cc:             'KM_Admin,Mike_Drilling',
                 message_from:           'Kim_Miller',
                 excludes:               %w()
             }
@@ -155,7 +155,7 @@ schedule_options = {
                 add_to_group:           107,
                 remove_from_group:      45,
                 action_sequence:        'R3',
-                message_cc:             'KM_Admin',
+                message_cc:             'KM_Admin,Mike_Drilling',
                 message_from:           'Kim_Miller',
                 excludes:                 %w()
             },

@@ -3,12 +3,12 @@ require '../lib/momentum_api'
 
 discourse_options = {
     do_live_updates:        false,
-    target_username:        'Kim_Miller',         # David_Kirk Steve_Scott Scott_StGermain Kim_Miller David_Ashby Fernando_Venegas
+    target_username:        'Randall_Cunningham',         # David_Kirk Steve_Scott Scott_StGermain Kim_Miller David_Ashby Fernando_Venegas
     target_groups:          %w(trust_level_0),      # OpenKimono TechMods GreatX BraveHearts trust_level_0 trust_level_1
     instance:               'https://discourse.gomomentum.org',
     api_username:           'KM_Admin',
     exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin MD_Admin),
-    issue_users:             %w(Scott_StGermain),
+    issue_users:             %w(),
     logger:                  momentum_api_logger
 }
 
