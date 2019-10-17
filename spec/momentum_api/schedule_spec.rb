@@ -105,14 +105,15 @@ describe MomentumApi::Schedule do
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(14).times.and_return(user_details)
-        expect(mock_man).to receive(:users_categories).once.and_return(users_categories)
+        expect(mock_man).to receive(:user_details).exactly(65).times.and_return user_details
+        expect(mock_man).to receive(:users_categories).once.and_return users_categories
         mock_man
       end
 
       let(:mock_dependencies) do
         mock_dependencies = instance_double('mock_dependencies')
         expect(mock_dependencies).to receive(:run).once.with(mock_man, anything, 'Committed', anything)
+        expect(mock_dependencies).to receive(:options).exactly(13).times.and_return schedule_options[:category]
         mock_dependencies
       end
 
@@ -130,12 +131,13 @@ describe MomentumApi::Schedule do
       let(:mock_dependencies) do
         mock_dependencies = instance_double('mock_dependencies')
         expect(mock_dependencies).to receive(:run).exactly(3).times
+        expect(mock_dependencies).to receive(:options).exactly(13).times.and_return schedule_options[:category]
         mock_dependencies
       end
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(16).times.and_return(user_details)
+        expect(mock_man).to receive(:user_details).exactly(65).times.and_return(user_details)
         expect(mock_man).to receive(:users_categories).once.and_return(users_categories)
         mock_man
       end
@@ -154,6 +156,7 @@ describe MomentumApi::Schedule do
       let(:mock_dependencies) do
         mock_dependencies = instance_double('mock_dependencies')
         expect(mock_dependencies).to receive(:run).exactly(3).times
+        expect(mock_dependencies).to receive(:options).exactly(13).times.and_return schedule_options[:category]
         mock_dependencies
       end
       let(:mock_discourse) do
@@ -166,7 +169,7 @@ describe MomentumApi::Schedule do
 
       let(:mock_man) do
         mock_man = instance_double('man')
-        expect(mock_man).to receive(:user_details).exactly(29).times.and_return(user_details)
+        expect(mock_man).to receive(:user_details).exactly(78).times.and_return(user_details)
         expect(mock_man).to receive(:users_categories).once.and_return(users_categories)
         mock_man
       end

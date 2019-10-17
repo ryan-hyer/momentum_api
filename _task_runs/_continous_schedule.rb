@@ -210,21 +210,25 @@ schedule_options = {
     },
     category:{
         matching_team:              {
+            do_task_update:         true,
             allowed_levels:         [3],
             set_level:               3,
             excludes:               %w(Steve_Scott Ryan_Hyer David_Kirk)
         },
-        essential:                  {
+       Essential:                  {
+            do_task_update:         true,
             allowed_levels:         [3],
             set_level:               3,
             excludes:               %w(Steve_Scott Joe_Sabolefski)
         },
-        growth:                     {
+        Growth:                     {
+            do_task_update:         true,
             allowed_levels:         [3, 4],
             set_level:               4,
             excludes:               %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott Suhas_Chelian)
         },
-        meta:                       {
+        Meta:                       {
+            do_task_update:         true,
             allowed_levels:         [3, 4],
             set_level:               4,
             excludes:               %w(Joe_Sabolefski Bill_Herndon Michael_Wilson Howard_Bailey Steve_Scott)
@@ -232,6 +236,7 @@ schedule_options = {
     },
     group:{
         group_alias:               {
+            do_task_update:         true,
             allowed_levels:         nil,              # Default: 3
             set_level:              nil,              # Default: 3
             excludes:               %w()

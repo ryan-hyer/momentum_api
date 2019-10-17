@@ -1,7 +1,7 @@
 module MomentumApi
   class WatchCategory
 
-    attr_accessor :counters
+    attr_accessor :counters, :options
 
     def initialize(schedule, watching_options, mock: nil)
       raise ArgumentError, 'schedule needs to be defined' if schedule.nil?
@@ -20,13 +20,13 @@ module MomentumApi
 
     end
 
-    def run(man, category, group_name, levels)
-      if not levels[:allowed_levels].include?(category['notification_level'])
+    def run(man, category, group_name, action)
+      if not action[:allowed_levels].include?(category['notification_level'])
         print_user(man, category['slug'], group_name, category['notification_level'], status='NOT Watching', type='CategoryUser')
 
         @counters[:'Category Update Targets'] += 1
-        if @schedule.discourse.options[:do_live_updates]
-          update_response = man.user_client.category_set_user_notification(id: category['id'], notification_level: levels[:set_level])
+        if @schedule.discourse.options[:do_live_updates] and action[:do_task_update]
+          update_response = man.user_client.category_set_user_notification(id: category['id'], notification_level: action[:set_level])
           @mock ? sleep(0) : sleep(1)
           man.discourse.options[:logger].warn update_response
           @counters[:'Category Notify Updated'] += 1

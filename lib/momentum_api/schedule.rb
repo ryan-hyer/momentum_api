@@ -100,37 +100,53 @@ module MomentumApi
               puts "\n#{man.user_details['username']} Category case on category: #{category['slug']}\n"
             end
 
-            case
-            when (category['slug'] == group_name and @options[:category][:matching_team])
-              if @options[:category][:matching_team][:excludes].include?(man.user_details['username'])
-                # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
+            # case
+            # when (category['slug'] == group_name and @options[:category][:matching_team])
+              # if @options[:category][:matching_team][:excludes].include?(man.user_details['username'])
+              #   # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
+              # else
+              #   category_task.run(man, category, group_name, @options[:category][:matching_team])
+              # end
+
+            # when (category['slug'] == 'Essential' and group_name == 'Owner' and @options[:category][:Essential])
+            #   if @options[:category][:Essential][:excludes].include?(man.user_details['username'])
+            #     # puts "#{man.user_details['username']} specifically excluded from Essential Watching"
+            #   else                            # 4 = Watching first post, 3 = Watching, 1 = blank or ...?
+            #     category_task.run(man, category, group_name, @options[:category][:Essential])
+            #   end
+
+            # when (category['slug'] == 'Growth' and group_name == 'Owner' and @options[:category][:Growth])
+            #   if @options[:category][:Growth][:excludes].include?(man.user_details['username'])
+            #     # puts "#{man.user_details['username']} specifically excluded from Watching Growth"
+            #   else
+            #     category_task.run(man, category, group_name, @options[:category][:Growth])
+            #   end
+
+            # when (category['slug'] == 'Meta' and group_name == 'Owner' and @options[:category][:Meta])
+            #   if @options[:category][:Meta][:excludes].include?(man.user_details['username'])
+            #     # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
+            #   else
+            #     category_task.run(man, category, group_name, @options[:category][:Meta])
+            #   end
+
+            # else
+            #   puts 'Category not a target'
+            # end
+
+            category_task.options.each do |category_action|
+              if category_action[1][:excludes].include?(man.user_details['username'])
+               # puts "#{man.user_details['username']} specifically excluded from Watching action"
               else
-                category_task.run(man, category, group_name, @options[:category][:matching_team])
-              end
+                case
+                when (category['slug'] == category_action[0].to_s and group_name == 'Owner')
+                    category_task.run(man, category, group_name, category_action[1])
 
-            when (category['slug'] == 'Essential' and group_name == 'Owner' and @options[:category][:essential])
-              if @options[:category][:essential][:excludes].include?(man.user_details['username'])
-                # puts "#{man.user_details['username']} specifically excluded from Essential Watching"
-              else                            # 4 = Watching first post, 3 = Watching, 1 = blank or ...?
-                category_task.run(man, category, group_name, @options[:category][:essential])
+                when (category['slug'] == group_name and category_action[0] == :matching_team)
+                    category_task.run(man, category, group_name, category_action[1])
+                else
+                  # puts 'Category not a target'
+                end
               end
-
-            when (category['slug'] == 'Growth' and group_name == 'Owner' and @options[:category][:growth])
-              if @options[:category][:growth][:excludes].include?(man.user_details['username'])
-                # puts "#{man.user_details['username']} specifically excluded from Watching Growth"
-              else
-                category_task.run(man, category, group_name, @options[:category][:growth])
-              end
-
-            when (category['slug'] == 'Meta' and group_name == 'Owner' and @options[:category][:meta])
-              if @options[:category][:meta][:excludes].include?(man.user_details['username'])
-                # puts "#{man.user_details['username']} specifically excluded from Watching Meta"
-              else
-                category_task.run(man, category, group_name, @options[:category][:meta])
-              end
-
-            else
-              # puts 'Category not a target'
             end
 
           end
