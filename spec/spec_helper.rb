@@ -38,6 +38,7 @@ def discourse_options
       do_live_updates:              false,
       target_username:              nil,
       target_groups:                %w(trust_level_1),
+      ownership_groups:             %w(Owner Owner_Manual),
       include_staged_users:         false,
       instance:                     'https://discourse.gomomentum.org',
       api_username:                 'KM_Admin',

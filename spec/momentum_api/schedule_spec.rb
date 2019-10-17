@@ -9,8 +9,7 @@ describe MomentumApi::Schedule do
   
   let(:mock_discourse) do
     mock_discourse = instance_double('mock_discourse')
-    # expect(mock_discourse).to receive(:scan_pass_counters).once.and_return([])
-    expect(mock_discourse).to receive(:options).once.and_return(discourse_options)
+    expect(mock_discourse).to receive(:options).twice.and_return(discourse_options)
     mock_discourse
   end
 
@@ -61,7 +60,7 @@ describe MomentumApi::Schedule do
         mock_discourse = instance_double('mock_discourse')
         reset_options = discourse_options
         reset_options[:issue_users] = %w(Tony_Christopher)
-         expect(mock_discourse).to receive(:options).exactly(1).times.and_return(reset_options)
+         expect(mock_discourse).to receive(:options).exactly(2).times.and_return(reset_options)
         mock_discourse
       end
 

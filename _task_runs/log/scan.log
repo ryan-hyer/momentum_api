@@ -32574,3 +32574,505 @@ I, [19-10-17 10:51:57#10137]  INFO -- : Watch Categories
 I, [19-10-17 10:51:57#10137]  INFO -- : User Categories                     31                  
 I, [19-10-17 10:51:57#10137]  INFO -- : Category Update Targets             0                   
 I, [19-10-17 10:51:57#10137]  INFO -- : Category Notify Updated             0                   
+I, [19-10-17 13:59:58#76612]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 13:59:58#76612]  INFO -- : Vern_Mcgeorge      Owner                Growth                 4        NOT Watching                  
+I, [19-10-17 13:59:58#76612]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 13:59:58#76612]  INFO -- : Vern_Mcgeorge      Owner                Routine                4        NOT Watching                  
+I, [19-10-17 14:00:03#76612]  INFO -- : Discourse Men                                           
+I, [19-10-17 14:00:03#76612]  INFO -- : Processed Users                     17                  
+I, [19-10-17 14:00:03#76612]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 14:00:03#76612]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 14:00:03#76612]  INFO -- : Watch Categories                                        
+I, [19-10-17 14:00:03#76612]  INFO -- : User Categories                     32                  
+I, [19-10-17 14:00:03#76612]  INFO -- : Category Update Targets             2                   
+I, [19-10-17 14:00:03#76612]  INFO -- : Category Notify Updated             0                   
+I, [19-10-17 14:01:44#77092]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 14:01:44#77092]  INFO -- : Vern_Mcgeorge      Owner                Growth                 4        NOT Watching                  
+I, [19-10-17 14:01:44#77092]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 14:01:44#77092]  INFO -- : Vern_Mcgeorge      Owner                Routine                4        NOT Watching                  
+I, [19-10-17 14:01:44#77092]  INFO -- : Discourse Men                                           
+I, [19-10-17 14:01:44#77092]  INFO -- : Processed Users                     1                   
+I, [19-10-17 14:01:44#77092]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 14:01:44#77092]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 14:01:44#77092]  INFO -- : Watch Categories                                        
+I, [19-10-17 14:01:44#77092]  INFO -- : User Categories                     5                   
+I, [19-10-17 14:01:44#77092]  INFO -- : Category Update Targets             2                   
+I, [19-10-17 14:01:44#77092]  INFO -- : Category Notify Updated             0                   
+I, [19-10-17 14:03:03#77543]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 14:03:03#77543]  INFO -- : Vern_Mcgeorge      Owner                Growth                 4        NOT Watching                  
+I, [19-10-17 14:03:03#77543]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 14:03:03#77543]  INFO -- : Vern_Mcgeorge      Owner                Routine                4        NOT Watching                  
+I, [19-10-17 14:03:03#77543]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 14:03:03#77543]  INFO -- : Vern_Mcgeorge      Owner                Meta                   4        NOT Watching                  
+I, [19-10-17 14:03:03#77543]  INFO -- : Discourse Men                                           
+I, [19-10-17 14:03:03#77543]  INFO -- : Processed Users                     1                   
+I, [19-10-17 14:03:03#77543]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 14:03:03#77543]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 14:03:03#77543]  INFO -- : Watch Categories                                        
+I, [19-10-17 14:03:03#77543]  INFO -- : User Categories                     5                   
+I, [19-10-17 14:03:03#77543]  INFO -- : Category Update Targets             3                   
+I, [19-10-17 14:03:03#77543]  INFO -- : Category Notify Updated             0                   
+I, [19-10-17 14:07:47#78052]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 14:07:47#78052]  INFO -- : Vern_Mcgeorge      Owner                Growth                 4        NOT Watching                  
+I, [19-10-17 14:07:47#78052]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 14:07:47#78052]  INFO -- : Vern_Mcgeorge      Owner                Routine                4        NOT Watching                  
+I, [19-10-17 14:07:47#78052]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 14:07:47#78052]  INFO -- : Vern_Mcgeorge      Owner                Meta                   4        NOT Watching                  
+I, [19-10-17 14:07:52#78052]  INFO -- : Discourse Men                                           
+I, [19-10-17 14:07:52#78052]  INFO -- : Processed Users                     17                  
+I, [19-10-17 14:07:52#78052]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 14:07:52#78052]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 14:07:52#78052]  INFO -- : Watch Categories                                        
+I, [19-10-17 14:07:52#78052]  INFO -- : User Categories                     32                  
+I, [19-10-17 14:07:52#78052]  INFO -- : Category Update Targets             3                   
+I, [19-10-17 14:07:52#78052]  INFO -- : Category Notify Updated             0                   
+I, [19-10-17 14:10:42#78547]  INFO -- : Discourse Men                                           
+I, [19-10-17 14:10:42#78547]  INFO -- : Processed Users                     1                   
+I, [19-10-17 14:10:42#78547]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 14:10:42#78547]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 14:10:42#78547]  INFO -- : Watch Categories                                        
+I, [19-10-17 14:10:42#78547]  INFO -- : User Categories                     2                   
+I, [19-10-17 14:10:42#78547]  INFO -- : Category Update Targets             0                   
+I, [19-10-17 14:10:42#78547]  INFO -- : Category Notify Updated             0                   
+I, [19-10-17 14:11:17#78990]  INFO -- : Discourse Men                                           
+I, [19-10-17 14:11:17#78990]  INFO -- : Processed Users                     1                   
+I, [19-10-17 14:11:17#78990]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 14:11:17#78990]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 14:11:17#78990]  INFO -- : Watch Categories                                        
+I, [19-10-17 14:11:17#78990]  INFO -- : User Categories                     2                   
+I, [19-10-17 14:11:17#78990]  INFO -- : Category Update Targets             0                   
+I, [19-10-17 14:11:17#78990]  INFO -- : Category Notify Updated             0                   
+I, [19-10-17 14:15:49#79495]  INFO -- : Discourse Men                                           
+I, [19-10-17 14:15:49#79495]  INFO -- : Processed Users                     1                   
+I, [19-10-17 14:15:49#79495]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 14:15:49#79495]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 14:15:49#79495]  INFO -- : Watch Categories                                        
+I, [19-10-17 14:15:49#79495]  INFO -- : User Categories                     2                   
+I, [19-10-17 14:15:49#79495]  INFO -- : Category Update Targets             0                   
+I, [19-10-17 14:15:49#79495]  INFO -- : Category Notify Updated             0                   
+I, [19-10-17 14:19:09#79957]  INFO -- : Discourse Men                                           
+I, [19-10-17 14:19:09#79957]  INFO -- : Processed Users                     1                   
+I, [19-10-17 14:19:09#79957]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 14:19:09#79957]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 14:19:09#79957]  INFO -- : Watch Categories                                        
+I, [19-10-17 14:19:09#79957]  INFO -- : User Categories                     2                   
+I, [19-10-17 14:19:09#79957]  INFO -- : Category Update Targets             0                   
+I, [19-10-17 14:19:09#79957]  INFO -- : Category Notify Updated             0                   
+I, [19-10-17 14:19:39#80447]  INFO -- : Discourse Men                                           
+I, [19-10-17 14:19:39#80447]  INFO -- : Processed Users                     1                   
+I, [19-10-17 14:19:39#80447]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 14:19:39#80447]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 14:19:39#80447]  INFO -- : Watch Categories                                        
+I, [19-10-17 14:19:39#80447]  INFO -- : User Categories                     2                   
+I, [19-10-17 14:19:39#80447]  INFO -- : Category Update Targets             0                   
+I, [19-10-17 14:19:39#80447]  INFO -- : Category Notify Updated             0                   
+I, [19-10-17 14:22:01#80881]  INFO -- : Discourse Men                                           
+I, [19-10-17 14:22:01#80881]  INFO -- : Processed Users                     1                   
+I, [19-10-17 14:22:01#80881]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 14:22:01#80881]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 14:22:01#80881]  INFO -- : Watch Categories                                        
+I, [19-10-17 14:22:01#80881]  INFO -- : User Categories                     2                   
+I, [19-10-17 14:22:01#80881]  INFO -- : Category Update Targets             0                   
+I, [19-10-17 14:22:01#80881]  INFO -- : Category Notify Updated             0                   
+I, [19-10-17 15:16:26#81618]  INFO -- : Discourse Men                                           
+I, [19-10-17 15:16:26#81618]  INFO -- : Processed Users                     1                   
+I, [19-10-17 15:16:26#81618]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 15:16:26#81618]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 15:16:26#81618]  INFO -- : Watch Categories                                        
+I, [19-10-17 15:16:26#81618]  INFO -- : User Categories                     2                   
+I, [19-10-17 15:16:26#81618]  INFO -- : Category Update Targets             0                   
+I, [19-10-17 15:16:26#81618]  INFO -- : Category Notify Updated             0                   
+I, [19-10-17 15:18:00#82707]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:18:00#82707]  INFO -- : Mitch_Slomiak      Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:18:00#82707]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:18:00#82707]  INFO -- : Mitch_Slomiak      Owner_Manual         Routine                4        NOT Watching                  
+I, [19-10-17 15:18:00#82707]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:18:00#82707]  INFO -- : Mitch_Slomiak      Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:18:00#82707]  INFO -- : Discourse Men                                           
+I, [19-10-17 15:18:00#82707]  INFO -- : Processed Users                     1                   
+I, [19-10-17 15:18:00#82707]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 15:18:00#82707]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 15:18:00#82707]  INFO -- : Watch Categories                                        
+I, [19-10-17 15:18:00#82707]  INFO -- : User Categories                     6                   
+I, [19-10-17 15:18:00#82707]  INFO -- : Category Update Targets             3                   
+I, [19-10-17 15:18:00#82707]  INFO -- : Category Notify Updated             0                   
+I, [19-10-17 15:18:33#83150]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:18:33#83150]  INFO -- : Mitch_Slomiak      Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:18:33#83150]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:18:33#83150]  INFO -- : Mitch_Slomiak      Owner_Manual         Routine                4        NOT Watching                  
+I, [19-10-17 15:18:33#83150]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:18:33#83150]  INFO -- : Mitch_Slomiak      Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:18:33#83150]  INFO -- : Discourse Men                                           
+I, [19-10-17 15:18:33#83150]  INFO -- : Processed Users                     1                   
+I, [19-10-17 15:18:33#83150]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 15:18:33#83150]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 15:18:33#83150]  INFO -- : Watch Categories                                        
+I, [19-10-17 15:18:33#83150]  INFO -- : User Categories                     6                   
+I, [19-10-17 15:18:33#83150]  INFO -- : Category Update Targets             3                   
+I, [19-10-17 15:18:33#83150]  INFO -- : Category Notify Updated             0                   
+I, [19-10-17 15:21:03#83610]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:21:03#83610]  INFO -- : Mitch_Slomiak      Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:21:03#83610]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:21:03#83610]  INFO -- : Mitch_Slomiak      Owner_Manual         Routine                4        NOT Watching                  
+I, [19-10-17 15:21:03#83610]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:21:03#83610]  INFO -- : Mitch_Slomiak      Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:21:03#83610]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:21:03#83610]  INFO -- : Mitch_Slomiak      RightStuff           RightStuff             1        NOT Watching                  
+I, [19-10-17 15:21:03#83610]  INFO -- : Discourse Men                                           
+I, [19-10-17 15:21:03#83610]  INFO -- : Processed Users                     1                   
+I, [19-10-17 15:21:03#83610]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 15:21:03#83610]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 15:21:03#83610]  INFO -- : Watch Categories                                        
+I, [19-10-17 15:21:03#83610]  INFO -- : User Categories                     6                   
+I, [19-10-17 15:21:03#83610]  INFO -- : Category Update Targets             4                   
+I, [19-10-17 15:21:03#83610]  INFO -- : Category Notify Updated             0                   
+I, [19-10-17 15:25:29#84116]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:25:29#84116]  INFO -- : Mitch_Slomiak      Owner_Manual         Growth                 4        NOT Watching                  
+W, [19-10-17 15:25:30#84116]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:25:31#84116]  WARN -- : Updated Category: Growth    Notification Level: 3
+I, [19-10-17 15:25:31#84116]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:25:31#84116]  INFO -- : Mitch_Slomiak      Owner_Manual         Routine                4        NOT Watching                  
+W, [19-10-17 15:25:33#84116]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:25:34#84116]  WARN -- : Updated Category: Routine    Notification Level: 3
+I, [19-10-17 15:25:34#84116]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:25:34#84116]  INFO -- : Mitch_Slomiak      Owner_Manual         Meta                   4        NOT Watching                  
+W, [19-10-17 15:25:35#84116]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:25:37#84116]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 15:25:37#84116]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:25:37#84116]  INFO -- : Mitch_Slomiak      RightStuff           RightStuff             1        NOT Watching                  
+W, [19-10-17 15:25:38#84116]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:25:39#84116]  WARN -- : Updated Category: RightStuff    Notification Level: 3
+I, [19-10-17 15:25:39#84116]  INFO -- : Discourse Men                                           
+I, [19-10-17 15:25:39#84116]  INFO -- : Processed Users                     1                   
+I, [19-10-17 15:25:39#84116]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 15:25:39#84116]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 15:25:39#84116]  INFO -- : Watch Categories                                        
+I, [19-10-17 15:25:39#84116]  INFO -- : User Categories                     6                   
+I, [19-10-17 15:25:39#84116]  INFO -- : Category Update Targets             4                   
+I, [19-10-17 15:25:39#84116]  INFO -- : Category Notify Updated             4                   
+I, [19-10-17 15:26:22#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:22#84562]  INFO -- : Charlie_Bedard     Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:26:22#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:22#84562]  INFO -- : Charlie_Bedard     Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:26:26#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:26#84562]  INFO -- : Curt_Weil          Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:26:26#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:26#84562]  INFO -- : Curt_Weil          Owner_Manual         Routine                4        NOT Watching                  
+I, [19-10-17 15:26:26#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:26#84562]  INFO -- : Curt_Weil          Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:26:31#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:31#84562]  INFO -- : Dennis_Sorensen    Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:26:31#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:31#84562]  INFO -- : Dennis_Sorensen    Owner_Manual         Routine                4        NOT Watching                  
+I, [19-10-17 15:26:31#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:31#84562]  INFO -- : Dennis_Sorensen    Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:26:35#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:35#84562]  INFO -- : Jim_Knapp          Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:26:35#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:35#84562]  INFO -- : Jim_Knapp          Owner_Manual         Routine                4        NOT Watching                  
+I, [19-10-17 15:26:35#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:35#84562]  INFO -- : Jim_Knapp          Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:26:40#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:40#84562]  INFO -- : John_Butler        Owner_Manual         Routine                4        NOT Watching                  
+I, [19-10-17 15:26:40#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:40#84562]  INFO -- : John_Butler        Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:26:44#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:44#84562]  INFO -- : Keith_Britany      Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:26:44#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:44#84562]  INFO -- : Keith_Britany      Owner_Manual         Routine                4        NOT Watching                  
+I, [19-10-17 15:26:44#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:44#84562]  INFO -- : Keith_Britany      Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:26:49#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:49#84562]  INFO -- : Lars_Rider         Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:26:49#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:49#84562]  INFO -- : Lars_Rider         Owner_Manual         Routine                4        NOT Watching                  
+I, [19-10-17 15:26:49#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:49#84562]  INFO -- : Lars_Rider         Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:26:53#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:53#84562]  INFO -- : Mike_Druke         Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:26:53#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:53#84562]  INFO -- : Mike_Druke         Owner_Manual         Routine                4        NOT Watching                  
+I, [19-10-17 15:26:53#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:26:53#84562]  INFO -- : Mike_Druke         Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:27:03#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:03#84562]  INFO -- : Randy_Horton       Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:27:03#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:03#84562]  INFO -- : Randy_Horton       Owner_Manual         Routine                4        NOT Watching                  
+I, [19-10-17 15:27:03#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:03#84562]  INFO -- : Randy_Horton       Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:27:07#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:07#84562]  INFO -- : Roger_Chapman      Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:27:07#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:07#84562]  INFO -- : Roger_Chapman      Owner_Manual         Routine                4        NOT Watching                  
+I, [19-10-17 15:27:07#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:07#84562]  INFO -- : Roger_Chapman      Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:27:16#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:16#84562]  INFO -- : Steve_Cross        Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:27:16#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:16#84562]  INFO -- : Steve_Cross        Owner_Manual         Routine                1        NOT Watching                  
+I, [19-10-17 15:27:16#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:16#84562]  INFO -- : Steve_Cross        Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:27:21#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:21#84562]  INFO -- : Steve_Fitzsimons   Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:27:21#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:21#84562]  INFO -- : Steve_Fitzsimons   Owner_Manual         Routine                4        NOT Watching                  
+I, [19-10-17 15:27:21#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:21#84562]  INFO -- : Steve_Fitzsimons   Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:27:25#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:25#84562]  INFO -- : Tom_Feasby         Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:27:25#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:25#84562]  INFO -- : Tom_Feasby         Owner_Manual         Routine                4        NOT Watching                  
+I, [19-10-17 15:27:25#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:25#84562]  INFO -- : Tom_Feasby         Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:27:30#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:30#84562]  INFO -- : Vern_Mcgeorge      Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:27:30#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:30#84562]  INFO -- : Vern_Mcgeorge      Owner_Manual         Routine                4        NOT Watching                  
+I, [19-10-17 15:27:30#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:30#84562]  INFO -- : Vern_Mcgeorge      Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:27:30#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:30#84562]  INFO -- : Vern_Mcgeorge      Owner                Growth                 4        NOT Watching                  
+I, [19-10-17 15:27:30#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:30#84562]  INFO -- : Vern_Mcgeorge      Owner                Routine                4        NOT Watching                  
+I, [19-10-17 15:27:30#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:30#84562]  INFO -- : Vern_Mcgeorge      Owner                Meta                   4        NOT Watching                  
+I, [19-10-17 15:27:34#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:34#84562]  INFO -- : William_Burton     Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:27:34#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:34#84562]  INFO -- : William_Burton     Owner_Manual         Routine                4        NOT Watching                  
+I, [19-10-17 15:27:34#84562]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:27:34#84562]  INFO -- : William_Burton     Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:27:34#84562]  INFO -- : Discourse Men                                           
+I, [19-10-17 15:27:34#84562]  INFO -- : Processed Users                     17                  
+I, [19-10-17 15:27:34#84562]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 15:27:34#84562]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 15:27:34#84562]  INFO -- : Watch Categories                                        
+I, [19-10-17 15:27:34#84562]  INFO -- : User Categories                     100                 
+I, [19-10-17 15:27:34#84562]  INFO -- : Category Update Targets             46                  
+I, [19-10-17 15:27:34#84562]  INFO -- : Category Notify Updated             0                   
+I, [19-10-17 15:28:30#85030]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:28:30#85030]  INFO -- : William_Burton     Owner_Manual         Growth                 4        NOT Watching                  
+I, [19-10-17 15:28:30#85030]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:28:30#85030]  INFO -- : William_Burton     Owner_Manual         Routine                4        NOT Watching                  
+I, [19-10-17 15:28:30#85030]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:28:30#85030]  INFO -- : William_Burton     Owner_Manual         Meta                   4        NOT Watching                  
+I, [19-10-17 15:28:30#85030]  INFO -- : Discourse Men                                           
+I, [19-10-17 15:28:30#85030]  INFO -- : Processed Users                     1                   
+I, [19-10-17 15:28:30#85030]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 15:28:30#85030]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 15:28:30#85030]  INFO -- : Watch Categories                                        
+I, [19-10-17 15:28:30#85030]  INFO -- : User Categories                     5                   
+I, [19-10-17 15:28:30#85030]  INFO -- : Category Update Targets             3                   
+I, [19-10-17 15:28:30#85030]  INFO -- : Category Notify Updated             0                   
+I, [19-10-17 15:28:46#85462]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:28:46#85462]  INFO -- : William_Burton     Owner_Manual         Growth                 4        NOT Watching                  
+W, [19-10-17 15:28:47#85462]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:28:48#85462]  WARN -- : Updated Category: Growth    Notification Level: 3
+I, [19-10-17 15:28:48#85462]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:28:48#85462]  INFO -- : William_Burton     Owner_Manual         Routine                4        NOT Watching                  
+W, [19-10-17 15:28:49#85462]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:28:51#85462]  WARN -- : Updated Category: Routine    Notification Level: 3
+I, [19-10-17 15:28:51#85462]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:28:51#85462]  INFO -- : William_Burton     Owner_Manual         Meta                   4        NOT Watching                  
+W, [19-10-17 15:28:52#85462]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:28:53#85462]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 15:28:53#85462]  INFO -- : Discourse Men                                           
+I, [19-10-17 15:28:53#85462]  INFO -- : Processed Users                     1                   
+I, [19-10-17 15:28:53#85462]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 15:28:53#85462]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 15:28:53#85462]  INFO -- : Watch Categories                                        
+I, [19-10-17 15:28:53#85462]  INFO -- : User Categories                     5                   
+I, [19-10-17 15:28:53#85462]  INFO -- : Category Update Targets             3                   
+I, [19-10-17 15:28:53#85462]  INFO -- : Category Notify Updated             3                   
+I, [19-10-17 15:29:20#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:29:20#85907]  INFO -- : Charlie_Bedard     Owner_Manual         Growth                 4        NOT Watching                  
+W, [19-10-17 15:29:22#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:29:23#85907]  WARN -- : Updated Category: Growth    Notification Level: 3
+I, [19-10-17 15:29:23#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:29:23#85907]  INFO -- : Charlie_Bedard     Owner_Manual         Meta                   4        NOT Watching                  
+W, [19-10-17 15:29:24#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:29:25#85907]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 15:29:30#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:29:30#85907]  INFO -- : Curt_Weil          Owner_Manual         Growth                 4        NOT Watching                  
+W, [19-10-17 15:29:31#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:29:32#85907]  WARN -- : Updated Category: Growth    Notification Level: 3
+I, [19-10-17 15:29:32#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:29:32#85907]  INFO -- : Curt_Weil          Owner_Manual         Routine                4        NOT Watching                  
+W, [19-10-17 15:29:33#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:29:35#85907]  WARN -- : Updated Category: Routine    Notification Level: 3
+I, [19-10-17 15:29:35#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:29:35#85907]  INFO -- : Curt_Weil          Owner_Manual         Meta                   4        NOT Watching                  
+W, [19-10-17 15:29:36#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:29:37#85907]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 15:29:42#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:29:42#85907]  INFO -- : Dennis_Sorensen    Owner_Manual         Growth                 4        NOT Watching                  
+W, [19-10-17 15:29:43#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:29:44#85907]  WARN -- : Updated Category: Growth    Notification Level: 3
+I, [19-10-17 15:29:44#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:29:44#85907]  INFO -- : Dennis_Sorensen    Owner_Manual         Routine                4        NOT Watching                  
+W, [19-10-17 15:29:46#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:29:47#85907]  WARN -- : Updated Category: Routine    Notification Level: 3
+I, [19-10-17 15:29:47#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:29:47#85907]  INFO -- : Dennis_Sorensen    Owner_Manual         Meta                   4        NOT Watching                  
+W, [19-10-17 15:29:48#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:29:49#85907]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 15:29:54#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:29:54#85907]  INFO -- : Jim_Knapp          Owner_Manual         Growth                 4        NOT Watching                  
+W, [19-10-17 15:29:55#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:29:56#85907]  WARN -- : Updated Category: Growth    Notification Level: 3
+I, [19-10-17 15:29:56#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:29:56#85907]  INFO -- : Jim_Knapp          Owner_Manual         Routine                4        NOT Watching                  
+W, [19-10-17 15:29:57#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:29:58#85907]  WARN -- : Updated Category: Routine    Notification Level: 3
+I, [19-10-17 15:29:58#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:29:58#85907]  INFO -- : Jim_Knapp          Owner_Manual         Meta                   4        NOT Watching                  
+W, [19-10-17 15:30:00#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:30:01#85907]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 15:30:06#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:30:06#85907]  INFO -- : John_Butler        Owner_Manual         Routine                4        NOT Watching                  
+W, [19-10-17 15:30:07#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:30:08#85907]  WARN -- : Updated Category: Routine    Notification Level: 3
+I, [19-10-17 15:30:08#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:30:08#85907]  INFO -- : John_Butler        Owner_Manual         Meta                   4        NOT Watching                  
+W, [19-10-17 15:30:10#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:30:11#85907]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 15:30:15#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:30:15#85907]  INFO -- : Keith_Britany      Owner_Manual         Growth                 4        NOT Watching                  
+W, [19-10-17 15:30:16#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:30:18#85907]  WARN -- : Updated Category: Growth    Notification Level: 3
+I, [19-10-17 15:30:18#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:30:18#85907]  INFO -- : Keith_Britany      Owner_Manual         Routine                4        NOT Watching                  
+W, [19-10-17 15:30:19#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:30:20#85907]  WARN -- : Updated Category: Routine    Notification Level: 3
+I, [19-10-17 15:30:20#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:30:20#85907]  INFO -- : Keith_Britany      Owner_Manual         Meta                   4        NOT Watching                  
+W, [19-10-17 15:30:21#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:30:23#85907]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 15:30:27#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:30:27#85907]  INFO -- : Lars_Rider         Owner_Manual         Growth                 4        NOT Watching                  
+W, [19-10-17 15:30:28#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:30:30#85907]  WARN -- : Updated Category: Growth    Notification Level: 3
+I, [19-10-17 15:30:30#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:30:30#85907]  INFO -- : Lars_Rider         Owner_Manual         Routine                4        NOT Watching                  
+W, [19-10-17 15:30:31#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:30:32#85907]  WARN -- : Updated Category: Routine    Notification Level: 3
+I, [19-10-17 15:30:32#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:30:32#85907]  INFO -- : Lars_Rider         Owner_Manual         Meta                   4        NOT Watching                  
+W, [19-10-17 15:30:33#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:30:34#85907]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 15:30:39#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:30:39#85907]  INFO -- : Mike_Druke         Owner_Manual         Growth                 4        NOT Watching                  
+W, [19-10-17 15:30:40#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:30:41#85907]  WARN -- : Updated Category: Growth    Notification Level: 3
+I, [19-10-17 15:30:41#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:30:41#85907]  INFO -- : Mike_Druke         Owner_Manual         Routine                4        NOT Watching                  
+W, [19-10-17 15:30:43#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:30:44#85907]  WARN -- : Updated Category: Routine    Notification Level: 3
+I, [19-10-17 15:30:44#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:30:44#85907]  INFO -- : Mike_Druke         Owner_Manual         Meta                   4        NOT Watching                  
+W, [19-10-17 15:30:45#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:30:46#85907]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 15:30:55#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:30:55#85907]  INFO -- : Randy_Horton       Owner_Manual         Growth                 4        NOT Watching                  
+W, [19-10-17 15:30:57#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:30:58#85907]  WARN -- : Updated Category: Growth    Notification Level: 3
+I, [19-10-17 15:30:58#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:30:58#85907]  INFO -- : Randy_Horton       Owner_Manual         Routine                4        NOT Watching                  
+W, [19-10-17 15:30:59#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:31:00#85907]  WARN -- : Updated Category: Routine    Notification Level: 3
+I, [19-10-17 15:31:00#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:31:00#85907]  INFO -- : Randy_Horton       Owner_Manual         Meta                   4        NOT Watching                  
+W, [19-10-17 15:31:01#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:31:03#85907]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 15:31:07#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:31:07#85907]  INFO -- : Roger_Chapman      Owner_Manual         Growth                 4        NOT Watching                  
+W, [19-10-17 15:31:08#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:31:10#85907]  WARN -- : Updated Category: Growth    Notification Level: 3
+I, [19-10-17 15:31:10#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:31:10#85907]  INFO -- : Roger_Chapman      Owner_Manual         Routine                4        NOT Watching                  
+W, [19-10-17 15:31:11#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:31:12#85907]  WARN -- : Updated Category: Routine    Notification Level: 3
+I, [19-10-17 15:31:12#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:31:12#85907]  INFO -- : Roger_Chapman      Owner_Manual         Meta                   4        NOT Watching                  
+W, [19-10-17 15:31:13#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:31:15#85907]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 15:31:24#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:31:24#85907]  INFO -- : Steve_Cross        Owner_Manual         Growth                 4        NOT Watching                  
+W, [19-10-17 15:31:25#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:31:26#85907]  WARN -- : Updated Category: Growth    Notification Level: 3
+I, [19-10-17 15:31:26#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:31:26#85907]  INFO -- : Steve_Cross        Owner_Manual         Routine                1        NOT Watching                  
+W, [19-10-17 15:31:27#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:31:29#85907]  WARN -- : Updated Category: Routine    Notification Level: 3
+I, [19-10-17 15:31:29#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:31:29#85907]  INFO -- : Steve_Cross        Owner_Manual         Meta                   4        NOT Watching                  
+W, [19-10-17 15:31:30#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:31:31#85907]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 15:31:36#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:31:36#85907]  INFO -- : Steve_Fitzsimons   Owner_Manual         Growth                 4        NOT Watching                  
+W, [19-10-17 15:31:37#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:31:38#85907]  WARN -- : Updated Category: Growth    Notification Level: 3
+I, [19-10-17 15:31:38#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:31:38#85907]  INFO -- : Steve_Fitzsimons   Owner_Manual         Routine                4        NOT Watching                  
+W, [19-10-17 15:31:39#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:31:40#85907]  WARN -- : Updated Category: Routine    Notification Level: 3
+I, [19-10-17 15:31:40#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:31:40#85907]  INFO -- : Steve_Fitzsimons   Owner_Manual         Meta                   4        NOT Watching                  
+W, [19-10-17 15:31:42#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:31:43#85907]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 15:31:47#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:31:47#85907]  INFO -- : Tom_Feasby         Owner_Manual         Growth                 4        NOT Watching                  
+W, [19-10-17 15:31:49#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:31:50#85907]  WARN -- : Updated Category: Growth    Notification Level: 3
+I, [19-10-17 15:31:50#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:31:50#85907]  INFO -- : Tom_Feasby         Owner_Manual         Routine                4        NOT Watching                  
+W, [19-10-17 15:31:51#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:31:52#85907]  WARN -- : Updated Category: Routine    Notification Level: 3
+I, [19-10-17 15:31:52#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:31:52#85907]  INFO -- : Tom_Feasby         Owner_Manual         Meta                   4        NOT Watching                  
+W, [19-10-17 15:31:54#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:31:55#85907]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 15:31:59#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:31:59#85907]  INFO -- : Vern_Mcgeorge      Owner_Manual         Growth                 4        NOT Watching                  
+W, [19-10-17 15:32:01#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:32:02#85907]  WARN -- : Updated Category: Growth    Notification Level: 3
+I, [19-10-17 15:32:02#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:32:02#85907]  INFO -- : Vern_Mcgeorge      Owner_Manual         Routine                4        NOT Watching                  
+W, [19-10-17 15:32:03#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:32:04#85907]  WARN -- : Updated Category: Routine    Notification Level: 3
+I, [19-10-17 15:32:04#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:32:04#85907]  INFO -- : Vern_Mcgeorge      Owner_Manual         Meta                   4        NOT Watching                  
+W, [19-10-17 15:32:06#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:32:07#85907]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 15:32:07#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:32:07#85907]  INFO -- : Vern_Mcgeorge      Owner                Growth                 4        NOT Watching                  
+W, [19-10-17 15:32:08#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:32:09#85907]  WARN -- : Updated Category: Growth    Notification Level: 3
+I, [19-10-17 15:32:09#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:32:09#85907]  INFO -- : Vern_Mcgeorge      Owner                Routine                4        NOT Watching                  
+W, [19-10-17 15:32:10#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:32:12#85907]  WARN -- : Updated Category: Routine    Notification Level: 3
+I, [19-10-17 15:32:12#85907]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 15:32:12#85907]  INFO -- : Vern_Mcgeorge      Owner                Meta                   4        NOT Watching                  
+W, [19-10-17 15:32:13#85907]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 15:32:14#85907]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 15:32:19#85907]  INFO -- : Discourse Men                                           
+I, [19-10-17 15:32:19#85907]  INFO -- : Processed Users                     17                  
+I, [19-10-17 15:32:19#85907]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 15:32:19#85907]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 15:32:19#85907]  INFO -- : Watch Categories                                        
+I, [19-10-17 15:32:19#85907]  INFO -- : User Categories                     100                 
+I, [19-10-17 15:32:19#85907]  INFO -- : Category Update Targets             43                  
+I, [19-10-17 15:32:19#85907]  INFO -- : Category Notify Updated             43                  
+I, [19-10-17 16:02:15#93377]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 16:02:15#93377]  INFO -- : William_Burton     Owner_Manual         Meta                   1        NOT Watching                  
+W, [19-10-17 16:02:16#93377]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 16:02:18#93377]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-17 16:02:18#93377]  INFO -- : Discourse Men                                           
+I, [19-10-17 16:02:18#93377]  INFO -- : Processed Users                     1                   
+I, [19-10-17 16:02:18#93377]  INFO -- : Skipped Users                       0                   
+I, [19-10-17 16:02:18#93377]  INFO -- : Messages Sent                       0                   
+I, [19-10-17 16:02:18#93377]  INFO -- : Watch Categories                                        
+I, [19-10-17 16:02:18#93377]  INFO -- : User Categories                     5                   
+I, [19-10-17 16:02:18#93377]  INFO -- : Category Update Targets             1                   
+I, [19-10-17 16:02:18#93377]  INFO -- : Category Notify Updated             1                   

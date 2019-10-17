@@ -9,6 +9,7 @@ discourse_options = {
     do_live_updates:                true,
     # target_username:                'Kim_Miller',     # Ryan_Hyer Steve_Scott Moe_Rubenzahl Kim_Miller David_Ashby KM_Admin
     target_groups:                  %w(Tech),   # Mods GreatX BraveHearts trust_level_0 trust_level_1
+    ownership_groups:               %w(Owner Owner_Manual),
     include_staged_users:           true,
     minutes_between_scans:          0,
     instance:                       'https://staging.gomomentum.org',

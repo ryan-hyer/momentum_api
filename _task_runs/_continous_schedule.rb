@@ -10,6 +10,7 @@ discourse_options = {
     # target_username:                'Kim_Miller',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby KM_Admin
     target_groups:                  %w(trust_level_0),   # Mods GreatX BraveHearts trust_level_0 trust_level_1
     include_staged_users:           true,
+    ownership_groups:               %w(Owner Owner_Manual),
     minutes_between_scans:          5,
     instance:                       'https://discourse.gomomentum.org',
     api_username:                   'KM_Admin',

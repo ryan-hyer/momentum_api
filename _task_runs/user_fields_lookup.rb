@@ -6,6 +6,7 @@ discourse_options = {
     do_live_updates:        true,
     # target_username:        'Shane_Reed',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby Fernando_Venegas
     target_groups:          %w(trust_level_0),       # Tech Mods GreatX BraveHearts trust_level_0 trust_level_1
+    ownership_groups:       %w(Owner Owner_Manual),
     instance:               'https://discourse.gomomentum.org',
     api_username:           'KM_Admin',
     exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin MD_Admin),

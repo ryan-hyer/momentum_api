@@ -67,7 +67,9 @@ module MomentumApi
 
       # for certain groups
       case group['name']
-      when 'Owner', 'Owner_Manual'
+      # is an Owner
+      when *@discourse.options[:ownership_groups]
+      # when 'Owner', 'Owner_Manual'
 
         # Set Owner status
         man.is_owner = true
@@ -134,11 +136,12 @@ module MomentumApi
             # end
 
             category_task.options.each do |category_action|
-              if category_action[1][:excludes].include?(man.user_details['username'])
+              if category_action[1][:excludes].include? man.user_details['username']
                # puts "#{man.user_details['username']} specifically excluded from Watching action"
               else
+                # puts 'Else'
                 case
-                when (category['slug'] == category_action[0].to_s and group_name == 'Owner')
+                when (category['slug'] == category_action[0].to_s and (group_name == 'Owner' or group_name == 'Owner_Manual'))
                     category_task.run(man, category, group_name, category_action[1])
 
                 when (category['slug'] == group_name and category_action[0] == :matching_team)
