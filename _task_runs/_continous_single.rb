@@ -7,7 +7,7 @@ require_relative '../lib/momentum_api'
 
 discourse_options = {
     do_live_updates:                false,
-    # target_username:                'Kim_Miller',     # Ryan_Hyer 2 Steve_Scott 9 Moe_Rubenzahl Kim_Miller David_Ashby KM_Admin
+    # target_username:                'Jeff_West',     # Ryan_Hyer 2 Steve_Scott 9 Moe_Rubenzahl Kim_Miller David_Ashby KM_Admin
     target_groups:                  %w(trust_level_0),   # Mods GreatX BraveHearts trust_level_0 trust_level_1
     ownership_groups:               %w(Owner Owner_Manual),
     include_staged_users:           true,
@@ -180,10 +180,10 @@ def scan_hourly
     @discourse.options[:logger] = momentum_api_logger
     sleep wait * 60
 
-  rescue Exception => exception       # Recovers from any crash since Jul 22, 2019?
-    @discourse.options[:logger].warn "Scan Level Exception Rescue type #{exception.class}, #{exception.message}: Sleeping for 90 minutes ...."
-    sleep 90 * 60
-    scan_hourly
+  # rescue Exception => exception       # Recovers from any crash since Jul 22, 2019?
+  #   @discourse.options[:logger].warn "Scan Level Exception Rescue type #{exception.class}, #{exception.message}: Sleeping for 90 minutes ...."
+  #   sleep 90 * 60
+  #   scan_hourly
   end
 
   if @scan_passes < @scan_passes_end or @scan_passes_end < 0

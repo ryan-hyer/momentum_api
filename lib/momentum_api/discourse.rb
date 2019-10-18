@@ -129,8 +129,14 @@ module MomentumApi
      DiscourseApi::Client.class_eval do
 
        def membership_subscriptions(user_id)
-         response = get("/memberships/subscriptions/#{user_id}.json")
-         response[:body]
+         begin
+           response = get("/memberships/subscriptions/#{user_id}.json")
+           response[:body]
+         rescue DiscourseApi::UnauthenticatedError
+           response = []
+           # discourse.options[:logger].warn "User ID: #{user_id} : membership_subscriptions: DiscourseApi::UnauthenticatedError."
+         end
+         response
        end
 
      end

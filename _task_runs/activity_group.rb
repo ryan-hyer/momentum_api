@@ -3,7 +3,7 @@ require '../lib/momentum_api'
 
 discourse_options = {
     do_live_updates:        false,
-    # target_username:        'Jerry_Strebig',     # David_Kirk Steve_Scott John_Butler Kim_Miller Jerry_Strebig Lee_Wheeler Brad_Peppard
+    target_username:        'Jeff_West',     # David_Kirk Steve_Scott John_Butler Kim_Miller Jerry_Strebig Lee_Wheeler Brad_Peppard
     target_groups:          %w(trust_level_0),       # Mods GreatX BraveHearts trust_level_0 trust_level_1
     ownership_groups:       %w(Owner Owner_Manual),
     instance:               'https://discourse.gomomentum.org',

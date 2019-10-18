@@ -6,7 +6,8 @@ describe MomentumApi::Schedule do
   let(:group_owner) { json_fixture("group_owner.json") }
   let(:group_committed) { json_fixture("group_committed.json") }
   let(:category_list) { json_fixture("categories.json") }
-  
+  let(:users_categories) {json_fixture("categories.json")}
+
   let(:mock_discourse) do
     mock_discourse = instance_double('mock_discourse')
     expect(mock_discourse).to receive(:options).twice.and_return(discourse_options)
@@ -26,6 +27,7 @@ describe MomentumApi::Schedule do
       let(:mock_man) do
         mock_man = instance_double('man')
         expect(mock_man).to receive(:user_details).once.and_return(user_details)
+        # expect(mock_man).to receive(:is_owner).once.and_return false
         mock_man
       end
 
@@ -52,7 +54,8 @@ describe MomentumApi::Schedule do
 
       let(:mock_dependencies) do
         mock_dependencies = instance_double('mock_dependencies')
-        expect(mock_dependencies).to receive(:run).exactly(3).times
+        expect(mock_dependencies).to receive(:run).exactly(1).times
+        # expect(mock_dependencies).to receive(:options).exactly(13).times.and_return schedule_options[:category]
         mock_dependencies
       end
 
@@ -67,7 +70,9 @@ describe MomentumApi::Schedule do
       let(:mock_man) do
         mock_man = instance_double('man')
         expect(mock_man).to receive(:user_details).exactly(2).times.and_return(user_details)
-        expect(mock_man).to receive(:is_owner=).once.and_return(true)
+        expect(mock_man).to receive(:is_owner=).once.and_return true
+        # expect(mock_man).to receive(:is_owner).once.and_return true
+        # expect(mock_man).to receive(:users_categories).once.and_return users_categories
         mock_man
       end
 
@@ -82,8 +87,6 @@ describe MomentumApi::Schedule do
 
 
   describe '.category cases' do
-
-    let(:users_categories) {json_fixture("categories.json")}
 
     let(:mock_dependencies) do
       mock_dependencies = instance_double('mock_dependencies')
@@ -111,7 +114,7 @@ describe MomentumApi::Schedule do
 
       let(:mock_dependencies) do
         mock_dependencies = instance_double('mock_dependencies')
-        expect(mock_dependencies).to receive(:run).once.with(mock_man, anything, 'Committed', anything)
+        expect(mock_dependencies).to receive(:run).once.with(mock_man, anything, anything, group_name: 'Committed')
         expect(mock_dependencies).to receive(:options).exactly(13).times.and_return schedule_options[:category]
         mock_dependencies
       end
@@ -119,7 +122,7 @@ describe MomentumApi::Schedule do
       let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock: mock_dependencies) }
 
       it '.category_cases should find group that macthes category' do
-        schedule.category_cases(mock_man, group_committed)
+        schedule.category_cases(mock_man, group: group_committed)
         expect(schedule).to respond_to(:category_cases)
       end
     end
@@ -144,7 +147,7 @@ describe MomentumApi::Schedule do
       let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock: mock_dependencies) }
 
       it '.category_cases should find owner not watching Essential' do
-        schedule.category_cases(mock_man, group_owner)
+        schedule.category_cases(mock_man, is_owner: true)
         expect(schedule).to respond_to(:category_cases)
       end
     end
@@ -176,7 +179,7 @@ describe MomentumApi::Schedule do
       let(:schedule) { MomentumApi::Schedule.new(mock_discourse, schedule_options, mock: mock_dependencies) }
 
       it 'responds to scan_contexts and prints issue user' do
-        expect { schedule.category_cases(mock_man, group_owner) }
+        expect { schedule.category_cases(mock_man, is_owner: true) }
             .to output(/Tony_Christopher Category case on category/).to_stdout
       end
     end
@@ -198,6 +201,7 @@ describe MomentumApi::Schedule do
 
     let(:mock_man) do
       mock_man = instance_double('man')
+      expect(mock_man).to receive(:is_owner).once.and_return false
       mock_man
     end
 

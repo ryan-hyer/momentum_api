@@ -33076,3 +33076,520 @@ I, [19-10-17 16:02:18#93377]  INFO -- : Watch Categories
 I, [19-10-17 16:02:18#93377]  INFO -- : User Categories                     5                   
 I, [19-10-17 16:02:18#93377]  INFO -- : Category Update Targets             1                   
 I, [19-10-17 16:02:18#93377]  INFO -- : Category Notify Updated             1                   
+I, [19-10-17 16:10:26#94030]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-10-17 16:16:02#94030]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 16:16:02#94030]  INFO -- : Dainuri            Owner_Manual         Essential              1        NOT Watching                  
+W, [19-10-17 16:16:03#94030]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 16:16:04#94030]  WARN -- : Updated Category: Essential    Notification Level: 3
+I, [19-10-17 16:16:04#94030]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 16:16:04#94030]  INFO -- : Dainuri            Owner_Manual         Growth                 1        NOT Watching                  
+W, [19-10-17 16:16:05#94030]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 16:16:07#94030]  WARN -- : Updated Category: Growth    Notification Level: 4
+I, [19-10-17 16:16:07#94030]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 16:16:07#94030]  INFO -- : Dainuri            Owner_Manual         Meta                   1        NOT Watching                  
+W, [19-10-17 16:16:08#94030]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 16:16:09#94030]  WARN -- : Updated Category: Meta    Notification Level: 4
+W, [19-10-17 16:22:58#94030]  WARN -- : jeffwest : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 16:22:58#94030]  WARN -- : Scan Level Exception Rescue type DiscourseApi::UnauthenticatedError, {"errors"=>["You are not permitted to view the requested resource."], "error_type"=>"invalid_access"}: Sleeping for 90 minutes ....
+I, [19-10-17 16:26:54#94667]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 16:39:15#94667]  WARN -- : jeffwest : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 16:39:15#94667]  WARN -- : Scan Level Exception Rescue type DiscourseApi::UnauthenticatedError, {"errors"=>["You are not permitted to view the requested resource."], "error_type"=>"invalid_access"}: Sleeping for 90 minutes ....
+I, [19-10-17 16:45:46#95303]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 16:58:02#95303]  WARN -- : jeffwest : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 16:58:02#95303]  WARN -- : Scan Level Exception Rescue type DiscourseApi::UnauthenticatedError, {"errors"=>["You are not permitted to view the requested resource."], "error_type"=>"invalid_access"}: Sleeping for 90 minutes ....
+I, [19-10-17 17:29:06#96606]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:29:10#96606]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 17:29:10#96606]  WARN -- : Scan Level Exception Rescue type DiscourseApi::UnauthenticatedError, {"errors"=>["You are not permitted to view the requested resource."], "error_type"=>"invalid_access"}: Sleeping for 90 minutes ....
+I, [19-10-17 17:29:56#97047]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-10-17 17:29:59#97047]  INFO -- : Pass 1 complete for 0 users, 1 skipped. Waiting 0 minutes ...
+I, [19-10-17 17:30:03#97047]  INFO -- : Pass 2 complete for 0 users, 1 skipped. Waiting 0 minutes ...
+I, [19-10-17 17:31:50#97505]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:32:09#97505]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 17:33:01#97505]  WARN -- : Scan Level Exception Rescue type Interrupt, : Sleeping for 90 minutes ....
+I, [19-10-17 17:33:10#97962]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:38:23#97962]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 17:39:05#97962]  WARN -- : Scan Level Exception Rescue type DiscourseApi::UnauthenticatedError, {"errors"=>["You are not permitted to view the requested resource."], "error_type"=>"invalid_access"}: Sleeping for 90 minutes ....
+I, [19-10-17 17:41:16#98519]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:41:20#98519]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-17 17:46:12#99041]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:46:16#99041]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-17 17:47:18#99490]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:47:22#99490]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-17 17:49:33#99950]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:49:36#99950]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-17 17:50:54#724]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:50:57#724]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-17 17:51:26#1232]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:51:29#1232]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-17 17:54:52#1714]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:54:56#1714]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-17 17:55:22#2164]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:55:26#2164]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-17 17:55:48#2595]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:55:52#2595]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-17 17:56:05#3032]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:56:08#3032]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-17 17:56:21#3471]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:56:24#3471]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-17 17:56:24#3471]  INFO -- : Pass 1 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+W, [19-10-17 17:56:28#3471]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-17 17:56:28#3471]  INFO -- : Pass 2 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-10-17 17:56:43#3907]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:56:47#3907]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-17 17:57:19#4345]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:57:23#4345]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-17 17:57:31#4776]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:57:35#4776]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-17 17:58:06#5248]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:58:09#5248]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-17 18:02:46#5749]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 18:02:50#5749]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-17 18:03:59#6197]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 18:04:02#6197]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 18:04:02#6197]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 18:04:02#6197]  INFO -- : Pass 1 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+W, [19-10-17 18:04:06#6197]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 18:04:06#6197]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 18:04:06#6197]  INFO -- : Pass 2 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+W, [19-10-17 18:04:10#6197]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 18:04:10#6197]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 18:04:10#6197]  INFO -- : Pass 3 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+W, [19-10-17 18:04:13#6197]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 18:04:13#6197]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 18:04:13#6197]  INFO -- : Pass 4 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+W, [19-10-17 18:04:17#6197]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 18:04:17#6197]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 18:04:17#6197]  INFO -- : Pass 5 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+W, [19-10-17 18:04:21#6197]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 18:04:21#6197]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 18:04:21#6197]  INFO -- : Pass 6 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+W, [19-10-17 18:04:24#6197]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 18:04:24#6197]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 18:04:24#6197]  INFO -- : Pass 7 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+W, [19-10-17 18:04:28#6197]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 18:04:28#6197]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 18:04:28#6197]  INFO -- : Pass 8 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+W, [19-10-17 18:04:32#6197]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 18:04:32#6197]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 18:04:32#6197]  INFO -- : Pass 9 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+W, [19-10-17 18:04:35#6197]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 18:04:35#6197]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 18:04:35#6197]  INFO -- : Pass 10 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+W, [19-10-17 18:04:39#6197]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 18:04:39#6197]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 18:04:39#6197]  INFO -- : Pass 11 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+W, [19-10-17 18:04:43#6197]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 18:04:43#6197]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 18:04:43#6197]  INFO -- : Pass 12 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-10-17 18:05:00#6673]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 18:16:50#6673]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 18:16:50#6673]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 18:16:50#6673]  INFO -- : new_user_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-17 18:16:50#6673]  INFO -- : Jeff_West                                        0            0           0                             
+W, [19-10-17 18:16:50#6673]  WARN -- : OK
+I, [19-10-17 18:16:50#6673]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-17 18:16:50#6673]  INFO -- : Jeff_West                                           0            0           0                     2019-10-17 NU R0    
+W, [19-10-17 18:16:52#6673]  WARN -- : Added man to Group 108: 
+W, [19-10-17 18:16:54#6673]  WARN -- : Jeff_West now in Group: MomentumInterested
+I, [19-10-17 18:16:54#6673]  INFO -- :   Message From:    Kim_Miller           Jeff_West,KM_Admin   Thank you for Your Interest in Momentum!                Thank you for your in     Pending                  
+I, [19-10-17 18:16:55#6673]  INFO -- :   Message From:    Kim_Miller           Jeff_West,KM_Admin   thank-you-for-your-interest-in-momentum                 Thank you for your in     Sent                     
+I, [19-10-17 18:22:24#6673]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-17 18:22:24#6673]  INFO -- : Mark_Thorpe        Owner_Manual         Growth                 1        NOT Watching                  
+W, [19-10-17 18:22:25#6673]  WARN -- : {"success"=>"OK"}
+W, [19-10-17 18:22:26#6673]  WARN -- : Updated Category: Growth    Notification Level: 4
+I, [19-10-17 18:31:27#6673]  INFO -- : Pass 1 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+W, [19-10-17 18:48:16#6673]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 18:48:16#6673]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 19:02:42#6673]  INFO -- : Pass 2 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+W, [19-10-17 19:19:31#6673]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 19:19:31#6673]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 19:27:49#6673]  INFO -- : Active Momentum User     last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-10-17 19:27:49#6673]  INFO -- : Noah_Salzman             2019-10-18     2019-10-18       1            9657        4215                     160               
+W, [19-10-17 19:27:51#6673]  WARN -- : Removed man from Group 133: 
+W, [19-10-17 19:27:52#6673]  WARN -- : Added man to Group 130: 
+W, [19-10-17 19:27:53#6673]  WARN -- : Noah_Salzman added to z_Activity_A
+I, [19-10-17 19:33:58#6673]  INFO -- : Pass 3 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+W, [19-10-17 19:50:43#6673]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 19:50:43#6673]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 20:05:11#6673]  INFO -- : Pass 4 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+W, [19-10-17 20:22:02#6673]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 20:22:02#6673]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 20:36:34#6673]  INFO -- : Pass 5 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+W, [19-10-17 20:42:02#6673]  WARN -- : Sleeping for 20 seconds ....
+W, [19-10-17 20:43:13#6673]  WARN -- : Sleeping for 20 seconds ....
+W, [19-10-17 20:44:17#6673]  WARN -- : TooManyRequests: Sleeping for 30 seconds ....
+W, [19-10-17 20:45:33#6673]  WARN -- : TooManyRequests: Sleeping for 30 seconds ....
+W, [19-10-17 20:46:44#6673]  WARN -- : TooManyRequests: Sleeping for 30 seconds ....
+W, [19-10-17 20:55:30#6673]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 20:55:30#6673]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 21:09:56#6673]  INFO -- : Pass 6 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+W, [19-10-17 21:26:43#6673]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 21:26:43#6673]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 21:41:11#6673]  INFO -- : Pass 7 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-17 17:28:13#96298]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+W, [19-10-17 17:39:58#96298]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 17:39:59#96298]  WARN -- : Scan Level Exception Rescue type DiscourseApi::UnauthenticatedError, {"errors"=>["You are not permitted to view the requested resource."], "error_type"=>"invalid_access"}: Sleeping for 90 minutes ....
+W, [19-10-17 19:10:29#96298]  WARN -- : Scan Level Exception Rescue type DiscourseApi::TooManyRequests, {"errors"=>["You’ve performed this action too many times. Please wait a few seconds before trying again."], "error_type"=>"rate_limit", "extras"=>{"wait_seconds"=>0}}: Sleeping for 90 minutes ....
+W, [19-10-17 20:42:06#96298]  WARN -- : TooManyRequests: Sleeping for 30 seconds ....
+W, [19-10-17 20:43:12#96298]  WARN -- : Sleeping for 20 seconds ....
+W, [19-10-17 20:44:16#96298]  WARN -- : TooManyRequests: Sleeping for 30 seconds ....
+W, [19-10-17 20:45:33#96298]  WARN -- : Sleeping for 20 seconds ....
+W, [19-10-17 20:46:42#96298]  WARN -- : Scan Level Exception Rescue type DiscourseApi::TooManyRequests, {"errors"=>["You’ve performed this action too many times. Please wait 11 seconds before trying again."], "error_type"=>"rate_limit", "extras"=>{"wait_seconds"=>11}}: Sleeping for 90 minutes ....
+W, [19-10-17 21:57:57#6673]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 21:57:57#6673]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 22:12:19#6673]  INFO -- : Pass 8 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-17 22:18:54#6673]  INFO -- : Inactive Momentum User   last_seen_at   last_posted_at   post_count   time_read   recent_time_read         Read-Post Ratio   
+I, [19-10-17 22:18:54#6673]  INFO -- : bigloudjeff              2019-10-18                      0            358         358                                        
+W, [19-10-17 22:18:56#6673]  WARN -- : Added man to Group 132: 
+W, [19-10-17 22:18:57#6673]  WARN -- : bigloudjeff added to z_Activity_C
+W, [19-10-17 22:18:58#6673]  WARN -- : Removed man from Group 136: 
+W, [19-10-17 22:18:59#6673]  WARN -- : bigloudjeff not currently not in 136 Ownership group.
+I, [19-10-17 22:18:59#6673]  INFO -- : new_user_found   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-17 22:18:59#6673]  INFO -- : bigloudjeff      2019-10-18                      0            358         358                           
+W, [19-10-17 22:18:59#6673]  WARN -- : OK
+I, [19-10-17 22:19:00#6673]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-17 22:19:00#6673]  INFO -- : bigloudjeff         2019-10-18                      0            358         358                   2019-10-17 NU R0    
+W, [19-10-17 22:19:02#6673]  WARN -- : Added man to Group 108: 
+W, [19-10-17 22:19:03#6673]  WARN -- : bigloudjeff now in Group: MomentumInterested
+I, [19-10-17 22:19:03#6673]  INFO -- :   Message From:    Kim_Miller           bigloudjeff,KM_Admin Thank you for Your Interest in Momentum!                Thank you for your in     Pending                  
+I, [19-10-17 22:19:05#6673]  INFO -- :   Message From:    Kim_Miller           bigloudjeff,KM_Admin thank-you-for-your-interest-in-momentum                 Thank you for your in     Sent                     
+W, [19-10-17 22:29:28#6673]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 22:29:28#6673]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 22:43:52#6673]  INFO -- : Pass 9 complete for 218 users, 0 skipped. Waiting 5 minutes ...
+W, [19-10-17 23:00:45#6673]  WARN -- : Jeff_West : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-17 23:00:45#6673]  WARN -- : User ID: 521 : membership_subscriptions: DiscourseApi::UnauthenticatedError.
+I, [19-10-17 23:15:08#6673]  INFO -- : Pass 10 complete for 218 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-17 23:46:21#6673]  INFO -- : Pass 11 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 00:16:25#6673]  INFO -- : new_user_one_week_ago   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-18 00:16:25#6673]  INFO -- : Timothy_Rogers                                          0            0           0                     2019-10-11 NU R0    
+W, [19-10-18 00:16:25#6673]  WARN -- : OK
+I, [19-10-18 00:16:25#6673]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-18 00:16:25#6673]  INFO -- : Timothy_Rogers                                      0            0           0                     2019-10-11 NU R1    
+I, [19-10-18 00:16:26#6673]  INFO -- :   Message From:    Kim_Miller           Timothy_Rogers       Become an Owner of Momentum!                            Hi Timothy Rogers,
+
+W     Pending                  
+I, [19-10-18 00:16:28#6673]  INFO -- :   Message From:    Kim_Miller           Timothy_Rogers       become-an-owner-of-momentum                             Hi Timothy Rogers,
+
+W     Sent                     
+I, [19-10-18 00:17:38#6673]  INFO -- : Pass 12 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 00:29:55#6673]  INFO -- : memberful_expires_next_week   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-18 00:29:55#6673]  INFO -- : Deven_Kalra                   2018-10-31     2018-10-30       1            423         0                     2019-10-25 MM R0    
+W, [19-10-18 00:29:55#6673]  WARN -- : OK
+I, [19-10-18 00:29:56#6673]  INFO -- : User After Update   last_seen_at   last_posted_at   post_count   time_read   recent_time_read      ["user_fields", "6"]    
+I, [19-10-18 00:29:56#6673]  INFO -- : Deven_Kalra         2018-10-31     2018-10-30       1            423         0                     2019-10-25 MM R1    
+I, [19-10-18 00:29:57#6673]  INFO -- :   Message From:    Kim_Miller           Deven_Kalra,KM_Admin Thank You for Owning Momentum!                          Hi Devendra Kalra,
+
+M     Pending                  
+I, [19-10-18 00:29:58#6673]  INFO -- :   Message From:    Kim_Miller           Deven_Kalra,KM_Admin thank-you-for-owning-momentum                           Hi Devendra Kalra,
+
+M     Sent                     
+I, [19-10-18 00:48:52#6673]  INFO -- : Pass 13 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 01:20:09#6673]  INFO -- : Pass 14 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 01:51:26#6673]  INFO -- : Pass 15 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 02:22:36#6673]  INFO -- : Pass 16 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 02:53:48#6673]  INFO -- : Pass 17 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 03:25:00#6673]  INFO -- : Pass 18 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 03:56:20#6673]  INFO -- : Pass 19 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+W, [19-10-18 04:22:34#6673]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-10-18 04:24:34#6673]  WARN -- : Basic DiscourseApi::Error: Sleeping for 1 minute ....
+W, [19-10-18 04:27:00#6673]  WARN -- : Scan Level Exception Rescue type DiscourseApi::Error, execution expired: Sleeping for 90 minutes ....
+I, [19-10-18 06:23:06#6673]  INFO -- : Pass 20 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 06:54:11#6673]  INFO -- : Pass 21 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 07:25:24#6673]  INFO -- : Pass 22 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 07:56:37#6673]  INFO -- : Pass 23 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 08:27:51#6673]  INFO -- : Pass 24 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 08:59:11#6673]  INFO -- : Pass 25 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 09:30:27#6673]  INFO -- : Pass 26 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 10:01:45#6673]  INFO -- : Pass 27 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 10:33:04#6673]  INFO -- : Pass 28 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 10:49:56#6673]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 10:49:56#6673]  INFO -- : Jeff_West          LaunchpadVI          LaunchpadVI            1        NOT Watching                  
+W, [19-10-18 10:49:57#6673]  WARN -- : {"success"=>"OK"}
+W, [19-10-18 10:49:58#6673]  WARN -- : Updated Category: LaunchpadVI    Notification Level: 3
+I, [19-10-18 11:04:28#6673]  INFO -- : Pass 29 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 11:35:40#6673]  INFO -- : Pass 30 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 12:06:50#6673]  INFO -- : Pass 31 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 12:31:00#60214]  INFO -- : Discourse Men                                           
+I, [19-10-18 12:31:00#60214]  INFO -- : Processed Users                     1                   
+I, [19-10-18 12:31:00#60214]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 12:31:00#60214]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 12:31:00#60214]  INFO -- : Watch Categories                                        
+I, [19-10-18 12:31:00#60214]  INFO -- : User Categories                     5                   
+I, [19-10-18 12:31:00#60214]  INFO -- : Category Update Targets             0                   
+I, [19-10-18 12:31:00#60214]  INFO -- : Category Notify Updated             0                   
+I, [19-10-18 12:32:19#60718]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:32:19#60718]  INFO -- : William_Burton                          Essential              1        NOT Watching                  
+I, [19-10-18 12:32:19#60718]  INFO -- : Discourse Men                                           
+I, [19-10-18 12:32:19#60718]  INFO -- : Processed Users                     1                   
+I, [19-10-18 12:32:19#60718]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 12:32:19#60718]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 12:32:19#60718]  INFO -- : Watch Categories                                        
+I, [19-10-18 12:32:19#60718]  INFO -- : User Categories                     5                   
+I, [19-10-18 12:32:19#60718]  INFO -- : Category Update Targets             1                   
+I, [19-10-18 12:32:19#60718]  INFO -- : Category Notify Updated             0                   
+I, [19-10-18 12:32:51#61157]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:32:51#61157]  INFO -- : William_Burton                          Essential              1        NOT Watching                  
+I, [19-10-18 12:32:51#61157]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:32:51#61157]  INFO -- : William_Burton     RetiredEdge          RetiredEdge            1        NOT Watching                  
+I, [19-10-18 12:32:51#61157]  INFO -- : Discourse Men                                           
+I, [19-10-18 12:32:51#61157]  INFO -- : Processed Users                     1                   
+I, [19-10-18 12:32:51#61157]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 12:32:51#61157]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 12:32:51#61157]  INFO -- : Watch Categories                                        
+I, [19-10-18 12:32:51#61157]  INFO -- : User Categories                     5                   
+I, [19-10-18 12:32:51#61157]  INFO -- : Category Update Targets             2                   
+I, [19-10-18 12:32:51#61157]  INFO -- : Category Notify Updated             0                   
+I, [19-10-18 12:33:40#61608]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:33:40#61608]  INFO -- : William_Burton                          Essential              1        NOT Watching                  
+I, [19-10-18 12:33:40#61608]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:33:40#61608]  INFO -- : William_Burton                          Growth                 1        NOT Watching                  
+I, [19-10-18 12:33:40#61608]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:33:40#61608]  INFO -- : William_Burton                          Routine                1        NOT Watching                  
+I, [19-10-18 12:33:40#61608]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:33:40#61608]  INFO -- : William_Burton                          Meta                   1        NOT Watching                  
+I, [19-10-18 12:33:40#61608]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:33:40#61608]  INFO -- : William_Burton     RetiredEdge          RetiredEdge            1        NOT Watching                  
+I, [19-10-18 12:33:40#61608]  INFO -- : Discourse Men                                           
+I, [19-10-18 12:33:40#61608]  INFO -- : Processed Users                     1                   
+I, [19-10-18 12:33:40#61608]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 12:33:40#61608]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 12:33:40#61608]  INFO -- : Watch Categories                                        
+I, [19-10-18 12:33:40#61608]  INFO -- : User Categories                     5                   
+I, [19-10-18 12:33:40#61608]  INFO -- : Category Update Targets             5                   
+I, [19-10-18 12:33:40#61608]  INFO -- : Category Notify Updated             0                   
+I, [19-10-18 12:33:58#62044]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:33:58#62044]  INFO -- : William_Burton                          Essential              1        NOT Watching                  
+W, [19-10-18 12:33:59#62044]  WARN -- : {"success"=>"OK"}
+W, [19-10-18 12:34:00#62044]  WARN -- : Updated Category: Essential    Notification Level: 3
+I, [19-10-18 12:34:00#62044]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:34:00#62044]  INFO -- : William_Burton                          Growth                 1        NOT Watching                  
+W, [19-10-18 12:34:01#62044]  WARN -- : {"success"=>"OK"}
+W, [19-10-18 12:34:02#62044]  WARN -- : Updated Category: Growth    Notification Level: 3
+I, [19-10-18 12:34:02#62044]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:34:02#62044]  INFO -- : William_Burton                          Routine                1        NOT Watching                  
+W, [19-10-18 12:34:03#62044]  WARN -- : {"success"=>"OK"}
+W, [19-10-18 12:34:05#62044]  WARN -- : Updated Category: Routine    Notification Level: 3
+I, [19-10-18 12:34:05#62044]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:34:05#62044]  INFO -- : William_Burton                          Meta                   1        NOT Watching                  
+W, [19-10-18 12:34:06#62044]  WARN -- : {"success"=>"OK"}
+W, [19-10-18 12:34:07#62044]  WARN -- : Updated Category: Meta    Notification Level: 3
+I, [19-10-18 12:34:07#62044]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:34:07#62044]  INFO -- : William_Burton     RetiredEdge          RetiredEdge            1        NOT Watching                  
+W, [19-10-18 12:34:08#62044]  WARN -- : {"success"=>"OK"}
+W, [19-10-18 12:34:09#62044]  WARN -- : Updated Category: RetiredEdge    Notification Level: 3
+I, [19-10-18 12:34:09#62044]  INFO -- : Discourse Men                                           
+I, [19-10-18 12:34:09#62044]  INFO -- : Processed Users                     1                   
+I, [19-10-18 12:34:09#62044]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 12:34:09#62044]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 12:34:09#62044]  INFO -- : Watch Categories                                        
+I, [19-10-18 12:34:09#62044]  INFO -- : User Categories                     5                   
+I, [19-10-18 12:34:09#62044]  INFO -- : Category Update Targets             5                   
+I, [19-10-18 12:34:09#62044]  INFO -- : Category Notify Updated             5                   
+I, [19-10-18 12:36:11#62513]  INFO -- : Discourse Men                                           
+I, [19-10-18 12:36:11#62513]  INFO -- : Processed Users                     1                   
+I, [19-10-18 12:36:11#62513]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 12:36:11#62513]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 12:36:11#62513]  INFO -- : Watch Categories                                        
+I, [19-10-18 12:36:11#62513]  INFO -- : User Categories                     1                   
+I, [19-10-18 12:36:11#62513]  INFO -- : Category Update Targets             0                   
+I, [19-10-18 12:36:11#62513]  INFO -- : Category Notify Updated             0                   
+I, [19-10-18 12:37:57#6673]  INFO -- : Pass 32 complete for 217 users, 0 skipped. Waiting 5 minutes ...
+I, [19-10-18 12:39:04#62985]  INFO -- : Discourse Men                                           
+I, [19-10-18 12:39:04#62985]  INFO -- : Processed Users                     1                   
+I, [19-10-18 12:39:04#62985]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 12:39:04#62985]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 12:39:04#62985]  INFO -- : Watch Categories                                        
+I, [19-10-18 12:39:04#62985]  INFO -- : User Categories                     1                   
+I, [19-10-18 12:39:04#62985]  INFO -- : Category Update Targets             0                   
+I, [19-10-18 12:39:04#62985]  INFO -- : Category Notify Updated             0                   
+I, [19-10-18 12:40:03#63431]  INFO -- : Discourse Men                                           
+I, [19-10-18 12:40:03#63431]  INFO -- : Processed Users                     1                   
+I, [19-10-18 12:40:03#63431]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 12:40:03#63431]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 12:40:03#63431]  INFO -- : Watch Categories                                        
+I, [19-10-18 12:40:03#63431]  INFO -- : User Categories                     1                   
+I, [19-10-18 12:40:03#63431]  INFO -- : Category Update Targets             0                   
+I, [19-10-18 12:40:03#63431]  INFO -- : Category Notify Updated             0                   
+I, [19-10-18 12:40:17#63872]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:40:17#63872]  INFO -- : Jeff_West          LaunchpadVI          LaunchpadVI            1        NOT Watching                  
+I, [19-10-18 12:40:17#63872]  INFO -- : Discourse Men                                           
+I, [19-10-18 12:40:17#63872]  INFO -- : Processed Users                     1                   
+I, [19-10-18 12:40:17#63872]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 12:40:17#63872]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 12:40:17#63872]  INFO -- : Watch Categories                                        
+I, [19-10-18 12:40:17#63872]  INFO -- : User Categories                     1                   
+I, [19-10-18 12:40:17#63872]  INFO -- : Category Update Targets             1                   
+I, [19-10-18 12:40:17#63872]  INFO -- : Category Notify Updated             0                   
+I, [19-10-18 12:42:19#64330]  INFO -- : Discourse Men                                           
+I, [19-10-18 12:42:19#64330]  INFO -- : Processed Users                     1                   
+I, [19-10-18 12:42:19#64330]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 12:42:19#64330]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 12:42:19#64330]  INFO -- : Activity Groupping                                      
+I, [19-10-18 12:42:19#64330]  INFO -- : User Activity Groupping             1                   
+I, [19-10-18 12:42:19#64330]  INFO -- : time_read                           20020               
+I, [19-10-18 12:42:19#64330]  INFO -- : Active User Count                   1                   
+I, [19-10-18 12:42:19#64330]  INFO -- : Average User Count                  0                   
+I, [19-10-18 12:42:19#64330]  INFO -- : Email User Count                    0                   
+I, [19-10-18 12:42:19#64330]  INFO -- : Inactive User Count                 0                   
+I, [19-10-18 12:42:19#64330]  INFO -- : User Group Updated                  0                   
+I, [19-10-18 12:42:19#64330]  INFO -- : User Removed from Group             0                   
+I, [19-10-18 12:42:46#64762]  INFO -- : Discourse Men                                           
+I, [19-10-18 12:42:46#64762]  INFO -- : Processed Users                     1                   
+I, [19-10-18 12:42:46#64762]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 12:42:46#64762]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 12:42:46#64762]  INFO -- : Activity Groupping                                      
+I, [19-10-18 12:42:46#64762]  INFO -- : User Activity Groupping             0                   
+I, [19-10-18 12:42:46#64762]  INFO -- : time_read                           0                   
+I, [19-10-18 12:42:46#64762]  INFO -- : Active User Count                   0                   
+I, [19-10-18 12:42:46#64762]  INFO -- : Average User Count                  0                   
+I, [19-10-18 12:42:46#64762]  INFO -- : Email User Count                    0                   
+I, [19-10-18 12:42:46#64762]  INFO -- : Inactive User Count                 0                   
+I, [19-10-18 12:42:46#64762]  INFO -- : User Group Updated                  0                   
+I, [19-10-18 12:42:46#64762]  INFO -- : User Removed from Group             0                   
+I, [19-10-18 12:43:39#65205]  INFO -- : Discourse Men                                           
+I, [19-10-18 12:43:39#65205]  INFO -- : Processed Users                     1                   
+I, [19-10-18 12:43:39#65205]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 12:43:39#65205]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 12:43:39#65205]  INFO -- : Activity Groupping                                      
+I, [19-10-18 12:43:39#65205]  INFO -- : User Activity Groupping             0                   
+I, [19-10-18 12:43:39#65205]  INFO -- : time_read                           0                   
+I, [19-10-18 12:43:39#65205]  INFO -- : Active User Count                   0                   
+I, [19-10-18 12:43:39#65205]  INFO -- : Average User Count                  0                   
+I, [19-10-18 12:43:39#65205]  INFO -- : Email User Count                    0                   
+I, [19-10-18 12:43:39#65205]  INFO -- : Inactive User Count                 0                   
+I, [19-10-18 12:43:39#65205]  INFO -- : User Group Updated                  0                   
+I, [19-10-18 12:43:39#65205]  INFO -- : User Removed from Group             0                   
+I, [19-10-18 12:44:17#65650]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:44:17#65650]  INFO -- : Jeff_West          LaunchpadVI          LaunchpadVI            1        NOT Watching                  
+I, [19-10-18 12:44:17#65650]  INFO -- : Discourse Men                                           
+I, [19-10-18 12:44:17#65650]  INFO -- : Processed Users                     1                   
+I, [19-10-18 12:44:17#65650]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 12:44:17#65650]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 12:44:17#65650]  INFO -- : Watch Categories                                        
+I, [19-10-18 12:44:17#65650]  INFO -- : User Categories                     1                   
+I, [19-10-18 12:44:17#65650]  INFO -- : Category Update Targets             1                   
+I, [19-10-18 12:44:17#65650]  INFO -- : Category Notify Updated             0                   
+I, [19-10-18 12:44:34#66082]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:44:34#66082]  INFO -- : Jeff_West          LaunchpadVI          LaunchpadVI            1        NOT Watching                  
+W, [19-10-18 12:44:35#66082]  WARN -- : {"success"=>"OK"}
+W, [19-10-18 12:44:36#66082]  WARN -- : Updated Category: LaunchpadVI    Notification Level: 3
+I, [19-10-18 12:44:36#66082]  INFO -- : Discourse Men                                           
+I, [19-10-18 12:44:36#66082]  INFO -- : Processed Users                     1                   
+I, [19-10-18 12:44:36#66082]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 12:44:36#66082]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 12:44:36#66082]  INFO -- : Watch Categories                                        
+I, [19-10-18 12:44:36#66082]  INFO -- : User Categories                     1                   
+I, [19-10-18 12:44:36#66082]  INFO -- : Category Update Targets             1                   
+I, [19-10-18 12:44:36#66082]  INFO -- : Category Notify Updated             1                   
+I, [19-10-18 12:45:55#66537]  INFO -- : Discourse Men                                           
+I, [19-10-18 12:45:55#66537]  INFO -- : Processed Users                     1                   
+I, [19-10-18 12:45:55#66537]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 12:45:55#66537]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 12:45:55#66537]  INFO -- : Watch Categories                                        
+I, [19-10-18 12:45:55#66537]  INFO -- : User Categories                     1                   
+I, [19-10-18 12:45:55#66537]  INFO -- : Category Update Targets             0                   
+I, [19-10-18 12:45:55#66537]  INFO -- : Category Notify Updated             0                   
+W, [19-10-18 12:46:25#6673]  WARN -- : Scan Level Exception Rescue type Interrupt, : Sleeping for 90 minutes ....
+I, [19-10-18 12:47:35#67009]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:47:35#67009]  INFO -- : Kim_Miller                              Growth                 4        NOT Watching                  
+I, [19-10-18 12:47:35#67009]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:47:35#67009]  INFO -- : Kim_Miller                              Routine                4        NOT Watching                  
+W, [19-10-18 12:47:43#67009]  WARN -- : Chuck_Schuller : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-18 12:47:52#67009]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:47:52#67009]  INFO -- : George_Kotsovolos                       Growth                 4        NOT Watching                  
+I, [19-10-18 12:47:52#67009]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:47:52#67009]  INFO -- : George_Kotsovolos                       Routine                1        NOT Watching                  
+I, [19-10-18 12:47:52#67009]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:47:52#67009]  INFO -- : George_Kotsovolos                       Meta                   4        NOT Watching                  
+W, [19-10-18 12:47:55#67009]  WARN -- : Jay_Mojnidar : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-18 12:47:58#67009]  WARN -- : Jeff_Hewitt : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-18 12:48:12#67009]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:48:12#67009]  INFO -- : Mahan_Harirsaz                          Growth                 4        NOT Watching                  
+I, [19-10-18 12:48:12#67009]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:48:12#67009]  INFO -- : Mahan_Harirsaz                          Routine                1        NOT Watching                  
+I, [19-10-18 12:48:12#67009]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 12:48:12#67009]  INFO -- : Mahan_Harirsaz                          Meta                   4        NOT Watching                  
+I, [19-10-18 12:48:21#67009]  INFO -- : Discourse Men                                           
+I, [19-10-18 12:48:21#67009]  INFO -- : Processed Users                     12                  
+I, [19-10-18 12:48:21#67009]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 12:48:21#67009]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 12:48:21#67009]  INFO -- : Watch Categories                                        
+I, [19-10-18 12:48:21#67009]  INFO -- : User Categories                     45                  
+I, [19-10-18 12:48:21#67009]  INFO -- : Category Update Targets             8                   
+I, [19-10-18 12:48:21#67009]  INFO -- : Category Notify Updated             0                   
+W, [19-10-18 12:53:13#67534]  WARN -- : Chuck_Schuller : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-18 12:53:25#67534]  WARN -- : Jay_Mojnidar : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+W, [19-10-18 12:53:28#67534]  WARN -- : Jeff_Hewitt : DiscourseApi::UnauthenticatedError - Not permitted to view resource.
+I, [19-10-18 12:53:51#67534]  INFO -- : Discourse Men                                           
+I, [19-10-18 12:53:51#67534]  INFO -- : Processed Users                     12                  
+I, [19-10-18 12:53:51#67534]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 12:53:51#67534]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 12:53:51#67534]  INFO -- : Watch Categories                                        
+I, [19-10-18 12:53:51#67534]  INFO -- : User Categories                     41                  
+I, [19-10-18 12:53:51#67534]  INFO -- : Category Update Targets             0                   
+I, [19-10-18 12:53:51#67534]  INFO -- : Category Notify Updated             0                   
+I, [19-10-18 13:09:11#67982]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 13:09:11#67982]  INFO -- : Suhas_Chelian                           Growth                 1        NOT Watching                  
+I, [19-10-18 13:10:08#67982]  INFO -- : Discourse Men                                           
+I, [19-10-18 13:10:08#67982]  INFO -- : Processed Users                     217                 
+I, [19-10-18 13:10:08#67982]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 13:10:08#67982]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 13:10:08#67982]  INFO -- : Watch Categories                                        
+I, [19-10-18 13:10:08#67982]  INFO -- : User Categories                     706                 
+I, [19-10-18 13:10:08#67982]  INFO -- : Category Update Targets             1                   
+I, [19-10-18 13:10:08#67982]  INFO -- : Category Notify Updated             0                   
+I, [19-10-18 13:36:45#80243]  INFO -- : Discourse Men                                           
+I, [19-10-18 13:36:45#80243]  INFO -- : Processed Users                     1                   
+I, [19-10-18 13:36:45#80243]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 13:36:45#80243]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 13:36:45#80243]  INFO -- : Watch Categories                                        
+I, [19-10-18 13:36:45#80243]  INFO -- : User Categories                     0                   
+I, [19-10-18 13:36:45#80243]  INFO -- : Category Update Targets             0                   
+I, [19-10-18 13:36:45#80243]  INFO -- : Category Notify Updated             0                   
+I, [19-10-18 13:37:48#80689]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 13:37:48#80689]  INFO -- : Aneirin_Nunn       LaunchpadVI          LaunchpadVI            1        NOT Watching                  
+I, [19-10-18 13:37:48#80689]  INFO -- : Discourse Men                                           
+I, [19-10-18 13:37:48#80689]  INFO -- : Processed Users                     1                   
+I, [19-10-18 13:37:48#80689]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 13:37:48#80689]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 13:37:48#80689]  INFO -- : Watch Categories                                        
+I, [19-10-18 13:37:48#80689]  INFO -- : User Categories                     1                   
+I, [19-10-18 13:37:48#80689]  INFO -- : Category Update Targets             1                   
+I, [19-10-18 13:37:48#80689]  INFO -- : Category Notify Updated             0                   
+I, [19-10-18 13:38:04#81120]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 13:38:04#81120]  INFO -- : Aneirin_Nunn       LaunchpadVI          LaunchpadVI            1        NOT Watching                  
+W, [19-10-18 13:38:05#81120]  WARN -- : {"success"=>"OK"}
+W, [19-10-18 13:38:06#81120]  WARN -- : Updated Category: LaunchpadVI    Notification Level: 3
+I, [19-10-18 13:38:06#81120]  INFO -- : Discourse Men                                           
+I, [19-10-18 13:38:06#81120]  INFO -- : Processed Users                     1                   
+I, [19-10-18 13:38:06#81120]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 13:38:06#81120]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 13:38:06#81120]  INFO -- : Watch Categories                                        
+I, [19-10-18 13:38:06#81120]  INFO -- : User Categories                     1                   
+I, [19-10-18 13:38:06#81120]  INFO -- : Category Update Targets             1                   
+I, [19-10-18 13:38:06#81120]  INFO -- : Category Notify Updated             1                   
+I, [19-10-18 13:39:23#81579]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 13:39:23#81579]  INFO -- : Vern_Mcgeorge                           Essential              1        NOT Watching                  
+I, [19-10-18 13:39:23#81579]  INFO -- : Discourse Men                                           
+I, [19-10-18 13:39:23#81579]  INFO -- : Processed Users                     1                   
+I, [19-10-18 13:39:23#81579]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 13:39:23#81579]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 13:39:23#81579]  INFO -- : Watch Categories                                        
+I, [19-10-18 13:39:23#81579]  INFO -- : User Categories                     4                   
+I, [19-10-18 13:39:23#81579]  INFO -- : Category Update Targets             1                   
+I, [19-10-18 13:39:23#81579]  INFO -- : Category Notify Updated             0                   
+I, [19-10-18 13:39:35#82009]  INFO -- : CategoryUser       Group                Category             Level      Status                        
+I, [19-10-18 13:39:35#82009]  INFO -- : Vern_Mcgeorge                           Essential              1        NOT Watching                  
+W, [19-10-18 13:39:36#82009]  WARN -- : {"success"=>"OK"}
+W, [19-10-18 13:39:37#82009]  WARN -- : Updated Category: Essential    Notification Level: 3
+I, [19-10-18 13:39:37#82009]  INFO -- : Discourse Men                                           
+I, [19-10-18 13:39:37#82009]  INFO -- : Processed Users                     1                   
+I, [19-10-18 13:39:37#82009]  INFO -- : Skipped Users                       0                   
+I, [19-10-18 13:39:37#82009]  INFO -- : Messages Sent                       0                   
+I, [19-10-18 13:39:37#82009]  INFO -- : Watch Categories                                        
+I, [19-10-18 13:39:37#82009]  INFO -- : User Categories                     4                   
+I, [19-10-18 13:39:37#82009]  INFO -- : Category Update Targets             1                   
+I, [19-10-18 13:39:37#82009]  INFO -- : Category Notify Updated             1                   
+I, [19-10-18 13:40:16#82456]  INFO -- : Scanning ["trust_level_0"] Users for Tasks
+I, [19-10-18 13:40:20#82456]  INFO -- : Pass 1 complete for 1 users, 0 skipped. Waiting 0 minutes ...
+I, [19-10-18 13:40:25#82456]  INFO -- : Pass 2 complete for 1 users, 0 skipped. Waiting 0 minutes ...

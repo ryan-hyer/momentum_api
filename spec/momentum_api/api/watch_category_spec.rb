@@ -42,7 +42,7 @@ describe MomentumApi::WatchCategory do
       
       it ".run inits and responds" do
         expect(watch_category).to respond_to(:run)
-        watch_category.run(mock_man, 'category', 'group_name', options[:matching_team])
+        watch_category.run(mock_man, 'category', options[:matching_team], group_name: 'group_name')
       end
     end
 
@@ -51,7 +51,7 @@ describe MomentumApi::WatchCategory do
 
       it "Category Update Targets updates" do
         expect(watch_category).to respond_to(:run)
-        watch_category.run(mock_man, category_committed_not_watching, 'category_committed', options[:matching_team])
+        watch_category.run(mock_man, category_committed_not_watching, options[:matching_team], group_name: 'category_committed')
         expect(watch_category.instance_variable_get(:@counters)[:'Category Update Targets']).to eql(1)
       end
     end
@@ -92,7 +92,7 @@ describe MomentumApi::WatchCategory do
 
       it "do_live_updates runs" do
         expect(watch_category).to respond_to(:run)
-        watch_category.run(mock_man, category_committed_not_watching, 'category_committed', options[:matching_team])
+        watch_category.run(mock_man, category_committed_not_watching, options[:matching_team], group_name: 'category_committed')
       end
     end
 
@@ -123,7 +123,7 @@ describe MomentumApi::WatchCategory do
       
       it 'sees issue user' do
         expect { watch_category.run(mock_man, category_committed_watching,
-                                    'category_committed_watching', options[:matching_team]) }
+                                     options[:matching_team], group_name: 'category_committed_watching') }
             .to output(/Tony_Christopher already Watching/).to_stdout
       end
     end

@@ -1025,7 +1025,7 @@ describe MomentumApi::Ownership do
     end
 
     
-    context '.ownership sees issue user' do
+    context '.run sees issue user' do
 
       let(:mock_man) do
         mock_man = instance_double('man')
