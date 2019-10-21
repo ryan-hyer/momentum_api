@@ -20,7 +20,7 @@ module MomentumApi
         @mock ? sleep(0) : sleep(2) # Jul 25, 2019 set to 2 due to RateLimiter::LimitExceeded seen in D console emails
       rescue DiscourseApi::UnauthenticatedError
         @users_categories = nil
-        @discourse.options[:logger].warn "#{user_details['username']} : DiscourseApi::UnauthenticatedError - Not permitted to view resource."
+        # @discourse.options[:logger].warn "#{user_details['username']} : DiscourseApi::UnauthenticatedError - Not permitted to view resource."
       rescue DiscourseApi::TooManyRequests
         @discourse.options[:logger].warn 'Sleeping for 20 seconds ....'
         @mock ? sleep(0) : sleep(20)
