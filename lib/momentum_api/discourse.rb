@@ -131,12 +131,12 @@ module MomentumApi
        def membership_subscriptions(user_id)
          begin
            response = get("/memberships/subscriptions/#{user_id}.json")
-           response[:body]
+           subscription = response[:body]
          rescue DiscourseApi::UnauthenticatedError
-           response = []
+           subscription = []
            # discourse.options[:logger].warn "User ID: #{user_id} : membership_subscriptions: DiscourseApi::UnauthenticatedError."
          end
-         response
+         subscription
        end
 
      end
