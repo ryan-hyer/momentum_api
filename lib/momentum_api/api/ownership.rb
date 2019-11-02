@@ -64,7 +64,7 @@ module MomentumApi
               end
             end
             
-            # see if user has a valid renews date on his prfile
+            # see if user has a valid renews date on his profile
             if renews_value and Date.valid_date?(renews_value[0..3].to_i, renews_value[5..6].to_i, renews_value[8..9].to_i)
 
               profile_renew_date = Date.parse(renews_value[0..9])
@@ -72,7 +72,6 @@ module MomentumApi
               # alert renewing auto renewal is present
               if latest_auto_renew_date and latest_auto_renew_date > profile_renew_date and
                   action[1][:ownership_code] == 'CA' and action[1][:action_sequence] == 'R0'
-                # effective_renew_date = latest_auto_renew_date
                 effective_renews_value = latest_auto_renew_date.strftime("%Y-%m-%d") + ' ' +
                     action[1][:ownership_code] + ' ' + action[1][:action_sequence]
                 update_ownership(man, action, effective_renews_value)
@@ -82,8 +81,8 @@ module MomentumApi
                 effective_renews_value = renews_value
               end
 
-              action_date_qualifies = clock.today >= effective_renew_date - action[1][:days_until_renews]
               action_ownership_code_match = renew_ownership_code == action[1][:ownership_code]
+              action_date_qualifies = clock.today >= effective_renew_date - action[1][:days_until_renews]
 
               if action_ownership_code_match
 
@@ -136,8 +135,8 @@ module MomentumApi
             # remove user from Onwership groups as he does not appear to have any memberships
             elsif action[1][:remove_from_group] and not latest_auto_renew_date and
                 @options[:settings][:all_ownership_group_ids].include?(action[1][:remove_from_group])
-              remove_from_group(action, man)
-
+              # remove_from_group(action, man)
+              puts 'User missing Renews value.'
             end
           end
         end
