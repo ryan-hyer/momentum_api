@@ -3,7 +3,7 @@ require '../lib/momentum_api'
 
 discourse_options = {
     do_live_updates:        false,
-    target_username:        'Vern_Mcgeorge',       # Vern_Mcgeorge David_Kirk Mitch_Slomiak Kim_Miller William_Burton Aneirin_Nunn
+    target_username:        'Dan_Garcia',       # Vern_Mcgeorge David_Kirk Mitch_Slomiak Kim_Miller William_Burton Aneirin_Nunn
     target_groups:          %w(trust_level_0),  # Mods GreatX BraveHearts trust_level_0 trust_level_1 z_Legacy30 LaunchpadVI
     include_staged_users:   true,
     ownership_groups:        %w(Owner Owner_Manual),
