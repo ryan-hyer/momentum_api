@@ -2,6 +2,7 @@
 # require_relative 'momentum_api/error'
 require 'date'
 require 'yaml'
+require_relative 'momentum_api/utility'
 require_relative 'momentum_api/version'
 require_relative 'momentum_api/discourse'
 require_relative 'momentum_api/schedule'

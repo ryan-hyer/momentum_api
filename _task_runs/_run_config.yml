@@ -1,4 +1,5 @@
 ---
+# groups are 45: Onwers_Manual, 136: Owners (auto), 107: FormerOwners (expired)
 :ownership:
   :settings:
     :all_ownership_group_ids:
@@ -45,6 +46,49 @@
       :message_cc: KM_Admin
       :message_from: Kim_Miller
       :excludes: []
+    :no_cost_new_found:
+      :do_task_update: true
+      :user_fields: '6'
+      :ownership_code: NM
+      :days_until_renews: 9999
+      :action_sequence: R0
+      :add_to_group: 45
+      :remove_from_group: 107
+      :message_to: 
+      :message_cc: KM_Admin,Mike_Drilling
+      :message_from: Kim_Miller
+      :excludes: []
+    :no_cost_expires_next_week:
+      :do_task_update: true
+      :user_fields: '6'
+      :ownership_code: NM
+      :days_until_renews: 7
+      :action_sequence: R1
+      :add_to_group: 
+      :remove_from_group: 
+      :message_from: Kim_Miller
+      :excludes: []
+    :no_cost_expired_today:
+      :do_task_update: true
+      :user_fields: '6'
+      :ownership_code: NM
+      :days_until_renews: 0
+      :action_sequence: R2
+      :add_to_group: 
+      :remove_from_group: 
+      :message_from: Kim_Miller
+      :excludes: []
+    :no_cost_final:
+      :do_task_update: true
+      :user_fields: '6'
+      :ownership_code: NM
+      :days_until_renews: -7
+      :add_to_group: 107
+      :remove_from_group: 45
+      :action_sequence: R3
+      :message_cc: KM_Admin
+      :message_from: Kim_Miller
+      :excludes: []
     :zelle_new_found:
       :do_task_update: true
       :user_fields: '6'
@@ -53,8 +97,8 @@
       :action_sequence: R0
       :add_to_group: 45
       :remove_from_group: 107
-      :message_to: 
-      :message_cc: KM_Admin
+      :message_to:
+      :message_cc: KM_Admin,Mike_Drilling
       :message_from: Kim_Miller
       :excludes: []
     :zelle_expires_next_week:
@@ -63,8 +107,8 @@
       :ownership_code: ZM
       :days_until_renews: 7
       :action_sequence: R1
-      :add_to_group: 
-      :remove_from_group: 
+      :add_to_group:
+      :remove_from_group:
       :message_from: Kim_Miller
       :excludes: []
     :zelle_expired_today:
@@ -73,8 +117,8 @@
       :ownership_code: ZM
       :days_until_renews: 0
       :action_sequence: R2
-      :add_to_group: 
-      :remove_from_group: 
+      :add_to_group:
+      :remove_from_group:
       :message_from: Kim_Miller
       :excludes: []
     :zelle_final:
@@ -167,6 +211,7 @@
       :message_cc: KM_Admin,Mike_Drilling
       :message_from: Kim_Miller
       :excludes: []
+
 :category:
   :matching_team:
     :do_task_update: true

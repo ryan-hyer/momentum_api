@@ -1,4 +1,4 @@
-require_relative 'log/utility'
+# require_relative 'log/ib/momentum_api/utility'
 require '../lib/momentum_api'
 require 'csv'
 

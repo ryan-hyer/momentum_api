@@ -1,0 +1,5 @@
+"Your complimentary Momentum Ownership is here, #{@man.user_details['name']}! Welcome to a year of awesome growth, camaraderie, and fun!
+
+  -- Your Momentum Leadership
+
+Ownership Type: #{variable_hash['user_fields']['6']}"
