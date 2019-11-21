@@ -1,7 +1,0 @@
-"Hi #{variable_hash['name']},
-
-It's time to renew your Momentum Ownership. Simply go [here to renew your membership as an Owner of Momentum.](#{@schedule.discourse.options[:instance]}/page/ownership/3/) If you are seeking another year as a Complimentary Momentum Owner, please [contact Momentum's Chief privately here](#{@schedule.discourse.options[:instance]}/g/Chief) to make arrangements.
-
-  -- Your Momentum Leadership
-
-Ownership Type: #{variable_hash['user_fields']['6']}"

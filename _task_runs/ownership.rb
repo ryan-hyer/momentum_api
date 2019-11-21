@@ -2,7 +2,7 @@ require '../lib/momentum_api'
 
 discourse_options = {
     do_live_updates:        false,
-    target_username:        'Bret_Nodine',         # David_Kirk Steve_Scott Scott_StGermain Kim_Miller David_Ashby Fernando_Venegas
+    target_username:        'Kim_Miller',         # David_Kirk Bret_Nodine Scott_StGermain Kim_Miller David_Ashby Fernando_Venegas
     target_groups:          %w(trust_level_0),      # OpenKimono TechMods GreatX BraveHearts trust_level_0 trust_level_1
     ownership_groups:        %w(Owner Owner_Manual),
     instance:               'https://discourse.gomomentum.org',
