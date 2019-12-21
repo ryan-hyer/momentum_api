@@ -21,7 +21,7 @@ module MomentumApi
 
       from_username = from_username || @from_username
       to_username = to_username || man.user_details['username']
-      if cc_username  # todo add logic to remove any dupes between to_ and cc_
+      if cc_username  # TODO add logic to remove any dupes between to_ and cc_, Dec 12, 2019 caused "One of the users you are sending this message to could not be found." error to Mike_Drilling
         to_username = to_username + ',' + cc_username
       end
 
