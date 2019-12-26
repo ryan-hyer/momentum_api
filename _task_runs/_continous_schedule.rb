@@ -15,7 +15,7 @@ discourse_options = {
     api_username:                   'KM_Admin',
     exclude_users:                  %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin MD_Admin),
     issue_users:                    %w(),
-    logger:                         momentum_api_logger
+    log_file:                       File.expand_path('../logs/_run.log', __FILE__)
 }
 
 master_run_config = YAML.load_file File.expand_path('../_run_config.yml', __FILE__)
@@ -25,6 +25,7 @@ schedule_options =  master_run_config
 
 @discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
 
+@discourse.options[:logger] = momentum_api_logger(@discourse.options[:log_file])
 @discourse.options[:logger].info "Scanning #{@discourse.options[:target_groups]} Users for Tasks"
 
 scan_hourly

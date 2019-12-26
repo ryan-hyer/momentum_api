@@ -16,7 +16,7 @@ discourse_options = {
     api_username:                   'KM_Admin',
     exclude_users:                  %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin MD_Admin),
     issue_users:                    %w(),
-    logger:                         momentum_api_logger
+    logger:                         momentum_api_logger(File.expand_path('./logs/_run.log', __FILE__))
 }
 
 # groups are 45: Onwers_Manual, 136: Owners (auto), 107: FormerOwners (expired)
@@ -167,33 +167,33 @@ discourse_options = {
 # init
 @scan_passes                    =   0
 
-def scan_hourly
-
-  begin
-    scan_pass
-
-    # @discourse.counters[:'Processed Users'], @discourse.counters[:'Skipped Users'] = 0, 0
-    # @discourse.apply_to_users
-    # @scan_passes += 1
-    #
-    # wait = @discourse.options[:minutes_between_scans] || 5
-    # @discourse.options[:logger].info "Pass #{@scan_passes} complete for #{@discourse.counters[:'Processed Users']} users, #{@discourse.counters[:'Skipped Users']} skipped. Waiting #{wait} minutes ..."
-    # @discourse.options[:logger].close
-    # @discourse.options[:logger] = momentum_api_logger
-    # sleep wait * 60
-
-  # rescue Exception => exception       # Recovers from any crash since Jul 22, 2019?
-  #   @discourse.options[:logger].warn "Scan Level Exception Rescue type #{exception.class}, #{exception.message}: Sleeping for 90 minutes ...."
-  #   sleep 90 * 60
-  #   scan_hourly
-  end
-
-  if @scan_passes < @scan_passes_end or @scan_passes_end < 0
-    scan_hourly
-    @discourse.options[:logger].info "... Exiting ..."
-  end
-
-end
+# def scan_hourly
+#
+#   begin
+#     scan_pass
+#
+#     # @discourse.counters[:'Processed Users'], @discourse.counters[:'Skipped Users'] = 0, 0
+#     # @discourse.apply_to_users
+#     # @scan_passes += 1
+#     #
+#     # wait = @discourse.options[:minutes_between_scans] || 5
+#     # @discourse.options[:logger].info "Pass #{@scan_passes} complete for #{@discourse.counters[:'Processed Users']} users, #{@discourse.counters[:'Skipped Users']} skipped. Waiting #{wait} minutes ..."
+#     # @discourse.options[:logger].close
+#     # @discourse.options[:logger] = momentum_api_logger(File.expand_path('./logs/_run.log', __FILE__))
+#     # sleep wait * 60
+#
+#   # rescue Exception => exception       # Recovers from any crash since Jul 22, 2019?
+#   #   @discourse.options[:logger].warn "Scan Level Exception Rescue type #{exception.class}, #{exception.message}: Sleeping for 90 minutes ...."
+#   #   sleep 90 * 60
+#   #   scan_hourly
+#   end
+#
+#   if @scan_passes < @scan_passes_end or @scan_passes_end < 0
+#     scan_hourly
+#     @discourse.options[:logger].info "... Exiting ..."
+#   end
+#
+# end
 
 @discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
 

@@ -10,7 +10,7 @@ discourse_options = {
     api_username:           'KM_Admin',
     exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin MD_Admin),
     issue_users:             %w(),
-    logger:                  momentum_api_logger
+    log_file:                File.expand_path('../logs/_run.log', __FILE__)
 }
 
 schedule_options = {
@@ -27,6 +27,7 @@ schedule_options = {
         }
     }
 }
+discourse_options[:logger] = momentum_api_logger(discourse_options[:log_file])
 discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
 discourse.apply_to_users
 discourse.scan_summary

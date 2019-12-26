@@ -19,14 +19,14 @@ class MultiIO
 end
 
 
-def momentum_api_logger
-  log_file = File.open('_run.log', 'a')
-  # log_file = File.open(File.expand_path('../scan.log', __FILE__), 'a')
-  # log_file = File.open("_task_runs/log/scan.log", "a")
+def momentum_api_logger(log_file_locaiton)
+  # log_file = File.open('_run.log', 'a')   # saves in random places
+  log_file = File.open(log_file_locaiton, 'a')
   logger = Logger.new MultiIO.new(log_file, STDOUT)
   logger.datetime_format = "%y-%m-%d %H:%M:%S"
   logger
 end
+
 
 def scan_pass
   @discourse.counters[:'Processed Users'], @discourse.counters[:'Skipped Users'] = 0, 0
@@ -36,9 +36,10 @@ def scan_pass
   wait = @discourse.options[:minutes_between_scans] || 5
   @discourse.options[:logger].info "Pass #{@scan_passes} complete for #{@discourse.counters[:'Processed Users']} users, #{@discourse.counters[:'Skipped Users']} skipped. Waiting #{wait} minutes ..."
   @discourse.options[:logger].close
-  @discourse.options[:logger] = momentum_api_logger
+  @discourse.options[:logger] = momentum_api_logger(@discourse.options[:log_file])
   sleep wait * 60
 end
+
 
 def scan_hourly
 
