@@ -208,7 +208,7 @@ module MomentumApi
       end
     end
 
-    def remove_from_group(action, man)
+    def remove_from_group(action, man)    # TODO add multi-group & rename action to remove_from_groups; make Owner and Owner Manual mutually exclusive in yml
       if action[1][:remove_from_group] and @schedule.discourse.options[:do_live_updates] and action[1][:do_task_update]
         user_in_target_group = false
         man.user_details['groups'].each do |group|
