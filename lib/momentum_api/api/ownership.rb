@@ -147,7 +147,7 @@ module MomentumApi
     private
     
     def send_renewal_message(action, variable_hash: nil)
-      message_file = action[1][:ownership_code] + '_' + action[1][:action_sequence].to_s
+      message_file = action[1][:ownership_code].downcase + '_' + action[1][:action_sequence].to_s
       message_subject = eval(message_body(message_file + '_subject.txt'))
       message_body = eval(message_body(message_file + '_body.txt'))
       @message_client.send_private_message(@man, message_body, message_subject, from_username: action[1][:message_from],
