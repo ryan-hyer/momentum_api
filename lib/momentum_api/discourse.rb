@@ -1,5 +1,6 @@
-$LOAD_PATH.unshift File.expand_path('../../../../discourse_api/lib', __FILE__)
-require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__)
+# $LOAD_PATH.unshift File.expand_path('../../../../discourse_api/lib', __FILE__)          # uncomment for local 'discourse_api'
+# require File.expand_path('../../../../discourse_api/lib/discourse_api', __FILE__)       # uncomment for local 'discourse_api'
+require 'discourse_api'                                                                   # for gem 'discourse_api'
 
 module MomentumApi
   class Discourse
