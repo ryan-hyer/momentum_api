@@ -191,7 +191,7 @@ discourse_options = {
 #
 # end
 
-@discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
+@discourse = MomentumApi::Discourse.new(discourse_options, schedule_options: schedule_options)
 
 @discourse.options[:logger].info "Scanning #{@discourse.options[:target_groups]} Users for Tasks"
 

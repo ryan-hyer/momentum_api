@@ -7,7 +7,7 @@ module MomentumApi
     attr_reader :options, :scan_pass_counters, :admin_client, :schedule
     attr_accessor :counters
 
-    def initialize(discourse_options, schedule_options, mock: nil)
+    def initialize(discourse_options, schedule_options: nil, mock: nil)
       raise ArgumentError, 'api_username needs to be defined' if discourse_options.nil? || discourse_options.empty?
 
       # parameter setting
@@ -21,9 +21,8 @@ module MomentumApi
       @scan_pass_counters   = []
       @scan_pass_counters   << @counters
 
-      # create schedule Class
-      @schedule             = MomentumApi::Schedule.new(self, schedule_options)
-
+      # load schedule options
+      @schedule_options     = schedule_options
       zero_discourse_counters
 
     end
@@ -50,6 +49,9 @@ module MomentumApi
     end
 
     def apply_to_users(skip_staged_user=true)      # move to schedule_options
+      schedule_options = @schedule_options || YAML.load_file(File.expand_path('../../../_run_config.yml', __FILE__))
+      @schedule        = MomentumApi::Schedule.new(self, schedule_options)
+
       if @options[:target_groups] and not @options[:target_groups].empty?
         @options[:target_groups].each(&method(:group_applied))
       else

@@ -19,7 +19,7 @@ describe MomentumApi::Discourse do
 
     describe '.apply_to_users all' do
 
-      subject {MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies)}
+      subject {MomentumApi::Discourse.new(discourse_options, schedule_options: schedule_options, mock: mock_dependencies)}
 
       it 'responds to apply_to_users and runs thru default group of users' do
         subject.apply_to_users
@@ -30,7 +30,7 @@ describe MomentumApi::Discourse do
 
     describe '.apply_to_users in group' do
 
-      subject {MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies)}
+      subject {MomentumApi::Discourse.new(discourse_options, schedule_options: schedule_options, mock: mock_dependencies)}
 
       it 'responds to apply_to_users and runs thru group of users' do
         subject.apply_to_users
@@ -41,7 +41,7 @@ describe MomentumApi::Discourse do
     
     describe '.apply_to_users in group to see issue user' do
 
-      subject {MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies)}
+      subject {MomentumApi::Discourse.new(discourse_options, schedule_options: schedule_options, mock: mock_dependencies)}
 
       it 'responds to apply_to_users and runs thru group of users' do
         reset_options = subject.instance_variable_get(:@options)
@@ -69,7 +69,7 @@ describe MomentumApi::Discourse do
 
       discourse_single_user_option = discourse_options
       discourse_single_user_option[:target_username] = 'Tony_Christopher'
-      subject { MomentumApi::Discourse.new(discourse_single_user_option, schedule_options, mock: mock_dependencies) }
+      subject { MomentumApi::Discourse.new(discourse_single_user_option, schedule_options: schedule_options, mock: mock_dependencies) }
 
       it 'runs single user and responds to apply_to_users' do
         subject.apply_to_users
@@ -96,7 +96,7 @@ describe MomentumApi::Discourse do
 
       discourse_staged_user_option = discourse_options
       discourse_staged_user_option[:target_username] = 'Noah_Salzman'
-      subject { MomentumApi::Discourse.new(discourse_staged_user_option, schedule_options, mock: mock_dependencies) }
+      subject { MomentumApi::Discourse.new(discourse_staged_user_option, schedule_options: schedule_options, mock: mock_dependencies) }
 
       it 'skips staged users and responds to apply_to_users' do
         subject.apply_to_users
@@ -123,7 +123,7 @@ describe MomentumApi::Discourse do
 
       discourse_no_group_specified = discourse_options
       discourse_no_group_specified[:target_groups] = []
-      subject { MomentumApi::Discourse.new(discourse_no_group_specified, schedule_options, mock: mock_dependencies) }
+      subject { MomentumApi::Discourse.new(discourse_no_group_specified, schedule_options: schedule_options, mock: mock_dependencies) }
 
       it 'responds to apply_to_users and uses trust_level_1 default group' do
         subject.apply_to_users
@@ -144,7 +144,7 @@ describe MomentumApi::Discourse do
         mock_dependencies
       end
 
-      subject { MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies) }
+      subject { MomentumApi::Discourse.new(discourse_options, schedule_options: schedule_options, mock: mock_dependencies) }
 
       it "responds to unknown .connect_to_instance" do
         expect { subject.apply_to_users }
@@ -162,7 +162,7 @@ describe MomentumApi::Discourse do
         mock_dependencies
       end
 
-      subject { MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies) }
+      subject { MomentumApi::Discourse.new(discourse_options, schedule_options: schedule_options, mock: mock_dependencies) }
 
       it ". apply_to_users TooManyRequests x2 raises error" do
         expect { subject.apply_to_users }
@@ -182,7 +182,7 @@ describe MomentumApi::Discourse do
     
     describe ".connect_to_instance" do
 
-      subject { MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies) }
+      subject { MomentumApi::Discourse.new(discourse_options, schedule_options: schedule_options, mock: mock_dependencies) }
 
       it "responds to live .connect_to_instance" do
         subject.connect_to_instance('KM_Admin', 'https://discourse.gomomentum.org')
@@ -207,7 +207,7 @@ describe MomentumApi::Discourse do
 
     describe ".scan_summary should tally counter totals" do
 
-      subject { MomentumApi::Discourse.new(discourse_options, schedule_options, mock: mock_dependencies) }
+      subject { MomentumApi::Discourse.new(discourse_options, schedule_options: schedule_options, mock: mock_dependencies) }
 
       it "responds to .scan_summary and find 0 init" do
         subject.scan_summary

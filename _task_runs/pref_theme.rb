@@ -36,7 +36,7 @@ schedule_options = {
 }
 
 discourse_options[:logger] = momentum_api_logger(discourse_options[:log_file])
-discourse = MomentumApi::Discourse.new(discourse_options, schedule_options)
+discourse = MomentumApi::Discourse.new(discourse_options, schedule_options: schedule_options)
 discourse.apply_to_users
 discourse.scan_summary
 
