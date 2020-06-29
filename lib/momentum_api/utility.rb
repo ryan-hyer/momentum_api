@@ -22,6 +22,7 @@ end
 def momentum_api_logger(log_file_locaiton)
   # log_file = File.open('_run.log', 'a')   # saves in random places
   log_file = File.open(log_file_locaiton, 'a')
+  log_file.sync = true;
   logger = Logger.new MultiIO.new(log_file, STDOUT)
   logger.datetime_format = "%y-%m-%d %H:%M:%S"
   logger
