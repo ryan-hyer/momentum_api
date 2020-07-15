@@ -6,7 +6,7 @@ Becoming an Owner of Momentum is just clicks away. In addition to your team expe
 
 If money is an issue, remember that Momentum provides scholarships where needed. [Contact the Chief privately here to make arrangements.](#{@schedule.discourse.options[:instance]}/g/Chief)
 
-Kim Miller
+Momentum
 New Men
 
 Ownership Type: #{variable_hash['user_fields']['6']}"

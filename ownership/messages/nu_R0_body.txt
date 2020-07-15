@@ -6,9 +6,8 @@ The nominal $80 membership covers the organization’s basic expenses, gives you
 
 Welcome!
 
-Kim Miller
+Momentum
 New Men
-(650) 302-0731
 
 \\* Momentum provides scholarships where needed. To find out about scholarships, please [contact Momentum's Chief privately here](#{@schedule.discourse.options[:instance]}/g/Chief).
 
