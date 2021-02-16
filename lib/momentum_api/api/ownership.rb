@@ -66,7 +66,7 @@ module MomentumApi
             
             # see if user has a valid renews date on his profile
             if renews_value and Date.valid_date?(renews_value[0..3].to_i, renews_value[5..6].to_i, renews_value[8..9].to_i)
-
+              # todo test for wrong reverse date mm-dd-yyyy
               profile_renew_date = Date.parse(renews_value[0..9])
 
               # alert renewing auto renewal is present
