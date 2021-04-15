@@ -6,4 +6,4 @@ If you need to make any changes to your Momentum Ownership, you can do so [here.
 
   -- Your Momentum Leadership
 
-Ownership Type: #{variable_hash['user_fields']['6']}" # todo debug Procourse base url bug
+Ownership Type: #{variable_hash['user_fields']['6']}" #

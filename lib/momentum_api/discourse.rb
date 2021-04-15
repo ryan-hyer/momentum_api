@@ -36,7 +36,7 @@ module MomentumApi
         client.api_key = ENV['REMOTE_DISCOURSE_API']
       when 'https://staging.gomomentum.org'
         client = DiscourseApi::Client.new('https://staging.gomomentum.org')
-        client.api_key = ENV['REMOTE_DISCOURSE_API']
+        client.api_key = ENV['STAGING_DISCOURSE_API']  # STAGING_DISCOURSE_API
       when 'local'
         client = DiscourseApi::Client.new('http://localhost:3000')
         client.api_key = ENV['LOCAL_DISCOURSE_API']
@@ -131,10 +131,11 @@ module MomentumApi
     def add_momentum_api_endpoints
      DiscourseApi::Client.class_eval do
 
-       def membership_subscriptions(user_id)
+       def get_subscriptions(user_id)
          begin
-           response = get("/memberships/subscriptions/#{user_id}.json")
+           response = get("/s/user/subscriptions.json")
            subscription = response[:body]
+           # puts subscription
          rescue DiscourseApi::UnauthenticatedError
            subscription = []
            # discourse.options[:logger].warn "User ID: #{user_id} : membership_subscriptions: DiscourseApi::UnauthenticatedError."

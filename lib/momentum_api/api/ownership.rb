@@ -30,7 +30,7 @@ module MomentumApi
 
       clock = @mock || Date
       @man = man
-      subscriptions = @man.user_client.membership_subscriptions(man.user_details['id'])
+      subscriptions = @man.user_client.get_subscriptions(man.user_details['id'])
 
       @options.each do |ownership_type|
         next if ownership_type[0] == :settings
@@ -44,26 +44,8 @@ module MomentumApi
           else
 
             # if user is on auto renewal, get latest_auto_renew_date
-            latest_auto_renew_date = nil
-            if ownership_type[0].to_s == 'auto' and not subscriptions.empty?
-              subscriptions.each do |subscription|
-                if action[1][:subscrption_name] and subscription['product'] and subscription['subscription_end_date'] and
-                    subscription['product']['name'].include? action[1][:subscrption_name][0..9] and
-                    Date.valid_date?(subscription['subscription_end_date'][0..3].to_i,
-                                     subscription['subscription_end_date'][5..6].to_i,
-                                     subscription['subscription_end_date'][8..9].to_i)
-                  subscription_renew_date = Date.parse(subscription['subscription_end_date'][0..9])
-                  if latest_auto_renew_date
-                    if subscription_renew_date > latest_auto_renew_date
-                      latest_auto_renew_date = subscription_renew_date
-                    end
-                  else
-                    latest_auto_renew_date = subscription_renew_date
-                  end
-                end
-              end
-            end
-            
+            latest_auto_renew_date = find_latest_subscription(action, ownership_type, subscriptions)
+            # puts latest_auto_renew_date
             # see if user has a valid renews date on his profile
             if renews_value and Date.valid_date?(renews_value[0..3].to_i, renews_value[5..6].to_i, renews_value[8..9].to_i)
               # todo test for wrong reverse date mm-dd-yyyy
@@ -116,11 +98,6 @@ module MomentumApi
                   action[1][:ownership_code] + ' ' + action[1][:action_sequence]
               update_ownership(man, action, user_update_value)
 
-            # Sep 30, 2019 stampped 43 previous Owners with 2019-09-30 MM R1
-            # elsif action[1][:ownership_code] == 'MO' and action[1][:action_sequence] == 'R1'
-            #   user_update_value = '2019-09-30 MM R1'
-            #   update_ownership(man, action, user_update_value)
-
             # find and stamp new_user with today's date and NU R0 codes
             elsif action[1][:ownership_code] == 'NU' and action[1][:action_sequence] == 'R0'
               user_update_value = Date.today.strftime("%Y-%m-%d") + ' ' +
@@ -145,7 +122,30 @@ module MomentumApi
 
     
     private
-    
+
+    def find_latest_subscription(action, ownership_type, subscriptions)
+      latest_auto_renew_date = nil
+      if ownership_type[0].to_s == 'auto' and not subscriptions.empty?
+        subscriptions.each do |subscription|
+          if action[1][:subscrption_name] and subscription['product'] and subscription['current_period_end'] and
+            subscription['product']['name'].include? action[1][:subscrption_name][0..9] and
+            subscription['current_period_end'] > 1503676168 and subscription['current_period_end'] < 4754044168
+
+            subscription_renew_date = Date.strptime(subscription['current_period_end'].to_s, '%s')
+
+            if latest_auto_renew_date
+              if subscription_renew_date > latest_auto_renew_date
+                latest_auto_renew_date = subscription_renew_date
+              end
+            else
+              latest_auto_renew_date = subscription_renew_date
+            end
+          end
+        end
+      end
+      latest_auto_renew_date
+    end
+
     def send_renewal_message(action, variable_hash: nil)
       message_file = action[1][:ownership_code].downcase + '_' + action[1][:action_sequence].to_s
       message_subject = eval(message_body(message_file + '_subject.txt'))

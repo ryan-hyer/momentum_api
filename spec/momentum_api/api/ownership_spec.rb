@@ -1,9 +1,9 @@
 require_relative '../../spec_helper'
 
 describe MomentumApi::Ownership do
-
-  let(:membership_subscription_2020_08_25) { json_fixture("membership_subscription_2020_08_25.json") }
-  let(:membership_subscription_2021_08_23) { json_fixture("membership_subscription_2021_08_23.json") }
+  
+  let(:subscription_expires_2020_08_25) { json_fixture("subscription_expires_2020_08_25.json") }
+  let(:subscription_expires_2021_08_23) { json_fixture("subscription_expires_2021_08_23.json") }
   let(:user_details_ownership_blank) { json_fixture("user_details_ownership_blank.json") }
   let(:user_details_ownership_blank_moderator) { json_fixture("user_details_ownership_blank_moderator.json") }
   let(:user_details_ownership_blank_group_removed) { json_fixture("user_details_ownership_blank_group_removed.json") }
@@ -30,7 +30,7 @@ describe MomentumApi::Ownership do
 
   let(:mock_user_client) do
     mock_user_client = instance_double('user_client')
-    expect(mock_user_client).to receive(:membership_subscriptions).once.and_return []
+    expect(mock_user_client).to receive(:get_subscriptions).once.and_return []
     mock_user_client
   end
 
@@ -253,7 +253,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_user_client) do
         mock_user_client = instance_double('user_client')
-        expect(mock_user_client).to receive(:membership_subscriptions).exactly(1).times.and_return membership_subscription_2020_08_25
+        expect(mock_user_client).to receive(:get_subscriptions).exactly(1).times.and_return subscription_expires_2020_08_25
         mock_user_client
       end
 
@@ -316,7 +316,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_user_client) do
         mock_user_client = instance_double('user_client')
-        expect(mock_user_client).to receive(:membership_subscriptions).exactly(1).times.and_return membership_subscription_2020_08_25
+        expect(mock_user_client).to receive(:get_subscriptions).exactly(1).times.and_return subscription_expires_2020_08_25
         mock_user_client
       end
 
@@ -383,7 +383,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_user_client) do
         mock_user_client = instance_double('user_client')
-        expect(mock_user_client).to receive(:membership_subscriptions).exactly(1).times.and_return membership_subscription_2020_08_25
+        expect(mock_user_client).to receive(:get_subscriptions).exactly(1).times.and_return subscription_expires_2020_08_25
         mock_user_client
       end
 
@@ -453,7 +453,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_user_client) do
         mock_user_client = instance_double('user_client')
-        expect(mock_user_client).to receive(:membership_subscriptions).exactly(1).times.and_return membership_subscription_2020_08_25
+        expect(mock_user_client).to receive(:get_subscriptions).exactly(1).times.and_return subscription_expires_2020_08_25
         mock_user_client
       end
 
@@ -509,7 +509,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_user_client) do
         mock_user_client = instance_double('user_client')
-        expect(mock_user_client).to receive(:membership_subscriptions).exactly(1).times.and_return membership_subscription_2020_08_25
+        expect(mock_user_client).to receive(:get_subscriptions).exactly(1).times.and_return subscription_expires_2020_08_25
         mock_user_client
       end
 
@@ -745,7 +745,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_user_client) do
         mock_user_client = instance_double('user_client')
-        expect(mock_user_client).to receive(:membership_subscriptions).exactly(1).times.and_return []
+        expect(mock_user_client).to receive(:get_subscriptions).exactly(1).times.and_return []
         mock_user_client
       end
 
@@ -806,7 +806,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_user_client) do
         mock_user_client = instance_double('user_client')
-        expect(mock_user_client).to receive(:membership_subscriptions).exactly(1).times.and_return membership_subscription_2020_08_25
+        expect(mock_user_client).to receive(:get_subscriptions).exactly(1).times.and_return subscription_expires_2020_08_25
         mock_user_client
       end
 
@@ -940,7 +940,7 @@ describe MomentumApi::Ownership do
 
       let(:mock_user_client) do
         mock_user_client = instance_double('user_client')
-        expect(mock_user_client).to receive(:membership_subscriptions).exactly(1).times.and_return membership_subscription_2021_08_23
+        expect(mock_user_client).to receive(:get_subscriptions).exactly(1).times.and_return subscription_expires_2021_08_23
         mock_user_client
       end
       

@@ -2,10 +2,11 @@ require '../lib/momentum_api'
 
 discourse_options = {
     do_live_updates:        false,
-    target_username:        'Larry_Shanahan',         # David_Kirk Bret_Nodine Scott_StGermain Kim_Miller David_Ashby Fernando_Venegas
+    # target_username:        'David_Kirk',         # David_Kirk Bret_Nodine Scott_StGermain Kim_Miller David_Ashby Fernando_Venegas
     target_groups:          %w(trust_level_0),      # OpenKimono TechMods GreatX BraveHearts trust_level_0 trust_level_1
     ownership_groups:        %w(Owner Owner_Manual),
-    instance:               'https://discourse.gomomentum.org',
+    # instance:               'https://discourse.gomomentum.org',
+    instance:               'https://staging.gomomentum.org',
     api_username:           'KM_Admin',
     exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin MD_Admin),
     issue_users:             %w(),
@@ -13,7 +14,7 @@ discourse_options = {
 }
 
 # groups are 45: Onwers_Manual, 136: Owners (auto), 107: FormerOwners (expired)
-master_run_config = YAML.load_file '_run_config.yml'
+master_run_config = YAML.load_file '../_run_config.yml'
 schedule_options =  {ownership: master_run_config[:ownership]}
 # puts schedule_options
 
