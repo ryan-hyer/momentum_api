@@ -25,7 +25,7 @@ schedule_options = {
                   do_task_update:         true,
                   allowed_levels:         '9999-99-99',
                   set_level:              {'6':lookup_table},
-                  set_append:             ' MM R0',
+                  set_append:             ' NU R0',
                   excludes:               %w(Scott_StGermain)
               }
           }

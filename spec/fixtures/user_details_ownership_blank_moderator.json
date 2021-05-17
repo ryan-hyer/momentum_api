@@ -187,9 +187,9 @@
       "can_see_members": true
     },
     {
-      "id": 45,
+      "id": 136,
       "automatic": false,
-      "name": "Owner_Manual",
+      "name": "Card_Auto_Renewing",
       "user_count": 166,
       "mentionable_level": 1,
       "messageable_level": 1,

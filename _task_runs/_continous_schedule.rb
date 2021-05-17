@@ -6,7 +6,7 @@ require_relative '../lib/momentum_api'
 
 discourse_options = {
     do_live_updates:                true,
-    # target_username:                'Scott_Germain',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby KM_Admin
+    # target_username:                'James_Barrese',     # David_Kirk Steve_Scott Marty_Fauth Kim_Miller David_Ashby KM_Admin
     target_groups:                  %w(trust_level_0),   # Mods GreatX BraveHearts trust_level_0 trust_level_1
     include_staged_users:           true,
     ownership_groups:               %w(Owner Owner_Manual),

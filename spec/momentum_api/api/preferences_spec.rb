@@ -177,7 +177,7 @@ describe MomentumApi::Preferences do
         expect(mock_admin_client).to receive(:user).once.and_return user_details_preference_correct
         expect(mock_admin_client).to receive(:user_sso).once.and_return user_admin_user_sso
         expect(mock_admin_client).to receive(:update_user).once
-                                         .with('Tony_Christopher', user_fields: {:'6'=>'2020-03-26 MM R0'})
+                                         .with('Tony_Christopher', user_fields: {:'6'=>'2020-03-26 NU R0'})
                                          .and_return({"body": {"success": "OK"}})
         mock_admin_client
       end
@@ -218,7 +218,7 @@ describe MomentumApi::Preferences do
                   do_task_update:         true,
                   allowed_levels:         '0',
                   set_level:              {'6': memberful_test_export},
-                  set_append:             ' MM R0',
+                  set_append:             ' NU R0',
                   excludes:               %w()
               }
           }

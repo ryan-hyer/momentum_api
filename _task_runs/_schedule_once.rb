@@ -124,42 +124,6 @@ schedule_options = {
                 message_from:           'Kim_Miller',
                 excludes:                 %w()
             },
-            memberful_expires_next_week: {
-                do_task_update:         true,
-                user_fields:            '6',
-                ownership_code:         'MM',
-                days_until_renews:      7,
-                action_sequence:        'R1',
-                add_to_group:           nil,
-                remove_from_group:      nil,
-                message_cc:             'KM_Admin',
-                message_from:           'Kim_Miller',
-                excludes:               %w()
-            },
-            memberful_expired_today: {
-                do_task_update:         true,
-                user_fields:            '6',
-                ownership_code:         'MM',
-                days_until_renews:      0,
-                action_sequence:        'R2',
-                add_to_group:           nil,
-                remove_from_group:      nil,
-                message_cc:             'KM_Admin',
-                message_from:           'Kim_Miller',
-                excludes:               %w()
-            },
-            memberful_final: {
-                do_task_update:         true,
-                user_fields:            '6',
-                ownership_code:         'MM',
-                days_until_renews:      -7,
-                add_to_group:           107,
-                remove_from_group:      45,
-                action_sequence:        'R3',
-                message_cc:             'KM_Admin,Mike_Drilling',
-                message_from:           'Kim_Miller',
-                excludes:                 %w()
-            },
             new_user_found: {
                 do_task_update:         true,
                 user_fields:            '6',

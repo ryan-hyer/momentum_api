@@ -2,11 +2,11 @@ require '../lib/momentum_api'
 
 discourse_options = {
     do_live_updates:        false,
-    # target_username:        'David_Kirk',         # David_Kirk Bret_Nodine Scott_StGermain Kim_Miller David_Ashby Fernando_Venegas
+    # target_username:        'James_Barrese',         # David_Kirk Bret_Nodine Scott_StGermain Kim_Miller David_Ashby Fernando_Venegas
     target_groups:          %w(trust_level_0),      # OpenKimono TechMods GreatX BraveHearts trust_level_0 trust_level_1
     ownership_groups:        %w(Owner Owner_Manual),
-    # instance:               'https://discourse.gomomentum.org',
-    instance:               'https://staging.gomomentum.org',
+    instance:               'https://discourse.gomomentum.org',
+    # instance:               'https://staging.gomomentum.org',
     api_username:           'KM_Admin',
     exclude_users:           %w(js_admin Winston_Churchill sl_admin JP_Admin admin_sscott RH_admin KM_Admin MD_Admin),
     issue_users:             %w(),
@@ -116,43 +116,6 @@ schedule_options =  {ownership: master_run_config[:ownership]}
 #                 remove_from_group:      45,
 #                 action_sequence:        'R3',
 #                 message_cc:             'KM_Admin',
-#                 message_from:           'Kim_Miller',
-#                 excludes:                 %w()
-#             },
-#
-#             memberful_expires_next_week: {
-#                 do_task_update:         true,
-#                 user_fields:            '6',
-#                 ownership_code:         'MM',
-#                 days_until_renews:      7,
-#                 action_sequence:        'R1',
-#                 add_to_group:           nil,
-#                 remove_from_group:      nil,
-#                 message_cc:             'KM_Admin',
-#                 message_from:           'Kim_Miller',
-#                 excludes:               %w()
-#             },
-#             memberful_expired_today: {
-#                 do_task_update:         true,
-#                 user_fields:            '6',
-#                 ownership_code:         'MM',
-#                 days_until_renews:      0,
-#                 action_sequence:        'R2',
-#                 add_to_group:           nil,
-#                 remove_from_group:      nil,
-#                 message_cc:             'KM_Admin',
-#                 message_from:           'Kim_Miller',
-#                 excludes:               %w()
-#             },
-#             memberful_final: {
-#                 do_task_update:         true,
-#                 user_fields:            '6',
-#                 ownership_code:         'MM',
-#                 days_until_renews:      -7,
-#                 add_to_group:           107,
-#                 remove_from_group:      45,
-#                 action_sequence:        'R3',
-#                 message_cc:             'KM_Admin,Mike_Drilling',
 #                 message_from:           'Kim_Miller',
 #                 excludes:                 %w()
 #             }

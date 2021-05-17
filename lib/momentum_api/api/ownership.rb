@@ -44,13 +44,11 @@ module MomentumApi
           else
 
             # if user is on auto renewal, get latest_auto_renew_date
-            latest_auto_renew_date = find_latest_subscription(action, ownership_type, subscriptions)
-            # puts latest_auto_renew_date
+            latest_auto_renew_date = find_latest_subscription(action, subscriptions)
             # see if user has a valid renews date on his profile
-            if renews_value and Date.valid_date?(renews_value[0..3].to_i, renews_value[5..6].to_i, renews_value[8..9].to_i)
-              # todo test for wrong reverse date mm-dd-yyyy
-              profile_renew_date = Date.parse(renews_value[0..9])
+            profile_renew_date = find_valid_profile_renews_date(renews_value)
 
+            if profile_renew_date
               # alert renewing auto renewal is present
               if latest_auto_renew_date and latest_auto_renew_date > profile_renew_date and
                   action[1][:ownership_code] == 'CA' and action[1][:action_sequence] == 'R0'
@@ -99,12 +97,13 @@ module MomentumApi
               update_ownership(man, action, user_update_value)
 
             # find and stamp new_user with today's date and NU R0 codes
-            elsif action[1][:ownership_code] == 'NU' and action[1][:action_sequence] == 'R0'
-              user_update_value = Date.today.strftime("%Y-%m-%d") + ' ' +
+            elsif action[1][:ownership_code] == 'NU' and action[1][:action_sequence] == 'R0' and subscriptions.empty?
+              user_update_value = clock.today.strftime("%Y-%m-%d") + ' ' +
                   action[1][:ownership_code] + ' ' + action[1][:action_sequence]
                 update_ownership(man, action, user_update_value)
+              # puts 'about to stamp NU'
 
-              # print trial candidates Samartha_Swaroop 2019-10-08 MM
+            # print trial candidates
             # elsif action[1][:ownership_code] == 'TM' and action[1][:action_sequence] == 'R0'
             #   man.print_user_options(man.user_details, user_label: "#{action[0]}",
             #                          nested_user_field: %W(#{'user_fields'} #{action[1][:user_fields]}))
@@ -112,8 +111,7 @@ module MomentumApi
             # remove user from Onwership groups as he does not appear to have any memberships
             elsif action[1][:remove_from_group] and not latest_auto_renew_date and
                 @options[:settings][:all_ownership_group_ids].include?(action[1][:remove_from_group])
-              # remove_from_group(action, man)
-              puts 'User missing Renews value.'
+              # puts 'User missing Renews value.'
             end
           end
         end
@@ -123,9 +121,24 @@ module MomentumApi
     
     private
 
-    def find_latest_subscription(action, ownership_type, subscriptions)
+    def find_valid_profile_renews_date(renews_value)
+
+      profile_renew_date = nil
+
+      if renews_value
+        begin          
+          profile_renew_date = Date.parse(renews_value[0..9])
+          # puts profile_renew_date
+        rescue ArgumentError => error
+          # puts 'No valid dates found.'
+        end
+      end
+      profile_renew_date
+    end
+
+    def find_latest_subscription(action, subscriptions)
       latest_auto_renew_date = nil
-      if ownership_type[0].to_s == 'auto' and not subscriptions.empty?
+      unless subscriptions.empty?
         subscriptions.each do |subscription|
           if action[1][:subscrption_name] and subscription['product'] and subscription['current_period_end'] and
             subscription['product']['name'].include? action[1][:subscrption_name][0..9] and
@@ -176,7 +189,6 @@ module MomentumApi
                                nested_user_field: %W(#{'user_fields'} #{action[1][:user_fields]}))
         @mock ? sleep(0) : sleep(1)
 
-        # todo stay with current group remove w/auto or create auto case where admins are alerted, but not group moves happen
         add_to_owner_group(action, man)
 
         remove_from_group(action, man)
