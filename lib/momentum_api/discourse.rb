@@ -76,7 +76,9 @@ module MomentumApi
     private
     
     def apply_call(group_member)
-      # puts group_member['username']
+      if @options[:debug_mode]
+        puts group_member['username']
+      end
       begin
         user_details = @admin_client.user(group_member['username'])
         @mock ? sleep(0) : sleep(2)
