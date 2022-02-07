@@ -20,9 +20,10 @@ Gem::Specification.new do |spec|
 
   # spec.add_dependency "faraday", "~> 0.9"
   # spec.add_dependency "faraday_middleware", "~> 0.10"
-  # spec.add_dependency "rack", ">= 1.6"
+  spec.add_dependency "rack", ">= 2.2.3"
+  spec.add_dependency "bundler", ">= 2.2.33"
 
-  spec.add_development_dependency "bundler", "~> 2.0"
+  spec.add_development_dependency "bundler", ">= 2.2.33"
   spec.add_development_dependency "rake", "~> 12.3.3"
   spec.add_development_dependency "rspec", "~> 3.4"
   spec.add_development_dependency "simplecov", "~> 0.11"
