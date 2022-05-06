@@ -1,8 +1,8 @@
 "Hi #{variable_hash['name']},
 
-Just a friendly reminder, your Momentum Ownership will automatically renew next week. There is nothing you need to do but fasten your seatbelt and get ready for another awesome year in Momentum!
+Heads up! Your Momentum Ownership will expire next week. Due to the [recent change in our fee structure](#{@schedule.discourse.options[:instance]}/t/basic-annual-fee-simplified/16450), we've turned off automatic renewal this year, so you will need to manually re-submit your credit card to continue your Momentum Ownership. Please [click this link](#{@schedule.discourse.options[:instance]}/page/ownership/3/) within the next week to continue your Ownership without lapse.
 
-If you need to make any changes to your Momentum Ownership, you can do so [here.](#{@schedule.discourse.options[:instance]}/my/billing)
+If you ever need to make any changes to your Momentum Ownership, you can do so [here.](#{@schedule.discourse.options[:instance]}/my/billing)
 
   -- Your Momentum Leadership
 
