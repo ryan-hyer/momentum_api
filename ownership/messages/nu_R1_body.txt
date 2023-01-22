@@ -2,11 +2,10 @@
 
 We do hope you decide to become an Owner of Momentum, with access to all of Momentum's resources and Momentum's Community Forum where you will see in-depth essays, daily shared conversations, and allowing you to get to know the other 200 men in Momentum.
 
-Please [become a Momentum Owner  here.](#{@schedule.discourse.options[:instance]}/page/ownership/3/)
+Please [become a Momentum Owner  here.](#{@schedule.discourse.options[:instance]}/s)
 
 If money is an issue, remember that Momentum provides scholarships where needed. [Contact the Chief privately here to make arrangements.](#{@schedule.discourse.options[:instance]}/g/Chief)
 
-Momentum
-New Men
+  -- Your Momentum Leadership
 
 Ownership Type: #{variable_hash['user_fields']['6']}"

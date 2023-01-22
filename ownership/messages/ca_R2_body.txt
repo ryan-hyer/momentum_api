@@ -1,5 +1,5 @@
 "The men don't want to see you go, but your Momentum Ownership just expired!
 
-But it's not too late. Simply go [here to renew your membership as an Owner of Momentum.](#{@schedule.discourse.options[:instance]}/page/ownership/3/)
+But it's not too late. Simply go [here to renew your membership as an Owner of Momentum.](#{@schedule.discourse.options[:instance]}/s)
 
   -- Your Momentum Leadership"

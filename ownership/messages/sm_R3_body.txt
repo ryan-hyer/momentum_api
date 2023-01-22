@@ -2,7 +2,7 @@
 
 We sent you a couple messages about your expired Momentum membership. At this time we ask you to either:
 
-- [Re-join online here](#{@schedule.discourse.options[:instance]}/page/ownership/3/), or
+- [Re-join online here](#{@schedule.discourse.options[:instance]}/s), or
 - Take [Momentum's exit survey here](https://goo.gl/forms/10AslBf1jpR5X6aP2) to help us learn more about your choice to leave Momentum.
 
 If you are seeking another year of scholarship, please [contact Momentum's Chief privately here](#{@schedule.discourse.options[:instance]}/g/Chief) to make arrangements.
