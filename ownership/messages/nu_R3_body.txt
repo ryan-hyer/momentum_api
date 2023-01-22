@@ -4,11 +4,10 @@ Just one thought to leave you with: For many men, making time to invest in somet
 
 We'll take you off the list for now and leave reconnecting in your court. Please do just let us know when you are ready to reconnect and we'll see what fits for you at that time. Meanwhile, you might want to make sure you are on our mailing list at gomomentum.org to stay informed of on-going Momentum topics.
 
-But it's not too late! [Become an Owner of Momentum today by clicking here](#{@schedule.discourse.options[:instance]}/page/ownership/3/), and solidify your connection with 200 other men who are relatable, transparent, and ready to be visible. The possibilities for growth, camaraderie, and fun are limitless!
+But it's not too late! [Become an Owner of Momentum today by clicking here](#{@schedule.discourse.options[:instance]}/s), and solidify your connection with 200 other men who are relatable, transparent, and ready to be visible. The possibilities for growth, camaraderie, and fun are limitless!
 
 If money is an issue, remember that Momentum provides scholarships where needed. [Contact the Chief privately here to make arrangements.](#{@schedule.discourse.options[:instance]}/g/Chief)
 
-Momentum
-New Men
+  -- Your Momentum Leadership
 
 Ownership Type: #{variable_hash['user_fields']['6']}"

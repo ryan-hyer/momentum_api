@@ -1,13 +1,13 @@
 "Thank you for your interest in Momentum, #{@man.user_details['name']}. Get ready for years of growth, camaraderie, and fun ahead!
 
-To get the most out of Momentum, you will want to become what we call a Momentum Owner. To do that, simply go [here to become an Owner of Momentum and get full access to all content on the Discourse Community Forum.](#{@schedule.discourse.options[:instance]}/page/ownership/3/)
+To get the most out of Momentum, you will want to become what we call a Momentum Owner. To do that, simply go [here to become an Owner of Momentum and get full access to all content on the Discourse Community Forum.](#{@schedule.discourse.options[:instance]}/s)
 
 The nominal $60 annual program fee covers the organization’s basic expenses and gives you full access to all community content on Discourse. Note: Momentum’s policy is to provide scholarships where there is financial need so that cost never becomes a deterrent to becoming an Owner.*
 
 Welcome!
 
-Momentum
-New Men
+  -- Your Momentum Leadership
+  
 
 \\* Momentum provides scholarships where needed. To find out about scholarships, please [contact Momentum's Chief privately here](#{@schedule.discourse.options[:instance]}/g/Chief).
 

@@ -1,6 +1,6 @@
 "Hi #{variable_hash['name']},
 
-It's time to renew your Momentum Ownership. Simply go [here to renew your membership as an Owner of Momentum.](#{@schedule.discourse.options[:instance]}/page/ownership/3/)
+It's time to renew your Momentum Ownership. Simply go [here to renew your membership as an Owner of Momentum.](#{@schedule.discourse.options[:instance]}/s)
 
   -- Your Momentum Leadership
 
