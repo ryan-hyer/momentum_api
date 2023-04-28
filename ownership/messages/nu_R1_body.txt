@@ -1,8 +1,8 @@
 "Hi #{variable_hash['name']},
 
-We do hope you decide to become an Owner of Momentum, with access to all of Momentum's resources and Momentum's Community Forum where you will see in-depth essays, daily shared conversations, and allowing you to get to know the other 200 men in Momentum.
+We do hope you decide to become a member of Momentum, giving you full access to all of Momentum's resources, tools, programs, and the other 200 amazing men in Momentum.
 
-Please [become a Momentum Owner  here.](#{@schedule.discourse.options[:instance]}/s)
+Please [become a Momentum member here.](#{@schedule.discourse.options[:instance]}/s)
 
 If money is an issue, remember that Momentum provides scholarships where needed. [Contact the Chief privately here to make arrangements.](#{@schedule.discourse.options[:instance]}/g/Chief)
 

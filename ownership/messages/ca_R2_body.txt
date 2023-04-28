@@ -1,5 +1,7 @@
-"The men don't want to see you go, but your Momentum Ownership just expired!
+"Hey #{variable_hash['name']}! The men don't want to see you go, but your Momentum membership just expired! It's possible that the card we have on file is expired or invalid.
 
-But it's not too late. Simply go [here to renew your membership as an Owner of Momentum.](#{@schedule.discourse.options[:instance]}/s)
+But it's not too late. Simply go [here to manually renew your membership in Momentum.](#{@schedule.discourse.options[:instance]}/s)
 
-  -- Your Momentum Leadership"
+  -- Your Momentum Leadership
+  
+Ownership Type: #{variable_hash['user_fields']['6']}"

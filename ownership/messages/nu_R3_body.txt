@@ -2,9 +2,9 @@
 
 Just one thought to leave you with: For many men, making time to invest in something like Momentum can be circular. Slowing down to reflect is something we all need to do, but we often don't slow down enough to see why that's true. Often it takes jumping in for a time before a man gets to a place of seeing why Momentum is worth his time, even though none of us thinks of ourselves as having any extra bandwidth. Food for thought. :slight_smile:
 
-We'll take you off the list for now and leave reconnecting in your court. Please do just let us know when you are ready to reconnect and we'll see what fits for you at that time. Meanwhile, you might want to make sure you are on our mailing list at gomomentum.org to stay informed of on-going Momentum topics.
+We'll take you off the list for now and leave reconnecting in your court. Please do just let us know when you are ready to reconnect and we'll see what fits for you at that time. Meanwhile, you might consider checking with us at gomomentum.org on occasion to stay informed of on-going Momentum topics.
 
-But it's not too late! [Become an Owner of Momentum today by clicking here](#{@schedule.discourse.options[:instance]}/s), and solidify your connection with 200 other men who are relatable, transparent, and ready to be visible. The possibilities for growth, camaraderie, and fun are limitless!
+When you're ready to dive in, [become a Momentum member by clicking here](#{@schedule.discourse.options[:instance]}/s), and solidify your connection with 200 other men who are relatable, transparent, and ready to be vulnerable. The possibilities for growth, camaraderie, and fun are limitless!
 
 If money is an issue, remember that Momentum provides scholarships where needed. [Contact the Chief privately here to make arrangements.](#{@schedule.discourse.options[:instance]}/g/Chief)
 

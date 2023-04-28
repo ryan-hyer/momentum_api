@@ -8,7 +8,7 @@
   :manual:
     :new_user_found:
       :do_task_update: true
-      :user_fields: '6'
+      :user_fields: "6"
       :ownership_code: NU
       :days_until_renews: 9999
       :action_sequence: R0
@@ -16,40 +16,40 @@
       :remove_from_group: 136
       :message_to:
       :message_cc:
-      :message_from: John_Mansperger
+      :message_from: Membership_Team
       :excludes: []
     :new_user_one_week_ago:
       :do_task_update: true
-      :user_fields: '6'
+      :user_fields: "6"
       :ownership_code: NU
       :days_until_renews: -7
       :action_sequence: R1
       :add_to_group:
       :remove_from_group: 45
-      :message_from: John_Mansperger
+      :message_from: Membership_Team
       :excludes: []
     :new_user_two_weeks_ago:
       :do_task_update: true
-      :user_fields: '6'
+      :user_fields: "6"
       :ownership_code: NU
       :days_until_renews: -14
       :action_sequence: R2
       :add_to_group:
       :remove_from_group:
-      :message_from: John_Mansperger
+      :message_from: Membership_Team
       :excludes: []
     :new_user_three_weeks_ago:
       :do_task_update: true
-      :user_fields: '6'
+      :user_fields: "6"
       :ownership_code: NU
       :days_until_renews: -21
       :action_sequence: R3
       :message_cc: Ryan_Hyer
-      :message_from: John_Mansperger
+      :message_from: Membership_Team
       :excludes: []
     :scholarship_new_found:
       :do_task_update: true
-      :user_fields: '6'
+      :user_fields: "6"
       :ownership_code: SM
       :days_until_renews: 9999
       :action_sequence: R0
@@ -57,42 +57,42 @@
       :remove_from_group: 107
       :message_to:
       :message_cc: Mike_Drilling
-      :message_from: John_Mansperger
+      :message_from: Membership_Team
       :excludes: []
     :scholarship_expires_next_week:
       :do_task_update: true
-      :user_fields: '6'
+      :user_fields: "6"
       :ownership_code: SM
       :days_until_renews: 7
       :action_sequence: R1
       :add_to_group:
       :remove_from_group:
-      :message_from: John_Mansperger
+      :message_from: Membership_Team
       :excludes: []
     :scholarship_expired_today:
       :do_task_update: true
-      :user_fields: '6'
+      :user_fields: "6"
       :ownership_code: SM
       :days_until_renews: 0
       :action_sequence: R2
       :add_to_group:
       :remove_from_group:
-      :message_from: John_Mansperger
+      :message_from: Membership_Team
       :excludes: []
     :scholarship_final:
       :do_task_update: true
-      :user_fields: '6'
+      :user_fields: "6"
       :ownership_code: SM
       :days_until_renews: -7
       :add_to_group: 107
       :remove_from_group: 45
       :action_sequence: R3
       :message_cc:
-      :message_from: John_Mansperger
+      :message_from: Membership_Team
       :excludes: []
     :zelle_new_found:
       :do_task_update: true
-      :user_fields: '6'
+      :user_fields: "6"
       :ownership_code: ZM
       :days_until_renews: 9999
       :action_sequence: R0
@@ -100,43 +100,43 @@
       :remove_from_group: 107
       :message_to:
       :message_cc: Mike_Drilling
-      :message_from: John_Mansperger
+      :message_from: Membership_Team
       :excludes: []
     :zelle_expires_next_week:
       :do_task_update: true
-      :user_fields: '6'
+      :user_fields: "6"
       :ownership_code: ZM
       :days_until_renews: 7
       :action_sequence: R1
       :add_to_group:
       :remove_from_group:
-      :message_from: John_Mansperger
+      :message_from: Membership_Team
       :excludes: []
     :zelle_expired_today:
       :do_task_update: true
-      :user_fields: '6'
+      :user_fields: "6"
       :ownership_code: ZM
       :days_until_renews: 0
       :action_sequence: R2
       :add_to_group:
       :remove_from_group:
-      :message_from: John_Mansperger
+      :message_from: Membership_Team
       :excludes: []
     :zelle_final:
       :do_task_update: true
-      :user_fields: '6'
+      :user_fields: "6"
       :ownership_code: ZM
       :days_until_renews: -7
       :add_to_group: 107
       :remove_from_group: 45
       :action_sequence: R3
       :message_cc:
-      :message_from: John_Mansperger
+      :message_from: Membership_Team
       :excludes: []
   :auto:
     :card_auto_renew_new_subscription_found:
       :do_task_update: true
-      :user_fields: '6'
+      :user_fields: "6"
       :ownership_code: CA
       :days_until_renews: 9999
       :action_sequence: R0
@@ -144,42 +144,42 @@
       :remove_from_group: 108
       :message_to:
       :message_cc: Ryan_Hyer
-      :message_from: John_Mansperger
+      :message_from: Membership_Team
       :subscrption_name: Owner Auto Renewing
       :excludes: []
     :card_auto_renew_expires_next_week:
       :do_task_update: true
-      :user_fields: '6'
+      :user_fields: "6"
       :ownership_code: CA
       :days_until_renews: 7
       :action_sequence: R1
       :add_to_group:
       :remove_from_group:
       :message_cc: Ryan_Hyer
-      :message_from: John_Mansperger
+      :message_from: Membership_Team
       :subscrption_name: Owner Auto Renewing
       :excludes: []
     :card_auto_renew_expired_yesterday:
       :do_task_update: true
-      :user_fields: '6'
+      :user_fields: "6"
       :ownership_code: CA
       :days_until_renews: -1
       :action_sequence: R2
       :add_to_group:
       :remove_from_group:
       :message_cc: Ryan_Hyer
-      :message_from: John_Mansperger
+      :message_from: Membership_Team
       :excludes: []
     :card_auto_renew_expired_last_week_final:
       :do_task_update: true
-      :user_fields: '6'
+      :user_fields: "6"
       :ownership_code: CA
       :days_until_renews: -7
       :action_sequence: R3
       :add_to_group: 107
       :remove_from_group: 136
       :message_cc: Ryan_Hyer
-      :message_from: John_Mansperger
+      :message_from: Membership_Team
       :excludes: []
 
 :category:
