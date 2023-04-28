@@ -4,7 +4,7 @@ We do hope you had an awesome year in Momentum and want to make sure your member
 
 As of today your membership expired, but we want to give you a few more days before updating our records. Please [renew your membership here.](#{@schedule.discourse.options[:instance]}/s)
 
-If you are seeking another year as a Complimentary Momentum Owner, please [contact Momentum's Chief privately here](#{@schedule.discourse.options[:instance]}/g/Chief) to make arrangements.
+If you are seeking another year under a membership scholarship, please [contact Momentum's Chief privately here](#{@schedule.discourse.options[:instance]}/g/Chief) to make arrangements.
 
   -- Your Momentum Leadership
 

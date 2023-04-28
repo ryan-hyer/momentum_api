@@ -1,4 +1,6 @@
-"Your Momentum Owner Scholarship is here, #{@man.user_details['name']}! Welcome to a year of awesome growth, camaraderie, and fun!
+"Your Momentum Scholarship has been granted, #{@man.user_details['name']}! Welcome to a year of awesome growth, camaraderie, and fun!
+
+The first thing you'll want to do is [complete your profile on Discourse](#{@schedule.discourse.options[:instance]}/my/preferences/profile), so that we can start getting to know you! Welcome to Momentum!
 
   -- Your Momentum Leadership
 

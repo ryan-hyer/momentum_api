@@ -1,8 +1,8 @@
 "Hi #{variable_hash['name']},
 
-Becoming an Owner of Momentum is just clicks away. In addition to your team experience, Momentum has vast resources to promote your growth, many of which are posted in the Momentum Library on our Community Forum.
+Becoming a member of Momentum is just clicks away. In addition to your team experience, Momentum has vast resources to promote your growth, many of which are posted in the Momentum Library on our Community Forum.
 
-[Become an Owner of Momentum today by clicking here](#{@schedule.discourse.options[:instance]}/s), while getting to know the other 200 men in Momentum. The possibilities for growth, camaraderie, and fun are limitless!
+[Become a member of Momentum today by clicking here](#{@schedule.discourse.options[:instance]}/s). The possibilities for growth, camaraderie, and fun are limitless!
 
 If money is an issue, remember that Momentum provides scholarships where needed. [Contact the Chief privately here to make arrangements.](#{@schedule.discourse.options[:instance]}/g/Chief)
 

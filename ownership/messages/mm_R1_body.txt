@@ -1,9 +1,0 @@
-"Hi #{variable_hash['name']},
-
-Momentum has a new membership system making renewal easier than ever!
-
-Simply go [here to renew your membership as an Owner of Momentum.](#{@schedule.discourse.options[:instance]}/s)
-
-  -- Your Momentum Leadership
-
-Ownership Type: #{variable_hash['user_fields']['6']}"
