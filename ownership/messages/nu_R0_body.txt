@@ -1,12 +1,12 @@
 "Thank you for your interest in Momentum, #{@man.user_details['name']}. Get ready for years of growth, camaraderie, and fun ahead!
 
-To get the most out of Momentum, you will want to become a Momentum member. To do that, simply go [here to activate your Momentum membership and get full access to all content on our Discourse Community Forum.](#{@schedule.discourse.options[:instance]}/s)
+To get the most out of Momentum, you will want to become a Momentum member. To do that, simply go [here](#{@schedule.discourse.options[:instance]}/s) to activate your Momentum membership and get full access to all content on our Discourse Community Forum.
 
-The nominal $60 annual program fee covers the organization’s basic expenses and gives you full access to all community content on Discourse.
+The nominal $120 annual program fee covers the organization’s basic expenses and gives you full access to all community content on Discourse.
 
 Momentum provides scholarships where needed, so that cost is never the obstacle that prevents a man from becoming a member of Momentum. To find out about scholarships, please [contact Momentum's Chief privately here](#{@schedule.discourse.options[:instance]}/g/Chief).
 Welcome!
 
   -- Your Momentum Leadership
   
-Ownership Type: #{variable_hash['user_fields']['6']}"
+Membership Type: #{variable_hash['user_fields']['6']}"

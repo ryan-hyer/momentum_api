@@ -4,4 +4,4 @@ The first thing you'll want to do is [complete your profile on Discourse](#{@sch
 
   -- Your Momentum Leadership
 
-Ownership Type: #{variable_hash['user_fields']['6']}"
+Membership Type: #{variable_hash['user_fields']['6']}"

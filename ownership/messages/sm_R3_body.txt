@@ -11,4 +11,4 @@ If you don't intend to renew, then thank you for spending time with Momentum! Al
 
   -- Your Momentum Leadership
 
-Ownership Type: #{variable_hash['user_fields']['6']}"
+Membership Type: #{variable_hash['user_fields']['6']}"
