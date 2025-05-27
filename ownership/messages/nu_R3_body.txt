@@ -10,4 +10,4 @@ If money is an issue, remember that Momentum provides scholarships where needed.
 
   -- Your Momentum Leadership
 
-Ownership Type: #{variable_hash['user_fields']['6']}"
+Membership Type: #{variable_hash['user_fields']['6']}"
